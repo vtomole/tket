@@ -4,8 +4,7 @@ on:
   push:
     branches:
       - develop
-    paths:
-      - 'bubble/src/**'
+      - test-doxygen
 
 jobs:
   bubble_docs:
