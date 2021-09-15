@@ -27,7 +27,7 @@ jobs:
       run: |
         git config --global user.email "tket-bot@cambridgequantum.com"
         git config --global user.name  "$GITHUB_WORKFLOW github action"
-        git add bubble/doc/html
+        git add -f bubble/doc/html
         git commit -am "Add generated bubble documentation."
 
     - name: Publish docs
