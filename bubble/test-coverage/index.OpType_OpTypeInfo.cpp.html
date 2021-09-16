@@ -1,0 +1,1385 @@
+
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>Head</title>
+  <style media="screen" type="text/css">
+
+    body
+    {
+      color: #000000;
+      background-color: #FFFFFF;
+    }
+
+    /* Link formats: use maroon w/underlines */
+    a:link
+    {
+      color: navy;
+      text-decoration: underline;
+    }
+    a:visited
+    {
+      color: maroon;
+      text-decoration: underline;
+    }
+    a:active
+    {
+      color: navy;
+      text-decoration: underline;
+    }
+
+    /*** TD formats ***/
+    td
+    {
+      font-family: sans-serif;
+    }
+    td.title
+    {
+      text-align: center;
+      padding-bottom: 10px;
+      font-size: 20pt;
+      font-weight: bold;
+    }
+
+    /* TD Header Information */
+    td.headerName
+    {
+      text-align: right;
+      color: black;
+      padding-right: 6px;
+      font-weight: bold;
+      vertical-align: top;
+      white-space: nowrap;
+    }
+    td.headerValue
+    {
+      text-align: left;
+      color: blue;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    td.headerTableEntry
+    {
+      text-align: right;
+      color: black;
+      font-weight: bold;
+      white-space: nowrap;
+      padding-left: 12px;
+      padding-right: 4px;
+      background-color: LightBlue;
+    }
+    td.headerValueLeg
+    {
+      text-align: left;
+      color: black;
+      font-size: 80%;
+      white-space: nowrap;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 2px;
+    }
+
+    /* Color of horizontal ruler */
+    td.hr
+    {
+      background-color: navy;
+      height:3px;
+    }
+    /* Footer format */
+    td.footer
+    {
+      text-align: center;
+      padding-top: 3px;
+      font-family: sans-serif;
+    }
+
+    /* Coverage Table */
+
+    td.coverTableHead
+    {
+      text-align: center;
+      color: white;
+      background-color: SteelBlue;
+      font-family: sans-serif;
+      font-size: 120%;
+      white-space: nowrap;
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+    td.coverFile
+    {
+      text-align: left;
+      padding-left: 10px;
+      padding-right: 20px;
+      color: black;
+      background-color: LightBlue;
+      font-family: monospace;
+      font-weight: bold;
+      font-size: 110%;
+    }
+    td.coverBar
+    {
+      padding-left: 10px;
+      padding-right: 10px;
+      background-color: LightBlue;
+    }
+    td.coverBarOutline
+    {
+      background-color: white;
+    }
+    td.coverValue
+    {
+      padding-top: 2px;
+      text-align: right;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-family: sans-serif;
+      white-space: nowrap;
+      font-weight: bold;
+    }
+
+    /* Link Details */
+    a.detail:link
+    {
+      color: #B8D0FF;
+      font-size:80%;
+    }
+    a.detail:visited
+    {
+      color: #B8D0FF;
+      font-size:80%;
+    }
+    a.detail:active
+    {
+      color: #FFFFFF;
+      font-size:80%;
+    }
+
+    .graphcont{
+        color:#000;
+        font-weight:700;
+        float:left
+    }
+
+    .graph{
+        float:left;
+        background-color: white;
+        position:relative;
+        width:280px;
+        padding:0
+    }
+
+    .graph .bar{
+        display:block;
+        position:relative;
+        border:black 1px solid;
+        text-align:center;
+        color:#fff;
+        height:10px;
+        font-family:Arial,Helvetica,sans-serif;
+        font-size:12px;
+        line-height:1.9em
+    }
+
+    .graph .bar span{
+        position:absolute;
+        left:1em
+    }
+
+    td.coveredLine,
+    span.coveredLine
+    {
+        background-color: LightGreen!important;
+    }
+
+    td.uncoveredLine,
+    span.uncoveredLine
+    {
+        background-color: LightPink!important;
+    }
+
+    .linebranch, .linecount
+    {
+        border-right: 1px gray solid;
+        background-color: lightgray;
+    }
+
+    span.takenBranch
+    {
+        color: Green!important;
+        cursor: help;
+    }
+
+    span.notTakenBranch
+    {
+        color: Red!important;
+        cursor: help;
+    }
+
+    .src
+    {
+        padding-left: 12px;
+    }
+
+    .srcHeader,
+    span.takenBranch,
+    span.notTakenBranch
+    {
+        font-family: monospace;
+        font-weight: bold;
+    }
+
+    pre
+    {
+        height : 15px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .lineno
+    {
+        background-color: #EFE383;
+        border-right: 1px solid #BBB15F;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr><td class="title">GCC Code Coverage Report</td></tr>
+    <tr><td class="hr"></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding="1" border="0" width="100%">
+          <tr>
+            <td width="10%" class="headerName">Directory:</td>
+            <td width="35%" class="headerValue">./</td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerValue" style="text-align:right;">Exec</td>
+            <td width="10%" class="headerValue" style="text-align:right;">Total</td>
+            <td width="15%" class="headerValue" style="text-align:right;">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerName">File:</td>
+            <td class="headerValue">OpType/OpTypeInfo.cpp</td>
+            <td></td>
+            <td class="headerName">Lines:</td>
+            <td class="headerTableEntry">11</td>
+            <td class="headerTableEntry">98</td>
+            <td class="headerTableEntry" style="background-color:LightPink">11.2 %</td>
+          </tr>
+          <tr>
+            <td class="headerName">Date:</td>
+            <td class="headerValue">2021-09-16 15:47:42</td>
+            <td></td>
+            <td class="headerName">Branches:</td>
+            <td class="headerTableEntry">380</td>
+            <td class="headerTableEntry">758</td>
+            <td class="headerTableEntry" style="background-color:LightPink">50.1 %</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="hr"></td></tr>
+  </table>
+
+  <br>
+  <table cellspacing="0" cellpadding="1">
+    <tr>
+      <td width="5%" align="right" class="srcHeader">Line</td>
+      <td width="5%" align="right" class="srcHeader">Branch</td>
+      <td width="5%" align="right" class="srcHeader">Exec</td>
+      <td width="75%" align="left" class="srcHeader src">Source</td>
+    </tr>
+
+
+    <tr>
+    <td align="right" class="lineno"><pre>1</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>// Copyright 2019-2021 Cambridge Quantum Computing</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>2</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>//</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>3</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>// Licensed under the Apache License, Version 2.0 (the "License");</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>4</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>// you may not use this file except in compliance with the License.</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>5</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>// You may obtain a copy of the License at</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>6</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>//</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>7</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>//     http://www.apache.org/licenses/LICENSE-2.0</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>8</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>//</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>9</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>// Unless required by applicable law or agreed to in writing, software</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>10</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>// distributed under the License is distributed on an "AS IS" BASIS,</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>11</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>12</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>// See the License for the specific language governing permissions and</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>13</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>// limitations under the License.</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>14</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>15</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>#include "OpTypeInfo.hpp"</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>16</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>17</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>#include &lt;memory></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>18</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>19</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>namespace tket {</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>20</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>427288</pre></td>
+    <td align="left" class="src coveredLine"><pre>const std::map&lt;OpType, OpTypeInfo>&amp; optypeinfo() {</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>21</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 1 times">&check;</span><span class="takenBranch" title="Branch 1 taken 427287 times">&check;</span><span class="takenBranch" title="Branch 3 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>427288</pre></td>
+    <td align="left" class="src coveredLine"><pre>  static const op_signature_t noargs;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>22</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 1 times">&check;</span><span class="takenBranch" title="Branch 1 taken 427287 times">&check;</span><span class="takenBranch" title="Branch 3 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><span class="notTakenBranch" title="Branch 13 not taken">&cross;</span><span class="notTakenBranch" title="Branch 14 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>427288</pre></td>
+    <td align="left" class="src coveredLine"><pre>  static const op_signature_t singleq(1, EdgeType::Quantum);</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>23</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 1 times">&check;</span><span class="takenBranch" title="Branch 1 taken 427287 times">&check;</span><span class="takenBranch" title="Branch 3 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><span class="notTakenBranch" title="Branch 13 not taken">&cross;</span><span class="notTakenBranch" title="Branch 14 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>427288</pre></td>
+    <td align="left" class="src coveredLine"><pre>  static const op_signature_t doubleq(2, EdgeType::Quantum);</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>24</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 1 times">&check;</span><span class="takenBranch" title="Branch 1 taken 427287 times">&check;</span><span class="takenBranch" title="Branch 3 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><span class="notTakenBranch" title="Branch 13 not taken">&cross;</span><span class="notTakenBranch" title="Branch 14 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>427288</pre></td>
+    <td align="left" class="src coveredLine"><pre>  static const op_signature_t tripleq(3, EdgeType::Quantum);</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>25</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>26</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>  // No memory leak since the objects are only constructed once and</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>27</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>  // the memory is reclaimed on program termination.</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>28</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>29</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>  // OpTypeInfo: name, latex_name, param_mod, signature</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>30</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>  static std::unique_ptr&lt;const std::map&lt;OpType, OpTypeInfo>> opinfo(</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>31</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>      new std::map&lt;OpType, OpTypeInfo>{</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>32</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Z, {"Z", "$Z$", {}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>33</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::X, {"X", "$X$", {}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>34</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Y, {"Y", "$Y$", {}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>35</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::S, {"S", "$S$", {}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>36</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Sdg, {"Sdg", "$S^\\dagger$", {}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>37</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::T, {"T", "$T$", {}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>38</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Tdg, {"Tdg", "$T^\\dagger$", {}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>39</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::V, {"V", "$R_X{\\frac12}$", {}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>40</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Vdg, {"Vdg", "$R_X(\\frac12)^\\dagger$", {}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>41</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::SX, {"SX", "$\\sqrt{X}$", {}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>42</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::SXdg, {"SXdg", "$\\sqrt{X}^\\dagger$", {}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>43</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::H, {"H", "$H$", {}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>44</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Rx, {"Rx", "$R_X$", {4}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>45</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Ry, {"Ry", "$R_Y$", {4}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>46</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Rz, {"Rz", "$R_Z$", {4}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>47</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::U3, {"U3", "U3", {4, 2, 2}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>48</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::U2, {"U2", "U2", {2, 2}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>49</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::U1, {"U1", "U1", {2}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>50</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::CX, {"CX", "CX", {}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>51</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::CY, {"CY", "CY", {}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>52</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::CZ, {"CZ", "CZ", {}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>53</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::CH, {"CH", "CH", {}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>54</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::CV, {"CV", "CV", {}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>55</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::CVdg, {"CVdg", "$CV^\\dagger$", {}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>56</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::CSX, {"CSX", "CSX", {}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>57</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::CSXdg, {"CSXdg", "$CSX^\\dagger$", {}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>58</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::CRz, {"CRz", "CRz", {4}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>59</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::CRx, {"CRx", "CRx", {4}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>60</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::CRy, {"CRy", "CRy", {4}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>61</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::CU1, {"CU1", "CU1", {2}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>62</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::CU3, {"CU3", "CU3", {4, 2, 2}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>63</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::PhaseGadget,</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>64</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>           {"PhaseGadget", "$Z^{\\otimes n}$", {4}, std::nullopt}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>65</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::CCX, {"CCX", "CCX", {}, tripleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>66</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::SWAP, {"SWAP", "SWAP", {}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>67</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::CSWAP, {"CSWAP", "CSWAP", {}, tripleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>68</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::BRIDGE, {"BRIDGE", "BRIDGE", {}, tripleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>69</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Input, {"Input", "Q IN", {}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>70</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Output, {"Output", "Q OUT", {}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>71</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Create, {"Create", "Q CREATE", {}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>72</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Discard, {"Discard", "Q DISCARD", {}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>73</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::ClInput,</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>74</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
+    <td align="left" class="src coveredLine"><pre>           {"ClInput", "C IN", {}, op_signature_t({EdgeType::Classical})}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>75</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::ClOutput,</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>76</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
+    <td align="left" class="src coveredLine"><pre>           {"ClOutput", "C OUT", {}, op_signature_t({EdgeType::Classical})}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>77</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Label, {"Label", "Label", {}, noargs}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>78</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Branch,</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>79</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
+    <td align="left" class="src coveredLine"><pre>           {"Branch", "Branch", {}, op_signature_t({EdgeType::Boolean})}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>80</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Goto, {"Goto", "Goto", {}, noargs}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>81</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Stop, {"Stop", "Stop", {}, noargs}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>82</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::noop, {"noop", "-", {}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>83</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::CircBox, {"CircBox", "CircBox", {}, std::nullopt}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>84</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Unitary1qBox, {"Unitary1qBox", "Unitary1qBox", {}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>85</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Unitary2qBox, {"Unitary2qBox", "Unitary2qBox", {}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>86</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Unitary3qBox, {"Unitary3qBox", "Unitary3qBox", {}, tripleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>87</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::ExpBox, {"ExpBox", "ExpBox", {}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>88</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::PauliExpBox,</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>89</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>           {"PauliExpBox", "PauliExpBox", {}, std::nullopt}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>90</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Composite,</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>91</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>           {"CompositeGate", "CompositeGate", {}, std::nullopt}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>92</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Barrier, {"Barrier", "Barrier", {}, std::nullopt}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>93</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Measure,</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>94</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>           {"Measure",</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>95</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>            "Measure",</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>96</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>            {},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>97</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
+    <td align="left" class="src coveredLine"><pre>            op_signature_t({EdgeType::Quantum, EdgeType::Classical})}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>98</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Collapse, {"Collapse", "Collapse", {}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>99</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Reset, {"Reset", "Reset", {}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>100</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::ECR, {"ECR", "ECR", {}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>101</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::ISWAP, {"ISWAPPow", "ISWAP", {4}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>102</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::PhasedX, {"PhasedX", "Ph$X$", {4, 2}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>103</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::ZZMax, {"ZZMax", "$ZZ(\\frac{\\pi}{4})$", {}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>104</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::XXPhase,</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>105</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>           {"M\xC3\xB8lmer-S\xC3\xB8rensen", "$R_{XX}$", {4}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>106</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::YYPhase, {"YYPhase", "$R_{YY}$", {4}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>107</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::ZZPhase, {"ZZPhase", "$R_{ZZ}$", {4}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>108</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::XXPhase3,</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>109</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>           {"3-M\xC3\xB8lmer-S\xC3\xB8rensen",</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>110</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>            "$R_{X_0X_1}R_{X_0X_2}R_{X_1X_2}$",</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>111</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>            {4},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>112</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>            tripleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>113</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::CnRy, {"CnRy", "CnRy", {4}, std::nullopt}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>114</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::CnX, {"CnX", "CnX", {}, std::nullopt}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>115</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::tk1, {"tk1", "tk1", {4, 4, 4}, singleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>116</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::ESWAP, {"ESWAP", "$\\mathrm{eSWAP}$", {4}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>117</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::FSim, {"FSim", "$\\mathrm{fSim}$", {2, 2}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>118</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Sycamore, {"Syc", "\\mathrm{Syc}", {}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>119</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::ISWAPMax, {"ISWAP", "ISWAP", {}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>120</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::PhasedISWAP,</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>121</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>           {"PhasedISWAP", "PhasedISWAP", {1, 4}, doubleq}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>122</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::CliffBox, {"Clifford", "Clifford", {}, std::nullopt}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>123</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::PhasePolyBox,</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>124</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>           {"PhasePolyBox", "PhasePolyBox", {}, std::nullopt}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>125</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::QControlBox, {"Control", "Ctrl", {}, std::nullopt}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>126</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::Conditional, {"Condition", "If", {}, std::nullopt}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>127</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::ProjectorAssertionBox,</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>128</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>           {"ProjectorAssertionBox",</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>129</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>            "ProjectorAssertionBox",</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>130</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>            {},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>131</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>            std::nullopt}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>132</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::StabiliserAssertionBox,</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>133</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>           {"StabiliserAssertionBox",</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>134</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>            "StabiliserAssertionBox",</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>135</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>            {},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>136</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>            std::nullopt}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>137</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::ClassicalTransform,</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>138</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>           {"ClassicalTransform", "ClassicalTransform", {}, std::nullopt}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>139</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::SetBits, {"SetBits", "SetBits", {}, std::nullopt}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>140</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::CopyBits, {"CopyBits", "CopyBits", {}, std::nullopt}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>141</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::RangePredicate,</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>142</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>           {"RangePredicate", "RangePredicate", {}, std::nullopt}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>143</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::ExplicitPredicate,</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>144</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>           {"ExplicitPredicate", "ExplicitPredicate", {}, std::nullopt}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>145</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::ExplicitModifier,</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>146</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>           {"ExplicitModifier", "ExplicitModifier", {}, std::nullopt}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>147</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>          {OpType::ClassicalExpBox,</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>148</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>           {"ClassicalExpBox", "ClassicalExpBox", {}, std::nullopt}},</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>149</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 1 times">&check;</span><span class="takenBranch" title="Branch 1 taken 427287 times">&check;</span><span class="takenBranch" title="Branch 3 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><span class="takenBranch" title="Branch 11 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 12 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 15 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 16 not taken">&cross;</span><span class="takenBranch" title="Branch 18 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 19 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 22 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 23 not taken">&cross;</span><span class="takenBranch" title="Branch 26 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 27 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 30 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 31 not taken">&cross;</span><span class="takenBranch" title="Branch 33 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 34 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 37 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 38 not taken">&cross;</span><span class="takenBranch" title="Branch 41 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 42 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 45 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 46 not taken">&cross;</span><span class="takenBranch" title="Branch 48 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 49 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 52 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 53 not taken">&cross;</span><span class="takenBranch" title="Branch 56 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 57 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 60 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 61 not taken">&cross;</span><span class="takenBranch" title="Branch 63 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 64 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 67 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 68 not taken">&cross;</span><span class="takenBranch" title="Branch 71 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 72 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 75 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 76 not taken">&cross;</span><span class="takenBranch" title="Branch 78 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 79 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 82 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 83 not taken">&cross;</span><span class="takenBranch" title="Branch 86 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 87 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 90 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 91 not taken">&cross;</span><span class="takenBranch" title="Branch 93 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 94 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 97 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 98 not taken">&cross;</span><span class="takenBranch" title="Branch 101 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 102 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 105 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 106 not taken">&cross;</span><span class="takenBranch" title="Branch 108 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 109 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 112 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 113 not taken">&cross;</span><span class="takenBranch" title="Branch 116 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 117 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 120 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 121 not taken">&cross;</span><span class="takenBranch" title="Branch 123 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 124 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 127 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 128 not taken">&cross;</span><span class="takenBranch" title="Branch 131 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 132 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 135 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 136 not taken">&cross;</span><span class="takenBranch" title="Branch 138 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 139 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 142 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 143 not taken">&cross;</span><span class="takenBranch" title="Branch 146 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 147 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 150 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 151 not taken">&cross;</span><span class="takenBranch" title="Branch 153 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 154 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 157 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 158 not taken">&cross;</span><span class="takenBranch" title="Branch 161 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 162 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 165 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 166 not taken">&cross;</span><span class="takenBranch" title="Branch 168 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 169 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 172 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 173 not taken">&cross;</span><span class="takenBranch" title="Branch 176 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 177 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 180 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 181 not taken">&cross;</span><span class="takenBranch" title="Branch 183 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 184 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 187 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 188 not taken">&cross;</span><span class="takenBranch" title="Branch 191 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 192 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 195 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 196 not taken">&cross;</span><span class="takenBranch" title="Branch 198 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 199 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 201 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 202 not taken">&cross;</span><span class="takenBranch" title="Branch 205 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 206 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 209 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 210 not taken">&cross;</span><span class="takenBranch" title="Branch 213 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 214 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 216 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 217 not taken">&cross;</span><span class="takenBranch" title="Branch 219 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 220 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 223 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 224 not taken">&cross;</span><span class="takenBranch" title="Branch 227 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 228 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 231 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 232 not taken">&cross;</span><span class="takenBranch" title="Branch 234 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 235 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 237 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 238 not taken">&cross;</span><span class="takenBranch" title="Branch 241 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 242 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 245 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 246 not taken">&cross;</span><span class="takenBranch" title="Branch 249 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 250 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 252 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 253 not taken">&cross;</span><span class="takenBranch" title="Branch 255 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 256 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 259 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 260 not taken">&cross;</span><span class="takenBranch" title="Branch 263 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 264 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 267 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 268 not taken">&cross;</span><span class="takenBranch" title="Branch 270 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 271 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 273 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 274 not taken">&cross;</span><span class="takenBranch" title="Branch 277 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 278 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 281 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 282 not taken">&cross;</span><span class="takenBranch" title="Branch 285 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 286 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 288 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 289 not taken">&cross;</span><span class="takenBranch" title="Branch 291 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 292 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 295 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 296 not taken">&cross;</span><span class="takenBranch" title="Branch 299 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 300 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 303 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 304 not taken">&cross;</span><span class="takenBranch" title="Branch 306 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 307 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 310 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 311 not taken">&cross;</span><span class="takenBranch" title="Branch 314 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 315 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 318 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 319 not taken">&cross;</span><span class="takenBranch" title="Branch 321 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 322 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 325 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 326 not taken">&cross;</span><span class="takenBranch" title="Branch 329 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 330 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 333 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 334 not taken">&cross;</span><span class="takenBranch" title="Branch 336 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 337 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 340 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 341 not taken">&cross;</span><span class="takenBranch" title="Branch 344 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 345 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 348 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 349 not taken">&cross;</span><span class="takenBranch" title="Branch 351 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 352 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 355 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 356 not taken">&cross;</span><span class="takenBranch" title="Branch 359 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 360 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 363 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 364 not taken">&cross;</span><span class="takenBranch" title="Branch 366 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 367 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 370 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 371 not taken">&cross;</span><span class="takenBranch" title="Branch 374 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 375 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 378 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 379 not taken">&cross;</span><span class="takenBranch" title="Branch 381 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 382 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 385 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 386 not taken">&cross;</span><span class="takenBranch" title="Branch 389 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 390 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 393 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 394 not taken">&cross;</span><span class="takenBranch" title="Branch 396 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 397 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 400 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 401 not taken">&cross;</span><span class="takenBranch" title="Branch 404 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 405 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 408 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 409 not taken">&cross;</span><span class="takenBranch" title="Branch 411 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 412 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 415 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 416 not taken">&cross;</span><span class="takenBranch" title="Branch 419 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 420 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 423 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 424 not taken">&cross;</span><span class="takenBranch" title="Branch 426 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 427 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 429 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 430 not taken">&cross;</span><span class="takenBranch" title="Branch 433 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 434 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 437 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 438 not taken">&cross;</span><span class="takenBranch" title="Branch 441 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 442 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 444 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 445 not taken">&cross;</span><span class="takenBranch" title="Branch 447 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 448 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 451 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 452 not taken">&cross;</span><span class="takenBranch" title="Branch 455 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 456 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 459 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 460 not taken">&cross;</span><span class="takenBranch" title="Branch 462 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 463 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 465 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 466 not taken">&cross;</span><span class="takenBranch" title="Branch 469 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 470 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 473 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 474 not taken">&cross;</span><span class="takenBranch" title="Branch 477 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 478 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 480 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 481 not taken">&cross;</span><span class="takenBranch" title="Branch 483 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 484 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 487 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 488 not taken">&cross;</span><span class="takenBranch" title="Branch 491 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 492 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 495 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 496 not taken">&cross;</span><span class="takenBranch" title="Branch 498 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 499 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 501 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 502 not taken">&cross;</span><span class="takenBranch" title="Branch 505 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 506 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 509 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 510 not taken">&cross;</span><span class="takenBranch" title="Branch 513 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 514 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 516 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 517 not taken">&cross;</span><span class="takenBranch" title="Branch 520 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 521 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 524 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 525 not taken">&cross;</span><span class="takenBranch" title="Branch 528 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 529 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 531 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 532 not taken">&cross;</span><span class="takenBranch" title="Branch 535 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 536 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 539 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 540 not taken">&cross;</span><span class="takenBranch" title="Branch 543 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 544 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 546 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 547 not taken">&cross;</span><span class="takenBranch" title="Branch 550 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 551 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 554 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 555 not taken">&cross;</span><span class="takenBranch" title="Branch 558 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 559 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 561 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 562 not taken">&cross;</span><span class="takenBranch" title="Branch 565 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 566 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 569 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 570 not taken">&cross;</span><span class="takenBranch" title="Branch 573 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 574 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 576 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 577 not taken">&cross;</span><span class="takenBranch" title="Branch 580 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 581 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 584 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 585 not taken">&cross;</span><span class="takenBranch" title="Branch 588 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 589 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 591 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 592 not taken">&cross;</span><span class="takenBranch" title="Branch 595 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 596 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 599 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 600 not taken">&cross;</span><span class="takenBranch" title="Branch 603 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 604 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 606 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 607 not taken">&cross;</span><span class="takenBranch" title="Branch 610 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 611 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 614 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 615 not taken">&cross;</span><span class="takenBranch" title="Branch 618 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 619 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 621 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 622 not taken">&cross;</span><span class="takenBranch" title="Branch 625 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 626 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 629 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 630 not taken">&cross;</span><span class="takenBranch" title="Branch 633 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 634 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 636 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 637 not taken">&cross;</span><span class="takenBranch" title="Branch 640 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 641 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 644 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 645 not taken">&cross;</span><span class="takenBranch" title="Branch 648 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 649 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 651 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 652 not taken">&cross;</span><span class="takenBranch" title="Branch 655 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 656 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 659 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 660 not taken">&cross;</span><span class="takenBranch" title="Branch 663 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 664 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 666 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 667 not taken">&cross;</span><span class="takenBranch" title="Branch 670 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 671 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 674 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 675 not taken">&cross;</span><span class="takenBranch" title="Branch 678 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 679 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 681 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 682 not taken">&cross;</span><span class="takenBranch" title="Branch 685 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 686 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 689 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 690 not taken">&cross;</span><span class="takenBranch" title="Branch 693 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 694 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 696 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 697 not taken">&cross;</span><span class="takenBranch" title="Branch 700 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 701 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 704 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 705 not taken">&cross;</span><span class="takenBranch" title="Branch 708 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 709 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 711 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 712 not taken">&cross;</span><span class="takenBranch" title="Branch 715 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 716 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 719 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 720 not taken">&cross;</span><span class="takenBranch" title="Branch 723 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 724 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 726 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 727 not taken">&cross;</span><span class="takenBranch" title="Branch 730 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 731 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 734 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 735 not taken">&cross;</span><span class="takenBranch" title="Branch 738 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 739 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 741 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 742 not taken">&cross;</span><span class="takenBranch" title="Branch 745 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 746 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 749 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 750 not taken">&cross;</span><span class="takenBranch" title="Branch 753 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 754 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 757 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 758 not taken">&cross;</span><span class="takenBranch" title="Branch 761 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 762 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 765 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 766 not taken">&cross;</span><span class="takenBranch" title="Branch 768 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 769 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 772 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 773 not taken">&cross;</span><span class="takenBranch" title="Branch 776 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 777 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 780 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 781 not taken">&cross;</span><span class="takenBranch" title="Branch 783 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 784 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 787 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 788 not taken">&cross;</span><span class="takenBranch" title="Branch 791 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 792 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 795 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 796 not taken">&cross;</span><span class="takenBranch" title="Branch 798 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 799 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 802 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 803 not taken">&cross;</span><span class="takenBranch" title="Branch 806 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 807 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 810 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 811 not taken">&cross;</span><span class="takenBranch" title="Branch 813 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 814 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 817 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 818 not taken">&cross;</span><span class="takenBranch" title="Branch 821 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 822 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 825 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 826 not taken">&cross;</span><span class="takenBranch" title="Branch 829 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 830 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 833 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 834 not taken">&cross;</span><span class="takenBranch" title="Branch 837 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 838 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 841 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 842 not taken">&cross;</span><span class="takenBranch" title="Branch 845 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 846 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 849 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 850 not taken">&cross;</span><span class="takenBranch" title="Branch 853 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 854 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 857 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 858 not taken">&cross;</span><span class="takenBranch" title="Branch 861 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 862 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 864 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 865 not taken">&cross;</span><span class="takenBranch" title="Branch 868 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 869 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 872 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 873 not taken">&cross;</span><span class="takenBranch" title="Branch 876 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 877 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 879 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 880 not taken">&cross;</span><span class="takenBranch" title="Branch 883 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 884 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 887 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 888 not taken">&cross;</span><span class="takenBranch" title="Branch 891 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 892 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 894 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 895 not taken">&cross;</span><span class="takenBranch" title="Branch 898 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 899 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 902 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 903 not taken">&cross;</span><span class="takenBranch" title="Branch 906 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 907 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 909 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 910 not taken">&cross;</span><span class="takenBranch" title="Branch 913 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 914 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 917 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 918 not taken">&cross;</span><span class="takenBranch" title="Branch 921 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 922 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 924 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 925 not taken">&cross;</span><span class="takenBranch" title="Branch 927 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 928 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 931 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 932 not taken">&cross;</span><span class="takenBranch" title="Branch 935 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 936 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 939 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 940 not taken">&cross;</span><span class="takenBranch" title="Branch 942 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 943 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 945 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 946 not taken">&cross;</span><span class="takenBranch" title="Branch 949 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 950 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 953 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 954 not taken">&cross;</span><span class="takenBranch" title="Branch 957 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 958 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 960 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 961 not taken">&cross;</span><span class="takenBranch" title="Branch 964 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 965 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 968 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 969 not taken">&cross;</span><span class="takenBranch" title="Branch 972 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 973 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 975 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 976 not taken">&cross;</span><span class="takenBranch" title="Branch 978 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 979 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 982 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 983 not taken">&cross;</span><span class="takenBranch" title="Branch 986 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 987 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 990 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 991 not taken">&cross;</span><span class="takenBranch" title="Branch 993 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 994 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 996 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 997 not taken">&cross;</span><span class="takenBranch" title="Branch 1000 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1001 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1004 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1005 not taken">&cross;</span><span class="takenBranch" title="Branch 1008 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1009 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1011 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1012 not taken">&cross;</span><span class="takenBranch" title="Branch 1014 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1015 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1018 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1019 not taken">&cross;</span><span class="takenBranch" title="Branch 1022 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1023 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1026 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1027 not taken">&cross;</span><span class="takenBranch" title="Branch 1029 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1030 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1032 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1033 not taken">&cross;</span><span class="takenBranch" title="Branch 1036 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1037 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1040 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1041 not taken">&cross;</span><span class="takenBranch" title="Branch 1044 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1045 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1047 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1048 not taken">&cross;</span><span class="takenBranch" title="Branch 1051 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1052 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1055 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1056 not taken">&cross;</span><span class="takenBranch" title="Branch 1059 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1060 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1063 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1064 not taken">&cross;</span><span class="takenBranch" title="Branch 1067 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1068 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1071 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1072 not taken">&cross;</span><span class="takenBranch" title="Branch 1074 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1075 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1077 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1078 not taken">&cross;</span><span class="takenBranch" title="Branch 1081 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1082 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1085 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1086 not taken">&cross;</span><span class="takenBranch" title="Branch 1089 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1090 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1092 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1093 not taken">&cross;</span><span class="takenBranch" title="Branch 1095 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1096 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1099 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1100 not taken">&cross;</span><span class="takenBranch" title="Branch 1103 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1104 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1107 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1108 not taken">&cross;</span><span class="takenBranch" title="Branch 1110 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1111 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1113 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1114 not taken">&cross;</span><span class="takenBranch" title="Branch 1117 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1118 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1121 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1122 not taken">&cross;</span><span class="takenBranch" title="Branch 1125 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1126 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1128 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1129 not taken">&cross;</span><span class="takenBranch" title="Branch 1132 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1133 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1136 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1137 not taken">&cross;</span><span class="takenBranch" title="Branch 1140 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1141 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1143 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1144 not taken">&cross;</span><span class="takenBranch" title="Branch 1147 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1148 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1151 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1152 not taken">&cross;</span><span class="takenBranch" title="Branch 1155 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1156 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1158 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1159 not taken">&cross;</span><span class="takenBranch" title="Branch 1161 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1162 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1165 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1166 not taken">&cross;</span><span class="takenBranch" title="Branch 1169 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1170 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1173 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1174 not taken">&cross;</span><span class="takenBranch" title="Branch 1177 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1178 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1181 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1182 not taken">&cross;</span><span class="takenBranch" title="Branch 1185 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1186 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1189 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1190 not taken">&cross;</span><span class="takenBranch" title="Branch 1193 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1194 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1197 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1198 not taken">&cross;</span><span class="takenBranch" title="Branch 1201 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1202 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1205 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1206 not taken">&cross;</span><span class="takenBranch" title="Branch 1209 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1210 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1213 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1214 not taken">&cross;</span><span class="takenBranch" title="Branch 1217 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1218 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1221 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1222 not taken">&cross;</span><span class="takenBranch" title="Branch 1225 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1226 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1229 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1230 not taken">&cross;</span><span class="takenBranch" title="Branch 1233 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1234 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1237 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1238 not taken">&cross;</span><span class="takenBranch" title="Branch 1241 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1242 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1245 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1246 not taken">&cross;</span><span class="takenBranch" title="Branch 1249 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1250 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1253 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1254 not taken">&cross;</span><span class="takenBranch" title="Branch 1257 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1258 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1261 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1262 not taken">&cross;</span><span class="takenBranch" title="Branch 1265 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1266 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1269 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1270 not taken">&cross;</span><span class="takenBranch" title="Branch 1273 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1274 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1277 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1278 not taken">&cross;</span><span class="takenBranch" title="Branch 1281 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1282 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1285 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1286 not taken">&cross;</span><span class="takenBranch" title="Branch 1289 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1290 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1293 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1294 not taken">&cross;</span><span class="takenBranch" title="Branch 1297 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1298 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1301 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1302 not taken">&cross;</span><span class="takenBranch" title="Branch 1305 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1306 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1309 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1310 not taken">&cross;</span><span class="takenBranch" title="Branch 1313 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1314 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1317 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1318 not taken">&cross;</span><span class="takenBranch" title="Branch 1321 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1322 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1325 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1326 not taken">&cross;</span><span class="takenBranch" title="Branch 1329 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1330 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1333 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1334 not taken">&cross;</span><span class="takenBranch" title="Branch 1336 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1337 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 1342 taken 88 times">&check;</span><span class="takenBranch" title="Branch 1343 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 1638 not taken">&cross;</span><span class="notTakenBranch" title="Branch 1639 not taken">&cross;</span><br/><span class="notTakenBranch" title="Branch 1928 not taken">&cross;</span><span class="notTakenBranch" title="Branch 1929 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>427384</pre></td>
+    <td align="left" class="src coveredLine"><pre>          {OpType::MultiBit, {"MultiBit", "MultiBit", {}, std::nullopt}}});</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>150</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>427288</pre></td>
+    <td align="left" class="src coveredLine"><pre>  return *opinfo;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>151</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>152</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>153</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>}  // namespace tket</pre></td>
+    </tr>
+
+  </table>
+  <br>
+
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr><td class="hr"><td></tr>
+    <tr><td class="footer">Generated by: <a href="http://gcovr.com">GCOVR (Version 4.2)</a></td></tr>
+  </table>
+  <br>
+
+</body>
+
+</html>
+
