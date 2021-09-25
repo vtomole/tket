@@ -275,7 +275,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2021-09-18 08:51:47</td>
+            <td class="headerValue">2021-09-25 05:12:44</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">70</td>
@@ -1030,7 +1030,7 @@
     <tr>
     <td align="right" class="lineno"><pre>105</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>32229</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>32183</pre></td>
     <td align="left" class="src coveredLine"><pre>void GateUnitaryMatrixUtils::check_and_throw_upon_wrong_number_of_parameters(</pre></td>
     </tr>
 
@@ -1057,15 +1057,15 @@
 
     <tr>
     <td align="right" class="lineno"><pre>109</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 30729 times">&check;</span><span class="takenBranch" title="Branch 2 taken 1500 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>32229</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 30683 times">&check;</span><span class="takenBranch" title="Branch 2 taken 1500 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>32183</pre></td>
     <td align="left" class="src coveredLine"><pre>  if (parameters.size() == expected_number_of_parameters) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>110</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>30729</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>30683</pre></td>
     <td align="left" class="src coveredLine"><pre>    return;</pre></td>
     </tr>
 
@@ -1135,7 +1135,7 @@
     <tr>
     <td align="right" class="lineno"><pre>120</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>29973</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>29927</pre></td>
     <td align="left" class="src coveredLine"><pre>std::vector&lt;double> GateUnitaryMatrixUtils::get_checked_parameters(</pre></td>
     </tr>
 
@@ -1148,43 +1148,43 @@
 
     <tr>
     <td align="right" class="lineno"><pre>122</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 29973 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>59946</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 29927 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>59854</pre></td>
     <td align="left" class="src coveredLine"><pre>  const std::vector&lt;Expr> parameter_expressions = gate.get_params();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>123</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 29973 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>29973</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 29927 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>29927</pre></td>
     <td align="left" class="src coveredLine"><pre>  const unsigned int number_of_qubits = gate.n_qubits();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>124</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 29973 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>29973</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 29927 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>29927</pre></td>
     <td align="left" class="src coveredLine"><pre>  std::vector&lt;double> parameters(parameter_expressions.size());</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>125</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 17272 times">&check;</span><span class="takenBranch" title="Branch 2 taken 29973 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>47245</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 17995 times">&check;</span><span class="takenBranch" title="Branch 2 taken 29927 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>47922</pre></td>
     <td align="left" class="src coveredLine"><pre>  for (unsigned nn = 0; nn &lt; parameters.size(); ++nn) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>126</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 17272 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>17272</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 17995 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>17995</pre></td>
     <td align="left" class="src coveredLine"><pre>    const auto optional_value = eval_expr(parameter_expressions[nn]);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>127</pre></td>
-    <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span><span class="takenBranch" title="Branch 2 taken 17272 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>17272</pre></td>
+    <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span><span class="takenBranch" title="Branch 2 taken 17995 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>17995</pre></td>
     <td align="left" class="src coveredLine"><pre>    if (!optional_value) {</pre></td>
     </tr>
 
@@ -1232,15 +1232,15 @@
 
     <tr>
     <td align="right" class="lineno"><pre>134</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 17272 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>17272</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 17995 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>17995</pre></td>
     <td align="left" class="src coveredLine"><pre>    const double value = optional_value.value();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>135</pre></td>
-    <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span><span class="takenBranch" title="Branch 2 taken 17272 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>17272</pre></td>
+    <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span><span class="takenBranch" title="Branch 2 taken 17995 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>17995</pre></td>
     <td align="left" class="src coveredLine"><pre>    if (!std::isfinite(value)) {</pre></td>
     </tr>
 
@@ -1289,7 +1289,7 @@
     <tr>
     <td align="right" class="lineno"><pre>142</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>17272</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>17995</pre></td>
     <td align="left" class="src coveredLine"><pre>    parameters[nn] = value;</pre></td>
     </tr>
 
@@ -1303,7 +1303,7 @@
     <tr>
     <td align="right" class="lineno"><pre>144</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>59946</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>59854</pre></td>
     <td align="left" class="src coveredLine"><pre>  return parameters;</pre></td>
     </tr>
 

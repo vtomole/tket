@@ -275,7 +275,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2021-09-18 08:51:47</td>
+            <td class="headerValue">2021-09-25 05:12:44</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">27</td>
@@ -456,28 +456,28 @@
     <tr>
     <td align="right" class="lineno"><pre>23</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>103564</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>101522</pre></td>
     <td align="left" class="src coveredLine"><pre>MetaOp::MetaOp(OpType type, op_signature_t signature)</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>24</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 103564 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>103564</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 101522 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>101522</pre></td>
     <td align="left" class="src coveredLine"><pre>    : Op(type), signature_(signature) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>25</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 103564 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 103564 times">&check;</span><br/><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>103564</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 101522 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 101522 times">&check;</span><br/><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>101522</pre></td>
     <td align="left" class="src coveredLine"><pre>  if (!is_metaop_type(type)) throw NotValid();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>26</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>103564</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>101522</pre></td>
     <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>
 
@@ -519,7 +519,7 @@
     <tr>
     <td align="right" class="lineno"><pre>32</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>240</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>243</pre></td>
     <td align="left" class="src coveredLine"><pre>SymSet MetaOp::free_symbols() const { return {}; }</pre></td>
     </tr>
 
@@ -596,28 +596,28 @@
     <tr>
     <td align="right" class="lineno"><pre>43</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>584</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>590</pre></td>
     <td align="left" class="src coveredLine"><pre>op_signature_t MetaOp::get_signature() const {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>44</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 584 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>1168</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 590 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>1180</pre></td>
     <td align="left" class="src coveredLine"><pre>  std::optional&lt;op_signature_t> sig = desc_.signature();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>45</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 508 times">&check;</span><span class="takenBranch" title="Branch 2 taken 76 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>584</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 514 times">&check;</span><span class="takenBranch" title="Branch 2 taken 76 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>590</pre></td>
     <td align="left" class="src coveredLine"><pre>  if (sig)</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>46</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 508 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>508</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 514 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>514</pre></td>
     <td align="left" class="src coveredLine"><pre>    return *sig;</pre></td>
     </tr>
 
@@ -743,7 +743,7 @@
     <tr>
     <td align="right" class="lineno"><pre>64</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>207128</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>203044</pre></td>
     <td align="left" class="src coveredLine"><pre>MetaOp::~MetaOp() {}</pre></td>
     </tr>
 

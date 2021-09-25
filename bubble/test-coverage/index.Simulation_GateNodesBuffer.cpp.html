@@ -275,7 +275,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2021-09-18 08:51:47</td>
+            <td class="headerValue">2021-09-25 05:12:44</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">4</td>
@@ -624,7 +624,7 @@
     <tr>
     <td align="right" class="lineno"><pre>47</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>28585</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>28539</pre></td>
     <td align="left" class="src coveredLine"><pre>void GateNodesBuffer::Impl::push(const GateNode&amp; node) {</pre></td>
     </tr>
 
@@ -652,14 +652,14 @@
     <tr>
     <td align="right" class="lineno"><pre>51</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>28585</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>28539</pre></td>
     <td align="left" class="src coveredLine"><pre>  node.apply_full_unitary(matrix, number_of_qubits);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>52</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>28585</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>28539</pre></td>
     <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>
 
@@ -679,7 +679,7 @@
 
     <tr>
     <td align="right" class="lineno"><pre>55</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 480 times">&check;</span><span class="takenBranch" title="Branch 1 taken 1387 times">&check;</span></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 479 times">&check;</span><span class="takenBranch" title="Branch 1 taken 1388 times">&check;</span></td>
     <td align="right" class="linecount coveredLine"><pre>1867</pre></td>
     <td align="left" class="src coveredLine"><pre>  if (global_phase != 0.0) {</pre></td>
     </tr>
@@ -687,21 +687,21 @@
     <tr>
     <td align="right" class="lineno"><pre>56</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>480</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>479</pre></td>
     <td align="left" class="src coveredLine"><pre>    const auto factor = std::polar(1.0, PI * global_phase);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>57</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 480 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>480</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 479 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>479</pre></td>
     <td align="left" class="src coveredLine"><pre>    matrix *= factor;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>58</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>480</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>479</pre></td>
     <td align="left" class="src coveredLine"><pre>    global_phase = 0.0;</pre></td>
     </tr>
 
@@ -764,7 +764,7 @@
     <tr>
     <td align="right" class="lineno"><pre>67</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>28585</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>28539</pre></td>
     <td align="left" class="src coveredLine"><pre>void GateNodesBuffer::push(const GateNode&amp; node) { pimpl->push(node); }</pre></td>
     </tr>
 

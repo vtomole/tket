@@ -275,7 +275,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2021-09-18 08:51:47</td>
+            <td class="headerValue">2021-09-25 05:12:44</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">18</td>
@@ -624,14 +624,14 @@
     <tr>
     <td align="right" class="lineno"><pre>47</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>606736</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>606640</pre></td>
     <td align="left" class="src coveredLine"><pre>  UIDVertex() : uid() {}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>48</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>4790</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>4774</pre></td>
     <td align="left" class="src coveredLine"><pre>  explicit UIDVertex(const UID_t _uid) : uid(_uid) {}</pre></td>
     </tr>
 
@@ -1037,21 +1037,21 @@
     <tr>
     <td align="right" class="lineno"><pre>106</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>9580</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>9548</pre></td>
     <td align="left" class="src coveredLine"><pre>  void add_uid(const UID_t uid) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>107</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 4790 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 4790 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>9580</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 4774 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 4774 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>9548</pre></td>
     <td align="left" class="src coveredLine"><pre>    Vertex v = boost::add_vertex(UIDVertex(uid), graph);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>108</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 4790 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>9580</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 4774 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>9548</pre></td>
     <td align="left" class="src coveredLine"><pre>    uid_to_vertex.left.insert({uid, v});</pre></td>
     </tr>
 
@@ -1373,7 +1373,7 @@
     <tr>
     <td align="right" class="lineno"><pre>154</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>148414</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>148454</pre></td>
     <td align="left" class="src coveredLine"><pre>  unsigned n_uids() const { return boost::num_vertices(graph); }</pre></td>
     </tr>
 
@@ -1877,14 +1877,14 @@
     <tr>
     <td align="right" class="lineno"><pre>226</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>29408183</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>29408015</pre></td>
     <td align="left" class="src coveredLine"><pre>  const left_map&amp; to_vertices() const { return uid_to_vertex.left; }</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>227</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>29230525</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>29230469</pre></td>
     <td align="left" class="src coveredLine"><pre>  Vertex to_vertices(const UID_t&amp; uid) const { return to_vertices().at(uid); }</pre></td>
     </tr>
 

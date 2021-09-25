@@ -275,7 +275,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2021-09-18 08:51:47</td>
+            <td class="headerValue">2021-09-25 05:12:44</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">30</td>
@@ -428,21 +428,21 @@
     <tr>
     <td align="right" class="lineno"><pre>19</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>6752</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>6584</pre></td>
     <td align="left" class="src coveredLine"><pre>Transform operator>>(const Transform &amp;lhs, const Transform &amp;rhs) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>20</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 6752 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 6752 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 8 taken 6752 times">&check;</span><span class="notTakenBranch" title="Branch 9 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>33760</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 6584 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 6584 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 8 taken 6584 times">&check;</span><span class="notTakenBranch" title="Branch 9 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>32920</pre></td>
     <td align="left" class="src coveredLine"><pre>  std::vector&lt;Transform> l = {lhs, rhs};</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>21</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 6752 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>13504</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 6584 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>13168</pre></td>
     <td align="left" class="src coveredLine"><pre>  return Transform::sequence(l);</pre></td>
     </tr>
 
@@ -463,42 +463,42 @@
     <tr>
     <td align="right" class="lineno"><pre>24</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>6753</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>6585</pre></td>
     <td align="left" class="src coveredLine"><pre>Transform Transform::sequence(std::vector&lt;Transform> &amp;tvec) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>25</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>7444</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>7330</pre></td>
     <td align="left" class="src coveredLine"><pre>  return Transform([=](Circuit &amp;circ) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>26</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>7444</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>7330</pre></td>
     <td align="left" class="src coveredLine"><pre>    bool success = false;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>27</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>22333</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>21991</pre></td>
     <td align="left" class="src coveredLine"><pre>    for (std::vector&lt;Transform>::const_iterator it = tvec.begin();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>28</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 14889 times">&check;</span><span class="takenBranch" title="Branch 3 taken 7444 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>22333</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 14661 times">&check;</span><span class="takenBranch" title="Branch 3 taken 7330 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>21991</pre></td>
     <td align="left" class="src coveredLine"><pre>         it != tvec.end(); ++it) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>29</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 14889 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 4536 times">&check;</span><span class="takenBranch" title="Branch 5 taken 10353 times">&check;</span><br/><span class="takenBranch" title="Branch 6 taken 3027 times">&check;</span><span class="takenBranch" title="Branch 7 taken 1509 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>14889</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 14661 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 4553 times">&check;</span><span class="takenBranch" title="Branch 5 taken 10108 times">&check;</span><br/><span class="takenBranch" title="Branch 6 taken 2994 times">&check;</span><span class="takenBranch" title="Branch 7 taken 1559 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>14661</pre></td>
     <td align="left" class="src coveredLine"><pre>      success = it->apply(circ) || success;</pre></td>
     </tr>
 
@@ -512,14 +512,14 @@
     <tr>
     <td align="right" class="lineno"><pre>31</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>7444</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>7330</pre></td>
     <td align="left" class="src coveredLine"><pre>    return success;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>32</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 6753 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 6753 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>6753</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 6585 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 6585 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>6585</pre></td>
     <td align="left" class="src coveredLine"><pre>  });</pre></td>
     </tr>
 
@@ -547,28 +547,28 @@
     <tr>
     <td align="right" class="lineno"><pre>36</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>182</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>188</pre></td>
     <td align="left" class="src coveredLine"><pre>  return Transform([=](Circuit &amp;circ) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>37</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>182</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>188</pre></td>
     <td align="left" class="src coveredLine"><pre>    bool success = false;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>38</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 49 times">&check;</span><span class="takenBranch" title="Branch 2 taken 182 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>231</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 49 times">&check;</span><span class="takenBranch" title="Branch 2 taken 188 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>237</pre></td>
     <td align="left" class="src coveredLine"><pre>    while (trans.apply(circ)) success = true;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>39</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>182</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>188</pre></td>
     <td align="left" class="src coveredLine"><pre>    return success;</pre></td>
     </tr>
 
@@ -610,56 +610,56 @@
     <tr>
     <td align="right" class="lineno"><pre>45</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>74</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>77</pre></td>
     <td align="left" class="src coveredLine"><pre>  return Transform([=](Circuit &amp;circ) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>46</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>74</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>77</pre></td>
     <td align="left" class="src coveredLine"><pre>    bool success = false;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>47</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 74 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>74</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 77 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>77</pre></td>
     <td align="left" class="src coveredLine"><pre>    int currentVal = eval(circ);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>48</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>74</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>77</pre></td>
     <td align="left" class="src coveredLine"><pre>    Circuit *currentCircuit = &amp;circ;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>49</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 74 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>74</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 77 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>77</pre></td>
     <td align="left" class="src coveredLine"><pre>    Circuit newCircuit = circ;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>50</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 74 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>74</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 77 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>77</pre></td>
     <td align="left" class="src coveredLine"><pre>    trans.apply(newCircuit);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>51</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 74 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>74</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 77 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>77</pre></td>
     <td align="left" class="src coveredLine"><pre>    int newVal = eval(newCircuit);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>52</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 3 times">&check;</span><span class="takenBranch" title="Branch 1 taken 74 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>77</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 3 times">&check;</span><span class="takenBranch" title="Branch 1 taken 77 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>80</pre></td>
     <td align="left" class="src coveredLine"><pre>    while (newVal &lt; currentVal) {</pre></td>
     </tr>
 
@@ -707,15 +707,15 @@
 
     <tr>
     <td align="right" class="lineno"><pre>59</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 3 times">&check;</span><span class="takenBranch" title="Branch 1 taken 71 times">&check;</span><span class="takenBranch" title="Branch 3 taken 3 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>74</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 3 times">&check;</span><span class="takenBranch" title="Branch 1 taken 74 times">&check;</span><span class="takenBranch" title="Branch 3 taken 3 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>77</pre></td>
     <td align="left" class="src coveredLine"><pre>    if (&amp;circ != currentCircuit) circ = *currentCircuit;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>60</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>148</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>154</pre></td>
     <td align="left" class="src coveredLine"><pre>    return success;</pre></td>
     </tr>
 

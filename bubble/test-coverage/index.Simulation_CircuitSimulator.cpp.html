@@ -275,7 +275,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2021-09-18 08:51:47</td>
+            <td class="headerValue">2021-09-25 05:12:44</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">20</td>
@@ -491,7 +491,7 @@
     <tr>
     <td align="right" class="lineno"><pre>28</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1342</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1344</pre></td>
     <td align="left" class="src coveredLine"><pre>Eigen::MatrixXcd get_unitary(</pre></td>
     </tr>
 
@@ -505,28 +505,28 @@
     <tr>
     <td align="right" class="lineno"><pre>30</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1342</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1344</pre></td>
     <td align="left" class="src coveredLine"><pre>  const auto matr_size = get_matrix_size(circ.n_qubits());</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>31</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 1342 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>1342</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 1344 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>1344</pre></td>
     <td align="left" class="src coveredLine"><pre>  Eigen::MatrixXcd result = Eigen::MatrixXcd::Identity(matr_size, matr_size);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>32</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1342 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>1342</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1344 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>1344</pre></td>
     <td align="left" class="src coveredLine"><pre>  apply_unitary(circ, result, abs_epsilon, max_number_of_qubits);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>33</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1342</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1344</pre></td>
     <td align="left" class="src coveredLine"><pre>  return result;</pre></td>
     </tr>
 
@@ -855,7 +855,7 @@
     <tr>
     <td align="right" class="lineno"><pre>80</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>521</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>519</pre></td>
     <td align="left" class="src coveredLine"><pre>Eigen::VectorXcd get_statevector(</pre></td>
     </tr>
 
@@ -875,29 +875,29 @@
 
     <tr>
     <td align="right" class="lineno"><pre>83</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 521 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 521 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 521 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><span class="takenBranch" title="Branch 10 taken 521 times">&check;</span><span class="notTakenBranch" title="Branch 11 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>1042</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 519 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 519 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 519 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><span class="takenBranch" title="Branch 10 taken 519 times">&check;</span><span class="notTakenBranch" title="Branch 11 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>1038</pre></td>
     <td align="left" class="src coveredLine"><pre>      Eigen::MatrixXcd::Zero(get_matrix_size(circ.n_qubits()), 1);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>84</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 521 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>521</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 519 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>519</pre></td>
     <td align="left" class="src coveredLine"><pre>  result(0, 0) = 1.0;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>85</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 521 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>521</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 519 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>519</pre></td>
     <td align="left" class="src coveredLine"><pre>  apply_unitary(circ, result, abs_epsilon, max_number_of_qubits);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>86</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 521 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>1042</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 519 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>1038</pre></td>
     <td align="left" class="src coveredLine"><pre>  return result;</pre></td>
     </tr>
 
