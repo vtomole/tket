@@ -37,7 +37,7 @@ class TketConan(ConanFile):
     exports = ["patches/*"]
     requires = (
         "boost/1.77.0",
-        "symengine/0.8.1",
+        "symengine/0.8.2",
         "eigen/3.4.0",
         "spdlog/1.9.2",
         "nlohmann_json/3.10.2",
