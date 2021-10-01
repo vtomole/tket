@@ -41,10 +41,6 @@ jobs:
       run: conan create --profile=tket recipes/symengine -o boost:without_fiber=True -o boost:without_json=True -o boost:without_nowide=True
     - name: Build tket
       run: conan create --profile=tket recipes/tket -o boost:without_fiber=True -o boost:without_json=True -o boost:without_nowide=True
-    - name: Build and run tket tests
-      run: conan create --profile=tket recipes/tket-tests -o boost:without_fiber=True -o boost:without_json=True -o boost:without_nowide=True
-    - name: Build and run tket proptests
-      run: conan create --profile=tket recipes/tket-proptests -o boost:without_fiber=True -o boost:without_json=True -o boost:without_nowide=True
     - name: Set up Python 3.8
       if: github.event_name == 'push'
       uses: actions/setup-python@v2
