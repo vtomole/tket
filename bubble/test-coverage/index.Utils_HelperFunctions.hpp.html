@@ -275,7 +275,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2021-09-25 05:12:44</td>
+            <td class="headerValue">2021-10-01 11:29:18</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">25</td>
@@ -764,7 +764,7 @@
     <tr>
     <td align="right" class="lineno"><pre>67</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>7556</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>5809</pre></td>
     <td align="left" class="src coveredLine"><pre>bimap_to_map(MapT&amp; bm) {</pre></td>
     </tr>
 
@@ -805,15 +805,15 @@
 
     <tr>
     <td align="right" class="lineno"><pre>73</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 7427 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>15981</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 5680 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>12487</pre></td>
     <td align="left" class="src coveredLine"><pre>  funcT trans = [](const typename MapT::value_type&amp; val) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>74</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>52763</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>40534</pre></td>
     <td align="left" class="src coveredLine"><pre>    return std::make_pair(val.first, val.second);</pre></td>
     </tr>
 
@@ -826,15 +826,15 @@
 
     <tr>
     <td align="right" class="lineno"><pre>76</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 7427 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 7427 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 7427 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>15112</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 5680 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 5680 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 5680 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>11618</pre></td>
     <td align="left" class="src coveredLine"><pre>  auto it = bm | boost::adaptors::transformed(trans);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>77</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 7427 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 7427 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 7427 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>15112</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 5680 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 5680 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 5680 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>11618</pre></td>
     <td align="left" class="src coveredLine"><pre>  return retT(it.begin(), it.end());</pre></td>
     </tr>
 
