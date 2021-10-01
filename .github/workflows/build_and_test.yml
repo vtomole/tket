@@ -49,14 +49,7 @@ jobs:
         OPENBLAS="$(brew --prefix openblas)" pip install -U scipy
         cd pytket
         pip install -e . -v
-    - name: Test pytket (3.8)
-      if: github.event_name == 'pull_request' || github.event_name == 'push'
-      run: |
-        eval "$(pyenv init -)"
-        pyenv shell tket-3.8
-        cd pytket/tests
-        pip install -r requirements.txt
-        pytest --ignore=simulator/ --doctest-modules
+        python -c "import pytket"
     - name: Build pytket (3.9)
       if: github.event_name == 'push'
       run: |
@@ -65,11 +58,4 @@ jobs:
         OPENBLAS="$(brew --prefix openblas)" pip install -U scipy
         cd pytket
         pip install -e . -v
-    - name: Test pytket (3.9)
-      if: github.event_name == 'push'
-      run: |
-        eval "$(pyenv init -)"
-        pyenv shell tket-3.9
-        cd pytket/tests
-        pip install -r requirements.txt
-        pytest --ignore=simulator/ --doctest-modules
+        python -c "import pytket"
