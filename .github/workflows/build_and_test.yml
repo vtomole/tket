@@ -41,37 +41,35 @@ jobs:
       run: conan create --profile=tket recipes/symengine -o boost:without_fiber=True -o boost:without_json=True -o boost:without_nowide=True
     - name: Build tket
       run: conan create --profile=tket recipes/tket -o boost:without_fiber=True -o boost:without_json=True -o boost:without_nowide=True
-    - name: Set up Python 3.8
-      if: github.event_name == 'push'
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
     - name: Build pytket (3.8)
       if: github.event_name == 'pull_request' || github.event_name == 'push'
       run: |
+        eval "$(pyenv init -)"
+        pyenv shell tket-3.8
         OPENBLAS="$(brew --prefix openblas)" pip install -U scipy
         cd pytket
         pip install -e . -v
     - name: Test pytket (3.8)
       if: github.event_name == 'pull_request' || github.event_name == 'push'
       run: |
+        eval "$(pyenv init -)"
+        pyenv shell tket-3.8
         cd pytket/tests
         pip install -r requirements.txt
         pytest --ignore=simulator/ --doctest-modules
-    - name: Set up Python 3.9
-      if: github.event_name == 'push'
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.9
     - name: Build pytket (3.9)
       if: github.event_name == 'push'
       run: |
+        eval "$(pyenv init -)"
+        pyenv shell tket-3.9
         OPENBLAS="$(brew --prefix openblas)" pip install -U scipy
         cd pytket
         pip install -e . -v
     - name: Test pytket (3.9)
       if: github.event_name == 'push'
       run: |
+        eval "$(pyenv init -)"
+        pyenv shell tket-3.9
         cd pytket/tests
         pip install -r requirements.txt
         pytest --ignore=simulator/ --doctest-modules
