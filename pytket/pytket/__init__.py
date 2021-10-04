@@ -21,8 +21,5 @@ from pytket.circuit import (  # type: ignore
     Qubit,
     Bit,
 )
-import pytket.routing
-import pytket.transform
-import pytket.telemetry
 
 __path__ = __import__("pkgutil").extend_path(__path__, __name__)  # type: ignore

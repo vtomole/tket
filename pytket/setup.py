@@ -184,17 +184,7 @@ class CMakeBuild(build_ext):
 
 
 binders = [
-    "logging",
-    "utils_serialization",
     "circuit",
-    "passes",
-    "predicates",
-    "partition",
-    "pauli",
-    "program",
-    "routing",
-    "transform",
-    "tailoring",
 ]
 
 
