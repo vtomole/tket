@@ -61,6 +61,8 @@ class TketConan(ConanFile):
     def configure(self):
         # Disable features that are still under the LGPL.
         self.options["eigen"].MPL2_only = True
+        self.options["fmt"].header_only = True
+        self.options["spdlog"].header_only = True
 
     def build(self):
         # Build with boost patches
