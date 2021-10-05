@@ -1,7 +1,0 @@
-# These are test-only dependencies.
-
-pytest
-pytest-benchmark
-hypothesis
-docker
-jsonschema

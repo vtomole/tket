@@ -186,18 +186,7 @@ setup(
     description="Python module for interfacing with the CQC tket library of quantum software",
     license="CQC Software Licence",
     packages=setuptools.find_packages(),
-    install_requires=[
-        "sympy ~=1.6",
-        "numpy ~=1.19",
-        "lark-parser ~=0.7",
-        "scipy ~=1.2",
-        "networkx ~= 2.4",
-        "graphviz ~= 0.14",
-        "jinja2 ~= 2.11",
-        "types-Jinja2",
-        "types-pkg_resources",
-        "typing-extensions ~= 3.7",
-    ],
+    install_requires=[],
     ext_modules=[
         CMakeExtension("pytket._tket.{}".format(binder)) for binder in binders
     ],
