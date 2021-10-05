@@ -46,4 +46,5 @@ function(build_module module)
 endfunction(build_module)
 
 build_module(circuit
-    binders/circuit/main.cpp)
+    binders/circuit/main.cpp
+    binders/circuit/unitid.cpp)

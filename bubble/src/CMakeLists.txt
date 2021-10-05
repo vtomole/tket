@@ -85,6 +85,7 @@ set(BUBBLE_MEASUREMENT_DIR ${BUBBLE_SRC_DIR}/MeasurementSetup)
 set(TKET_SOURCES
 
     # Utils
+    ${BUBBLE_UTILS_DIR}/UnitID.cpp
     ${BUBBLE_UTILS_DIR}/Expression.cpp
 )
 
