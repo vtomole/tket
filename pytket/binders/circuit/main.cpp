@@ -26,10 +26,7 @@ namespace py = pybind11;
 
 namespace tket {
 
-void init_unitid(py::module &m);
-
 PYBIND11_MODULE(circuit, m) {
-  init_unitid(m);
   py::enum_<BasisOrder>(
       m, "BasisOrder",
       "Enum for readout basis and ordering.\n"
