@@ -73,18 +73,7 @@ PYBIND11_MODULE(circuit, m) {
           "Constructs an id with an arbitrary-dimensional "
           "index\n\n:param name: The readable name for the "
           "register\n:param index: The index vector",
-          py::arg("name"), py::arg("index"))
-      .def(py::pickle(
-          [](const Qubit &q) {
-            return py::make_tuple(q.reg_name(), q.index());
-          },
-          [](const py::tuple &t) {
-            if (t.size() != 2)
-              throw std::runtime_error(
-                  "Invalid state: tuple size: " + std::to_string(t.size()));
-            return Qubit(
-                t[0].cast<std::string>(), t[1].cast<std::vector<unsigned>>());
-          }));
+          py::arg("name"), py::arg("index"));
 }
 
 }  // namespace tket
