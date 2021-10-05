@@ -13,22 +13,3 @@
 // limitations under the License.
 
 #include "UnitID.hpp"
-
-#include <sstream>
-
-namespace tket {
-
-std::string UnitID::repr() const {
-  std::stringstream str;
-  str << data_->name_;
-  if (!data_->index_.empty()) {
-    str << "[" << std::to_string(data_->index_[0]);
-    for (unsigned i = 1; i < data_->index_.size(); i++) {
-      str << ", " << std::to_string(data_->index_[i]);
-    }
-    str << "]";
-  }
-  return str.str();
-}
-
-}  // namespace tket

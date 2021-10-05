@@ -80,7 +80,6 @@ void init_unitid(py::module &m) {
       m, "UnitID", "A handle to a computational unit (e.g. qubit, bit)")
       .def("__eq__", &UnitID::operator==)
       .def("__lt__", &UnitID::operator<)
-      .def("__repr__", &UnitID::repr)
       .def("__hash__", [](const UnitID &) { return 0; })
       .def("__copy__", [](const UnitID &id) { return UnitID(id); })
       .def(

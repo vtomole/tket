@@ -54,9 +54,6 @@ class UnitID {
  public:
   UnitID() : data_(std::make_shared<UnitData>()) {}
 
-  /** String representation including name and index */
-  std::string repr() const;
-
   /** Register name */
   std::string reg_name() const { return data_->name_; }
 
@@ -135,11 +132,7 @@ class Qubit : public UnitID {
       : UnitID(name, index, UnitType::Qubit) {}
 
   /** Copy constructor */
-  explicit Qubit(const UnitID &other) : UnitID(other) {
-    if (other.type() != UnitType::Qubit) {
-      throw InvalidUnitConversion(other.repr(), "Qubit");
-    }
-  }
+  explicit Qubit(const UnitID &other) : UnitID(other) {}
 };
 
 }  // namespace tket
