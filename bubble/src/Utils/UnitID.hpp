@@ -32,18 +32,6 @@ namespace tket {
 /** Type of information held */
 enum class UnitType { Qubit };
 
-/** The type and dimension of a register */
-typedef std::pair<UnitType, unsigned> register_info_t;
-
-typedef std::optional<register_info_t> opt_reg_info_t;
-
-/** Conversion invalid */
-class InvalidUnitConversion : public std::logic_error {
- public:
-  InvalidUnitConversion(const std::string &name, const std::string &new_type)
-      : std::logic_error("Cannot convert " + name + " to " + new_type) {}
-};
-
 /**
  * Location holding a bit or qubit of information
  *
@@ -54,9 +42,6 @@ class UnitID {
  public:
   UnitID() : data_(std::make_shared<UnitData>()) {}
 
-  /** Register name */
-  std::string reg_name() const { return data_->name_; }
-
   /** Index dimension */
   unsigned reg_dim() const { return data_->index_.size(); }
 
@@ -65,9 +50,6 @@ class UnitID {
 
   /** Unit type */
   UnitType type() const { return data_->type_; }
-
-  /** Register dimension and type */
-  register_info_t reg_info() const { return {type(), reg_dim()}; }
 
   bool operator<(const UnitID &other) const {
     int n = data_->name_.compare(other.data_->name_);

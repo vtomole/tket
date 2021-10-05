@@ -23,15 +23,10 @@ namespace py = pybind11;
 namespace tket {
 
 PYBIND11_MODULE(circuit, m) {
-  m.attr("_TEMP_REG_SIZE") = 32;
-  m.attr("_TEMP_BIT_NAME") = "tk_SCRATCH_BIT";
-  m.attr("_TEMP_BIT_REG_BASE") = "tk_SCRATCH_BITREG";
-
   py::enum_<UnitType>(
       m, "UnitType",
       "Enum for data types of units in circuits (e.g. Qubits vs Bits).")
       .value("qubit", UnitType::Qubit, "A single Qubit");
-
   py::class_<UnitID>(
       m, "UnitID", "A handle to a computational unit (e.g. qubit, bit)")
       .def("__eq__", &UnitID::operator==)
@@ -42,8 +37,6 @@ PYBIND11_MODULE(circuit, m) {
           "__deepcopy__", [](const UnitID &id, py::dict) { return UnitID(id); })
       .def(py::self == py::self)
       .def_property_readonly(
-          "reg_name", &UnitID::reg_name, "Readable name of register")
-      .def_property_readonly(
           "index", &UnitID::index,
           "Index vector describing position in the register. The "
           "length of this vector is the dimension of the register")
@@ -51,7 +44,6 @@ PYBIND11_MODULE(circuit, m) {
           "type", &UnitID::type,
           "Type of unit, either ``UnitType.qubit`` or "
           "``UnitType.bit``");
-
   py::class_<Qubit, UnitID>(m, "Qubit", "A handle to a qubit")
       .def(
           py::init<unsigned>(),
