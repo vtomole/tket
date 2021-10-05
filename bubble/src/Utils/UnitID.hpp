@@ -5,7 +5,7 @@ namespace tket {
 
 class UnitID {
  public:
-  UnitID() {}
+  UnitID();
 };
 
 }  // namespace tket
