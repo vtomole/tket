@@ -81,29 +81,6 @@ class Qubit : public UnitID {
  public:
   Qubit() : UnitID("", {}, UnitType::Qubit) {}
 
-  /** Qubit in default register */
-  explicit Qubit(unsigned index)
-      : UnitID("q", {index}, UnitType::Qubit) {}
-
-  /** Named register with no index */
-  explicit Qubit(const std::string &name) : UnitID(name, {}, UnitType::Qubit) {}
-
-  /** Named register with a one-dimensional index */
-  Qubit(const std::string &name, unsigned index)
-      : UnitID(name, {index}, UnitType::Qubit) {}
-
-  /** Named register with a two-dimensional index */
-  Qubit(const std::string &name, unsigned row, unsigned col)
-      : UnitID(name, {row, col}, UnitType::Qubit) {}
-
-  /** Named register with a three-dimensional index */
-  Qubit(const std::string &name, unsigned row, unsigned col, unsigned layer)
-      : UnitID(name, {row, col, layer}, UnitType::Qubit) {}
-
-  /** Named register with a multi-dimensional index */
-  Qubit(const std::string &name, std::vector<unsigned> index)
-      : UnitID(name, index, UnitType::Qubit) {}
-
   /** Copy constructor */
   explicit Qubit(const UnitID &other) : UnitID(other) {}
 };

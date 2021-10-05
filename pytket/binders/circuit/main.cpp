@@ -36,36 +36,7 @@ PYBIND11_MODULE(circuit, m) {
       .def(
           "__deepcopy__", [](const UnitID &id, py::dict) { return UnitID(id); })
       .def(py::self == py::self);
-  py::class_<Qubit, UnitID>(m, "Qubit", "A handle to a qubit")
-      .def(
-          py::init<unsigned>(),
-          "Constructs an id for some index in the default qubit "
-          "register\n\n:param index: The index in the register",
-          py::arg("index"))
-      .def(
-          py::init<const std::string &>(),
-          "Constructs a named id (i.e. corresponding to a singleton "
-          "register)\n\n:param name: The readable name for the id",
-          py::arg("name"))
-      .def(
-          py::init<const std::string &, unsigned>(),
-          "Constructs an indexed id (i.e. corresponding to an element "
-          "in a linear register)\n\n:param name: The readable name for "
-          "the register\n:param index: The numerical index",
-          py::arg("name"), py::arg("index"))
-      .def(
-          py::init<const std::string &, unsigned, unsigned>(),
-          "Constructs a doubly-indexed id (i.e. corresponding to an "
-          "element in a grid register)\n\n:param name: The readable "
-          "name for the register\n:param row: The row index\n:param "
-          "col: The column index",
-          py::arg("name"), py::arg("row"), py::arg("col"))
-      .def(
-          py::init<const std::string &, std::vector<unsigned> &>(),
-          "Constructs an id with an arbitrary-dimensional "
-          "index\n\n:param name: The readable name for the "
-          "register\n:param index: The index vector",
-          py::arg("name"), py::arg("index"));
+  py::class_<Qubit, UnitID>(m, "Qubit", "A handle to a qubit");
 }
 
 }  // namespace tket
