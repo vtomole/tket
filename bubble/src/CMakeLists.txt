@@ -91,7 +91,6 @@ set(TKET_SOURCES
 
     # Ops
     ${BUBBLE_OPS_DIR}/Conditional.cpp
-    ${BUBBLE_OPS_DIR}/ConjugatePauliFunctions.cpp
     ${BUBBLE_OPS_DIR}/FlowOp.cpp
     ${BUBBLE_OPS_DIR}/MetaOp.cpp
     ${BUBBLE_OPS_DIR}/Op.cpp
@@ -122,9 +121,6 @@ set(TKET_SOURCES
     ${BUBBLE_UTILS_DIR}/PauliStrings.cpp
     ${BUBBLE_UTILS_DIR}/CosSinDecomposition.cpp
     ${BUBBLE_UTILS_DIR}/Expression.cpp
-
-    # PauliGraph
-    ${BUBBLE_PAULIGRAPH_DIR}/PauliGraph.cpp
 )
 
 add_library(${TKET} SHARED ${TKET_SOURCES})
