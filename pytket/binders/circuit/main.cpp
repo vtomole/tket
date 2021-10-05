@@ -17,54 +17,11 @@
 #include <pybind11/operators.h>
 #include <sstream>
 #include "Utils/UnitID.hpp"
-#include "UnitRegister.hpp"
 #include "unit_downcast.hpp"
 
 namespace py = pybind11;
 
 namespace tket {
-
-template <typename T>
-void declare_register(py::module &m, const std::string &typestr) {
-  py::class_<UnitRegister<T>>(
-      m, typestr.c_str(), "Linear register of UnitID types.")
-      .def(
-          py::init<const std::string &, std::size_t>(),
-          ("Construct a new " + typestr + "." +
-           "\n\n:param name: Name of the register." +
-           "\n:param size: Size of register.")
-              .c_str(),
-          py::arg("name"), py::arg("size"))
-      .def("__getitem__", &UnitRegister<T>::operator[])
-      .def("__lt__", &UnitRegister<T>::operator<)
-      .def("__eq__", &UnitRegister<T>::operator==)
-      .def("__contains__", &UnitRegister<T>::contains)
-      .def("__len__", &UnitRegister<T>::size)
-      .def("__str__", &UnitRegister<T>::name)
-      .def(
-          "__repr__",
-          [typestr](const UnitRegister<T> &reg) {
-            return typestr + "(\"" + reg.name() + "\", " +
-                   std::to_string(reg.size()) + ")";
-          })
-      .def_property(
-          "name", &UnitRegister<T>::name, &UnitRegister<T>::set_name,
-          "Name of register.")
-      .def_property(
-          "size", &UnitRegister<T>::size, &UnitRegister<T>::set_size,
-          "Size of register.")
-      .def(
-          "__hash__",
-          [](const UnitRegister<T> &reg) {
-            return py::hash(py::make_tuple(reg.name(), reg.size()));
-          })
-      .def(
-          "__copy__",
-          [](const UnitRegister<T> &reg) { return UnitRegister<T>(reg); })
-      .def("__deepcopy__", [](const UnitRegister<T> &reg, py::dict) {
-        return UnitRegister<T>(reg);
-      });
-}
 
 PYBIND11_MODULE(circuit, m) {
   m.attr("_TEMP_REG_SIZE") = 32;
@@ -137,8 +94,6 @@ PYBIND11_MODULE(circuit, m) {
             return Qubit(
                 t[0].cast<std::string>(), t[1].cast<std::vector<unsigned>>());
           }));
-
-  declare_register<Qubit>(m, "QubitRegister");
 }
 
 }  // namespace tket
