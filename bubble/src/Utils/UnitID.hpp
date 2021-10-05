@@ -149,16 +149,6 @@ class Qubit : public UnitID {
   }
 };
 
-typedef std::vector<UnitID> unit_vector_t;
-typedef std::map<UnitID, UnitID> unit_map_t;
-typedef std::set<UnitID> unit_set_t;
-
-typedef std::vector<Qubit> qubit_vector_t;
-typedef std::map<Qubit, Qubit> qubit_map_t;
-
-/** A register of locations sharing the same name */
-typedef std::map<unsigned, UnitID> register_t;
-
 }  // namespace tket
 
 #endif
