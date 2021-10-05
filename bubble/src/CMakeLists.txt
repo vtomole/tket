@@ -89,13 +89,6 @@ set(TKET_SOURCES
     ${BUBBLE_OPTYPE_DIR}/OpTypeInfo.cpp
     ${BUBBLE_OPTYPE_DIR}/OpTypeFunctions.cpp
 
-    # Ops
-    ${BUBBLE_OPS_DIR}/Conditional.cpp
-    ${BUBBLE_OPS_DIR}/FlowOp.cpp
-    ${BUBBLE_OPS_DIR}/MetaOp.cpp
-    ${BUBBLE_OPS_DIR}/Op.cpp
-    ${BUBBLE_OPS_DIR}/ClassicalOps.cpp
-
     # Utils
     ${BUBBLE_UTILS_DIR}/UnitID.cpp
     ${BUBBLE_UTILS_DIR}/HelperFunctions.cpp

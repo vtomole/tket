@@ -17,8 +17,7 @@
 
 #include <sstream>
 
-#include "Ops/ClassicalOps.hpp"
-#include "Ops/Op.hpp"
+#include "OpType/OpType.hpp"
 #include "Utils/Constants.hpp"
 #include "Utils/Symbols.hpp"
 #include "binder_utils.hpp"
@@ -32,26 +31,6 @@ void init_unitid(py::module &m);
 
 PYBIND11_MODULE(circuit, m) {
   init_unitid(m);
-  py::class_<Op, std::shared_ptr<Op>>(
-      m, "Op", "Encapsulates operation information")
-      .def_property_readonly(
-          "type", &Op::get_type, "Type of op being performed")
-      .def_property_readonly(
-          "params", &Op::get_params_reduced,
-          "Angular parameters of the op, in half-turns (e.g. 1.0 "
-          "half-turns is :math:`\\pi` radians). The parameters "
-          "returned are constrained to the appropriate canonical "
-          "range, which is usually the half-open interval [0,2) but "
-          "for some operations (e.g. Rx, Ry and Rz) is [0,4).")
-      .def_property_readonly(
-          "n_qubits", &Op::n_qubits, "Number of qubits of op")
-      .def(
-          "get_name", &Op::get_name, "String representation of op",
-          py::arg("latex") = false)
-      .def("__eq__", &Op::operator==)
-      .def("__repr__", [](const Op &op) { return op.get_name(); })
-      .def("is_gate", [](const Op &op) { return op.get_desc().is_gate(); });
-
   // NOTE: Sphinx does not automatically pick up the docstring for OpType
   py::enum_<OpType>(
       m, "OpType",
