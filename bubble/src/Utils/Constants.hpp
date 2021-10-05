@@ -42,31 +42,6 @@ constexpr double EPS = 1e-11;
 constexpr double PI =
     3.141'592'653'589'793'238'462'643'383'279'502'884'197'169'399'375'105'820'974;
 
-/**
- * Enum for readout basis and ordering
- *
- * Readouts are viewed in increasing lexicographic order (ILO) of the bit's
- * UnitID. This is our default convention for column indexing for ALL readout
- * forms (shots, counts, statevector, and unitaries). e.g. |abc> corresponds to
- * the readout: ('c', 0) --> a, ('c', 1) --> b, ('d', 0) --> c
- *
- * For statevector and unitaries, the string abc is interpreted as an index
- * in a big-endian (BE) fashion.
- * e.g. the statevector (a_{00}, a_{01}, a_{10}, a_{11})
- *
- * Some backends (Qiskit, ProjectQ, Quest, etc.) use a DLO-BE
- * (decreasing lexicographic order, big-endian) convention. This is the same
- * as ILO-LE (little-endian) for statevectors and unitaries, but gives shot
- * tables/readouts in a counter-intuitive manner.
- *
- * Every backend and matrix-based box should have a BasisOrder option which
- * can toggle between ILO-BE (ilo) and DLO-BE (dlo).
- */
-enum class BasisOrder {
-  ilo, /**< increasing lexicographic order (big-endian) */
-  dlo  /**< decreasing lexicographic order (big-endian) */
-};
-
 }  // namespace tket
 
 #endif  // CONSTANTS_H_
