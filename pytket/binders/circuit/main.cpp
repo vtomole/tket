@@ -14,19 +14,13 @@
 
 #include <pybind11/pybind11.h>
 #include <pybind11/stl.h>
-
-#include <sstream>
-
-namespace py = pybind11;
-
-#include "Utils/UnitID.hpp"
-
 #include <pybind11/operators.h>
-#include <pybind11/pybind11.h>
-#include <pybind11/stl.h>
-
+#include <sstream>
+#include "Utils/UnitID.hpp"
 #include "UnitRegister.hpp"
 #include "unit_downcast.hpp"
+
+namespace py = pybind11;
 
 namespace tket {
 
