@@ -37,10 +37,6 @@ PYBIND11_MODULE(circuit, m) {
           "__deepcopy__", [](const UnitID &id, py::dict) { return UnitID(id); })
       .def(py::self == py::self)
       .def_property_readonly(
-          "index", &UnitID::index,
-          "Index vector describing position in the register. The "
-          "length of this vector is the dimension of the register")
-      .def_property_readonly(
           "type", &UnitID::type,
           "Type of unit, either ``UnitType.qubit`` or "
           "``UnitType.bit``");

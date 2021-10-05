@@ -42,9 +42,6 @@ class UnitID {
  public:
   UnitID() : data_(std::make_shared<UnitData>()) {}
 
-  /** Index */
-  std::vector<unsigned> index() const { return data_->index_; }
-
   /** Unit type */
   UnitType type() const { return data_->type_; }
 
