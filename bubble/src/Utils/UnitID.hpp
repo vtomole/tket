@@ -37,8 +37,6 @@ typedef std::pair<UnitType, unsigned> register_info_t;
 
 typedef std::optional<register_info_t> opt_reg_info_t;
 
-const std::string &q_default_reg();
-
 /** Conversion invalid */
 class InvalidUnitConversion : public std::logic_error {
  public:
@@ -115,7 +113,7 @@ class Qubit : public UnitID {
 
   /** Qubit in default register */
   explicit Qubit(unsigned index)
-      : UnitID(q_default_reg(), {index}, UnitType::Qubit) {}
+      : UnitID("q", {index}, UnitType::Qubit) {}
 
   /** Named register with no index */
   explicit Qubit(const std::string &name) : UnitID(name, {}, UnitType::Qubit) {}

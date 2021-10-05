@@ -31,17 +31,4 @@ std::string UnitID::repr() const {
   return str.str();
 }
 
-/* The functions below use the "construct on first use" idiom to return "global"
- * objects. They use pointers to ensure that the objects returned last
- * throughout static initialization and deinitialization. There is no memory
- * leak since the objects are only constructed once and the memory is reclaimed
- * on program termination.
- */
-
-const std::string& q_default_reg() {
-  static std::unique_ptr<const std::string> regname =
-      std::make_unique<const std::string>("q");
-  return *regname;
-}
-
 }  // namespace tket
