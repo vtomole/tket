@@ -111,9 +111,6 @@ set(TKET_SOURCES
     ${BUBBLE_GATE_DIR}/GateUnitaryMatrixVariableQubits.cpp
     ${BUBBLE_GATE_DIR}/GateUnitarySparseMatrix.cpp
 
-    # Clifford
-    ${BUBBLE_CLIFFORD_DIR}/CliffTableau.cpp
-
     # Utils
     ${BUBBLE_UTILS_DIR}/UnitID.cpp
     ${BUBBLE_UTILS_DIR}/HelperFunctions.cpp
