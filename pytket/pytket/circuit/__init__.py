@@ -16,7 +16,4 @@
  tket :py:class:`Circuit` data structure.
   This module is provided in binary form during the PyPI installation."""
 
-from pytket._tket.circuit import *  # type: ignore
-
-# prefixes for assertion bits
-from pytket._tket.circuit import _DEBUG_ZERO_REG_PREFIX, _DEBUG_ONE_REG_PREFIX  # type: ignore
+from pytket._tket.circuit import Qubit  # type: ignore
