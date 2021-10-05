@@ -29,7 +29,7 @@ namespace py = pybind11;
 #include "unit_downcast.hpp"
 
 namespace tket {
-const std::string qubit_reg_name = std::string("QubitRegister");
+
 template <typename T>
 void declare_register(py::module &m, const std::string &typestr) {
   py::class_<UnitRegister<T>>(
@@ -143,7 +143,7 @@ void init_unitid(py::module &m) {
                 t[0].cast<std::string>(), t[1].cast<std::vector<unsigned>>());
           }));
 
-  declare_register<Qubit>(m, qubit_reg_name);
+  declare_register<Qubit>(m, "QubitRegister");
 }
 
 PYBIND11_MODULE(circuit, m) {
