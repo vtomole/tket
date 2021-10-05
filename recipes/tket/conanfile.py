@@ -35,10 +35,7 @@ class TketConan(ConanFile):
     # (`conan build`). Maybe there is a better way?
     exports_sources = ["../../bubble/src/*", "!*/build/*", "patches/*"]
     exports = ["patches/*"]
-    requires = (
-        "boost/1.77.0",
-        "symengine/0.8.2",
-    )
+    requires = ("symengine/0.8.2",)
 
     _cmake = None
 
@@ -59,35 +56,8 @@ class TketConan(ConanFile):
         pass
 
     def build(self):
-        # Build with boost patches
-        boost_include_path = self.deps_cpp_info["boost"].include_paths[0]
-        curdir = os.path.dirname(os.path.realpath(__file__))
-        patches = {
-            # TKET-1407
-            # If and when the boost package is fixed we will remove this.
-            os.path.join(
-                boost_include_path, "boost", "graph", "detail", "adjacency_list.hpp"
-            ): os.path.join(curdir, "patches", "adjacency_list.diff"),
-            # TKET-1376
-            # This will be submitted as a PR to boost. If it is accepted we will remove
-            # the patch here. If not, we should consider switching to another library
-            # for subgraph matching, or writing our own code.
-            os.path.join(
-                boost_include_path, "boost", "graph", "vf2_sub_graph_iso.hpp"
-            ): os.path.join(curdir, "patches", "vf2_sub_graph_iso.diff"),
-        }
-        for filepath, patch_file in patches.items():
-            print("Patching " + filepath)
-            shutil.copyfile(filepath, filepath + ".original")
-            tools.patch(base_path=boost_include_path, patch_file=patch_file)
         cmake = self._configure_cmake()
-        try:
-            print("Building")
-            cmake.build()
-        finally:
-            for filepath in patches.keys():
-                print("Restoring " + filepath)
-                shutil.move(filepath + ".original", filepath)
+        cmake.build()
 
     def package(self):
         self.copy("*.hpp", dst="include")
