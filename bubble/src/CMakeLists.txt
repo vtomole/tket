@@ -99,7 +99,6 @@ set(TKET_SOURCES
     # Utils
     ${BUBBLE_UTILS_DIR}/UnitID.cpp
     ${BUBBLE_UTILS_DIR}/HelperFunctions.cpp
-    ${BUBBLE_UTILS_DIR}/MatrixAnalysis.cpp
     ${BUBBLE_UTILS_DIR}/Expression.cpp
 )
 
