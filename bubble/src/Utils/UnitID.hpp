@@ -42,9 +42,6 @@ class UnitID {
  public:
   UnitID() : data_(std::make_shared<UnitData>()) {}
 
-  /** Index dimension */
-  unsigned reg_dim() const { return data_->index_.size(); }
-
   /** Index */
   std::vector<unsigned> index() const { return data_->index_; }
 
