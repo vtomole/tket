@@ -27,11 +27,7 @@ PYBIND11_MODULE(circuit, m) {
       m, "UnitType",
       "Enum for data types of units in circuits (e.g. Qubits vs Bits).")
       .value("qubit", UnitType::Qubit, "A single Qubit");
-  py::class_<UnitID>(
-      m, "UnitID", "A handle to a computational unit (e.g. qubit, bit)")
-      .def("__copy__", [](const UnitID &id) { return UnitID(id); })
-      .def(
-          "__deepcopy__", [](const UnitID &id, py::dict) { return UnitID(id); });
+  py::class_<UnitID>(m, "UnitID", "A handle to a computational unit (e.g. qubit, bit)");
   py::class_<Qubit, UnitID>(m, "Qubit", "A handle to a qubit");
 }
 

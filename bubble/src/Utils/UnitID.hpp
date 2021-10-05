@@ -68,9 +68,6 @@ class UnitID {
 class Qubit : public UnitID {
  public:
   Qubit() : UnitID("", {}, UnitType::Qubit) {}
-
-  /** Copy constructor */
-  explicit Qubit(const UnitID &other) : UnitID(other) {}
 };
 
 }  // namespace tket
