@@ -16,4 +16,4 @@
  tket :py:class:`Circuit` data structure.
   This module is provided in binary form during the PyPI installation."""
 
-from pytket._tket.circuit import Qubit  # type: ignore
+from pytket._tket.circuit import UnitID  # type: ignore

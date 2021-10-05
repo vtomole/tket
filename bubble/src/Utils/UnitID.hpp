@@ -8,12 +8,6 @@ class UnitID {
   UnitID() {}
 };
 
-/** Location holding a qubit */
-class Qubit : public UnitID {
- public:
-  Qubit() : UnitID() {}
-};
-
 }  // namespace tket
 
 #endif

@@ -15,6 +15,6 @@
 """Python Interface to CQC tket
 """
 
-from pytket.circuit import Qubit
+from pytket.circuit import UnitID
 
 __path__ = __import__("pkgutil").extend_path(__path__, __name__)  # type: ignore
