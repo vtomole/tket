@@ -65,7 +65,8 @@ void declare_register(py::module &m, const std::string &typestr) {
         return UnitRegister<T>(reg);
       });
 }
-void init_unitid(py::module &m) {
+
+PYBIND11_MODULE(circuit, m) {
   m.attr("_TEMP_REG_SIZE") = 32;
   m.attr("_TEMP_BIT_NAME") = "tk_SCRATCH_BIT";
   m.attr("_TEMP_BIT_REG_BASE") = "tk_SCRATCH_BITREG";
@@ -138,10 +139,6 @@ void init_unitid(py::module &m) {
           }));
 
   declare_register<Qubit>(m, "QubitRegister");
-}
-
-PYBIND11_MODULE(circuit, m) {
-  init_unitid(m);
 }
 
 }  // namespace tket
