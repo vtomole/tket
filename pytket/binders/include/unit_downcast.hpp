@@ -27,9 +27,7 @@ struct polymorphic_type_hook<tket::UnitID> {
   static const void* get(const tket::UnitID* src, const std::type_info*& type) {
     if (src) {
       if (src->type() == tket::UnitType::Qubit) {
-        // Node has no additional info but is more specific
-        // If Qubit is needed, then subtyping is sufficient
-        type = &typeid(tket::Node);
+        type = &typeid(tket::Qubit);
       } else {
         type = &typeid(tket::Bit);
       }

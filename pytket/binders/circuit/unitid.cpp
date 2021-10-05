@@ -174,38 +174,6 @@ void init_unitid(py::module &m) {
           "register\n:param index: The index vector",
           py::arg("name"), py::arg("index"));
 
-  py::class_<Node, Qubit>(m, "Node", "A handle to a device node")
-      .def(
-          py::init<unsigned>(),
-          "Constructs an id for some index in the default physical "
-          "register\n\n:param index: The index in the register",
-          py::arg("index"))
-      .def(
-          py::init<const std::string &, unsigned>(),
-          "Constructs an indexed id (i.e. corresponding to an element "
-          "in a linear register)\n\n:param name: The readable name for "
-          "the register\n:param index: The numerical index",
-          py::arg("name"), py::arg("index"))
-      .def(
-          py::init<const std::string &, unsigned, unsigned>(),
-          "Constructs a doubly-indexed id (i.e. corresponding to an "
-          "element in a grid register)\n\n:param name: The readable "
-          "name for the register\n:param row: The row index\n:param "
-          "col: The column index",
-          py::arg("name"), py::arg("row"), py::arg("col"))
-      .def(
-          py::init<const std::string &, unsigned, unsigned, unsigned>(),
-          "Constructs a triply-indexed id (i.e. corresponding to an "
-          "element in a 3D grid register)\n\n:param name: The readable "
-          "name for the register\n:param row: The row index\n:param "
-          "col: The column index\n:param layer: The layer index",
-          py::arg("name"), py::arg("row"), py::arg("col"), py::arg("layer"))
-      .def(
-          py::init<const std::string &, std::vector<unsigned> &>(),
-          "Constructs an id with an arbitrary-dimensional "
-          "index\n\n:param name: The readable name for the "
-          "register\n:param index: The index vector",
-          py::arg("name"), py::arg("index"));
   declare_register<Bit>(m, bit_reg_name);
   declare_register<Qubit>(m, qubit_reg_name);
 }

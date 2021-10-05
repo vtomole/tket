@@ -184,32 +184,6 @@ class Bit : public UnitID {
   }
 };
 
-/** Architectural qubit location */
-class Node : public Qubit {
- public:
-  Node() : Qubit() {}
-
-  /** Qubit in default register */
-  explicit Node(unsigned index) : Qubit(node_default_reg(), index) {}
-
-  /** Named register with a one-dimensional index */
-  Node(const std::string &name, unsigned index) : Qubit(name, index) {}
-
-  /** Named register with a two-dimensional index */
-  Node(const std::string &name, unsigned row, unsigned col)
-      : Qubit(name, row, col) {}
-
-  /** Named register with a three-dimensional index */
-  Node(const std::string &name, unsigned row, unsigned col, unsigned layer)
-      : Qubit(name, row, col, layer) {}
-
-  /** Named register with a multi-dimensional index */
-  Node(const std::string &name, std::vector<unsigned> index)
-      : Qubit(name, index) {}
-
-  explicit Node(const UnitID &other) : Qubit(other) {}
-};
-
 typedef std::vector<UnitID> unit_vector_t;
 typedef std::map<UnitID, UnitID> unit_map_t;
 typedef std::set<UnitID> unit_set_t;
@@ -219,9 +193,6 @@ typedef std::map<Qubit, Qubit> qubit_map_t;
 
 typedef std::vector<Bit> bit_vector_t;
 typedef std::map<Bit, Bit> bit_map_t;
-
-typedef std::set<Node> node_set_t;
-typedef std::vector<Node> node_vector_t;
 
 /** A register of locations sharing the same name */
 typedef std::map<unsigned, UnitID> register_t;
