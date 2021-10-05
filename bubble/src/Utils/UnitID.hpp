@@ -42,9 +42,6 @@ class UnitID {
  public:
   UnitID() : data_(std::make_shared<UnitData>()) {}
 
-  /** Unit type */
-  UnitType type() const { return data_->type_; }
-
   bool operator<(const UnitID &other) const {
     int n = data_->name_.compare(other.data_->name_);
     if (n > 0) return false;

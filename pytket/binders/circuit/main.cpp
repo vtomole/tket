@@ -35,11 +35,7 @@ PYBIND11_MODULE(circuit, m) {
       .def("__copy__", [](const UnitID &id) { return UnitID(id); })
       .def(
           "__deepcopy__", [](const UnitID &id, py::dict) { return UnitID(id); })
-      .def(py::self == py::self)
-      .def_property_readonly(
-          "type", &UnitID::type,
-          "Type of unit, either ``UnitType.qubit`` or "
-          "``UnitType.bit``");
+      .def(py::self == py::self);
   py::class_<Qubit, UnitID>(m, "Qubit", "A handle to a qubit")
       .def(
           py::init<unsigned>(),
