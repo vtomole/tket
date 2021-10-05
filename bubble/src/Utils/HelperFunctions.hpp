@@ -15,7 +15,6 @@
 #ifndef _TKET_HelperFunctions_H_
 #define _TKET_HelperFunctions_H_
 
-#include <boost/range/adaptor/transformed.hpp>
 #include <cstdint>
 #include <deque>
 #include <map>
@@ -51,30 +50,6 @@ bool check_iterators_equality(const T& first, const T& second) {
 
   // check there were the same number of elements
   return (it2 == s_end);
-}
-
-/*
- * Convert a map-like object (e.g. <bimap>.right/<bimap>.left) to std::map
- *
- * This is particularly useful for bimaps. Converting a bimap to a map is
- * slightly annoying, see
- * https://stackoverflow.com/questions/20667187/convert-boostbimap-to-stdmap
- */
-template <typename MapT>
-static std::map<
-    std::remove_const_t<typename MapT::key_type>,
-    std::remove_const_t<typename MapT::mapped_type>>
-bimap_to_map(MapT& bm) {
-  using retT = std::map<
-      std::remove_const_t<typename MapT::key_type>,
-      std::remove_const_t<typename MapT::mapped_type>>;
-  using funcT = std::function<typename retT::value_type(
-      const typename MapT::value_type&)>;
-  funcT trans = [](const typename MapT::value_type& val) {
-    return std::make_pair(val.first, val.second);
-  };
-  auto it = bm | boost::adaptors::transformed(trans);
-  return retT(it.begin(), it.end());
 }
 
 /**
