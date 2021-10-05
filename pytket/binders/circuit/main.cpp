@@ -29,13 +29,9 @@ PYBIND11_MODULE(circuit, m) {
       .value("qubit", UnitType::Qubit, "A single Qubit");
   py::class_<UnitID>(
       m, "UnitID", "A handle to a computational unit (e.g. qubit, bit)")
-      .def("__eq__", &UnitID::operator==)
-      .def("__lt__", &UnitID::operator<)
-      .def("__hash__", [](const UnitID &) { return 0; })
       .def("__copy__", [](const UnitID &id) { return UnitID(id); })
       .def(
-          "__deepcopy__", [](const UnitID &id, py::dict) { return UnitID(id); })
-      .def(py::self == py::self);
+          "__deepcopy__", [](const UnitID &id, py::dict) { return UnitID(id); });
   py::class_<Qubit, UnitID>(m, "Qubit", "A handle to a qubit");
 }
 
