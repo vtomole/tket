@@ -28,8 +28,6 @@
 #include <sstream>
 #include <string>
 
-#include "BiMapHeaders.hpp"
-
 namespace tket {
 
 /** Type of information held */
@@ -220,9 +218,6 @@ class Node : public Qubit {
 
   explicit Node(const UnitID &other) : Qubit(other) {}
 };
-
-/** A correspondence between two sets of node IDs */
-typedef boost::bimap<UnitID, UnitID> unit_bimap_t;
 
 typedef std::vector<UnitID> unit_vector_t;
 typedef std::map<UnitID, UnitID> unit_map_t;
