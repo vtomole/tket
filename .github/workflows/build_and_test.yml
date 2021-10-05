@@ -35,12 +35,10 @@ jobs:
         conan profile new tket --detect --force
         export CC=`which conan`
         echo "CONAN_CMD=${CC}" >> $GITHUB_ENV
-    - name: Install boost
-      run: conan install --profile=tket boost/1.77.0@ --build=missing -o boost:without_fiber=True -o boost:without_json=True -o boost:without_nowide=True
     - name: Build symengine
-      run: conan create --profile=tket recipes/symengine -o boost:without_fiber=True -o boost:without_json=True -o boost:without_nowide=True
+      run: conan create --profile=tket --build=missing recipes/symengine
     - name: Build tket
-      run: conan create --profile=tket recipes/tket -o boost:without_fiber=True -o boost:without_json=True -o boost:without_nowide=True
+      run: conan create --profile=tket recipes/tket
     - name: Build pytket (3.8)
       if: github.event_name == 'pull_request' || github.event_name == 'push'
       run: |

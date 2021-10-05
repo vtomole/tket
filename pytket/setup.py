@@ -156,17 +156,6 @@ class CMakeBuild(build_ext):
             "--build=missing",
             extsource,
         ]
-        if platform.system() == "Darwin" and platform.processor() == "arm":
-            install_cmd.extend(
-                [
-                    "-o",
-                    "boost:without_fiber=True",
-                    "-o",
-                    "boost:without_json=True",
-                    "-o",
-                    "boost:without_nowide=True",
-                ]
-            )
         subprocess.check_call(install_cmd, cwd=self.build_temp, env=env)
 
         subprocess.check_call(

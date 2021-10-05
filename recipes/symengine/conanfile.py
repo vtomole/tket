@@ -23,7 +23,7 @@ class SymengineConan(ConanFile):
     default_options = {
         "shared": False,
         "fPIC": True,
-        "integer_class": "boostmp",
+        "integer_class": "gmp",
     }
     short_paths = True
 
