@@ -85,7 +85,7 @@ void init_unitid(py::module &m) {
       .def("__eq__", &UnitID::operator==)
       .def("__lt__", &UnitID::operator<)
       .def("__repr__", &UnitID::repr)
-      .def("__hash__", [](const UnitID &id) { return hash_value(id); })
+      .def("__hash__", [](const UnitID &) { return 0; })
       .def("__copy__", [](const UnitID &id) { return UnitID(id); })
       .def(
           "__deepcopy__", [](const UnitID &id, py::dict) { return UnitID(id); })

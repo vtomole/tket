@@ -20,7 +20,6 @@
  * @brief Named registers of arrays of (quantum or classical) nodes
  */
 
-#include <boost/functional/hash.hpp>
 #include <map>
 #include <optional>
 #include <regex>
@@ -91,14 +90,6 @@ class UnitID {
            (this->data_->index_ == other.data_->index_);
   }
   bool operator!=(const UnitID &other) const { return !(*this == other); }
-
-  friend std::size_t hash_value(UnitID const &unitid) {
-    size_t seed = 0;
-    boost::hash_combine(seed, unitid.data_->name_);
-    boost::hash_combine(seed, unitid.data_->index_);
-    boost::hash_combine(seed, unitid.data_->type_);
-    return seed;
-  }
 
  protected:
   UnitID(
