@@ -84,11 +84,6 @@ set(BUBBLE_MEASUREMENT_DIR ${BUBBLE_SRC_DIR}/MeasurementSetup)
 
 set(TKET_SOURCES
 
-    # OpType
-    ${BUBBLE_OPTYPE_DIR}/OpDesc.cpp
-    ${BUBBLE_OPTYPE_DIR}/OpTypeInfo.cpp
-    ${BUBBLE_OPTYPE_DIR}/OpTypeFunctions.cpp
-
     # Utils
     ${BUBBLE_UTILS_DIR}/UnitID.cpp
     ${BUBBLE_UTILS_DIR}/HelperFunctions.cpp

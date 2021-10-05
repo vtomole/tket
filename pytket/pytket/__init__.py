@@ -16,7 +16,6 @@
 """
 
 from pytket.circuit import (  # type: ignore
-    OpType,
     Qubit,
     Bit,
 )
