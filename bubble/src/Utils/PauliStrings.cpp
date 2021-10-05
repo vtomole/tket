@@ -23,7 +23,6 @@
 #include "Utils/Assert.hpp"
 #include "Utils/Constants.hpp"
 #include "Utils/EigenConfig.hpp"
-#include "Utils/Json.hpp"
 
 namespace tket {
 
@@ -386,18 +385,6 @@ std::size_t hash_value(const QubitPauliString &qps) {
   return seed;
 }
 
-void to_json(nlohmann::json &j, const QubitPauliString &paulistr) {
-  for (const auto &[qb, pauli] : paulistr.map) {
-    j.push_back({qb, pauli});
-  }
-}
-
-void from_json(const nlohmann::json &j, QubitPauliString &paulistr) {
-  for (const auto &qb_pauli : j) {
-    paulistr.set(qb_pauli[0].get<Qubit>(), qb_pauli[1].get<Pauli>());
-  }
-}
-
 const QubitPauliTensor::Mult_Matrix &QubitPauliTensor::get_mult_matrix() {
   static const Mult_Matrix mult_matrix{
       {{Pauli::I, Pauli::I}, {1., Pauli::I}},
@@ -533,13 +520,4 @@ bool PauliStabiliser::operator!=(const PauliStabiliser &other) const {
   return coeff != other.coeff || string != other.string;
 }
 
-void to_json(nlohmann::json &j, const PauliStabiliser &pauli_stabiliser) {
-  j["string"] = pauli_stabiliser.string;
-  j["coeff"] = pauli_stabiliser.coeff;
-}
-
-void from_json(const nlohmann::json &j, PauliStabiliser &pauli_stabiliser) {
-  pauli_stabiliser = PauliStabiliser(
-      j.at("string").get<std::vector<Pauli>>(), j.at("coeff").get<bool>());
-}
 }  // namespace tket

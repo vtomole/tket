@@ -15,8 +15,6 @@
 #ifndef _TKET_OpType_OpType_H_
 #define _TKET_OpType_OpType_H_
 
-#include "Utils/Json.hpp"
-
 namespace tket {
 
 /**
@@ -595,8 +593,6 @@ enum class OpType {
    */
   StabiliserAssertionBox
 };
-
-JSON_DECL(OpType)
 
 }  // namespace tket
 

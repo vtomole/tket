@@ -18,7 +18,6 @@
 
 #include <sstream>
 
-#include "Circuit/Command.hpp"
 #include "Gate/Gate.hpp"
 #include "Gate/OpPtrFunctions.hpp"
 #include "Gate/SymTable.hpp"
@@ -34,7 +33,6 @@ namespace py = pybind11;
 namespace tket {
 
 void init_unitid(py::module &m);
-void init_classical(py::module &m);
 
 PYBIND11_MODULE(circuit, m) {
   init_unitid(m);
@@ -455,33 +453,6 @@ PYBIND11_MODULE(circuit, m) {
       .value(
           "dlo", BasisOrder::dlo,
           "Decreasing Lexicographic Order of UnitID, big-endian");
-
-  py::class_<Command>(
-      m, "Command",
-      "A single quantum command in the circuit, defined by the Op, the "
-      "qubits it acts on, and the op group name if any.")
-      .def("__eq__", &Command::operator==)
-      .def("__repr__", &Command::to_str)
-      .def_property_readonly(
-          "op", &Command::get_op_ptr, "Operation for this command.")
-      .def_property_readonly(
-          "args", &Command::get_args, "The qubits/bits the command acts on.")
-      .def_property_readonly(
-          "qubits", &Command::get_qubits, "The qubits the command acts on.")
-      .def_property_readonly(
-          "bits", &Command::get_bits,
-          "The bits the command could write to (does not include "
-          "read-only bits).")
-      .def_property_readonly(
-          "opgroup", &Command::get_opgroup,
-          "The op group name assigned to the command (or `None` if "
-          "no name is defined).")
-      .def(
-          "free_symbols",
-          [](const Command &com) { return com.get_op_ptr()->free_symbols(); },
-          ":return: set of symbolic parameters for the command");
-
-  init_classical(m);
 
   m.def(
       "fresh_symbol", &SymTable::fresh_symbol,

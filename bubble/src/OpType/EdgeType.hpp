@@ -17,8 +17,6 @@
 
 #include <vector>
 
-#include "Utils/Json.hpp"
-
 namespace tket {
 
 /** Type of a wire in a circuit or input to an op */
@@ -45,13 +43,6 @@ enum class EdgeType {
    */
   Boolean
 };
-
-NLOHMANN_JSON_SERIALIZE_ENUM(
-    EdgeType, {
-                  {EdgeType::Quantum, "Q"},
-                  {EdgeType::Classical, "C"},
-                  {EdgeType::Boolean, "B"},
-              });
 
 typedef std::vector<EdgeType> op_signature_t;
 

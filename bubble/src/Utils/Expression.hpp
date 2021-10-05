@@ -26,15 +26,12 @@
 #include <vector>
 
 #include "Constants.hpp"
-#include "Json.hpp"
 #include "Symbols.hpp"
 
 namespace tket {
 
 /** Representation of a phase as a multiple of \f$ \pi \f$ */
 typedef SymEngine::Expression Expr;
-
-JSON_DECL(Expr)
 
 /** Shared pointer to an \p Expr */
 typedef SymEngine::RCP<const SymEngine::Basic> ExprPtr;
@@ -43,34 +40,6 @@ typedef SymEngine::RCP<const SymEngine::Basic> ExprPtr;
 typedef SymEngine::RCP<const SymEngine::Symbol> Sym;
 
 }  // namespace tket
-
-namespace nlohmann {
-
-template <>
-struct adl_serializer<tket::Expr> {
-  static void to_json(json& j, const tket::Expr& exp) {
-    tket::ExprPtr e_ = exp;
-    j = e_->__str__();
-  }
-
-  static void from_json(const json& j, tket::Expr& exp) {
-    exp = j.get<std::string>();
-  }
-};
-
-template <>
-struct adl_serializer<tket::Sym> {
-  static void to_json(json& j, const tket::Sym& exp) {
-    tket::ExprPtr e_ = exp;
-    j = e_->__str__();
-  }
-
-  static void from_json(const json& j, tket::Sym& exp) {
-    exp = SymEngine::symbol(j.get<std::string>());
-  }
-};
-
-}  // namespace nlohmann
 
 namespace tket {
 

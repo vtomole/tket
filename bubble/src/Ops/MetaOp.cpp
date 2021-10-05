@@ -16,7 +16,6 @@
 
 #include "OpType/EdgeType.hpp"
 #include "OpType/OpType.hpp"
-#include "Utils/Json.hpp"
 
 namespace tket {
 
@@ -46,19 +45,6 @@ op_signature_t MetaOp::get_signature() const {
     return *sig;
   else
     return signature_;
-}
-
-nlohmann::json MetaOp::serialize() const {
-  nlohmann::json j;
-  j["type"] = get_type();
-  j["signature"] = get_signature();
-  return j;
-}
-
-Op_ptr MetaOp::deserialize(const nlohmann::json& j) {
-  OpType optype = j.at("type").get<OpType>();
-  op_signature_t sig = j.at("signature").get<op_signature_t>();
-  return std::make_shared<MetaOp>(optype, sig);
 }
 
 MetaOp::~MetaOp() {}

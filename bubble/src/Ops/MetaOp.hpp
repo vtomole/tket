@@ -16,7 +16,6 @@
 #define _TKET_Ops_MetaOp_H_
 
 #include "Op.hpp"
-#include "Utils/Json.hpp"
 
 namespace tket {
 
@@ -39,10 +38,6 @@ class MetaOp : public Op {
    * Equality check between two MetaOp instances
    */
   bool is_equal(const Op &other) const override;
-
-  nlohmann::json serialize() const override;
-
-  static Op_ptr deserialize(const nlohmann::json &j);
 
  protected:
   MetaOp();

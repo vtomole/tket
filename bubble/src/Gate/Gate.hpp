@@ -16,7 +16,6 @@
 #define _TKET_Ops_Gate_H_
 
 #include "Ops/Op.hpp"
-#include "Utils/Json.hpp"
 
 namespace tket {
 
@@ -48,10 +47,6 @@ class Gate : public Op {
       const std::optional<Pauli> &colour, port_t port) const override;
 
   op_signature_t get_signature() const override;
-
-  nlohmann::json serialize() const override;
-
-  static Op_ptr deserialize(const nlohmann::json &j);
 
   std::optional<double> is_identity() const override;
   Eigen::MatrixXcd get_unitary() const override;

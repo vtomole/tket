@@ -29,7 +29,6 @@
 #include <string>
 
 #include "BiMapHeaders.hpp"
-#include "Json.hpp"
 #include "TketLog.hpp"
 
 namespace tket {
@@ -134,18 +133,6 @@ class UnitID {
   std::shared_ptr<UnitData> data_;
 };
 
-template <class Unit_T>
-void unitid_to_json(nlohmann::json &j, const Unit_T &unit) {
-  static_assert(std::is_base_of<UnitID, Unit_T>::value);
-  j.push_back(unit.reg_name());
-  j.push_back(unit.index());
-}
-
-template <class T>
-void json_to_unitid(const nlohmann::json &j, T &unit) {
-  unit = T(j.at(0).get<std::string>(), j.at(1).get<std::vector<unsigned>>());
-}
-
 /** Location holding a qubit */
 class Qubit : public UnitID {
  public:
@@ -182,8 +169,6 @@ class Qubit : public UnitID {
   }
 };
 
-JSON_DECL(Qubit)
-
 /** Location holding a bit */
 class Bit : public UnitID {
  public:
@@ -219,8 +204,6 @@ class Bit : public UnitID {
   }
 };
 
-JSON_DECL(Bit)
-
 /** Architectural qubit location */
 class Node : public Qubit {
  public:
@@ -247,8 +230,6 @@ class Node : public Qubit {
   explicit Node(const UnitID &other) : Qubit(other) {}
 };
 
-JSON_DECL(Node)
-
 /** A correspondence between two sets of node IDs */
 typedef boost::bimap<UnitID, UnitID> unit_bimap_t;
 
@@ -258,7 +239,6 @@ typedef std::set<UnitID> unit_set_t;
 
 typedef std::vector<Qubit> qubit_vector_t;
 typedef std::map<Qubit, Qubit> qubit_map_t;
-JSON_DECL(qubit_map_t)
 
 typedef std::vector<Bit> bit_vector_t;
 typedef std::map<Bit, Bit> bit_map_t;

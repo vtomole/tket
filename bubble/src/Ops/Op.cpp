@@ -17,7 +17,6 @@
 #include <sstream>
 
 #include "Ops/OpPtr.hpp"
-#include "Utils/Json.hpp"
 
 namespace tket {
 
@@ -45,7 +44,5 @@ std::string Op::get_command_str(const unit_vector_t& args) const {
 std::ostream& operator<<(std::ostream& os, Op const& operation) {
   return os << operation.get_name();
 }
-
-void to_json(nlohmann::json& j, const Op_ptr& op) { j = op->serialize(); }
 
 }  // namespace tket

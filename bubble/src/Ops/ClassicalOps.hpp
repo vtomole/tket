@@ -21,7 +21,6 @@
  */
 
 #include "Op.hpp"
-#include "Utils/Json.hpp"
 
 namespace tket {
 
@@ -52,10 +51,6 @@ class ClassicalOp : public Op {
   unsigned n_qubits() const override { return 0; }
 
   op_signature_t get_signature() const override { return sig_; }
-
-  nlohmann::json serialize() const override;
-
-  static Op_ptr deserialize(const nlohmann::json &j);
 
   std::string get_name(bool latex = false) const override;
 

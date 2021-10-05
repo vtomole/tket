@@ -88,7 +88,6 @@ set(TKET_SOURCES
     ${BUBBLE_OPTYPE_DIR}/OpDesc.cpp
     ${BUBBLE_OPTYPE_DIR}/OpTypeInfo.cpp
     ${BUBBLE_OPTYPE_DIR}/OpTypeFunctions.cpp
-    ${BUBBLE_OPTYPE_DIR}/OpTypeJson.cpp
 
     # Ops
     ${BUBBLE_OPS_DIR}/Conditional.cpp
@@ -97,7 +96,6 @@ set(TKET_SOURCES
     ${BUBBLE_OPS_DIR}/MetaOp.cpp
     ${BUBBLE_OPS_DIR}/Op.cpp
     ${BUBBLE_OPS_DIR}/ClassicalOps.cpp
-    ${BUBBLE_OPS_DIR}/OpJsonFactory.cpp
 
     # Gate
     ${BUBBLE_GATE_DIR}/Gate.cpp
@@ -113,23 +111,6 @@ set(TKET_SOURCES
     ${BUBBLE_GATE_DIR}/GateUnitaryMatrixUtils.cpp
     ${BUBBLE_GATE_DIR}/GateUnitaryMatrixVariableQubits.cpp
     ${BUBBLE_GATE_DIR}/GateUnitarySparseMatrix.cpp
-
-    # Circuit
-    ${BUBBLE_CIRCUIT_DIR}/Boxes.cpp
-    ${BUBBLE_CIRCUIT_DIR}/Circuit.cpp
-    ${BUBBLE_CIRCUIT_DIR}/CircuitJson.cpp
-    ${BUBBLE_CIRCUIT_DIR}/CommandJson.cpp
-    ${BUBBLE_CIRCUIT_DIR}/macro_manipulation.cpp
-    ${BUBBLE_CIRCUIT_DIR}/basic_circ_manip.cpp
-    ${BUBBLE_CIRCUIT_DIR}/latex_drawing.cpp
-    ${BUBBLE_CIRCUIT_DIR}/macro_circ_info.cpp
-    ${BUBBLE_CIRCUIT_DIR}/setters_and_getters.cpp
-    ${BUBBLE_CIRCUIT_DIR}/CircUtils.cpp
-    ${BUBBLE_CIRCUIT_DIR}/ThreeQubitConversion.cpp
-    ${BUBBLE_CIRCUIT_DIR}/AssertionSynthesis.cpp
-    ${BUBBLE_CIRCUIT_DIR}/CircPool.cpp
-    ${BUBBLE_CIRCUIT_DIR}/DAGProperties.cpp
-    ${BUBBLE_CIRCUIT_DIR}/OpJson.cpp
 
     # Clifford
     ${BUBBLE_CLIFFORD_DIR}/CliffTableau.cpp

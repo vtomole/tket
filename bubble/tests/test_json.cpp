@@ -28,7 +28,6 @@
 #include "Predicates/PassGenerators.hpp"
 #include "Predicates/PassLibrary.hpp"
 #include "Transformations/Transform.hpp"
-#include "Utils/Json.hpp"
 #include "testutil.hpp"
 namespace tket {
 

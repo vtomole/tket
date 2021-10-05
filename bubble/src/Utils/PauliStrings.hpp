@@ -24,7 +24,6 @@
 #include "Utils/Constants.hpp"
 #include "Utils/EigenConfig.hpp"
 #include "Utils/Exceptions.hpp"
-#include "Utils/Json.hpp"
 #include "Utils/UnitID.hpp"
 namespace tket {
 
@@ -60,26 +59,12 @@ typedef Eigen::SparseMatrix<Complex, Eigen::ColMajor> CmplxSpMat;
 /** Symbols for the Pauli operators (and identity) */
 enum Pauli { I, X, Y, Z };
 
-NLOHMANN_JSON_SERIALIZE_ENUM(
-    Pauli, {
-               {Pauli::I, "I"},
-               {Pauli::X, "X"},
-               {Pauli::Y, "Y"},
-               {Pauli::Z, "Z"},
-           });
-
 /**
  * Whenever a decomposition choice of Pauli gadgets is presented,
  * users may use either Snake (a.k.a. cascade, ladder), Tree (i.e. CX
  * balanced tree) or Star (i.e. CXs target a common qubit).
  */
 enum class CXConfigType { Snake, Tree, Star, MultiQGate };
-
-NLOHMANN_JSON_SERIALIZE_ENUM(
-    CXConfigType, {{CXConfigType::Snake, "Snake"},
-                   {CXConfigType::Tree, "Tree"},
-                   {CXConfigType::Star, "Star"},
-                   {CXConfigType::MultiQGate, "MultiQGate"}});
 
 typedef std::map<Qubit, Pauli> QubitPauliMap;
 
@@ -261,8 +246,6 @@ class QubitPauliString {
       const Eigen::VectorXcd &state, const qubit_vector_t &qubits) const;
 };
 
-JSON_DECL(QubitPauliString);
-
 // a sum of QubitPauliString with complex coefficients
 typedef std::vector<std::pair<QubitPauliString, Complex>> OperatorSum;
 
@@ -302,8 +285,6 @@ struct PauliStabiliser {
 };
 
 typedef std::vector<PauliStabiliser> PauliStabiliserList;
-
-JSON_DECL(PauliStabiliser)
 
 /**
  * Calculate a sparse matrix corresponding to a sum of QubitPauliString.

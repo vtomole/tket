@@ -20,8 +20,6 @@
  * @brief Include this file rather than including the Eigen headers directly
  */
 
-#include "Utils/Json.hpp"
-
 #if defined(__clang__)
 #pragma GCC diagnostic push
 
@@ -41,28 +39,6 @@
 #endif
 
 namespace Eigen {
-
-template <typename _Scalar, int _Rows, int _Cols>
-void to_json(nlohmann::json& j, const Matrix<_Scalar, _Rows, _Cols>& matrix) {
-  for (Index i = 0; i < matrix.rows(); ++i) {
-    nlohmann::json row = nlohmann::json::array();
-    for (Index j = 0; j < matrix.cols(); ++j) {
-      row.push_back(matrix(i, j));
-    }
-    j.push_back(row);
-  }
-}
-
-template <typename _Scalar, int _Rows, int _Cols>
-void from_json(const nlohmann::json& j, Matrix<_Scalar, _Rows, _Cols>& matrix) {
-  for (size_t i = 0; i < j.size(); ++i) {
-    const auto& j_row = j.at(i);
-    for (size_t j = 0; j < j_row.size(); ++j) {
-      matrix(i, j) =
-          j_row.at(j).get<typename Matrix<_Scalar, _Rows, _Cols>::Scalar>();
-    }
-  }
-}
 
 }  // namespace Eigen
 

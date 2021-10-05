@@ -15,7 +15,6 @@
 #include "ClassicalOps.hpp"
 
 #include "OpType/OpType.hpp"
-#include "Utils/Json.hpp"
 
 namespace tket {
 
@@ -31,101 +30,6 @@ static uint32_t u32_from_boolvec(const std::vector<bool> &x) {
   return X;
 }
 
-static nlohmann::json classical_to_json(const Op_ptr &op, const OpType &type) {
-  nlohmann::json j_class;
-  switch (type) {
-    case OpType::MultiBit: {
-      const auto &multibit = static_cast<const MultiBitOp &>(*op);
-      j_class["op"] = multibit.get_op();
-      j_class["n"] = multibit.get_n();
-      return j_class;
-    }
-    case OpType::RangePredicate: {
-      const auto &rangop = static_cast<const RangePredicateOp &>(*op);
-      j_class["lower"] = rangop.lower();
-      j_class["upper"] = rangop.upper();
-      j_class["n_i"] = rangop.get_n_i();
-      return j_class;
-    }
-    case OpType::ExplicitModifier: {
-      const auto &expmodop = static_cast<const ExplicitModifierOp &>(*op);
-      j_class["n_i"] = expmodop.get_n_i();
-      j_class["values"] = expmodop.get_values();
-      j_class["name"] = expmodop.get_name();
-      return j_class;
-    }
-    case OpType::ExplicitPredicate: {
-      const auto &exppredop = static_cast<const ExplicitPredicateOp &>(*op);
-      j_class["n_i"] = exppredop.get_n_i();
-      j_class["values"] = exppredop.get_values();
-      j_class["name"] = exppredop.get_name();
-      return j_class;
-    }
-    case OpType::ClassicalTransform: {
-      const auto &classtop = static_cast<const ClassicalTransformOp &>(*op);
-      j_class["n_io"] = classtop.get_n_io();
-      j_class["values"] = classtop.get_values();
-      j_class["name"] = classtop.get_name();
-      return j_class;
-    }
-    case OpType::SetBits: {
-      const auto &setop = static_cast<const SetBitsOp &>(*op);
-      j_class["values"] = setop.get_values();
-      return j_class;
-    }
-    case OpType::CopyBits: {
-      const auto &cop = static_cast<const CopyBitsOp &>(*op);
-      j_class["n_i"] = cop.get_n_i();
-      return j_class;
-    }
-    default:
-      throw JsonError(
-          "Classical op with type " + optypeinfo().at(type).name +
-          " cannot be serialized.");
-  }
-}
-
-static std::shared_ptr<ClassicalOp> classical_from_json(
-    const nlohmann::json &j_class, const OpType &type) {
-  switch (type) {
-    case OpType::MultiBit:
-      return std::make_shared<MultiBitOp>(
-          classical_from_json(
-              j_class.at("op").at("classical"),
-              j_class.at("op").at("type").get<OpType>()),
-          j_class.at("n").get<unsigned>());
-    case OpType::RangePredicate:
-      return std::make_shared<RangePredicateOp>(
-          j_class.at("n_i").get<unsigned>(),
-          j_class.at("lower").get<unsigned>(),
-          j_class.at("upper").get<unsigned>());
-    case OpType::CopyBits:
-      return std::make_shared<CopyBitsOp>(j_class.at("n_i").get<unsigned>());
-    case OpType::SetBits:
-      return std::make_shared<SetBitsOp>(
-          j_class.at("values").get<std::vector<bool>>());
-    case OpType::ExplicitModifier:
-      return std::make_shared<ExplicitModifierOp>(
-          j_class.at("n_i").get<unsigned>(),
-          j_class.at("values").get<std::vector<bool>>(),
-          j_class.at("name").get<std::string>());
-    case OpType::ExplicitPredicate:
-      return std::make_shared<ExplicitPredicateOp>(
-          j_class.at("n_i").get<unsigned>(),
-          j_class.at("values").get<std::vector<bool>>(),
-          j_class.at("name").get<std::string>());
-    case OpType::ClassicalTransform:
-      return std::make_shared<ClassicalTransformOp>(
-          j_class.at("n_io").get<unsigned>(),
-          j_class.at("values").get<std::vector<uint32_t>>(),
-          j_class.at("name").get<std::string>());
-    default:
-      throw JsonError(
-          "Classical op with name " + j_class.at("name").get<std::string>() +
-          " cannot be deserialized.");
-  }
-}
-
 ClassicalOp::ClassicalOp(
     OpType type, unsigned n_i, unsigned n_io, unsigned n_o,
     const std::string &name)
@@ -136,17 +40,6 @@ ClassicalOp::ClassicalOp(
   for (unsigned j = 0; j < n_io + n_o; j++) {
     sig_.push_back(EdgeType::Classical);
   }
-}
-
-nlohmann::json ClassicalOp::serialize() const {
-  nlohmann::json j;
-  j["type"] = get_type();
-  j["classical"] = classical_to_json(shared_from_this(), get_type());
-  return j;
-}
-
-Op_ptr ClassicalOp::deserialize(const nlohmann::json &j) {
-  return classical_from_json(j.at("classical"), j.at("type").get<OpType>());
 }
 
 std::string ClassicalOp::get_name(bool latex) const {

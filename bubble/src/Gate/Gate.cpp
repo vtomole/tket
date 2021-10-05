@@ -569,42 +569,6 @@ op_signature_t Gate::get_signature() const {
     return op_signature_t(n_qubits_, EdgeType::Quantum);
 }
 
-nlohmann::json Gate::serialize() const {
-  nlohmann::json j;
-  OpType optype = get_type();
-  j["type"] = optype;
-  // if type has a fixed signature, don't store number of qubits
-  if (!optypeinfo().at(optype).signature) {
-    j["n_qb"] = n_qubits();
-  }
-  std::vector<Expr> params = get_params();
-  if (!params.empty()) {
-    j["params"] = params;
-  }
-  return j;
-}
-
-Op_ptr Gate::deserialize(const nlohmann::json& j) {
-  OpType optype = j.at("type").get<OpType>();
-  std::vector<Expr> params;
-  if (j.contains("params")) {
-    params = j.at("params").get<std::vector<Expr>>();
-  }
-  // if type has fixed number of qubits use it, otherwise it should have been
-  // stored
-  const auto& sig = optypeinfo().at(optype).signature;
-  unsigned n_qb;
-  if (sig) {
-    auto check_quantum = [](unsigned sum, const EdgeType& e) {
-      return sum + (e == EdgeType::Quantum ? 1 : 0);
-    };
-    n_qb = std::accumulate(sig->begin(), sig->end(), 0, check_quantum);
-  } else {
-    n_qb = j.at("n_qb").get<unsigned>();
-  }
-  return get_op_ptr(optype, params, n_qb);
-}
-
 Eigen::MatrixXcd Gate::get_unitary() const {
   try {
     return GateUnitaryMatrix::get_unitary(*this);

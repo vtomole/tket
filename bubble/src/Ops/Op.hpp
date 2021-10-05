@@ -34,7 +34,6 @@
 #include "Utils/Constants.hpp"
 #include "Utils/Exceptions.hpp"
 #include "Utils/Expression.hpp"
-#include "Utils/Json.hpp"
 #include "Utils/PauliStrings.hpp"
 #include "Utils/UnitID.hpp"
 
@@ -150,10 +149,6 @@ class Op : public std::enable_shared_from_this<Op> {
    * @throw NotValid or NotImplemented upon error.
    */
   virtual Eigen::MatrixXcd get_unitary() const { throw NotValid(); }
-
-  virtual nlohmann::json serialize() const {
-    throw JsonError("JSON serialization not yet implemented for " + get_name());
-  }
 
   virtual ~Op() {}
 

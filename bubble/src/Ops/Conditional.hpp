@@ -16,7 +16,6 @@
 #define _TKET_Ops_Conditional_H_
 
 #include "Op.hpp"
-#include "Utils/Json.hpp"
 
 namespace tket {
 
@@ -56,10 +55,6 @@ class Conditional : public Op {
   unsigned n_qubits() const override;
 
   op_signature_t get_signature() const override;
-
-  nlohmann::json serialize() const override;
-
-  static Op_ptr deserialize(const nlohmann::json &j);
 
   std::string get_command_str(const unit_vector_t &args) const override;
 

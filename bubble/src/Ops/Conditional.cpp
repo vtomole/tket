@@ -50,25 +50,6 @@ op_signature_t Conditional::get_signature() const {
   return signature;
 }
 
-nlohmann::json Conditional::serialize() const {
-  nlohmann::json j;
-  nlohmann::json j_cond;
-  j_cond["op"] = get_op();
-  j_cond["width"] = get_width();
-  j_cond["value"] = get_value();
-  j["type"] = OpType::Conditional;
-  j["conditional"] = j_cond;
-  return j;
-}
-
-Op_ptr Conditional::deserialize(const nlohmann::json& j) {
-  nlohmann::json j_cond = j.at("conditional");
-  Op_ptr cond_op = j_cond.at("op").get<Op_ptr>();
-  return std::make_shared<Conditional>(
-      cond_op, j_cond.at("width").get<unsigned>(),
-      j_cond.at("value").get<unsigned>());
-}
-
 std::string Conditional::get_command_str(const unit_vector_t& args) const {
   std::stringstream out;
   out << "IF ([";

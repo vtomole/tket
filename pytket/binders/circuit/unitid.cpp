@@ -19,12 +19,9 @@
 #include <pybind11/stl.h>
 
 #include "UnitRegister.hpp"
-#include "Utils/Json.hpp"
-#include "binder_json.hpp"
 #include "unit_downcast.hpp"
 
 namespace py = pybind11;
-using json = nlohmann::json;
 
 namespace tket {
 const std::string bit_reg_name = std::string("BitRegister");
@@ -144,15 +141,7 @@ void init_unitid(py::module &m) {
                   "Invalid state: tuple size: " + std::to_string(t.size()));
             return Qubit(
                 t[0].cast<std::string>(), t[1].cast<std::vector<unsigned>>());
-          }))
-      .def(
-          "to_list", [](const Qubit &q) { return json(q); },
-          ":return: a JSON serializable list representation of "
-          "the Qubit")
-      .def_static(
-          "from_list", [](const json &j) { return j.get<Qubit>(); },
-          "Construct Qubit instance from JSON serializable "
-          "list representation of the Qubit.");
+          }));
 
   py::class_<Bit, UnitID>(m, "Bit", "A handle to a bit")
       .def(
@@ -183,16 +172,7 @@ void init_unitid(py::module &m) {
           "Constructs an id with an arbitrary-dimensional "
           "index\n\n:param name: The readable name for the "
           "register\n:param index: The index vector",
-          py::arg("name"), py::arg("index"))
-      .def(
-          "to_list", [](const Bit &b) { return json(b); },
-          "Return a JSON serializable list representation of "
-          "the Bit.\n"
-          ":return: list containing register name and index")
-      .def_static(
-          "from_list", [](const json &j) { return j.get<Bit>(); },
-          "Construct Bit instance from JSON serializable "
-          "list representation of the Bit.");
+          py::arg("name"), py::arg("index"));
 
   py::class_<Node, Qubit>(m, "Node", "A handle to a device node")
       .def(
@@ -225,15 +205,7 @@ void init_unitid(py::module &m) {
           "Constructs an id with an arbitrary-dimensional "
           "index\n\n:param name: The readable name for the "
           "register\n:param index: The index vector",
-          py::arg("name"), py::arg("index"))
-      .def(
-          "to_list", [](const Node &n) { return json(n); },
-          ":return: a JSON serializable list representation of "
-          "the Node")
-      .def_static(
-          "from_list", [](const json &j) { return j.get<Node>(); },
-          "Construct Node instance from JSON serializable "
-          "list representation of the Node.");
+          py::arg("name"), py::arg("index"));
   declare_register<Bit>(m, bit_reg_name);
   declare_register<Qubit>(m, qubit_reg_name);
 }
