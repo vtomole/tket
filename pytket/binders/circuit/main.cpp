@@ -17,8 +17,6 @@
 
 #include <sstream>
 
-#include "binder_utils.hpp"
-
 namespace py = pybind11;
 
 namespace tket {
