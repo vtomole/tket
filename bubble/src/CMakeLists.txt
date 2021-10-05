@@ -96,21 +96,6 @@ set(TKET_SOURCES
     ${BUBBLE_OPS_DIR}/Op.cpp
     ${BUBBLE_OPS_DIR}/ClassicalOps.cpp
 
-    # Gate
-    ${BUBBLE_GATE_DIR}/Gate.cpp
-    ${BUBBLE_GATE_DIR}/GatePtr.cpp
-    ${BUBBLE_GATE_DIR}/OpPtrFunctions.cpp
-    ${BUBBLE_GATE_DIR}/Rotation.cpp
-    ${BUBBLE_GATE_DIR}/SymTable.cpp
-    ${BUBBLE_GATE_DIR}/GateUnitaryMatrix.cpp
-    ${BUBBLE_GATE_DIR}/GateUnitaryMatrixComposites.cpp
-    ${BUBBLE_GATE_DIR}/GateUnitaryMatrixError.cpp
-    ${BUBBLE_GATE_DIR}/GateUnitaryMatrixFixedMatrices.cpp
-    ${BUBBLE_GATE_DIR}/GateUnitaryMatrixPrimitives.cpp
-    ${BUBBLE_GATE_DIR}/GateUnitaryMatrixUtils.cpp
-    ${BUBBLE_GATE_DIR}/GateUnitaryMatrixVariableQubits.cpp
-    ${BUBBLE_GATE_DIR}/GateUnitarySparseMatrix.cpp
-
     # Utils
     ${BUBBLE_UTILS_DIR}/UnitID.cpp
     ${BUBBLE_UTILS_DIR}/HelperFunctions.cpp

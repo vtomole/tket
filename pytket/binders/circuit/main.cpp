@@ -18,9 +18,6 @@
 
 #include <sstream>
 
-#include "Gate/Gate.hpp"
-#include "Gate/OpPtrFunctions.hpp"
-#include "Gate/SymTable.hpp"
 #include "Ops/ClassicalOps.hpp"
 #include "Ops/Op.hpp"
 #include "Utils/Constants.hpp"
@@ -38,20 +35,6 @@ PYBIND11_MODULE(circuit, m) {
   init_unitid(m);
   py::class_<Op, std::shared_ptr<Op>>(
       m, "Op", "Encapsulates operation information")
-      .def_static(
-          "create",
-          [](OpType optype) { return get_op_ptr(optype, std::vector<Expr>()); },
-          "Create an :py:class:`Op` with given type")
-      .def_static(
-          "create",
-          [](OpType optype, Expr param) { return get_op_ptr(optype, param); },
-          "Create an :py:class:`Op` with given type and parameter")
-      .def_static(
-          "create",
-          [](OpType optype, const std::vector<Expr> &params) {
-            return get_op_ptr(optype, params);
-          },
-          "Create an :py:class:`Op` with given type and parameters")
       .def_property_readonly(
           "type", &Op::get_type, "Type of op being performed")
       .def_property_readonly(
@@ -68,12 +51,6 @@ PYBIND11_MODULE(circuit, m) {
           py::arg("latex") = false)
       .def("__eq__", &Op::operator==)
       .def("__repr__", [](const Op &op) { return op.get_name(); })
-      .def(
-          "get_unitary",
-          [](const Op *op) {
-            const auto &gate = static_cast<const Gate &>(*op);
-            return gate.get_unitary();
-          })
       .def("is_gate", [](const Op &op) { return op.get_desc().is_gate(); });
 
   // NOTE: Sphinx does not automatically pick up the docstring for OpType
@@ -453,16 +430,6 @@ PYBIND11_MODULE(circuit, m) {
       .value(
           "dlo", BasisOrder::dlo,
           "Decreasing Lexicographic Order of UnitID, big-endian");
-
-  m.def(
-      "fresh_symbol", &SymTable::fresh_symbol,
-      "Given some preferred symbol, this finds an appropriate suffix "
-      "that "
-      "will guarantee it has not yet been used in the current python "
-      "session.\n\n:param preferred: The preferred readable symbol name "
-      "as "
-      "a string (default is 'a')\n\n:return: A new sympy symbol object",
-      py::arg("preferred") = 'a');
 }
 
 }  // namespace tket
