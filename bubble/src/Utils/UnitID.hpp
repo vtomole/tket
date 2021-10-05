@@ -40,9 +40,6 @@ typedef std::optional<register_info_t> opt_reg_info_t;
 const std::string &q_default_reg();
 const std::string &c_default_reg();
 const std::string &node_default_reg();
-const std::string &c_debug_zero_prefix();
-const std::string &c_debug_one_prefix();
-const std::string &c_debug_default_name();
 
 /** Conversion invalid */
 class InvalidUnitConversion : public std::logic_error {

@@ -70,8 +70,6 @@ void init_unitid(py::module &m) {
   m.attr("_TEMP_REG_SIZE") = 32;
   m.attr("_TEMP_BIT_NAME") = "tk_SCRATCH_BIT";
   m.attr("_TEMP_BIT_REG_BASE") = "tk_SCRATCH_BITREG";
-  m.attr("_DEBUG_ONE_REG_PREFIX") = py::str(c_debug_one_prefix());
-  m.attr("_DEBUG_ZERO_REG_PREFIX") = py::str(c_debug_zero_prefix());
 
   py::enum_<UnitType>(
       m, "UnitType",

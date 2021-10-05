@@ -56,22 +56,4 @@ const std::string& node_default_reg() {
   return *regname;
 }
 
-const std::string& c_debug_zero_prefix() {
-  static std::unique_ptr<const std::string> regname =
-      std::make_unique<const std::string>("tk_DEBUG_ZERO_REG");
-  return *regname;
-}
-
-const std::string& c_debug_one_prefix() {
-  static std::unique_ptr<const std::string> regname =
-      std::make_unique<const std::string>("tk_DEBUG_ONE_REG");
-  return *regname;
-}
-
-const std::string& c_debug_default_name() {
-  static std::unique_ptr<const std::string> regname =
-      std::make_unique<const std::string>("tket_assert");
-  return *regname;
-}
-
 }  // namespace tket
