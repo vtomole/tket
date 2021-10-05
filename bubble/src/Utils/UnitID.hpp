@@ -3,8 +3,6 @@
 
 namespace tket {
 
-enum class UnitType { Qubit };
-
 class UnitID {
  public:
   UnitID() {}
