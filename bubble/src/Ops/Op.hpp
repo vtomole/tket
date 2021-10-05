@@ -32,9 +32,9 @@
 #include "OpType/OpDesc.hpp"
 #include "OpType/OpTypeFunctions.hpp"
 #include "Utils/Constants.hpp"
+#include "Utils/EigenConfig.hpp"
 #include "Utils/Exceptions.hpp"
 #include "Utils/Expression.hpp"
-#include "Utils/PauliStrings.hpp"
 #include "Utils/UnitID.hpp"
 
 namespace tket {
@@ -100,34 +100,6 @@ class Op : public std::enable_shared_from_this<Op> {
 
   /** Set of all free symbols occurring in operation parameters. */
   virtual SymSet free_symbols() const = 0;
-
-  /**
-   * Which Pauli, if any, commutes with the operation at a given port
-   *
-   * @param port port number at which Pauli should commute
-   * @return A Pauli that commutes with the given operation
-   * @retval std::nullopt no Pauli commutes
-   * @retval Pauli::I any Pauli commutes
-   * @throw NotValid if operation is not a gate
-   */
-  virtual std::optional<Pauli> commuting_basis(port_t port) const {
-    (void)port;
-    throw NotValid();
-  }
-
-  /**
-   * Whether the operation commutes with the given Pauli at the given port
-   *
-   * @param colour Pauli operation type
-   * @param port operation port
-   * @throw NotValid if operation is not a gate
-   */
-  virtual bool commutes_with_basis(
-      const std::optional<Pauli> &colour, port_t port) const {
-    (void)colour;
-    (void)port;
-    throw NotValid();
-  }
 
   /** Vector specifying type of data for each port on op */
   virtual op_signature_t get_signature() const = 0;
