@@ -116,7 +116,6 @@ set(TKET_SOURCES
     ${BUBBLE_CLIFFORD_DIR}/CliffTableau.cpp
 
     # Utils
-    ${BUBBLE_UTILS_DIR}/TketLog.cpp
     ${BUBBLE_UTILS_DIR}/UnitID.cpp
     ${BUBBLE_UTILS_DIR}/HelperFunctions.cpp
     ${BUBBLE_UTILS_DIR}/MatrixAnalysis.cpp

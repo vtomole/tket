@@ -29,7 +29,6 @@
 #include <string>
 
 #include "BiMapHeaders.hpp"
-#include "TketLog.hpp"
 
 namespace tket {
 
@@ -120,14 +119,6 @@ class UnitID {
         const std::string &name, const std::vector<unsigned> &index,
         UnitType type)
         : name_(name), index_(index), type_(type) {
-      static const std::string id_regex_str = "[a-z][A-Za-z0-9_]*";
-      static const std::regex id_regex(id_regex_str);
-      if (!name.empty() && !std::regex_match(name, id_regex)) {
-        std::stringstream msg;
-        msg << "UnitID name '" << name << "' does not match '" << id_regex_str
-            << "', as required for QASM conversion.";
-        tket_log()->warn(msg.str());
-      }
     }
   };
   std::shared_ptr<UnitData> data_;

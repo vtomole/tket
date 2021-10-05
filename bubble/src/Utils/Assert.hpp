@@ -17,15 +17,12 @@
 
 #include <cstdlib>
 
-#include "TketLog.hpp"
-
 /**
  * If the condition `b` is not satisfied, log a diagnostic message and abort.
  */
 #define TKET_ASSERT(b)                                                    \
   do {                                                                    \
     if (!(b)) {                                                           \
-      tket::tket_log()->critical("Assertion (" #b ") failed: aborting."); \
       std::abort();                                                       \
     }                                                                     \
   } while (0)

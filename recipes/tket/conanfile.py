@@ -39,7 +39,6 @@ class TketConan(ConanFile):
         "boost/1.77.0",
         "symengine/0.8.2",
         "eigen/3.4.0",
-        "spdlog/1.9.2",
     )
 
     _cmake = None
@@ -60,8 +59,6 @@ class TketConan(ConanFile):
     def configure(self):
         # Disable features that are still under the LGPL.
         self.options["eigen"].MPL2_only = True
-        self.options["fmt"].header_only = True
-        self.options["spdlog"].header_only = True
 
     def build(self):
         # Build with boost patches
