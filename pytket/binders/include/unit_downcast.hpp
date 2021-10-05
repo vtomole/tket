@@ -26,11 +26,7 @@ template <>
 struct polymorphic_type_hook<tket::UnitID> {
   static const void* get(const tket::UnitID* src, const std::type_info*& type) {
     if (src) {
-      if (src->type() == tket::UnitType::Qubit) {
-        type = &typeid(tket::Qubit);
-      } else {
-        type = &typeid(tket::Bit);
-      }
+      type = &typeid(tket::Qubit);
     } else
       type = nullptr;
     return src;

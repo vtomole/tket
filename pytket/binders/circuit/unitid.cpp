@@ -24,7 +24,6 @@
 namespace py = pybind11;
 
 namespace tket {
-const std::string bit_reg_name = std::string("BitRegister");
 const std::string qubit_reg_name = std::string("QubitRegister");
 template <typename T>
 void declare_register(py::module &m, const std::string &typestr) {
@@ -77,8 +76,7 @@ void init_unitid(py::module &m) {
   py::enum_<UnitType>(
       m, "UnitType",
       "Enum for data types of units in circuits (e.g. Qubits vs Bits).")
-      .value("qubit", UnitType::Qubit, "A single Qubit")
-      .value("bit", UnitType::Bit, "A single classical Bit");
+      .value("qubit", UnitType::Qubit, "A single Qubit");
 
   py::class_<UnitID>(
       m, "UnitID", "A handle to a computational unit (e.g. qubit, bit)")
@@ -143,38 +141,6 @@ void init_unitid(py::module &m) {
                 t[0].cast<std::string>(), t[1].cast<std::vector<unsigned>>());
           }));
 
-  py::class_<Bit, UnitID>(m, "Bit", "A handle to a bit")
-      .def(
-          py::init<unsigned>(),
-          "Constructs an id for some index in the default classical "
-          "register\n\n:param index: The index in the register",
-          py::arg("index"))
-      .def(
-          py::init<const std::string &>(),
-          "Constructs a named id (i.e. corresponding to a singleton "
-          "register)\n\n:param name: The readable name for the id",
-          py::arg("name"))
-      .def(
-          py::init<const std::string &, unsigned>(),
-          "Constructs an indexed id (i.e. corresponding to an element "
-          "in a linear register)\n\n:param name: The readable name for "
-          "the register\n:param index: The numerical index",
-          py::arg("name"), py::arg("index"))
-      .def(
-          py::init<const std::string &, unsigned, unsigned>(),
-          "Constructs a doubly-indexed id (i.e. corresponding to an "
-          "element in a grid register)\n\n:param name: The readable "
-          "name for the register\n:param row: The row index\n:param "
-          "col: The column index",
-          py::arg("name"), py::arg("row"), py::arg("col"))
-      .def(
-          py::init<const std::string &, std::vector<unsigned> &>(),
-          "Constructs an id with an arbitrary-dimensional "
-          "index\n\n:param name: The readable name for the "
-          "register\n:param index: The index vector",
-          py::arg("name"), py::arg("index"));
-
-  declare_register<Bit>(m, bit_reg_name);
   declare_register<Qubit>(m, qubit_reg_name);
 }
 }  // namespace tket

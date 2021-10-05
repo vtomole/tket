@@ -59,7 +59,6 @@ class UnitRegister {
   std::size_t size_;
 };
 
-typedef UnitRegister<Bit> BitRegister;
 typedef UnitRegister<Qubit> QubitRegister;
 }  // namespace tket
 #endif  //_TKET_UnitRegister_H_

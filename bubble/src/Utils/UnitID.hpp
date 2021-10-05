@@ -30,7 +30,7 @@
 namespace tket {
 
 /** Type of information held */
-enum class UnitType { Qubit, Bit };
+enum class UnitType { Qubit };
 
 /** The type and dimension of a register */
 typedef std::pair<UnitType, unsigned> register_info_t;
@@ -149,50 +149,12 @@ class Qubit : public UnitID {
   }
 };
 
-/** Location holding a bit */
-class Bit : public UnitID {
- public:
-  Bit() : UnitID("", {}, UnitType::Bit) {}
-
-  /** Bit in default register */
-  explicit Bit(unsigned index)
-      : UnitID(c_default_reg(), {index}, UnitType::Bit) {}
-
-  /** Named register with no index */
-  explicit Bit(const std::string &name) : UnitID(name, {}, UnitType::Bit) {}
-
-  /** Named register with a one-dimensional index */
-  Bit(const std::string &name, unsigned index)
-      : UnitID(name, {index}, UnitType::Bit) {}
-
-  /** Named register with a two-dimensional index */
-  Bit(const std::string &name, unsigned row, unsigned col)
-      : UnitID(name, {row, col}, UnitType::Bit) {}
-
-  /** Named register with a three-dimensional index */
-  Bit(const std::string &name, unsigned row, unsigned col, unsigned layer)
-      : UnitID(name, {row, col, layer}, UnitType::Bit) {}
-
-  /** Named register with a multi-dimensional index */
-  Bit(const std::string &name, std::vector<unsigned> index)
-      : UnitID(name, index, UnitType::Bit) {}
-
-  explicit Bit(const UnitID &other) : UnitID(other) {
-    if (other.type() != UnitType::Bit) {
-      throw InvalidUnitConversion(other.repr(), "Bit");
-    }
-  }
-};
-
 typedef std::vector<UnitID> unit_vector_t;
 typedef std::map<UnitID, UnitID> unit_map_t;
 typedef std::set<UnitID> unit_set_t;
 
 typedef std::vector<Qubit> qubit_vector_t;
 typedef std::map<Qubit, Qubit> qubit_map_t;
-
-typedef std::vector<Bit> bit_vector_t;
-typedef std::map<Bit, Bit> bit_map_t;
 
 /** A register of locations sharing the same name */
 typedef std::map<unsigned, UnitID> register_t;
