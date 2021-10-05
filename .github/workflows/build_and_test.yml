@@ -35,8 +35,6 @@ jobs:
         conan profile new tket --detect --force
         export CC=`which conan`
         echo "CONAN_CMD=${CC}" >> $GITHUB_ENV
-    - name: Build symengine
-      run: conan create --profile=tket --build=missing recipes/symengine
     - name: Build tket
       run: conan create --profile=tket recipes/tket
     - name: Build pytket (3.8)

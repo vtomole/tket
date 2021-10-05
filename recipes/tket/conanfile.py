@@ -35,7 +35,6 @@ class TketConan(ConanFile):
     # (`conan build`). Maybe there is a better way?
     exports_sources = ["../../bubble/src/*", "!*/build/*", "patches/*"]
     exports = ["patches/*"]
-    requires = ("symengine/0.8.2",)
 
     _cmake = None
 
