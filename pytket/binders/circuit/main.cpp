@@ -17,7 +17,6 @@
 
 #include <sstream>
 
-#include "Utils/Constants.hpp"
 #include "binder_utils.hpp"
 
 namespace py = pybind11;
