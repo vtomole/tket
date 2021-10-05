@@ -44,16 +44,4 @@ const std::string& q_default_reg() {
   return *regname;
 }
 
-const std::string& c_default_reg() {
-  static std::unique_ptr<const std::string> regname =
-      std::make_unique<const std::string>("c");
-  return *regname;
-}
-
-const std::string& node_default_reg() {
-  static std::unique_ptr<const std::string> regname =
-      std::make_unique<const std::string>("node");
-  return *regname;
-}
-
 }  // namespace tket
