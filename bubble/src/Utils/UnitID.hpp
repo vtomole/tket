@@ -2,7 +2,6 @@
 #define _TKET_UnitID_H_
 
 #include <memory>
-#include <vector>
 
 namespace tket {
 
@@ -13,19 +12,14 @@ class UnitID {
   UnitID() : data_(std::make_shared<UnitData>()) {}
 
  protected:
-  UnitID(const std::vector<unsigned> &index, UnitType type)
-      : data_(std::make_shared<UnitData>(index, type)) {}
+  UnitID(UnitType type) : data_(std::make_shared<UnitData>(type)) {}
 
  private:
   struct UnitData {
-    std::vector<unsigned> index_;
     UnitType type_;
 
-    UnitData() : index_(), type_(UnitType::Qubit) {}
-    UnitData(const std::vector<unsigned> &index,
-        UnitType type)
-        : index_(index), type_(type) {
-    }
+    UnitData() : type_(UnitType::Qubit) {}
+    UnitData(UnitType type) : type_(type) {}
   };
   std::shared_ptr<UnitData> data_;
 };
@@ -33,7 +27,7 @@ class UnitID {
 /** Location holding a qubit */
 class Qubit : public UnitID {
  public:
-  Qubit() : UnitID({}, UnitType::Qubit) {}
+  Qubit() : UnitID(UnitType::Qubit) {}
 };
 
 }  // namespace tket
