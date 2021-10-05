@@ -24,7 +24,6 @@
 #include "Utils/Exceptions.hpp"
 #include "Utils/Expression.hpp"
 #include "Utils/Symbols.hpp"
-#include "unit_downcast.hpp"
 
 namespace pybind11 {
 
