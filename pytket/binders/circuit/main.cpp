@@ -34,9 +34,7 @@ namespace py = pybind11;
 namespace tket {
 
 void init_unitid(py::module &m);
-void init_circuit(py::module &m);
 void init_classical(py::module &m);
-void init_boxes(py::module &m);
 
 PYBIND11_MODULE(circuit, m) {
   init_unitid(m);
@@ -483,8 +481,6 @@ PYBIND11_MODULE(circuit, m) {
           [](const Command &com) { return com.get_op_ptr()->free_symbols(); },
           ":return: set of symbolic parameters for the command");
 
-  init_circuit(m);
-  init_boxes(m);
   init_classical(m);
 
   m.def(

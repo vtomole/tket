@@ -48,8 +48,4 @@ endfunction(build_module)
 build_module(circuit
     binders/circuit/main.cpp
     binders/circuit/unitid.cpp
-    binders/circuit/boxes.cpp
-    binders/circuit/classical.cpp
-    binders/circuit/Circuit/main.cpp
-    binders/circuit/Circuit/add_op.cpp
-    binders/circuit/Circuit/add_classical_op.cpp)
+    binders/circuit/classical.cpp)
