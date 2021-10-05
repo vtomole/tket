@@ -32,7 +32,6 @@
 #include "OpType/OpDesc.hpp"
 #include "OpType/OpTypeFunctions.hpp"
 #include "Utils/Constants.hpp"
-#include "Utils/EigenConfig.hpp"
 #include "Utils/Exceptions.hpp"
 #include "Utils/Expression.hpp"
 #include "Utils/UnitID.hpp"
@@ -111,16 +110,6 @@ class Op : public std::enable_shared_from_this<Op> {
    * @throw NotValid if operation is not a \ref Gate
    */
   virtual std::optional<double> is_identity() const { throw NotValid(); }
-
-  /**
-   * If meaningful and implemented, return the numerical unitary matrix
-   * (in ILO-BE convention) which this Op represents.
-   *
-   * @pre No symbolic parameters.
-   * @return unitary matrix (ILO-BE) which this Op represents
-   * @throw NotValid or NotImplemented upon error.
-   */
-  virtual Eigen::MatrixXcd get_unitary() const { throw NotValid(); }
 
   virtual ~Op() {}
 

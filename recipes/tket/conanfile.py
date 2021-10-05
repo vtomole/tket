@@ -38,7 +38,6 @@ class TketConan(ConanFile):
     requires = (
         "boost/1.77.0",
         "symengine/0.8.2",
-        "eigen/3.4.0",
     )
 
     _cmake = None
@@ -57,8 +56,7 @@ class TketConan(ConanFile):
             )
 
     def configure(self):
-        # Disable features that are still under the LGPL.
-        self.options["eigen"].MPL2_only = True
+        pass
 
     def build(self):
         # Build with boost patches
