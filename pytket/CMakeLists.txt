@@ -45,6 +45,4 @@ function(build_module module)
     target_link_libraries(${module} PRIVATE ${CONAN_LIBS})
 endfunction(build_module)
 
-build_module(circuit
-    binders/circuit/main.cpp
-    binders/circuit/unitid.cpp)
+build_module(circuit binders/circuit/main.cpp)
