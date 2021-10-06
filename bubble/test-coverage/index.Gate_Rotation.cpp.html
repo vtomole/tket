@@ -269,17 +269,17 @@
             <td class="headerValue">Gate/Rotation.cpp</td>
             <td></td>
             <td class="headerName">Lines:</td>
-            <td class="headerTableEntry">215</td>
-            <td class="headerTableEntry">255</td>
-            <td class="headerTableEntry" style="background-color:#FFFF55">84.3 %</td>
+            <td class="headerTableEntry">226</td>
+            <td class="headerTableEntry">266</td>
+            <td class="headerTableEntry" style="background-color:#FFFF55">85.0 %</td>
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2021-10-02 05:06:57</td>
+            <td class="headerValue">2021-10-06 16:21:01</td>
             <td></td>
             <td class="headerName">Branches:</td>
-            <td class="headerTableEntry">408</td>
-            <td class="headerTableEntry">784</td>
+            <td class="headerTableEntry">416</td>
+            <td class="headerTableEntry">800</td>
             <td class="headerTableEntry" style="background-color:LightPink">52.0 %</td>
           </tr>
         </table>
@@ -3201,364 +3201,462 @@
     <td align="right" class="lineno"><pre>415</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>3082</pre></td>
-    <td align="left" class="src coveredLine"><pre>  // s0^2 + z0^2 - x0^2 - y0^2 = cos(pi b)</pre></td>
+    <td align="left" class="src coveredLine"><pre>  std::complex u = {s0, z0}, v = {x0, y0};</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>416</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  double t = s0 * s0 + z0 * z0 - x0 * x0 - y0 * y0;</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>417</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>  // u = cos(pi b/2) e^{i pi (a+c)/2}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>418</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  std::complex u = {s0, z0}, v = {x0, y0};</pre></td>
+    <td align="left" class="src "><pre>  // v = sin(pi b/2) e^{i pi (a-c)/2}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>419</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>  // |u|^2 + |v|^2 = 1</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>420</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  // u = cos(pi b/2) e^{i pi (a+c)/2}</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>421</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  // v = sin(pi b/2) e^{i pi (a-c)/2}</pre></td>
+    <td align="left" class="src "><pre>  // Note that (a,b) --> (a+2, b+2) does not change the value of the unitary, so</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>422</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  // |u|^2 + |v|^2 = 1</pre></td>
+    <td align="left" class="src "><pre>  // we are free to choose either solution.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>423</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>  //</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>424</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  if (std::abs(u) &lt; EPS) {  // special case, b = +/- 1</pre></td>
+    <td align="left" class="src "><pre>  // We treat the two special cases u=0 and v=0 separately, then the general</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>425</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    // v = +/- e^{i pi (a-c)/2}</pre></td>
+    <td align="left" class="src "><pre>  // case.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>426</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    b = (t > 0) ? 1 : -1;</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>427</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 96 times">&check;</span><span class="takenBranch" title="Branch 2 taken 2986 times">&check;</span></td>
     <td align="right" class="linecount coveredLine"><pre>3082</pre></td>
-    <td align="left" class="src coveredLine"><pre>    a = 2 * std::arg(v) / PI;</pre></td>
+    <td align="left" class="src coveredLine"><pre>  if (std::abs(u) &lt; EPS) {  // special case, b = 1 or 3</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>428</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    c = 0;</pre></td>
+    <td align="left" class="src "><pre>    // v = +/- e^{i pi (a-c)/2}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>429</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    p -= a;</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>430</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  } else if (std::abs(v) &lt; EPS) {  // special case, b = 0</pre></td>
+    <td align="left" class="src "><pre>    // We may as well choose c = 0.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>431</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>96</pre></td>
-    <td align="left" class="src coveredLine"><pre>    // u = e^{i pi (a+c)/2}</pre></td>
+    <td align="left" class="src coveredLine"><pre>    c = 0;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>432</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    b = 0;</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>433</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    a = 2 * std::arg(u) / PI;</pre></td>
+    <td align="left" class="src "><pre>    // Assume b=1 and compute a.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>434</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    c = 0;</pre></td>
+    <td align="left" class="src "><pre>    // (b'=3, a'=a+2) is the other possibility but the unitary is the same.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>435</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>96</pre></td>
-    <td align="left" class="src coveredLine"><pre>  } else {  // general case</pre></td>
+    <td align="left" class="src coveredLine"><pre>    b = 1;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>436</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>96</pre></td>
-    <td align="left" class="src coveredLine"><pre>    b = std::acos(t) / PI;</pre></td>
+    <td align="left" class="src coveredLine"><pre>    a = 2 * std::arg(v) / PI;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>437</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 159 times">&check;</span><span class="takenBranch" title="Branch 2 taken 2827 times">&check;</span></td>
     <td align="right" class="linecount coveredLine"><pre>2986</pre></td>
-    <td align="left" class="src coveredLine"><pre>    // b is in the range (-1,+1). This is w.l.o.g. because</pre></td>
+    <td align="left" class="src coveredLine"><pre>  } else if (std::abs(v) &lt; EPS) {  // special case, b = 0 or 2</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>438</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    // (a,b) --> (a+2, b+2) does not change the value of the unitary.</pre></td>
+    <td align="left" class="src "><pre>    // u = e^{i pi (a+c)/2}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>439</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    double ac0 = std::arg(u), ac1 = std::arg(v);</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>440</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    a = (ac0 + ac1) / PI;</pre></td>
+    <td align="left" class="src "><pre>    // We may as well choose c = 0.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>441</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>159</pre></td>
-    <td align="left" class="src coveredLine"><pre>    c = (ac0 - ac1) / PI;</pre></td>
+    <td align="left" class="src coveredLine"><pre>    c = 0;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>442</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  }</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>443</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>    // Assume b=0 and compute a.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>444</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  return {a, b, c, p};</pre></td>
+    <td align="left" class="src "><pre>    // (b'=2, a'=a+2) is the other possibility but the unitary is the same.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>445</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>159</pre></td>
-    <td align="left" class="src coveredLine"><pre>}</pre></td>
+    <td align="left" class="src coveredLine"><pre>    b = 0;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>446</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>159</pre></td>
-    <td align="left" class="src coveredLine"><pre></pre></td>
+    <td align="left" class="src coveredLine"><pre>    a = 2 * std::arg(u) / PI;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>447</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>Eigen::Matrix2cd get_matrix_from_tk1_angles(std::vector&lt;Expr> params) {</pre></td>
+    <td align="left" class="src "><pre>  } else {  // general case</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>448</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  double alpha = eval_expr(params[0]).value();</pre></td>
+    <td align="left" class="src "><pre>    // s0^2 + z0^2 - x0^2 - y0^2 = cos(pi b)</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>449</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>2827</pre></td>
-    <td align="left" class="src coveredLine"><pre>  double beta = eval_expr(params[1]).value();</pre></td>
+    <td align="left" class="src coveredLine"><pre>    double t = s0 * s0 + z0 * z0 - x0 * x0 - y0 * y0;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>450</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>2827</pre></td>
-    <td align="left" class="src coveredLine"><pre>  double gamma = eval_expr(params[2]).value();</pre></td>
+    <td align="left" class="src coveredLine"><pre>    b = std::acos(t) / PI;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>451</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  double t = eval_expr(params[3]).value();</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>452</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  Eigen::Matrix2cd m;</pre></td>
+    <td align="left" class="src "><pre>    // w.l.o.g. b is in the range (-1,+1).</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>453</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>2827</pre></td>
-    <td align="left" class="src coveredLine"><pre>  alpha *= PI;</pre></td>
+    <td align="left" class="src coveredLine"><pre>    double ac0 = std::arg(u), ac1 = std::arg(v);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>454</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>2827</pre></td>
-    <td align="left" class="src coveredLine"><pre>  beta *= PI;</pre></td>
+    <td align="left" class="src coveredLine"><pre>    a = (ac0 + ac1) / PI;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>455</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>2827</pre></td>
-    <td align="left" class="src coveredLine"><pre>  gamma *= PI;</pre></td>
+    <td align="left" class="src coveredLine"><pre>    c = (ac0 - ac1) / PI;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>456</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  t *= PI;</pre></td>
+    <td align="left" class="src "><pre>  }</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>457</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  double c = cos(0.5 * beta);</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>458</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 3082 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>3082</pre></td>
-    <td align="left" class="src coveredLine"><pre>  double s = sin(0.5 * beta);</pre></td>
+    <td align="left" class="src coveredLine"><pre>  return {a, b, c, p};</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>459</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  m &lt;&lt; exp(-0.5 * i_ * (alpha + gamma)) * c,</pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>460</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>      -i_ * exp(0.5 * i_ * (gamma - alpha)) * s,</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>461</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>4255</pre></td>
-    <td align="left" class="src coveredLine"><pre>      -i_ * exp(0.5 * i_ * (alpha - gamma)) * s,</pre></td>
+    <td align="left" class="src coveredLine"><pre>Eigen::Matrix2cd get_matrix_from_tk1_angles(std::vector&lt;Expr> params) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>462</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 4255 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 4255 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>4255</pre></td>
-    <td align="left" class="src coveredLine"><pre>      exp(0.5 * i_ * (alpha + gamma)) * c;</pre></td>
+    <td align="left" class="src coveredLine"><pre>  double alpha = eval_expr(params[0]).value();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>463</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 4255 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 4255 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>4255</pre></td>
-    <td align="left" class="src coveredLine"><pre>  return exp(i_ * t) * m;</pre></td>
+    <td align="left" class="src coveredLine"><pre>  double beta = eval_expr(params[1]).value();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>464</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 4255 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 4255 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>4255</pre></td>
-    <td align="left" class="src coveredLine"><pre>}</pre></td>
+    <td align="left" class="src coveredLine"><pre>  double gamma = eval_expr(params[2]).value();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>465</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 4255 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 4255 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>4255</pre></td>
-    <td align="left" class="src coveredLine"><pre></pre></td>
+    <td align="left" class="src coveredLine"><pre>  double t = eval_expr(params[3]).value();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>466</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 4255 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>4255</pre></td>
-    <td align="left" class="src coveredLine"><pre>}  // namespace tket</pre></td>
+    <td align="left" class="src coveredLine"><pre>  Eigen::Matrix2cd m;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>467</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>4255</pre></td>
+    <td align="left" class="src coveredLine"><pre>  alpha *= PI;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>468</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>4255</pre></td>
+    <td align="left" class="src coveredLine"><pre>  beta *= PI;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>469</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>4255</pre></td>
+    <td align="left" class="src coveredLine"><pre>  gamma *= PI;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>470</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>4255</pre></td>
+    <td align="left" class="src coveredLine"><pre>  t *= PI;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>471</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>4255</pre></td>
+    <td align="left" class="src coveredLine"><pre>  double c = cos(0.5 * beta);</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>472</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>4255</pre></td>
+    <td align="left" class="src coveredLine"><pre>  double s = sin(0.5 * beta);</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>473</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 5 taken 4255 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>4255</pre></td>
+    <td align="left" class="src coveredLine"><pre>  m &lt;&lt; exp(-0.5 * i_ * (alpha + gamma)) * c,</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>474</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 5 taken 4255 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><span class="takenBranch" title="Branch 9 taken 4255 times">&check;</span><span class="notTakenBranch" title="Branch 10 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>4255</pre></td>
+    <td align="left" class="src coveredLine"><pre>      -i_ * exp(0.5 * i_ * (gamma - alpha)) * s,</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>475</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 5 taken 4255 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><span class="takenBranch" title="Branch 9 taken 4255 times">&check;</span><span class="notTakenBranch" title="Branch 10 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>4255</pre></td>
+    <td align="left" class="src coveredLine"><pre>      -i_ * exp(0.5 * i_ * (alpha - gamma)) * s,</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>476</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 5 taken 4255 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>4255</pre></td>
+    <td align="left" class="src coveredLine"><pre>      exp(0.5 * i_ * (alpha + gamma)) * c;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>477</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 4255 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 4255 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>8510</pre></td>
+    <td align="left" class="src coveredLine"><pre>  return exp(i_ * t) * m;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>478</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>479</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>480</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>}  // namespace tket</pre></td>
     </tr>
 
   </table>

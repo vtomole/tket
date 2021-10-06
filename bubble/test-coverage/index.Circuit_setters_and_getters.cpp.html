@@ -275,7 +275,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2021-10-02 05:06:57</td>
+            <td class="headerValue">2021-10-06 16:21:01</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">419</td>
@@ -3851,14 +3851,14 @@
     <tr>
     <td align="right" class="lineno"><pre>508</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>4005070</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>4005093</pre></td>
     <td align="left" class="src coveredLine"><pre>unsigned Circuit::n_in_edges(const Vertex &amp;vert) const {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>509</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>4005070</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>4005093</pre></td>
     <td align="left" class="src coveredLine"><pre>  return boost::in_degree(vert, dag);</pre></td>
     </tr>
 
@@ -4145,14 +4145,14 @@
     <tr>
     <td align="right" class="lineno"><pre>550</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>9237276</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>9237278</pre></td>
     <td align="left" class="src coveredLine"><pre>const Op_ptr Circuit::get_Op_ptr_from_Vertex(const Vertex &amp;vert) const {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>551</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>9237276</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>9237278</pre></td>
     <td align="left" class="src coveredLine"><pre>  return this->dag[vert].op;</pre></td>
     </tr>
 
@@ -4271,14 +4271,14 @@
     <tr>
     <td align="right" class="lineno"><pre>568</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>8125217</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>8125219</pre></td>
     <td align="left" class="src coveredLine"><pre>OpType Circuit::get_OpType_from_Vertex(const Vertex &amp;vert) const {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>569</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>8125217</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>8125219</pre></td>
     <td align="left" class="src coveredLine"><pre>  return get_Op_ptr_from_Vertex(vert)->get_type();</pre></td>
     </tr>
 
@@ -4762,81 +4762,39 @@
     <td align="right" class="lineno"><pre>638</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>7956</pre></td>
-    <td align="left" class="src coveredLine"><pre>// check if the vertex corresponds to an Op of one of the single-qubit IBM U ops</pre></td>
+    <td align="left" class="src coveredLine"><pre>bool Circuit::detect_singleq_unitary_op(const Vertex &amp;vert) const {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>639</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 7956 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>7956</pre></td>
-    <td align="left" class="src coveredLine"><pre>bool Circuit::detect_u_op(const Vertex &amp;vert) const {</pre></td>
+    <td align="left" class="src coveredLine"><pre>  const OpDesc desc = get_OpDesc_from_Vertex(vert);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>640</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 7956 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 7565 times">&check;</span><span class="takenBranch" title="Branch 4 taken 391 times">&check;</span><br/><span class="takenBranch" title="Branch 6 taken 7565 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><span class="takenBranch" title="Branch 8 taken 5593 times">&check;</span><span class="takenBranch" title="Branch 9 taken 1972 times">&check;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>15912</pre></td>
-    <td align="left" class="src coveredLine"><pre>  OpType type = get_OpType_from_Vertex(vert);</pre></td>
+    <td align="left" class="src coveredLine"><pre>  return desc.is_gate() &amp;&amp; desc.is_singleq_unitary();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>641</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  return ((type == OpType::U1) || (type == OpType::U2) || (type == OpType::U3));</pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>642</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>643</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>644</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>bool Circuit::detect_singleq_unitary_op(const Vertex &amp;vert) const {</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>645</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  const OpDesc desc = get_OpDesc_from_Vertex(vert);</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>646</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  return desc.is_gate() &amp;&amp; desc.is_singleq_unitary();</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>647</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>648</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>649</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>}  // namespace tket</pre></td>

@@ -270,12 +270,12 @@
             <td></td>
             <td class="headerName">Lines:</td>
             <td class="headerTableEntry">161</td>
-            <td class="headerTableEntry">167</td>
-            <td class="headerTableEntry" style="background-color:LightGreen">96.4 %</td>
+            <td class="headerTableEntry">168</td>
+            <td class="headerTableEntry" style="background-color:LightGreen">95.8 %</td>
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2021-10-02 05:06:57</td>
+            <td class="headerValue">2021-10-06 16:21:01</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">321</td>
@@ -1122,7 +1122,7 @@
     <td align="right" class="lineno"><pre>118</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>438</pre></td>
-    <td align="left" class="src coveredLine"><pre>Circuit Transform::tk1_to_u(</pre></td>
+    <td align="left" class="src coveredLine"><pre>Circuit Transform::tk1_to_PhasedXRz(</pre></td>
     </tr>
 
     <tr>
@@ -1136,385 +1136,385 @@
     <td align="right" class="lineno"><pre>120</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 438 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>438</pre></td>
-    <td align="left" class="src coveredLine"><pre>  Expr theta = beta;</pre></td>
+    <td align="left" class="src coveredLine"><pre>  Circuit c(1);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>121</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 438 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 438 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 8 taken 438 times">&check;</span><span class="notTakenBranch" title="Branch 9 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>2190</pre></td>
-    <td align="left" class="src coveredLine"><pre>  Expr phi = alpha - 0.5;</pre></td>
+    <td align="left" class="src coveredLine"><pre>  std::vector&lt;Expr> px_params = {beta, alpha};</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>122</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 438 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 438 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 9 taken 438 times">&check;</span><span class="notTakenBranch" title="Branch 10 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>438</pre></td>
-    <td align="left" class="src coveredLine"><pre>  Expr lambda = gamma + 0.5;</pre></td>
+    <td align="left" class="src coveredLine"><pre>  c.add_op&lt;unsigned>(OpType::Rz, alpha + gamma, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>123</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 438 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 419 times">&check;</span><span class="takenBranch" title="Branch 4 taken 19 times">&check;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>438</pre></td>
-    <td align="left" class="src coveredLine"><pre>  Circuit c(1);</pre></td>
+    <td align="left" class="src coveredLine"><pre>  if (!equiv_0(beta, 4)) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>124</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 419 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 419 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>419</pre></td>
-    <td align="left" class="src coveredLine"><pre>  if (!equiv_0(theta, 4)) {</pre></td>
+    <td align="left" class="src coveredLine"><pre>    c.add_op&lt;unsigned>(OpType::PhasedX, px_params, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>125</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    c.add_op&lt;unsigned>(OpType::U3, {theta, phi, lambda}, {0});</pre></td>
+    <td align="left" class="src "><pre>  }</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>126</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 438 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 438 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>438</pre></td>
-    <td align="left" class="src coveredLine"><pre>  } else if (!equiv_0(phi + lambda)) {</pre></td>
+    <td align="left" class="src coveredLine"><pre>  Transform::remove_redundancies().apply(c);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>127</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>876</pre></td>
-    <td align="left" class="src coveredLine"><pre>    c.add_op&lt;unsigned>(OpType::U1, {phi + lambda}, {0});</pre></td>
+    <td align="left" class="src coveredLine"><pre>  return c;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>128</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  }</pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>129</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  c.add_phase(-(alpha + gamma) / 2);</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>130</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>  return c;</pre></td>
+    <td align="left" class="src coveredLine"><pre>Transform Transform::rebase_cirq() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>131</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
+    <td align="left" class="src "><pre>  return rebase_factory(</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>132</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>      {OpType::CZ}, CircPool::H_CZ_H(), {OpType::PhasedX, OpType::Rz},</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>133</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 10 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 11 not taken">&cross;</span><span class="takenBranch" title="Branch 13 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 14 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>Transform Transform::rebase_IBM() {</pre></td>
+    <td align="left" class="src coveredLine"><pre>      Transform::tk1_to_PhasedXRz);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>134</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  return rebase_factory(</pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>135</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>      {OpType::CX}, CircPool::CX(), {OpType::U1, OpType::U2, OpType::U3},</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>136</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>1054</pre></td>
-    <td align="left" class="src coveredLine"><pre>      Transform::tk1_to_u);</pre></td>
+    <td align="left" class="src coveredLine"><pre>Circuit Transform::tk1_to_rzrx(</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>137</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
+    <td align="left" class="src "><pre>    const Expr&amp; alpha, const Expr&amp; beta, const Expr&amp; gamma) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>138</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 1054 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>1054</pre></td>
-    <td align="left" class="src coveredLine"><pre></pre></td>
+    <td align="left" class="src coveredLine"><pre>  Circuit c(1);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>139</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 1054 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 1054 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>1054</pre></td>
-    <td align="left" class="src coveredLine"><pre>Circuit Transform::tk1_to_PhasedXRz(</pre></td>
+    <td align="left" class="src coveredLine"><pre>  c.add_op&lt;unsigned>(OpType::Rz, gamma, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>140</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 1054 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 1054 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>1054</pre></td>
-    <td align="left" class="src coveredLine"><pre>    const Expr&amp; alpha, const Expr&amp; beta, const Expr&amp; gamma) {</pre></td>
+    <td align="left" class="src coveredLine"><pre>  c.add_op&lt;unsigned>(OpType::Rx, beta, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>141</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 1054 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 1054 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>1054</pre></td>
-    <td align="left" class="src coveredLine"><pre>  Circuit c(1);</pre></td>
+    <td align="left" class="src coveredLine"><pre>  c.add_op&lt;unsigned>(OpType::Rz, alpha, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>142</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1054 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 1054 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>1054</pre></td>
-    <td align="left" class="src coveredLine"><pre>  std::vector&lt;Expr> px_params = {beta, alpha};</pre></td>
+    <td align="left" class="src coveredLine"><pre>  Transform::remove_redundancies().apply(c);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>143</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>1054</pre></td>
-    <td align="left" class="src coveredLine"><pre>  c.add_op&lt;unsigned>(OpType::Rz, alpha + gamma, {0});</pre></td>
+    <td align="left" class="src coveredLine"><pre>  return c;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>144</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  if (!equiv_0(beta, 4)) {</pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>145</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    c.add_op&lt;unsigned>(OpType::PhasedX, px_params, {0});</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>146</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>181</pre></td>
-    <td align="left" class="src coveredLine"><pre>  }</pre></td>
+    <td align="left" class="src coveredLine"><pre>Circuit Transform::tk1_to_rzh(</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>147</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  Transform::remove_redundancies().apply(c);</pre></td>
+    <td align="left" class="src "><pre>    const Expr&amp; alpha, const Expr&amp; beta, const Expr&amp; gamma) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>148</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 181 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>181</pre></td>
-    <td align="left" class="src coveredLine"><pre>  return c;</pre></td>
+    <td align="left" class="src coveredLine"><pre>  Circuit c(1);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>149</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 181 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>181</pre></td>
-    <td align="left" class="src coveredLine"><pre>}</pre></td>
+    <td align="left" class="src coveredLine"><pre>  std::optional&lt;unsigned> cliff = equiv_Clifford(beta, 4);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>150</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 178 times">&check;</span><span class="takenBranch" title="Branch 2 taken 3 times">&check;</span></td>
     <td align="right" class="linecount coveredLine"><pre>181</pre></td>
-    <td align="left" class="src coveredLine"><pre></pre></td>
+    <td align="left" class="src coveredLine"><pre>  if (cliff) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>151</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 3 times">&check;</span><span class="takenBranch" title="Branch 2 taken 27 times">&check;</span><span class="takenBranch" title="Branch 3 taken 121 times">&check;</span><span class="takenBranch" title="Branch 4 taken 27 times">&check;</span><br/><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>178</pre></td>
-    <td align="left" class="src coveredLine"><pre>Transform Transform::rebase_cirq() {</pre></td>
+    <td align="left" class="src coveredLine"><pre>    switch (*cliff % 4) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>152</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>3</pre></td>
-    <td align="left" class="src coveredLine"><pre>  return rebase_factory(</pre></td>
+    <td align="left" class="src coveredLine"><pre>      case 0: {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>153</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 3 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 3 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 9 taken 3 times">&check;</span><span class="notTakenBranch" title="Branch 10 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>3</pre></td>
-    <td align="left" class="src coveredLine"><pre>      {OpType::CZ}, CircPool::H_CZ_H(), {OpType::PhasedX, OpType::Rz},</pre></td>
+    <td align="left" class="src coveredLine"><pre>        c.add_op&lt;unsigned>(OpType::Rz, gamma + alpha, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>154</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>3</pre></td>
-    <td align="left" class="src coveredLine"><pre>      Transform::tk1_to_PhasedXRz);</pre></td>
+    <td align="left" class="src coveredLine"><pre>        break;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>155</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
+    <td align="left" class="src "><pre>      }</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>156</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>27</pre></td>
-    <td align="left" class="src coveredLine"><pre></pre></td>
+    <td align="left" class="src coveredLine"><pre>      case 1: {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>157</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 9 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 10 not taken">&cross;</span><span class="takenBranch" title="Branch 12 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 13 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>27</pre></td>
-    <td align="left" class="src coveredLine"><pre>Circuit Transform::tk1_to_rzrx(</pre></td>
+    <td align="left" class="src coveredLine"><pre>        c.add_op&lt;unsigned>(OpType::Rz, gamma - 0.5, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>158</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>27</pre></td>
-    <td align="left" class="src coveredLine"><pre>    const Expr&amp; alpha, const Expr&amp; beta, const Expr&amp; gamma) {</pre></td>
+    <td align="left" class="src coveredLine"><pre>        c.add_op&lt;unsigned>(OpType::H, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>159</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 9 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 10 not taken">&cross;</span><span class="takenBranch" title="Branch 12 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 13 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>27</pre></td>
-    <td align="left" class="src coveredLine"><pre>  Circuit c(1);</pre></td>
+    <td align="left" class="src coveredLine"><pre>        c.add_op&lt;unsigned>(OpType::Rz, alpha - 0.5, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>160</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>27</pre></td>
-    <td align="left" class="src coveredLine"><pre>  c.add_op&lt;unsigned>(OpType::Rz, gamma, {0});</pre></td>
+    <td align="left" class="src coveredLine"><pre>        c.add_phase(-0.5);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>161</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>27</pre></td>
-    <td align="left" class="src coveredLine"><pre>  c.add_op&lt;unsigned>(OpType::Rx, beta, {0});</pre></td>
+    <td align="left" class="src coveredLine"><pre>        break;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>162</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  c.add_op&lt;unsigned>(OpType::Rz, alpha, {0});</pre></td>
+    <td align="left" class="src "><pre>      }</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>163</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
-    <td align="left" class="src coveredLine"><pre>  Transform::remove_redundancies().apply(c);</pre></td>
+    <td align="left" class="src coveredLine"><pre>      case 2: {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>164</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 121 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 121 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 9 taken 121 times">&check;</span><span class="notTakenBranch" title="Branch 10 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
-    <td align="left" class="src coveredLine"><pre>  return c;</pre></td>
+    <td align="left" class="src coveredLine"><pre>        c.add_op&lt;unsigned>(OpType::Rz, gamma - alpha, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>165</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 121 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 121 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
-    <td align="left" class="src coveredLine"><pre>}</pre></td>
+    <td align="left" class="src coveredLine"><pre>        c.add_op&lt;unsigned>(OpType::H, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>166</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 121 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 121 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 9 taken 121 times">&check;</span><span class="notTakenBranch" title="Branch 10 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
-    <td align="left" class="src coveredLine"><pre></pre></td>
+    <td align="left" class="src coveredLine"><pre>        c.add_op&lt;unsigned>(OpType::Rz, 1., {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>167</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 121 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 121 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
-    <td align="left" class="src coveredLine"><pre>Circuit Transform::tk1_to_rzh(</pre></td>
+    <td align="left" class="src coveredLine"><pre>        c.add_op&lt;unsigned>(OpType::H, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>168</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
-    <td align="left" class="src coveredLine"><pre>    const Expr&amp; alpha, const Expr&amp; beta, const Expr&amp; gamma) {</pre></td>
+    <td align="left" class="src coveredLine"><pre>        break;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>169</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  Circuit c(1);</pre></td>
+    <td align="left" class="src "><pre>      }</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>170</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>27</pre></td>
-    <td align="left" class="src coveredLine"><pre>  std::optional&lt;unsigned> cliff = equiv_Clifford(beta, 4);</pre></td>
+    <td align="left" class="src coveredLine"><pre>      case 3: {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>171</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 9 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 10 not taken">&cross;</span><span class="takenBranch" title="Branch 12 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 13 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>27</pre></td>
-    <td align="left" class="src coveredLine"><pre>  if (cliff) {</pre></td>
+    <td align="left" class="src coveredLine"><pre>        c.add_op&lt;unsigned>(OpType::Rz, gamma + 0.5, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>172</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>27</pre></td>
-    <td align="left" class="src coveredLine"><pre>    switch (*cliff % 4) {</pre></td>
+    <td align="left" class="src coveredLine"><pre>        c.add_op&lt;unsigned>(OpType::H, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>173</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 9 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 10 not taken">&cross;</span><span class="takenBranch" title="Branch 12 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 13 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>27</pre></td>
-    <td align="left" class="src coveredLine"><pre>      case 0: {</pre></td>
+    <td align="left" class="src coveredLine"><pre>        c.add_op&lt;unsigned>(OpType::Rz, alpha + 0.5, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>174</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 27 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>27</pre></td>
-    <td align="left" class="src coveredLine"><pre>        c.add_op&lt;unsigned>(OpType::Rz, gamma + alpha, {0});</pre></td>
+    <td align="left" class="src coveredLine"><pre>        c.add_phase(-0.5);</pre></td>
     </tr>
 
     <tr>
@@ -1535,826 +1535,826 @@
     <td align="right" class="lineno"><pre>177</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>      case 1: {</pre></td>
+    <td align="left" class="src "><pre>    }</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>178</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 178 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 4 times">&check;</span><span class="takenBranch" title="Branch 4 taken 174 times">&check;</span><br/><span class="takenBranch" title="Branch 6 taken 4 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><span class="takenBranch" title="Branch 9 taken 4 times">&check;</span><span class="notTakenBranch" title="Branch 10 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>178</pre></td>
-    <td align="left" class="src coveredLine"><pre>        c.add_op&lt;unsigned>(OpType::Rz, gamma - 0.5, {0});</pre></td>
+    <td align="left" class="src coveredLine"><pre>    if (cliff >= 4u) c.add_phase(1.);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>179</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>        c.add_op&lt;unsigned>(OpType::H, {0});</pre></td>
+    <td align="left" class="src "><pre>  } else {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>180</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 3 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 3 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>3</pre></td>
-    <td align="left" class="src coveredLine"><pre>        c.add_op&lt;unsigned>(OpType::Rz, alpha - 0.5, {0});</pre></td>
+    <td align="left" class="src coveredLine"><pre>    c.add_op&lt;unsigned>(OpType::Rz, gamma, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>181</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 3 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 3 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>3</pre></td>
-    <td align="left" class="src coveredLine"><pre>        c.add_phase(-0.5);</pre></td>
+    <td align="left" class="src coveredLine"><pre>    c.add_op&lt;unsigned>(OpType::H, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>182</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 3 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 3 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>3</pre></td>
-    <td align="left" class="src coveredLine"><pre>        break;</pre></td>
+    <td align="left" class="src coveredLine"><pre>    c.add_op&lt;unsigned>(OpType::Rz, beta, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>183</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 3 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 3 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>3</pre></td>
-    <td align="left" class="src coveredLine"><pre>      }</pre></td>
+    <td align="left" class="src coveredLine"><pre>    c.add_op&lt;unsigned>(OpType::H, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>184</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 3 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 3 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>3</pre></td>
-    <td align="left" class="src coveredLine"><pre>      case 2: {</pre></td>
+    <td align="left" class="src coveredLine"><pre>    c.add_op&lt;unsigned>(OpType::Rz, alpha, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>185</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>        c.add_op&lt;unsigned>(OpType::Rz, gamma - alpha, {0});</pre></td>
+    <td align="left" class="src "><pre>  }</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>186</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 181 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 181 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>181</pre></td>
-    <td align="left" class="src coveredLine"><pre>        c.add_op&lt;unsigned>(OpType::H, {0});</pre></td>
+    <td align="left" class="src coveredLine"><pre>  Transform::remove_redundancies().apply(c);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>187</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>362</pre></td>
-    <td align="left" class="src coveredLine"><pre>        c.add_op&lt;unsigned>(OpType::Rz, 1., {0});</pre></td>
+    <td align="left" class="src coveredLine"><pre>  return c;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>188</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>        c.add_op&lt;unsigned>(OpType::H, {0});</pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>189</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>        break;</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>190</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>392</pre></td>
-    <td align="left" class="src coveredLine"><pre>      }</pre></td>
+    <td align="left" class="src coveredLine"><pre>static unsigned int_half(const Expr&amp; angle) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>191</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>      case 3: {</pre></td>
+    <td align="left" class="src "><pre>  // Assume angle is an even integer</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>192</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 392 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>392</pre></td>
-    <td align="left" class="src coveredLine"><pre>        c.add_op&lt;unsigned>(OpType::Rz, gamma + 0.5, {0});</pre></td>
+    <td align="left" class="src coveredLine"><pre>  double eval = eval_expr(angle).value();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>193</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>392</pre></td>
-    <td align="left" class="src coveredLine"><pre>        c.add_op&lt;unsigned>(OpType::H, {0});</pre></td>
+    <td align="left" class="src coveredLine"><pre>  return lround(eval / 2);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>194</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>        c.add_op&lt;unsigned>(OpType::Rz, alpha + 0.5, {0});</pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>195</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>        c.add_phase(-0.5);</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>196</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>229</pre></td>
-    <td align="left" class="src coveredLine"><pre>        break;</pre></td>
+    <td align="left" class="src coveredLine"><pre>Circuit Transform::tk1_to_rzsx(</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>197</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>      }</pre></td>
+    <td align="left" class="src "><pre>    const Expr&amp; alpha, const Expr&amp; beta, const Expr&amp; gamma) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>198</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 229 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>229</pre></td>
-    <td align="left" class="src coveredLine"><pre>    }</pre></td>
+    <td align="left" class="src coveredLine"><pre>  Circuit c(1);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>199</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 229 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>458</pre></td>
-    <td align="left" class="src coveredLine"><pre>    if (cliff >= 4u) c.add_phase(1.);</pre></td>
+    <td align="left" class="src coveredLine"><pre>  Expr correction_phase = 0;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>200</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 229 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 9 times">&check;</span><span class="takenBranch" title="Branch 4 taken 220 times">&check;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>229</pre></td>
-    <td align="left" class="src coveredLine"><pre>  } else {</pre></td>
+    <td align="left" class="src coveredLine"><pre>  if (equiv_0(beta)) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>201</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    c.add_op&lt;unsigned>(OpType::Rz, gamma, {0});</pre></td>
+    <td align="left" class="src "><pre>    // b = 2k, if k is odd, then Rx(b) = -I</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>202</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 9 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 9 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 9 taken 9 times">&check;</span><span class="notTakenBranch" title="Branch 10 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>9</pre></td>
-    <td align="left" class="src coveredLine"><pre>    c.add_op&lt;unsigned>(OpType::H, {0});</pre></td>
+    <td align="left" class="src coveredLine"><pre>    c.add_op&lt;unsigned>(OpType::Rz, alpha + gamma, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>203</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 9 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 9 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>9</pre></td>
-    <td align="left" class="src coveredLine"><pre>    c.add_op&lt;unsigned>(OpType::Rz, beta, {0});</pre></td>
+    <td align="left" class="src coveredLine"><pre>    correction_phase = int_half(beta);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>204</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 220 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 220 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 220 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><span class="takenBranch" title="Branch 11 taken 85 times">&check;</span><span class="takenBranch" title="Branch 12 taken 135 times">&check;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>220</pre></td>
-    <td align="left" class="src coveredLine"><pre>    c.add_op&lt;unsigned>(OpType::H, {0});</pre></td>
+    <td align="left" class="src coveredLine"><pre>  } else if (equiv_0(beta + 1)) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>205</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    c.add_op&lt;unsigned>(OpType::Rz, alpha, {0});</pre></td>
+    <td align="left" class="src "><pre>    // Use Rx(2k-1) = i(-1)^{k}SxSx</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>206</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 85 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 85 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 85 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><span class="takenBranch" title="Branch 10 taken 85 times">&check;</span><span class="notTakenBranch" title="Branch 11 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>85</pre></td>
-    <td align="left" class="src coveredLine"><pre>  }</pre></td>
+    <td align="left" class="src coveredLine"><pre>    correction_phase = -0.5 + int_half(beta - 1);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>207</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 85 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 85 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 52 times">&check;</span><span class="takenBranch" title="Branch 8 taken 33 times">&check;</span></td>
     <td align="right" class="linecount coveredLine"><pre>85</pre></td>
-    <td align="left" class="src coveredLine"><pre>  Transform::remove_redundancies().apply(c);</pre></td>
+    <td align="left" class="src coveredLine"><pre>    if (equiv_0(alpha - gamma)) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>208</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  return c;</pre></td>
+    <td align="left" class="src "><pre>      // a - c = 2m</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>209</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
+    <td align="left" class="src "><pre>      // overall operation is (-1)^{m}Rx(2k -1)</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>210</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 52 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 52 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>52</pre></td>
-    <td align="left" class="src coveredLine"><pre></pre></td>
+    <td align="left" class="src coveredLine"><pre>      c.add_op&lt;unsigned>(OpType::SX, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>211</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 52 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 52 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>52</pre></td>
-    <td align="left" class="src coveredLine"><pre>static unsigned int_half(const Expr&amp; angle) {</pre></td>
+    <td align="left" class="src coveredLine"><pre>      c.add_op&lt;unsigned>(OpType::SX, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>212</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 52 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 52 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 52 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><span class="takenBranch" title="Branch 10 taken 52 times">&check;</span><span class="notTakenBranch" title="Branch 11 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>52</pre></td>
-    <td align="left" class="src coveredLine"><pre>  // Assume angle is an even integer</pre></td>
+    <td align="left" class="src coveredLine"><pre>      correction_phase += int_half(alpha - gamma);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>213</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  double eval = eval_expr(angle).value();</pre></td>
+    <td align="left" class="src "><pre>    } else {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>214</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 33 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 33 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>33</pre></td>
-    <td align="left" class="src coveredLine"><pre>  return lround(eval / 2);</pre></td>
+    <td align="left" class="src coveredLine"><pre>      c.add_op&lt;unsigned>(OpType::Rz, gamma, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>215</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 33 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 33 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>33</pre></td>
-    <td align="left" class="src coveredLine"><pre>}</pre></td>
+    <td align="left" class="src coveredLine"><pre>      c.add_op&lt;unsigned>(OpType::SX, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>216</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 33 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 33 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>33</pre></td>
-    <td align="left" class="src coveredLine"><pre></pre></td>
+    <td align="left" class="src coveredLine"><pre>      c.add_op&lt;unsigned>(OpType::SX, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>217</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 33 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 33 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>33</pre></td>
-    <td align="left" class="src coveredLine"><pre>Circuit Transform::tk1_to_rzsx(</pre></td>
+    <td align="left" class="src coveredLine"><pre>      c.add_op&lt;unsigned>(OpType::Rz, alpha, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>218</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    const Expr&amp; alpha, const Expr&amp; beta, const Expr&amp; gamma) {</pre></td>
+    <td align="left" class="src "><pre>    }</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>219</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 135 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 135 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 135 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><span class="takenBranch" title="Branch 9 taken 81 times">&check;</span><span class="takenBranch" title="Branch 10 taken 54 times">&check;</span><br/><span class="takenBranch" title="Branch 12 taken 81 times">&check;</span><span class="notTakenBranch" title="Branch 13 not taken">&cross;</span><span class="takenBranch" title="Branch 14 taken 72 times">&check;</span><span class="takenBranch" title="Branch 15 taken 9 times">&check;</span><br/><span class="takenBranch" title="Branch 17 taken 72 times">&check;</span><span class="notTakenBranch" title="Branch 18 not taken">&cross;</span><span class="takenBranch" title="Branch 19 taken 72 times">&check;</span><span class="notTakenBranch" title="Branch 20 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 21 taken 135 times">&check;</span><span class="notTakenBranch" title="Branch 22 not taken">&cross;</span><span class="takenBranch" title="Branch 24 taken 135 times">&check;</span><span class="notTakenBranch" title="Branch 25 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 27 taken 72 times">&check;</span><span class="takenBranch" title="Branch 28 taken 63 times">&check;</span><span class="notTakenBranch" title="Branch 29 not taken">&cross;</span><span class="notTakenBranch" title="Branch 30 not taken">&cross;</span><br/><span class="notTakenBranch" title="Branch 32 not taken">&cross;</span><span class="notTakenBranch" title="Branch 33 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>135</pre></td>
-    <td align="left" class="src coveredLine"><pre>  Circuit c(1);</pre></td>
+    <td align="left" class="src coveredLine"><pre>  } else if (equiv_0(beta - 0.5) &amp;&amp; equiv_0(alpha) &amp;&amp; equiv_0(gamma)) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>220</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  Expr correction_phase = 0;</pre></td>
+    <td align="left" class="src "><pre>    // a = 2k, b = 2m+0.5, c = 2n</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>221</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  if (equiv_0(beta)) {</pre></td>
+    <td align="left" class="src "><pre>    // Rz(2k)Rx(2m + 0.5)Rz(2n) = (-1)^{k+m+n}e^{-i \pi /4} SX</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>222</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 72 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 72 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>72</pre></td>
-    <td align="left" class="src coveredLine"><pre>    // b = 2k, if k is odd, then Rx(b) = -I</pre></td>
+    <td align="left" class="src coveredLine"><pre>    c.add_op&lt;unsigned>(OpType::SX, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>223</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    c.add_op&lt;unsigned>(OpType::Rz, alpha + gamma, {0});</pre></td>
+    <td align="left" class="src "><pre>    correction_phase =</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>224</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 72 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 72 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 72 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><span class="takenBranch" title="Branch 10 taken 72 times">&check;</span><span class="notTakenBranch" title="Branch 11 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 13 taken 72 times">&check;</span><span class="notTakenBranch" title="Branch 14 not taken">&cross;</span><span class="takenBranch" title="Branch 16 taken 72 times">&check;</span><span class="notTakenBranch" title="Branch 17 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>72</pre></td>
-    <td align="left" class="src coveredLine"><pre>    correction_phase = int_half(beta);</pre></td>
+    <td align="left" class="src coveredLine"><pre>        int_half(beta - 0.5) + int_half(alpha) + int_half(gamma) - 0.25;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>225</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 63 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 63 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 63 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><span class="takenBranch" title="Branch 9 taken 16 times">&check;</span><span class="takenBranch" title="Branch 10 taken 47 times">&check;</span><br/><span class="takenBranch" title="Branch 12 taken 16 times">&check;</span><span class="notTakenBranch" title="Branch 13 not taken">&cross;</span><span class="takenBranch" title="Branch 15 taken 16 times">&check;</span><span class="notTakenBranch" title="Branch 16 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 18 taken 16 times">&check;</span><span class="notTakenBranch" title="Branch 19 not taken">&cross;</span><span class="takenBranch" title="Branch 20 taken 15 times">&check;</span><span class="takenBranch" title="Branch 21 taken 1 times">&check;</span><br/><span class="takenBranch" title="Branch 22 taken 16 times">&check;</span><span class="takenBranch" title="Branch 23 taken 47 times">&check;</span><span class="takenBranch" title="Branch 25 taken 16 times">&check;</span><span class="takenBranch" title="Branch 26 taken 47 times">&check;</span><br/><span class="takenBranch" title="Branch 28 taken 63 times">&check;</span><span class="notTakenBranch" title="Branch 29 not taken">&cross;</span><span class="takenBranch" title="Branch 31 taken 63 times">&check;</span><span class="notTakenBranch" title="Branch 32 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 34 taken 15 times">&check;</span><span class="takenBranch" title="Branch 35 taken 48 times">&check;</span><span class="notTakenBranch" title="Branch 36 not taken">&cross;</span><span class="notTakenBranch" title="Branch 37 not taken">&cross;</span><br/><span class="notTakenBranch" title="Branch 39 not taken">&cross;</span><span class="notTakenBranch" title="Branch 40 not taken">&cross;</span><span class="notTakenBranch" title="Branch 42 not taken">&cross;</span><span class="notTakenBranch" title="Branch 43 not taken">&cross;</span><br/><span class="notTakenBranch" title="Branch 45 not taken">&cross;</span><span class="notTakenBranch" title="Branch 46 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>63</pre></td>
-    <td align="left" class="src coveredLine"><pre>  } else if (equiv_0(beta + 1)) {</pre></td>
+    <td align="left" class="src coveredLine"><pre>  } else if (equiv_0(alpha - 0.5) &amp;&amp; equiv_0(gamma - 0.5)) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>226</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    // Use Rx(2k-1) = i(-1)^{k}SxSx</pre></td>
+    <td align="left" class="src "><pre>    // Rz(2k + 0.5)Rx(b)Rz(2m + 0.5) = -i(-1)^{k+m}SX.Rz(1-b).SX</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>227</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 15 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 15 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>15</pre></td>
-    <td align="left" class="src coveredLine"><pre>    correction_phase = -0.5 + int_half(beta - 1);</pre></td>
+    <td align="left" class="src coveredLine"><pre>    c.add_op&lt;unsigned>(OpType::SX, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>228</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 15 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 15 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 9 taken 15 times">&check;</span><span class="notTakenBranch" title="Branch 10 not taken">&cross;</span><span class="takenBranch" title="Branch 12 taken 15 times">&check;</span><span class="notTakenBranch" title="Branch 13 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>15</pre></td>
-    <td align="left" class="src coveredLine"><pre>    if (equiv_0(alpha - gamma)) {</pre></td>
+    <td align="left" class="src coveredLine"><pre>    c.add_op&lt;unsigned>(OpType::Rz, 1 - beta, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>229</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 15 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 15 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>15</pre></td>
-    <td align="left" class="src coveredLine"><pre>      // a - c = 2m</pre></td>
+    <td align="left" class="src coveredLine"><pre>    c.add_op&lt;unsigned>(OpType::SX, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>230</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 15 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 15 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 15 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><span class="takenBranch" title="Branch 10 taken 15 times">&check;</span><span class="notTakenBranch" title="Branch 11 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 13 taken 15 times">&check;</span><span class="notTakenBranch" title="Branch 14 not taken">&cross;</span><span class="takenBranch" title="Branch 16 taken 15 times">&check;</span><span class="notTakenBranch" title="Branch 17 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 19 taken 15 times">&check;</span><span class="notTakenBranch" title="Branch 20 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>15</pre></td>
-    <td align="left" class="src coveredLine"><pre>      // overall operation is (-1)^{m}Rx(2k -1)</pre></td>
+    <td align="left" class="src coveredLine"><pre>    correction_phase = int_half(alpha - 0.5) + int_half(gamma - 0.5) - 0.5;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>231</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>      c.add_op&lt;unsigned>(OpType::SX, {0});</pre></td>
+    <td align="left" class="src "><pre>  } else {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>232</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 48 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 48 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 9 taken 48 times">&check;</span><span class="notTakenBranch" title="Branch 10 not taken">&cross;</span><span class="takenBranch" title="Branch 12 taken 48 times">&check;</span><span class="notTakenBranch" title="Branch 13 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>48</pre></td>
-    <td align="left" class="src coveredLine"><pre>      c.add_op&lt;unsigned>(OpType::SX, {0});</pre></td>
+    <td align="left" class="src coveredLine"><pre>    c.add_op&lt;unsigned>(OpType::Rz, gamma + 0.5, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>233</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 48 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 48 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>48</pre></td>
-    <td align="left" class="src coveredLine"><pre>      correction_phase += int_half(alpha - gamma);</pre></td>
+    <td align="left" class="src coveredLine"><pre>    c.add_op&lt;unsigned>(OpType::SX, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>234</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 48 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 48 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 9 taken 48 times">&check;</span><span class="notTakenBranch" title="Branch 10 not taken">&cross;</span><span class="takenBranch" title="Branch 12 taken 48 times">&check;</span><span class="notTakenBranch" title="Branch 13 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>48</pre></td>
-    <td align="left" class="src coveredLine"><pre>    } else {</pre></td>
+    <td align="left" class="src coveredLine"><pre>    c.add_op&lt;unsigned>(OpType::Rz, beta - 1, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>235</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 48 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 48 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>48</pre></td>
-    <td align="left" class="src coveredLine"><pre>      c.add_op&lt;unsigned>(OpType::Rz, gamma, {0});</pre></td>
+    <td align="left" class="src coveredLine"><pre>    c.add_op&lt;unsigned>(OpType::SX, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>236</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 48 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 48 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 9 taken 48 times">&check;</span><span class="notTakenBranch" title="Branch 10 not taken">&cross;</span><span class="takenBranch" title="Branch 12 taken 48 times">&check;</span><span class="notTakenBranch" title="Branch 13 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>48</pre></td>
-    <td align="left" class="src coveredLine"><pre>      c.add_op&lt;unsigned>(OpType::SX, {0});</pre></td>
+    <td align="left" class="src coveredLine"><pre>    c.add_op&lt;unsigned>(OpType::Rz, alpha + 0.5, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>237</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 48 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>48</pre></td>
-    <td align="left" class="src coveredLine"><pre>      c.add_op&lt;unsigned>(OpType::SX, {0});</pre></td>
+    <td align="left" class="src coveredLine"><pre>    correction_phase = -0.5;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>238</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>      c.add_op&lt;unsigned>(OpType::Rz, alpha, {0});</pre></td>
+    <td align="left" class="src "><pre>  }</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>239</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 229 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 229 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>229</pre></td>
-    <td align="left" class="src coveredLine"><pre>    }</pre></td>
+    <td align="left" class="src coveredLine"><pre>  c.add_phase(correction_phase);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>240</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 229 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 229 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>229</pre></td>
-    <td align="left" class="src coveredLine"><pre>  } else if (equiv_0(beta - 0.5) &amp;&amp; equiv_0(alpha) &amp;&amp; equiv_0(gamma)) {</pre></td>
+    <td align="left" class="src coveredLine"><pre>  Transform::remove_redundancies().apply(c);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>241</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>458</pre></td>
-    <td align="left" class="src coveredLine"><pre>    // a = 2k, b = 2m+0.5, c = 2n</pre></td>
+    <td align="left" class="src coveredLine"><pre>  return c;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>242</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    // Rz(2k)Rx(2m + 0.5)Rz(2n) = (-1)^{k+m+n}e^{-i \pi /4} SX</pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>243</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    c.add_op&lt;unsigned>(OpType::SX, {0});</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>244</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>    correction_phase =</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>Circuit Transform::tk1_to_tk1(</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>245</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>        int_half(beta - 0.5) + int_half(alpha) + int_half(gamma) - 0.25;</pre></td>
+    <td align="left" class="src "><pre>    const Expr&amp; alpha, const Expr&amp; beta, const Expr&amp; gamma) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>246</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>  } else if (equiv_0(alpha - 0.5) &amp;&amp; equiv_0(gamma - 0.5)) {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>  Circuit c(1);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>247</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    // Rz(2k + 0.5)Rx(b)Rz(2m + 0.5) = -i(-1)^{k+m}SX.Rz(1-b).SX</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>  c.add_op&lt;unsigned>(OpType::tk1, {alpha, beta, gamma}, {0});</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>248</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>    c.add_op&lt;unsigned>(OpType::SX, {0});</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>  return c;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>249</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    c.add_op&lt;unsigned>(OpType::Rz, 1 - beta, {0});</pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>250</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    c.add_op&lt;unsigned>(OpType::SX, {0});</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>251</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
-    <td align="left" class="src coveredLine"><pre>    correction_phase = int_half(alpha - 0.5) + int_half(gamma - 0.5) - 0.5;</pre></td>
+    <td align="left" class="src coveredLine"><pre>Transform Transform::rebase_HQS() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>252</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  } else {</pre></td>
+    <td align="left" class="src "><pre>  return rebase_factory(</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>253</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    c.add_op&lt;unsigned>(OpType::Rz, gamma + 0.5, {0});</pre></td>
+    <td align="left" class="src "><pre>      {OpType::ZZMax}, CircPool::CX_using_ZZMax(),</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>254</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 2 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 2 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 10 taken 2 times">&check;</span><span class="notTakenBranch" title="Branch 11 not taken">&cross;</span><span class="takenBranch" title="Branch 13 taken 2 times">&check;</span><span class="notTakenBranch" title="Branch 14 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
-    <td align="left" class="src coveredLine"><pre>    c.add_op&lt;unsigned>(OpType::SX, {0});</pre></td>
+    <td align="left" class="src coveredLine"><pre>      {OpType::PhasedX, OpType::Rz}, Transform::tk1_to_PhasedXRz);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>255</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    c.add_op&lt;unsigned>(OpType::Rz, beta - 1, {0});</pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>256</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    c.add_op&lt;unsigned>(OpType::SX, {0});</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>257</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>    c.add_op&lt;unsigned>(OpType::Rz, alpha + 0.5, {0});</pre></td>
+    <td align="left" class="src coveredLine"><pre>Transform Transform::rebase_UMD() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>258</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    correction_phase = -0.5;</pre></td>
+    <td align="left" class="src "><pre>  return rebase_factory(</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>259</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  }</pre></td>
+    <td align="left" class="src "><pre>      {OpType::XXPhase}, CircPool::CX_using_XXPhase_0(),</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>260</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 10 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 11 not taken">&cross;</span><span class="takenBranch" title="Branch 13 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 14 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>  c.add_phase(correction_phase);</pre></td>
+    <td align="left" class="src coveredLine"><pre>      {OpType::PhasedX, OpType::Rz}, Transform::tk1_to_PhasedXRz);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>261</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  Transform::remove_redundancies().apply(c);</pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>262</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  return c;</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>263</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>}</pre></td>
+    <td align="left" class="src coveredLine"><pre>Transform Transform::rebase_quil() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>264</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>  return rebase_factory(</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>265</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 10 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 11 not taken">&cross;</span><span class="takenBranch" title="Branch 13 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 14 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>Circuit Transform::tk1_to_tk1(</pre></td>
+    <td align="left" class="src coveredLine"><pre>      {OpType::CZ}, CircPool::H_CZ_H(), {OpType::Rx, OpType::Rz}, tk1_to_rzrx);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>266</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    const Expr&amp; alpha, const Expr&amp; beta, const Expr&amp; gamma) {</pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>267</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  Circuit c(1);</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>268</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
-    <td align="left" class="src coveredLine"><pre>  c.add_op&lt;unsigned>(OpType::tk1, {alpha, beta, gamma}, {0});</pre></td>
+    <td align="left" class="src coveredLine"><pre>Transform Transform::rebase_pyzx() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>269</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 2 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>4</pre></td>
-    <td align="left" class="src coveredLine"><pre>  return c;</pre></td>
+    <td align="left" class="src coveredLine"><pre>  OpTypeSet pyzx_multiqs = {OpType::SWAP, OpType::CX, OpType::CZ};</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>270</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
+    <td align="left" class="src "><pre>  OpTypeSet pyzx_singleqs = {OpType::H, OpType::X,  OpType::Z, OpType::S,</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>271</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 2 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
-    <td align="left" class="src coveredLine"><pre></pre></td>
+    <td align="left" class="src coveredLine"><pre>                             OpType::T, OpType::Rx, OpType::Rz};</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>272</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>Transform Transform::rebase_HQS() {</pre></td>
+    <td align="left" class="src "><pre>  return rebase_factory(</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>273</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 2 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 2 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 2 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>4</pre></td>
-    <td align="left" class="src coveredLine"><pre>  return rebase_factory(</pre></td>
+    <td align="left" class="src coveredLine"><pre>      pyzx_multiqs, CircPool::CX(), pyzx_singleqs, tk1_to_rzrx);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>274</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>      {OpType::ZZMax}, CircPool::CX_using_ZZMax(),</pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>275</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>      {OpType::PhasedX, OpType::Rz}, Transform::tk1_to_PhasedXRz);</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>276</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
-    <td align="left" class="src coveredLine"><pre>}</pre></td>
+    <td align="left" class="src coveredLine"><pre>Transform Transform::rebase_projectq() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>277</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>  OpTypeSet projectq_multiqs = {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>278</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 2 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>4</pre></td>
-    <td align="left" class="src coveredLine"><pre>Transform Transform::rebase_UMD() {</pre></td>
+    <td align="left" class="src coveredLine"><pre>      OpType::SWAP, OpType::CRz, OpType::CX, OpType::CZ};</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>279</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  return rebase_factory(</pre></td>
+    <td align="left" class="src "><pre>  OpTypeSet projectq_singleqs = {OpType::H,  OpType::X, OpType::Y, OpType::Z,</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>280</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>      {OpType::XXPhase}, CircPool::CX_using_XXPhase_0(),</pre></td>
+    <td align="left" class="src "><pre>                                 OpType::S,  OpType::T, OpType::V, OpType::Rx,</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>281</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 2 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
-    <td align="left" class="src coveredLine"><pre>      {OpType::PhasedX, OpType::Rz}, Transform::tk1_to_PhasedXRz);</pre></td>
+    <td align="left" class="src coveredLine"><pre>                                 OpType::Ry, OpType::Rz};</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>282</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
+    <td align="left" class="src "><pre>  return rebase_factory(</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>283</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 2 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 2 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 2 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>4</pre></td>
-    <td align="left" class="src coveredLine"><pre></pre></td>
+    <td align="left" class="src coveredLine"><pre>      projectq_multiqs, CircPool::CX(), projectq_singleqs, tk1_to_rzrx);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>284</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>Transform Transform::rebase_quil() {</pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>285</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  return rebase_factory(</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>286</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>6</pre></td>
-    <td align="left" class="src coveredLine"><pre>      {OpType::CZ}, CircPool::H_CZ_H(), {OpType::Rx, OpType::Rz}, tk1_to_rzrx);</pre></td>
+    <td align="left" class="src coveredLine"><pre>Transform Transform::rebase_UFR() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>287</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
+    <td align="left" class="src "><pre>  return rebase_factory(</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>288</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 6 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 6 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 10 taken 6 times">&check;</span><span class="notTakenBranch" title="Branch 11 not taken">&cross;</span><span class="takenBranch" title="Branch 13 taken 6 times">&check;</span><span class="notTakenBranch" title="Branch 14 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>6</pre></td>
-    <td align="left" class="src coveredLine"><pre></pre></td>
+    <td align="left" class="src coveredLine"><pre>      {OpType::CX}, CircPool::CX(), {OpType::Rz, OpType::H}, tk1_to_rzh);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>289</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>Transform Transform::rebase_pyzx() {</pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>290</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  OpTypeSet pyzx_multiqs = {OpType::SWAP, OpType::CX, OpType::CZ};</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>291</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>15</pre></td>
-    <td align="left" class="src coveredLine"><pre>  OpTypeSet pyzx_singleqs = {OpType::H, OpType::X,  OpType::Z, OpType::S,</pre></td>
+    <td align="left" class="src coveredLine"><pre>Transform Transform::rebase_OQC() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>292</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>                             OpType::T, OpType::Rx, OpType::Rz};</pre></td>
+    <td align="left" class="src "><pre>  return rebase_factory(</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>293</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  return rebase_factory(</pre></td>
+    <td align="left" class="src "><pre>      {OpType::ECR}, CircPool::CX_using_ECR(), {OpType::Rz, OpType::SX},</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>294</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 15 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 15 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 10 taken 15 times">&check;</span><span class="notTakenBranch" title="Branch 11 not taken">&cross;</span><span class="takenBranch" title="Branch 13 taken 15 times">&check;</span><span class="notTakenBranch" title="Branch 14 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>15</pre></td>
-    <td align="left" class="src coveredLine"><pre>      pyzx_multiqs, CircPool::CX(), pyzx_singleqs, tk1_to_rzrx);</pre></td>
+    <td align="left" class="src coveredLine"><pre>      Transform::tk1_to_rzsx);</pre></td>
     </tr>
 
     <tr>
@@ -2373,153 +2373,6 @@
 
     <tr>
     <td align="right" class="lineno"><pre>297</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>Transform Transform::rebase_projectq() {</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>298</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  OpTypeSet projectq_multiqs = {</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>299</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>      OpType::SWAP, OpType::CRz, OpType::CX, OpType::CZ};</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>300</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  OpTypeSet projectq_singleqs = {OpType::H,  OpType::X, OpType::Y, OpType::Z,</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>301</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>                                 OpType::S,  OpType::T, OpType::V, OpType::Rx,</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>302</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>                                 OpType::Ry, OpType::Rz};</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>303</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  return rebase_factory(</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>304</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>      projectq_multiqs, CircPool::CX(), projectq_singleqs, tk1_to_rzrx);</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>305</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>306</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>307</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>Transform Transform::rebase_UFR() {</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>308</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  return rebase_factory(</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>309</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>      {OpType::CX}, CircPool::CX(), {OpType::Rz, OpType::H}, tk1_to_rzh);</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>310</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>311</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>312</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>Transform Transform::rebase_OQC() {</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>313</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  return rebase_factory(</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>314</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>      {OpType::ECR}, CircPool::CX_using_ECR(), {OpType::Rz, OpType::SX},</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>315</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>      Transform::tk1_to_rzsx);</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>316</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>317</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>318</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>}  // namespace tket</pre></td>
