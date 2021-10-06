@@ -311,7 +311,7 @@ PYBIND11_MODULE(passes, m) {
       "ThreeQubitSquash", &ThreeQubitSquash,
       "Squash three-qubit subcircuits into subcircuits having fewer CX gates, "
       "when possible, and apply Clifford simplification."
-      "\n\n:param: allow_swaps whether to allow implicit wire swaps",
+      "\n\n:param allow_swaps: whether to allow implicit wire swaps",
       py::arg("allow_swaps") = true);
   m.def(
       "CommuteThroughMultis", &CommuteThroughMultis,
@@ -332,9 +332,6 @@ PYBIND11_MODULE(passes, m) {
       "DecomposeMultiQubitsCX", &DecomposeMultiQubitsCX,
       "Converts all multi-qubit gates into CX and single-qubit gates.");
   m.def(
-      "DecomposeMultiQubitsIBM", &DecomposeMultiQubitsCX,
-      "Same as :py:meth:`DecomposeMultiQubitsCX` (deprecated).");
-  m.def(
       "DecomposeSingleQubitsTK1", &DecomposeSingleQubitsTK1,
       "Converts all single-qubit gates into TK1 gates.");
   m.def(
@@ -346,13 +343,12 @@ PYBIND11_MODULE(passes, m) {
       "FullPeepholeOptimise", &FullPeepholeOptimise,
       "Performs peephole optimisation including resynthesis of 2- and 3-qubit "
       "gate sequences, and converts to a circuit containing only CX and TK1 "
-      "gates.");
+      "gates."
+      "\n\n:param allow_swaps: whether to allow implicit wire swaps",
+      py::arg("allow_swaps") = true);
   m.def("RebaseCirq", &RebaseCirq, "Converts all gates to CZ, PhasedX and Rz.");
   m.def(
       "RebaseHQS", &RebaseHQS, "Converts all gates to ZZMax, PhasedX and Rz.");
-  m.def(
-      "RebaseIBM", &RebaseIBM,
-      "Converts all gates to CX, U1, U2 and U3 gates. Deprecated.");
   m.def(
       "RebaseProjectQ", &RebaseProjectQ,
       "Converts all gates to SWAP, CRz, CX, CZ, H, X, Y, Z, S, T, V, Rx, "
@@ -379,10 +375,6 @@ PYBIND11_MODULE(passes, m) {
       "Optimises and converts a circuit consisting of CX and single-qubit "
       "gates into one containing only ZZMax, PhasedX and Rz.");
   m.def(
-      "SynthesiseIBM", &SynthesiseIBM,
-      "Optimises and converts all gates to CX, U1, U2 and U3 gates. "
-      "Deprecated.");
-  m.def(
       "SynthesiseTket", &SynthesiseTket,
       "Optimises and converts all gates to CX and TK1 gates.");
   m.def(
@@ -392,10 +384,8 @@ PYBIND11_MODULE(passes, m) {
       "SynthesiseUMD", &SynthesiseUMD,
       "Optimises and converts all gates to XXPhase, PhasedX and Rz.");
   m.def(
-      "USquashIBM", &USquashIBM,
-      "Squash U1, U2 and U3 gates by converting to them to Rz-Ry-Rz "
-      "sequences and back. The only single-qubit gates in the resulting "
-      "circuit are U1 and U3. Deprecated.");
+      "SquashTK1", &SquashTK1,
+      "Squash sequences of single-qubit gates to TK1 gates.");
   m.def(
       "SquashHQS", &SquashHQS,
       "Squash Rz and PhasedX gate sequences into an optimal form.");
@@ -538,6 +528,10 @@ PYBIND11_MODULE(passes, m) {
       "The direction of the edges is ignored. The placement used "
       "is GraphPlacement. This pass can take a few parameters for the "
       "routing, described below."
+      "\n\nNB: In the current implementation it is assumed that the number of "
+      "nodes in the architecture is equal to the number of qubits in the "
+      "circuit. With smaller circuits may therefore be necessary to add unused "
+      "qubits before applying this pass."
       "\n\n:param arc: The architecture used for connectivity information."
       "\n:param \\**kwargs: Parameters for routing: "
       "(unsigned) lookahead=1: giving parameter for the recursive iteration "
@@ -651,9 +645,9 @@ PYBIND11_MODULE(passes, m) {
         }
       },
       "Simplify the circuit using knowledge of qubit state."
-      "\n\n:param: allow_classical: allow replacement of measurements on "
+      "\n\n:param allow_classical: allow replacement of measurements on "
       "known state with classical set-bit operations"
-      "\n:param: create_all_qubits: automatically annotate all qubits as "
+      "\n:param create_all_qubits: automatically annotate all qubits as "
       "initialized to the zero state"
       "\n:param remove_redundancies: apply a :py:meth:`RemoveRedundancies` "
       "pass after the initial simplification"
@@ -672,7 +666,7 @@ PYBIND11_MODULE(passes, m) {
       },
       "Applies simplifications enabled by knowledge of qubit state and "
       "discarded qubits."
-      "\n\n:param: allow_classical: allow replacement of measurements on "
+      "\n\n:param allow_classical: allow replacement of measurements on "
       "known state with classical set-bit operations"
       "\n:param xcirc: 1-qubit circuit implementing an X gate in the "
       "transformed circuit (if omitted, an X gate is used)"

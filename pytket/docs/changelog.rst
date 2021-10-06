@@ -1,22 +1,41 @@
 Changelog
 ==================================
 
-0.15.0 (unreleased)
+0.16.0 (Unreleased)
 -------------------
-
-Major new features:
-
 
 Minor new features:
 
-* Passes `PauliSimp`, `PauliSquash` and `GuidedPauliSimp` can now decompose to three-qubit
-  `XXPhase3` gates using the new `CXConfigType.MultiQGate` config type.
-* New method ``compilation_pass_from_script`` to construct a compilation pass
-  from a simple textual specification.
+* New :py:meth:``backends.Backend.run_circuit`` and :py:meth:``backends.Backend.run_circuits``
+  methods.
+* New ``allow_swaps`` parameter to ``FullPeepholeOptimise`` pass controlling
+  whether to allow introduction of implicit wire swaps (defaulting to ``True``
+  to match existing behaviour).
 
 API changes:
 
+* The deprecated ``get_shots``, ``get_counts`` and ``get_state`` methods
+  of the ``Backend`` class are removed. Use ``run_circuits`` and the homonym
+  methods of the :py:class:`backends.backendresult.BackendResult` class instead.
 
+0.15.0 (September 2021)
+-----------------------
+
+Minor new features:
+
+* Passes ``PauliSimp``, ``PauliSquash`` and ``GuidedPauliSimp`` can now
+  decompose to three-qubit ``XXPhase3`` gates using the new
+  ``CXConfigType.MultiQGate`` config type.
+* New method ``compilation_pass_from_script`` to construct a compilation pass
+  from a simple textual specification.
+* New transform ``RebaseToTket`` and new pass ``SquashToTK1``.
+
+API changes:
+
+* The deprecated transform ``RebaseToQiskit`` and the deprecated passes
+  ``DecomposeMultiQubitsIBM``, ``RebaseIBM``, ``SynthesiseIBM`` and
+  ``USquashIBM`` are removed.
+* The transform ``OptimisePostRouting`` transforms to TK1 instead of U gates.
 
 0.14.0 (September 2021)
 -----------------------

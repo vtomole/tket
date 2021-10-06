@@ -19,8 +19,7 @@ set -evu
 # Choose a Python to install conan
 export PYBIN=/opt/python/cp39-cp39/bin
 
-# urllib3 because of TKET-865 (remove when conan fixes its dependencies)
-${PYBIN}/pip install urllib3==1.25.11 conan
+${PYBIN}/pip install conan
 
 export CONAN_CMD=${PYBIN}/conan
 
@@ -39,6 +38,7 @@ do
     cd /tket/pytket
     export PYEX=/opt/python/${pyX}/bin/python
     export PYVER=`${PYEX} -c 'import sys; print(".".join(map(str, sys.version_info[:3])))'`
+    ${PYEX} -m pip install -U pip setuptools_scm
     ${PYEX} setup.py bdist_wheel -d "tmpwheel_${PYVER}"
     auditwheel repair "tmpwheel_${PYVER}/pytket-"*".whl" -w "audited/${PYVER}/"
 done

@@ -24,12 +24,12 @@ Transform Transform::peephole_optimise_2q() {
       Transform::hyper_clifford_squash() >> Transform::synthesise_tket());
 }
 
-Transform Transform::full_peephole_optimise() {
+Transform Transform::full_peephole_optimise(bool allow_swaps) {
   return (
       Transform::synthesise_tket() >> Transform::two_qubit_squash() >>
-      Transform::clifford_simp() >> Transform::synthesise_tket() >>
-      Transform::three_qubit_squash() >> Transform::clifford_simp() >>
-      Transform::synthesise_tket());
+      Transform::clifford_simp(allow_swaps) >> Transform::synthesise_tket() >>
+      Transform::three_qubit_squash() >>
+      Transform::clifford_simp(allow_swaps) >> Transform::synthesise_tket());
 }
 
 Transform Transform::canonical_hyper_clifford_squash() {
@@ -45,20 +45,6 @@ Transform Transform::clifford_simp(bool allow_swaps) {
   return decompose_cliffords_std() >> clifford_reduction(allow_swaps) >>
          decompose_multi_qubits_CX() >> singleq_clifford_sweep() >>
          squash_1qb_to_tk1();
-}
-
-Transform Transform::synthesise_IBM() {
-  Transform seq =
-      Transform::commute_through_multis() >> Transform::remove_redundancies();
-  Transform repeat = Transform::repeat(seq);
-  Transform synth = Transform::decompose_multi_qubits_CX() >>
-                    Transform::remove_redundancies() >> repeat >>
-                    Transform::u_squash_IBM();
-  Transform small_part =
-      Transform::remove_redundancies() >> repeat >> Transform::u_squash_IBM();
-  Transform repeat_synth = Transform::repeat_with_metric(
-      small_part, [](const Circuit &circ) { return circ.n_vertices(); });
-  return synth >> repeat_synth;
 }
 
 Transform Transform::synthesise_tket() {

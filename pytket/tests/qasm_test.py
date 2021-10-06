@@ -162,7 +162,7 @@ def test_symbolic_write() -> None:
     circ2 = circuit_from_qasm(fname)
     coms2 = circ2.get_commands()
     new_params = coms2[0].op.params
-    assert new_params[0] == 0.5 + a
+    assert new_params[2] == 1.0 + a
 
 
 def test_custom_gate() -> None:
@@ -238,6 +238,14 @@ def test_hqs_conditional() -> None:
     with pytest.raises(Exception) as errorinfo:
         circuit_to_qasm_str(copy1, header="hqslib1")
         assert "Range can only be bounded on one side" in str(errorinfo.value)
+
+
+def test_hqs_conditional_params() -> None:
+    # https://github.com/CQCL/tket/issues/17
+    c = Circuit(1, 1)
+    c.add_gate(OpType.PhasedX, [1, 0], [0], condition_bits=[0])
+    s = circuit_to_qasm_str(c, header="hqslib1")
+    assert "U1q(1.0*pi,0.0*pi)" in s
 
 
 def test_input_error_modes() -> None:

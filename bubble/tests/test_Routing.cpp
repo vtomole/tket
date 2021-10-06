@@ -155,8 +155,6 @@ SCENARIO(
     tket::Routing router(circ, test_arc);
     std::pair<tket::Circuit, bool> outcirc = router.solve();
     REQUIRE(outcirc.second == true);
-    Circuit testcirc = outcirc.first;
-    CHECK(respects_connectivity_constraints(testcirc, test_arc, false));
     CHECK(respects_connectivity_constraints(outcirc.first, test_arc, false));
   }
   GIVEN("A failing case, undirected") {
@@ -663,7 +661,7 @@ SCENARIO("Qubit activating edge case", "[routing]") {
     circ.add_op<unsigned>(OpType::CU1, 0.125, {3, 0});
     circ.add_op<unsigned>(OpType::CU1, 0.25, {3, 1});
     circ.add_op<unsigned>(OpType::CU1, 0.5, {3, 2});
-    Transform::rebase_IBM().apply(circ);
+    Transform::rebase_tket().apply(circ);
     Architecture arc({{0, 1}, {1, 2}, {2, 3}});
     Routing router(circ, arc);
     std::pair<Circuit, bool> c = router.solve();
@@ -720,7 +718,7 @@ SCENARIO("Test routing for other multi-qubit ops", "[routing]") {
     for (unsigned nn = 0; nn <= 3; ++nn) {
       circ.add_measure(nn, nn);
     }
-    Transform::rebase_IBM().apply(circ);
+    Transform::rebase_tket().apply(circ);
     Architecture arc({{0, 1}, {1, 2}, {2, 3}});
     Routing router(circ, arc);
     std::pair<Circuit, bool> result = router.solve();
@@ -766,7 +764,6 @@ SCENARIO(
     circ.add_op<unsigned>(OpType::CRz, 0.5, {1, 0});
     circ.add_op<unsigned>(OpType::CRz, 0.5, {0, 1});
 
-    // Transform::rebase_IBM().apply(circ);
     Architecture arc(std::vector<std::pair<unsigned, unsigned>>{{0, 1}});
     Routing router(circ, arc);
     std::pair<Circuit, bool> result = router.solve();
