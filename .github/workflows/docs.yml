@@ -3,9 +3,7 @@ name: Deploy bubble documentation
 on:
   push:
     branches:
-      - develop
-    paths:
-      - 'bubble/src/**'
+      - test-doxygen-branch
 
 jobs:
   bubble_docs:
