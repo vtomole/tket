@@ -28,7 +28,7 @@ jobs:
       run: git checkout gh-pages
 
     - name: Update it from develop
-      run: git merge develop
+      run: git merge test-doxygen-branch
 
     - name: Remove old docs
       run: git rm -r --ignore-unmatch bubble/doc/html
