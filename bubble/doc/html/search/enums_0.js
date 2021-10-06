@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['allowclassical_3815',['AllowClassical',['../classtket_1_1Transform.html#a1119ac3b38675c88d1f7ca11e581019c',1,'tket::Transform']]]
+  ['allowclassical_3797',['AllowClassical',['../classtket_1_1Transform.html#a1119ac3b38675c88d1f7ca11e581019c',1,'tket::Transform']]]
 ];

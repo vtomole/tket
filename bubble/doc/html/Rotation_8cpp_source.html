@@ -490,58 +490,72 @@ $(function() {
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;  <span class="comment">// y0 = sin(pi b/2) sin(pi (a-c)/2)</span></div>
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  <span class="comment">// z0 = cos(pi b/2) sin(pi (a+c)/2)</span></div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160; </div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;  <span class="comment">// s0^2 + z0^2 - x0^2 - y0^2 = cos(pi b)</span></div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;  <span class="keywordtype">double</span> t = s0 * s0 + z0 * z0 - x0 * x0 - y0 * y0;</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160; </div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;  std::complex u = {s0, z0}, v = {x0, y0};</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160; </div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  <span class="comment">// u = cos(pi b/2) e^{i pi (a+c)/2}</span></div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  <span class="comment">// v = sin(pi b/2) e^{i pi (a-c)/2}</span></div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;  <span class="comment">// |u|^2 + |v|^2 = 1</span></div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160; </div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;  <span class="keywordflow">if</span> (std::abs(u) &lt; <a class="code" href="namespacetket.html#a9cdfe3f23ec01d10a956474db74c9fc1">EPS</a>) {  <span class="comment">// special case, b = +/- 1</span></div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <span class="comment">// v = +/- e^{i pi (a-c)/2}</span></div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    b = (t &gt; 0) ? 1 : -1;</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    a = 2 * std::arg(v) / <a class="code" href="namespacetket.html#aeb9514facc20f8f193747a8196f7614d">PI</a>;</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    c = 0;</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    p -= a;</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (std::abs(v) &lt; <a class="code" href="namespacetket.html#a9cdfe3f23ec01d10a956474db74c9fc1">EPS</a>) {  <span class="comment">// special case, b = 0</span></div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="comment">// u = e^{i pi (a+c)/2}</span></div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    b = 0;</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    a = 2 * std::arg(u) / <a class="code" href="namespacetket.html#aeb9514facc20f8f193747a8196f7614d">PI</a>;</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    c = 0;</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;  } <span class="keywordflow">else</span> {  <span class="comment">// general case</span></div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    b = std::acos(t) / <a class="code" href="namespacetket.html#aeb9514facc20f8f193747a8196f7614d">PI</a>;</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <span class="comment">// b is in the range (-1,+1). This is w.l.o.g. because</span></div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="comment">// (a,b) --&gt; (a+2, b+2) does not change the value of the unitary.</span></div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <span class="keywordtype">double</span> ac0 = std::arg(u), ac1 = std::arg(v);</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    a = (ac0 + ac1) / <a class="code" href="namespacetket.html#aeb9514facc20f8f193747a8196f7614d">PI</a>;</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    c = (ac0 - ac1) / <a class="code" href="namespacetket.html#aeb9514facc20f8f193747a8196f7614d">PI</a>;</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;  }</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160; </div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;  <span class="keywordflow">return</span> {a, b, c, p};</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;}</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160; </div>
-<div class="line"><a name="l00447"></a><span class="lineno"><a class="line" href="namespacetket.html#a6daa2a7afeb4ad439aba3cb30e3b0ba1">  447</a></span>&#160;Eigen::Matrix2cd <a class="code" href="namespacetket.html#a6daa2a7afeb4ad439aba3cb30e3b0ba1">get_matrix_from_tk1_angles</a>(std::vector&lt;Expr&gt; params) {</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;  <span class="keywordtype">double</span> alpha = <a class="code" href="namespacetket.html#a741f7a00246fe7f3797c1c410374ebe1">eval_expr</a>(params[0]).value();</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;  <span class="keywordtype">double</span> beta = <a class="code" href="namespacetket.html#a741f7a00246fe7f3797c1c410374ebe1">eval_expr</a>(params[1]).value();</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;  <span class="keywordtype">double</span> gamma = <a class="code" href="namespacetket.html#a741f7a00246fe7f3797c1c410374ebe1">eval_expr</a>(params[2]).value();</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;  <span class="keywordtype">double</span> t = <a class="code" href="namespacetket.html#a741f7a00246fe7f3797c1c410374ebe1">eval_expr</a>(params[3]).value();</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;  Eigen::Matrix2cd m;</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;  alpha *= <a class="code" href="namespacetket.html#aeb9514facc20f8f193747a8196f7614d">PI</a>;</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;  beta *= <a class="code" href="namespacetket.html#aeb9514facc20f8f193747a8196f7614d">PI</a>;</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;  gamma *= <a class="code" href="namespacetket.html#aeb9514facc20f8f193747a8196f7614d">PI</a>;</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;  t *= <a class="code" href="namespacetket.html#aeb9514facc20f8f193747a8196f7614d">PI</a>;</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;  <span class="keywordtype">double</span> c = cos(0.5 * beta);</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;  <span class="keywordtype">double</span> s = sin(0.5 * beta);</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;  m &lt;&lt; exp(-0.5 * <a class="code" href="namespacetket.html#a4789ee8e9c894506ddeeb3c0653bc021">i_</a> * (alpha + gamma)) * c,</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;      -<a class="code" href="namespacetket.html#a4789ee8e9c894506ddeeb3c0653bc021">i_</a> * exp(0.5 * <a class="code" href="namespacetket.html#a4789ee8e9c894506ddeeb3c0653bc021">i_</a> * (gamma - alpha)) * s,</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;      -<a class="code" href="namespacetket.html#a4789ee8e9c894506ddeeb3c0653bc021">i_</a> * exp(0.5 * <a class="code" href="namespacetket.html#a4789ee8e9c894506ddeeb3c0653bc021">i_</a> * (alpha - gamma)) * s,</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;      exp(0.5 * <a class="code" href="namespacetket.html#a4789ee8e9c894506ddeeb3c0653bc021">i_</a> * (alpha + gamma)) * c;</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;  <span class="keywordflow">return</span> exp(<a class="code" href="namespacetket.html#a4789ee8e9c894506ddeeb3c0653bc021">i_</a> * t) * m;</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;}</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160; </div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;}  <span class="comment">// namespace tket</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;  std::complex u = {s0, z0}, v = {x0, y0};</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160; </div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  <span class="comment">// u = cos(pi b/2) e^{i pi (a+c)/2}</span></div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;  <span class="comment">// v = sin(pi b/2) e^{i pi (a-c)/2}</span></div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;  <span class="comment">// |u|^2 + |v|^2 = 1</span></div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160; </div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  <span class="comment">// Note that (a,b) --&gt; (a+2, b+2) does not change the value of the unitary, so</span></div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;  <span class="comment">// we are free to choose either solution.</span></div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;  <span class="comment">// We treat the two special cases u=0 and v=0 separately, then the general</span></div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;  <span class="comment">// case.</span></div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160; </div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;  <span class="keywordflow">if</span> (std::abs(u) &lt; <a class="code" href="namespacetket.html#a9cdfe3f23ec01d10a956474db74c9fc1">EPS</a>) {  <span class="comment">// special case, b = 1 or 3</span></div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <span class="comment">// v = +/- e^{i pi (a-c)/2}</span></div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160; </div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    <span class="comment">// We may as well choose c = 0.</span></div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    c = 0;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160; </div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    <span class="comment">// Assume b=1 and compute a.</span></div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    <span class="comment">// (b&#39;=3, a&#39;=a+2) is the other possibility but the unitary is the same.</span></div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    b = 1;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    a = 2 * std::arg(v) / <a class="code" href="namespacetket.html#aeb9514facc20f8f193747a8196f7614d">PI</a>;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (std::abs(v) &lt; <a class="code" href="namespacetket.html#a9cdfe3f23ec01d10a956474db74c9fc1">EPS</a>) {  <span class="comment">// special case, b = 0 or 2</span></div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="comment">// u = e^{i pi (a+c)/2}</span></div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160; </div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <span class="comment">// We may as well choose c = 0.</span></div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    c = 0;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160; </div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    <span class="comment">// Assume b=0 and compute a.</span></div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    <span class="comment">// (b&#39;=2, a&#39;=a+2) is the other possibility but the unitary is the same.</span></div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    b = 0;</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    a = 2 * std::arg(u) / <a class="code" href="namespacetket.html#aeb9514facc20f8f193747a8196f7614d">PI</a>;</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;  } <span class="keywordflow">else</span> {  <span class="comment">// general case</span></div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    <span class="comment">// s0^2 + z0^2 - x0^2 - y0^2 = cos(pi b)</span></div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    <span class="keywordtype">double</span> t = s0 * s0 + z0 * z0 - x0 * x0 - y0 * y0;</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    b = std::acos(t) / <a class="code" href="namespacetket.html#aeb9514facc20f8f193747a8196f7614d">PI</a>;</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160; </div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    <span class="comment">// w.l.o.g. b is in the range (-1,+1).</span></div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    <span class="keywordtype">double</span> ac0 = std::arg(u), ac1 = std::arg(v);</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    a = (ac0 + ac1) / <a class="code" href="namespacetket.html#aeb9514facc20f8f193747a8196f7614d">PI</a>;</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    c = (ac0 - ac1) / <a class="code" href="namespacetket.html#aeb9514facc20f8f193747a8196f7614d">PI</a>;</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;  }</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160; </div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;  <span class="keywordflow">return</span> {a, b, c, p};</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;}</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160; </div>
+<div class="line"><a name="l00461"></a><span class="lineno"><a class="line" href="namespacetket.html#a6daa2a7afeb4ad439aba3cb30e3b0ba1">  461</a></span>&#160;Eigen::Matrix2cd <a class="code" href="namespacetket.html#a6daa2a7afeb4ad439aba3cb30e3b0ba1">get_matrix_from_tk1_angles</a>(std::vector&lt;Expr&gt; params) {</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;  <span class="keywordtype">double</span> alpha = <a class="code" href="namespacetket.html#a741f7a00246fe7f3797c1c410374ebe1">eval_expr</a>(params[0]).value();</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;  <span class="keywordtype">double</span> beta = <a class="code" href="namespacetket.html#a741f7a00246fe7f3797c1c410374ebe1">eval_expr</a>(params[1]).value();</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;  <span class="keywordtype">double</span> gamma = <a class="code" href="namespacetket.html#a741f7a00246fe7f3797c1c410374ebe1">eval_expr</a>(params[2]).value();</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;  <span class="keywordtype">double</span> t = <a class="code" href="namespacetket.html#a741f7a00246fe7f3797c1c410374ebe1">eval_expr</a>(params[3]).value();</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;  Eigen::Matrix2cd m;</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;  alpha *= <a class="code" href="namespacetket.html#aeb9514facc20f8f193747a8196f7614d">PI</a>;</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;  beta *= <a class="code" href="namespacetket.html#aeb9514facc20f8f193747a8196f7614d">PI</a>;</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;  gamma *= <a class="code" href="namespacetket.html#aeb9514facc20f8f193747a8196f7614d">PI</a>;</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;  t *= <a class="code" href="namespacetket.html#aeb9514facc20f8f193747a8196f7614d">PI</a>;</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;  <span class="keywordtype">double</span> c = cos(0.5 * beta);</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;  <span class="keywordtype">double</span> s = sin(0.5 * beta);</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;  m &lt;&lt; exp(-0.5 * <a class="code" href="namespacetket.html#a4789ee8e9c894506ddeeb3c0653bc021">i_</a> * (alpha + gamma)) * c,</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;      -<a class="code" href="namespacetket.html#a4789ee8e9c894506ddeeb3c0653bc021">i_</a> * exp(0.5 * <a class="code" href="namespacetket.html#a4789ee8e9c894506ddeeb3c0653bc021">i_</a> * (gamma - alpha)) * s,</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;      -<a class="code" href="namespacetket.html#a4789ee8e9c894506ddeeb3c0653bc021">i_</a> * exp(0.5 * <a class="code" href="namespacetket.html#a4789ee8e9c894506ddeeb3c0653bc021">i_</a> * (alpha - gamma)) * s,</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;      exp(0.5 * <a class="code" href="namespacetket.html#a4789ee8e9c894506ddeeb3c0653bc021">i_</a> * (alpha + gamma)) * c;</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;  <span class="keywordflow">return</span> exp(<a class="code" href="namespacetket.html#a4789ee8e9c894506ddeeb3c0653bc021">i_</a> * t) * m;</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;}</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160; </div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;}  <span class="comment">// namespace tket</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclasstket_1_1Rotation_html"><div class="ttname"><a href="classtket_1_1Rotation.html">tket::Rotation</a></div><div class="ttdoc">A faithful representation of SU(2).</div><div class="ttdef"><b>Definition:</b> <a href="Rotation_8hpp_source.html#l00025">Rotation.hpp:25</a></div></div>
 <div class="ttc" id="aRotation_8hpp_html"><div class="ttname"><a href="Rotation_8hpp.html">Rotation.hpp</a></div></div>
@@ -563,7 +577,7 @@ $(function() {
 <div class="ttc" id="aclasstket_1_1Rotation_html_a360db9877cd88e055e5770eebda60327"><div class="ttname"><a href="classtket_1_1Rotation.html#a360db9877cd88e055e5770eebda60327">tket::Rotation::angle</a></div><div class="ttdeci">std::optional&lt; Expr &gt; angle(OpType optype) const</div><div class="ttdoc">Return the angle given the axis.</div><div class="ttdef"><b>Definition:</b> <a href="Rotation_8cpp_source.html#l00183">Rotation.cpp:183</a></div></div>
 <div class="ttc" id="anamespacetket_html_a9cdfe3f23ec01d10a956474db74c9fc1"><div class="ttname"><a href="namespacetket.html#a9cdfe3f23ec01d10a956474db74c9fc1">tket::EPS</a></div><div class="ttdeci">constexpr double EPS</div><div class="ttdoc">Default tolerance for floating-point comparisons.</div><div class="ttdef"><b>Definition:</b> <a href="Constants_8hpp_source.html#l00039">Constants.hpp:39</a></div></div>
 <div class="ttc" id="aclasstket_1_1OpDesc_html_a11d1bf5e8f7f9dbdc30580f6824b64a3"><div class="ttname"><a href="classtket_1_1OpDesc.html#a11d1bf5e8f7f9dbdc30580f6824b64a3">tket::OpDesc::name</a></div><div class="ttdeci">std::string name() const</div><div class="ttdoc">Name.</div><div class="ttdef"><b>Definition:</b> <a href="OpDesc_8cpp_source.html#l00039">OpDesc.cpp:39</a></div></div>
-<div class="ttc" id="anamespacetket_html_a6daa2a7afeb4ad439aba3cb30e3b0ba1"><div class="ttname"><a href="namespacetket.html#a6daa2a7afeb4ad439aba3cb30e3b0ba1">tket::get_matrix_from_tk1_angles</a></div><div class="ttdeci">Eigen::Matrix2cd get_matrix_from_tk1_angles(std::vector&lt; Expr &gt; params)</div><div class="ttdoc">Construct matrix from tk1 angles and phase.</div><div class="ttdef"><b>Definition:</b> <a href="Rotation_8cpp_source.html#l00447">Rotation.cpp:447</a></div></div>
+<div class="ttc" id="anamespacetket_html_a6daa2a7afeb4ad439aba3cb30e3b0ba1"><div class="ttname"><a href="namespacetket.html#a6daa2a7afeb4ad439aba3cb30e3b0ba1">tket::get_matrix_from_tk1_angles</a></div><div class="ttdeci">Eigen::Matrix2cd get_matrix_from_tk1_angles(std::vector&lt; Expr &gt; params)</div><div class="ttdoc">Construct matrix from tk1 angles and phase.</div><div class="ttdef"><b>Definition:</b> <a href="Rotation_8cpp_source.html#l00461">Rotation.cpp:461</a></div></div>
 <div class="ttc" id="aOpDesc_8hpp_html"><div class="ttname"><a href="OpDesc_8hpp.html">OpDesc.hpp</a></div></div>
 <div class="ttc" id="aclasstket_1_1Rotation_html_ac6e48e957d477c07cefc22696dd0c6cd"><div class="ttname"><a href="classtket_1_1Rotation.html#ac6e48e957d477c07cefc22696dd0c6cd">tket::Rotation::to_pqp</a></div><div class="ttdeci">std::tuple&lt; Expr, Expr, Expr &gt; to_pqp(OpType p, OpType q) const</div><div class="ttdoc">Convert to a sequence of angles in a PQP representation.</div><div class="ttdef"><b>Definition:</b> <a href="Rotation_8cpp_source.html#l00195">Rotation.cpp:195</a></div></div>
 <div class="ttc" id="anamespacetket_html_a741f7a00246fe7f3797c1c410374ebe1"><div class="ttname"><a href="namespacetket.html#a741f7a00246fe7f3797c1c410374ebe1">tket::eval_expr</a></div><div class="ttdeci">std::optional&lt; double &gt; eval_expr(const Expr &amp;e)</div><div class="ttdef"><b>Definition:</b> <a href="Expression_8cpp_source.html#l00051">Expression.cpp:51</a></div></div>
