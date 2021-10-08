@@ -3,7 +3,9 @@ name: Deploy bubble documentation
 on:
   push:
     branches:
-      - test-doxygen-branch
+      - develop
+    paths:
+      - 'bubble/src/**'
 
 jobs:
   bubble_docs:
@@ -28,7 +30,7 @@ jobs:
       run: git checkout gh-pages
 
     - name: Update it from develop
-      run: git merge test-doxygen-branch
+      run: git merge develop
 
     - name: Remove old docs
       run: git rm -r --ignore-unmatch bubble/doc/html
