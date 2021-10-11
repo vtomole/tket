@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['matrix8cd_3699',['Matrix8cd',['../namespacetket_1_1internal.html#a8de781a8a29f90ddf92900a4beb7432e',1,'tket::internal']]],
+  ['matrix8cd_3699',['Matrix8cd',['../namespacetket.html#aaa2b97f86243fa7a09b21e1ec946f652',1,'tket']]],
   ['matrixxb_3700',['MatrixXb',['../namespacetket.html#afc6a69cf78c26da6848112274764acc6',1,'tket']]],
   ['matrixxu_3701',['MatrixXu',['../namespacetket_1_1aas.html#aba03001899901461f8726ab4a84b38c8',1,'tket::aas']]],
   ['measure_5fresult_5fmap_5ft_3702',['measure_result_map_t',['../classtket_1_1MeasurementSetup.html#a4d7a3d1502ef5eff1bd7532b819e6126',1,'tket::MeasurementSetup']]],

@@ -77,7 +77,7 @@ var searchData=
   ['rev0_1462',['rev0',['../structtket_1_1InteractionMatch.html#a0e07b6ee9eb01d0de50b073f3a06d7f6',1,'tket::InteractionMatch']]],
   ['rev1_1463',['rev1',['../structtket_1_1InteractionMatch.html#a547e42ba22c34909fb525b29f81773a4',1,'tket::InteractionMatch']]],
   ['reverse_5fbits_1464',['reverse_bits',['../namespacetket.html#a1a6f95ad0af21ec94f0f438ca69abf4c',1,'tket']]],
-  ['reverse_5findexing_1465',['reverse_indexing',['../namespacetket.html#ac750e377a184bf7a76b875691c07892f',1,'tket::reverse_indexing(const Eigen::Matrix4cd &amp;m)'],['../namespacetket.html#a241a6b680ec3430817d3beca10178c11',1,'tket::reverse_indexing(const Eigen::MatrixXcd &amp;m)'],['../namespacetket.html#a0fe0ef6db7f0eed227ff46a946de6dc4',1,'tket::reverse_indexing(const Eigen::VectorXcd &amp;v)']]],
+  ['reverse_5findexing_1465',['reverse_indexing',['../namespacetket.html#ac750e377a184bf7a76b875691c07892f',1,'tket::reverse_indexing(const Eigen::Matrix4cd &amp;m)'],['../namespacetket.html#a35dcbd88fada095a61a52b20decbcd41',1,'tket::reverse_indexing(const Matrix8cd &amp;m)'],['../namespacetket.html#a241a6b680ec3430817d3beca10178c11',1,'tket::reverse_indexing(const Eigen::MatrixXcd &amp;m)'],['../namespacetket.html#a0fe0ef6db7f0eed227ff46a946de6dc4',1,'tket::reverse_indexing(const Eigen::VectorXcd &amp;v)']]],
   ['reversetype_1466',['ReverseType',['../namespacetket.html#a0f814e0f8e98465926bde71420d68cf6',1,'tket']]],
   ['revinteractionpoint_1467',['RevInteractionPoint',['../structtket_1_1RevInteractionPoint.html',1,'tket']]],
   ['rewire_1468',['rewire',['../classtket_1_1Circuit.html#abf00d3034dae106bbedcaa13969486aa',1,'tket::Circuit']]],

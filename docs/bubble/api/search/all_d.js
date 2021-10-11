@@ -8,7 +8,7 @@ var searchData=
   ['map_5flines_1035',['map_lines',['../namespacetket.html#a734058ad6bcc5adb686220568c40e53c',1,'tket']]],
   ['mapcost_1036',['MapCost',['../structtket_1_1MapCost.html',1,'tket']]],
   ['match_5fpasses_1037',['match_passes',['../classtket_1_1BasePass.html#add9e71316d2ddf6ee22f99a59dce4d96',1,'tket::BasePass::match_passes(const PassPtr &amp;lhs, const PassPtr &amp;rhs)'],['../classtket_1_1BasePass.html#aa9f9d917d0b08c324c0e20d989e00488',1,'tket::BasePass::match_passes(const PassConditions &amp;lhs, const PassConditions &amp;rhs)']]],
-  ['matrix8cd_1038',['Matrix8cd',['../namespacetket_1_1internal.html#a8de781a8a29f90ddf92900a4beb7432e',1,'tket::internal']]],
+  ['matrix8cd_1038',['Matrix8cd',['../namespacetket.html#aaa2b97f86243fa7a09b21e1ec946f652',1,'tket']]],
   ['matrixanalysis_2ecpp_1039',['MatrixAnalysis.cpp',['../MatrixAnalysis_8cpp.html',1,'']]],
   ['matrixanalysis_2ehpp_1040',['MatrixAnalysis.hpp',['../MatrixAnalysis_8hpp.html',1,'']]],
   ['matrixxb_1041',['MatrixXb',['../namespacetket.html#afc6a69cf78c26da6848112274764acc6',1,'tket']]],
