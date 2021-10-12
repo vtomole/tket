@@ -8,6 +8,7 @@ on:
   push:
     branches:
       - develop
+      - test-py10
   schedule:
     # 03:00 every Saturday morning
     - cron: '0 3 * * 6'
@@ -67,58 +68,18 @@ jobs:
       run: ${CONAN_CMD} create --profile=tket recipes/tket-tests
     - name: Build and run tket proptests
       run: ${CONAN_CMD} create --profile=tket recipes/tket-proptests
-    - name: Set up Python 3.7
+    - name: Set up Python 3.10
       if: github.event_name == 'push'
       uses: actions/setup-python@v2
       with:
-        python-version: 3.7
-    - name: Build pytket (3.7)
+        python-version: 3.10
+    - name: Build pytket (3.10)
       if: github.event_name == 'push'
       run: |
         cd pytket
         pip install -e . -v
-    - name: Test pytket (3.7)
+    - name: Test pytket (3.10)
       if: github.event_name == 'push'
-      run: |
-        cd pytket/tests
-        pip install -r requirements.txt
-        pip install -r requirements-openfermion.txt
-        pytest --ignore=simulator/ --doctest-modules
-    - name: Set up Python 3.8
-      if: github.event_name == 'pull_request'
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
-    - name: Build pytket (3.8)
-      if: github.event_name == 'pull_request'
-      run: |
-        cd pytket
-        pip install -e . -v
-    - name: Test building docs
-      if: github.event_name == 'pull_request'
-      timeout-minutes: 20
-      run: |
-        pip install -r pytket/docs/requirements.txt
-        ./.github/workflows/build-docs
-    - name: Test pytket (3.8)
-      if: github.event_name == 'pull_request'
-      run: |
-        cd pytket/tests
-        pip install -r requirements.txt
-        pip install -r requirements-openfermion.txt
-        pytest --ignore=simulator/ --doctest-modules
-    - name: Set up Python 3.9
-      if: github.event_name == 'schedule'
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.9
-    - name: Build pytket (3.9)
-      if: github.event_name == 'schedule'
-      run: |
-        cd pytket
-        pip install -e . -v
-    - name: Test pytket (3.9)
-      if: github.event_name == 'schedule'
       run: |
         cd pytket/tests
         pip install -r requirements.txt
@@ -172,35 +133,18 @@ jobs:
       run: conan create --profile=tket recipes/tket-tests
     - name: Build and run tket proptests
       run: conan create --profile=tket recipes/tket-proptests
-    - name: Set up Python 3.7
+    - name: Set up Python 3.10
       if: github.event_name == 'push'
       uses: actions/setup-python@v2
       with:
-        python-version: 3.7
-    - name: Build pytket (3.7)
+        python-version: 3.10
+    - name: Build pytket (3.10)
       if: github.event_name == 'push'
       run: |
         cd pytket
         pip install -e . -v
-    - name: Test pytket (3.7)
+    - name: Test pytket (3.10)
       if: github.event_name == 'push'
-      run: |
-        cd pytket/tests
-        pip install -r requirements.txt
-        pip install -r requirements-openfermion.txt
-        pytest --ignore=simulator/ --doctest-modules
-    - name: Set up Python 3.8
-      if: github.event_name == 'pull_request'
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
-    - name: Build pytket (3.8)
-      if: github.event_name == 'pull_request'
-      run: |
-        cd pytket
-        pip install -e . -v
-    - name: Test pytket (3.8)
-      if: github.event_name == 'pull_request'
       run: |
         cd pytket/tests
         pip install -r requirements.txt
@@ -212,23 +156,6 @@ jobs:
         pip install -U mypy
         cd pytket
         mypy --config-file=mypy.ini --no-incremental -p pytket -p tests
-    - name: Set up Python 3.9
-      if: github.event_name == 'schedule'
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.9
-    - name: Build pytket (3.9)
-      if: github.event_name == 'schedule'
-      run: |
-        cd pytket
-        pip install -e . -v
-    - name: Test pytket (3.9)
-      if: github.event_name == 'schedule'
-      run: |
-        cd pytket/tests
-        pip install -r requirements.txt
-        pip install -r requirements-openfermion.txt
-        pytest --ignore=simulator/ --doctest-modules
 
   macos-m1:
     name: Build and test (MacOS M1)
@@ -259,35 +186,19 @@ jobs:
       run: conan create --profile=tket recipes/tket-tests -o boost:without_fiber=True -o boost:without_json=True -o boost:without_nowide=True
     - name: Build and run tket proptests
       run: conan create --profile=tket recipes/tket-proptests -o boost:without_fiber=True -o boost:without_json=True -o boost:without_nowide=True
-    - name: Build pytket (3.8)
+    - name: Build pytket (3.10)
       if: github.event_name == 'pull_request' || github.event_name == 'push'
       run: |
         eval "$(pyenv init -)"
-        pyenv shell tket-3.8
+        pyenv shell tket-3.10
         OPENBLAS="$(brew --prefix openblas)" pip install -U scipy
         cd pytket
         pip install -e . -v
-    - name: Test pytket (3.8)
+    - name: Test pytket (3.10)
       if: github.event_name == 'pull_request' || github.event_name == 'push'
       run: |
         eval "$(pyenv init -)"
-        pyenv shell tket-3.8
-        cd pytket/tests
-        pip install -r requirements.txt
-        pytest --ignore=simulator/ --doctest-modules
-    - name: Build pytket (3.9)
-      if: github.event_name == 'schedule'
-      run: |
-        eval "$(pyenv init -)"
-        pyenv shell tket-3.9
-        OPENBLAS="$(brew --prefix openblas)" pip install -U scipy
-        cd pytket
-        pip install -e . -v
-    - name: Test pytket (3.9)
-      if: github.event_name == 'schedule'
-      run: |
-        eval "$(pyenv init -)"
-        pyenv shell tket-3.9
+        pyenv shell tket-3.10
         cd pytket/tests
         pip install -r requirements.txt
         pytest --ignore=simulator/ --doctest-modules
@@ -341,41 +252,13 @@ jobs:
       run: conan create --profile=tket recipes/tket-tests
     - name: Build and run tket proptests
       run: conan create --profile=tket recipes/tket-proptests
-    - name: Set up Python 3.7
+    - name: Set up Python 3.10
       if: github.event_name == 'push'
       uses: actions/setup-python@v2
       with:
-        python-version: 3.7
-    - name: Build and test pytket (3.7)
+        python-version: 3.10
+    - name: Build and test pytket (3.10)
       if: github.event_name == 'push'
-      run: |
-        cd pytket
-        pip install -e . -v
-        cd tests
-        pip install -r requirements.txt
-        pip install -r requirements-openfermion.txt
-        pytest --ignore=simulator/ --doctest-modules
-    - name: Set up Python 3.8
-      if: github.event_name == 'pull_request'
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
-    - name: Build and test pytket (3.8)
-      if: github.event_name == 'pull_request'
-      run: |
-        cd pytket
-        pip install -e . -v
-        cd tests
-        pip install -r requirements.txt
-        pip install -r requirements-openfermion.txt
-        pytest --ignore=simulator/ --doctest-modules
-    - name: Set up Python 3.9
-      if: github.event_name == 'schedule'
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.9
-    - name: Build and test pytket (3.9)
-      if: github.event_name == 'schedule'
       run: |
         cd pytket
         pip install -e . -v
