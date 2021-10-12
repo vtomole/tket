@@ -275,7 +275,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2021-10-11 09:58:26</td>
+            <td class="headerValue">2021-10-12 16:52:05</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">255</td>
@@ -610,35 +610,35 @@
     <tr>
     <td align="right" class="lineno"><pre>45</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>2693</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2714</pre></td>
     <td align="left" class="src coveredLine"><pre>PauliVertSet PauliGraph::get_successors(const PauliVert &amp;vert) const {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>46</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>2693</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2714</pre></td>
     <td align="left" class="src coveredLine"><pre>  PauliVertSet succs;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>47</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 2693 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>6468</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 2714 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>6522</pre></td>
     <td align="left" class="src coveredLine"><pre>  for (auto iter = boost::adjacent_vertices(vert, graph_);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>48</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 6468 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 3775 times">&check;</span><span class="takenBranch" title="Branch 4 taken 2693 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>6468</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 6522 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 3808 times">&check;</span><span class="takenBranch" title="Branch 4 taken 2714 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>6522</pre></td>
     <td align="left" class="src coveredLine"><pre>       iter.first != iter.second; iter.first++) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>49</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 3775 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 3775 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 3775 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>3775</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 3808 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 3808 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 3808 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>3808</pre></td>
     <td align="left" class="src coveredLine"><pre>    succs.insert(*iter.first);</pre></td>
     </tr>
 
@@ -652,7 +652,7 @@
     <tr>
     <td align="right" class="lineno"><pre>51</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>2693</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2714</pre></td>
     <td align="left" class="src coveredLine"><pre>  return succs;</pre></td>
     </tr>
 
@@ -673,35 +673,35 @@
     <tr>
     <td align="right" class="lineno"><pre>54</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1898</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1935</pre></td>
     <td align="left" class="src coveredLine"><pre>PauliVertSet PauliGraph::get_predecessors(const PauliVert &amp;vert) const {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>55</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1898</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1935</pre></td>
     <td align="left" class="src coveredLine"><pre>  PauliVertSet preds;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>56</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1898 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>4547</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1935 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>4643</pre></td>
     <td align="left" class="src coveredLine"><pre>  for (auto iter = boost::inv_adjacent_vertices(vert, graph_);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>57</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 4547 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 2649 times">&check;</span><span class="takenBranch" title="Branch 4 taken 1898 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>4547</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 4643 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 2708 times">&check;</span><span class="takenBranch" title="Branch 4 taken 1935 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>4643</pre></td>
     <td align="left" class="src coveredLine"><pre>       iter.first != iter.second; iter.first++) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>58</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 2649 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 2649 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 2649 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>2649</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 2708 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 2708 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 2708 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>2708</pre></td>
     <td align="left" class="src coveredLine"><pre>    preds.insert(*iter.first);</pre></td>
     </tr>
 
@@ -715,7 +715,7 @@
     <tr>
     <td align="right" class="lineno"><pre>60</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1898</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1935</pre></td>
     <td align="left" class="src coveredLine"><pre>  return preds;</pre></td>
     </tr>
 
@@ -2177,8 +2177,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>269</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 2429 times">&check;</span><span class="takenBranch" title="Branch 2 taken 346 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>2775</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 2450 times">&check;</span><span class="takenBranch" title="Branch 2 taken 346 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>2796</pre></td>
     <td align="left" class="src coveredLine"><pre>  while (!to_search.empty()) {</pre></td>
     </tr>
 
@@ -2191,15 +2191,15 @@
 
     <tr>
     <td align="right" class="lineno"><pre>271</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 2429 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>2429</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 2450 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>2450</pre></td>
     <td align="left" class="src coveredLine"><pre>    PauliVert to_compare = *to_search.begin();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>272</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 2429 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>2429</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 2450 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>2450</pre></td>
     <td align="left" class="src coveredLine"><pre>    to_search.erase(to_search.begin());</pre></td>
     </tr>
 
@@ -2220,35 +2220,35 @@
     <tr>
     <td align="right" class="lineno"><pre>275</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>2429</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2450</pre></td>
     <td align="left" class="src coveredLine"><pre>    bool ready = true;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>276</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 2429 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 4250 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 8 taken 2559 times">&check;</span><span class="takenBranch" title="Branch 9 taken 1691 times">&check;</span><span class="takenBranch" title="Branch 11 taken 2559 times">&check;</span><span class="notTakenBranch" title="Branch 12 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 14 taken 1821 times">&check;</span><span class="notTakenBranch" title="Branch 15 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>4988</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 2450 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 4290 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 8 taken 2562 times">&check;</span><span class="takenBranch" title="Branch 9 taken 1728 times">&check;</span><span class="takenBranch" title="Branch 11 taken 2562 times">&check;</span><span class="notTakenBranch" title="Branch 12 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 14 taken 1840 times">&check;</span><span class="notTakenBranch" title="Branch 15 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>5012</pre></td>
     <td align="left" class="src coveredLine"><pre>    for (const PauliVert &amp;child : get_successors(to_compare)) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>277</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 4 taken 2559 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><span class="takenBranch" title="Branch 7 taken 2559 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 9 taken 738 times">&check;</span><span class="takenBranch" title="Branch 10 taken 1821 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>2559</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 4 taken 2562 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><span class="takenBranch" title="Branch 7 taken 2562 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 9 taken 722 times">&check;</span><span class="takenBranch" title="Branch 10 taken 1840 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>2562</pre></td>
     <td align="left" class="src coveredLine"><pre>      if (commuted.get&lt;TagKey>().find(child) == commuted.get&lt;TagKey>().end()) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>278</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>738</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>722</pre></td>
     <td align="left" class="src coveredLine"><pre>        ready = false;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>279</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>738</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>722</pre></td>
     <td align="left" class="src coveredLine"><pre>        break;</pre></td>
     </tr>
 
@@ -2268,8 +2268,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>282</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 738 times">&check;</span><span class="takenBranch" title="Branch 1 taken 1691 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>2429</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 722 times">&check;</span><span class="takenBranch" title="Branch 1 taken 1728 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>2450</pre></td>
     <td align="left" class="src coveredLine"><pre>    if (!ready) continue;</pre></td>
     </tr>
 
@@ -2289,22 +2289,22 @@
 
     <tr>
     <td align="right" class="lineno"><pre>285</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1691 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 1691 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>1691</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1728 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 1728 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>1728</pre></td>
     <td align="left" class="src coveredLine"><pre>    QubitPauliTensor compare_pauli = graph_[to_compare].tensor_;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>286</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1691 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 1253 times">&check;</span><span class="takenBranch" title="Branch 4 taken 438 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>1691</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1728 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 1290 times">&check;</span><span class="takenBranch" title="Branch 4 taken 438 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>1728</pre></td>
     <td align="left" class="src coveredLine"><pre>    if (pauli.commutes_with(compare_pauli)) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>287</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1253 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 27 times">&check;</span><span class="takenBranch" title="Branch 4 taken 1226 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>1253</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1290 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 27 times">&check;</span><span class="takenBranch" title="Branch 4 taken 1263 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>1290</pre></td>
     <td align="left" class="src coveredLine"><pre>      if (pauli.string == compare_pauli.string) {</pre></td>
     </tr>
 
@@ -2492,22 +2492,22 @@
 
     <tr>
     <td align="right" class="lineno"><pre>314</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1226 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>2452</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1263 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>2526</pre></td>
     <td align="left" class="src coveredLine"><pre>        PauliVertSet preds = get_predecessors(to_compare);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>315</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 1226 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>1226</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 1263 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>1263</pre></td>
     <td align="left" class="src coveredLine"><pre>        to_search.insert(preds.begin(), preds.end());</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>316</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1226 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>1226</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1263 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>1263</pre></td>
     <td align="left" class="src coveredLine"><pre>        commuted.insert(to_compare);</pre></td>
     </tr>
 
@@ -3584,15 +3584,15 @@
 
     <tr>
     <td align="right" class="lineno"><pre>470</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 305 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 692 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 8 taken 466 times">&check;</span><span class="takenBranch" title="Branch 9 taken 226 times">&check;</span><span class="takenBranch" title="Branch 11 taken 466 times">&check;</span><span class="notTakenBranch" title="Branch 12 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 14 taken 387 times">&check;</span><span class="notTakenBranch" title="Branch 15 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>771</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 305 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 691 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 8 taken 465 times">&check;</span><span class="takenBranch" title="Branch 9 taken 226 times">&check;</span><span class="takenBranch" title="Branch 11 taken 465 times">&check;</span><span class="notTakenBranch" title="Branch 12 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 14 taken 386 times">&check;</span><span class="notTakenBranch" title="Branch 15 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>770</pre></td>
     <td align="left" class="src coveredLine"><pre>    for (const PauliVert &amp;parent : pg_->get_predecessors(current_vert_)) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>471</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 466 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 79 times">&check;</span><span class="takenBranch" title="Branch 6 taken 387 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>466</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 465 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 79 times">&check;</span><span class="takenBranch" title="Branch 6 taken 386 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>465</pre></td>
     <td align="left" class="src coveredLine"><pre>      if (visited_.find(parent) == visited_.end()) {</pre></td>
     </tr>
 

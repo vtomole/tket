@@ -275,7 +275,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2021-10-11 09:58:26</td>
+            <td class="headerValue">2021-10-12 16:52:05</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">477</td>
@@ -463,7 +463,7 @@
     <tr>
     <td align="right" class="lineno"><pre>24</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>764</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>768</pre></td>
     <td align="left" class="src coveredLine"><pre>void trivial_callback(const CompilationUnit&amp;, const nlohmann::json&amp;) {}</pre></td>
     </tr>
 
@@ -652,7 +652,7 @@
     <tr>
     <td align="right" class="lineno"><pre>51</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>290</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>292</pre></td>
     <td align="left" class="src coveredLine"><pre>std::optional&lt;PredicatePtr> BasePass::unsatisfied_precondition(</pre></td>
     </tr>
 
@@ -665,22 +665,22 @@
 
     <tr>
     <td align="right" class="lineno"><pre>53</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 250 times">&check;</span><span class="takenBranch" title="Branch 4 taken 289 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>539</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 237 times">&check;</span><span class="takenBranch" title="Branch 4 taken 291 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>528</pre></td>
     <td align="left" class="src coveredLine"><pre>  for (const TypePredicatePair&amp; pp : precons_) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>54</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 250 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>250</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 237 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>237</pre></td>
     <td align="left" class="src coveredLine"><pre>    PredicateCache::const_iterator cache_iter = c_unit.cache_.find(pp.first);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>55</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 138 times">&check;</span><span class="takenBranch" title="Branch 4 taken 112 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>250</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 125 times">&check;</span><span class="takenBranch" title="Branch 4 taken 112 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>237</pre></td>
     <td align="left" class="src coveredLine"><pre>    if (cache_iter == c_unit.cache_.end()) {  // cache does not contain</pre></td>
     </tr>
 
@@ -693,15 +693,15 @@
 
     <tr>
     <td align="right" class="lineno"><pre>57</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 138 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 1 times">&check;</span><span class="takenBranch" title="Branch 5 taken 137 times">&check;</span><br/><span class="takenBranch" title="Branch 7 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>139</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 125 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 1 times">&check;</span><span class="takenBranch" title="Branch 5 taken 124 times">&check;</span><br/><span class="takenBranch" title="Branch 7 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>126</pre></td>
     <td align="left" class="src coveredLine"><pre>      if (!c_unit.calc_predicate(*pp.second)) return pp.second;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>58</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 137 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>137</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 124 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>124</pre></td>
     <td align="left" class="src coveredLine"><pre>      c_unit.cache_.insert({pp.first, {pp.second, true}});</pre></td>
     </tr>
 
@@ -791,8 +791,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>71</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 10 times">&check;</span><span class="takenBranch" title="Branch 1 taken 279 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>289</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 10 times">&check;</span><span class="takenBranch" title="Branch 1 taken 281 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>291</pre></td>
     <td align="left" class="src coveredLine"><pre>  if (safe_mode == SafetyMode::Audit) {</pre></td>
     </tr>
 
@@ -827,7 +827,7 @@
     <tr>
     <td align="right" class="lineno"><pre>76</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>289</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>291</pre></td>
     <td align="left" class="src coveredLine"><pre>  return {};</pre></td>
     </tr>
 
@@ -848,7 +848,7 @@
     <tr>
     <td align="right" class="lineno"><pre>79</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>286</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>288</pre></td>
     <td align="left" class="src coveredLine"><pre>void BasePass::update_cache(</pre></td>
     </tr>
 
@@ -861,29 +861,29 @@
 
     <tr>
     <td align="right" class="lineno"><pre>81</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 15 times">&check;</span><span class="takenBranch" title="Branch 1 taken 271 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>286</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 17 times">&check;</span><span class="takenBranch" title="Branch 1 taken 271 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>288</pre></td>
     <td align="left" class="src coveredLine"><pre>  if (postcons_.default_postcon_ == Guarantee::Clear) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>82</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>65</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>54</pre></td>
     <td align="left" class="src coveredLine"><pre>    for (PredicateCache::iterator it = c_unit.cache_.begin();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>83</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 50 times">&check;</span><span class="takenBranch" title="Branch 3 taken 15 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>65</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 37 times">&check;</span><span class="takenBranch" title="Branch 3 taken 17 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>54</pre></td>
     <td align="left" class="src coveredLine"><pre>         it != c_unit.cache_.end(); ++it) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>84</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>50</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>37</pre></td>
     <td align="left" class="src coveredLine"><pre>      it->second.second = false;</pre></td>
     </tr>
 
@@ -910,8 +910,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>88</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 213 times">&check;</span><span class="takenBranch" title="Branch 4 taken 286 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>712</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 213 times">&check;</span><span class="takenBranch" title="Branch 4 taken 288 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>714</pre></td>
     <td align="left" class="src coveredLine"><pre>       postcons_.generic_postcons_) {</pre></td>
     </tr>
 
@@ -952,15 +952,15 @@
 
     <tr>
     <td align="right" class="lineno"><pre>94</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 330 times">&check;</span><span class="takenBranch" title="Branch 4 taken 284 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>614</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 317 times">&check;</span><span class="takenBranch" title="Branch 4 taken 286 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>603</pre></td>
     <td align="left" class="src coveredLine"><pre>  for (const TypePredicatePair&amp; pp : postcons_.specific_postcons_) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>95</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 15 times">&check;</span><span class="takenBranch" title="Branch 1 taken 315 times">&check;</span><span class="takenBranch" title="Branch 4 taken 15 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 6 taken 2 times">&check;</span><span class="takenBranch" title="Branch 7 taken 13 times">&check;</span><span class="takenBranch" title="Branch 8 taken 2 times">&check;</span><span class="takenBranch" title="Branch 9 taken 328 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>330</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 15 times">&check;</span><span class="takenBranch" title="Branch 1 taken 302 times">&check;</span><span class="takenBranch" title="Branch 4 taken 15 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 6 taken 2 times">&check;</span><span class="takenBranch" title="Branch 7 taken 13 times">&check;</span><span class="takenBranch" title="Branch 8 taken 2 times">&check;</span><span class="takenBranch" title="Branch 9 taken 315 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>317</pre></td>
     <td align="left" class="src coveredLine"><pre>    if (safe_mode == SafetyMode::Audit &amp;&amp; !pp.second->verify(c_unit.circ_))</pre></td>
     </tr>
 
@@ -974,14 +974,14 @@
     <tr>
     <td align="right" class="lineno"><pre>97</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>656</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>630</pre></td>
     <td align="left" class="src coveredLine"><pre>    std::pair&lt;PredicatePtr, bool> cache_pair{pp.second, true};</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>98</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 328 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>328</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 315 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>315</pre></td>
     <td align="left" class="src coveredLine"><pre>    c_unit.cache_[pp.first] = cache_pair;</pre></td>
     </tr>
 
@@ -995,7 +995,7 @@
     <tr>
     <td align="right" class="lineno"><pre>100</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>284</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>286</pre></td>
     <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>
 
@@ -1037,7 +1037,7 @@
     <tr>
     <td align="right" class="lineno"><pre>106</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>222</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>202</pre></td>
     <td align="left" class="src coveredLine"><pre>Guarantee BasePass::get_guarantee(</pre></td>
     </tr>
 
@@ -1057,22 +1057,22 @@
 
     <tr>
     <td align="right" class="lineno"><pre>109</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 222 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>222</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 202 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>202</pre></td>
     <td align="left" class="src coveredLine"><pre>      conditions.second.generic_postcons_.find(ti);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>110</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 210 times">&check;</span><span class="takenBranch" title="Branch 3 taken 12 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>222</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 190 times">&check;</span><span class="takenBranch" title="Branch 3 taken 12 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>202</pre></td>
     <td align="left" class="src coveredLine"><pre>  if (class_guar_iter == conditions.second.generic_postcons_.end()) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>111</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>210</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>190</pre></td>
     <td align="left" class="src coveredLine"><pre>    return conditions.second.default_postcon_;</pre></td>
     </tr>
 
@@ -1246,8 +1246,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>136</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 155 times">&check;</span><span class="takenBranch" title="Branch 4 taken 110 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>265</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 145 times">&check;</span><span class="takenBranch" title="Branch 4 taken 110 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>255</pre></td>
     <td align="left" class="src coveredLine"><pre>  for (const TypePredicatePair&amp; precon : rhs.first) {</pre></td>
     </tr>
 
@@ -1260,22 +1260,22 @@
 
     <tr>
     <td align="right" class="lineno"><pre>138</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 155 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>155</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 145 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>145</pre></td>
     <td align="left" class="src coveredLine"><pre>        lhs.second.specific_postcons_.find(precon.first);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>139</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 83 times">&check;</span><span class="takenBranch" title="Branch 3 taken 72 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>155</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 73 times">&check;</span><span class="takenBranch" title="Branch 3 taken 72 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>145</pre></td>
     <td align="left" class="src coveredLine"><pre>    if (data_guar_iter == lhs.second.specific_postcons_.end()) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>140</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 83 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 1 times">&check;</span><span class="takenBranch" title="Branch 4 taken 82 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>83</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 73 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 1 times">&check;</span><span class="takenBranch" title="Branch 4 taken 72 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>73</pre></td>
     <td align="left" class="src coveredLine"><pre>      if (get_guarantee(precon.first, lhs) == Guarantee::Clear) {</pre></td>
     </tr>
 
@@ -1295,22 +1295,22 @@
 
     <tr>
     <td align="right" class="lineno"><pre>143</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 82 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>82</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 72 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>72</pre></td>
     <td align="left" class="src coveredLine"><pre>        PredicatePtrMap::iterator new_pre_it = new_precons.find(precon.first);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>144</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 39 times">&check;</span><span class="takenBranch" title="Branch 3 taken 43 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>82</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 29 times">&check;</span><span class="takenBranch" title="Branch 3 taken 43 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>72</pre></td>
     <td align="left" class="src coveredLine"><pre>        if (new_pre_it == new_precons.end())</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>145</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 39 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>39</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 29 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>29</pre></td>
     <td align="left" class="src coveredLine"><pre>          new_precons.insert(precon);</pre></td>
     </tr>
 
@@ -1414,8 +1414,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>160</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 171 times">&check;</span><span class="takenBranch" title="Branch 4 taken 110 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>281</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 151 times">&check;</span><span class="takenBranch" title="Branch 4 taken 110 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>261</pre></td>
     <td align="left" class="src coveredLine"><pre>  for (const TypePredicatePair&amp; postcon : lhs.second.specific_postcons_) {</pre></td>
     </tr>
 
@@ -1428,29 +1428,29 @@
 
     <tr>
     <td align="right" class="lineno"><pre>162</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 171 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>171</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 151 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>151</pre></td>
     <td align="left" class="src coveredLine"><pre>        new_postcons.specific_postcons_.find(postcon.first);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>163</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 139 times">&check;</span><span class="takenBranch" title="Branch 3 taken 32 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>171</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 129 times">&check;</span><span class="takenBranch" title="Branch 3 taken 22 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>151</pre></td>
     <td align="left" class="src coveredLine"><pre>    if (specific_post_it == new_postcons.specific_postcons_.end()) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>164</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 139 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 107 times">&check;</span><span class="takenBranch" title="Branch 4 taken 32 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>139</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 129 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 97 times">&check;</span><span class="takenBranch" title="Branch 4 taken 32 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>129</pre></td>
     <td align="left" class="src coveredLine"><pre>      if (get_guarantee(postcon.first, rhs) == Guarantee::Preserve)</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>165</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 107 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>107</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 97 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>97</pre></td>
     <td align="left" class="src coveredLine"><pre>        new_postcons.specific_postcons_.insert(postcon);</pre></td>
     </tr>
 
@@ -1583,7 +1583,7 @@
     <tr>
     <td align="right" class="lineno"><pre>184</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>290</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>292</pre></td>
     <td align="left" class="src coveredLine"><pre>bool StandardPass::apply(</pre></td>
     </tr>
 
@@ -1603,8 +1603,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>187</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 290 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 290 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>290</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 292 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 292 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>292</pre></td>
     <td align="left" class="src coveredLine"><pre>  before_apply(c_unit, this->get_config());</pre></td>
     </tr>
 
@@ -1617,15 +1617,15 @@
 
     <tr>
     <td align="right" class="lineno"><pre>189</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 290 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>296</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 292 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>298</pre></td>
     <td align="left" class="src coveredLine"><pre>      unsatisfied_precondition(c_unit, safe_mode);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>190</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1 times">&check;</span><span class="takenBranch" title="Branch 2 taken 289 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>290</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1 times">&check;</span><span class="takenBranch" title="Branch 2 taken 291 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>292</pre></td>
     <td align="left" class="src coveredLine"><pre>  if (unsatisfied_precon)</pre></td>
     </tr>
 
@@ -1660,42 +1660,42 @@
     <tr>
     <td align="right" class="lineno"><pre>195</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>289</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>291</pre></td>
     <td align="left" class="src coveredLine"><pre>  c_unit.circ_.unit_bimaps_ = {&amp;c_unit.initial_map_, &amp;c_unit.final_map_};</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>196</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 286 times">&check;</span><span class="takenBranch" title="Branch 2 taken 3 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>289</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 288 times">&check;</span><span class="takenBranch" title="Branch 2 taken 3 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>291</pre></td>
     <td align="left" class="src coveredLine"><pre>  bool changed = trans_.apply(c_unit.circ_);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>197</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>286</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>288</pre></td>
     <td align="left" class="src coveredLine"><pre>  c_unit.circ_.unit_bimaps_ = {nullptr, nullptr};</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>198</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 284 times">&check;</span><span class="takenBranch" title="Branch 2 taken 2 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>286</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 286 times">&check;</span><span class="takenBranch" title="Branch 2 taken 2 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>288</pre></td>
     <td align="left" class="src coveredLine"><pre>  update_cache(c_unit, safe_mode);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>199</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 284 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 284 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>284</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 286 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 286 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>286</pre></td>
     <td align="left" class="src coveredLine"><pre>  after_apply(c_unit, this->get_config());</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>200</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>568</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>572</pre></td>
     <td align="left" class="src coveredLine"><pre>  return changed;</pre></td>
     </tr>
 
@@ -1758,35 +1758,35 @@
     <tr>
     <td align="right" class="lineno"><pre>209</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1192</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1196</pre></td>
     <td align="left" class="src coveredLine"><pre>nlohmann::json StandardPass::get_config() const {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>210</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1192</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1196</pre></td>
     <td align="left" class="src coveredLine"><pre>  nlohmann::json j;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>211</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1192 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 1192 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>1192</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1196 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 1196 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>1196</pre></td>
     <td align="left" class="src coveredLine"><pre>  j["pass_class"] = "StandardPass";</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>212</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1192 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 1192 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>1192</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1196 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 1196 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>1196</pre></td>
     <td align="left" class="src coveredLine"><pre>  j["StandardPass"] = pass_config_;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>213</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1192</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1196</pre></td>
     <td align="left" class="src coveredLine"><pre>  return j;</pre></td>
     </tr>
 

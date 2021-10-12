@@ -275,7 +275,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2021-10-11 09:58:26</td>
+            <td class="headerValue">2021-10-12 16:52:05</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">13</td>
@@ -890,7 +890,7 @@
     <tr>
     <td align="right" class="lineno"><pre>85</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>101585</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>104019</pre></td>
     <td align="left" class="src coveredLine"><pre>  register_info_t reg_info() const { return {type(), reg_dim()}; }</pre></td>
     </tr>
 
@@ -1261,7 +1261,7 @@
     <tr>
     <td align="right" class="lineno"><pre>138</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>6788</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>6794</pre></td>
     <td align="left" class="src coveredLine"><pre>void unitid_to_json(nlohmann::json &amp;j, const Unit_T &amp;unit) {</pre></td>
     </tr>
 
@@ -1274,22 +1274,22 @@
 
     <tr>
     <td align="right" class="lineno"><pre>140</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 3394 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 3394 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>6788</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 3397 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 3397 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>6794</pre></td>
     <td align="left" class="src coveredLine"><pre>  j.push_back(unit.reg_name());</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>141</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 3394 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 3394 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>6788</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 3397 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 3397 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>6794</pre></td>
     <td align="left" class="src coveredLine"><pre>  j.push_back(unit.index());</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>142</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>6788</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>6794</pre></td>
     <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>
 
@@ -1310,21 +1310,21 @@
     <tr>
     <td align="right" class="lineno"><pre>145</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1990</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1996</pre></td>
     <td align="left" class="src coveredLine"><pre>void json_to_unitid(const nlohmann::json &amp;j, T &amp;unit) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>146</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 995 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 995 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 9 taken 995 times">&check;</span><span class="notTakenBranch" title="Branch 10 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>1990</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 998 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 998 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 9 taken 998 times">&check;</span><span class="notTakenBranch" title="Branch 10 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>1996</pre></td>
     <td align="left" class="src coveredLine"><pre>  unit = T(j.at(0).get&lt;std::string>(), j.at(1).get&lt;std::vector&lt;unsigned>>());</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>147</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1990</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1996</pre></td>
     <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>
 
