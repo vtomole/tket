@@ -280,7 +280,7 @@ $(function() {
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment">// it.</span></div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="keywordtype">bool</span> Routing::solve_furthest() {</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keywordtype">bool</span> success = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  std::optional&lt;Node&gt; max_node = std::nullopt;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  std::optional&lt;Node&gt; max_node;</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  <span class="keywordtype">unsigned</span> max_dist = 0;</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> [q1, q2] : interaction) {</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordtype">unsigned</span> dist = current_arc_.<a class="code" href="classtket_1_1graphs_1_1UIDConnectivity.html#a8c54e055a440a94f4e70934afe74cf64">get_distance</a>(q1, q2);</div>
