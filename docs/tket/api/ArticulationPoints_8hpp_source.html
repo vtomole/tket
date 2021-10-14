@@ -98,27 +98,27 @@ $(function() {
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ArticulationPoints__impl_8hpp.html">Graphs/ArticulationPoints_impl.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacetket_1_1graph.html">tket::graph</a> {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacetket_1_1graphs.html">tket::graphs</a> {</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> UID_t&gt;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;std::set&lt;UID_t&gt; <a class="code" href="namespacetket_1_1graph.html#a6b5042bca6c4ea869b1c7c91fec84544">get_subgraph_aps</a>(</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;std::set&lt;UID_t&gt; <a class="code" href="namespacetket_1_1graphs.html#a6232df88a8097fe12082b32c4369361e">get_subgraph_aps</a>(</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">const</span> UndirectedConnGraph&lt;UID_t&gt;&amp; graph,</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">const</span> UndirectedConnGraph&lt;UID_t&gt;&amp; subgraph);</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">// template explicit instations, with implementations in cpp file</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">extern</span> <span class="keyword">template</span> std::set&lt;UnitID&gt; <a class="code" href="namespacetket_1_1graph.html#a6b5042bca6c4ea869b1c7c91fec84544">get_subgraph_aps</a>(</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">extern</span> <span class="keyword">template</span> std::set&lt;UnitID&gt; <a class="code" href="namespacetket_1_1graphs.html#a6232df88a8097fe12082b32c4369361e">get_subgraph_aps</a>(</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">const</span> UndirectedConnGraph&lt;UnitID&gt;&amp; graph,</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">const</span> UndirectedConnGraph&lt;UnitID&gt;&amp; subgraph);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">extern</span> <span class="keyword">template</span> std::set&lt;Node&gt; <a class="code" href="namespacetket_1_1graph.html#a6b5042bca6c4ea869b1c7c91fec84544">get_subgraph_aps</a>(</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">extern</span> <span class="keyword">template</span> std::set&lt;Node&gt; <a class="code" href="namespacetket_1_1graphs.html#a6232df88a8097fe12082b32c4369361e">get_subgraph_aps</a>(</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">const</span> UndirectedConnGraph&lt;Node&gt;&amp; graph,</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">const</span> UndirectedConnGraph&lt;Node&gt;&amp; subgraph);</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}  <span class="comment">// namespace tket::graph</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}  <span class="comment">// namespace tket::graphs</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="anamespacetket_1_1graph_html"><div class="ttname"><a href="namespacetket_1_1graph.html">tket::graph</a></div><div class="ttdoc">Computation of Articulation Points (APs) on undirected graphs.</div><div class="ttdef"><b>Definition:</b> <a href="ArticulationPoints_8cpp_source.html#l00028">ArticulationPoints.cpp:28</a></div></div>
-<div class="ttc" id="anamespacetket_1_1graph_html_a6b5042bca6c4ea869b1c7c91fec84544"><div class="ttname"><a href="namespacetket_1_1graph.html#a6b5042bca6c4ea869b1c7c91fec84544">tket::graph::get_subgraph_aps</a></div><div class="ttdeci">std::set&lt; UID_t &gt; get_subgraph_aps(const UndirectedConnGraph&lt; UID_t &gt; &amp;graph, const UndirectedConnGraph&lt; UID_t &gt; &amp;subgraph)</div><div class="ttdoc">Given a graph and a subgraph, returns the subgraph APs, as defined in the introduction above.</div><div class="ttdef"><b>Definition:</b> <a href="ArticulationPoints_8cpp_source.html#l00210">ArticulationPoints.cpp:210</a></div></div>
+<div class="ttc" id="anamespacetket_1_1graphs_html_a6232df88a8097fe12082b32c4369361e"><div class="ttname"><a href="namespacetket_1_1graphs.html#a6232df88a8097fe12082b32c4369361e">tket::graphs::get_subgraph_aps</a></div><div class="ttdeci">std::set&lt; UID_t &gt; get_subgraph_aps(const UndirectedConnGraph&lt; UID_t &gt; &amp;graph, const UndirectedConnGraph&lt; UID_t &gt; &amp;subgraph)</div><div class="ttdoc">Given a graph and a subgraph, returns the subgraph APs, as defined in the introduction above.</div><div class="ttdef"><b>Definition:</b> <a href="ArticulationPoints_8cpp_source.html#l00210">ArticulationPoints.cpp:210</a></div></div>
+<div class="ttc" id="anamespacetket_1_1graphs_html"><div class="ttname"><a href="namespacetket_1_1graphs.html">tket::graphs</a></div><div class="ttdoc">Computation of Articulation Points (APs) on undirected graphs.</div><div class="ttdef"><b>Definition:</b> <a href="AdjacencyData_8cpp_source.html#l00031">AdjacencyData.cpp:31</a></div></div>
 <div class="ttc" id="aArticulationPoints__impl_8hpp_html"><div class="ttname"><a href="ArticulationPoints__impl_8hpp.html">ArticulationPoints_impl.hpp</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

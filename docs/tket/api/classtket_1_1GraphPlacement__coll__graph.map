@@ -1,7 +1,7 @@
 <map id="tket::GraphPlacement" name="tket::GraphPlacement">
-<area shape="rect" id="node1" title=" " alt="" coords="27,381,190,408"/>
-<area shape="rect" id="node2" href="$classtket_1_1Placement.html" title=" " alt="" coords="47,305,171,332"/>
-<area shape="rect" id="node3" href="$classtket_1_1Architecture.html" title=" " alt="" coords="41,216,176,243"/>
-<area shape="rect" id="node4" href="$classtket_1_1graph_1_1UIDConnectivity.html" title=" " alt="" coords="5,125,212,167"/>
-<area shape="rect" id="node5" href="$classtket_1_1graph_1_1detail_1_1UIDConnectivityBase.html" title=" " alt="" coords="9,5,208,76"/>
+<area shape="rect" id="node1" title=" " alt="" coords="31,381,193,408"/>
+<area shape="rect" id="node2" href="$classtket_1_1Placement.html" title=" " alt="" coords="50,305,174,332"/>
+<area shape="rect" id="node3" href="$classtket_1_1Architecture.html" title=" " alt="" coords="45,216,179,243"/>
+<area shape="rect" id="node4" href="$classtket_1_1graphs_1_1UIDConnectivity.html" title=" " alt="" coords="5,125,219,167"/>
+<area shape="rect" id="node5" href="$classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html" title=" " alt="" coords="13,5,211,76"/>
 </map>
