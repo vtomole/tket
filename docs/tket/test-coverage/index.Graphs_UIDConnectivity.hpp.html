@@ -275,7 +275,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2021-10-14 17:12:06</td>
+            <td class="headerValue">2021-10-15 14:00:43</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">18</td>
@@ -624,14 +624,14 @@
     <tr>
     <td align="right" class="lineno"><pre>47</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>606640</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>607072</pre></td>
     <td align="left" class="src coveredLine"><pre>  UIDVertex() : uid() {}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>48</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>4774</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>4849</pre></td>
     <td align="left" class="src coveredLine"><pre>  explicit UIDVertex(const UID_t _uid) : uid(_uid) {}</pre></td>
     </tr>
 
@@ -973,8 +973,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>97</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 191 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 191 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>382</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 193 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 193 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>386</pre></td>
     <td align="left" class="src coveredLine"><pre>  UIDConnectivityBase() : graph(), uid_to_vertex() {}</pre></td>
     </tr>
 
@@ -1037,21 +1037,21 @@
     <tr>
     <td align="right" class="lineno"><pre>106</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>9548</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>9698</pre></td>
     <td align="left" class="src coveredLine"><pre>  void add_uid(const UID_t uid) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>107</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 4774 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 4774 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>9548</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 4849 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 4849 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>9698</pre></td>
     <td align="left" class="src coveredLine"><pre>    Vertex v = boost::add_vertex(UIDVertex(uid), graph);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>108</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 4774 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>9548</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 4849 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>9698</pre></td>
     <td align="left" class="src coveredLine"><pre>    uid_to_vertex.left.insert({uid, v});</pre></td>
     </tr>
 
@@ -1373,7 +1373,7 @@
     <tr>
     <td align="right" class="lineno"><pre>154</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>148454</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>148690</pre></td>
     <td align="left" class="src coveredLine"><pre>  unsigned n_uids() const { return boost::num_vertices(graph); }</pre></td>
     </tr>
 
@@ -1394,7 +1394,7 @@
     <tr>
     <td align="right" class="lineno"><pre>157</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>184</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>188</pre></td>
     <td align="left" class="src coveredLine"><pre>  inline unsigned n_connections() const { return boost::num_edges(graph); }</pre></td>
     </tr>
 
@@ -1604,28 +1604,28 @@
     <tr>
     <td align="right" class="lineno"><pre>187</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>211104</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>211270</pre></td>
     <td align="left" class="src coveredLine"><pre>  auto get_all_uids() const {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>188</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 105552 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>211104</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 105635 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>211270</pre></td>
     <td align="left" class="src coveredLine"><pre>    return get_vertices_it() |</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>189</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>422208</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>422540</pre></td>
     <td align="left" class="src coveredLine"><pre>           boost::adaptors::transformed(</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>190</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 105552 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>422208</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 105635 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>422540</pre></td>
     <td align="left" class="src coveredLine"><pre>               [this](const auto&amp; v) { return get_uid(v); });</pre></td>
     </tr>
 
@@ -1765,14 +1765,14 @@
     <tr>
     <td align="right" class="lineno"><pre>210</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>2474</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2494</pre></td>
     <td align="left" class="src coveredLine"><pre>  auto get_edges_it() const {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>211</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 1237 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>2474</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 1247 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>2494</pre></td>
     <td align="left" class="src coveredLine"><pre>    return boost::make_iterator_range(boost::edges(graph));</pre></td>
     </tr>
 
@@ -1800,14 +1800,14 @@
     <tr>
     <td align="right" class="lineno"><pre>215</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>211104</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>211270</pre></td>
     <td align="left" class="src coveredLine"><pre>  auto get_vertices_it() const {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>216</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 105552 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>211104</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 105635 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>211270</pre></td>
     <td align="left" class="src coveredLine"><pre>    return boost::make_iterator_range(boost::vertices(graph));</pre></td>
     </tr>
 
@@ -1856,7 +1856,7 @@
     <tr>
     <td align="right" class="lineno"><pre>223</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>5376808</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>5377684</pre></td>
     <td align="left" class="src coveredLine"><pre>  const UnitID&amp; get_uid(Vertex v) const { return graph[v].uid; }</pre></td>
     </tr>
 
@@ -1877,14 +1877,14 @@
     <tr>
     <td align="right" class="lineno"><pre>226</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>29407999</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>29410675</pre></td>
     <td align="left" class="src coveredLine"><pre>  const left_map&amp; to_vertices() const { return uid_to_vertex.left; }</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>227</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>29230463</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>29231355</pre></td>
     <td align="left" class="src coveredLine"><pre>  Vertex to_vertices(const UID_t&amp; uid) const { return to_vertices().at(uid); }</pre></td>
     </tr>
 

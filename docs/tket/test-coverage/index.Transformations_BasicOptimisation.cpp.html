@@ -275,7 +275,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2021-10-14 17:12:06</td>
+            <td class="headerValue">2021-10-15 14:00:43</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">721</td>
@@ -561,14 +561,14 @@
     <tr>
     <td align="right" class="lineno"><pre>38</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>2178</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2190</pre></td>
     <td align="left" class="src coveredLine"><pre>Transform Transform::remove_redundancies() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>39</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 2178 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>2178</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 2190 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>2190</pre></td>
     <td align="left" class="src coveredLine"><pre>  return Transform(redundancy_removal);</pre></td>
     </tr>
 
@@ -617,49 +617,49 @@
     <tr>
     <td align="right" class="lineno"><pre>46</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>7926</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>7938</pre></td>
     <td align="left" class="src coveredLine"><pre>static bool redundancy_removal(Circuit &amp;circ) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>47</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>7926</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>7938</pre></td>
     <td align="left" class="src coveredLine"><pre>  bool success = false;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>48</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>7926</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>7938</pre></td>
     <td align="left" class="src coveredLine"><pre>  bool found_redundancy = true;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>49</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 7926 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>15852</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 7938 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>15876</pre></td>
     <td align="left" class="src coveredLine"><pre>  IndexMap im = circ.index_map();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>50</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>15852</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>15876</pre></td>
     <td align="left" class="src coveredLine"><pre>  std::set&lt;IVertex> old_affected_verts;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>51</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 7926 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 7926 times">&check;</span><span class="takenBranch" title="Branch 5 taken 7926 times">&check;</span><br/><span class="takenBranch" title="Branch 7 taken 56647 times">&check;</span><span class="takenBranch" title="Branch 8 taken 7926 times">&check;</span><span class="takenBranch" title="Branch 10 taken 56647 times">&check;</span><span class="takenBranch" title="Branch 11 taken 7926 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>72499</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 7938 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 7938 times">&check;</span><span class="takenBranch" title="Branch 5 taken 7938 times">&check;</span><br/><span class="takenBranch" title="Branch 7 taken 56719 times">&check;</span><span class="takenBranch" title="Branch 8 taken 7938 times">&check;</span><span class="takenBranch" title="Branch 10 taken 56719 times">&check;</span><span class="takenBranch" title="Branch 11 taken 7938 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>72595</pre></td>
     <td align="left" class="src coveredLine"><pre>  BGL_FORALL_VERTICES(v, circ.dag, DAG) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>52</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 56647 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 56647 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>56647</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 56719 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 56719 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>56719</pre></td>
     <td align="left" class="src coveredLine"><pre>    old_affected_verts.insert({im.at(v), v});</pre></td>
     </tr>
 
@@ -673,35 +673,35 @@
     <tr>
     <td align="right" class="lineno"><pre>54</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>7926</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>7938</pre></td>
     <td align="left" class="src coveredLine"><pre>  VertexList bin;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>55</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 13755 times">&check;</span><span class="takenBranch" title="Branch 1 taken 7926 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>21681</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 13779 times">&check;</span><span class="takenBranch" title="Branch 1 taken 7938 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>21717</pre></td>
     <td align="left" class="src coveredLine"><pre>  while (found_redundancy) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>56</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>27510</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>27558</pre></td>
     <td align="left" class="src coveredLine"><pre>    std::set&lt;IVertex> new_affected_verts;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>57</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 64290 times">&check;</span><span class="takenBranch" title="Branch 4 taken 13755 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>78045</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 64374 times">&check;</span><span class="takenBranch" title="Branch 4 taken 13779 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>78153</pre></td>
     <td align="left" class="src coveredLine"><pre>    for (const IVertex &amp;p : old_affected_verts) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>58</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 64290 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>64290</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 64374 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>64374</pre></td>
     <td align="left" class="src coveredLine"><pre>      remove_redundancy(circ, p.second, bin, new_affected_verts, im);</pre></td>
     </tr>
 
@@ -715,21 +715,21 @@
     <tr>
     <td align="right" class="lineno"><pre>60</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>13755</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>13779</pre></td>
     <td align="left" class="src coveredLine"><pre>    found_redundancy = new_affected_verts.size() != 0;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>61</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>13755</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>13779</pre></td>
     <td align="left" class="src coveredLine"><pre>    success |= found_redundancy;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>62</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 13755 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>13755</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 13779 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>13779</pre></td>
     <td align="left" class="src coveredLine"><pre>    old_affected_verts = new_affected_verts;</pre></td>
     </tr>
 
@@ -742,8 +742,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>64</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 7926 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>7926</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 7938 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>7938</pre></td>
     <td align="left" class="src coveredLine"><pre>  circ.remove_vertices(</pre></td>
     </tr>
 
@@ -757,7 +757,7 @@
     <tr>
     <td align="right" class="lineno"><pre>66</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>15852</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>15876</pre></td>
     <td align="left" class="src coveredLine"><pre>  return success;</pre></td>
     </tr>
 
@@ -792,7 +792,7 @@
     <tr>
     <td align="right" class="lineno"><pre>71</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>64290</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>64374</pre></td>
     <td align="left" class="src coveredLine"><pre>static bool remove_redundancy(</pre></td>
     </tr>
 
@@ -812,29 +812,29 @@
 
     <tr>
     <td align="right" class="lineno"><pre>74</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 64290 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>128580</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 64374 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>128748</pre></td>
     <td align="left" class="src coveredLine"><pre>  const Op_ptr op = circ.get_Op_ptr_from_Vertex(vert);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>75</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 64290 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>128580</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 64374 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>128748</pre></td>
     <td align="left" class="src coveredLine"><pre>  const OpDesc desc = op->get_desc();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>76</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 64290 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 22708 times">&check;</span><span class="takenBranch" title="Branch 4 taken 41582 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>64290</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 64374 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 22744 times">&check;</span><span class="takenBranch" title="Branch 4 taken 41630 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>64374</pre></td>
     <td align="left" class="src coveredLine"><pre>  if (!desc.is_gate()) return false;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>77</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 41582 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 41362 times">&check;</span><span class="takenBranch" title="Branch 4 taken 220 times">&check;</span><br/><span class="takenBranch" title="Branch 6 taken 41362 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><span class="takenBranch" title="Branch 9 taken 41362 times">&check;</span><br/><span class="takenBranch" title="Branch 10 taken 220 times">&check;</span><span class="takenBranch" title="Branch 11 taken 41362 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>41582</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 41630 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 41410 times">&check;</span><span class="takenBranch" title="Branch 4 taken 220 times">&check;</span><br/><span class="takenBranch" title="Branch 6 taken 41410 times">&check;</span><span class="notTakenBranch" title="Branch 7 not taken">&cross;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><span class="takenBranch" title="Branch 9 taken 41410 times">&check;</span><br/><span class="takenBranch" title="Branch 10 taken 220 times">&check;</span><span class="takenBranch" title="Branch 11 taken 41410 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>41630</pre></td>
     <td align="left" class="src coveredLine"><pre>  if (circ.n_out_edges(vert) == 0 || circ.n_in_edges(vert) == 0) {</pre></td>
     </tr>
 
@@ -862,35 +862,35 @@
     <tr>
     <td align="right" class="lineno"><pre>81</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>6899</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>6911</pre></td>
     <td align="left" class="src coveredLine"><pre>  auto remove_single_vertex = [&amp;bin, &amp;circ, &amp;new_affected_verts,</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>82</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>27596</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>27644</pre></td>
     <td align="left" class="src coveredLine"><pre>                               &amp;im](const Vertex &amp;v_remove) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>83</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>6899</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>6911</pre></td>
     <td align="left" class="src coveredLine"><pre>    bin.push_back(v_remove);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>84</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 6899 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 6899 times">&check;</span><span class="takenBranch" title="Branch 7 taken 6899 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>13798</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 6911 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 6911 times">&check;</span><span class="takenBranch" title="Branch 7 taken 6911 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>13822</pre></td>
     <td align="left" class="src coveredLine"><pre>    for (const Vertex &amp;l : circ.get_predecessors(v_remove)) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>85</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 6899 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 6899 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>6899</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 6911 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 6911 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>6911</pre></td>
     <td align="left" class="src coveredLine"><pre>      new_affected_verts.insert({im.at(l), l});</pre></td>
     </tr>
 
@@ -904,7 +904,7 @@
     <tr>
     <td align="right" class="lineno"><pre>87</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>6899</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>6911</pre></td>
     <td align="left" class="src coveredLine"><pre>    circ.remove_vertex(</pre></td>
     </tr>
 
@@ -918,7 +918,7 @@
     <tr>
     <td align="right" class="lineno"><pre>89</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>6899</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>6911</pre></td>
     <td align="left" class="src coveredLine"><pre>  };</pre></td>
     </tr>
 
@@ -931,43 +931,43 @@
 
     <tr>
     <td align="right" class="lineno"><pre>91</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 41362 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>41362</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 41410 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>41410</pre></td>
     <td align="left" class="src coveredLine"><pre>  std::optional&lt;double> a = op->is_identity();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>92</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 6891 times">&check;</span><span class="takenBranch" title="Branch 2 taken 34471 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>41362</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 6903 times">&check;</span><span class="takenBranch" title="Branch 2 taken 34507 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>41410</pre></td>
     <td align="left" class="src coveredLine"><pre>  if (a) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>93</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 6891 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>6891</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 6903 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>6903</pre></td>
     <td align="left" class="src coveredLine"><pre>    remove_single_vertex(vert);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>94</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 6891 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 6891 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 6891 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>6891</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 6903 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 6903 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 6903 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>6903</pre></td>
     <td align="left" class="src coveredLine"><pre>    circ.add_phase(a.value());</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>95</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>6891</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>6903</pre></td>
     <td align="left" class="src coveredLine"><pre>    return true;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>96</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 34471 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 6 times">&check;</span><span class="takenBranch" title="Branch 4 taken 34465 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>34471</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 34507 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 6 times">&check;</span><span class="takenBranch" title="Branch 4 taken 34501 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>34507</pre></td>
     <td align="left" class="src coveredLine"><pre>  } else if (desc.type() == OpType::noop) {</pre></td>
     </tr>
 
@@ -1001,8 +1001,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>101</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 34465 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>68930</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 34501 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>69002</pre></td>
     <td align="left" class="src coveredLine"><pre>  VertexVec kids = circ.get_successors(vert);</pre></td>
     </tr>
 
@@ -1029,22 +1029,22 @@
 
     <tr>
     <td align="right" class="lineno"><pre>105</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 34465 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 34454 times">&check;</span><span class="takenBranch" title="Branch 4 taken 11 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>34465</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 34501 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 34490 times">&check;</span><span class="takenBranch" title="Branch 4 taken 11 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>34501</pre></td>
     <td align="left" class="src coveredLine"><pre>  if (circ.n_out_edges_of_type(vert, EdgeType::Classical) == 0) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>106</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>34454</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>34490</pre></td>
     <td align="left" class="src coveredLine"><pre>    bool z_followed_by_measures = true;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>107</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 41091 times">&check;</span><span class="takenBranch" title="Branch 2 taken 27820 times">&check;</span><span class="takenBranch" title="Branch 3 taken 34457 times">&check;</span><span class="takenBranch" title="Branch 4 taken 6634 times">&check;</span><br/><span class="takenBranch" title="Branch 5 taken 34457 times">&check;</span><span class="takenBranch" title="Branch 6 taken 34454 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>68911</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 41127 times">&check;</span><span class="takenBranch" title="Branch 2 taken 27856 times">&check;</span><span class="takenBranch" title="Branch 3 taken 34493 times">&check;</span><span class="takenBranch" title="Branch 4 taken 6634 times">&check;</span><br/><span class="takenBranch" title="Branch 5 taken 34493 times">&check;</span><span class="takenBranch" title="Branch 6 taken 34490 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>68983</pre></td>
     <td align="left" class="src coveredLine"><pre>    for (port_t port = 0; port &lt; kids.size() &amp;&amp; z_followed_by_measures;</pre></td>
     </tr>
 
@@ -1057,8 +1057,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>109</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 34457 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 13 times">&check;</span><span class="takenBranch" title="Branch 5 taken 34444 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>34457</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 34493 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 13 times">&check;</span><span class="takenBranch" title="Branch 5 taken 34480 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>34493</pre></td>
     <td align="left" class="src coveredLine"><pre>      if (circ.get_OpType_from_Vertex(kids[port]) == OpType::Measure) {</pre></td>
     </tr>
 
@@ -1079,7 +1079,7 @@
     <tr>
     <td align="right" class="lineno"><pre>112</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>34444</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>34480</pre></td>
     <td align="left" class="src coveredLine"><pre>        z_followed_by_measures = false;</pre></td>
     </tr>
 
@@ -1099,8 +1099,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>115</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 2 times">&check;</span><span class="takenBranch" title="Branch 1 taken 34452 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>34454</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 2 times">&check;</span><span class="takenBranch" title="Branch 1 taken 34488 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>34490</pre></td>
     <td align="left" class="src coveredLine"><pre>    if (z_followed_by_measures) {</pre></td>
     </tr>
 
@@ -1155,8 +1155,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>123</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 27816 times">&check;</span><span class="takenBranch" title="Branch 2 taken 6647 times">&check;</span><span class="takenBranch" title="Branch 5 taken 27816 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 8 taken 22740 times">&check;</span><span class="takenBranch" title="Branch 9 taken 5076 times">&check;</span><span class="takenBranch" title="Branch 10 taken 27816 times">&check;</span><span class="takenBranch" title="Branch 11 taken 6647 times">&check;</span><br/><span class="takenBranch" title="Branch 13 taken 22740 times">&check;</span><span class="takenBranch" title="Branch 14 taken 11723 times">&check;</span><span class="notTakenBranch" title="Branch 15 not taken">&cross;</span><span class="notTakenBranch" title="Branch 16 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>34463</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 27852 times">&check;</span><span class="takenBranch" title="Branch 2 taken 6647 times">&check;</span><span class="takenBranch" title="Branch 5 taken 27852 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 8 taken 22776 times">&check;</span><span class="takenBranch" title="Branch 9 taken 5076 times">&check;</span><span class="takenBranch" title="Branch 10 taken 27852 times">&check;</span><span class="takenBranch" title="Branch 11 taken 6647 times">&check;</span><br/><span class="takenBranch" title="Branch 13 taken 22776 times">&check;</span><span class="takenBranch" title="Branch 14 taken 11723 times">&check;</span><span class="notTakenBranch" title="Branch 15 not taken">&cross;</span><span class="notTakenBranch" title="Branch 16 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>34499</pre></td>
     <td align="left" class="src coveredLine"><pre>  if ((kids.size() == 1) &amp;&amp; (circ.get_predecessors(kids[0]).size() == 1)) {</pre></td>
     </tr>
 
@@ -1170,28 +1170,28 @@
     <tr>
     <td align="right" class="lineno"><pre>125</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>22740</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>22776</pre></td>
     <td align="left" class="src coveredLine"><pre>    Vertex b = kids[0];</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>126</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 22740 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>22740</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 22776 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>22776</pre></td>
     <td align="left" class="src coveredLine"><pre>    EdgeVec ins = circ.get_in_edges(b);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>127</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 23782 times">&check;</span><span class="takenBranch" title="Branch 4 taken 22720 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>46502</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 23818 times">&check;</span><span class="takenBranch" title="Branch 4 taken 22756 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>46574</pre></td>
     <td align="left" class="src coveredLine"><pre>    for (const Edge &amp;in : ins) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>128</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 23782 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 23782 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 6 taken 20 times">&check;</span><span class="takenBranch" title="Branch 7 taken 23762 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>23782</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 23818 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 23818 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 6 taken 20 times">&check;</span><span class="takenBranch" title="Branch 7 taken 23798 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>23818</pre></td>
     <td align="left" class="src coveredLine"><pre>      if (circ.get_source_port(in) != circ.get_target_port(in)) return false;</pre></td>
     </tr>
 
@@ -1218,8 +1218,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>132</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 22720 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 22720 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>22720</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 22756 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 22756 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>22756</pre></td>
     <td align="left" class="src coveredLine"><pre>    if (circ.n_in_edges_of_type(vert, EdgeType::Boolean) != 0) return false;</pre></td>
     </tr>
 
@@ -1232,15 +1232,15 @@
 
     <tr>
     <td align="right" class="lineno"><pre>134</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 22720 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>22720</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 22756 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>22756</pre></td>
     <td align="left" class="src coveredLine"><pre>    const Op_ptr b_op = circ.get_Op_ptr_from_Vertex(b);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>135</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 22720 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>22720</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 22756 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>22756</pre></td>
     <td align="left" class="src coveredLine"><pre>    const OpDesc b_desc = b_op->get_desc();</pre></td>
     </tr>
 
@@ -1253,8 +1253,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>137</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 22720 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 14494 times">&check;</span><span class="takenBranch" title="Branch 4 taken 8226 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>22720</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 22756 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 14518 times">&check;</span><span class="takenBranch" title="Branch 4 taken 8238 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>22756</pre></td>
     <td align="left" class="src coveredLine"><pre>    if (!b_desc.is_oneway()) {</pre></td>
     </tr>
 
@@ -1288,8 +1288,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>142</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 14494 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 7 taken 14494 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 10 taken 1137 times">&check;</span><span class="takenBranch" title="Branch 11 taken 13357 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>14494</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 14518 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 7 taken 14518 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 10 taken 1137 times">&check;</span><span class="takenBranch" title="Branch 11 taken 13381 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>14518</pre></td>
     <td align="left" class="src coveredLine"><pre>      if (*b_op->dagger() == *op) {</pre></td>
     </tr>
 
@@ -1379,8 +1379,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>155</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 13357 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 11890 times">&check;</span><span class="takenBranch" title="Branch 4 taken 1467 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>13357</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 13381 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 11902 times">&check;</span><span class="takenBranch" title="Branch 4 taken 1479 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>13381</pre></td>
     <td align="left" class="src coveredLine"><pre>      } else if (desc.is_rotation()) {</pre></td>
     </tr>
 
@@ -1400,8 +1400,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>158</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 11890 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 11890 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 6 taken 201 times">&check;</span><span class="takenBranch" title="Branch 7 taken 11689 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>11890</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 11902 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 11902 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 6 taken 201 times">&check;</span><span class="takenBranch" title="Branch 7 taken 11701 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>11902</pre></td>
     <td align="left" class="src coveredLine"><pre>        if (b_desc.type() == desc.type()) {</pre></td>
     </tr>
 
@@ -1590,7 +1590,7 @@
     <tr>
     <td align="right" class="lineno"><pre>185</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>33105</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>33141</pre></td>
     <td align="left" class="src coveredLine"><pre>  return false;</pre></td>
     </tr>
 

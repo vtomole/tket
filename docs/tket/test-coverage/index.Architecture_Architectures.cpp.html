@@ -275,7 +275,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2021-10-14 17:12:06</td>
+            <td class="headerValue">2021-10-15 14:00:43</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">211</td>
@@ -1310,49 +1310,49 @@
     <tr>
     <td align="right" class="lineno"><pre>145</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>137</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>147</pre></td>
     <td align="left" class="src coveredLine"><pre>MatrixXb Architecture::get_connectivity() const {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>146</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 137 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>137</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 147 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>147</pre></td>
     <td align="left" class="src coveredLine"><pre>  unsigned n = n_uids();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>147</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 137 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>137</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 147 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>147</pre></td>
     <td align="left" class="src coveredLine"><pre>  MatrixXb connectivity = MatrixXb(n, n);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>148</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 857 times">&check;</span><span class="takenBranch" title="Branch 1 taken 137 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>994</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 900 times">&check;</span><span class="takenBranch" title="Branch 1 taken 147 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>1047</pre></td>
     <td align="left" class="src coveredLine"><pre>  for (unsigned i = 0; i != n; ++i) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>149</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 7315 times">&check;</span><span class="takenBranch" title="Branch 1 taken 857 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>8172</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 7502 times">&check;</span><span class="takenBranch" title="Branch 1 taken 900 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>8402</pre></td>
     <td align="left" class="src coveredLine"><pre>    for (unsigned j = 0; j != n; ++j) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>150</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 7315 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 7315 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 7315 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>14630</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 7502 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 7502 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 7502 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>15004</pre></td>
     <td align="left" class="src coveredLine"><pre>      connectivity(i, j) = connection_exists(Node(i), Node(j)) |</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>151</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 7315 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 7315 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 7315 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><span class="takenBranch" title="Branch 10 taken 7315 times">&check;</span><span class="notTakenBranch" title="Branch 11 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>7315</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 7502 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 7502 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 7 taken 7502 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><span class="takenBranch" title="Branch 10 taken 7502 times">&check;</span><span class="notTakenBranch" title="Branch 11 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>7502</pre></td>
     <td align="left" class="src coveredLine"><pre>                           connection_exists(Node(j), Node(i));</pre></td>
     </tr>
 
@@ -1373,7 +1373,7 @@
     <tr>
     <td align="right" class="lineno"><pre>154</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>274</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>294</pre></td>
     <td align="left" class="src coveredLine"><pre>  return connectivity;</pre></td>
     </tr>
 
@@ -1674,28 +1674,28 @@
     <tr>
     <td align="right" class="lineno"><pre>197</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1116</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1130</pre></td>
     <td align="left" class="src coveredLine"><pre>void to_json(nlohmann::json&amp; j, const Architecture::Connection&amp; link) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>198</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 1116 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>1116</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 1130 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>1130</pre></td>
     <td align="left" class="src coveredLine"><pre>  j.push_back(link.first);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>199</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 1116 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>1116</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 1130 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>1130</pre></td>
     <td align="left" class="src coveredLine"><pre>  j.push_back(link.second);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>200</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1116</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1130</pre></td>
     <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>
 
@@ -1744,7 +1744,7 @@
     <tr>
     <td align="right" class="lineno"><pre>207</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>96</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>100</pre></td>
     <td align="left" class="src coveredLine"><pre>void to_json(nlohmann::json&amp; j, const Architecture&amp; ar) {</pre></td>
     </tr>
 
@@ -1757,22 +1757,22 @@
 
     <tr>
     <td align="right" class="lineno"><pre>209</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 96 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>192</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 100 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>200</pre></td>
     <td align="left" class="src coveredLine"><pre>  auto uid_its = ar.get_all_uids();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>210</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 96 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 96 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 8 taken 96 times">&check;</span><span class="notTakenBranch" title="Branch 9 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>288</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 100 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 100 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 8 taken 100 times">&check;</span><span class="notTakenBranch" title="Branch 9 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>300</pre></td>
     <td align="left" class="src coveredLine"><pre>  std::vector&lt;Node> nodes{uid_its.begin(), uid_its.end()};</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>211</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 96 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 96 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>96</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 100 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 100 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>100</pre></td>
     <td align="left" class="src coveredLine"><pre>  j["nodes"] = nodes;</pre></td>
     </tr>
 
@@ -1786,42 +1786,42 @@
     <tr>
     <td align="right" class="lineno"><pre>213</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>96</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>100</pre></td>
     <td align="left" class="src coveredLine"><pre>  nlohmann::json links;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>214</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 96 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 1106 times">&check;</span><span class="takenBranch" title="Branch 7 taken 96 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>1202</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 100 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 1120 times">&check;</span><span class="takenBranch" title="Branch 7 taken 100 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>1220</pre></td>
     <td align="left" class="src coveredLine"><pre>  for (const Architecture::Connection&amp; con : ar.get_connections_vec()) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>215</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>2212</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2240</pre></td>
     <td align="left" class="src coveredLine"><pre>    nlohmann::json entry;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>216</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1106 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 1106 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>1106</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1120 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 1120 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>1120</pre></td>
     <td align="left" class="src coveredLine"><pre>    entry["link"] = con;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>217</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 1106 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 7 taken 1106 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>1106</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 1120 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 7 taken 1120 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>1120</pre></td>
     <td align="left" class="src coveredLine"><pre>    entry["weight"] = ar.get_connection_weight(con.first, con.second);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>218</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1106 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>1106</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1120 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>1120</pre></td>
     <td align="left" class="src coveredLine"><pre>    links.push_back(entry);</pre></td>
     </tr>
 
@@ -1834,15 +1834,15 @@
 
     <tr>
     <td align="right" class="lineno"><pre>220</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 96 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 96 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>96</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 100 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 100 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>100</pre></td>
     <td align="left" class="src coveredLine"><pre>  j["links"] = links;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>221</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>96</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>100</pre></td>
     <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>
 

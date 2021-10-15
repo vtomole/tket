@@ -275,7 +275,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2021-10-14 17:12:06</td>
+            <td class="headerValue">2021-10-15 14:00:43</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">474</td>
@@ -1226,35 +1226,35 @@
     <tr>
     <td align="right" class="lineno"><pre>133</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>49</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>51</pre></td>
     <td align="left" class="src coveredLine"><pre>bool NoClassicalControlPredicate::verify(const Circuit&amp; circ) const {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>134</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 49 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 49 times">&check;</span><span class="takenBranch" title="Branch 5 taken 45 times">&check;</span><br/><span class="takenBranch" title="Branch 7 taken 1328 times">&check;</span><span class="takenBranch" title="Branch 8 taken 45 times">&check;</span><span class="takenBranch" title="Branch 10 taken 1328 times">&check;</span><span class="takenBranch" title="Branch 11 taken 45 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>1418</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 51 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 51 times">&check;</span><span class="takenBranch" title="Branch 5 taken 47 times">&check;</span><br/><span class="takenBranch" title="Branch 7 taken 1386 times">&check;</span><span class="takenBranch" title="Branch 8 taken 47 times">&check;</span><span class="takenBranch" title="Branch 10 taken 1386 times">&check;</span><span class="takenBranch" title="Branch 11 taken 47 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>1480</pre></td>
     <td align="left" class="src coveredLine"><pre>  BGL_FORALL_VERTICES(v, circ.dag, DAG) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>135</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1328 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>1328</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1386 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>1386</pre></td>
     <td align="left" class="src coveredLine"><pre>    Op_ptr op = circ.get_Op_ptr_from_Vertex(v);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>136</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1328</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1386</pre></td>
     <td align="left" class="src coveredLine"><pre>    OpType ot = op->get_type();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>137</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 3 times">&check;</span><span class="takenBranch" title="Branch 1 taken 1325 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>1328</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 3 times">&check;</span><span class="takenBranch" title="Branch 1 taken 1383 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>1386</pre></td>
     <td align="left" class="src coveredLine"><pre>    if (ot == OpType::Conditional)</pre></td>
     </tr>
 
@@ -1267,8 +1267,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>139</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 1323 times">&check;</span><span class="takenBranch" title="Branch 1 taken 2 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 1323 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>1325</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 1381 times">&check;</span><span class="takenBranch" title="Branch 1 taken 2 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 1381 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>1383</pre></td>
     <td align="left" class="src coveredLine"><pre>    else if (ot == OpType::CircBox || ot == OpType::Composite) {</pre></td>
     </tr>
 
@@ -1303,7 +1303,7 @@
     <tr>
     <td align="right" class="lineno"><pre>144</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>45</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>47</pre></td>
     <td align="left" class="src coveredLine"><pre>  return true;</pre></td>
     </tr>
 
@@ -2332,7 +2332,7 @@
     <tr>
     <td align="right" class="lineno"><pre>291</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>63</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>67</pre></td>
     <td align="left" class="src coveredLine"><pre>bool PlacementPredicate::implies(const Predicate&amp; other) const {</pre></td>
     </tr>
 
@@ -2345,22 +2345,22 @@
 
     <tr>
     <td align="right" class="lineno"><pre>293</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 63 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 63 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>126</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 67 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 67 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>134</pre></td>
     <td align="left" class="src coveredLine"><pre>      dynamic_cast&lt;const PlacementPredicate&amp;>(other);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>294</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 431 times">&check;</span><span class="takenBranch" title="Branch 4 taken 63 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>494</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 449 times">&check;</span><span class="takenBranch" title="Branch 4 taken 67 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>516</pre></td>
     <td align="left" class="src coveredLine"><pre>  for (const Node&amp; node : nodes_) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>295</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 431 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 431 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>431</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 449 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><span class="takenBranch" title="Branch 6 taken 449 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>449</pre></td>
     <td align="left" class="src coveredLine"><pre>    if (other_p.nodes_.find(node) == other_p.nodes_.end()) return false;</pre></td>
     </tr>
 
@@ -2374,7 +2374,7 @@
     <tr>
     <td align="right" class="lineno"><pre>297</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>63</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>67</pre></td>
     <td align="left" class="src coveredLine"><pre>  return true;</pre></td>
     </tr>
 
@@ -3725,7 +3725,7 @@
     <tr>
     <td align="right" class="lineno"><pre>490</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>45</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>49</pre></td>
     <td align="left" class="src coveredLine"><pre>bool MaxNQubitsPredicate::implies(const Predicate&amp; other) const {</pre></td>
     </tr>
 
@@ -3745,15 +3745,15 @@
 
     <tr>
     <td align="right" class="lineno"><pre>493</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 45 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>45</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 49 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>49</pre></td>
     <td align="left" class="src coveredLine"><pre>        dynamic_cast&lt;const MaxNQubitsPredicate&amp;>(other);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>494</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>45</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>49</pre></td>
     <td align="left" class="src coveredLine"><pre>    return n_qubits_ &lt;= other_p.n_qubits_;</pre></td>
     </tr>
 
