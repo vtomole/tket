@@ -329,14 +329,8 @@ PassPtr aas_routing_pass(
           }
           break;
         }
-        case OpType::H: {
-          circ.add_op<Node>(ot, {Node(qbs[0])});
-          break;
-        }
-        case OpType::Collapse: {
-          circ.add_op<Node>(ot, {Node(qbs[0])});
-          break;
-        }
+        case OpType::H:
+        case OpType::Collapse:
         case OpType::Reset: {
           circ.add_op<Node>(ot, {Node(qbs[0])});
           break;

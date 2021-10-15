@@ -2118,6 +2118,53 @@ SCENARIO("Routing on architecture with non-contiguous qubit labels") {
   }
 }
 
+SCENARIO("Routing of aas example - fails") {
+  GIVEN("aas routing - lookahead") {
+    // running aas pass with lookahead 0, which is not allowed
+    Architecture arc(std::vector<Connection>{
+        {Node(0), Node(1)}, {Node(1), Node(2)}, {Node(2), Node(3)}});
+    PassPtr pass = aas_routing_pass(arc, 0, aas::CNotSynthType::Rec);
+    Circuit circ(4);
+    circ.add_op<unsigned>(OpType::H, {0});
+    circ.add_op<unsigned>(OpType::H, {1});
+    circ.add_op<unsigned>(OpType::H, {2});
+    circ.add_op<unsigned>(OpType::H, {3});
+
+    CompilationUnit cu(circ);
+
+    REQUIRE_THROWS_AS(pass->apply(cu), std::logic_error);
+  }
+  GIVEN("aas routing - arch") {
+    // creating circuit which has more qubits then nodes in the architecture
+    Architecture arc(
+        std::vector<Connection>{{Node(0), Node(1)}, {Node(1), Node(2)}});
+    PassPtr pass = aas_routing_pass(arc, 1, aas::CNotSynthType::Rec);
+    Circuit circ(4);
+    circ.add_op<unsigned>(OpType::H, {0});
+    circ.add_op<unsigned>(OpType::H, {1});
+    circ.add_op<unsigned>(OpType::H, {2});
+    circ.add_op<unsigned>(OpType::H, {3});
+
+    CompilationUnit cu(circ);
+    REQUIRE_THROWS_AS(pass->apply(cu), std::logic_error);
+  }
+  GIVEN("aas routing - X gate") {
+    // creating circuit which contains gates which are not implemented
+    Architecture arc(std::vector<Connection>{
+        {Node(0), Node(1)}, {Node(1), Node(2)}, {Node(2), Node(3)}});
+    PassPtr placepass = gen_placement_pass_phase_poly(arc);
+    PassPtr pass = aas_routing_pass(arc, 1, aas::CNotSynthType::Rec);
+    Circuit circ(4);
+    circ.add_op<unsigned>(OpType::X, {0});
+    circ.add_op<unsigned>(OpType::X, {1});
+    circ.add_op<unsigned>(OpType::X, {2});
+    circ.add_op<unsigned>(OpType::X, {3});
+
+    CompilationUnit cu(circ);
+    placepass->apply(cu);
+    REQUIRE_THROWS_AS(pass->apply(cu), NotImplemented);
+  }
+}
 SCENARIO("Routing of aas example") {
   GIVEN("aas routing - simple example") {
     Architecture arc(std::vector<Connection>{
