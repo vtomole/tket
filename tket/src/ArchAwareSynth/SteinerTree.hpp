@@ -166,7 +166,6 @@ class SteinerTree {
  */
 class CNotSwapSynth {
  public:
-  CNotSwapSynth() {}
   /**
    * construct the object for the cnot swap synth and perform the reduction
    * @param pathhandler path for reduction

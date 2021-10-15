@@ -80,7 +80,7 @@ PathHandler::PathHandler(const MatrixXb &connectivity) {
 }
 
 PathHandler PathHandler::construct_acyclic_handler() const {
-  PathHandler acyclic_handler;
+  // PathHandler acyclic_handler;
   unsigned n = distance_matrix_.rows();
   MatrixXb acyclic_connectivity(n, n);
   std::vector<unsigned> num_neighbours(n, 0);

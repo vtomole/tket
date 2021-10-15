@@ -438,22 +438,17 @@ static std::pair<unsigned, std::vector<unsigned>> steiner_reduce(
     CNotSynthType cnottype) {
   std::pair<unsigned, std::vector<unsigned>> result;
 
-  PathHandler directed_paths;
-
+  MatrixXb directed_connectivity = paths.get_connectivity_matrix();
   std::list<unsigned> fresh_node_list(nodes);
 
   if (upper) {
-    MatrixXb directed_connectivity = paths.get_connectivity_matrix();
     for (unsigned i = 0; i < directed_connectivity.rows(); ++i) {
       for (unsigned j = 0; j < directed_connectivity.cols(); ++j) {
         if (i < root) directed_connectivity(i, j) = 0;
         if (j < root) directed_connectivity(i, j) = 0;
       }
     }
-
-    directed_paths = PathHandler(directed_connectivity);
   } else {
-    MatrixXb directed_connectivity = paths.get_connectivity_matrix();
     if (cnottype == CNotSynthType::HamPath) {
       for (unsigned i = 0; i < directed_connectivity.rows(); ++i) {
         for (unsigned j = 0; j < directed_connectivity.cols(); ++j) {
@@ -462,9 +457,8 @@ static std::pair<unsigned, std::vector<unsigned>> steiner_reduce(
         }
       }
     }
-
-    directed_paths = PathHandler(directed_connectivity);
   }
+  PathHandler directed_paths = PathHandler(directed_connectivity);
   SteinerTree cnot_tree = SteinerTree(directed_paths, fresh_node_list, root);
 
   // make list of edges, starting from root to leaves of tree

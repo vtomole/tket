@@ -30,9 +30,7 @@ typedef Eigen::Matrix<unsigned, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor>
  */
 class PathHandler {
  public:
-  PathHandler() {}
-
-  /**
+    /**
    * Initialises the pathhandler with a given architecture. Architecture
    * initialisation assumes symmetric connectivity.
    * @param arch architecture giving the undirected graph for the initialisation

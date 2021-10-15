@@ -83,8 +83,7 @@ SCENARIO("Check graph construction is correct") {
         1, 0, 0,              // 1
         0, 0, 0;              // 2
 
-    aas::PathHandler handler;
-    handler = aas::PathHandler(connectivity);
+    aas::PathHandler handler = aas::PathHandler(connectivity);
 
     aas::MatrixXu correct_distance_matrix(3, 3);
     REQUIRE(handler.get_distance_matrix()(0, 0) == 0);
