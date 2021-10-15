@@ -51,7 +51,7 @@ var searchData=
   ['gen_5fdirected_5fcx_5frouting_5fpass_617',['gen_directed_cx_routing_pass',['../namespacetket.html#abc545f0f3e8e88962d68fe0f17491929',1,'tket']]],
   ['gen_5feuler_5fpass_618',['gen_euler_pass',['../namespacetket.html#a864a56176ac3f123b6b3a7f8f1ae14b6',1,'tket']]],
   ['gen_5ffull_5fmapping_5fpass_619',['gen_full_mapping_pass',['../namespacetket.html#a0b08f0f414af9a3956ded22cf58967e3',1,'tket']]],
-  ['gen_5ffull_5fmapping_5fpass_5fphase_5fpoly_620',['gen_full_mapping_pass_phase_poly',['../namespacetket.html#a086e5d8b7598e80a3b9f2f8acf0879d0',1,'tket']]],
+  ['gen_5ffull_5fmapping_5fpass_5fphase_5fpoly_620',['gen_full_mapping_pass_phase_poly',['../namespacetket.html#a7035ff6c0d1cf8177d6dbb3f9093c2e7',1,'tket']]],
   ['gen_5fgraycode_621',['gen_graycode',['../namespacetket.html#aaf5bed29c38ac3decc55325da71ec018',1,'tket']]],
   ['gen_5foptimise_5fphase_5fgadgets_622',['gen_optimise_phase_gadgets',['../namespacetket.html#a95690781262d22df0071113af874dcb8',1,'tket']]],
   ['gen_5fpairwise_5fpauli_5fgadgets_623',['gen_pairwise_pauli_gadgets',['../namespacetket.html#a7b2b50dc805ddddaa8670c06b73db427',1,'tket']]],

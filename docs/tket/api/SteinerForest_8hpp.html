@@ -150,9 +150,12 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="SteinerForest_8hpp__dep__incl.png" border="0" usemap="#src_2ArchAwareSynth_2SteinerForest_8hppdep" alt=""/></div>
 <map name="src_2ArchAwareSynth_2SteinerForest_8hppdep" id="src_2ArchAwareSynth_2SteinerForest_8hppdep">
-<area shape="rect" title=" " alt="" coords="116,5,268,47"/>
-<area shape="rect" href="SteinerForest_8cpp.html" title=" " alt="" coords="5,95,157,136"/>
-<area shape="rect" href="PassGenerators_8cpp.html" title=" " alt="" coords="181,102,427,129"/>
+<area shape="rect" title=" " alt="" coords="317,5,469,47"/>
+<area shape="rect" href="SteinerForest_8cpp.html" title=" " alt="" coords="93,95,245,136"/>
+<area shape="rect" href="PassGenerators_8hpp.html" title=" " alt="" coords="270,102,517,129"/>
+<area shape="rect" href="PassGenerators_8cpp.html" title=" " alt="" coords="501,184,747,211"/>
+<area shape="rect" href="CompilerPass_8cpp.html" title=" " alt="" coords="5,184,237,211"/>
+<area shape="rect" href="PassLibrary_8cpp.html" title=" " alt="" coords="261,184,477,211"/>
 </map>
 </div>
 </div>
@@ -160,6 +163,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtket_1_1aas_1_1NoHamiltonPath.html">tket::aas::NoHamiltonPath</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtket_1_1aas_1_1SteinerForest.html">tket::aas::SteinerForest</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a series of sequential operations on an architecture, each of which are represented by Steiner trees.  <a href="classtket_1_1aas_1_1SteinerForest.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,6 +196,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aeca70b152331fa41de5c65a17c05adf1"><td class="memItemLeft" align="right" valign="top">CostedOperations&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket_1_1aas.html#aeca70b152331fa41de5c65a17c05adf1">tket::aas::recursive_operation_search</a> (const PathHandler &amp;path, SteinerForest forest, unsigned lookahead, OperationList row_operations)</td></tr>
 <tr class="memdesc:aeca70b152331fa41de5c65a17c05adf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">searches for the best operation in the given forest with operation which are applied to the forest before the search is started  <a href="namespacetket_1_1aas.html#aeca70b152331fa41de5c65a17c05adf1">More...</a><br /></td></tr>
 <tr class="separator:aeca70b152331fa41de5c65a17c05adf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40bb54b5123ed6ac35c69144f7fbb2e4"><td class="memItemLeft" align="right" valign="top">Circuit&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket_1_1aas.html#a40bb54b5123ed6ac35c69144f7fbb2e4">tket::aas::phase_poly_synthesis_int</a> (const Architecture &amp;arch, const PhasePolyBox &amp;phasepolybox, unsigned lookahead=1, CNotSynthType cnottype=CNotSynthType::Rec)</td></tr>
+<tr class="memdesc:a40bb54b5123ed6ac35c69144f7fbb2e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for architecture aware synthesis without the rename of the qubits and nodes of the architecture.  <a href="namespacetket_1_1aas.html#a40bb54b5123ed6ac35c69144f7fbb2e4">More...</a><br /></td></tr>
+<tr class="separator:a40bb54b5123ed6ac35c69144f7fbb2e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dcc277d91b50f17effa5fc5a1036af3"><td class="memItemLeft" align="right" valign="top">Circuit&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket_1_1aas.html#a7dcc277d91b50f17effa5fc5a1036af3">tket::aas::phase_poly_synthesis</a> (const Architecture &amp;arch, const PhasePolyBox &amp;phasepolybox, unsigned lookahead, CNotSynthType cnottype=CNotSynthType::Rec)</td></tr>
 <tr class="memdesc:a7dcc277d91b50f17effa5fc5a1036af3"><td class="mdescLeft">&#160;</td><td class="mdescRight">main function for architecture aware synthesis in tket at the moment.  <a href="namespacetket_1_1aas.html#a7dcc277d91b50f17effa5fc5a1036af3">More...</a><br /></td></tr>
 <tr class="separator:a7dcc277d91b50f17effa5fc5a1036af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
