@@ -1,7 +1,0 @@
-<map id="tket::ExplicitPredicateOp" name="tket::ExplicitPredicateOp">
-<area shape="rect" id="node1" title="A predicate defined explicitly by a truth table." alt="" coords="5,319,188,345"/>
-<area shape="rect" id="node2" href="$classtket_1_1PredicateOp.html" title="A classical operation with single output bit." alt="" coords="29,244,164,271"/>
-<area shape="rect" id="node3" href="$classtket_1_1ClassicalOp.html" title="A purely classical operation." alt="" coords="31,169,162,196"/>
-<area shape="rect" id="node4" href="$classtket_1_1Op.html" title="Abstract class representing an operation type." alt="" coords="60,95,133,121"/>
-<area shape="rect" id="node5" title=" " alt="" coords="24,5,169,47"/>
-</map>

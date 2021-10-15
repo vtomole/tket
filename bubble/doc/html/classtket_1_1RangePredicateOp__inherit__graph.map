@@ -1,7 +1,0 @@
-<map id="tket::RangePredicateOp" name="tket::RangePredicateOp">
-<area shape="rect" id="node1" title="A predicate defined by a range of values in binary encoding." alt="" coords="5,319,180,345"/>
-<area shape="rect" id="node2" href="$classtket_1_1PredicateOp.html" title="A classical operation with single output bit." alt="" coords="25,244,160,271"/>
-<area shape="rect" id="node3" href="$classtket_1_1ClassicalOp.html" title="A purely classical operation." alt="" coords="27,169,158,196"/>
-<area shape="rect" id="node4" href="$classtket_1_1Op.html" title="Abstract class representing an operation type." alt="" coords="56,95,129,121"/>
-<area shape="rect" id="node5" title=" " alt="" coords="20,5,165,47"/>
-</map>
