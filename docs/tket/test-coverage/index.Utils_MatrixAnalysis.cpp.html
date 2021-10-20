@@ -275,7 +275,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2021-10-15 14:00:43</td>
+            <td class="headerValue">2021-10-20 12:29:45</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">652</td>
@@ -4677,7 +4677,7 @@
     <tr>
     <td align="right" class="lineno"><pre>626</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>99216</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>99222</pre></td>
     <td align="left" class="src coveredLine"><pre>unsigned get_matrix_size(unsigned number_of_qubits) {</pre></td>
     </tr>
 
@@ -4704,29 +4704,29 @@
 
     <tr>
     <td align="right" class="lineno"><pre>630</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 98215 times">&check;</span><span class="takenBranch" title="Branch 1 taken 1001 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>99216</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 98221 times">&check;</span><span class="takenBranch" title="Branch 1 taken 1001 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>99222</pre></td>
     <td align="left" class="src coveredLine"><pre>  if (number_of_qubits &lt; std::numeric_limits&lt;unsigned>::digits) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>631</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>98215</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>98221</pre></td>
     <td align="left" class="src coveredLine"><pre>    unsigned size = 1;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>632</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>98215</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>98221</pre></td>
     <td align="left" class="src coveredLine"><pre>    size &lt;&lt;= number_of_qubits;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>633</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>98215</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>98221</pre></td>
     <td align="left" class="src coveredLine"><pre>    return size;</pre></td>
     </tr>
 
@@ -4775,28 +4775,28 @@
     <tr>
     <td align="right" class="lineno"><pre>640</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>36275</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>36277</pre></td>
     <td align="left" class="src coveredLine"><pre>unsigned get_number_of_qubits(unsigned matrix_size) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>641</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>36275</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>36277</pre></td>
     <td align="left" class="src coveredLine"><pre>  unsigned n_qubits = (unsigned)log2(matrix_size);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>642</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 36275 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 33053 times">&check;</span><span class="takenBranch" title="Branch 4 taken 3222 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>36275</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 36277 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 33055 times">&check;</span><span class="takenBranch" title="Branch 4 taken 3222 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>36277</pre></td>
     <td align="left" class="src coveredLine"><pre>  if (get_matrix_size(n_qubits) == matrix_size) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>643</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>33053</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>33055</pre></td>
     <td align="left" class="src coveredLine"><pre>    return n_qubits;</pre></td>
     </tr>
 
@@ -4852,7 +4852,7 @@
     <tr>
     <td align="right" class="lineno"><pre>651</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>30811</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>30813</pre></td>
     <td align="left" class="src coveredLine"><pre>SparseMatrixXcd get_sparse_matrix(</pre></td>
     </tr>
 
@@ -4866,21 +4866,21 @@
     <tr>
     <td align="right" class="lineno"><pre>653</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>30811</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>30813</pre></td>
     <td align="left" class="src coveredLine"><pre>  SparseMatrixXcd matr(rows, cols);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>654</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 30811 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>30811</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 30813 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>30813</pre></td>
     <td align="left" class="src coveredLine"><pre>  matr.setFromTriplets(triplets.cbegin(), triplets.cend());</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>655</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>30811</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>30813</pre></td>
     <td align="left" class="src coveredLine"><pre>  return matr;</pre></td>
     </tr>
 
@@ -4901,7 +4901,7 @@
     <tr>
     <td align="right" class="lineno"><pre>658</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>30342</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>30344</pre></td>
     <td align="left" class="src coveredLine"><pre>SparseMatrixXcd get_sparse_square_matrix(</pre></td>
     </tr>
 
@@ -4915,7 +4915,7 @@
     <tr>
     <td align="right" class="lineno"><pre>660</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>30342</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>30344</pre></td>
     <td align="left" class="src coveredLine"><pre>  return get_sparse_matrix(triplets, rows, rows);</pre></td>
     </tr>
 
@@ -5041,7 +5041,7 @@
     <tr>
     <td align="right" class="lineno"><pre>678</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>28920</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>28922</pre></td>
     <td align="left" class="src coveredLine"><pre>std::vector&lt;TripletCd> get_triplets(</pre></td>
     </tr>
 
@@ -5055,35 +5055,35 @@
     <tr>
     <td align="right" class="lineno"><pre>680</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>28920</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>28922</pre></td>
     <td align="left" class="src coveredLine"><pre>  std::vector&lt;TripletCd> triplets;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>681</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 79404 times">&check;</span><span class="takenBranch" title="Branch 2 taken 28920 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>108324</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 79408 times">&check;</span><span class="takenBranch" title="Branch 2 taken 28922 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>108330</pre></td>
     <td align="left" class="src coveredLine"><pre>  for (unsigned jj = 0; jj &lt; matr.cols(); ++jj) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>682</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 245688 times">&check;</span><span class="takenBranch" title="Branch 2 taken 79404 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>325092</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 245696 times">&check;</span><span class="takenBranch" title="Branch 2 taken 79408 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>325104</pre></td>
     <td align="left" class="src coveredLine"><pre>    for (unsigned ii = 0; ii &lt; matr.rows(); ++ii) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>683</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 245688 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 99256 times">&check;</span><span class="takenBranch" title="Branch 5 taken 146432 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>245688</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 245696 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 99264 times">&check;</span><span class="takenBranch" title="Branch 5 taken 146432 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>245696</pre></td>
     <td align="left" class="src coveredLine"><pre>      if (!(std::abs(matr(ii, jj)) &lt;= abs_epsilon)) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>684</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 99256 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 99256 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>99256</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 99264 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 99264 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>99264</pre></td>
     <td align="left" class="src coveredLine"><pre>        triplets.emplace_back(ii, jj, matr(ii, jj));</pre></td>
     </tr>
 
@@ -5111,7 +5111,7 @@
     <tr>
     <td align="right" class="lineno"><pre>688</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>28920</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>28922</pre></td>
     <td align="left" class="src coveredLine"><pre>  return triplets;</pre></td>
     </tr>
 

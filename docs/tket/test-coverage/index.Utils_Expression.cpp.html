@@ -275,7 +275,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2021-10-15 14:00:43</td>
+            <td class="headerValue">2021-10-20 12:29:45</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">86</td>
@@ -582,28 +582,28 @@
     <tr>
     <td align="right" class="lineno"><pre>41</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>153945</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>153947</pre></td>
     <td align="left" class="src coveredLine"><pre>SymSet expr_free_symbols(const std::vector&lt;Expr>&amp; es) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>42</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>153945</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>153947</pre></td>
     <td align="left" class="src coveredLine"><pre>  SymSet symbols;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>43</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 114765 times">&check;</span><span class="takenBranch" title="Branch 4 taken 153945 times">&check;</span><span class="takenBranch" title="Branch 7 taken 114765 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>268710</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 114771 times">&check;</span><span class="takenBranch" title="Branch 4 taken 153947 times">&check;</span><span class="takenBranch" title="Branch 7 taken 114771 times">&check;</span><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>268718</pre></td>
     <td align="left" class="src coveredLine"><pre>  for (auto e : es) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>44</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 114765 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 114765 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 9 taken 252 times">&check;</span><span class="takenBranch" title="Branch 10 taken 114765 times">&check;</span><span class="takenBranch" title="Branch 13 taken 252 times">&check;</span><span class="notTakenBranch" title="Branch 14 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>115017</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 114771 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 114771 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><br/><span class="takenBranch" title="Branch 9 taken 252 times">&check;</span><span class="takenBranch" title="Branch 10 taken 114771 times">&check;</span><span class="takenBranch" title="Branch 13 taken 252 times">&check;</span><span class="notTakenBranch" title="Branch 14 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>115023</pre></td>
     <td align="left" class="src coveredLine"><pre>    for (auto x : SymEngine::free_symbols(e)) {</pre></td>
     </tr>
 
@@ -631,7 +631,7 @@
     <tr>
     <td align="right" class="lineno"><pre>48</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>153945</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>153947</pre></td>
     <td align="left" class="src coveredLine"><pre>  return symbols;</pre></td>
     </tr>
 
@@ -652,14 +652,14 @@
     <tr>
     <td align="right" class="lineno"><pre>51</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>312013</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>312019</pre></td>
     <td align="left" class="src coveredLine"><pre>std::optional&lt;double> eval_expr(const Expr&amp; e) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>52</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 4 taken 476 times">&check;</span><span class="takenBranch" title="Branch 5 taken 311537 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>312013</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 4 taken 476 times">&check;</span><span class="takenBranch" title="Branch 5 taken 311543 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>312019</pre></td>
     <td align="left" class="src coveredLine"><pre>  if (!SymEngine::free_symbols(e).empty()) {</pre></td>
     </tr>
 
@@ -679,8 +679,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>55</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 311537 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>311537</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 311543 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>311543</pre></td>
     <td align="left" class="src coveredLine"><pre>    return SymEngine::eval_double(e);</pre></td>
     </tr>
 

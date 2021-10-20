@@ -275,7 +275,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2021-10-15 14:00:43</td>
+            <td class="headerValue">2021-10-20 12:29:45</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">257</td>
@@ -1912,14 +1912,14 @@
     <tr>
     <td align="right" class="lineno"><pre>231</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1484</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1492</pre></td>
     <td align="left" class="src coveredLine"><pre>bool QubitPauliString::operator==(const QubitPauliString &amp;other) const {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>232</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1484</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1492</pre></td>
     <td align="left" class="src coveredLine"><pre>  return compare(other) == 0;</pre></td>
     </tr>
 
@@ -1996,35 +1996,35 @@
     <tr>
     <td align="right" class="lineno"><pre>243</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>4294</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>4296</pre></td>
     <td align="left" class="src coveredLine"><pre>int QubitPauliString::compare(const QubitPauliString &amp;other) const {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>244</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>4294</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>4296</pre></td>
     <td align="left" class="src coveredLine"><pre>  QubitPauliMap::const_iterator p1_it = this->map.begin();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>245</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>4294</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>4296</pre></td>
     <td align="left" class="src coveredLine"><pre>  QubitPauliMap::const_iterator p2_it = other.map.begin();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>246</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 6254 times">&check;</span><span class="takenBranch" title="Branch 3 taken 1073 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>7327</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 6251 times">&check;</span><span class="takenBranch" title="Branch 3 taken 1075 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>7326</pre></td>
     <td align="left" class="src coveredLine"><pre>  while (p1_it != this->map.end()) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>247</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 36 times">&check;</span><span class="takenBranch" title="Branch 2 taken 6218 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>6254</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 36 times">&check;</span><span class="takenBranch" title="Branch 2 taken 6215 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>6251</pre></td>
     <td align="left" class="src coveredLine"><pre>    if (p1_it->second == Pauli::I) {</pre></td>
     </tr>
 
@@ -2051,8 +2051,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>251</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 6035 times">&check;</span><span class="takenBranch" title="Branch 3 taken 199 times">&check;</span><span class="takenBranch" title="Branch 5 taken 16 times">&check;</span><span class="takenBranch" title="Branch 6 taken 6019 times">&check;</span><br/><span class="takenBranch" title="Branch 7 taken 16 times">&check;</span><span class="takenBranch" title="Branch 8 taken 6218 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>6234</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 6029 times">&check;</span><span class="takenBranch" title="Branch 3 taken 202 times">&check;</span><span class="takenBranch" title="Branch 5 taken 16 times">&check;</span><span class="takenBranch" title="Branch 6 taken 6013 times">&check;</span><br/><span class="takenBranch" title="Branch 7 taken 16 times">&check;</span><span class="takenBranch" title="Branch 8 taken 6215 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>6231</pre></td>
     <td align="left" class="src coveredLine"><pre>    while (p2_it != other.map.end() &amp;&amp; p2_it->second == Pauli::I) {</pre></td>
     </tr>
 
@@ -2072,8 +2072,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>254</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 199 times">&check;</span><span class="takenBranch" title="Branch 3 taken 6019 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>6218</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 202 times">&check;</span><span class="takenBranch" title="Branch 3 taken 6013 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>6215</pre></td>
     <td align="left" class="src coveredLine"><pre>    if (p2_it == other.map.end()) return 1;</pre></td>
     </tr>
 
@@ -2100,15 +2100,15 @@
 
     <tr>
     <td align="right" class="lineno"><pre>258</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 6019 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 571 times">&check;</span><span class="takenBranch" title="Branch 6 taken 5448 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>6019</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 6013 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 549 times">&check;</span><span class="takenBranch" title="Branch 6 taken 5464 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>6013</pre></td>
     <td align="left" class="src coveredLine"><pre>    if (p1_it->first &lt; p2_it->first) return 1;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>259</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 5448 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 950 times">&check;</span><span class="takenBranch" title="Branch 6 taken 4498 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>5448</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 5464 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 965 times">&check;</span><span class="takenBranch" title="Branch 6 taken 4499 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>5464</pre></td>
     <td align="left" class="src coveredLine"><pre>    if (p2_it->first &lt; p1_it->first) return -1;</pre></td>
     </tr>
 
@@ -2121,29 +2121,29 @@
 
     <tr>
     <td align="right" class="lineno"><pre>261</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 1082 times">&check;</span><span class="takenBranch" title="Branch 3 taken 3416 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>4498</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 1088 times">&check;</span><span class="takenBranch" title="Branch 3 taken 3411 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>4499</pre></td>
     <td align="left" class="src coveredLine"><pre>    if (p1_it->second &lt; p2_it->second) return -1;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>262</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 419 times">&check;</span><span class="takenBranch" title="Branch 3 taken 2997 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>3416</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 417 times">&check;</span><span class="takenBranch" title="Branch 3 taken 2994 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>3411</pre></td>
     <td align="left" class="src coveredLine"><pre>    if (p1_it->second > p2_it->second) return 1;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>263</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>2997</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2994</pre></td>
     <td align="left" class="src coveredLine"><pre>    ++p1_it;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>264</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>2997</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2994</pre></td>
     <td align="left" class="src coveredLine"><pre>    ++p2_it;</pre></td>
     </tr>
 
@@ -2156,8 +2156,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>266</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 431 times">&check;</span><span class="takenBranch" title="Branch 3 taken 657 times">&check;</span><span class="takenBranch" title="Branch 5 taken 15 times">&check;</span><span class="takenBranch" title="Branch 6 taken 416 times">&check;</span><br/><span class="takenBranch" title="Branch 7 taken 15 times">&check;</span><span class="takenBranch" title="Branch 8 taken 1073 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>1088</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 433 times">&check;</span><span class="takenBranch" title="Branch 3 taken 657 times">&check;</span><span class="takenBranch" title="Branch 5 taken 15 times">&check;</span><span class="takenBranch" title="Branch 6 taken 418 times">&check;</span><br/><span class="takenBranch" title="Branch 7 taken 15 times">&check;</span><span class="takenBranch" title="Branch 8 taken 1075 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>1090</pre></td>
     <td align="left" class="src coveredLine"><pre>  while (p2_it != other.map.end() &amp;&amp; p2_it->second == Pauli::I) {</pre></td>
     </tr>
 
@@ -2177,8 +2177,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>269</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 657 times">&check;</span><span class="takenBranch" title="Branch 3 taken 416 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>1073</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 657 times">&check;</span><span class="takenBranch" title="Branch 3 taken 418 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>1075</pre></td>
     <td align="left" class="src coveredLine"><pre>  return (p2_it == other.map.end()) ? 0 : -1;</pre></td>
     </tr>
 
@@ -2276,14 +2276,14 @@
     <tr>
     <td align="right" class="lineno"><pre>283</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1991</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1999</pre></td>
     <td align="left" class="src coveredLine"><pre>bool QubitPauliString::commutes_with(const QubitPauliString &amp;other) const {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>284</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1991</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1999</pre></td>
     <td align="left" class="src coveredLine"><pre>  return (conflicting_qubits(other).size() % 2) == 0;</pre></td>
     </tr>
 
@@ -2486,7 +2486,7 @@
     <tr>
     <td align="right" class="lineno"><pre>313</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>2128</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2136</pre></td>
     <td align="left" class="src coveredLine"><pre>std::set&lt;Qubit> QubitPauliString::conflicting_qubits(</pre></td>
     </tr>
 
@@ -2500,49 +2500,49 @@
     <tr>
     <td align="right" class="lineno"><pre>315</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>2128</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2136</pre></td>
     <td align="left" class="src coveredLine"><pre>  std::set&lt;Qubit> conflicts;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>316</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 4582 times">&check;</span><span class="takenBranch" title="Branch 4 taken 2128 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>6710</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 3 taken 4598 times">&check;</span><span class="takenBranch" title="Branch 4 taken 2136 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>6734</pre></td>
     <td align="left" class="src coveredLine"><pre>  for (const std::pair&lt;const Qubit, Pauli> &amp;p : map) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>317</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 36 times">&check;</span><span class="takenBranch" title="Branch 1 taken 4546 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>4582</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 36 times">&check;</span><span class="takenBranch" title="Branch 1 taken 4562 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>4598</pre></td>
     <td align="left" class="src coveredLine"><pre>    if (p.second == Pauli::I) continue;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>318</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 4546 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>4546</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 4562 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>4562</pre></td>
     <td align="left" class="src coveredLine"><pre>    QubitPauliMap::const_iterator found = other.map.find(p.first);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>319</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 2527 times">&check;</span><span class="takenBranch" title="Branch 3 taken 2019 times">&check;</span><span class="takenBranch" title="Branch 5 taken 2497 times">&check;</span><span class="takenBranch" title="Branch 6 taken 30 times">&check;</span><br/><span class="takenBranch" title="Branch 7 taken 1515 times">&check;</span><span class="takenBranch" title="Branch 8 taken 3031 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>7043</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 2537 times">&check;</span><span class="takenBranch" title="Branch 3 taken 2025 times">&check;</span><span class="takenBranch" title="Branch 5 taken 2507 times">&check;</span><span class="takenBranch" title="Branch 6 taken 30 times">&check;</span><br/><span class="takenBranch" title="Branch 7 taken 1519 times">&check;</span><span class="takenBranch" title="Branch 8 taken 3043 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>7069</pre></td>
     <td align="left" class="src coveredLine"><pre>    if (found != other.map.end() &amp;&amp; found->second != Pauli::I &amp;&amp;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>320</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1515 times">&check;</span><span class="takenBranch" title="Branch 2 taken 982 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>2497</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1519 times">&check;</span><span class="takenBranch" title="Branch 2 taken 988 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>2507</pre></td>
     <td align="left" class="src coveredLine"><pre>        found->second != p.second) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>321</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1515 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>1515</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1519 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>1519</pre></td>
     <td align="left" class="src coveredLine"><pre>      conflicts.insert(p.first);</pre></td>
     </tr>
 
@@ -2563,7 +2563,7 @@
     <tr>
     <td align="right" class="lineno"><pre>324</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>2128</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2136</pre></td>
     <td align="left" class="src coveredLine"><pre>  return conflicts;</pre></td>
     </tr>
 
@@ -3529,28 +3529,28 @@
     <tr>
     <td align="right" class="lineno"><pre>462</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>2088</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2082</pre></td>
     <td align="left" class="src coveredLine"><pre>bool QubitPauliTensor::operator&lt;(const QubitPauliTensor &amp;other) const {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>463</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>2088</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2082</pre></td>
     <td align="left" class="src coveredLine"><pre>  int comp = this->string.compare(other.string);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>464</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 1242 times">&check;</span><span class="takenBranch" title="Branch 1 taken 846 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>2088</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 1241 times">&check;</span><span class="takenBranch" title="Branch 1 taken 841 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>2082</pre></td>
     <td align="left" class="src coveredLine"><pre>  if (comp &lt; 0) return true;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>465</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 466 times">&check;</span><span class="takenBranch" title="Branch 1 taken 380 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>846</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 461 times">&check;</span><span class="takenBranch" title="Branch 1 taken 380 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>841</pre></td>
     <td align="left" class="src coveredLine"><pre>  if (comp > 0) return false;</pre></td>
     </tr>
 
@@ -3606,14 +3606,14 @@
     <tr>
     <td align="right" class="lineno"><pre>473</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1915</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1923</pre></td>
     <td align="left" class="src coveredLine"><pre>bool QubitPauliTensor::commutes_with(const QubitPauliTensor &amp;other) const {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>474</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1915</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1923</pre></td>
     <td align="left" class="src coveredLine"><pre>  return (string.commutes_with(other.string));</pre></td>
     </tr>
 
