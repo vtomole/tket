@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Changelog &mdash; pytket 0.15.0 documentation</title>
+  <title>Changelog &mdash; pytket 0.16.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -31,7 +31,7 @@
             <a href="index.html" class="icon icon-home"> pytket
           </a>
               <div class="version">
-                0.15
+                0.16
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -45,7 +45,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#unreleased">0.16.0 (Unreleased)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#october-2021">0.16.0 (October 2021)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#september-2021">0.15.0 (September 2021)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id1">0.14.0 (September 2021)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#july-2021">0.13.0 (July 2021)</a></li>
@@ -134,21 +134,27 @@
              
   <section id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline"></a></h1>
-<section id="unreleased">
-<h2>0.16.0 (Unreleased)<a class="headerlink" href="#unreleased" title="Permalink to this headline"></a></h2>
+<section id="october-2021">
+<h2>0.16.0 (October 2021)<a class="headerlink" href="#october-2021" title="Permalink to this headline"></a></h2>
 <p>Minor new features:</p>
 <ul class="simple">
-<li><p>New :py:meth:<code class="docutils literal notranslate"><span class="pre">backends.Backend.run_circuit</span></code> and :py:meth:<code class="docutils literal notranslate"><span class="pre">backends.Backend.run_circuits</span></code>
-methods.</p></li>
+<li><p>New :py:meth:<code class="docutils literal notranslate"><span class="pre">backends.Backend.run_circuit</span></code> and
+:py:meth:<code class="docutils literal notranslate"><span class="pre">backends.Backend.run_circuits</span></code> methods.</p></li>
 <li><p>New <code class="docutils literal notranslate"><span class="pre">allow_swaps</span></code> parameter to <code class="docutils literal notranslate"><span class="pre">FullPeepholeOptimise</span></code> pass controlling
 whether to allow introduction of implicit wire swaps (defaulting to <code class="docutils literal notranslate"><span class="pre">True</span></code>
 to match existing behaviour).</p></li>
+<li><p>New <code class="docutils literal notranslate"><span class="pre">Backend.available_devices</span></code> method to retrieve available devices as a
+list of <code class="docutils literal notranslate"><span class="pre">BackendInfo</span></code> objects.</p></li>
+</ul>
+<p>Fixes:</p>
+<ul class="simple">
+<li><p>Fixed bug in daggering of TK1 gates.</p></li>
 </ul>
 <p>API changes:</p>
 <ul class="simple">
-<li><p>The deprecated <code class="docutils literal notranslate"><span class="pre">get_shots</span></code>, <code class="docutils literal notranslate"><span class="pre">get_counts</span></code> and <code class="docutils literal notranslate"><span class="pre">get_state</span></code> methods
-of the <code class="docutils literal notranslate"><span class="pre">Backend</span></code> class are removed. Use <code class="docutils literal notranslate"><span class="pre">run_circuits</span></code> and the homonym
-methods of the <code class="xref py py-class docutils literal notranslate"><span class="pre">backends.backendresult.BackendResult</span></code> class instead.</p></li>
+<li><p>The deprecated <code class="docutils literal notranslate"><span class="pre">get_shots</span></code>, <code class="docutils literal notranslate"><span class="pre">get_counts</span></code> and <code class="docutils literal notranslate"><span class="pre">get_state</span></code> methods of the
+<code class="docutils literal notranslate"><span class="pre">Backend</span></code> class are removed. Use <code class="docutils literal notranslate"><span class="pre">run_circuits</span></code> and the homonym methods of
+the <code class="xref py py-class docutils literal notranslate"><span class="pre">backends.backendresult.BackendResult</span></code> class instead.</p></li>
 </ul>
 </section>
 <section id="september-2021">

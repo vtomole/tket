@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pytket.backends &mdash; pytket 0.15.0 documentation</title>
+  <title>pytket.backends &mdash; pytket 0.16.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -30,7 +30,7 @@
             <a href="index.html" class="icon icon-home"> pytket
           </a>
               <div class="version">
-                0.15
+                0.16
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -115,6 +115,22 @@ counts, state, or unitary</p>
 <dt class="sig sig-object py" id="pytket.backends.Backend.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.backends.Backend.__init__" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pytket.backends.Backend.available_devices">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">available_devices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pytket.backends.backendinfo.BackendInfo" title="pytket.backends.backendinfo.BackendInfo"><span class="pre">pytket.backends.backendinfo.BackendInfo</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pytket.backends.Backend.available_devices" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieve all available devices as a list of BackendInfo objects, including
+device name, architecture, supported gate set, gate errors,
+and other hardware-specific information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A list of BackendInfo objects describing available devices.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List[<a class="reference internal" href="#pytket.backends.backendinfo.BackendInfo" title="pytket.backends.backendinfo.BackendInfo">BackendInfo</a>]</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.backends.Backend.cancel">

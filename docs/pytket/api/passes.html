@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pytket.passes &mdash; pytket 0.15.0 documentation</title>
+  <title>pytket.passes &mdash; pytket 0.16.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -31,7 +31,7 @@
             <a href="index.html" class="icon icon-home"> pytket
           </a>
               <div class="version">
-                0.15
+                0.16
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -162,6 +162,25 @@
 </dd>
 </dl>
 </dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pytket.passes.CNotSynthType">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pytket.passes.</span></span><span class="sig-name descname"><span class="pre">CNotSynthType</span></span><a class="headerlink" href="#pytket.passes.CNotSynthType" title="Permalink to this definition"></a></dt>
+<dd><p>Members:</p>
+<p>SWAP : swap-based algorithm for CNOT synthesis</p>
+<p>HamPath : Hamilton-path-based method for CNOT synthesis; this method will fail if there is no Hamilton path in the given architecture</p>
+<p>Rec : recursive Steiner–Gauss method for CNOT synthesis</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pytket.passes.CNotSynthType.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pytket.passes.CNotSynthType" title="pytket.passes.CNotSynthType"><span class="pre">pytket.passes.CNotSynthType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.passes.CNotSynthType.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pytket.passes.CNotSynthType.name">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pytket.passes.CNotSynthType.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -302,19 +321,13 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="pytket.passes.AASRouting">
 <span class="sig-prename descclassname"><span class="pre">pytket.passes.</span></span><span class="sig-name descname"><span class="pre">AASRouting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arc</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="routing.html#pytket.routing.Architecture" title="pytket.routing.Architecture"><span class="pre">pytket.routing.Architecture</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pytket.passes.BasePass" title="pytket.passes.BasePass"><span class="pre">pytket.passes.BasePass</span></a></span></span><a class="headerlink" href="#pytket.passes.AASRouting" title="Permalink to this definition"></a></dt>
-<dd><p>Construct a pass to relabel <code class="xref py py-class docutils literal notranslate"><span class="pre">Circuit</span></code> Qubits to <code class="xref py py-class docutils literal notranslate"><span class="pre">Device</span></code> Nodes, and then use architecture-aware synthesis to route the circuit. In the steps of the pass the circuit will be converted to CX, Rz, H gateset. The limited connectivity of the <code class="xref py py-class docutils literal notranslate"><span class="pre">Architecture</span></code> is used for the routing. The direction of the edges is ignored. The placement used is GraphPlacement. This pass can take a few parameters for the routing, described below.</p>
-<p>NB: In the current implementation it is assumed that the number of nodes in the architecture is equal to the number of qubits in the circuit. With smaller circuits may therefore be necessary to add unused qubits before applying this pass.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>arc</strong> – The architecture used for connectivity information.</p></li>
-<li><p><strong>**kwargs</strong> – Parameters for routing: (unsigned) lookahead=1: giving parameter for the recursive iteration depth in the synthesis method</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>a pass to perform the remapping</p>
-</dd>
-</dl>
+<dd><p>Construct a pass to relabel <code class="xref py py-class docutils literal notranslate"><span class="pre">Circuit</span></code> Qubits to <code class="xref py py-class docutils literal notranslate"><span class="pre">Device</span></code> Nodes, and then use architecture-aware synthesis to route the circuit. In the steps of the pass the circuit will be converted to CX, Rz, H gateset. The limited connectivity of the <code class="xref py py-class docutils literal notranslate"><span class="pre">Architecture</span></code> is used for the routing. The direction of the edges is ignored. The placement used is GraphPlacement. This pass can take a few parameters for the routing, described below.
+NB: The circuit needs to have at most as many qubits as the architecture has nodes. The resulting circuit will always have the same number of qubits as the architecture has nodes, even if the input circuit had fewer.
+:param arc: The architecture used for connectivity information.
+:param **kwargs: Parameters for routing:
+(unsigned) lookahead=1: parameter for the recursive iteration
+(CNotSynthType) cnotsynthtype=CNotSynthType.Rec: type of the CNOT synthesis
+:return: a pass to perform the remapping</p>
 </dd></dl>
 
 <dl class="py function">
