@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['unittype_3823',['UnitType',['../namespacetket.html#ab638aca8b1f14267ebf40f93686b7ac9',1,'tket']]]
+  ['safetymode_4054',['SafetyMode',['../namespacetket.html#ab65820ebbcb1ceb848e855a832420396',1,'tket']]],
+  ['steinernodetype_4055',['SteinerNodeType',['../namespacetket_1_1aas.html#a5d7e42ff2fcc3a26d82ea3d4dd415374',1,'tket::aas']]]
 ];

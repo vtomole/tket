@@ -98,6 +98,8 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacetket_1_1tket__sim"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket_1_1tket__sim.html">tket_sim</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacetket_1_1zx"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket_1_1zx.html">zx</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -1488,6 +1490,8 @@ Functions</h2></td></tr>
 <tr class="separator:a107efd3133f286030ab992bb5719a4a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a741f7a00246fe7f3797c1c410374ebe1"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a741f7a00246fe7f3797c1c410374ebe1">eval_expr</a> (const <a class="el" href="namespacetket.html#a6817cd1c8a5630b406c86a59173edd21">Expr</a> &amp;e)</td></tr>
 <tr class="separator:a741f7a00246fe7f3797c1c410374ebe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac50a0a63743806467375a0d4db405bea"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespacetket.html#a68999408b52ab2f0f191f814ec93f4de">Complex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ac50a0a63743806467375a0d4db405bea">eval_expr_c</a> (const <a class="el" href="namespacetket.html#a6817cd1c8a5630b406c86a59173edd21">Expr</a> &amp;e)</td></tr>
+<tr class="separator:ac50a0a63743806467375a0d4db405bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9f9aa5cee9cf61bba2c5ca5bd4b0dea"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ae9f9aa5cee9cf61bba2c5ca5bd4b0dea">eval_expr_mod</a> (const <a class="el" href="namespacetket.html#a6817cd1c8a5630b406c86a59173edd21">Expr</a> &amp;e, unsigned n=2)</td></tr>
 <tr class="memdesc:ae9f9aa5cee9cf61bba2c5ca5bd4b0dea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate an expression modulo n.  <a href="namespacetket.html#ae9f9aa5cee9cf61bba2c5ca5bd4b0dea">More...</a><br /></td></tr>
 <tr class="separator:ae9f9aa5cee9cf61bba2c5ca5bd4b0dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1656,8 +1660,17 @@ Variables</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines <a class="el" href="classtket_1_1DeviceCharacterisation.html">tket::DeviceCharacterisation</a>, used in <a class="el" href="classtket_1_1NoiseAwarePlacement.html">NoiseAwarePlacement</a> and in commute_SQ_gates_through_SWAPS as a simple device noise model. </p>
+<p>This header contains the implementation-specific type definitions for the ZXDiagram class.</p>
 <p>This is just a container of errors.</p>
-<p>This supports single-qubit errors, two-qubit errors and readout errors. Errors can either be OpType-specific, or a default value (average over all possible OpTypes) If an OpType-specific value is provided, this will be used. If not it will fallback to the default value for the given <a class="el" href="classtket_1_1Node.html" title="Architectural qubit location.">Node</a> or <a class="el" href="classtket_1_1Node.html" title="Architectural qubit location.">Node</a> pair, which itself falls back to zero error. </p>
+<p>This supports single-qubit errors, two-qubit errors and readout errors. Errors can either be OpType-specific, or a default value (average over all possible OpTypes) If an OpType-specific value is provided, this will be used. If not it will fallback to the default value for the given <a class="el" href="classtket_1_1Node.html" title="Architectural qubit location.">Node</a> or <a class="el" href="classtket_1_1Node.html" title="Architectural qubit location.">Node</a> pair, which itself falls back to zero error.</p>
+<p>Currently, Boost is used for the underlying graph structure. The interface can be found in <a class="el" href="ZXDiagram_8hpp.html">ZXDiagram.hpp</a>.</p>
+<p>A ZX diagram is implemented as a directed graph with labels for its vertices and edges. Although edges in a ZX diagram are ultimately undirected, some vertices are directed or otherwise non-commutative. That is, the permutation in which the edges are connected to the vertex matters, either to distinguish between inputs and outputs of the vertex or operands with different semantics. We refer to such vertices as "directed".</p>
+<p>To represent these diagrams with undirected edges but some directed vertices we use a directed underlying graph.</p>
+<ul>
+<li>The vertex information (e.g. generator type and properties) is represented by a <code>ZXGen_ptr</code> object (equivalent to <code>Op_ptr</code> from circuits) containing the relevant information. In ZX diagrams, the <code>ZXGenerator</code> object pointed to is guaranteed to be exactly one subtype based on its <code>ZXType</code>.</li>
+<li>For directed vertices, we have a <code>DirectedZXGenerator</code> object which captures the information about the ports. The mapping of ports to semantic meaning is dictated by the particular <code>ZXType</code>. In general, ports are optional unsigned integers, taking values for directed vertices and <code>std::nullopt</code> for undirected.</li>
+<li>The edges store information including its type (ZXWireType is either Basic or H), its quantum-ness (QuantumType is either Quantum or Classical), and the ports it connects to on both ends (as a map from WireEnd::Source/ Target to a the port it connects to on a directed vertex). This differentiation between source and target vertices is to allow a unique representation of the edge's connectivity in case of connecting between two directed vertices. </li>
+</ul>
 </div><h2 class="groupheader">Typedef Documentation</h2>
 <a id="a9d40137af27172ca9d76cafd2910e8e2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9d40137af27172ca9d76cafd2910e8e2">&#9670;&nbsp;</a></span>avg_link_errors_t</h2>
@@ -4410,7 +4423,7 @@ template&lt;typename A , typename B &gt; </div>
 
 <p>Binary AND operator. </p>
 
-<p class="definition">Definition at line <a class="el" href="ClassicalOps_8cpp_source.html#l00355">355</a> of file <a class="el" href="ClassicalOps_8cpp_source.html">ClassicalOps.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ClassicalOps_8cpp_source.html#l00343">343</a> of file <a class="el" href="ClassicalOps_8cpp_source.html">ClassicalOps.cpp</a>.</p>
 
 </div>
 </div>
@@ -4431,7 +4444,7 @@ template&lt;typename A , typename B &gt; </div>
 
 <p>In-place AND with another input. </p>
 
-<p class="definition">Definition at line <a class="el" href="ClassicalOps_8cpp_source.html#l00376">376</a> of file <a class="el" href="ClassicalOps_8cpp_source.html">ClassicalOps.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ClassicalOps_8cpp_source.html#l00364">364</a> of file <a class="el" href="ClassicalOps_8cpp_source.html">ClassicalOps.cpp</a>.</p>
 
 </div>
 </div>
@@ -5135,7 +5148,7 @@ template&lt;typename T &gt; </div>
 
 <p>Classical CNOT transform. </p>
 
-<p class="definition">Definition at line <a class="el" href="ClassicalOps_8cpp_source.html#l00341">341</a> of file <a class="el" href="ClassicalOps_8cpp_source.html">ClassicalOps.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ClassicalOps_8cpp_source.html#l00329">329</a> of file <a class="el" href="ClassicalOps_8cpp_source.html">ClassicalOps.cpp</a>.</p>
 
 </div>
 </div>
@@ -5156,7 +5169,7 @@ template&lt;typename T &gt; </div>
 
 <p>Classical NOT transform. </p>
 
-<p class="definition">Definition at line <a class="el" href="ClassicalOps_8cpp_source.html#l00334">334</a> of file <a class="el" href="ClassicalOps_8cpp_source.html">ClassicalOps.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ClassicalOps_8cpp_source.html#l00322">322</a> of file <a class="el" href="ClassicalOps_8cpp_source.html">ClassicalOps.cpp</a>.</p>
 
 </div>
 </div>
@@ -5464,7 +5477,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Boxes_8cpp_source.html#l00456">456</a> of file <a class="el" href="Boxes_8cpp_source.html">Boxes.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Boxes_8cpp_source.html#l00452">452</a> of file <a class="el" href="Boxes_8cpp_source.html">Boxes.cpp</a>.</p>
 
 </div>
 </div>
@@ -5487,7 +5500,7 @@ template&lt;typename T &gt; </div>
 <p>Return cos(e*pi/2) </p>
 <p>If e is within <code>EPS</code> of an integer then it is rounded so that the result can be evaluated. </p>
 
-<p class="definition">Definition at line <a class="el" href="Expression_8cpp_source.html#l00087">87</a> of file <a class="el" href="Expression_8cpp_source.html">Expression.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expression_8cpp_source.html#l00095">95</a> of file <a class="el" href="Expression_8cpp_source.html">Expression.cpp</a>.</p>
 
 </div>
 </div>
@@ -5876,7 +5889,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Expression_8cpp_source.html#l00112">112</a> of file <a class="el" href="Expression_8cpp_source.html">Expression.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expression_8cpp_source.html#l00120">120</a> of file <a class="el" href="Expression_8cpp_source.html">Expression.cpp</a>.</p>
 
 </div>
 </div>
@@ -5929,7 +5942,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Expression_8cpp_source.html#l00116">116</a> of file <a class="el" href="Expression_8cpp_source.html">Expression.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expression_8cpp_source.html#l00124">124</a> of file <a class="el" href="Expression_8cpp_source.html">Expression.cpp</a>.</p>
 
 </div>
 </div>
@@ -5989,7 +6002,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Expression_8cpp_source.html#l00099">99</a> of file <a class="el" href="Expression_8cpp_source.html">Expression.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expression_8cpp_source.html#l00107">107</a> of file <a class="el" href="Expression_8cpp_source.html">Expression.cpp</a>.</p>
 
 </div>
 </div>
@@ -6049,7 +6062,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Expression_8cpp_source.html#l00106">106</a> of file <a class="el" href="Expression_8cpp_source.html">Expression.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expression_8cpp_source.html#l00114">114</a> of file <a class="el" href="Expression_8cpp_source.html">Expression.cpp</a>.</p>
 
 </div>
 </div>
@@ -6070,6 +6083,26 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Expression_8cpp_source.html#l00051">51</a> of file <a class="el" href="Expression_8cpp_source.html">Expression.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac50a0a63743806467375a0d4db405bea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac50a0a63743806467375a0d4db405bea">&#9670;&nbsp;</a></span>eval_expr_c()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="namespacetket.html#a68999408b52ab2f0f191f814ec93f4de">Complex</a> &gt; tket::eval_expr_c </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacetket.html#a6817cd1c8a5630b406c86a59173edd21">Expr</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Expression_8cpp_source.html#l00059">59</a> of file <a class="el" href="Expression_8cpp_source.html">Expression.cpp</a>.</p>
 
 </div>
 </div>
@@ -6110,7 +6143,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>value of expression modulo n, iff it has no free symbols </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Expression_8cpp_source.html#l00059">59</a> of file <a class="el" href="Expression_8cpp_source.html">Expression.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expression_8cpp_source.html#l00067">67</a> of file <a class="el" href="Expression_8cpp_source.html">Expression.cpp</a>.</p>
 
 </div>
 </div>
@@ -6487,7 +6520,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Boxes_8cpp_source.html#l00557">557</a> of file <a class="el" href="Boxes_8cpp_source.html">Boxes.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Boxes_8cpp_source.html#l00553">553</a> of file <a class="el" href="Boxes_8cpp_source.html">Boxes.cpp</a>.</p>
 
 </div>
 </div>
@@ -9699,7 +9732,7 @@ template&lt;typename T &gt; </div>
 
 <p>Unary NOT operator. </p>
 
-<p class="definition">Definition at line <a class="el" href="ClassicalOps_8cpp_source.html#l00348">348</a> of file <a class="el" href="ClassicalOps_8cpp_source.html">ClassicalOps.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ClassicalOps_8cpp_source.html#l00336">336</a> of file <a class="el" href="ClassicalOps_8cpp_source.html">ClassicalOps.cpp</a>.</p>
 
 </div>
 </div>
@@ -10258,7 +10291,7 @@ template&lt;typename T &gt; </div>
 
 <p>Binary OR operator. </p>
 
-<p class="definition">Definition at line <a class="el" href="ClassicalOps_8cpp_source.html#l00362">362</a> of file <a class="el" href="ClassicalOps_8cpp_source.html">ClassicalOps.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ClassicalOps_8cpp_source.html#l00350">350</a> of file <a class="el" href="ClassicalOps_8cpp_source.html">ClassicalOps.cpp</a>.</p>
 
 </div>
 </div>
@@ -10279,7 +10312,7 @@ template&lt;typename T &gt; </div>
 
 <p>In-place OR with another input. </p>
 
-<p class="definition">Definition at line <a class="el" href="ClassicalOps_8cpp_source.html#l00383">383</a> of file <a class="el" href="ClassicalOps_8cpp_source.html">ClassicalOps.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ClassicalOps_8cpp_source.html#l00371">371</a> of file <a class="el" href="ClassicalOps_8cpp_source.html">ClassicalOps.cpp</a>.</p>
 
 </div>
 </div>
@@ -11239,7 +11272,7 @@ template&lt;typename BoxT &gt; </div>
 <p>Return sin(e*pi/2) </p>
 <p>If e is within <code>EPS</code> of an integer then it is rounded so that the result can be evaluated. </p>
 
-<p class="definition">Definition at line <a class="el" href="Expression_8cpp_source.html#l00095">95</a> of file <a class="el" href="Expression_8cpp_source.html">Expression.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expression_8cpp_source.html#l00103">103</a> of file <a class="el" href="Expression_8cpp_source.html">Expression.cpp</a>.</p>
 
 </div>
 </div>
@@ -11771,7 +11804,7 @@ template&lt;typename BoxT &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Boxes_8cpp_source.html#l00551">551</a> of file <a class="el" href="Boxes_8cpp_source.html">Boxes.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Boxes_8cpp_source.html#l00547">547</a> of file <a class="el" href="Boxes_8cpp_source.html">Boxes.cpp</a>.</p>
 
 </div>
 </div>
@@ -12395,7 +12428,7 @@ template&lt;class Unit_T &gt; </div>
 
 <p>Binary XOR operator. </p>
 
-<p class="definition">Definition at line <a class="el" href="ClassicalOps_8cpp_source.html#l00369">369</a> of file <a class="el" href="ClassicalOps_8cpp_source.html">ClassicalOps.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ClassicalOps_8cpp_source.html#l00357">357</a> of file <a class="el" href="ClassicalOps_8cpp_source.html">ClassicalOps.cpp</a>.</p>
 
 </div>
 </div>
@@ -12416,7 +12449,7 @@ template&lt;class Unit_T &gt; </div>
 
 <p>In-place XOR with another input. </p>
 
-<p class="definition">Definition at line <a class="el" href="ClassicalOps_8cpp_source.html#l00390">390</a> of file <a class="el" href="ClassicalOps_8cpp_source.html">ClassicalOps.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ClassicalOps_8cpp_source.html#l00378">378</a> of file <a class="el" href="ClassicalOps_8cpp_source.html">ClassicalOps.cpp</a>.</p>
 
 </div>
 </div>

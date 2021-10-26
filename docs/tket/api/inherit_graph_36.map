@@ -1,7 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title="STL class." alt="" coords="5,1684,120,1711"/>
-<area shape="rect" id="node2" title="STL class." alt="" coords="178,1144,297,1171"/>
-<area shape="rect" id="node46" title="STL class." alt="" coords="168,1709,307,1736"/>
+<area shape="rect" id="node1" title="STL class." alt="" coords="5,1709,120,1736"/>
+<area shape="rect" id="node2" title="STL class." alt="" coords="178,1169,297,1196"/>
+<area shape="rect" id="node47" title="STL class." alt="" coords="168,1735,307,1761"/>
 <area shape="rect" id="node3" href="$classtket_1_1aas_1_1InvalidCostCalculation.html" title=" " alt="" coords="355,5,587,32"/>
 <area shape="rect" id="node4" href="$classtket_1_1aas_1_1InvalidRowOperation.html" title=" " alt="" coords="359,56,582,83"/>
 <area shape="rect" id="node5" href="$classtket_1_1aas_1_1NoHamiltonPath.html" title=" " alt="" coords="375,107,567,133"/>
@@ -44,6 +44,7 @@
 <area shape="rect" id="node42" href="$classtket_1_1UnknownPauliPartitionStrat.html" title=" " alt="" coords="370,2057,571,2098"/>
 <area shape="rect" id="node43" href="$classtket_1_1UnsatisfiedPredicate.html" title=" " alt="" coords="376,2123,565,2149"/>
 <area shape="rect" id="node44" href="$classtket_1_1Unsupported.html" title=" " alt="" coords="401,2173,540,2200"/>
+<area shape="rect" id="node46" href="$classtket_1_1zx_1_1ZXError.html" title="Error messages." alt="" coords="407,2224,534,2251"/>
 <area shape="rect" id="node45" href="$classtket_1_1SimpleOnly.html" title=" " alt="" coords="635,2173,765,2200"/>
-<area shape="rect" id="node47" href="$structtket_1_1GateUnitaryMatrixError.html" title="We do not wish to couple tightly to exception classes elsewhere." alt="" coords="367,2224,574,2251"/>
+<area shape="rect" id="node48" href="$structtket_1_1GateUnitaryMatrixError.html" title="We do not wish to couple tightly to exception classes elsewhere." alt="" coords="367,2275,574,2301"/>
 </map>
