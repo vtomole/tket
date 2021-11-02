@@ -26,7 +26,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2021-11-02 16:11:06</td>
+      <td>2021-11-02 18:10:00</td>
     </tr>
   </table>
 </div>
@@ -367,7 +367,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Expr</span><span class="o">&gt;</span> <span class="n">get_tk1_angles</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -375,7 +375,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Expr</span><span class="o">&gt;</span> <span class="n">get_params</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span></td>
+      <td class="src "><span class="cm">   * Return the gate decomposition in terms of Rz(a)Rx(b)Rz(c).</span></td>
     </tr>
 
     <tr class="source-line">
@@ -383,7 +383,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Expr</span><span class="o">&gt;</span> <span class="n">get_params_reduced</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span></td>
+      <td class="src "><span class="cm">   *</span></td>
     </tr>
 
     <tr class="source-line">
@@ -391,7 +391,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">SymSet</span> <span class="nf">free_symbols</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span></td>
+      <td class="src "><span class="cm">   * This decomposition is in matrix-multiplication order, i.e. the reverse of</span></td>
     </tr>
 
     <tr class="source-line">
@@ -399,7 +399,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">   * circuit order.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -407,7 +407,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">unsigned</span> <span class="nf">n_qubits</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span></td>
+      <td class="src "><span class="cm">   *</span></td>
     </tr>
 
     <tr class="source-line">
@@ -415,7 +415,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">   * @return a, b, c and a global phase</span></td>
     </tr>
 
     <tr class="source-line">
@@ -423,7 +423,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">Pauli</span><span class="o">&gt;</span> <span class="n">commuting_basis</span><span class="p">(</span><span class="n">port_t</span> <span class="n">port</span><span class="p">)</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -431,7 +431,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Expr</span><span class="o">&gt;</span> <span class="n">get_tk1_angles</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -439,7 +439,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">bool</span> <span class="nf">commutes_with_basis</span><span class="p">(</span></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Expr</span><span class="o">&gt;</span> <span class="n">get_params</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -447,7 +447,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">Pauli</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">colour</span><span class="p">,</span> <span class="n">port_t</span> <span class="n">port</span><span class="p">)</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Expr</span><span class="o">&gt;</span> <span class="n">get_params_reduced</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -455,7 +455,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="n">SymSet</span> <span class="nf">free_symbols</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -463,7 +463,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">op_signature_t</span> <span class="nf">get_signature</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -471,7 +471,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="kt">unsigned</span> <span class="nf">n_qubits</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -479,7 +479,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">nlohmann</span><span class="o">::</span><span class="n">json</span> <span class="n">serialize</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -487,7 +487,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">Pauli</span><span class="o">&gt;</span> <span class="n">commuting_basis</span><span class="p">(</span><span class="n">port_t</span> <span class="n">port</span><span class="p">)</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -495,7 +495,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">static</span> <span class="n">Op_ptr</span> <span class="nf">deserialize</span><span class="p">(</span><span class="k">const</span> <span class="n">nlohmann</span><span class="o">::</span><span class="n">json</span> <span class="o">&amp;</span><span class="n">j</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -503,7 +503,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="kt">bool</span> <span class="nf">commutes_with_basis</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -511,7 +511,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">is_identity</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">Pauli</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">colour</span><span class="p">,</span> <span class="n">port_t</span> <span class="n">port</span><span class="p">)</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -519,7 +519,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXcd</span> <span class="n">get_unitary</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -527,15 +527,15 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="n">op_signature_t</span> <span class="nf">get_signature</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l59" href="#l59">59</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount uncoveredLine">&cross;</td>
-      <td class="src uncoveredLine">  <span class="o">~</span><span class="n">Gate</span><span class="p">()</span> <span class="k">override</span> <span class="p">{}</span></td>
+      <td class="linecount "></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -543,7 +543,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="n">nlohmann</span><span class="o">::</span><span class="n">json</span> <span class="n">serialize</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -551,7 +551,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -559,7 +559,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * Equality check between two Gate instances</span></td>
+      <td class="src ">  <span class="k">static</span> <span class="n">Op_ptr</span> <span class="nf">deserialize</span><span class="p">(</span><span class="k">const</span> <span class="n">nlohmann</span><span class="o">::</span><span class="n">json</span> <span class="o">&amp;</span><span class="n">j</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -567,7 +567,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -575,7 +575,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">bool</span> <span class="n">is_equal</span><span class="p">(</span><span class="k">const</span> <span class="n">Op</span> <span class="o">&amp;</span><span class="n">other</span><span class="p">)</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">is_identity</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -583,7 +583,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXcd</span> <span class="n">get_unitary</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -591,15 +591,15 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">Gate</span><span class="p">(</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l67" href="#l67">67</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src ">      <span class="n">OpType</span> <span class="n">type</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Expr</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">params</span> <span class="o">=</span> <span class="p">{},</span> <span class="kt">unsigned</span> <span class="n">n_qubits</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span></td>
+      <td class="linecount uncoveredLine">&cross;</td>
+      <td class="src uncoveredLine">  <span class="o">~</span><span class="n">Gate</span><span class="p">()</span> <span class="k">override</span> <span class="p">{}</span></td>
     </tr>
 
     <tr class="source-line">
@@ -615,7 +615,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">Gate</span><span class="p">();</span></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -623,7 +623,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">   * Equality check between two Gate instances</span></td>
     </tr>
 
     <tr class="source-line">
@@ -631,7 +631,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "> <span class="k">private</span><span class="o">:</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -639,7 +639,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// vector of symbolic params</span></td>
+      <td class="src ">  <span class="kt">bool</span> <span class="n">is_equal</span><span class="p">(</span><span class="k">const</span> <span class="n">Op</span> <span class="o">&amp;</span><span class="n">other</span><span class="p">)</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -647,7 +647,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Expr</span><span class="o">&gt;</span> <span class="n">params_</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -655,7 +655,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">unsigned</span> <span class="n">n_qubits_</span><span class="p">;</span> <span class="cm">/**&lt; Number of qubits, when not deducible from type */</span></td>
+      <td class="src ">  <span class="n">Gate</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -663,7 +663,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">};</span></td>
+      <td class="src ">      <span class="n">OpType</span> <span class="n">type</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Expr</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">params</span> <span class="o">=</span> <span class="p">{},</span> <span class="kt">unsigned</span> <span class="n">n_qubits</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -679,7 +679,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">}</span>  <span class="c1">// namespace tket</span></td>
+      <td class="src ">  <span class="n">Gate</span><span class="p">();</span></td>
     </tr>
 
     <tr class="source-line">
@@ -695,11 +695,75 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#endif</span></td>
+      <td class="src "> <span class="k">private</span><span class="o">:</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l80" href="#l80">80</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src ">  <span class="c1">// vector of symbolic params</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l81" href="#l81">81</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src ">  <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Expr</span><span class="o">&gt;</span> <span class="n">params_</span><span class="p">;</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l82" href="#l82">82</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src ">  <span class="kt">unsigned</span> <span class="n">n_qubits_</span><span class="p">;</span> <span class="cm">/**&lt; Number of qubits, when not deducible from type */</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l83" href="#l83">83</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">};</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l84" href="#l84">84</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l85" href="#l85">85</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span>  <span class="c1">// namespace tket</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l86" href="#l86">86</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l87" href="#l87">87</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="cp">#endif</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l88" href="#l88">88</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
