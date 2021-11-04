@@ -49,6 +49,13 @@ static std::vector<std::pair<Node, Node>> as_nodepairs(
   return nodepairs;
 }
 
+ /**
+  * Generic architecture class
+  *
+  * Constraint: the underlying graph type must have node type @ref Node.
+  *
+  * @tparam T underlying graph type
+  */
 template <typename T>
 class ArchitectureBase : public T {
  public:
