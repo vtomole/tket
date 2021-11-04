@@ -1,16 +1,16 @@
 <map id="src/Graphs/UIDConnectivity.hpp" name="src/Graphs/UIDConnectivity.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="3668,5,3895,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="3665,5,3892,32"/>
 <area shape="rect" id="node2" href="$SteinerForest_8hpp.html" title=" " alt="" coords="224,527,376,568"/>
-<area shape="rect" id="node8" href="$Architectures_8hpp.html" title=" " alt="" coords="3535,87,3777,114"/>
-<area shape="rect" id="node47" href="$ArticulationPoints__impl_8hpp.html" title=" " alt="" coords="3801,80,4012,121"/>
-<area shape="rect" id="node50" href="$UIDConnectivity_8cpp.html" title=" " alt="" coords="4036,87,4263,114"/>
+<area shape="rect" id="node8" href="$Architecture_8hpp.html" title=" " alt="" coords="3539,87,3773,114"/>
+<area shape="rect" id="node47" href="$ArticulationPoints__impl_8hpp.html" title=" " alt="" coords="3797,80,4008,121"/>
+<area shape="rect" id="node50" href="$UIDConnectivity_8cpp.html" title=" " alt="" coords="4032,87,4259,114"/>
 <area shape="rect" id="node3" href="$SteinerForest_8cpp.html" title=" " alt="" coords="224,616,376,657"/>
 <area shape="rect" id="node4" href="$PassGenerators_8hpp.html" title=" " alt="" coords="3274,705,3521,732"/>
 <area shape="rect" id="node6" href="$PassGenerators_8cpp.html" title=" " alt="" coords="3013,780,3259,807"/>
 <area shape="rect" id="node5" href="$CompilerPass_8cpp.html" title=" " alt="" coords="3543,780,3775,807"/>
 <area shape="rect" id="node7" href="$PassLibrary_8cpp.html" title=" " alt="" coords="3303,780,3519,807"/>
 <area shape="rect" id="node9" href="$Path_8hpp.html" title=" " alt="" coords="2864,348,3016,389"/>
-<area shape="rect" id="node13" href="$Architectures_8cpp.html" title=" " alt="" coords="4067,266,4309,293"/>
+<area shape="rect" id="node13" href="$Architecture_8cpp.html" title=" " alt="" coords="4067,266,4301,293"/>
 <area shape="rect" id="node14" href="$DeviceCharacterisation_8hpp.html" title=" " alt="" coords="3094,169,3301,211"/>
 <area shape="rect" id="node16" href="$Placement_8hpp.html" title=" " alt="" coords="3219,266,3415,293"/>
 <area shape="rect" id="node17" href="$Routing_8hpp.html" title=" " alt="" coords="3814,355,3991,382"/>
@@ -48,5 +48,5 @@
 <area shape="rect" id="node33" href="$CliffordReductionPass_8cpp.html" title=" " alt="" coords="5,527,200,568"/>
 <area shape="rect" id="node46" href="$Verification_8cpp.html" title=" " alt="" coords="3490,266,3689,293"/>
 <area shape="rect" id="node48" href="$ArticulationPoints_8hpp.html" title=" " alt="" coords="4118,177,4357,203"/>
-<area shape="rect" id="node49" href="$ArticulationPoints_8cpp.html" title=" " alt="" coords="4333,266,4571,293"/>
+<area shape="rect" id="node49" href="$ArticulationPoints_8cpp.html" title=" " alt="" coords="4325,266,4563,293"/>
 </map>

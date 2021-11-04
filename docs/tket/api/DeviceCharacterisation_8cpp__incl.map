@@ -1,15 +1,15 @@
 <map id="src/Characterisation/DeviceCharacterisation.cpp" name="src/Characterisation/DeviceCharacterisation.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="646,5,852,47"/>
-<area shape="rect" id="node2" href="$DeviceCharacterisation_8hpp.html" title=" " alt="" coords="1811,95,2124,121"/>
+<area shape="rect" id="node1" title=" " alt="" coords="661,5,866,47"/>
+<area shape="rect" id="node2" href="$DeviceCharacterisation_8hpp.html" title=" " alt="" coords="1720,95,2034,121"/>
 <area shape="rect" id="node18" title=" " alt="" coords="833,415,908,442"/>
-<area shape="rect" id="node3" title=" " alt="" coords="1618,669,1669,695"/>
+<area shape="rect" id="node3" title=" " alt="" coords="1620,669,1670,695"/>
 <area shape="rect" id="node4" title=" " alt="" coords="2814,505,2961,531"/>
-<area shape="rect" id="node5" href="$Architectures_8hpp.html" title=" " alt="" coords="1489,169,1708,196"/>
+<area shape="rect" id="node5" href="$Architecture_8hpp.html" title=" " alt="" coords="1490,169,1702,196"/>
 <area shape="rect" id="node33" href="$UnitID_8hpp.html" title="Named registers of arrays of (quantum or classical) nodes." alt="" coords="1418,326,1544,353"/>
-<area shape="rect" id="node50" href="$OpType_8hpp.html" title=" " alt="" coords="2238,169,2388,196"/>
+<area shape="rect" id="node50" href="$OpType_8hpp.html" title=" " alt="" coords="2355,169,2506,196"/>
 <area shape="rect" id="node6" title=" " alt="" coords="1185,326,1265,353"/>
 <area shape="rect" id="node7" title=" " alt="" coords="1286,505,1361,531"/>
-<area shape="rect" id="node8" title=" " alt="" coords="1457,669,1500,695"/>
+<area shape="rect" id="node8" title=" " alt="" coords="1454,669,1497,695"/>
 <area shape="rect" id="node9" title=" " alt="" coords="1684,415,1742,442"/>
 <area shape="rect" id="node10" title=" " alt="" coords="64,669,124,695"/>
 <area shape="rect" id="node11" title=" " alt="" coords="68,505,131,531"/>
@@ -18,7 +18,7 @@
 <area shape="rect" id="node37" href="$Json_8hpp.html" title=" " alt="" coords="2833,415,2910,442"/>
 <area shape="rect" id="node40" href="$TketLog_8hpp.html" title="Logging." alt="" coords="1868,415,1969,442"/>
 <area shape="rect" id="node43" href="$EigenConfig_8hpp.html" title="Include this file rather than including the Eigen headers directly." alt="" coords="2280,326,2442,353"/>
-<area shape="rect" id="node48" href="$MatrixAnalysis_8hpp.html" title=" " alt="" coords="1661,244,1842,271"/>
+<area shape="rect" id="node48" href="$MatrixAnalysis_8hpp.html" title=" " alt="" coords="1658,244,1840,271"/>
 <area shape="rect" id="node13" title=" " alt="" coords="725,669,810,695"/>
 <area shape="rect" id="node14" title=" " alt="" coords="592,319,746,360"/>
 <area shape="rect" id="node15" title=" " alt="" coords="418,661,568,703"/>
@@ -26,7 +26,7 @@
 <area shape="rect" id="node17" title=" " alt="" coords="1409,505,1486,531"/>
 <area shape="rect" id="node19" title=" " alt="" coords="302,669,394,695"/>
 <area shape="rect" id="node20" href="$TreeSearch_8hpp.html" title=" " alt="" coords="81,326,252,353"/>
-<area shape="rect" id="node23" href="$Utils_8hpp.html" title=" " alt="" coords="773,505,904,531"/>
+<area shape="rect" id="node23" href="$Utils_8hpp.html" title=" " alt="" coords="821,505,952,531"/>
 <area shape="rect" id="node28" href="$GraphHeaders_8hpp.html" title=" " alt="" coords="835,669,1012,695"/>
 <area shape="rect" id="node21" href="$TreeSearch__impl_8hpp.html" title=" " alt="" coords="183,415,390,442"/>
 <area shape="rect" id="node22" title=" " alt="" coords="194,758,392,785"/>
@@ -48,5 +48,5 @@
 <area shape="rect" id="node45" title=" " alt="" coords="2094,415,2230,442"/>
 <area shape="rect" id="node46" title=" " alt="" coords="2255,408,2467,449"/>
 <area shape="rect" id="node47" title=" " alt="" coords="2492,408,2681,449"/>
-<area shape="rect" id="node49" href="$Constants_8hpp.html" title="Generally useful typedefs and constants." alt="" coords="1681,326,1830,353"/>
+<area shape="rect" id="node49" href="$Constants_8hpp.html" title="Generally useful typedefs and constants." alt="" coords="1686,326,1836,353"/>
 </map>

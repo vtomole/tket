@@ -2,19 +2,19 @@
 <area shape="rect" id="node1" title=" " alt="" coords="2099,5,2344,32"/>
 <area shape="rect" id="node2" href="$PassGenerators_8hpp.html" title=" " alt="" coords="2203,80,2354,107"/>
 <area shape="rect" id="node3" href="$SteinerForest_8hpp.html" title=" " alt="" coords="2155,304,2402,331"/>
-<area shape="rect" id="node4" href="$Circuit_8hpp.html" title=" " alt="" coords="1812,528,1951,555"/>
+<area shape="rect" id="node4" href="$Circuit_8hpp.html" title=" " alt="" coords="1795,528,1933,555"/>
 <area shape="rect" id="node20" href="$Json_8hpp.html" title=" " alt="" coords="279,827,390,853"/>
-<area shape="rect" id="node33" href="$PhasePoly_8hpp.html" title=" " alt="" coords="1686,379,1877,405"/>
-<area shape="rect" id="node40" href="$CompilerPass_8hpp.html" title=" " alt="" coords="2344,155,2483,181"/>
+<area shape="rect" id="node33" href="$PhasePoly_8hpp.html" title=" " alt="" coords="1725,379,1915,405"/>
+<area shape="rect" id="node40" href="$CompilerPass_8hpp.html" title=" " alt="" coords="2367,155,2505,181"/>
 <area shape="rect" id="node41" href="$CompilationUnit_8hpp.html" title=" " alt="" coords="2518,229,2674,256"/>
-<area shape="rect" id="node42" href="$Predicates_8hpp.html" title=" " alt="" coords="2606,304,2725,331"/>
-<area shape="rect" id="node46" href="$Placement_8hpp.html" title=" " alt="" coords="3688,453,3861,480"/>
+<area shape="rect" id="node42" href="$Predicates_8hpp.html" title=" " alt="" coords="2595,304,2714,331"/>
+<area shape="rect" id="node46" href="$Placement_8hpp.html" title=" " alt="" coords="3584,453,3757,480"/>
 <area shape="rect" id="node48" href="$Transform_8hpp.html" title=" " alt="" coords="2355,453,2579,480"/>
-<area shape="rect" id="node49" href="$CircPool_8hpp.html" title=" " alt="" coords="409,453,559,480"/>
+<area shape="rect" id="node49" href="$CircPool_8hpp.html" title=" " alt="" coords="411,453,560,480"/>
 <area shape="rect" id="node50" href="$PassLibrary_8hpp.html" title=" " alt="" coords="2429,80,2624,107"/>
 <area shape="rect" id="node22" href="$UnitID_8hpp.html" title="Named registers of arrays of (quantum or classical) nodes." alt="" coords="1667,752,1792,779"/>
 <area shape="rect" id="node27" href="$GraphHeaders_8hpp.html" title=" " alt="" coords="3167,752,3345,779"/>
-<area shape="rect" id="node36" href="$UIDConnectivity_8hpp.html" title=" " alt="" coords="3318,603,3522,629"/>
+<area shape="rect" id="node36" href="$UIDConnectivity_8hpp.html" title=" " alt="" coords="3317,603,3521,629"/>
 <area shape="rect" id="node38" href="$Utils_8hpp.html" title=" " alt="" coords="3637,677,3768,704"/>
 <area shape="rect" id="node39" href="$SteinerTree_8hpp.html" title=" " alt="" coords="2307,379,2429,405"/>
 <area shape="rect" id="node5" title=" " alt="" coords="3696,752,3781,779"/>
@@ -42,11 +42,11 @@
 <area shape="rect" id="node32" href="$SequencedContainers_8hpp.html" title=" " alt="" coords="1301,603,1526,629"/>
 <area shape="rect" id="node21" href="$MatrixAnalysis_8hpp.html" title=" " alt="" coords="1605,677,1787,704"/>
 <area shape="rect" id="node29" href="$Expression_8hpp.html" title="Functions related to (possibly symbolic) phase values." alt="" coords="821,677,976,704"/>
-<area shape="rect" id="node34" href="$CircUtils_8hpp.html" title=" " alt="" coords="2003,453,2154,480"/>
+<area shape="rect" id="node34" href="$CircUtils_8hpp.html" title=" " alt="" coords="2042,453,2193,480"/>
 <area shape="rect" id="node35" href="$HelperFunctions_8hpp.html" title=" " alt="" coords="2917,677,3107,704"/>
 <area shape="rect" id="node37" title=" " alt="" coords="3944,677,4024,704"/>
 <area shape="rect" id="node43" title=" " alt="" coords="3347,379,3434,405"/>
 <area shape="rect" id="node44" href="$Routing_8hpp.html" title=" " alt="" coords="3067,379,3221,405"/>
-<area shape="rect" id="node45" href="$Architectures_8hpp.html" title=" " alt="" coords="2712,528,2931,555"/>
+<area shape="rect" id="node45" href="$Architecture_8hpp.html" title=" " alt="" coords="2714,528,2926,555"/>
 <area shape="rect" id="node47" title=" " alt="" coords="4089,528,4175,555"/>
 </map>

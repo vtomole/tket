@@ -1,6 +1,6 @@
 <map id="src/ArchAwareSynth/Path.hpp" name="src/ArchAwareSynth/Path.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="1715,5,1867,47"/>
-<area shape="rect" id="node2" href="$Architectures_8hpp.html" title=" " alt="" coords="1451,244,1669,271"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1712,5,1864,47"/>
+<area shape="rect" id="node2" href="$Architecture_8hpp.html" title=" " alt="" coords="1454,244,1666,271"/>
 <area shape="rect" id="node23" href="$UnitID_8hpp.html" title="Named registers of arrays of (quantum or classical) nodes." alt="" coords="2788,401,2913,427"/>
 <area shape="rect" id="node39" href="$MatrixAnalysis_8hpp.html" title=" " alt="" coords="1699,319,1880,345"/>
 <area shape="rect" id="node41" href="$Placement_8hpp.html" title=" " alt="" coords="1788,95,1961,121"/>
@@ -30,9 +30,9 @@
 <area shape="rect" id="node24" title=" " alt="" coords="2725,490,2915,517"/>
 <area shape="rect" id="node25" title=" " alt="" coords="2641,490,2700,517"/>
 <area shape="rect" id="node26" title=" " alt="" coords="3140,490,3215,517"/>
-<area shape="rect" id="node28" title=" " alt="" coords="2533,579,2611,606"/>
+<area shape="rect" id="node28" title=" " alt="" coords="2517,579,2595,606"/>
 <area shape="rect" id="node29" title=" " alt="" coords="3667,579,3754,606"/>
-<area shape="rect" id="node30" title=" " alt="" coords="2329,579,2476,606"/>
+<area shape="rect" id="node30" title=" " alt="" coords="2320,579,2467,606"/>
 <area shape="rect" id="node32" title=" " alt="" coords="3393,572,3541,613"/>
 <area shape="rect" id="node33" title=" " alt="" coords="3245,579,3369,606"/>
 <area shape="rect" id="node35" title=" " alt="" coords="246,490,349,517"/>
@@ -42,7 +42,7 @@
 <area shape="rect" id="node40" href="$Constants_8hpp.html" title="Generally useful typedefs and constants." alt="" coords="2564,401,2713,427"/>
 <area shape="rect" id="node42" title=" " alt="" coords="2301,169,2387,196"/>
 <area shape="rect" id="node43" href="$DeviceCharacterisation_8hpp.html" title=" " alt="" coords="1963,169,2277,196"/>
-<area shape="rect" id="node45" href="$Circuit_8hpp.html" title=" " alt="" coords="2723,169,2861,196"/>
+<area shape="rect" id="node45" href="$Circuit_8hpp.html" title=" " alt="" coords="2721,169,2860,196"/>
 <area shape="rect" id="node44" href="$OpType_8hpp.html" title=" " alt="" coords="2310,319,2461,345"/>
 <area shape="rect" id="node46" title=" " alt="" coords="2512,244,2555,271"/>
 <area shape="rect" id="node47" title=" " alt="" coords="2579,244,2655,271"/>
