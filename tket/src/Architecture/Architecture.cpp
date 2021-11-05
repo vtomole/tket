@@ -43,10 +43,10 @@ unsigned Architecture::get_diameter() const {
     throw ArchitectureInvalidity("No nodes in architecture.");
   }
   unsigned max = 0;
-  const node_vector_t uids = get_all_nodes_vec();
+  const node_vector_t nodes = get_all_nodes_vec();
   for (unsigned i = 0; i < N; i++) {
     for (unsigned j = i + 1; j < N; j++) {
-      unsigned d = get_distance(uids[i], uids[j]);
+      unsigned d = get_distance(nodes[i], nodes[j]);
       if (d > max) max = d;
     }
   }
