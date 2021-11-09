@@ -15,6 +15,7 @@
 #ifndef _TKET_AbstractGraph_H
 #define _TKET_AbstractGraph_H
 
+#include <concepts>
 #include <set>
 #include <stdexcept>
 #include <utility>
@@ -36,6 +37,7 @@ class EdgeDoesNotExistError : public std::logic_error {
  * @tparam T type of nodes in the graph
  */
 template <typename T>
+requires std::totally_ordered<T>
 class AbstractGraph {
  protected:
   using Edge = std::pair<T, T>;

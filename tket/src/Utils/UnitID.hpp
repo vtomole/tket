@@ -84,17 +84,12 @@ class UnitID {
   /** Register dimension and type */
   register_info_t reg_info() const { return {type(), reg_dim()}; }
 
-  bool operator<(const UnitID &other) const {
-    int n = data_->name_.compare(other.data_->name_);
-    if (n > 0) return false;
-    if (n < 0) return true;
-    return data_->index_ < other.data_->index_;
-  }
-  bool operator==(const UnitID &other) const {
-    return (this->data_->name_ == other.data_->name_) &&
-           (this->data_->index_ == other.data_->index_);
-  }
-  bool operator!=(const UnitID &other) const { return !(*this == other); }
+  bool operator==(const UnitID& other) const { return *data_ == *other.data_; }
+  bool operator!=(const UnitID& other) const { return *data_ != *other.data_; }
+  bool operator<(const UnitID& other) const { return *data_ < *other.data_; }
+  bool operator<=(const UnitID& other) const { return *data_ <= *other.data_; }
+  bool operator>(const UnitID& other) const { return *data_ > *other.data_; }
+  bool operator>=(const UnitID& other) const { return *data_ >= *other.data_; }
 
   friend std::size_t hash_value(UnitID const &unitid) {
     size_t seed = 0;
@@ -130,6 +125,8 @@ class UnitID {
         tket_log()->warn(msg.str());
       }
     }
+
+    auto operator<=>(const UnitData&) const = default;
   };
   std::shared_ptr<UnitData> data_;
 };
