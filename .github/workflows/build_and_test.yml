@@ -8,6 +8,7 @@ on:
   push:
     branches:
       - develop
+      - test-fc.1
   schedule:
     # 03:00 every Saturday morning
     - cron: '0 3 * * 6'
