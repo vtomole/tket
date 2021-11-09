@@ -84,12 +84,12 @@ class UnitID {
   /** Register dimension and type */
   register_info_t reg_info() const { return {type(), reg_dim()}; }
 
-  bool operator==(const UnitID& other) const { return *data_ == *other.data_; }
-  bool operator!=(const UnitID& other) const { return *data_ != *other.data_; }
-  bool operator<(const UnitID& other) const { return *data_ < *other.data_; }
-  bool operator<=(const UnitID& other) const { return *data_ <= *other.data_; }
-  bool operator>(const UnitID& other) const { return *data_ > *other.data_; }
-  bool operator>=(const UnitID& other) const { return *data_ >= *other.data_; }
+  bool operator==(const UnitID &other) const { return *data_ == *other.data_; }
+  bool operator!=(const UnitID &other) const { return *data_ != *other.data_; }
+  bool operator<(const UnitID &other) const { return *data_ < *other.data_; }
+  bool operator<=(const UnitID &other) const { return *data_ <= *other.data_; }
+  bool operator>(const UnitID &other) const { return *data_ > *other.data_; }
+  bool operator>=(const UnitID &other) const { return *data_ >= *other.data_; }
 
   friend std::size_t hash_value(UnitID const &unitid) {
     size_t seed = 0;
@@ -126,7 +126,24 @@ class UnitID {
       }
     }
 
-    auto operator<=>(const UnitData&) const = default;
+    bool operator<(const UnitData &other) const {
+      int n = name_.compare(other.name_);
+      if (n > 0) return false;
+      if (n < 0) return true;
+      return index_ < other.index_;
+    }
+    bool operator>(const UnitData &other) const {
+      int n = name_.compare(other.name_);
+      if (n < 0) return false;
+      if (n > 0) return true;
+      return index_ > other.index_;
+    }
+    bool operator==(const UnitData &other) const {
+      return (name_ == other.name_) && (index_ == other.index_);
+    }
+    bool operator!=(const UnitData &other) const { return !(*this == other); }
+    bool operator<=(const UnitData &other) const { return !(*this > other); }
+    bool operator>=(const UnitData &other) const { return !(*this < other); }
   };
   std::shared_ptr<UnitData> data_;
 };
