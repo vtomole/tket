@@ -83,7 +83,6 @@ jobs:
       run: |
         cd pytket/tests
         pip install -r requirements.txt
-        pip install -r requirements-openfermion.txt
         pytest --ignore=simulator/ --doctest-modules
 
   macos:
@@ -156,7 +155,6 @@ jobs:
       run: |
         cd pytket/tests
         pip install -r requirements.txt
-        pip install -r requirements-openfermion.txt
         pytest --ignore=simulator/ --doctest-modules
 
   macos-m1:
@@ -266,5 +264,4 @@ jobs:
         pip install -e . -v
         cd tests
         pip install -r requirements.txt
-        pip install -r requirements-openfermion.txt
         pytest --ignore=simulator/ --doctest-modules
