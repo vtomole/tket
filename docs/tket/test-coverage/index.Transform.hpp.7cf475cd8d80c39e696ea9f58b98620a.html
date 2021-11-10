@@ -26,7 +26,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2021-11-04 11:49:21</td>
+      <td>2021-11-10 15:03:23</td>
     </tr>
   </table>
 </div>
@@ -3732,7 +3732,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// commutes Rz gates through ZZMax, and combines adjacent ZZMax gates</span></td>
+      <td class="src ">  <span class="c1">// replaces every non-global PhasedX gate with two global PhasedX gates,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3740,7 +3740,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// Expects: ZZMax, Rz, Rx</span></td>
+      <td class="src ">  <span class="c1">// using:</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3748,7 +3748,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// Produces: ZZMax, Rz, Rx</span></td>
+      <td class="src ">  <span class="c1">//</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3756,7 +3756,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">static</span> <span class="n">Transform</span> <span class="nf">commute_and_combine_HQS2</span><span class="p">();</span></td>
+      <td class="src ">  <span class="c1">//         PhX(α, β) = PhX(-1/2, β + 1/2) Rz(α) PhX(1/2, β + 1/2)</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3764,7 +3764,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="c1">//</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3772,7 +3772,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// commutes single qubit gates through SWAP gates, leaving them on the</span></td>
+      <td class="src ">  <span class="c1">// Setting α = 0 on non-targeted qubits makes the RHS the identity</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3780,7 +3780,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// PhysicalQubit with best fidelity for the given OP Expects: any single qubit</span></td>
+      <td class="src ">  <span class="k">static</span> <span class="n">Transform</span> <span class="nf">globalise_phasedx</span><span class="p">();</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3788,7 +3788,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// gates, SWAP gates Produces: any single qubit gates, SWAP gates</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -3796,7 +3796,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">static</span> <span class="n">Transform</span> <span class="nf">commute_SQ_gates_through_SWAPS</span><span class="p">(</span></td>
+      <td class="src ">  <span class="c1">// commutes Rz gates through ZZMax, and combines adjacent ZZMax gates</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3804,7 +3804,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">avg_node_errors_t</span><span class="o">&amp;</span> <span class="n">node_errors</span><span class="p">);</span></td>
+      <td class="src ">  <span class="c1">// Expects: ZZMax, Rz, Rx</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3812,7 +3812,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">static</span> <span class="n">Transform</span> <span class="nf">commute_SQ_gates_through_SWAPS</span><span class="p">(</span></td>
+      <td class="src ">  <span class="c1">// Produces: ZZMax, Rz, Rx</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3820,7 +3820,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">op_node_errors_t</span><span class="o">&amp;</span> <span class="n">node_errors</span><span class="p">);</span></td>
+      <td class="src ">  <span class="k">static</span> <span class="n">Transform</span> <span class="nf">commute_and_combine_HQS2</span><span class="p">();</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3836,7 +3836,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// squashes each sequence of two-qubit instructions into their canonical 3-CX</span></td>
+      <td class="src ">  <span class="c1">// commutes single qubit gates through SWAP gates, leaving them on the</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3844,7 +3844,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// form (Cartan/KAK decomposition) The optional CX gate fidelity cx_fidelity</span></td>
+      <td class="src ">  <span class="c1">// PhysicalQubit with best fidelity for the given OP Expects: any single qubit</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3852,7 +3852,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// is used to produce circuit decompositions that maximise expected circuit</span></td>
+      <td class="src ">  <span class="c1">// gates, SWAP gates Produces: any single qubit gates, SWAP gates</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3860,7 +3860,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// fidelity, assuming perfect local operations (i.e. with fidelity 1.).</span></td>
+      <td class="src ">  <span class="k">static</span> <span class="n">Transform</span> <span class="nf">commute_SQ_gates_through_SWAPS</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3868,7 +3868,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// Expects: CX and any single qubit gates</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">avg_node_errors_t</span><span class="o">&amp;</span> <span class="n">node_errors</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3876,7 +3876,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// Produces: CX and single tk1 qubit gates</span></td>
+      <td class="src ">  <span class="k">static</span> <span class="n">Transform</span> <span class="nf">commute_SQ_gates_through_SWAPS</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3884,7 +3884,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">static</span> <span class="n">Transform</span> <span class="nf">two_qubit_squash</span><span class="p">(</span><span class="kt">double</span> <span class="n">cx_fidelity</span> <span class="o">=</span> <span class="mf">1.</span><span class="p">);</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">op_node_errors_t</span><span class="o">&amp;</span> <span class="n">node_errors</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3900,7 +3900,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src ">  <span class="c1">// squashes each sequence of two-qubit instructions into their canonical 3-CX</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3908,7 +3908,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * Squash sequences of 3-qubit instructions into their canonical 20-CX form.</span></td>
+      <td class="src ">  <span class="c1">// form (Cartan/KAK decomposition) The optional CX gate fidelity cx_fidelity</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3916,7 +3916,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   *</span></td>
+      <td class="src ">  <span class="c1">// is used to produce circuit decompositions that maximise expected circuit</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3924,7 +3924,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * The circuit should comprise only CX and single-qubit gates. The transform</span></td>
+      <td class="src ">  <span class="c1">// fidelity, assuming perfect local operations (i.e. with fidelity 1.).</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3932,7 +3932,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * may perform a combination of 2-qubit (KAK) and 3-qubit decompositions of</span></td>
+      <td class="src ">  <span class="c1">// Expects: CX and any single qubit gates</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3940,7 +3940,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * subcircuits, but only does so if this reduces the CX count.</span></td>
+      <td class="src ">  <span class="c1">// Produces: CX and single tk1 qubit gates</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3948,7 +3948,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   *</span></td>
+      <td class="src ">  <span class="k">static</span> <span class="n">Transform</span> <span class="nf">two_qubit_squash</span><span class="p">(</span><span class="kt">double</span> <span class="n">cx_fidelity</span> <span class="o">=</span> <span class="mf">1.</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3956,7 +3956,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @return Transform implementing the squash</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -3964,7 +3964,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3972,7 +3972,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">static</span> <span class="n">Transform</span> <span class="nf">three_qubit_squash</span><span class="p">();</span></td>
+      <td class="src "><span class="cm">   * Squash sequences of 3-qubit instructions into their canonical 20-CX form.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3980,7 +3980,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">   *</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3988,7 +3988,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">////////////////////////</span></td>
+      <td class="src "><span class="cm">   * The circuit should comprise only CX and single-qubit gates. The transform</span></td>
     </tr>
 
     <tr class="source-line">
@@ -3996,7 +3996,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// Contextual Reduction//</span></td>
+      <td class="src "><span class="cm">   * may perform a combination of 2-qubit (KAK) and 3-qubit decompositions of</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4004,7 +4004,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">////////////////////////</span></td>
+      <td class="src "><span class="cm">   * subcircuits, but only does so if this reduces the CX count.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4012,7 +4012,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">   *</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4020,7 +4020,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * @return Transform implementing the squash</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4028,7 +4028,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * Remove all operations that have no @ref OpType::Output or</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4036,7 +4036,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @ref OpType::ClOutput in their causal future.</span></td>
+      <td class="src ">  <span class="k">static</span> <span class="n">Transform</span> <span class="nf">three_qubit_squash</span><span class="p">();</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4044,7 +4044,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -4052,7 +4052,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">static</span> <span class="n">Transform</span> <span class="nf">remove_discarded_ops</span><span class="p">();</span></td>
+      <td class="src ">  <span class="c1">////////////////////////</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4060,7 +4060,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="c1">// Contextual Reduction//</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4068,7 +4068,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/** Allow insertion of classical operations when simplifying? */</span></td>
+      <td class="src ">  <span class="c1">////////////////////////</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4076,7 +4076,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">enum</span> <span class="k">class</span> <span class="nc">AllowClassical</span> <span class="p">{</span> <span class="n">Yes</span><span class="p">,</span> <span class="n">No</span> <span class="p">};</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -4084,7 +4084,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4092,7 +4092,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/** Automatically create all qubits in zero state when simplifying? */</span></td>
+      <td class="src "><span class="cm">   * Remove all operations that have no @ref OpType::Output or</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4100,7 +4100,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">enum</span> <span class="k">class</span> <span class="nc">CreateAllQubits</span> <span class="p">{</span> <span class="n">Yes</span><span class="p">,</span> <span class="n">No</span> <span class="p">};</span></td>
+      <td class="src "><span class="cm">   * @ref OpType::ClOutput in their causal future.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4108,7 +4108,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4116,7 +4116,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src ">  <span class="k">static</span> <span class="n">Transform</span> <span class="nf">remove_discarded_ops</span><span class="p">();</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4124,7 +4124,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * Simplify the circuit where it acts on known basis states.</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -4132,7 +4132,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   *</span></td>
+      <td class="src ">  <span class="cm">/** Allow insertion of classical operations when simplifying? */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4140,7 +4140,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * Whenever a gate transforms a known basis state to another known basis</span></td>
+      <td class="src ">  <span class="k">enum</span> <span class="k">class</span> <span class="nc">AllowClassical</span> <span class="p">{</span> <span class="n">Yes</span><span class="p">,</span> <span class="n">No</span> <span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4148,7 +4148,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * state, remove it, inserting X gates where necessary to achieve the same</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -4156,7 +4156,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * state. Beginning with Create and Reset vertices, move forward through the</span></td>
+      <td class="src ">  <span class="cm">/** Automatically create all qubits in zero state when simplifying? */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4164,7 +4164,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * circuit as far as we can in this way.</span></td>
+      <td class="src ">  <span class="k">enum</span> <span class="k">class</span> <span class="nc">CreateAllQubits</span> <span class="p">{</span> <span class="n">Yes</span><span class="p">,</span> <span class="n">No</span> <span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4172,7 +4172,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   *</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -4180,7 +4180,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * Global phase is ignored.</span></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4188,7 +4188,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   *</span></td>
+      <td class="src "><span class="cm">   * Simplify the circuit where it acts on known basis states.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4196,7 +4196,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @param allow_classical if allowed, insert SetBits operations in place of</span></td>
+      <td class="src "><span class="cm">   *</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4204,7 +4204,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   *  Measure operations that act on known basis states</span></td>
+      <td class="src "><span class="cm">   * Whenever a gate transforms a known basis state to another known basis</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4212,7 +4212,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @param create_all_qubits if enabled, annotate all qubits as initialized</span></td>
+      <td class="src "><span class="cm">   * state, remove it, inserting X gates where necessary to achieve the same</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4220,7 +4220,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   *  to zero as part of the transform, before applying simplification</span></td>
+      <td class="src "><span class="cm">   * state. Beginning with Create and Reset vertices, move forward through the</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4228,7 +4228,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @param xcirc 1-qubit circuit implementing an X gate (if null, an X gate</span></td>
+      <td class="src "><span class="cm">   * circuit as far as we can in this way.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4236,7 +4236,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   *  is used)</span></td>
+      <td class="src "><span class="cm">   *</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4244,7 +4244,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src "><span class="cm">   * Global phase is ignored.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4252,7 +4252,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">static</span> <span class="n">Transform</span> <span class="nf">simplify_initial</span><span class="p">(</span></td>
+      <td class="src "><span class="cm">   *</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4260,7 +4260,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="n">AllowClassical</span> <span class="n">allow_classical</span> <span class="o">=</span> <span class="n">AllowClassical</span><span class="o">::</span><span class="n">Yes</span><span class="p">,</span></td>
+      <td class="src "><span class="cm">   * @param allow_classical if allowed, insert SetBits operations in place of</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4268,7 +4268,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="n">CreateAllQubits</span> <span class="n">create_all_qubits</span> <span class="o">=</span> <span class="n">CreateAllQubits</span><span class="o">::</span><span class="n">No</span><span class="p">,</span></td>
+      <td class="src "><span class="cm">   *  Measure operations that act on known basis states</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4276,7 +4276,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="k">const</span> <span class="n">Circuit</span><span class="o">&gt;</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span></td>
+      <td class="src "><span class="cm">   * @param create_all_qubits if enabled, annotate all qubits as initialized</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4284,7 +4284,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">   *  to zero as part of the transform, before applying simplification</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4292,7 +4292,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * @param xcirc 1-qubit circuit implementing an X gate (if null, an X gate</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4300,7 +4300,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * Commute classical maps through measurements.</span></td>
+      <td class="src "><span class="cm">   *  is used)</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4308,7 +4308,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   *</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4316,7 +4316,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * A &quot;classical map&quot; is a pure quantum operation that acts as a permutation</span></td>
+      <td class="src ">  <span class="k">static</span> <span class="n">Transform</span> <span class="nf">simplify_initial</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4324,7 +4324,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * of the computational basis states composed with a diagonal operator.</span></td>
+      <td class="src ">      <span class="n">AllowClassical</span> <span class="n">allow_classical</span> <span class="o">=</span> <span class="n">AllowClassical</span><span class="o">::</span><span class="n">Yes</span><span class="p">,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4332,7 +4332,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   *</span></td>
+      <td class="src ">      <span class="n">CreateAllQubits</span> <span class="n">create_all_qubits</span> <span class="o">=</span> <span class="n">CreateAllQubits</span><span class="o">::</span><span class="n">No</span><span class="p">,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4340,7 +4340,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * A &quot;measured classical map&quot; is a classical map whose succeeding vertices</span></td>
+      <td class="src ">      <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="k">const</span> <span class="n">Circuit</span><span class="o">&gt;</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4348,7 +4348,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * in the DAG are all @ref OpType::Measure.</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -4356,7 +4356,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   *</span></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4364,7 +4364,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * This transform replaces all measured classical maps that are followed by</span></td>
+      <td class="src "><span class="cm">   * Commute classical maps through measurements.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4372,7 +4372,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * Measure operations whose quantum output is discarded with classical</span></td>
+      <td class="src "><span class="cm">   *</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4380,7 +4380,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * operations following the Measure.</span></td>
+      <td class="src "><span class="cm">   * A &quot;classical map&quot; is a pure quantum operation that acts as a permutation</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4388,7 +4388,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   *</span></td>
+      <td class="src "><span class="cm">   * of the computational basis states composed with a diagonal operator.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4396,7 +4396,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * The process is repeated until no such replacements are possible.</span></td>
+      <td class="src "><span class="cm">   *</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4404,7 +4404,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   *</span></td>
+      <td class="src "><span class="cm">   * A &quot;measured classical map&quot; is a classical map whose succeeding vertices</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4412,7 +4412,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * Global phase is not preserved.</span></td>
+      <td class="src "><span class="cm">   * in the DAG are all @ref OpType::Measure.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4420,7 +4420,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src "><span class="cm">   *</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4428,7 +4428,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">static</span> <span class="n">Transform</span> <span class="nf">simplify_measured</span><span class="p">();</span></td>
+      <td class="src "><span class="cm">   * This transform replaces all measured classical maps that are followed by</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4436,7 +4436,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">   * Measure operations whose quantum output is discarded with classical</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4444,7 +4444,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">///////////////////////////////////////////////</span></td>
+      <td class="src "><span class="cm">   * operations following the Measure.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4452,7 +4452,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// Minor components for other Transform passes//</span></td>
+      <td class="src "><span class="cm">   *</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4460,7 +4460,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">///////////////////////////////////////////////</span></td>
+      <td class="src "><span class="cm">   * The process is repeated until no such replacements are possible.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4468,7 +4468,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">   *</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4476,7 +4476,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// converts a tk1 gate to a PhasedXRz gate</span></td>
+      <td class="src "><span class="cm">   * Global phase is not preserved.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4484,7 +4484,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">static</span> <span class="n">Circuit</span> <span class="nf">tk1_to_PhasedXRz</span><span class="p">(</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4492,7 +4492,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">alpha</span><span class="p">,</span> <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">beta</span><span class="p">,</span> <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">gamma</span><span class="p">);</span></td>
+      <td class="src ">  <span class="k">static</span> <span class="n">Transform</span> <span class="nf">simplify_measured</span><span class="p">();</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4508,7 +4508,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">static</span> <span class="n">Circuit</span> <span class="nf">tk1_to_rzrx</span><span class="p">(</span></td>
+      <td class="src ">  <span class="c1">///////////////////////////////////////////////</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4516,7 +4516,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">alpha</span><span class="p">,</span> <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">beta</span><span class="p">,</span> <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">gamma</span><span class="p">);</span></td>
+      <td class="src ">  <span class="c1">// Minor components for other Transform passes//</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4524,7 +4524,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="c1">///////////////////////////////////////////////</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4532,7 +4532,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">static</span> <span class="n">Circuit</span> <span class="nf">tk1_to_rzh</span><span class="p">(</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -4540,7 +4540,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">alpha</span><span class="p">,</span> <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">beta</span><span class="p">,</span> <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">gamma</span><span class="p">);</span></td>
+      <td class="src ">  <span class="c1">// converts a tk1 gate to a PhasedXRz gate</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4548,7 +4548,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="k">static</span> <span class="n">Circuit</span> <span class="nf">tk1_to_PhasedXRz</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4556,7 +4556,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">static</span> <span class="n">Circuit</span> <span class="nf">tk1_to_tk1</span><span class="p">(</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">alpha</span><span class="p">,</span> <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">beta</span><span class="p">,</span> <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">gamma</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4564,7 +4564,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">alpha</span><span class="p">,</span> <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">beta</span><span class="p">,</span> <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">gamma</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -4572,7 +4572,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="k">static</span> <span class="n">Circuit</span> <span class="nf">tk1_to_rzrx</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4580,7 +4580,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">static</span> <span class="n">Circuit</span> <span class="nf">tk1_to_rzsx</span><span class="p">(</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">alpha</span><span class="p">,</span> <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">beta</span><span class="p">,</span> <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">gamma</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4588,7 +4588,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">alpha</span><span class="p">,</span> <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">beta</span><span class="p">,</span> <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">gamma</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -4596,7 +4596,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="k">static</span> <span class="n">Circuit</span> <span class="nf">tk1_to_rzh</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4604,7 +4604,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// helper class subcircuits representing 2qb interactions</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">alpha</span><span class="p">,</span> <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">beta</span><span class="p">,</span> <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">gamma</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4612,11 +4612,75 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">struct</span> <span class="n">Interaction</span> <span class="p">{</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l567" href="#l567">567</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src ">  <span class="k">static</span> <span class="n">Circuit</span> <span class="nf">tk1_to_tk1</span><span class="p">(</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l568" href="#l568">568</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">alpha</span><span class="p">,</span> <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">beta</span><span class="p">,</span> <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">gamma</span><span class="p">);</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l569" href="#l569">569</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l570" href="#l570">570</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src ">  <span class="k">static</span> <span class="n">Circuit</span> <span class="nf">tk1_to_rzsx</span><span class="p">(</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l571" href="#l571">571</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">alpha</span><span class="p">,</span> <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">beta</span><span class="p">,</span> <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">gamma</span><span class="p">);</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l572" href="#l572">572</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l573" href="#l573">573</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src ">  <span class="c1">// helper class subcircuits representing 2qb interactions</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l574" href="#l574">574</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src ">  <span class="k">struct</span> <span class="n">Interaction</span> <span class="p">{</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l575" href="#l575">575</a></td>
       <td class="linebranch">
         <details class="linebranchDetails">
         <summary class="linebranchSummary">2/4</summary>
@@ -4633,7 +4697,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l568" href="#l568">568</a></td>
+      <td class="lineno"><a id="l576" href="#l576">576</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -4641,7 +4705,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l569" href="#l569">569</a></td>
+      <td class="lineno"><a id="l577" href="#l577">577</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -4649,7 +4713,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l570" href="#l570">570</a></td>
+      <td class="lineno"><a id="l578" href="#l578">578</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -4657,7 +4721,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l571" href="#l571">571</a></td>
+      <td class="lineno"><a id="l579" href="#l579">579</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -4665,7 +4729,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l572" href="#l572">572</a></td>
+      <td class="lineno"><a id="l580" href="#l580">580</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -4673,7 +4737,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l573" href="#l573">573</a></td>
+      <td class="lineno"><a id="l581" href="#l581">581</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -4681,7 +4745,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l574" href="#l574">574</a></td>
+      <td class="lineno"><a id="l582" href="#l582">582</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -4689,75 +4753,11 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l575" href="#l575">575</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l576" href="#l576">576</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src ">  <span class="k">static</span> <span class="n">Circuit</span> <span class="nf">cnx_normal_decomp</span><span class="p">(</span><span class="kt">unsigned</span> <span class="n">n</span><span class="p">);</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l577" href="#l577">577</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src ">  <span class="k">static</span> <span class="n">Circuit</span> <span class="nf">decomposed_CnRy</span><span class="p">(</span><span class="k">const</span> <span class="n">Op_ptr</span> <span class="n">op</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="n">arity</span><span class="p">);</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l578" href="#l578">578</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src ">  <span class="k">static</span> <span class="n">Circuit</span> <span class="nf">incrementer_borrow_n_qubits</span><span class="p">(</span><span class="kt">unsigned</span> <span class="n">n</span><span class="p">);</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l579" href="#l579">579</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src ">  <span class="k">static</span> <span class="n">Circuit</span> <span class="nf">incrementer_borrow_1_qubit</span><span class="p">(</span><span class="kt">unsigned</span> <span class="n">n</span><span class="p">);</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l580" href="#l580">580</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="p">};</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l581" href="#l581">581</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l582" href="#l582">582</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount coveredLine">7</td>
-      <td class="src coveredLine"><span class="kr">inline</span> <span class="k">const</span> <span class="n">Transform</span> <span class="n">Transform</span><span class="o">::</span><span class="n">id</span> <span class="o">=</span> <span class="n">Transform</span><span class="p">([](</span><span class="k">const</span> <span class="n">Circuit</span><span class="o">&amp;</span><span class="p">)</span> <span class="p">{</span></td>
-    </tr>
-
-    <tr class="source-line">
       <td class="lineno"><a id="l583" href="#l583">583</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">7</td>
-      <td class="src coveredLine">  <span class="k">return</span> <span class="nb">false</span><span class="p">;</span></td>
+      <td class="linecount "></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -4765,7 +4765,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">});</span>  <span class="c1">// returns `false` as it does not change the Circuit in any way</span></td>
+      <td class="src ">  <span class="k">static</span> <span class="n">Circuit</span> <span class="nf">cnx_normal_decomp</span><span class="p">(</span><span class="kt">unsigned</span> <span class="n">n</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4773,7 +4773,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="k">static</span> <span class="n">Circuit</span> <span class="nf">decomposed_CnRy</span><span class="p">(</span><span class="k">const</span> <span class="n">Op_ptr</span> <span class="n">op</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="n">arity</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4781,7 +4781,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">}</span>  <span class="c1">// namespace tket</span></td>
+      <td class="src ">  <span class="k">static</span> <span class="n">Circuit</span> <span class="nf">incrementer_borrow_n_qubits</span><span class="p">(</span><span class="kt">unsigned</span> <span class="n">n</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4789,7 +4789,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="k">static</span> <span class="n">Circuit</span> <span class="nf">incrementer_borrow_1_qubit</span><span class="p">(</span><span class="kt">unsigned</span> <span class="n">n</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4797,11 +4797,75 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#endif</span></td>
+      <td class="src "><span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l589" href="#l589">589</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l590" href="#l590">590</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">7</td>
+      <td class="src coveredLine"><span class="kr">inline</span> <span class="k">const</span> <span class="n">Transform</span> <span class="n">Transform</span><span class="o">::</span><span class="n">id</span> <span class="o">=</span> <span class="n">Transform</span><span class="p">([](</span><span class="k">const</span> <span class="n">Circuit</span><span class="o">&amp;</span><span class="p">)</span> <span class="p">{</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l591" href="#l591">591</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">7</td>
+      <td class="src coveredLine">  <span class="k">return</span> <span class="nb">false</span><span class="p">;</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l592" href="#l592">592</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">});</span>  <span class="c1">// returns `false` as it does not change the Circuit in any way</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l593" href="#l593">593</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l594" href="#l594">594</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span>  <span class="c1">// namespace tket</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l595" href="#l595">595</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l596" href="#l596">596</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="cp">#endif</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l597" href="#l597">597</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
