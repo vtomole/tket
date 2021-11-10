@@ -252,6 +252,12 @@
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pytket.routing.Placement.from_dict">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">from_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">json</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pytket.routing.Placement" title="pytket.routing.Placement"><span class="pre">pytket.routing.Placement</span></a></span></span><a class="headerlink" href="#pytket.routing.Placement.from_dict" title="Permalink to this definition"></a></dt>
+<dd><p>Construct Placement instance from JSON serializable dict representation of the Placement.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pytket.routing.Placement.get_placement_map">
 <span class="sig-name descname"><span class="pre">get_placement_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pytket.routing.Placement" title="pytket.routing.Placement"><span class="pre">pytket.routing.Placement</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">circuit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="circuit_class.html#pytket.circuit.Circuit" title="pytket.circuit.Circuit"><span class="pre">pytket.circuit.Circuit</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="circuit.html#pytket.circuit.Qubit" title="pytket.circuit.Qubit"><span class="pre">pytket.circuit.Qubit</span></a><span class="p"><span class="pre">,</span> </span><a class="reference internal" href="circuit.html#pytket.circuit.Node" title="pytket.circuit.Node"><span class="pre">pytket.circuit.Node</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pytket.routing.Placement.get_placement_map" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a map from logical to physical qubits that is Architecture appropriate for the given Circuit.</p>
@@ -302,6 +308,13 @@
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pytket.routing.Placement.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pytket.routing.Placement" title="pytket.routing.Placement"><span class="pre">pytket.routing.Placement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">json</span></span></span><a class="headerlink" href="#pytket.routing.Placement.to_dict" title="Permalink to this definition"></a></dt>
+<dd><p>Return a JSON serializable dict representation of the Placement.
+:return: dict representing the Placement.</p>
 </dd></dl>
 
 </dd></dl>
