@@ -234,6 +234,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtket_1_1GateUnitaryMatrixError.html">GateUnitaryMatrixError</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">We do not wish to couple tightly to exception classes elsewhere.  <a href="structtket_1_1GateUnitaryMatrixError.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtket_1_1GlobalPhasedXPredicate.html">GlobalPhasedXPredicate</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asserts that all NPhasedX gates act on all qubits In the future, it might be useful to have a generic GlobalGatePredicate for other global gates, or flag some gates as global.  <a href="classtket_1_1GlobalPhasedXPredicate.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtket_1_1GraphPlacement.html">GraphPlacement</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtket_1_1IncompatibleCompilerPasses.html">IncompatibleCompilerPasses</a></td></tr>
@@ -874,38 +877,40 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3aa4bc541b95fc1ece06e92143710c337a">OpType::ISWAP</a>, 
 <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a667abdbcc77f7dead35f32f2efeebd3b">OpType::PhasedX</a>, 
+<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a29d19ccd6cb57e5bd1006d9130efbcfc">OpType::NPhasedX</a>, 
 <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3aab307d474acdc6d93c072fab66ac07d6">OpType::ZZMax</a>, 
-<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a464c865608c43e719808fdfada936330">OpType::XXPhase</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a6d5eeefd873119001f3a4289b5985230">OpType::YYPhase</a>, 
+&#160;&#160;<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a464c865608c43e719808fdfada936330">OpType::XXPhase</a>, 
+<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a6d5eeefd873119001f3a4289b5985230">OpType::YYPhase</a>, 
 <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a3093b0af32d5a67378a948d9e90ac005">OpType::ZZPhase</a>, 
 <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3aa74b5165b09b6b760a36c69c5465b527">OpType::XXPhase3</a>, 
-<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3ad75e939460d13226bf4ce9eb21dcd1d2">OpType::ESWAP</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3aeda876352a64ead092be83fa73367cd8">OpType::FSim</a>, 
+&#160;&#160;<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3ad75e939460d13226bf4ce9eb21dcd1d2">OpType::ESWAP</a>, 
+<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3aeda876352a64ead092be83fa73367cd8">OpType::FSim</a>, 
 <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a34dffbaaba6a753e65c4fdfe2b5e08c3">OpType::Sycamore</a>, 
 <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a8ae9a60f268fb2c9d6111af9392df6bf">OpType::ISWAPMax</a>, 
-<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3ae9803ce0546b458ef0384bdb380d6fec">OpType::PhasedISWAP</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3abcad60565e4aa606e492a188e1587f0b">OpType::CnRy</a>, 
+&#160;&#160;<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3ae9803ce0546b458ef0384bdb380d6fec">OpType::PhasedISWAP</a>, 
+<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3abcad60565e4aa606e492a188e1587f0b">OpType::CnRy</a>, 
 <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3adc867e204704e592db6fb6738ceab9ee">OpType::CnX</a>, 
 <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a2e7c6b58cca98f2fe44f8548645ba6ad">OpType::CircBox</a>, 
-<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a3540179d9ced51d6d9a7a748cf410189">OpType::Unitary1qBox</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3ac59cd8b7da8177b5fa306c9a1abbc0d6">OpType::Unitary2qBox</a>, 
+&#160;&#160;<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a3540179d9ced51d6d9a7a748cf410189">OpType::Unitary1qBox</a>, 
+<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3ac59cd8b7da8177b5fa306c9a1abbc0d6">OpType::Unitary2qBox</a>, 
 <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3afee26642d6cfd5068f8d24bcf4cd3410">OpType::Unitary3qBox</a>, 
 <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a8033def635b0488ce1437a093df3bbd8">OpType::ExpBox</a>, 
-<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3aaa7c55748f3e91d01205fe879c9fcbda">OpType::PauliExpBox</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3ac69faa9b11814ac9630106a403214413">OpType::CliffBox</a>, 
+&#160;&#160;<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3aaa7c55748f3e91d01205fe879c9fcbda">OpType::PauliExpBox</a>, 
+<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3ac69faa9b11814ac9630106a403214413">OpType::CliffBox</a>, 
 <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a141a5b46e2087dc7a80a43710c2dacfb">OpType::Composite</a>, 
 <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a242d5bcfd960527a3f152c6dfe220c67">OpType::PhasePolyBox</a>, 
-<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a0bdf2d4fd224397ee888ae5ed535ed6c">OpType::QControlBox</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a81e83c562bbc4b3d830391b008dece4e">OpType::ClassicalExpBox</a>, 
+&#160;&#160;<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a0bdf2d4fd224397ee888ae5ed535ed6c">OpType::QControlBox</a>, 
+<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a81e83c562bbc4b3d830391b008dece4e">OpType::ClassicalExpBox</a>, 
 <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a9d3afea73e90192d96dda8d38c87a4fe">OpType::Conditional</a>, 
 <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a927eb314e7755edbf2f295363eb70989">OpType::ProjectorAssertionBox</a>, 
-<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a5873bfa21082d8011557e19ef525e2dd">OpType::StabiliserAssertionBox</a>
+<br />
+&#160;&#160;<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a5873bfa21082d8011557e19ef525e2dd">OpType::StabiliserAssertionBox</a>
 <br />
  }</td></tr>
 <tr class="memdesc:a13e81344da4794f2648eb9a7b286fcf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Named operation types.  <a href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3">More...</a><br /></td></tr>
@@ -1356,6 +1361,8 @@ Functions</h2></td></tr>
 <tr class="separator:a7133491e626469a2be1c2fbb7b7f52ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abea9ccde3a73d57244810ed055bc9aae"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#abea9ccde3a73d57244810ed055bc9aae">CommuteThroughMultis</a> ()</td></tr>
 <tr class="separator:abea9ccde3a73d57244810ed055bc9aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44431d4439944c1bb8341ac171115b6f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a44431d4439944c1bb8341ac171115b6f">GlobalisePhasedX</a> ()</td></tr>
+<tr class="separator:a44431d4439944c1bb8341ac171115b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7dc1ef75fef790265269e949e500c57"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ad7dc1ef75fef790265269e949e500c57">DecomposeArbitrarilyControlledGates</a> ()</td></tr>
 <tr class="separator:ad7dc1ef75fef790265269e949e500c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8af76b0265bcc1c9b9a20b77020ec894"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a8af76b0265bcc1c9b9a20b77020ec894">DecomposeMultiQubitsCX</a> ()</td></tr>
@@ -3953,6 +3960,8 @@ template&lt;typename A , typename B &gt; </div>
 </td></tr>
 <tr><td class="fieldname"><a id="a13e81344da4794f2648eb9a7b286fcf3a667abdbcc77f7dead35f32f2efeebd3b"></a>PhasedX&#160;</td><td class="fielddoc"><p>\( (\alpha, \beta) \mapsto \mathrm{Rz}(\beta) \mathrm{Rx}(\alpha) \mathrm{Rz}(-\beta) \) </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a13e81344da4794f2648eb9a7b286fcf3a29d19ccd6cb57e5bd1006d9130efbcfc"></a>NPhasedX&#160;</td><td class="fielddoc"><p>PhasedX gates on multiple qubits. </p>
+</td></tr>
 <tr><td class="fieldname"><a id="a13e81344da4794f2648eb9a7b286fcf3aab307d474acdc6d93c072fab66ac07d6"></a>ZZMax&#160;</td><td class="fielddoc"><p>\( \mathrm{ZZPhase}(\frac12) \) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a13e81344da4794f2648eb9a7b286fcf3a464c865608c43e719808fdfada936330"></a>XXPhase&#160;</td><td class="fielddoc"><p>\( \alpha \mapsto e^{-\frac12 i \pi\alpha (X \otimes X)} = \left[ \begin{array}{cccc} \cos\frac{\pi\alpha}{2} &amp; 0 &amp; 0 &amp; -i\sin\frac{\pi\alpha}{2} \\ 0 &amp; \cos\frac{\pi\alpha}{2} &amp; -i\sin\frac{\pi\alpha}{2} &amp; 0 \\ 0 &amp; -i\sin\frac{\pi\alpha}{2} &amp; \cos\frac{\pi\alpha}{2} &amp; 0 \\ -i\sin\frac{\pi\alpha}{2} &amp; 0 &amp; 0 &amp; \cos\frac{\pi\alpha}{2} \end{array} \right] \) </p>
@@ -5242,7 +5251,7 @@ template&lt;typename T &gt; </div>
 <li>barrier)</li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00259">259</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00276">276</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -5590,7 +5599,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>equivalent circuit </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Replacement_8cpp_source.html#l00133">133</a> of file <a class="el" href="Replacement_8cpp_source.html">Replacement.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Replacement_8cpp_source.html#l00137">137</a> of file <a class="el" href="Replacement_8cpp_source.html">Replacement.cpp</a>.</p>
 
 </div>
 </div>
@@ -5707,7 +5716,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00192">192</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00209">209</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -5728,7 +5737,7 @@ template&lt;typename T &gt; </div>
 <p>Preserves Max2QubitGatesPredicate since any box with &gt;2 qubits is already invalid. Preserves <a class="el" href="classtket_1_1ConnectivityPredicate.html">ConnectivityPredicate</a> (and <a class="el" href="classtket_1_1DirectednessPredicate.html">DirectednessPredicate</a>) since the verification looks inside CircBoxes and any other boxes with &gt;2 qubits are already invalid. Most others are preserved since the predicates look within CircBoxes.</p>
 <p>Invalidates <a class="el" href="classtket_1_1GateSetPredicate.html">GateSetPredicate</a> because it doesn't look inside boxes or account for the gate set of their decomposition.</p>
 
-<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00280">280</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00297">297</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -5747,7 +5756,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00330">330</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00347">347</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -5766,7 +5775,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00207">207</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00224">224</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -5785,7 +5794,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00234">234</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00251">251</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -5806,7 +5815,7 @@ template&lt;typename T &gt; </div>
 
 <p>Commutes measurements to the end of the circuit. </p>
 
-<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00393">393</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00410">410</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -6300,7 +6309,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00345">345</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00362">362</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -6790,7 +6799,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Predicates_8cpp_source.html#l00705">705</a> of file <a class="el" href="Predicates_8cpp_source.html">Predicates.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Predicates_8cpp_source.html#l00734">734</a> of file <a class="el" href="Predicates_8cpp_source.html">Predicates.cpp</a>.</p>
 
 </div>
 </div>
@@ -8311,6 +8320,25 @@ circuit has no symbolic parameters</dd></dl>
 <p>Thus, if std::abs(z) &lt;= abs_epsilon, then z is treated as zero. </p>
 
 <p class="definition">Definition at line <a class="el" href="MatrixAnalysis_8cpp_source.html#l00663">663</a> of file <a class="el" href="MatrixAnalysis_8cpp_source.html">MatrixAnalysis.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a44431d4439944c1bb8341ac171115b6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44431d4439944c1bb8341ac171115b6f">&#9670;&nbsp;</a></span>GlobalisePhasedX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp; tket::GlobalisePhasedX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00192">192</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -10624,7 +10652,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Predicates_8cpp_source.html#l00049">49</a> of file <a class="el" href="Predicates_8cpp_source.html">Predicates.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Predicates_8cpp_source.html#l00050">50</a> of file <a class="el" href="Predicates_8cpp_source.html">Predicates.cpp</a>.</p>
 
 </div>
 </div>
@@ -10944,7 +10972,7 @@ template&lt;class MapType &gt; </div>
 
 <p>Remove all&amp; <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a48656da7a6e48c6887d94f4c69c731b6">OpType::Barrier</a> from the circuit. </p>
 
-<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00367">367</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00384">384</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -10965,7 +10993,7 @@ template&lt;class MapType &gt; </div>
 
 <p>Remove all operations that have no <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a29c2c02a361c9d7028472e5d92cd4a54">OpType::Output</a> or <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a6c4e5627d56328e52b12a2aeb0164d0d">OpType::ClOutput</a> in their causal future. </p>
 
-<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00409">409</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00426">426</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -11249,7 +11277,7 @@ template&lt;typename BoxT &gt; </div>
 
 <p>Replace all measured classical maps that are followed by Measure operations whose quantum output is discarded with classical operations following the Measure. </p>
 
-<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00421">421</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00438">438</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -11291,7 +11319,7 @@ template&lt;typename BoxT &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00322">322</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00339">339</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -11312,7 +11340,7 @@ template&lt;typename BoxT &gt; </div>
 
 <p>Squash sequences of single-qubit gates to TK1 gates. </p>
 
-<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00307">307</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00324">324</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -12074,7 +12102,7 @@ template&lt;typename BoxT &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Predicates_8cpp_source.html#l00630">630</a> of file <a class="el" href="Predicates_8cpp_source.html">Predicates.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Predicates_8cpp_source.html#l00655">655</a> of file <a class="el" href="Predicates_8cpp_source.html">Predicates.cpp</a>.</p>
 
 </div>
 </div>

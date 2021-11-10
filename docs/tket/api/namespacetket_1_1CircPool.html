@@ -234,6 +234,9 @@ Functions</h2></td></tr>
 <tr class="memitem:af40fde34db4e8e112702a13bc4e9389f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtket_1_1Circuit.html">Circuit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket_1_1CircPool.html#af40fde34db4e8e112702a13bc4e9389f">PhasedISWAP_using_CX</a> (<a class="el" href="namespacetket.html#a6817cd1c8a5630b406c86a59173edd21">Expr</a> p, <a class="el" href="namespacetket.html#a6817cd1c8a5630b406c86a59173edd21">Expr</a> t)</td></tr>
 <tr class="memdesc:af40fde34db4e8e112702a13bc4e9389f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equivalent to PhasedISWAP, using CX, U3 and Rz gates.  <a href="namespacetket_1_1CircPool.html#af40fde34db4e8e112702a13bc4e9389f">More...</a><br /></td></tr>
 <tr class="separator:af40fde34db4e8e112702a13bc4e9389f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadd104d9554eaf4efcdab3f05f6091bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtket_1_1Circuit.html">Circuit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket_1_1CircPool.html#aadd104d9554eaf4efcdab3f05f6091bd">NPhasedX_using_CX</a> (unsigned int number_of_qubits, <a class="el" href="namespacetket.html#a6817cd1c8a5630b406c86a59173edd21">Expr</a> alpha, <a class="el" href="namespacetket.html#a6817cd1c8a5630b406c86a59173edd21">Expr</a> beta)</td></tr>
+<tr class="memdesc:aadd104d9554eaf4efcdab3f05f6091bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unwrap NPhasedX, into number_of_qubits PhasedX gates.  <a href="namespacetket_1_1CircPool.html#aadd104d9554eaf4efcdab3f05f6091bd">More...</a><br /></td></tr>
+<tr class="separator:aadd104d9554eaf4efcdab3f05f6091bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="abab394dcbec921e57f7c511e6eca5f74"></a>
@@ -1093,6 +1096,44 @@ Functions</h2></td></tr>
 <p>CCX[0,1,2]; CX[2,0]; CX[2,1]. </p>
 
 <p class="definition">Definition at line <a class="el" href="CircPool_8cpp_source.html#l00322">322</a> of file <a class="el" href="CircPool_8cpp_source.html">CircPool.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aadd104d9554eaf4efcdab3f05f6091bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadd104d9554eaf4efcdab3f05f6091bd">&#9670;&nbsp;</a></span>NPhasedX_using_CX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classtket_1_1Circuit.html">Circuit</a> tket::CircPool::NPhasedX_using_CX </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>number_of_qubits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacetket.html#a6817cd1c8a5630b406c86a59173edd21">Expr</a>&#160;</td>
+          <td class="paramname"><em>alpha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacetket.html#a6817cd1c8a5630b406c86a59173edd21">Expr</a>&#160;</td>
+          <td class="paramname"><em>beta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unwrap NPhasedX, into number_of_qubits PhasedX gates. </p>
+
+<p class="definition">Definition at line <a class="el" href="CircPool_8cpp_source.html#l00657">657</a> of file <a class="el" href="CircPool_8cpp_source.html">CircPool.cpp</a>.</p>
 
 </div>
 </div>
