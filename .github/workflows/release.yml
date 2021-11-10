@@ -8,13 +8,14 @@ on:
   push:
     branches:
       - 'wheel/**'
+      - test-py310
 
 jobs:
   build_Linux_wheels:
     name: Build manylinux
     runs-on: ubuntu-20.04
     env:
-      PY_VERS: cp38-cp38 cp39-cp39 cp310-cp310
+      PY_VERS: cp310-cp310
     steps:
     - uses: actions/checkout@v2
       with:
@@ -56,24 +57,6 @@ jobs:
         key: ${{ runner.os }}-tket-conan-${{ steps.current_time.outputs.formattedTime }}
         restore-keys: |
           ${{ runner.os }}-tket-conan-
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
-    - name: Build tket C++
-      run: |
-        pip install conan
-        conan profile new tket --detect --force
-        conan config set general.revisions_enabled=1
-        conan create --profile=tket --build=missing recipes/tket
-    - name: Build wheel (3.8)
-      run: .github/workflows/build_macos_wheel
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.9
-    - name: Build wheel (3.9)
-      run: .github/workflows/build_macos_wheel
     - name: Set up Python 3.10
       uses: actions/setup-python@v2
       with:
@@ -104,8 +87,6 @@ jobs:
         conan config set general.revisions_enabled=1
         conan install --profile=tket boost/1.77.0@ --build=missing -o boost:without_fiber=True -o boost:without_json=True -o boost:without_nowide=True
         conan create --profile=tket recipes/tket --build=missing -o boost:without_fiber=True -o boost:without_json=True -o boost:without_nowide=True
-        .github/workflows/build_macos_m1_wheel
-        pyenv shell tket-3.9
         .github/workflows/build_macos_m1_wheel
         pyenv shell tket-3.10
         .github/workflows/build_macos_m1_wheel
@@ -158,34 +139,6 @@ jobs:
       if: steps.cache-tket.outputs.cache-hit != 'true'
       run: |
         conan create --profile=tket recipes/tket
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
-    - name: Build wheel (3.8)
-      run: |
-        pip install wheel
-        cd pytket
-        python -m pip install -U pip setuptools_scm
-        python setup.py bdist_wheel -d "${{ github.workspace }}/wheelhouse/3.8"
-    - uses: actions/upload-artifact@v2
-      with:
-        name: Windows_wheels
-        path: wheelhouse/
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.9
-    - name: Build wheel (3.9)
-      run: |
-        pip install wheel
-        cd pytket
-        python -m pip install -U pip setuptools_scm
-        python setup.py bdist_wheel -d "${{ github.workspace }}/wheelhouse/3.9"
-    - uses: actions/upload-artifact@v2
-      with:
-        name: Windows_wheels
-        path: wheelhouse/
     - name: Set up Python 3.10
       uses: actions/setup-python@v2
       with:
@@ -209,7 +162,7 @@ jobs:
       PYTKET_SKIP_REGISTRATION: "true"
     strategy:
       matrix:
-        python-version: [3.8, 3.9, 3.10]
+        python-version: ['3.10']
     steps:
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
@@ -240,7 +193,7 @@ jobs:
       PYTKET_SKIP_REGISTRATION: "true"
     strategy:
       matrix:
-        python-version: [3.8, 3.9, 3.10]
+        python-version: ['3.10']
     steps:
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
@@ -271,7 +224,7 @@ jobs:
       PYTKET_SKIP_REGISTRATION: "true"
     strategy:
       matrix:
-        python-version: [3.8, 3.9, 3.10]
+        python-version: ['3.10']
     steps:
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
@@ -306,7 +259,7 @@ jobs:
       PYTKET_SKIP_REGISTRATION: "true"
     strategy:
       matrix:
-        python-version: [3.8, 3.9, 3.10]
+        python-version: ['3.10']
     steps:
     - name: Download wheels
       uses: actions/download-artifact@v2
@@ -338,7 +291,7 @@ jobs:
       PYTKET_SKIP_REGISTRATION: "true"
     strategy:
       matrix:
-        python-version: [3.8, 3.9, 3.10]
+        python-version: ['3.10']
     steps:
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
@@ -361,87 +314,3 @@ jobs:
         cd tket/pytket/tests
         pip install -r requirements.txt
         pytest --ignore=simulator/ --doctest-modules
-
-  publish_to_pypi:
-    name: Publish to pypi
-    if: github.event_name == 'release'
-    needs: [test_linux_wheels, test_macos_wheels, test_macos_wheels_10_15, test_macos_M1_wheels, test_Windows_wheels]
-    runs-on: ubuntu-20.04
-    steps:
-    - name: Download all wheels
-      uses: actions/download-artifact@v2
-      with:
-        path: wheelhouse
-    - name: Put them all in the dist folder
-      run: |
-        mkdir dist
-        for w in `find wheelhouse/ -type f -name "*.whl"` ; do cp $w dist/ ; done
-    - name: Publish wheels
-      uses: pypa/gh-action-pypi-publish@release/v1
-      with:
-        user: __token__
-        password: ${{ secrets.PYPI_PYTKET_API_TOKEN }}
-        verbose: true
-
-  build_docs:
-    name: Build docs
-    needs: publish_to_pypi
-    if: github.event_name == 'release'
-    runs-on: ubuntu-20.04
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: '0'
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.9
-    - name: Download wheels
-      uses: actions/download-artifact@v2
-      with:
-        name: Linux_wheels
-        path: wheelhouse/
-    - name: Install pip, wheel
-      run: pip install -U pip wheel
-    - name: Install pytket
-      run: for w in `find wheelhouse/ -type f -name "*-cp39-cp39-*.whl"` ; do pip install $w ; done
-    - name: Install docs dependencies
-      run: pip install -r pytket/docs/requirements.txt
-    - name: Build docs
-      timeout-minutes: 20
-      run: ./.github/workflows/build-docs
-    - name: Upload artefact
-      uses: actions/upload-artifact@v2
-      with:
-        name: pytket_docs
-        path: pytket/docs/build/html/
-
-  publish_docs:
-    name: Publish docs
-    needs: build_docs
-    concurrency: gh_pages
-    if: github.event_name == 'release'
-    runs-on: ubuntu-20.04
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        ref: gh-pages
-    - name: Download artefact
-      uses: actions/download-artifact@v2
-      with:
-        name: pytket_docs
-        path: api/
-    - name: Configure git
-      run: |
-        git config --global user.email "tket-bot@cambridgequantum.com"
-        git config --global user.name  "«$GITHUB_WORKFLOW» github action"
-    - name: Remove old docs
-      run: git rm -r docs/pytket/api
-    - name: Add generated docs to repository
-      run: |
-        mkdir -p docs/pytket/
-        mv api/ docs/pytket/
-        git add -f docs/pytket/api/
-        git commit --allow-empty -m "Add generated pytket documentation."
-    - name: Publish docs
-      run:  git push origin gh-pages:gh-pages
