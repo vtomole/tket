@@ -192,7 +192,7 @@ class AASRouteRoutingMethod : public RoutingMethod {
 
 bool AASRoutingMethod::check_method(
     const std::shared_ptr<MappingFrontier>& mapping_frontier,
-    const ArchitecturePtr& /*architecture*/) const {
+    const ArchitecturePtr& / *architecture* /) const {
   CutFrontier next_cut = mapping_frontier->circuit_.next_cut(
       frontier_convert_vertport_to_edge(
           mapping_frontier->circuit_, this->quantum_boundary),
@@ -200,9 +200,9 @@ bool AASRoutingMethod::check_method(
   for (const Vertex& v : next_cut.slice) {
     if (mapping_frontier->circuit_.get_OpType_from_vertex(v) ==
         OpType::PhasePolyBox) {
-      /*
+      / *
       if all in edges to vertex are labelled as node from device, we're good
-      */
+      * /
       return true;
     }
   }
@@ -219,7 +219,7 @@ unit_map_t AASRoutingMethod::routing_method(
   for (const Vertex& v : next_cut.slice) {
     if (mapping_frontier->circuit_.get_OpType_from_vertex(v) ==
         OpType::PhasePolyBox) {
-      PhasePolyBox ppb = /*unpack vertex somehow will be easy*/
+      PhasePolyBox ppb = / *unpack vertex somehow will be easy* /
 
           // in_edges.size() < architecture.n_nodes()
           // => replacement circuit will use nodes not in subcircuit sc
