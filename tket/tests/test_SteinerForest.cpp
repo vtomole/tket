@@ -15,7 +15,12 @@
 #include <catch2/catch.hpp>
 
 #include "ArchAwareSynth/SteinerForest.hpp"
+#include "Circuit/CircUtils.hpp"
+#include "Circuit/Circuit.hpp"
+#include "Converters/PhasePoly.hpp"
+#include "Simulation/CircuitSimulator.hpp"
 #include "testutil.hpp"
+
 namespace tket {
 SCENARIO("Synthesise a CNOT-only steiner Forest") {
   GIVEN("Empty circuit") {
@@ -1414,6 +1419,47 @@ SCENARIO("Synthesise a phase polynomial for a given architecture") {
     REQUIRE(test_unitary_comparison(circ, result));
     REQUIRE(result.n_gates() == 19);
     REQUIRE(result.count_gates(OpType::CX) == 18);
+  }
+}
+SCENARIO("Phase polynomial synthesis without architecture") {
+  GIVEN("single SWAP circuit") {
+    std::cout << "Begin testcase: single SWAP circuit in PhasePolyBox\n";
+    Circuit circ(2);
+    circ.add_op<unsigned>(OpType::SWAP, {0, 1});
+    circ.replace_SWAPs();
+    std::cout << "has wireswaps: " << circ.has_implicit_wireswaps()
+              << std::endl;
+    PhasePolyBox ppbox(circ);
+    std::shared_ptr<Circuit> circptr = ppbox.to_circuit();
+    Circuit circ2 = *circptr;
+    for (auto c : circ2) {
+      c.print();
+    }
+    std::cout << "has wireswaps: " << circ2.has_implicit_wireswaps()
+              << std::endl;
+    REQUIRE(test_unitary_comparison(circ, circ2));
+    std::cout << "End testcase: single SWAP circuit in PhasePolyBox\n";
+  }
+}
+SCENARIO("circ box substitution") {
+  GIVEN("single SWAP circuit box") {
+    std::cout << "Begin testcase: single SWAP circuit in CircBox\n";
+    Circuit circ(2);
+    circ.add_op<unsigned>(OpType::SWAP, {0, 1});
+    circ.replace_SWAPs();
+    std::cout << "has wireswaps: " << circ.has_implicit_wireswaps()
+              << std::endl;
+    CircBox cBox(circ);
+    std::shared_ptr<Circuit> circptr = cBox.to_circuit();
+    Circuit circ2 = *circptr;
+    std::cout << "print circ:\n";
+    for (auto c : circ2) {
+      c.print();
+    }
+    std::cout << "has wireswaps: " << circ2.has_implicit_wireswaps()
+              << std::endl;
+    REQUIRE(test_unitary_comparison(circ, circ2));
+    std::cout << "Begin testcase: single SWAP circuit in CircBox\n";
   }
 }
 }  // namespace tket
