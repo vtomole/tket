@@ -80,6 +80,9 @@ jobs:
     - name: Test pytket (3.8)
       if: github.event_name == 'push'
       run: |
+        # Quick check:
+        python -c "from pytket import Circuit; c = Circuit(1).Rx(0.5, 0)"
+        # Unit tests:
         cd pytket/tests
         pip install -r requirements.txt
         pip install -r requirements-openfermion.txt
@@ -103,6 +106,9 @@ jobs:
     - name: Test pytket (3.9)
       if: github.event_name == 'pull_request'
       run: |
+        # Quick check:
+        python -c "from pytket import Circuit; c = Circuit(1).Rx(0.5, 0)"
+        # Unit tests:
         cd pytket/tests
         pip install -r requirements.txt
         pip install -r requirements-openfermion.txt
@@ -120,6 +126,9 @@ jobs:
     - name: Test pytket (3.10)
       if: github.event_name == 'schedule'
       run: |
+        # Quick check:
+        python -c "from pytket import Circuit; c = Circuit(1).Rx(0.5, 0)"
+        # Unit tests:
         cd pytket/tests
         pip install -r requirements.txt
         pytest --ignore=simulator/ --doctest-modules
@@ -192,6 +201,9 @@ jobs:
     - name: Test pytket (3.8)
       if: github.event_name == 'push'
       run: |
+        # Quick check:
+        python -c "from pytket import Circuit; c = Circuit(1).Rx(0.5, 0)"
+        # Unit tests:
         cd pytket/tests
         pip install -r requirements.txt
         pip install -r requirements-openfermion.txt
@@ -209,6 +221,9 @@ jobs:
     - name: Test pytket (3.9)
       if: github.event_name == 'pull_request'
       run: |
+        # Quick check:
+        python -c "from pytket import Circuit; c = Circuit(1).Rx(0.5, 0)"
+        # Unit tests:
         cd pytket/tests
         pip install -r requirements.txt
         pip install -r requirements-openfermion.txt
@@ -232,6 +247,9 @@ jobs:
     - name: Test pytket (3.10)
       if: github.event_name == 'schedule'
       run: |
+        # Quick check:
+        python -c "from pytket import Circuit; c = Circuit(1).Rx(0.5, 0)"
+        # Unit tests:
         cd pytket/tests
         pip install -r requirements.txt
         pytest --ignore=simulator/ --doctest-modules
@@ -278,6 +296,9 @@ jobs:
       run: |
         eval "$(pyenv init -)"
         pyenv shell tket-3.8
+        # Quick check:
+        python -c "from pytket import Circuit; c = Circuit(1).Rx(0.5, 0)"
+        # Unit tests:
         cd pytket/tests
         pip install -r requirements.txt
         pytest --ignore=simulator/ --doctest-modules
@@ -294,6 +315,9 @@ jobs:
       run: |
         eval "$(pyenv init -)"
         pyenv shell tket-3.9
+        # Quick check:
+        python -c "from pytket import Circuit; c = Circuit(1).Rx(0.5, 0)"
+        # Unit tests:
         cd pytket/tests
         pip install -r requirements.txt
         pytest --ignore=simulator/ --doctest-modules
@@ -310,6 +334,9 @@ jobs:
       run: |
         eval "$(pyenv init -)"
         pyenv shell tket-3.10
+        # Quick check:
+        python -c "from pytket import Circuit; c = Circuit(1).Rx(0.5, 0)"
+        # Unit tests:
         cd pytket/tests
         pip install -r requirements.txt
         pytest --ignore=simulator/ --doctest-modules
@@ -373,6 +400,9 @@ jobs:
       run: |
         cd pytket
         pip install -e . -v
+        # Quick check:
+        python -c "from pytket import Circuit; c = Circuit(1).Rx(0.5, 0)"
+        # Unit tests:
         cd tests
         pip install -r requirements.txt
         pip install -r requirements-openfermion.txt
@@ -387,6 +417,9 @@ jobs:
       run: |
         cd pytket
         pip install -e . -v
+        # Quick check:
+        python -c "from pytket import Circuit; c = Circuit(1).Rx(0.5, 0)"
+        # Unit tests:
         cd tests
         pip install -r requirements.txt
         pip install -r requirements-openfermion.txt
@@ -401,6 +434,9 @@ jobs:
       run: |
         cd pytket
         pip install -e . -v
+        # Quick check:
+        python -c "from pytket import Circuit; c = Circuit(1).Rx(0.5, 0)"
+        # Unit tests:
         cd tests
         pip install -r requirements.txt
         pytest --ignore=simulator/ --doctest-modules
