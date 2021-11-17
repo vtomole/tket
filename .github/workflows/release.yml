@@ -8,6 +8,7 @@ on:
   push:
     branches:
       - 'wheel/**'
+      - test-devdocs
 
 jobs:
   build_Linux_wheels:
