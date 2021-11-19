@@ -230,7 +230,8 @@ set(TKET_SOURCES
 add_library(${TKET} SHARED ${TKET_SOURCES})
 # ----- Location of header files ----------------------------------------------
 target_include_directories(${TKET} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET} "tket-utils" "tket-zx" ${CONAN_LIBS})
+target_link_libraries(${TKET} PRIVATE "tket-utils" "tket-zx" ${CONAN_LIBS})
 if(WIN32)
-    target_link_libraries(${TKET} bcrypt)
+    target_link_libraries(${TKET} PRIVATE bcrypt)
 ENDIF()
+target_link_libraries(${TKET} PUBLIC "tket-zx")

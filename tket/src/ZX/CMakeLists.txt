@@ -25,4 +25,4 @@ add_library("tket-zx"
     ZXRWGraphLikeSimplification.cpp)
 
 target_include_directories("tket-zx" PRIVATE ${TKET_SRC_DIR})
-target_link_libraries("tket-zx" "tket-utils")
+target_link_libraries("tket-zx" PRIVATE "tket-utils")
