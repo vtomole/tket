@@ -45,4 +45,4 @@ include(tkettestsfiles.cmake)
 set(TEST_EXE test_tket)
 
 add_executable(${TEST_EXE} ${TEST_SOURCES})
-target_link_libraries(${TEST_EXE} "tket-zx" "tket-optype" ${CONAN_LIBS})
+target_link_libraries(${TEST_EXE} tket-zx tket-optype ${CONAN_LIBS})
