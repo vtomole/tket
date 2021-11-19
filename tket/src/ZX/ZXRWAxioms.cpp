@@ -1,5 +1,5 @@
 #include "Utils/GraphHeaders.hpp"
-#include "ZX/Rewrite.hpp"
+#include "Rewrite.hpp"
 
 namespace tket {
 

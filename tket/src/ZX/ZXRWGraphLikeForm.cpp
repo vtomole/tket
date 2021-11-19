@@ -1,4 +1,4 @@
-#include "ZX/Rewrite.hpp"
+#include "Rewrite.hpp"
 
 namespace tket {
 

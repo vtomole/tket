@@ -20,7 +20,7 @@
  * @brief Include this file rather than including the Eigen headers directly
  */
 
-#include "Utils/Json.hpp"
+#include "Json.hpp"
 
 #if defined(__clang__)
 #pragma GCC diagnostic push

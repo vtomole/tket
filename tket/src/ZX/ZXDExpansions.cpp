@@ -1,6 +1,6 @@
 #include "Utils/Assert.hpp"
 #include "Utils/GraphHeaders.hpp"
-#include "ZX/ZXDiagram.hpp"
+#include "ZXDiagram.hpp"
 
 namespace tket {
 
