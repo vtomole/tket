@@ -67,6 +67,7 @@ add_subdirectory(ZX)
 add_subdirectory(OpType)
 add_subdirectory(Clifford)
 add_subdirectory(Ops)
+add_subdirectory(Graphs)
 
 set(TKET_ARCHITECTURE_DIR ${TKET_SRC_DIR}/Architecture)
 set(TKET_AAS_DIR ${TKET_SRC_DIR}/ArchAwareSynth)
@@ -132,16 +133,6 @@ set(TKET_SOURCES
     ${TKET_DIAGONALISATION_DIR}/DiagUtils.cpp
     ${TKET_DIAGONALISATION_DIR}/Diagonalisation.cpp
     ${TKET_DIAGONALISATION_DIR}/PauliPartition.cpp
-
-    # Graph algorithms
-    ${TKET_GRAPH_DIR}/AdjacencyData.cpp
-    ${TKET_GRAPH_DIR}/BruteForceColouring.cpp
-    ${TKET_GRAPH_DIR}/ColouringPriority.cpp
-    ${TKET_GRAPH_DIR}/GraphColouring.cpp
-    ${TKET_GRAPH_DIR}/GraphRoutines.cpp
-    ${TKET_GRAPH_DIR}/LargeCliquesResult.cpp
-    ${TKET_GRAPH_DIR}/ArticulationPoints.cpp
-    ${TKET_GRAPH_DIR}/UIDConnectivity.cpp
 
     # Transformations
     ${TKET_TRANSFORM_DIR}/Combinator.cpp
@@ -215,7 +206,7 @@ set(TKET_SOURCES
 add_library(${TKET} SHARED ${TKET_SOURCES})
 # ----- Location of header files ----------------------------------------------
 target_include_directories(${TKET} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET} PRIVATE tket-utils tket-zx tket-clifford tket-ops ${CONAN_LIBS})
+target_link_libraries(${TKET} PRIVATE tket-utils tket-zx tket-clifford tket-ops tket-graphs ${CONAN_LIBS})
 if(WIN32)
     target_link_libraries(${TKET} PRIVATE bcrypt)
 ENDIF()
