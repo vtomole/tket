@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-add_library(tket-ops
+add_library(${TKET_OPS}
     Conditional.cpp
     FlowOp.cpp
     MetaOp.cpp
@@ -20,5 +20,5 @@ add_library(tket-ops
     ClassicalOps.cpp
     OpJsonFactory.cpp)
 
-target_include_directories(tket-ops PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(tket-ops PRIVATE tket-utils tket-optype)
+target_include_directories(${TKET_OPS} PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(${TKET_OPS} PRIVATE ${TKET_UTILS} ${TKET_OPTYPE})
