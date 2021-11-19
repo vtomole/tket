@@ -62,6 +62,13 @@ ELSEIF(APPLE)
     set(CMAKE_BUILD_WITH_INSTALL_NAME_DIR ON)
 ENDIF()
 
+set(TKET_UTILS tket-utils)
+set(TKET_ZX tket-zx)
+set(TKET_OPTYPE tket-optype)
+set(TKET_CLIFFORD tket-clifford)
+set(TKET_OPS tket-ops)
+set(TKET_GRAPHS tket-graphs)
+
 add_subdirectory(Utils)
 add_subdirectory(ZX)
 add_subdirectory(OpType)
@@ -206,7 +213,7 @@ set(TKET_SOURCES
 add_library(${TKET} SHARED ${TKET_SOURCES})
 # ----- Location of header files ----------------------------------------------
 target_include_directories(${TKET} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET} PRIVATE tket-utils tket-zx tket-clifford tket-ops tket-graphs ${CONAN_LIBS})
+target_link_libraries(${TKET} PRIVATE ${TKET_UTILS} ${TKET_ZX} ${TKET_CLIFFORD} ${TKET_OPS} ${TKET_GRAPHS} ${CONAN_LIBS})
 if(WIN32)
     target_link_libraries(${TKET} PRIVATE bcrypt)
 ENDIF()
