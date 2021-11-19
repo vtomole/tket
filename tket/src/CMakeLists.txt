@@ -65,6 +65,7 @@ ENDIF()
 add_subdirectory(Utils)
 add_subdirectory(ZX)
 add_subdirectory(OpType)
+add_subdirectory(Clifford)
 
 set(TKET_ARCHITECTURE_DIR ${TKET_SRC_DIR}/Architecture)
 set(TKET_AAS_DIR ${TKET_SRC_DIR}/ArchAwareSynth)
@@ -133,9 +134,6 @@ set(TKET_SOURCES
     ${TKET_SIMULATION_DIR}/GateNode.cpp
     ${TKET_SIMULATION_DIR}/GateNodesBuffer.cpp
     ${TKET_SIMULATION_DIR}/PauliExpBoxUnitaryCalculator.cpp
-
-    # Clifford
-    ${TKET_CLIFFORD_DIR}/CliffTableau.cpp
 
     # Diagonalisation
     ${TKET_DIAGONALISATION_DIR}/DiagUtils.cpp
@@ -224,7 +222,7 @@ set(TKET_SOURCES
 add_library(${TKET} SHARED ${TKET_SOURCES})
 # ----- Location of header files ----------------------------------------------
 target_include_directories(${TKET} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET} PRIVATE tket-utils tket-zx ${CONAN_LIBS})
+target_link_libraries(${TKET} PRIVATE tket-utils tket-zx tket-clifford ${CONAN_LIBS})
 if(WIN32)
     target_link_libraries(${TKET} PRIVATE bcrypt)
 ENDIF()
