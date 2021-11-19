@@ -116,5 +116,6 @@ class TketConan(ConanFile):
             "tket-zx",
             "tket-optype",
             "tket-clifford",
+            "tket-ops",
             "tket",
         ]

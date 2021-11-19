@@ -66,6 +66,7 @@ add_subdirectory(Utils)
 add_subdirectory(ZX)
 add_subdirectory(OpType)
 add_subdirectory(Clifford)
+add_subdirectory(Ops)
 
 set(TKET_ARCHITECTURE_DIR ${TKET_SRC_DIR}/Architecture)
 set(TKET_AAS_DIR ${TKET_SRC_DIR}/ArchAwareSynth)
@@ -86,14 +87,6 @@ set(TKET_PROGRAM_DIR ${TKET_SRC_DIR}/Program)
 set(TKET_MEASUREMENT_DIR ${TKET_SRC_DIR}/MeasurementSetup)
 
 set(TKET_SOURCES
-
-    # Ops
-    ${TKET_OPS_DIR}/Conditional.cpp
-    ${TKET_OPS_DIR}/FlowOp.cpp
-    ${TKET_OPS_DIR}/MetaOp.cpp
-    ${TKET_OPS_DIR}/Op.cpp
-    ${TKET_OPS_DIR}/ClassicalOps.cpp
-    ${TKET_OPS_DIR}/OpJsonFactory.cpp
 
     # Gate
     ${TKET_GATE_DIR}/Gate.cpp
@@ -222,8 +215,7 @@ set(TKET_SOURCES
 add_library(${TKET} SHARED ${TKET_SOURCES})
 # ----- Location of header files ----------------------------------------------
 target_include_directories(${TKET} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET} PRIVATE tket-utils tket-zx tket-clifford ${CONAN_LIBS})
+target_link_libraries(${TKET} PRIVATE tket-utils tket-zx tket-clifford tket-ops ${CONAN_LIBS})
 if(WIN32)
     target_link_libraries(${TKET} PRIVATE bcrypt)
 ENDIF()
-target_link_libraries(${TKET} PUBLIC tket-zx)
