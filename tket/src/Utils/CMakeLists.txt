@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-add_library(tket-utils
+add_library(${TKET_UTILS}
     TketLog.cpp
     UnitID.cpp
     HelperFunctions.cpp

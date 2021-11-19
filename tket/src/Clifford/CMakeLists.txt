@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-add_library(tket-clifford
+add_library(${TKET_CLIFFORD}
     CliffTableau.cpp)
 
-target_include_directories(tket-clifford PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(tket-clifford PRIVATE tket-utils tket-optype)
+target_include_directories(${TKET_CLIFFORD} PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(${TKET_CLIFFORD} PRIVATE ${TKET_UTILS} ${TKET_OPTYPE})

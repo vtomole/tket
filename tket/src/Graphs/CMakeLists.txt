@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-add_library(tket-graphs
+add_library(${TKET_GRAPHS}
     AdjacencyData.cpp
     BruteForceColouring.cpp
     ColouringPriority.cpp
@@ -22,5 +22,5 @@ add_library(tket-graphs
     ArticulationPoints.cpp
     UIDConnectivity.cpp)
 
-target_include_directories(tket-graphs PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(tket-graphs PRIVATE tket-utils)
+target_include_directories(${TKET_GRAPHS} PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(${TKET_GRAPHS} PRIVATE ${TKET_UTILS})
