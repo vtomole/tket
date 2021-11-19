@@ -32,7 +32,7 @@ find_file(CONANBUILDINFO_FILE conanbuildinfo.cmake HINTS ${CMAKE_BINARY_DIR})
 include(${CONANBUILDINFO_FILE})
 conan_basic_setup()
 
-set(TKET "tket")
+set(TKET tket)
 
 IF (WIN32)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /WX /EHsc")
@@ -62,9 +62,9 @@ ELSEIF(APPLE)
     set(CMAKE_BUILD_WITH_INSTALL_NAME_DIR ON)
 ENDIF()
 
-add_subdirectory("Utils")
-add_subdirectory("ZX")
-add_subdirectory("OpType")
+add_subdirectory(Utils)
+add_subdirectory(ZX)
+add_subdirectory(OpType)
 
 set(TKET_ARCHITECTURE_DIR ${TKET_SRC_DIR}/Architecture)
 set(TKET_AAS_DIR ${TKET_SRC_DIR}/ArchAwareSynth)
@@ -224,8 +224,8 @@ set(TKET_SOURCES
 add_library(${TKET} SHARED ${TKET_SOURCES})
 # ----- Location of header files ----------------------------------------------
 target_include_directories(${TKET} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET} PRIVATE "tket-utils" "tket-zx" ${CONAN_LIBS})
+target_link_libraries(${TKET} PRIVATE tket-utils tket-zx ${CONAN_LIBS})
 if(WIN32)
     target_link_libraries(${TKET} PRIVATE bcrypt)
 ENDIF()
-target_link_libraries(${TKET} PUBLIC "tket-zx")
+target_link_libraries(${TKET} PUBLIC tket-zx)
