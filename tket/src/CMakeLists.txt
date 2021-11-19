@@ -68,6 +68,7 @@ set(TKET_OPTYPE tket-optype)
 set(TKET_CLIFFORD tket-clifford)
 set(TKET_OPS tket-ops)
 set(TKET_GRAPHS tket-graphs)
+set(TKET_GATE tket-gate)
 
 add_subdirectory(Utils)
 add_subdirectory(ZX)
@@ -75,15 +76,12 @@ add_subdirectory(OpType)
 add_subdirectory(Clifford)
 add_subdirectory(Ops)
 add_subdirectory(Graphs)
+add_subdirectory(Gate)
 
 set(TKET_ARCHITECTURE_DIR ${TKET_SRC_DIR}/Architecture)
 set(TKET_AAS_DIR ${TKET_SRC_DIR}/ArchAwareSynth)
 set(TKET_CIRCUIT_DIR ${TKET_SRC_DIR}/Circuit)
-set(TKET_CLIFFORD_DIR ${TKET_SRC_DIR}/Clifford)
 set(TKET_DIAGONALISATION_DIR ${TKET_SRC_DIR}/Diagonalisation)
-set(TKET_GRAPH_DIR ${TKET_SRC_DIR}/Graphs)
-set(TKET_OPS_DIR ${TKET_SRC_DIR}/Ops)
-set(TKET_GATE_DIR ${TKET_SRC_DIR}/Gate)
 set(TKET_SIMULATION_DIR ${TKET_SRC_DIR}/Simulation)
 set(TKET_ROUTING_DIR ${TKET_SRC_DIR}/Routing)
 set(TKET_TRANSFORM_DIR ${TKET_SRC_DIR}/Transformations)
@@ -95,21 +93,6 @@ set(TKET_PROGRAM_DIR ${TKET_SRC_DIR}/Program)
 set(TKET_MEASUREMENT_DIR ${TKET_SRC_DIR}/MeasurementSetup)
 
 set(TKET_SOURCES
-
-    # Gate
-    ${TKET_GATE_DIR}/Gate.cpp
-    ${TKET_GATE_DIR}/GatePtr.cpp
-    ${TKET_GATE_DIR}/OpPtrFunctions.cpp
-    ${TKET_GATE_DIR}/Rotation.cpp
-    ${TKET_GATE_DIR}/SymTable.cpp
-    ${TKET_GATE_DIR}/GateUnitaryMatrix.cpp
-    ${TKET_GATE_DIR}/GateUnitaryMatrixComposites.cpp
-    ${TKET_GATE_DIR}/GateUnitaryMatrixError.cpp
-    ${TKET_GATE_DIR}/GateUnitaryMatrixFixedMatrices.cpp
-    ${TKET_GATE_DIR}/GateUnitaryMatrixPrimitives.cpp
-    ${TKET_GATE_DIR}/GateUnitaryMatrixUtils.cpp
-    ${TKET_GATE_DIR}/GateUnitaryMatrixVariableQubits.cpp
-    ${TKET_GATE_DIR}/GateUnitarySparseMatrix.cpp
 
     # Circuit
     ${TKET_CIRCUIT_DIR}/Boxes.cpp
@@ -213,7 +196,7 @@ set(TKET_SOURCES
 add_library(${TKET} SHARED ${TKET_SOURCES})
 # ----- Location of header files ----------------------------------------------
 target_include_directories(${TKET} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET} PRIVATE ${TKET_UTILS} ${TKET_ZX} ${TKET_CLIFFORD} ${TKET_OPS} ${TKET_GRAPHS} ${CONAN_LIBS})
+target_link_libraries(${TKET} PRIVATE ${TKET_UTILS} ${TKET_ZX} ${TKET_CLIFFORD} ${TKET_OPS} ${TKET_GRAPHS} ${TKET_GATE} ${CONAN_LIBS})
 if(WIN32)
     target_link_libraries(${TKET} PRIVATE bcrypt)
 ENDIF()
