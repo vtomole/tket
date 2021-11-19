@@ -64,6 +64,7 @@ ENDIF()
 
 add_subdirectory("Utils")
 add_subdirectory("ZX")
+add_subdirectory("OpType")
 
 set(TKET_ARCHITECTURE_DIR ${TKET_SRC_DIR}/Architecture)
 set(TKET_AAS_DIR ${TKET_SRC_DIR}/ArchAwareSynth)
@@ -71,7 +72,6 @@ set(TKET_CIRCUIT_DIR ${TKET_SRC_DIR}/Circuit)
 set(TKET_CLIFFORD_DIR ${TKET_SRC_DIR}/Clifford)
 set(TKET_DIAGONALISATION_DIR ${TKET_SRC_DIR}/Diagonalisation)
 set(TKET_GRAPH_DIR ${TKET_SRC_DIR}/Graphs)
-set(TKET_OPTYPE_DIR ${TKET_SRC_DIR}/OpType)
 set(TKET_OPS_DIR ${TKET_SRC_DIR}/Ops)
 set(TKET_GATE_DIR ${TKET_SRC_DIR}/Gate)
 set(TKET_SIMULATION_DIR ${TKET_SRC_DIR}/Simulation)
@@ -85,12 +85,6 @@ set(TKET_PROGRAM_DIR ${TKET_SRC_DIR}/Program)
 set(TKET_MEASUREMENT_DIR ${TKET_SRC_DIR}/MeasurementSetup)
 
 set(TKET_SOURCES
-
-    # OpType
-    ${TKET_OPTYPE_DIR}/OpDesc.cpp
-    ${TKET_OPTYPE_DIR}/OpTypeInfo.cpp
-    ${TKET_OPTYPE_DIR}/OpTypeFunctions.cpp
-    ${TKET_OPTYPE_DIR}/OpTypeJson.cpp
 
     # Ops
     ${TKET_OPS_DIR}/Conditional.cpp
