@@ -62,13 +62,15 @@ ELSEIF(APPLE)
     set(CMAKE_BUILD_WITH_INSTALL_NAME_DIR ON)
 ENDIF()
 
+add_subdirectory("Utils")
+add_subdirectory("ZX")
+
 set(TKET_ARCHITECTURE_DIR ${TKET_SRC_DIR}/Architecture)
 set(TKET_AAS_DIR ${TKET_SRC_DIR}/ArchAwareSynth)
 set(TKET_CIRCUIT_DIR ${TKET_SRC_DIR}/Circuit)
 set(TKET_CLIFFORD_DIR ${TKET_SRC_DIR}/Clifford)
 set(TKET_DIAGONALISATION_DIR ${TKET_SRC_DIR}/Diagonalisation)
 set(TKET_GRAPH_DIR ${TKET_SRC_DIR}/Graphs)
-set(TKET_UTILS_DIR ${TKET_SRC_DIR}/Utils)
 set(TKET_OPTYPE_DIR ${TKET_SRC_DIR}/OpType)
 set(TKET_OPS_DIR ${TKET_SRC_DIR}/Ops)
 set(TKET_GATE_DIR ${TKET_SRC_DIR}/Gate)
@@ -81,7 +83,6 @@ set(TKET_PAULIGRAPH_DIR ${TKET_SRC_DIR}/PauliGraph)
 set(TKET_CONVERTERS_DIR ${TKET_SRC_DIR}/Converters)
 set(TKET_PROGRAM_DIR ${TKET_SRC_DIR}/Program)
 set(TKET_MEASUREMENT_DIR ${TKET_SRC_DIR}/MeasurementSetup)
-set(TKET_ZX_DIR ${TKET_SRC_DIR}/ZX)
 
 set(TKET_SOURCES
 
@@ -191,15 +192,6 @@ set(TKET_SOURCES
     ${TKET_AAS_DIR}/SteinerTree.cpp
     ${TKET_AAS_DIR}/SteinerForest.cpp
 
-    # Utils
-    ${TKET_UTILS_DIR}/TketLog.cpp
-    ${TKET_UTILS_DIR}/UnitID.cpp
-    ${TKET_UTILS_DIR}/HelperFunctions.cpp
-    ${TKET_UTILS_DIR}/MatrixAnalysis.cpp
-    ${TKET_UTILS_DIR}/PauliStrings.cpp
-    ${TKET_UTILS_DIR}/CosSinDecomposition.cpp
-    ${TKET_UTILS_DIR}/Expression.cpp
-
     # Predicates
     ${TKET_PREDS_DIR}/Predicates.cpp
     ${TKET_PREDS_DIR}/CompilationUnit.cpp
@@ -233,24 +225,12 @@ set(TKET_SOURCES
     ${TKET_CHARACTERISATION_DIR}/Cycles.cpp
     ${TKET_CHARACTERISATION_DIR}/FrameRandomisation.cpp
     ${TKET_CHARACTERISATION_DIR}/DeviceCharacterisation.cpp
-
-    # ZX
-    ${TKET_ZX_DIR}/ZXDConstructors.cpp
-    ${TKET_ZX_DIR}/ZXDExpansions.cpp
-    ${TKET_ZX_DIR}/ZXDGettersSetters.cpp
-    ${TKET_ZX_DIR}/ZXDManipulation.cpp
-    ${TKET_ZX_DIR}/ZXGenerator.cpp
-    ${TKET_ZX_DIR}/ZXRWCombinators.cpp
-    ${TKET_ZX_DIR}/ZXRWAxioms.cpp
-    ${TKET_ZX_DIR}/ZXRWDecompositions.cpp
-    ${TKET_ZX_DIR}/ZXRWGraphLikeForm.cpp
-    ${TKET_ZX_DIR}/ZXRWGraphLikeSimplification.cpp
 )
 
 add_library(${TKET} SHARED ${TKET_SOURCES})
 # ----- Location of header files ----------------------------------------------
 target_include_directories(${TKET} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET} ${CONAN_LIBS})
+target_link_libraries(${TKET} "tket-utils" "tket-zx" ${CONAN_LIBS})
 if(WIN32)
     target_link_libraries(${TKET} bcrypt)
 ENDIF()

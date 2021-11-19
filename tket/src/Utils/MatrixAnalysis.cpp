@@ -23,8 +23,8 @@
 #include <utility>
 #include <vector>
 
-#include "Utils/Assert.hpp"
-#include "Utils/EigenConfig.hpp"
+#include "Assert.hpp"
+#include "EigenConfig.hpp"
 
 namespace tket {
 
