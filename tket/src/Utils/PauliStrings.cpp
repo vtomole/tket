@@ -20,10 +20,10 @@
 #include <utility>
 #include <vector>
 
-#include "Utils/Assert.hpp"
-#include "Utils/Constants.hpp"
-#include "Utils/EigenConfig.hpp"
-#include "Utils/Json.hpp"
+#include "Assert.hpp"
+#include "Constants.hpp"
+#include "EigenConfig.hpp"
+#include "Json.hpp"
 
 namespace tket {
 

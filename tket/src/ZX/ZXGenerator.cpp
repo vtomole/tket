@@ -17,7 +17,7 @@
 #include <sstream>
 
 #include "Utils/Assert.hpp"
-#include "ZX/ZXDiagram.hpp"
+#include "ZXDiagram.hpp"
 
 namespace tket {
 
