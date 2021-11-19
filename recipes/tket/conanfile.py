@@ -118,5 +118,6 @@ class TketConan(ConanFile):
             "tket-clifford",
             "tket-ops",
             "tket-graphs",
+            "tket-gate",
             "tket",
         ]
