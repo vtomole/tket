@@ -69,6 +69,8 @@ set(TKET_CLIFFORD tket-clifford)
 set(TKET_OPS tket-ops)
 set(TKET_GRAPHS tket-graphs)
 set(TKET_GATE tket-gate)
+set(TKET_PAULIGRAPH tket-pauligraph)
+set(TKET_CIRCUIT tket-circuit)
 
 add_subdirectory(Utils)
 add_subdirectory(ZX)
@@ -77,39 +79,22 @@ add_subdirectory(Clifford)
 add_subdirectory(Ops)
 add_subdirectory(Graphs)
 add_subdirectory(Gate)
+add_subdirectory(PauliGraph)
+add_subdirectory(Circuit)
 
 set(TKET_ARCHITECTURE_DIR ${TKET_SRC_DIR}/Architecture)
 set(TKET_AAS_DIR ${TKET_SRC_DIR}/ArchAwareSynth)
-set(TKET_CIRCUIT_DIR ${TKET_SRC_DIR}/Circuit)
 set(TKET_DIAGONALISATION_DIR ${TKET_SRC_DIR}/Diagonalisation)
 set(TKET_SIMULATION_DIR ${TKET_SRC_DIR}/Simulation)
 set(TKET_ROUTING_DIR ${TKET_SRC_DIR}/Routing)
 set(TKET_TRANSFORM_DIR ${TKET_SRC_DIR}/Transformations)
 set(TKET_CHARACTERISATION_DIR ${TKET_SRC_DIR}/Characterisation)
 set(TKET_PREDS_DIR ${TKET_SRC_DIR}/Predicates)
-set(TKET_PAULIGRAPH_DIR ${TKET_SRC_DIR}/PauliGraph)
 set(TKET_CONVERTERS_DIR ${TKET_SRC_DIR}/Converters)
 set(TKET_PROGRAM_DIR ${TKET_SRC_DIR}/Program)
 set(TKET_MEASUREMENT_DIR ${TKET_SRC_DIR}/MeasurementSetup)
 
 set(TKET_SOURCES
-
-    # Circuit
-    ${TKET_CIRCUIT_DIR}/Boxes.cpp
-    ${TKET_CIRCUIT_DIR}/Circuit.cpp
-    ${TKET_CIRCUIT_DIR}/CircuitJson.cpp
-    ${TKET_CIRCUIT_DIR}/CommandJson.cpp
-    ${TKET_CIRCUIT_DIR}/macro_manipulation.cpp
-    ${TKET_CIRCUIT_DIR}/basic_circ_manip.cpp
-    ${TKET_CIRCUIT_DIR}/latex_drawing.cpp
-    ${TKET_CIRCUIT_DIR}/macro_circ_info.cpp
-    ${TKET_CIRCUIT_DIR}/setters_and_getters.cpp
-    ${TKET_CIRCUIT_DIR}/CircUtils.cpp
-    ${TKET_CIRCUIT_DIR}/ThreeQubitConversion.cpp
-    ${TKET_CIRCUIT_DIR}/AssertionSynthesis.cpp
-    ${TKET_CIRCUIT_DIR}/CircPool.cpp
-    ${TKET_CIRCUIT_DIR}/DAGProperties.cpp
-    ${TKET_CIRCUIT_DIR}/OpJson.cpp
 
     # Simulation
     ${TKET_SIMULATION_DIR}/BitOperations.cpp
@@ -165,10 +150,6 @@ set(TKET_SOURCES
     ${TKET_PREDS_DIR}/PassGenerators.cpp
     ${TKET_PREDS_DIR}/PassLibrary.cpp
 
-    # PauliGraph
-    ${TKET_PAULIGRAPH_DIR}/ConjugatePauliFunctions.cpp
-    ${TKET_PAULIGRAPH_DIR}/PauliGraph.cpp
-
     # Converters
     ${TKET_CONVERTERS_DIR}/CliffTableauConverters.cpp
     ${TKET_CONVERTERS_DIR}/PauliGadget.cpp
@@ -196,7 +177,7 @@ set(TKET_SOURCES
 add_library(${TKET} SHARED ${TKET_SOURCES})
 # ----- Location of header files ----------------------------------------------
 target_include_directories(${TKET} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET} PRIVATE ${TKET_UTILS} ${TKET_ZX} ${TKET_CLIFFORD} ${TKET_OPS} ${TKET_GRAPHS} ${TKET_GATE} ${CONAN_LIBS})
+target_link_libraries(${TKET} PRIVATE ${TKET_UTILS} ${TKET_ZX} ${TKET_CLIFFORD} ${TKET_OPS} ${TKET_GRAPHS} ${TKET_GATE} ${TKET_PAULIGRAPH} ${TKET_CIRCUIT} ${CONAN_LIBS})
 if(WIN32)
     target_link_libraries(${TKET} PRIVATE bcrypt)
 ENDIF()
