@@ -111,13 +111,4 @@ class TketConan(ConanFile):
         self.copy("*.dylib", dst="lib", keep_path=False)
 
     def package_info(self):
-        self.cpp_info.libs = [
-            "tket-utils",
-            "tket-zx",
-            "tket-optype",
-            "tket-clifford",
-            "tket-ops",
-            "tket-graphs",
-            "tket-gate",
-            "tket",
-        ]
+        self.cpp_info.libs = tools.collect_libs(self)
