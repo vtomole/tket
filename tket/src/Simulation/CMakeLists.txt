@@ -22,9 +22,9 @@ add_library(${TKET_SIMULATION}
     GateNodesBuffer.cpp
     PauliExpBoxUnitaryCalculator.cpp)
 
-target_include_directories(${TKET_SIMULATION} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_SIMULATION}
-    PRIVATE
+add_dependencies(${TKET_SIMULATION}
     ${TKET_UTILS}
     ${TKET_GATE}
     ${TKET_CIRCUIT})
+
+target_include_directories(${TKET_SIMULATION} PRIVATE ${TKET_SRC_DIR})

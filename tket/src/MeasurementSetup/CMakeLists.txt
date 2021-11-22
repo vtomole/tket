@@ -18,10 +18,10 @@ add_library(${TKET_MEASUREMENT}
     MeasurementSetup.cpp
     MeasurementReduction.cpp)
 
-target_include_directories(${TKET_MEASUREMENT} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_MEASUREMENT}
-    PRIVATE
+add_dependencies(${TKET_MEASUREMENT}
     ${TKET_UTILS}
     ${TKET_CIRCUIT}
     ${TKET_DIAGONALISATION}
     ${TKET_CONVERTERS})
+
+target_include_directories(${TKET_MEASUREMENT} PRIVATE ${TKET_SRC_DIR})
