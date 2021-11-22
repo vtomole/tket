@@ -30,7 +30,9 @@ add_library(${TKET_TRANSFORM}
     ContextualReduction.cpp
     ThreeQubitSquash.cpp)
 
-add_dependencies(${TKET_TRANSFORM}
+target_include_directories(${TKET_TRANSFORM} PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(${TKET_TRANSFORM}
+    PRIVATE
     ${TKET_UTILS}
     ${TKET_OPTYPE}
     ${TKET_OPS}
@@ -38,5 +40,3 @@ add_dependencies(${TKET_TRANSFORM}
     ${TKET_CONVERTERS}
     ${TKET_CHARACTERISATION}
     ${TKET_ARCHITECTURE})
-
-target_include_directories(${TKET_TRANSFORM} PRIVATE ${TKET_SRC_DIR})

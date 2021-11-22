@@ -19,10 +19,10 @@ add_library(${TKET_DIAGONALISATION}
     Diagonalisation.cpp
     PauliPartition.cpp)
 
-add_dependencies(${TKET_DIAGONALISATION}
+target_include_directories(${TKET_DIAGONALISATION} PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(${TKET_DIAGONALISATION}
+    PRIVATE
     ${TKET_OPS}
     ${TKET_GRAPHS}
     ${TKET_PAULIGRAPH}
     ${TKET_CIRCUIT})
-
-target_include_directories(${TKET_DIAGONALISATION} PRIVATE ${TKET_SRC_DIR})
