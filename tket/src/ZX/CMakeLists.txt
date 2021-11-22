@@ -26,7 +26,6 @@ add_library(${TKET_ZX}
     ZXRWGraphLikeForm.cpp
     ZXRWGraphLikeSimplification.cpp)
 
+add_dependencies(${TKET_ZX} ${TKET_UTILS})
+
 target_include_directories(${TKET_ZX} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_ZX}
-    PRIVATE
-    ${TKET_UTILS})

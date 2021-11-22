@@ -20,7 +20,7 @@ add_library(${TKET_OPTYPE}
     OpTypeFunctions.cpp
     OpTypeJson.cpp)
 
-target_include_directories(${TKET_OPTYPE} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_OPTYPE}
-    PRIVATE
+add_dependencies(${TKET_OPTYPE}
     ${TKET_UTILS})
+
+target_include_directories(${TKET_OPTYPE} PRIVATE ${TKET_SRC_DIR})

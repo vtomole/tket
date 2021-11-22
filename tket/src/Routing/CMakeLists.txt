@@ -24,11 +24,11 @@ add_library(${TKET_ROUTING}
     Placement.cpp
     Verification.cpp)
 
-target_include_directories(${TKET_ROUTING} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_ROUTING}
-    PRIVATE
+add_dependencies(${TKET_ROUTING}
     ${TKET_UTILS}
     ${TKET_GRAPHS}
     ${TKET_CIRCUIT}
     ${TKET_ARCHITECTURE}
     ${TKET_CHARACTERISATION})
+
+target_include_directories(${TKET_ROUTING} PRIVATE ${TKET_SRC_DIR})

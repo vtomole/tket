@@ -18,10 +18,10 @@ add_library(${TKET_PAULIGRAPH}
     ConjugatePauliFunctions.cpp
     PauliGraph.cpp)
 
-target_include_directories(${TKET_PAULIGRAPH} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_PAULIGRAPH}
-    PRIVATE
+add_dependencies(${TKET_PAULIGRAPH}
     ${TKET_UTILS}
     ${TKET_OPTYPE}
     ${TKET_GATE}
     ${TKET_CLIFFORD})
+
+target_include_directories(${TKET_PAULIGRAPH} PRIVATE ${TKET_SRC_DIR})

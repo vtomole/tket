@@ -17,8 +17,8 @@ project(${TKET_CLIFFORD})
 add_library(${TKET_CLIFFORD}
     CliffTableau.cpp)
 
-target_include_directories(${TKET_CLIFFORD} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_CLIFFORD}
-    PRIVATE
+add_dependencies(${TKET_CLIFFORD}
     ${TKET_UTILS}
     ${TKET_OPTYPE})
+
+target_include_directories(${TKET_CLIFFORD} PRIVATE ${TKET_SRC_DIR})
