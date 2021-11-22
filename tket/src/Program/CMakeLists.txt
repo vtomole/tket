@@ -21,8 +21,8 @@ add_library(${TKET_PROGRAM}
     Program_manipulation.cpp
     Program_units.cpp)
 
-target_include_directories(${TKET_PROGRAM} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_PROGRAM}
-    PRIVATE
+add_dependencies(${TKET_PROGRAM}
     ${TKET_OPS}
     ${TKET_CIRCUIT})
+
+target_include_directories(${TKET_PROGRAM} PRIVATE ${TKET_SRC_DIR})

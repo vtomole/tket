@@ -29,9 +29,9 @@ add_library(${TKET_GATE}
     GateUnitaryMatrixVariableQubits.cpp
     GateUnitarySparseMatrix.cpp)
 
-target_include_directories(${TKET_GATE} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_GATE}
-    PRIVATE
+add_dependencies(${TKET_GATE}
     ${TKET_UTILS}
     ${TKET_OPTYPE}
     ${TKET_OPS})
+
+target_include_directories(${TKET_GATE} PRIVATE ${TKET_SRC_DIR})

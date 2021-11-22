@@ -21,11 +21,11 @@ add_library(${TKET_PREDICATES}
     PassGenerators.cpp
     PassLibrary.cpp)
 
-target_include_directories(${TKET_PREDICATES} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_PREDICATES}
-    PRIVATE
+add_dependencies(${TKET_PREDICATES}
     ${TKET_CIRCUIT}
     ${TKET_ROUTING}
     ${TKET_TRANSFORMATIONS}
     ${TKET_AAS}
     ${TKET_CONVERTERS})
+
+target_include_directories(${TKET_PREDICATES} PRIVATE ${TKET_SRC_DIR})

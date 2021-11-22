@@ -21,9 +21,7 @@ add_library(${TKET_CONVERTERS}
     Gauss.cpp
     PhasePoly.cpp)
 
-target_include_directories(${TKET_CONVERTERS} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_CONVERTERS}
-    PRIVATE
+add_dependencies(${TKET_CONVERTERS}
     ${TKET_UTILS}
     ${TKET_CLIFFORD}
     ${TKET_OPS}
@@ -31,3 +29,5 @@ target_link_libraries(${TKET_CONVERTERS}
     ${TKET_PAULIGRAPH}
     ${TKET_CIRCUIT}
     ${TKET_DIAGONALISATION})
+
+target_include_directories(${TKET_CONVERTERS} PRIVATE ${TKET_SRC_DIR})
