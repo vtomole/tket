@@ -12,29 +12,31 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-project(${TKET_CIRCUIT})
+project(${TKET_TRANSFORM})
 
-add_library(${TKET_CIRCUIT}
-    Boxes.cpp
-    Circuit.cpp
-    CircuitJson.cpp
-    CommandJson.cpp
-    macro_manipulation.cpp
-    basic_circ_manip.cpp
-    latex_drawing.cpp
-    macro_circ_info.cpp
-    setters_and_getters.cpp
-    CircUtils.cpp
-    ThreeQubitConversion.cpp
-    AssertionSynthesis.cpp
-    CircPool.cpp
-    DAGProperties.cpp
-    OpJson.cpp)
+add_library(${TKET_TRANSFORM}
+    Combinator.cpp
+    Rebase.cpp
+    BasicOptimisation.cpp
+    PauliOptimisation.cpp
+    CliffordOptimisation.cpp
+    CliffordReductionPass.cpp
+    OptimisationPass.cpp
+    PhaseOptimisation.cpp
+    ControlledGates.cpp
+    Decomposition.cpp
+    Replacement.cpp
+    MeasurePass.cpp
+    ContextualReduction.cpp
+    ThreeQubitSquash.cpp)
 
-target_include_directories(${TKET_CIRCUIT} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_CIRCUIT}
+target_include_directories(${TKET_TRANSFORM} PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(${TKET_TRANSFORM}
     PRIVATE
     ${TKET_UTILS}
     ${TKET_OPTYPE}
     ${TKET_OPS}
-    ${TKET_GATE})
+    ${TKET_CIRCUIT}
+    ${TKET_CONVERTERS}
+    ${TKET_CHARACTERISATION}
+    ${TKET_ARCHITECTURE})

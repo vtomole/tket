@@ -30,4 +30,8 @@ add_library(${TKET_GATE}
     GateUnitarySparseMatrix.cpp)
 
 target_include_directories(${TKET_GATE} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_GATE} PRIVATE ${TKET_UTILS} ${TKET_OPTYPE} ${TKET_OPS})
+target_link_libraries(${TKET_GATE}
+    PRIVATE
+    ${TKET_UTILS}
+    ${TKET_OPTYPE}
+    ${TKET_OPS})
