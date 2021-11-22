@@ -12,19 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-project(${TKET_GRAPHS})
+project(${TKET_MEASUREMENT})
 
-add_library(${TKET_GRAPHS}
-    AdjacencyData.cpp
-    BruteForceColouring.cpp
-    ColouringPriority.cpp
-    GraphColouring.cpp
-    GraphRoutines.cpp
-    LargeCliquesResult.cpp
-    ArticulationPoints.cpp
-    UIDConnectivity.cpp)
+add_library(${TKET_MEASUREMENT}
+    MeasurementSetup.cpp
+    MeasurementReduction.cpp)
 
-target_include_directories(${TKET_GRAPHS} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_GRAPHS}
+target_include_directories(${TKET_MEASUREMENT} PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(${TKET_MEASUREMENT}
     PRIVATE
-    ${TKET_UTILS})
+    ${TKET_UTILS}
+    ${TKET_CIRCUIT}
+    ${TKET_DIAGONALISATION}
+    ${TKET_CONVERTERS})

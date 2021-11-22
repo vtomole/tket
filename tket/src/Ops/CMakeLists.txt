@@ -23,4 +23,7 @@ add_library(${TKET_OPS}
     OpJsonFactory.cpp)
 
 target_include_directories(${TKET_OPS} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_OPS} PRIVATE ${TKET_UTILS} ${TKET_OPTYPE})
+target_link_libraries(${TKET_OPS}
+    PRIVATE
+    ${TKET_UTILS}
+    ${TKET_OPTYPE})

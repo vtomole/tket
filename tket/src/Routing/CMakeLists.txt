@@ -12,19 +12,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-project(${TKET_GRAPHS})
+project(${TKET_ROUTING})
 
-add_library(${TKET_GRAPHS}
-    AdjacencyData.cpp
-    BruteForceColouring.cpp
-    ColouringPriority.cpp
-    GraphColouring.cpp
-    GraphRoutines.cpp
-    LargeCliquesResult.cpp
-    ArticulationPoints.cpp
-    UIDConnectivity.cpp)
+add_library(${TKET_ROUTING}
+    Qubit_Placement.cpp
+    Swap_Analysis.cpp
+    Board_Analysis.cpp
+    Routing.cpp
+    Slice_Manipulation.cpp
+    subgraph_mapping.cpp
+    Placement.cpp
+    Verification.cpp)
 
-target_include_directories(${TKET_GRAPHS} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_GRAPHS}
+target_include_directories(${TKET_ROUTING} PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(${TKET_ROUTING}
     PRIVATE
-    ${TKET_UTILS})
+    ${TKET_UTILS}
+    ${TKET_GRAPHS}
+    ${TKET_CIRCUIT}
+    ${TKET_ARCHITECTURE}
+    ${TKET_CHARACTERISATION})
