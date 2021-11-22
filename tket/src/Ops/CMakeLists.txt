@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+project(${TKET_OPS})
+
 add_library(${TKET_OPS}
     Conditional.cpp
     FlowOp.cpp

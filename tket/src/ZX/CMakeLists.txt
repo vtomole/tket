@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+project(${TKET_ZX})
+
 add_library(${TKET_ZX}
     ZXDConstructors.cpp
     ZXDExpansions.cpp
