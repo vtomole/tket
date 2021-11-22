@@ -22,8 +22,8 @@ add_library(${TKET_OPS}
     ClassicalOps.cpp
     OpJsonFactory.cpp)
 
-add_dependencies(${TKET_OPS}
+target_include_directories(${TKET_OPS} PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(${TKET_OPS}
+    PRIVATE
     ${TKET_UTILS}
     ${TKET_OPTYPE})
-
-target_include_directories(${TKET_OPS} PRIVATE ${TKET_SRC_DIR})

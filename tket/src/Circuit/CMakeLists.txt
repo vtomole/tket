@@ -31,10 +31,10 @@ add_library(${TKET_CIRCUIT}
     DAGProperties.cpp
     OpJson.cpp)
 
-add_dependencies(${TKET_CIRCUIT}
+target_include_directories(${TKET_CIRCUIT} PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(${TKET_CIRCUIT}
+    PRIVATE
     ${TKET_UTILS}
     ${TKET_OPTYPE}
     ${TKET_OPS}
     ${TKET_GATE})
-
-target_include_directories(${TKET_CIRCUIT} PRIVATE ${TKET_SRC_DIR})

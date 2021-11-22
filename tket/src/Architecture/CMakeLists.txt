@@ -17,8 +17,8 @@ project(${TKET_ARCHITECTURE})
 add_library(${TKET_ARCHITECTURE}
     Architecture.cpp)
 
-add_dependencies(${TKET_ARCHITECTURE}
+target_include_directories(${TKET_ARCHITECTURE} PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(${TKET_ARCHITECTURE}
+    PRIVATE
     ${TKET_UTILS}
     ${TKET_GRAPHS})
-
-target_include_directories(${TKET_ARCHITECTURE} PRIVATE ${TKET_SRC_DIR})
