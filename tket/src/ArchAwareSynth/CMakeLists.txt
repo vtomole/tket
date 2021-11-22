@@ -19,9 +19,9 @@ add_library(${TKET_AAS}
     SteinerTree.cpp
     SteinerForest.cpp)
 
-add_dependencies(${TKET_AAS}
+target_include_directories(${TKET_AAS} PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(${TKET_AAS}
+    PRIVATE
     ${TKET_CIRCUIT}
     ${TKET_ROUTING}
     ${TKET_CONVERTERS})
-
-target_include_directories(${TKET_AAS} PRIVATE ${TKET_SRC_DIR})

@@ -24,7 +24,7 @@ add_library(${TKET_GRAPHS}
     ArticulationPoints.cpp
     UIDConnectivity.cpp)
 
-add_dependencies(${TKET_GRAPHS}
-    ${TKET_UTILS})
-
 target_include_directories(${TKET_GRAPHS} PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(${TKET_GRAPHS}
+    PRIVATE
+    ${TKET_UTILS})

@@ -19,12 +19,12 @@ add_library(${TKET_CHARACTERISATION}
     FrameRandomisation.cpp
     DeviceCharacterisation.cpp)
 
-add_dependencies(${TKET_CHARACTERISATION}
+target_include_directories(${TKET_CHARACTERISATION} PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(${TKET_CHARACTERISATION}
+    PRIVATE
     ${TKET_UTILS}
     ${TKET_OPTYPE}
     ${TKET_OPS}
     ${TKET_PAULIGRAPH}
     ${TKET_CIRCUIT}
     ${TKET_ARCHITECTURE})
-
-target_include_directories(${TKET_CHARACTERISATION} PRIVATE ${TKET_SRC_DIR})
