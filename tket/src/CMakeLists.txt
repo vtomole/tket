@@ -71,6 +71,7 @@ set(TKET_GRAPHS tket-graphs)
 set(TKET_GATE tket-gate)
 set(TKET_PAULIGRAPH tket-pauligraph)
 set(TKET_CIRCUIT tket-circuit)
+set(TKET_ARCHITECTURE tket-architecture)
 
 add_subdirectory(Utils)
 add_subdirectory(ZX)
@@ -81,8 +82,8 @@ add_subdirectory(Graphs)
 add_subdirectory(Gate)
 add_subdirectory(PauliGraph)
 add_subdirectory(Circuit)
+add_subdirectory(Architecture)
 
-set(TKET_ARCHITECTURE_DIR ${TKET_SRC_DIR}/Architecture)
 set(TKET_AAS_DIR ${TKET_SRC_DIR}/ArchAwareSynth)
 set(TKET_DIAGONALISATION_DIR ${TKET_SRC_DIR}/Diagonalisation)
 set(TKET_SIMULATION_DIR ${TKET_SRC_DIR}/Simulation)
@@ -135,9 +136,6 @@ set(TKET_SOURCES
     ${TKET_ROUTING_DIR}/Placement.cpp
     ${TKET_ROUTING_DIR}/Verification.cpp
 
-    # Architecture
-    ${TKET_ARCHITECTURE_DIR}/Architecture.cpp
-
     # Architecture Aware Synthesis
     ${TKET_AAS_DIR}/Path.cpp
     ${TKET_AAS_DIR}/SteinerTree.cpp
@@ -177,7 +175,7 @@ set(TKET_SOURCES
 add_library(${TKET} SHARED ${TKET_SOURCES})
 # ----- Location of header files ----------------------------------------------
 target_include_directories(${TKET} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET} PRIVATE ${TKET_UTILS} ${TKET_ZX} ${TKET_CLIFFORD} ${TKET_OPS} ${TKET_GRAPHS} ${TKET_GATE} ${TKET_PAULIGRAPH} ${TKET_CIRCUIT} ${CONAN_LIBS})
+target_link_libraries(${TKET} PRIVATE ${TKET_UTILS} ${TKET_ZX} ${TKET_CLIFFORD} ${TKET_OPS} ${TKET_GRAPHS} ${TKET_GATE} ${TKET_PAULIGRAPH} ${TKET_CIRCUIT} ${TKET_ARCHITECTURE} ${CONAN_LIBS})
 if(WIN32)
     target_link_libraries(${TKET} PRIVATE bcrypt)
 ENDIF()
