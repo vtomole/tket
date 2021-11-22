@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pytket.predicates &mdash; pytket 0.16.0 documentation</title>
+  <title>pytket.predicates &mdash; pytket 0.17.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -30,7 +30,7 @@
             <a href="index.html" class="icon icon-home"> pytket
           </a>
               <div class="version">
-                0.16
+                0.17
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -67,6 +67,7 @@
 <li class="toctree-l1"><a class="reference internal" href="routing.html">pytket.routing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transform.html">pytket.transform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tailoring.html">pytket.tailoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zx.html">pytket.zx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">pytket.utils</a></li>
 <li class="toctree-l1"><a class="reference internal" href="logging.html">pytket.logging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="config.html">pytket.config</a></li>
@@ -100,11 +101,11 @@
 <span id="pytket-predicates"></span><h1>pytket.predicates<a class="headerlink" href="#module-pytket.predicates" title="Permalink to this headline"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pytket.predicates.CliffordCircuitPredicate">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">CliffordCircuitPredicate</span></span><a class="headerlink" href="#pytket.predicates.CliffordCircuitPredicate" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">CliffordCircuitPredicate</span></span><a class="headerlink" href="#pytket.predicates.CliffordCircuitPredicate" title="Permalink to this definition"></a></dt>
 <dd><p>Predicate asserting that a circuit has only Clifford gates.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.predicates.CliffordCircuitPredicate.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pytket.predicates.CliffordCircuitPredicate" title="pytket.predicates.CliffordCircuitPredicate"><span class="pre">pytket.predicates.CliffordCircuitPredicate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.CliffordCircuitPredicate.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pytket.predicates.CliffordCircuitPredicate" title="pytket.predicates.CliffordCircuitPredicate"><span class="pre">pytket.predicates.CliffordCircuitPredicate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.CliffordCircuitPredicate.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor.</p>
 </dd></dl>
 
@@ -112,7 +113,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pytket.predicates.CompilationUnit">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">CompilationUnit</span></span><a class="headerlink" href="#pytket.predicates.CompilationUnit" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">CompilationUnit</span></span><a class="headerlink" href="#pytket.predicates.CompilationUnit" title="Permalink to this definition"></a></dt>
 <dd><p>This class comprises a circuit and the predicates that the circuit is required to satisfy, for example to run on a backend.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.predicates.CompilationUnit.__init__">
@@ -130,7 +131,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.predicates.CompilationUnit.check_all_predicates">
-<span class="sig-name descname"><span class="pre">check_all_predicates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pytket.predicates.CompilationUnit" title="pytket.predicates.CompilationUnit"><span class="pre">pytket.predicates.CompilationUnit</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#pytket.predicates.CompilationUnit.check_all_predicates" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">check_all_predicates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pytket.predicates.CompilationUnit" title="pytket.predicates.CompilationUnit"><span class="pre">pytket.predicates.CompilationUnit</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#pytket.predicates.CompilationUnit.check_all_predicates" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>True if all predicates are satisfied, else False</p>
@@ -140,19 +141,19 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pytket.predicates.CompilationUnit.circuit">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">circuit</span></span><a class="headerlink" href="#pytket.predicates.CompilationUnit.circuit" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">circuit</span></span><a class="headerlink" href="#pytket.predicates.CompilationUnit.circuit" title="Permalink to this definition"></a></dt>
 <dd><p>Return a copy of the circuit.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pytket.predicates.CompilationUnit.final_map">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">final_map</span></span><a class="headerlink" href="#pytket.predicates.CompilationUnit.final_map" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">final_map</span></span><a class="headerlink" href="#pytket.predicates.CompilationUnit.final_map" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the map from the original qubits to their corresponding qubits at the end of the current circuit.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pytket.predicates.CompilationUnit.initial_map">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">initial_map</span></span><a class="headerlink" href="#pytket.predicates.CompilationUnit.initial_map" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">initial_map</span></span><a class="headerlink" href="#pytket.predicates.CompilationUnit.initial_map" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the map from the original qubits to the corresponding qubits at the start of the current circuit.</p>
 </dd></dl>
 
@@ -160,11 +161,11 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pytket.predicates.ConnectivityPredicate">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">ConnectivityPredicate</span></span><a class="headerlink" href="#pytket.predicates.ConnectivityPredicate" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">ConnectivityPredicate</span></span><a class="headerlink" href="#pytket.predicates.ConnectivityPredicate" title="Permalink to this definition"></a></dt>
 <dd><p>Predicate asserting that a circuit satisfies a given connectivity graph. The graph is always considered to be undirected.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.predicates.ConnectivityPredicate.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pytket.predicates.ConnectivityPredicate" title="pytket.predicates.ConnectivityPredicate"><span class="pre">pytket.predicates.ConnectivityPredicate</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">architecture</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="routing.html#pytket.routing.Architecture" title="pytket.routing.Architecture"><span class="pre">pytket.routing.Architecture</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.ConnectivityPredicate.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pytket.predicates.ConnectivityPredicate" title="pytket.predicates.ConnectivityPredicate"><span class="pre">pytket.predicates.ConnectivityPredicate</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">architecture</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="routing.html#pytket.routing.Architecture" title="pytket.routing.Architecture"><span class="pre">pytket.routing.Architecture</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.ConnectivityPredicate.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Construct from an <code class="xref py py-class docutils literal notranslate"><span class="pre">Architecture</span></code>.</p>
 </dd></dl>
 
@@ -172,11 +173,11 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pytket.predicates.DefaultRegisterPredicate">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">DefaultRegisterPredicate</span></span><a class="headerlink" href="#pytket.predicates.DefaultRegisterPredicate" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">DefaultRegisterPredicate</span></span><a class="headerlink" href="#pytket.predicates.DefaultRegisterPredicate" title="Permalink to this definition"></a></dt>
 <dd><p>Predicate asserting that a circuit only uses the default quantum and classical registers.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.predicates.DefaultRegisterPredicate.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pytket.predicates.DefaultRegisterPredicate" title="pytket.predicates.DefaultRegisterPredicate"><span class="pre">pytket.predicates.DefaultRegisterPredicate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.DefaultRegisterPredicate.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pytket.predicates.DefaultRegisterPredicate" title="pytket.predicates.DefaultRegisterPredicate"><span class="pre">pytket.predicates.DefaultRegisterPredicate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.DefaultRegisterPredicate.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor.</p>
 </dd></dl>
 
@@ -184,11 +185,11 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pytket.predicates.DirectednessPredicate">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">DirectednessPredicate</span></span><a class="headerlink" href="#pytket.predicates.DirectednessPredicate" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">DirectednessPredicate</span></span><a class="headerlink" href="#pytket.predicates.DirectednessPredicate" title="Permalink to this definition"></a></dt>
 <dd><p>Predicate asserting that a circuit satisfies a given connectivity graph. The graph is always considered to be directed.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.predicates.DirectednessPredicate.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pytket.predicates.DirectednessPredicate" title="pytket.predicates.DirectednessPredicate"><span class="pre">pytket.predicates.DirectednessPredicate</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">architecture</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="routing.html#pytket.routing.Architecture" title="pytket.routing.Architecture"><span class="pre">pytket.routing.Architecture</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.DirectednessPredicate.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pytket.predicates.DirectednessPredicate" title="pytket.predicates.DirectednessPredicate"><span class="pre">pytket.predicates.DirectednessPredicate</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">architecture</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="routing.html#pytket.routing.Architecture" title="pytket.routing.Architecture"><span class="pre">pytket.routing.Architecture</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.DirectednessPredicate.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Construct from an <code class="xref py py-class docutils literal notranslate"><span class="pre">Architecture</span></code>.</p>
 </dd></dl>
 
@@ -196,11 +197,11 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pytket.predicates.GateSetPredicate">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">GateSetPredicate</span></span><a class="headerlink" href="#pytket.predicates.GateSetPredicate" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">GateSetPredicate</span></span><a class="headerlink" href="#pytket.predicates.GateSetPredicate" title="Permalink to this definition"></a></dt>
 <dd><p>Predicate asserting that the circuit contains only gates from a given set.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.predicates.GateSetPredicate.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pytket.predicates.GateSetPredicate" title="pytket.predicates.GateSetPredicate"><span class="pre">pytket.predicates.GateSetPredicate</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">allowed_types</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="optype.html#pytket.circuit.OpType" title="pytket.circuit.OpType"><span class="pre">pytket.circuit.OpType</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.GateSetPredicate.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pytket.predicates.GateSetPredicate" title="pytket.predicates.GateSetPredicate"><span class="pre">pytket.predicates.GateSetPredicate</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">allowed_types</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="optype.html#pytket.circuit.OpType" title="pytket.circuit.OpType"><span class="pre">pytket.circuit.OpType</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.GateSetPredicate.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Construct from a set of gate types.</p>
 </dd></dl>
 
@@ -208,11 +209,11 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pytket.predicates.MaxNQubitsPredicate">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">MaxNQubitsPredicate</span></span><a class="headerlink" href="#pytket.predicates.MaxNQubitsPredicate" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">MaxNQubitsPredicate</span></span><a class="headerlink" href="#pytket.predicates.MaxNQubitsPredicate" title="Permalink to this definition"></a></dt>
 <dd><p>Predicate asserting that a circuit has at most n qubits.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.predicates.MaxNQubitsPredicate.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pytket.predicates.MaxNQubitsPredicate" title="pytket.predicates.MaxNQubitsPredicate"><span class="pre">pytket.predicates.MaxNQubitsPredicate</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.MaxNQubitsPredicate.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pytket.predicates.MaxNQubitsPredicate" title="pytket.predicates.MaxNQubitsPredicate"><span class="pre">pytket.predicates.MaxNQubitsPredicate</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.MaxNQubitsPredicate.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor.</p>
 </dd></dl>
 
@@ -220,11 +221,11 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pytket.predicates.MaxTwoQubitGatesPredicate">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">MaxTwoQubitGatesPredicate</span></span><a class="headerlink" href="#pytket.predicates.MaxTwoQubitGatesPredicate" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">MaxTwoQubitGatesPredicate</span></span><a class="headerlink" href="#pytket.predicates.MaxTwoQubitGatesPredicate" title="Permalink to this definition"></a></dt>
 <dd><p>Predicate asserting that a circuit has no gates with more than two input wires.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.predicates.MaxTwoQubitGatesPredicate.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pytket.predicates.MaxTwoQubitGatesPredicate" title="pytket.predicates.MaxTwoQubitGatesPredicate"><span class="pre">pytket.predicates.MaxTwoQubitGatesPredicate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.MaxTwoQubitGatesPredicate.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pytket.predicates.MaxTwoQubitGatesPredicate" title="pytket.predicates.MaxTwoQubitGatesPredicate"><span class="pre">pytket.predicates.MaxTwoQubitGatesPredicate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.MaxTwoQubitGatesPredicate.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor.</p>
 </dd></dl>
 
@@ -232,11 +233,11 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pytket.predicates.NoClassicalBitsPredicate">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">NoClassicalBitsPredicate</span></span><a class="headerlink" href="#pytket.predicates.NoClassicalBitsPredicate" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">NoClassicalBitsPredicate</span></span><a class="headerlink" href="#pytket.predicates.NoClassicalBitsPredicate" title="Permalink to this definition"></a></dt>
 <dd><p>Predicate asserting that a circuit has no classical wires.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.predicates.NoClassicalBitsPredicate.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pytket.predicates.NoClassicalBitsPredicate" title="pytket.predicates.NoClassicalBitsPredicate"><span class="pre">pytket.predicates.NoClassicalBitsPredicate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.NoClassicalBitsPredicate.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pytket.predicates.NoClassicalBitsPredicate" title="pytket.predicates.NoClassicalBitsPredicate"><span class="pre">pytket.predicates.NoClassicalBitsPredicate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.NoClassicalBitsPredicate.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor.</p>
 </dd></dl>
 
@@ -244,11 +245,11 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pytket.predicates.NoClassicalControlPredicate">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">NoClassicalControlPredicate</span></span><a class="headerlink" href="#pytket.predicates.NoClassicalControlPredicate" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">NoClassicalControlPredicate</span></span><a class="headerlink" href="#pytket.predicates.NoClassicalControlPredicate" title="Permalink to this definition"></a></dt>
 <dd><p>Predicate asserting that a circuit has no classical controls.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.predicates.NoClassicalControlPredicate.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pytket.predicates.NoClassicalControlPredicate" title="pytket.predicates.NoClassicalControlPredicate"><span class="pre">pytket.predicates.NoClassicalControlPredicate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.NoClassicalControlPredicate.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pytket.predicates.NoClassicalControlPredicate" title="pytket.predicates.NoClassicalControlPredicate"><span class="pre">pytket.predicates.NoClassicalControlPredicate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.NoClassicalControlPredicate.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor.</p>
 </dd></dl>
 
@@ -256,11 +257,11 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pytket.predicates.NoFastFeedforwardPredicate">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">NoFastFeedforwardPredicate</span></span><a class="headerlink" href="#pytket.predicates.NoFastFeedforwardPredicate" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">NoFastFeedforwardPredicate</span></span><a class="headerlink" href="#pytket.predicates.NoFastFeedforwardPredicate" title="Permalink to this definition"></a></dt>
 <dd><p>Predicate asserting that a circuit has no fast feedforward.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.predicates.NoFastFeedforwardPredicate.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pytket.predicates.NoFastFeedforwardPredicate" title="pytket.predicates.NoFastFeedforwardPredicate"><span class="pre">pytket.predicates.NoFastFeedforwardPredicate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.NoFastFeedforwardPredicate.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pytket.predicates.NoFastFeedforwardPredicate" title="pytket.predicates.NoFastFeedforwardPredicate"><span class="pre">pytket.predicates.NoFastFeedforwardPredicate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.NoFastFeedforwardPredicate.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor.</p>
 </dd></dl>
 
@@ -268,11 +269,11 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pytket.predicates.NoMidMeasurePredicate">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">NoMidMeasurePredicate</span></span><a class="headerlink" href="#pytket.predicates.NoMidMeasurePredicate" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">NoMidMeasurePredicate</span></span><a class="headerlink" href="#pytket.predicates.NoMidMeasurePredicate" title="Permalink to this definition"></a></dt>
 <dd><p>Predicate asserting that all measurements occur at the end of the circuit.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.predicates.NoMidMeasurePredicate.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pytket.predicates.NoMidMeasurePredicate" title="pytket.predicates.NoMidMeasurePredicate"><span class="pre">pytket.predicates.NoMidMeasurePredicate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.NoMidMeasurePredicate.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pytket.predicates.NoMidMeasurePredicate" title="pytket.predicates.NoMidMeasurePredicate"><span class="pre">pytket.predicates.NoMidMeasurePredicate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.NoMidMeasurePredicate.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor.</p>
 </dd></dl>
 
@@ -280,11 +281,11 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pytket.predicates.NoSymbolsPredicate">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">NoSymbolsPredicate</span></span><a class="headerlink" href="#pytket.predicates.NoSymbolsPredicate" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">NoSymbolsPredicate</span></span><a class="headerlink" href="#pytket.predicates.NoSymbolsPredicate" title="Permalink to this definition"></a></dt>
 <dd><p>Predicate asserting that no gates in the circuit have symbolic parameters.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.predicates.NoSymbolsPredicate.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pytket.predicates.NoSymbolsPredicate" title="pytket.predicates.NoSymbolsPredicate"><span class="pre">pytket.predicates.NoSymbolsPredicate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.NoSymbolsPredicate.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pytket.predicates.NoSymbolsPredicate" title="pytket.predicates.NoSymbolsPredicate"><span class="pre">pytket.predicates.NoSymbolsPredicate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.NoSymbolsPredicate.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor.</p>
 </dd></dl>
 
@@ -292,11 +293,11 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pytket.predicates.NoWireSwapsPredicate">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">NoWireSwapsPredicate</span></span><a class="headerlink" href="#pytket.predicates.NoWireSwapsPredicate" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">NoWireSwapsPredicate</span></span><a class="headerlink" href="#pytket.predicates.NoWireSwapsPredicate" title="Permalink to this definition"></a></dt>
 <dd><p>Predicate asserting that a circuit has no wire swaps.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.predicates.NoWireSwapsPredicate.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pytket.predicates.NoWireSwapsPredicate" title="pytket.predicates.NoWireSwapsPredicate"><span class="pre">pytket.predicates.NoWireSwapsPredicate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.NoWireSwapsPredicate.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pytket.predicates.NoWireSwapsPredicate" title="pytket.predicates.NoWireSwapsPredicate"><span class="pre">pytket.predicates.NoWireSwapsPredicate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.NoWireSwapsPredicate.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor.</p>
 </dd></dl>
 
@@ -304,7 +305,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pytket.predicates.PlacementPredicate">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">PlacementPredicate</span></span><a class="headerlink" href="#pytket.predicates.PlacementPredicate" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">PlacementPredicate</span></span><a class="headerlink" href="#pytket.predicates.PlacementPredicate" title="Permalink to this definition"></a></dt>
 <dd><p>Predicate asserting that a circuit has been acted on by some Placement object.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.predicates.PlacementPredicate.__init__">
@@ -324,7 +325,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pytket.predicates.Predicate">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">Predicate</span></span><a class="headerlink" href="#pytket.predicates.Predicate" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">Predicate</span></span><a class="headerlink" href="#pytket.predicates.Predicate" title="Permalink to this definition"></a></dt>
 <dd><p>A predicate that may be satisfied by a circuit.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.predicates.Predicate.__init__">
@@ -333,7 +334,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.predicates.Predicate.implies">
-<span class="sig-name descname"><span class="pre">implies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pytket.predicates.Predicate" title="pytket.predicates.Predicate"><span class="pre">pytket.predicates.Predicate</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pytket.predicates.Predicate" title="pytket.predicates.Predicate"><span class="pre">pytket.predicates.Predicate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#pytket.predicates.Predicate.implies" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">implies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pytket.predicates.Predicate" title="pytket.predicates.Predicate"><span class="pre">pytket.predicates.Predicate</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pytket.predicates.Predicate" title="pytket.predicates.Predicate"><span class="pre">pytket.predicates.Predicate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#pytket.predicates.Predicate.implies" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>True if predicate implies another one, else False</p>
@@ -343,7 +344,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.predicates.Predicate.verify">
-<span class="sig-name descname"><span class="pre">verify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pytket.predicates.Predicate" title="pytket.predicates.Predicate"><span class="pre">pytket.predicates.Predicate</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">circuit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="circuit_class.html#pytket.circuit.Circuit" title="pytket.circuit.Circuit"><span class="pre">pytket.circuit.Circuit</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#pytket.predicates.Predicate.verify" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">verify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pytket.predicates.Predicate" title="pytket.predicates.Predicate"><span class="pre">pytket.predicates.Predicate</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">circuit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="circuit_class.html#pytket.circuit.Circuit" title="pytket.circuit.Circuit"><span class="pre">pytket.circuit.Circuit</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#pytket.predicates.Predicate.verify" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>True if circuit satisfies predicate, else False</p>
@@ -355,11 +356,11 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pytket.predicates.UserDefinedPredicate">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">UserDefinedPredicate</span></span><a class="headerlink" href="#pytket.predicates.UserDefinedPredicate" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pytket.predicates.</span></span><span class="sig-name descname"><span class="pre">UserDefinedPredicate</span></span><a class="headerlink" href="#pytket.predicates.UserDefinedPredicate" title="Permalink to this definition"></a></dt>
 <dd><p>User-defined predicate.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.predicates.UserDefinedPredicate.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pytket.predicates.UserDefinedPredicate" title="pytket.predicates.UserDefinedPredicate"><span class="pre">pytket.predicates.UserDefinedPredicate</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_function</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="circuit_class.html#pytket.circuit.Circuit" title="pytket.circuit.Circuit"><span class="pre">pytket.circuit.Circuit</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.UserDefinedPredicate.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pytket.predicates.UserDefinedPredicate" title="pytket.predicates.UserDefinedPredicate"><span class="pre">pytket.predicates.UserDefinedPredicate</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_function</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="circuit_class.html#pytket.circuit.Circuit" title="pytket.circuit.Circuit"><span class="pre">pytket.circuit.Circuit</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.predicates.UserDefinedPredicate.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Construct from a user-defined function from <code class="xref py py-class docutils literal notranslate"><span class="pre">Circuit</span></code> to <cite>bool</cite>.</p>
 </dd></dl>
 

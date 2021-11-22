@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pytket.circuit.OpType &mdash; pytket 0.16.0 documentation</title>
+  <title>pytket.circuit.OpType &mdash; pytket 0.17.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -15,7 +15,7 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -31,7 +31,7 @@
             <a href="index.html" class="icon icon-home"> pytket
           </a>
               <div class="version">
-                0.16
+                0.17
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -74,6 +74,7 @@
 <li class="toctree-l1"><a class="reference internal" href="routing.html">pytket.routing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transform.html">pytket.transform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tailoring.html">pytket.tailoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zx.html">pytket.zx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">pytket.utils</a></li>
 <li class="toctree-l1"><a class="reference internal" href="logging.html">pytket.logging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="config.html">pytket.config</a></li>
@@ -115,7 +116,7 @@ Therefore, for instance <cite>circuit.add_gate(OpType.Rx, 1, [0])</cite> is equi
 </div>
 <dl class="py class">
 <dt class="sig sig-object py" id="pytket.circuit.OpType">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pytket.circuit.</span></span><span class="sig-name descname"><span class="pre">OpType</span></span><a class="headerlink" href="#pytket.circuit.OpType" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pytket.circuit.</span></span><span class="sig-name descname"><span class="pre">OpType</span></span><a class="headerlink" href="#pytket.circuit.OpType" title="Permalink to this definition"></a></dt>
 <dd><p>Enum for available operations compatible with tket <a class="reference internal" href="circuit_class.html#pytket.circuit.Circuit" title="pytket.circuit.Circuit"><code class="xref py py-class docutils literal notranslate"><span class="pre">Circuit</span></code></a> s.</p>
 <p>Members:</p>
 <blockquote>
@@ -180,6 +181,7 @@ Therefore, for instance <cite>circuit.add_gate(OpType.Rx, 1, [0])</cite> is equi
 <p>ZZPhase : <span class="math notranslate nohighlight">\((\alpha) \mapsto e^{-\frac12 i \pi\alpha (\mathrm{Z} \otimes \mathrm{Z})} = \left[ \begin{array}{cccc} e^{-\frac12 i \pi\alpha} &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; e^{\frac12 i \pi\alpha} &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; e^{\frac12 i \pi\alpha} &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; e^{-\frac12 i \pi\alpha} \end{array} \right]\)</span></p>
 <p>XXPhase3 : A 3-qubit gate XXPhase3(α) consists of pairwise 2-qubit XXPhase(α) interactions. Equivalent to XXPhase(α)[0, 1] XXPhase(α)[1, 2] XXPhase(α)[0, 2].</p>
 <p>PhasedX : <span class="math notranslate nohighlight">\((\alpha,\beta) \mapsto \mathrm{Rz}(\beta)\mathrm{Rx}(\alpha)\mathrm{Rz}(-\beta)\)</span> (matrix-multiplication order)</p>
+<p>NPhasedX : <span class="math notranslate nohighlight">\((\alpha, \beta) \mapsto \mathrm{PhasedX}(\alpha, \beta)^{\otimes n}\)</span> (n-qubit gate composed of identical PhasedX in parallel.</p>
 <p>CnRy : <span class="math notranslate nohighlight">\((\alpha)\)</span> := n-controlled <span class="math notranslate nohighlight">\(\mathrm{Ry}(\alpha)\)</span> gate.</p>
 <p>CnX : n-controlled X gate.</p>
 <p>ZZMax : <span class="math notranslate nohighlight">\(e^{-\frac{i\pi}{4}(\mathrm{Z} \otimes \mathrm{Z})}\)</span>, a maximally entangling ZZPhase</p>
@@ -198,7 +200,7 @@ Therefore, for instance <cite>circuit.add_gate(OpType.Rx, 1, [0])</cite> is equi
 </div></blockquote>
 <dl class="py property">
 <dt class="sig sig-object py" id="pytket.circuit.OpType.name">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pytket.circuit.OpType.name" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pytket.circuit.OpType.name" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>

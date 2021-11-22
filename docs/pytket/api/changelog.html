@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Changelog &mdash; pytket 0.16.0 documentation</title>
+  <title>Changelog &mdash; pytket 0.17.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -15,7 +15,7 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -31,7 +31,7 @@
             <a href="index.html" class="icon icon-home"> pytket
           </a>
               <div class="version">
-                0.16
+                0.17
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -45,7 +45,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#unreleased">0.17.0 (unreleased)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#november-2021">0.17.0 (November 2021)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#october-2021">0.16.0 (October 2021)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#september-2021">0.15.0 (September 2021)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id1">0.14.0 (September 2021)</a></li>
@@ -104,6 +104,7 @@
 <li class="toctree-l1"><a class="reference internal" href="routing.html">pytket.routing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transform.html">pytket.transform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tailoring.html">pytket.tailoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zx.html">pytket.zx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">pytket.utils</a></li>
 <li class="toctree-l1"><a class="reference internal" href="logging.html">pytket.logging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="config.html">pytket.config</a></li>
@@ -135,16 +136,19 @@
              
   <section id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline"></a></h1>
-<section id="unreleased">
-<h2>0.17.0 (unreleased)<a class="headerlink" href="#unreleased" title="Permalink to this headline"></a></h2>
-<p>General:</p>
+<section id="november-2021">
+<h2>0.17.0 (November 2021)<a class="headerlink" href="#november-2021" title="Permalink to this headline"></a></h2>
+<p>Major new features:
+* New <code class="docutils literal notranslate"><span class="pre">pytket.zx</span></code> module for manipulating ZX diagrams.</p>
+<p>Minor new features:
+* New properties: :py:meth:<code class="docutils literal notranslate"><span class="pre">circuit.Op.dagger</span></code> and :py:meth:<code class="docutils literal notranslate"><span class="pre">circuit.Op.transpose</span></code>.
+* New methods: :py:meth:<code class="docutils literal notranslate"><span class="pre">routing.Placement.to_dict</span></code> and :py:meth:<code class="docutils literal notranslate"><span class="pre">routing.Placement.from_dict</span></code>.
+* New <code class="docutils literal notranslate"><span class="pre">NPhasedX</span></code> OpType.
+* New <code class="docutils literal notranslate"><span class="pre">GlobalPhasedXPredicate</span></code> and <code class="docutils literal notranslate"><span class="pre">GlobalisePhasedX</span></code> (transform and pass).</p>
+<p>Fixes:</p>
 <ul class="simple">
-<li><p>Python 3.10 support added; 3.7 dropped.</p></li>
-</ul>
-<p>Minor new features:</p>
-<ul class="simple">
-<li><p>New properties: :py:meth:<code class="docutils literal notranslate"><span class="pre">circuit.Op.dagger</span></code> and :py:meth:<code class="docutils literal notranslate"><span class="pre">circuit.Op.transpose</span></code>.</p></li>
-<li><p>New methods: :py:meth:<code class="docutils literal notranslate"><span class="pre">routing.Placement.to_dict</span></code> and :py:meth:<code class="docutils literal notranslate"><span class="pre">routing.Placement.from_dict</span></code>.</p></li>
+<li><p>Fixed incorrect decomposition of <code class="docutils literal notranslate"><span class="pre">QControlBox</span></code> with more than one control
+acting on operation with global phase.</p></li>
 </ul>
 </section>
 <section id="october-2021">
