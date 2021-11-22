@@ -72,6 +72,16 @@ set(TKET_GATE tket-gate)
 set(TKET_PAULIGRAPH tket-pauligraph)
 set(TKET_CIRCUIT tket-circuit)
 set(TKET_ARCHITECTURE tket-architecture)
+set(TKET_SIMULATION tket-simulation)
+set(TKET_DIAGONALISATION tket-diagonalisation)
+set(TKET_PROGRAM tket-program)
+set(TKET_CHARACTERISATION tket-characterisation)
+set(TKET_CONVERTERS tket-converters)
+set(TKET_ROUTING tket-routing)
+set(TKET_MEASUREMENT tket-measurement)
+set(TKET_TRANSFORM tket-transform)
+set(TKET_AAS tket-aas)
+set(TKET_PREDICATES tket-predicates)
 
 add_subdirectory(Utils)
 add_subdirectory(ZX)
@@ -83,99 +93,43 @@ add_subdirectory(Gate)
 add_subdirectory(PauliGraph)
 add_subdirectory(Circuit)
 add_subdirectory(Architecture)
+add_subdirectory(Simulation)
+add_subdirectory(Diagonalisation)
+add_subdirectory(Program)
+add_subdirectory(Characterisation)
+add_subdirectory(Converters)
+add_subdirectory(Routing)
+add_subdirectory(MeasurementSetup)
+add_subdirectory(Transformations)
+add_subdirectory(ArchAwareSynth)
+add_subdirectory(Predicates)
 
-set(TKET_AAS_DIR ${TKET_SRC_DIR}/ArchAwareSynth)
-set(TKET_DIAGONALISATION_DIR ${TKET_SRC_DIR}/Diagonalisation)
-set(TKET_SIMULATION_DIR ${TKET_SRC_DIR}/Simulation)
-set(TKET_ROUTING_DIR ${TKET_SRC_DIR}/Routing)
-set(TKET_TRANSFORM_DIR ${TKET_SRC_DIR}/Transformations)
-set(TKET_CHARACTERISATION_DIR ${TKET_SRC_DIR}/Characterisation)
-set(TKET_PREDS_DIR ${TKET_SRC_DIR}/Predicates)
-set(TKET_CONVERTERS_DIR ${TKET_SRC_DIR}/Converters)
-set(TKET_PROGRAM_DIR ${TKET_SRC_DIR}/Program)
-set(TKET_MEASUREMENT_DIR ${TKET_SRC_DIR}/MeasurementSetup)
-
-set(TKET_SOURCES
-
-    # Simulation
-    ${TKET_SIMULATION_DIR}/BitOperations.cpp
-    ${TKET_SIMULATION_DIR}/CircuitSimulator.cpp
-    ${TKET_SIMULATION_DIR}/DecomposeCircuit.cpp
-    ${TKET_SIMULATION_DIR}/GateNode.cpp
-    ${TKET_SIMULATION_DIR}/GateNodesBuffer.cpp
-    ${TKET_SIMULATION_DIR}/PauliExpBoxUnitaryCalculator.cpp
-
-    # Diagonalisation
-    ${TKET_DIAGONALISATION_DIR}/DiagUtils.cpp
-    ${TKET_DIAGONALISATION_DIR}/Diagonalisation.cpp
-    ${TKET_DIAGONALISATION_DIR}/PauliPartition.cpp
-
-    # Transformations
-    ${TKET_TRANSFORM_DIR}/Combinator.cpp
-    ${TKET_TRANSFORM_DIR}/Rebase.cpp
-    ${TKET_TRANSFORM_DIR}/BasicOptimisation.cpp
-    ${TKET_TRANSFORM_DIR}/PauliOptimisation.cpp
-    ${TKET_TRANSFORM_DIR}/CliffordOptimisation.cpp
-    ${TKET_TRANSFORM_DIR}/CliffordReductionPass.cpp
-    ${TKET_TRANSFORM_DIR}/OptimisationPass.cpp
-    ${TKET_TRANSFORM_DIR}/PhaseOptimisation.cpp
-    ${TKET_TRANSFORM_DIR}/ControlledGates.cpp
-    ${TKET_TRANSFORM_DIR}/Decomposition.cpp
-    ${TKET_TRANSFORM_DIR}/Replacement.cpp
-    ${TKET_TRANSFORM_DIR}/MeasurePass.cpp
-    ${TKET_TRANSFORM_DIR}/ContextualReduction.cpp
-    ${TKET_TRANSFORM_DIR}/ThreeQubitSquash.cpp
-
-    # Routing
-    ${TKET_ROUTING_DIR}/Qubit_Placement.cpp
-    ${TKET_ROUTING_DIR}/Swap_Analysis.cpp
-    ${TKET_ROUTING_DIR}/Board_Analysis.cpp
-    ${TKET_ROUTING_DIR}/Routing.cpp
-    ${TKET_ROUTING_DIR}/Slice_Manipulation.cpp
-    ${TKET_ROUTING_DIR}/subgraph_mapping.cpp
-    ${TKET_ROUTING_DIR}/Placement.cpp
-    ${TKET_ROUTING_DIR}/Verification.cpp
-
-    # Architecture Aware Synthesis
-    ${TKET_AAS_DIR}/Path.cpp
-    ${TKET_AAS_DIR}/SteinerTree.cpp
-    ${TKET_AAS_DIR}/SteinerForest.cpp
-
-    # Predicates
-    ${TKET_PREDS_DIR}/Predicates.cpp
-    ${TKET_PREDS_DIR}/CompilationUnit.cpp
-    ${TKET_PREDS_DIR}/CompilerPass.cpp
-    ${TKET_PREDS_DIR}/PassGenerators.cpp
-    ${TKET_PREDS_DIR}/PassLibrary.cpp
-
-    # Converters
-    ${TKET_CONVERTERS_DIR}/CliffTableauConverters.cpp
-    ${TKET_CONVERTERS_DIR}/PauliGadget.cpp
-    ${TKET_CONVERTERS_DIR}/PauliGraphConverters.cpp
-    ${TKET_CONVERTERS_DIR}/Gauss.cpp
-    ${TKET_CONVERTERS_DIR}/PhasePoly.cpp
-
-    # Program
-    ${TKET_PROGRAM_DIR}/Program_accessors.cpp
-    ${TKET_PROGRAM_DIR}/Program_analysis.cpp
-    ${TKET_PROGRAM_DIR}/Program_iteration.cpp
-    ${TKET_PROGRAM_DIR}/Program_manipulation.cpp
-    ${TKET_PROGRAM_DIR}/Program_units.cpp
-
-    # MeasurementSetup
-    ${TKET_MEASUREMENT_DIR}/MeasurementSetup.cpp
-    ${TKET_MEASUREMENT_DIR}/MeasurementReduction.cpp
-
-    # Characterisation
-    ${TKET_CHARACTERISATION_DIR}/Cycles.cpp
-    ${TKET_CHARACTERISATION_DIR}/FrameRandomisation.cpp
-    ${TKET_CHARACTERISATION_DIR}/DeviceCharacterisation.cpp
-)
-
-add_library(${TKET} SHARED ${TKET_SOURCES})
+add_library(${TKET} INTERFACE)
 # ----- Location of header files ----------------------------------------------
-target_include_directories(${TKET} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET} PRIVATE ${TKET_UTILS} ${TKET_ZX} ${TKET_CLIFFORD} ${TKET_OPS} ${TKET_GRAPHS} ${TKET_GATE} ${TKET_PAULIGRAPH} ${TKET_CIRCUIT} ${TKET_ARCHITECTURE} ${CONAN_LIBS})
+target_include_directories(${TKET} INTERFACE ${TKET_SRC_DIR})
+target_link_libraries(${TKET}
+    INTERFACE
+    ${TKET_UTILS}
+    ${TKET_ZX}
+    ${TKET_CLIFFORD}
+    ${TKET_OPS}
+    ${TKET_GRAPHS}
+    ${TKET_GATE}
+    ${TKET_PAULIGRAPH}
+    ${TKET_CIRCUIT}
+    ${TKET_ARCHITECTURE}
+    ${TKET_SIMULATION}
+    ${TKET_DIAGONALISATION}
+    ${TKET_PROGRAM}
+    ${TKET_CHARACTERISATION}
+    ${TKET_CHARACTERISATION}
+    ${TKET_CONVERTERS}
+    ${TKET_ROUTING}
+    ${TKET_MEASUREMENT}
+    ${TKET_TRANSFORM}
+    ${TKET_AAS}
+    ${TKET_PREDICATES}
+    ${CONAN_LIBS})
 if(WIN32)
     target_link_libraries(${TKET} PRIVATE bcrypt)
 ENDIF()

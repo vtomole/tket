@@ -12,19 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-project(${TKET_GRAPHS})
+project(${TKET_DIAGONALISATION})
 
-add_library(${TKET_GRAPHS}
-    AdjacencyData.cpp
-    BruteForceColouring.cpp
-    ColouringPriority.cpp
-    GraphColouring.cpp
-    GraphRoutines.cpp
-    LargeCliquesResult.cpp
-    ArticulationPoints.cpp
-    UIDConnectivity.cpp)
+add_library(${TKET_DIAGONALISATION}
+    DiagUtils.cpp
+    Diagonalisation.cpp
+    PauliPartition.cpp)
 
-target_include_directories(${TKET_GRAPHS} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_GRAPHS}
+target_include_directories(${TKET_DIAGONALISATION} PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(${TKET_DIAGONALISATION}
     PRIVATE
-    ${TKET_UTILS})
+    ${TKET_OPS}
+    ${TKET_GRAPHS}
+    ${TKET_PAULIGRAPH}
+    ${TKET_CIRCUIT})

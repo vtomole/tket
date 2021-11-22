@@ -12,19 +12,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-project(${TKET_GRAPHS})
+project(${TKET_CONVERTERS})
 
-add_library(${TKET_GRAPHS}
-    AdjacencyData.cpp
-    BruteForceColouring.cpp
-    ColouringPriority.cpp
-    GraphColouring.cpp
-    GraphRoutines.cpp
-    LargeCliquesResult.cpp
-    ArticulationPoints.cpp
-    UIDConnectivity.cpp)
+add_library(${TKET_CONVERTERS}
+    CliffTableauConverters.cpp
+    PauliGadget.cpp
+    PauliGraphConverters.cpp
+    Gauss.cpp
+    PhasePoly.cpp)
 
-target_include_directories(${TKET_GRAPHS} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_GRAPHS}
+target_include_directories(${TKET_CONVERTERS} PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(${TKET_CONVERTERS}
     PRIVATE
-    ${TKET_UTILS})
+    ${TKET_UTILS}
+    ${TKET_CLIFFORD}
+    ${TKET_OPS}
+    ${TKET_GATE}
+    ${TKET_PAULIGRAPH}
+    ${TKET_CIRCUIT}
+    ${TKET_DIAGONALISATION})
