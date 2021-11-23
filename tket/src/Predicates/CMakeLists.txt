@@ -28,6 +28,7 @@ target_link_libraries(${TKET_PREDICATES}
     ${TKET_OPTYPE}
     ${TKET_GATE}
     ${TKET_CIRCUIT}
+    ${TKET_GRAPHS}
     ${TKET_ROUTING}
     ${TKET_TRANSFORMATIONS}
     ${TKET_AAS}
