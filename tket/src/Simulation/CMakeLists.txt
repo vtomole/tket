@@ -27,6 +27,7 @@ target_link_libraries(${TKET_SIMULATION}
     PRIVATE
     ${TKET_UTILS}
     ${TKET_OPTYPE}
+    ${TKET_OP}
     ${TKET_GATE}
     ${TKET_CIRCUIT}
     ${CONAN_LIBS})
