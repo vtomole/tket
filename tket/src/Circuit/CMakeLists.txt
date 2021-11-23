@@ -29,7 +29,8 @@ add_library(${TKET_CIRCUIT}
     AssertionSynthesis.cpp
     CircPool.cpp
     DAGProperties.cpp
-    OpJson.cpp)
+    OpJson.cpp
+    Conditional.cpp)
 
 target_include_directories(${TKET_CIRCUIT} PRIVATE ${TKET_SRC_DIR})
 target_link_libraries(${TKET_CIRCUIT}

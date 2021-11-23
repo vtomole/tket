@@ -15,7 +15,6 @@
 project(${TKET_OPS})
 
 add_library(${TKET_OPS}
-    Conditional.cpp
     FlowOp.cpp
     MetaOp.cpp
     Op.cpp
