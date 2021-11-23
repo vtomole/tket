@@ -37,4 +37,5 @@ target_link_libraries(${TKET_CIRCUIT}
     ${TKET_UTILS}
     ${TKET_OPTYPE}
     ${TKET_OPS}
-    ${TKET_GATE})
+    ${TKET_GATE}
+    ${CONAN_LIBS})

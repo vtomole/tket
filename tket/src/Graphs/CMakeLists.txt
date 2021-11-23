@@ -27,4 +27,5 @@ add_library(${TKET_GRAPHS}
 target_include_directories(${TKET_GRAPHS} PRIVATE ${TKET_SRC_DIR})
 target_link_libraries(${TKET_GRAPHS}
     PRIVATE
-    ${TKET_UTILS})
+    ${TKET_UTILS}
+    ${CONAN_LIBS})

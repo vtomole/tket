@@ -29,4 +29,5 @@ add_library(${TKET_ZX}
 target_include_directories(${TKET_ZX} PRIVATE ${TKET_SRC_DIR})
 target_link_libraries(${TKET_ZX}
     PRIVATE
-    ${TKET_UTILS})
+    ${TKET_UTILS}
+    ${CONAN_LIBS})
