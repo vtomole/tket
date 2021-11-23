@@ -12,10 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef _TKET_Ops_Conditional_H_
-#define _TKET_Ops_Conditional_H_
+#ifndef _TKET_Circuit_Conditional_H_
+#define _TKET_Circuit_Conditional_H_
 
-#include "Op.hpp"
+// This file is in the Circuit component because Conditonal::deserialize() may
+// require deserialization of a Box.
+
+#include "Ops/Op.hpp"
 #include "Utils/Json.hpp"
 
 namespace tket {
