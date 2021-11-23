@@ -24,6 +24,9 @@ add_library(${TKET_PREDICATES}
 target_include_directories(${TKET_PREDICATES} PRIVATE ${TKET_SRC_DIR})
 target_link_libraries(${TKET_PREDICATES}
     PRIVATE
+    ${TKET_UTILS}
+    ${TKET_OPTYPE}
+    ${TKET_GATE}
     ${TKET_CIRCUIT}
     ${TKET_ROUTING}
     ${TKET_TRANSFORMATIONS}
