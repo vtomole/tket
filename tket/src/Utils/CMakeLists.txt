@@ -22,3 +22,5 @@ add_library(${TKET_UTILS}
     PauliStrings.cpp
     CosSinDecomposition.cpp
     Expression.cpp)
+
+target_include_directories(${TKET_UTILS} PRIVATE ${TKET_SRC_DIR})

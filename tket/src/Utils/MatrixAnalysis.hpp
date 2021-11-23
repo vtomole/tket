@@ -19,7 +19,7 @@
 
 #include "EigenConfig.hpp"
 #include "UnitID.hpp"
-#include "Constants.hpp"
+#include "Utils/Constants.hpp"
 
 namespace tket {
 

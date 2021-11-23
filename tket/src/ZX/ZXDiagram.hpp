@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ZXDiagramImpl.hpp"
+#include "ZX/ZXDiagramImpl.hpp"
 
 namespace tket {
 

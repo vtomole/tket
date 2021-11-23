@@ -1,9 +1,9 @@
-#include "ZXGenerator.hpp"
+#include "ZX/ZXGenerator.hpp"
 
 #include <sstream>
 
 #include "Utils/Assert.hpp"
-#include "ZXDiagram.hpp"
+#include "ZX/ZXDiagram.hpp"
 
 namespace tket {
 
