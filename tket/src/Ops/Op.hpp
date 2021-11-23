@@ -23,6 +23,7 @@
 #include <memory>
 #include <optional>
 #include <ostream>
+#include <sstream>
 #include <stdexcept>
 #include <string>
 #include <utility>
@@ -91,10 +92,27 @@ class Op : public std::enable_shared_from_this<Op> {
   virtual unsigned n_qubits() const { throw NotValid(); }
 
   /** String representation */
-  virtual std::string get_name(bool latex = false) const;
+  virtual std::string get_name(bool latex = false) const {
+    if (latex) {
+      return get_desc().latex();
+    } else {
+      return get_desc().name();
+    }
+  }
 
   /** Command representation */
-  virtual std::string get_command_str(const unit_vector_t &args) const;
+  virtual std::string get_command_str(const unit_vector_t &args) const {
+    std::stringstream out;
+    out << get_name();
+    if (!args.empty()) {
+      out << " " << args[0].repr();
+      for (unsigned i = 1; i < args.size(); i++) {
+        out << ", " << args[i].repr();
+      }
+    }
+    out << ";";
+    return out.str();
+  }
 
   /** Get operation descriptor */
   OpDesc get_desc() const { return desc_; }
