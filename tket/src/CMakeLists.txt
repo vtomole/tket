@@ -104,8 +104,6 @@ add_subdirectory(ArchAwareSynth)
 add_subdirectory(Predicates)
 
 add_library(${TKET} INTERFACE)
-# ----- Location of header files ----------------------------------------------
-target_include_directories(${TKET} INTERFACE ${TKET_SRC_DIR})
 target_link_libraries(${TKET}
     INTERFACE
     ${TKET_UTILS}
