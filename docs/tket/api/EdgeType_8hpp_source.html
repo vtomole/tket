@@ -90,43 +90,40 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// See the License for the specific language governing permissions and</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// limitations under the License.</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#ifndef _TKET_Ops_EdgeType_H_</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define _TKET_Ops_EdgeType_H_</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Json_8hpp.html">Utils/Json.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacetket.html">tket</a> {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526e">   25</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526e">EdgeType</a> {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526ea033b1e7914d380b381c8b7f9f131328d">Quantum</a>,</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526ea2091523979dbedcad728958414922c72">Classical</a>,</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526ea27226c864bac7454a8504f8edb15d95b">Boolean</a></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<a class="code" href="namespacetket.html#a59e3aaaf5c90d85da65f8abd18a73670">NLOHMANN_JSON_SERIALIZE_ENUM</a>(</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526e">EdgeType</a>, {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                  {<a class="code" href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526ea033b1e7914d380b381c8b7f9f131328d">EdgeType::Quantum</a>, <span class="stringliteral">&quot;Q&quot;</span>},</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                  {<a class="code" href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526ea2091523979dbedcad728958414922c72">EdgeType::Classical</a>, <span class="stringliteral">&quot;C&quot;</span>},</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                  {<a class="code" href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526ea27226c864bac7454a8504f8edb15d95b">EdgeType::Boolean</a>, <span class="stringliteral">&quot;B&quot;</span>},</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;              });</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="namespacetket.html#ac9cc41e0b406b456fabc9ae1e4517ebd">   56</a></span>&#160;<span class="keyword">typedef</span> std::vector&lt;EdgeType&gt; <a class="code" href="namespacetket.html#ac9cc41e0b406b456fabc9ae1e4517ebd">op_signature_t</a>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}  <span class="comment">// namespace tket</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Json_8hpp.html">Utils/Json.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacetket.html">tket</a> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526e">   24</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526e">EdgeType</a> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526ea033b1e7914d380b381c8b7f9f131328d">Quantum</a>,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <a class="code" href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526ea2091523979dbedcad728958414922c72">Classical</a>,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526ea27226c864bac7454a8504f8edb15d95b">Boolean</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<a class="code" href="namespacetket.html#a59e3aaaf5c90d85da65f8abd18a73670">NLOHMANN_JSON_SERIALIZE_ENUM</a>(</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526e">EdgeType</a>, {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                  {<a class="code" href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526ea033b1e7914d380b381c8b7f9f131328d">EdgeType::Quantum</a>, <span class="stringliteral">&quot;Q&quot;</span>},</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                  {<a class="code" href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526ea2091523979dbedcad728958414922c72">EdgeType::Classical</a>, <span class="stringliteral">&quot;C&quot;</span>},</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                  {<a class="code" href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526ea27226c864bac7454a8504f8edb15d95b">EdgeType::Boolean</a>, <span class="stringliteral">&quot;B&quot;</span>},</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;              });</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="namespacetket.html#ac9cc41e0b406b456fabc9ae1e4517ebd">   55</a></span>&#160;<span class="keyword">typedef</span> std::vector&lt;EdgeType&gt; <a class="code" href="namespacetket.html#ac9cc41e0b406b456fabc9ae1e4517ebd">op_signature_t</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}  <span class="comment">// namespace tket</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacetket_html_a4c73a949b027dea7f23b1d5a1bdd526ea27226c864bac7454a8504f8edb15d95b"><div class="ttname"><a href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526ea27226c864bac7454a8504f8edb15d95b">tket::EdgeType::Boolean</a></div><div class="ttdeci">@ Boolean</div><div class="ttdoc">A wire carrying a bit of classical information from a classical output port of one op to a classical ...</div></div>
 <div class="ttc" id="anamespacetket_html_a59e3aaaf5c90d85da65f8abd18a73670"><div class="ttname"><a href="namespacetket.html#a59e3aaaf5c90d85da65f8abd18a73670">tket::NLOHMANN_JSON_SERIALIZE_ENUM</a></div><div class="ttdeci">NLOHMANN_JSON_SERIALIZE_ENUM(EdgeType, { {EdgeType::Quantum, &quot;Q&quot;}, {EdgeType::Classical, &quot;C&quot;}, {EdgeType::Boolean, &quot;B&quot;}, })</div></div>
 <div class="ttc" id="anamespacetket_html"><div class="ttname"><a href="namespacetket.html">tket</a></div><div class="ttdoc">Defines tket::DeviceCharacterisation, used in NoiseAwarePlacement and in commute_SQ_gates_through_SWA...</div><div class="ttdef"><b>Definition:</b> <a href="Path_8cpp_source.html#l00019">Path.cpp:19</a></div></div>
 <div class="ttc" id="aJson_8hpp_html"><div class="ttname"><a href="Json_8hpp.html">Json.hpp</a></div></div>
-<div class="ttc" id="anamespacetket_html_a4c73a949b027dea7f23b1d5a1bdd526e"><div class="ttname"><a href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526e">tket::EdgeType</a></div><div class="ttdeci">EdgeType</div><div class="ttdoc">Type of a wire in a circuit or input to an op.</div><div class="ttdef"><b>Definition:</b> <a href="EdgeType_8hpp_source.html#l00025">EdgeType.hpp:25</a></div></div>
+<div class="ttc" id="anamespacetket_html_a4c73a949b027dea7f23b1d5a1bdd526e"><div class="ttname"><a href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526e">tket::EdgeType</a></div><div class="ttdeci">EdgeType</div><div class="ttdoc">Type of a wire in a circuit or input to an op.</div><div class="ttdef"><b>Definition:</b> <a href="EdgeType_8hpp_source.html#l00024">EdgeType.hpp:24</a></div></div>
 <div class="ttc" id="anamespacetket_html_a4c73a949b027dea7f23b1d5a1bdd526ea033b1e7914d380b381c8b7f9f131328d"><div class="ttname"><a href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526ea033b1e7914d380b381c8b7f9f131328d">tket::EdgeType::Quantum</a></div><div class="ttdeci">@ Quantum</div><div class="ttdoc">A wire carrying quantum information, corresponding to some allocated Qubit.</div></div>
-<div class="ttc" id="anamespacetket_html_ac9cc41e0b406b456fabc9ae1e4517ebd"><div class="ttname"><a href="namespacetket.html#ac9cc41e0b406b456fabc9ae1e4517ebd">tket::op_signature_t</a></div><div class="ttdeci">std::vector&lt; EdgeType &gt; op_signature_t</div><div class="ttdef"><b>Definition:</b> <a href="EdgeType_8hpp_source.html#l00056">EdgeType.hpp:56</a></div></div>
+<div class="ttc" id="anamespacetket_html_ac9cc41e0b406b456fabc9ae1e4517ebd"><div class="ttname"><a href="namespacetket.html#ac9cc41e0b406b456fabc9ae1e4517ebd">tket::op_signature_t</a></div><div class="ttdeci">std::vector&lt; EdgeType &gt; op_signature_t</div><div class="ttdef"><b>Definition:</b> <a href="EdgeType_8hpp_source.html#l00055">EdgeType.hpp:55</a></div></div>
 <div class="ttc" id="anamespacetket_html_a4c73a949b027dea7f23b1d5a1bdd526ea2091523979dbedcad728958414922c72"><div class="ttname"><a href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526ea2091523979dbedcad728958414922c72">tket::EdgeType::Classical</a></div><div class="ttdeci">@ Classical</div><div class="ttdoc">A wire carrying classical information, corresponding to some allocated Bit.</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

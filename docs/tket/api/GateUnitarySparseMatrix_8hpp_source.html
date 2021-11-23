@@ -90,29 +90,27 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// See the License for the specific language governing permissions and</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// limitations under the License.</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#ifndef _CQC_TKET_SIMULATION_GateUnitarySparseMatrix_HPP_</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define _CQC_TKET_SIMULATION_GateUnitarySparseMatrix_HPP_</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="MatrixAnalysis_8hpp.html">Utils/MatrixAnalysis.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacetket.html">tket</a> {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">class </span>Gate;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span>internal {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structtket_1_1internal_1_1GateUnitarySparseMatrix.html">   27</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structtket_1_1internal_1_1GateUnitarySparseMatrix.html">GateUnitarySparseMatrix</a> {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">static</span> std::vector&lt;TripletCd&gt; <a class="code" href="structtket_1_1internal_1_1GateUnitarySparseMatrix.html#a9e1cf54605137a86fcc9655527ba91c9">get_unitary_triplets</a>(</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="keyword">const</span> <a class="code" href="classtket_1_1Gate.html">Gate</a>&amp; gate, <span class="keywordtype">double</span> abs_epsilon = <a class="code" href="namespacetket.html#a9cdfe3f23ec01d10a956474db74c9fc1">EPS</a>);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}  <span class="comment">// namespace internal</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}  <span class="comment">// namespace tket</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="MatrixAnalysis_8hpp.html">Utils/MatrixAnalysis.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacetket.html">tket</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">class </span>Gate;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span>internal {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structtket_1_1internal_1_1GateUnitarySparseMatrix.html">   26</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structtket_1_1internal_1_1GateUnitarySparseMatrix.html">GateUnitarySparseMatrix</a> {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">static</span> std::vector&lt;TripletCd&gt; <a class="code" href="structtket_1_1internal_1_1GateUnitarySparseMatrix.html#a9e1cf54605137a86fcc9655527ba91c9">get_unitary_triplets</a>(</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keyword">const</span> <a class="code" href="classtket_1_1Gate.html">Gate</a>&amp; gate, <span class="keywordtype">double</span> abs_epsilon = <a class="code" href="namespacetket.html#a9cdfe3f23ec01d10a956474db74c9fc1">EPS</a>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}  <span class="comment">// namespace internal</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}  <span class="comment">// namespace tket</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasstket_1_1Gate_html"><div class="ttname"><a href="classtket_1_1Gate.html">tket::Gate</a></div><div class="ttdef"><b>Definition:</b> <a href="Gate_8hpp_source.html#l00023">Gate.hpp:23</a></div></div>
+<div class="ttc" id="aclasstket_1_1Gate_html"><div class="ttname"><a href="classtket_1_1Gate.html">tket::Gate</a></div><div class="ttdef"><b>Definition:</b> <a href="Gate_8hpp_source.html#l00022">Gate.hpp:22</a></div></div>
 <div class="ttc" id="anamespacetket_html"><div class="ttname"><a href="namespacetket.html">tket</a></div><div class="ttdoc">Defines tket::DeviceCharacterisation, used in NoiseAwarePlacement and in commute_SQ_gates_through_SWA...</div><div class="ttdef"><b>Definition:</b> <a href="Path_8cpp_source.html#l00019">Path.cpp:19</a></div></div>
 <div class="ttc" id="astructtket_1_1internal_1_1GateUnitarySparseMatrix_html_a9e1cf54605137a86fcc9655527ba91c9"><div class="ttname"><a href="structtket_1_1internal_1_1GateUnitarySparseMatrix.html#a9e1cf54605137a86fcc9655527ba91c9">tket::internal::GateUnitarySparseMatrix::get_unitary_triplets</a></div><div class="ttdeci">static std::vector&lt; TripletCd &gt; get_unitary_triplets(const Gate &amp;gate, double abs_epsilon=EPS)</div><div class="ttdoc">If the gate is an unknown type, returns an empty vector.</div><div class="ttdef"><b>Definition:</b> <a href="GateUnitarySparseMatrix_8cpp_source.html#l00147">GateUnitarySparseMatrix.cpp:147</a></div></div>
-<div class="ttc" id="anamespacetket_html_a9cdfe3f23ec01d10a956474db74c9fc1"><div class="ttname"><a href="namespacetket.html#a9cdfe3f23ec01d10a956474db74c9fc1">tket::EPS</a></div><div class="ttdeci">constexpr double EPS</div><div class="ttdoc">Default tolerance for floating-point comparisons.</div><div class="ttdef"><b>Definition:</b> <a href="Constants_8hpp_source.html#l00039">Constants.hpp:39</a></div></div>
-<div class="ttc" id="astructtket_1_1internal_1_1GateUnitarySparseMatrix_html"><div class="ttname"><a href="structtket_1_1internal_1_1GateUnitarySparseMatrix.html">tket::internal::GateUnitarySparseMatrix</a></div><div class="ttdoc">For getting sparse unitary matrices directly for specific gates, without constructing the dense matri...</div><div class="ttdef"><b>Definition:</b> <a href="GateUnitarySparseMatrix_8hpp_source.html#l00027">GateUnitarySparseMatrix.hpp:27</a></div></div>
+<div class="ttc" id="anamespacetket_html_a9cdfe3f23ec01d10a956474db74c9fc1"><div class="ttname"><a href="namespacetket.html#a9cdfe3f23ec01d10a956474db74c9fc1">tket::EPS</a></div><div class="ttdeci">constexpr double EPS</div><div class="ttdoc">Default tolerance for floating-point comparisons.</div><div class="ttdef"><b>Definition:</b> <a href="Constants_8hpp_source.html#l00038">Constants.hpp:38</a></div></div>
+<div class="ttc" id="astructtket_1_1internal_1_1GateUnitarySparseMatrix_html"><div class="ttname"><a href="structtket_1_1internal_1_1GateUnitarySparseMatrix.html">tket::internal::GateUnitarySparseMatrix</a></div><div class="ttdoc">For getting sparse unitary matrices directly for specific gates, without constructing the dense matri...</div><div class="ttdef"><b>Definition:</b> <a href="GateUnitarySparseMatrix_8hpp_source.html#l00026">GateUnitarySparseMatrix.hpp:26</a></div></div>
 <div class="ttc" id="aMatrixAnalysis_8hpp_html"><div class="ttname"><a href="MatrixAnalysis_8hpp.html">MatrixAnalysis.hpp</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

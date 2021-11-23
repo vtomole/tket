@@ -90,20 +90,17 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// See the License for the specific language governing permissions and</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// limitations under the License.</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#ifndef _TKET_Verification_H_</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define _TKET_Verification_H_</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Architecture_8hpp.html">Architecture/Architecture.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Circuit_8hpp.html">Circuit/Circuit.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacetket.html">tket</a> {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="namespacetket.html#a57d6dd3bedfc60a482c50c8eb4a155af">respects_connectivity_constraints</a>(</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">const</span> Circuit&amp; circ, <span class="keyword">const</span> Architecture&amp; arch, <span class="keywordtype">bool</span> directed,</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">bool</span> bridge_allowed = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}  <span class="comment">// namespace tket</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif  //_TKET_Verification_H_</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Architecture_8hpp.html">Architecture/Architecture.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Circuit_8hpp.html">Circuit/Circuit.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacetket.html">tket</a> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="namespacetket.html#a57d6dd3bedfc60a482c50c8eb4a155af">respects_connectivity_constraints</a>(</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">const</span> Circuit&amp; circ, <span class="keyword">const</span> Architecture&amp; arch, <span class="keywordtype">bool</span> directed,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">bool</span> bridge_allowed = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}  <span class="comment">// namespace tket</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aArchitecture_8hpp_html"><div class="ttname"><a href="Architecture_8hpp.html">Architecture.hpp</a></div></div>
 <div class="ttc" id="anamespacetket_html_a57d6dd3bedfc60a482c50c8eb4a155af"><div class="ttname"><a href="namespacetket.html#a57d6dd3bedfc60a482c50c8eb4a155af">tket::respects_connectivity_constraints</a></div><div class="ttdeci">bool respects_connectivity_constraints(const Circuit &amp;circ, const Architecture &amp;arch, bool directed, bool bridge_allowed)</div><div class="ttdoc">Check that the circuit respects architectural constraints.</div><div class="ttdef"><b>Definition:</b> <a href="Verification_8cpp_source.html#l00018">Verification.cpp:18</a></div></div>
