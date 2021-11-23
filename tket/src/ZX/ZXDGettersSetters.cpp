@@ -13,7 +13,7 @@
 // limitations under the License.
 
 #include "Utils/GraphHeaders.hpp"
-#include "ZXDiagram.hpp"
+#include "ZX/ZXDiagram.hpp"
 
 namespace tket {
 

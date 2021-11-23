@@ -14,7 +14,7 @@
 
 #pragma once
 
-#include "ZXDiagram.hpp"
+#include "ZX/ZXDiagram.hpp"
 
 namespace tket {
 

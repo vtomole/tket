@@ -18,7 +18,7 @@
 #include <boost/graph/graph_traits.hpp>
 
 #include "Utils/SequencedContainers.hpp"
-#include "ZXGenerator.hpp"
+#include "ZX/ZXGenerator.hpp"
 
 /**
  * This header contains the implementation-specific type definitions for the

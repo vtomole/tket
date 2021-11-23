@@ -13,7 +13,7 @@
 // limitations under the License.
 
 #include "Utils/GraphHeaders.hpp"
-#include "Rewrite.hpp"
+#include "ZX/Rewrite.hpp"
 
 namespace tket {
 
