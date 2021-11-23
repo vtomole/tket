@@ -22,6 +22,8 @@ target_include_directories(${TKET_MEASUREMENT} PRIVATE ${TKET_SRC_DIR})
 target_link_libraries(${TKET_MEASUREMENT}
     PRIVATE
     ${TKET_UTILS}
+    ${TKET_OPTYPE}
+    ${TKET_GATE}
     ${TKET_CIRCUIT}
     ${TKET_DIAGONALISATION}
     ${TKET_CONVERTERS}
