@@ -25,6 +25,7 @@ target_link_libraries(${TKET_MEASUREMENT}
     ${TKET_OPTYPE}
     ${TKET_GATE}
     ${TKET_CIRCUIT}
+    ${TKET_CLIFFORD}
     ${TKET_DIAGONALISATION}
     ${TKET_CONVERTERS}
     ${CONAN_LIBS})

@@ -23,8 +23,12 @@ target_include_directories(${TKET_AAS} PRIVATE ${TKET_SRC_DIR})
 target_link_libraries(${TKET_AAS}
     PRIVATE
     ${TKET_UTILS}
+    ${TKET_OPTYPE}
+    ${TKET_OP}
+    ${TKET_GATE}
     ${TKET_CIRCUIT}
     ${TKET_GRAPHS}
+    ${TKET_ARCHITECTURE}
     ${TKET_ROUTING}
     ${TKET_CONVERTERS}
     ${CONAN_LIBS})
