@@ -75,7 +75,10 @@ class Op : public std::enable_shared_from_this<Op> {
    *         the operation type does not support symbols.
    */
   virtual Op_ptr symbol_substitution(
-      const SymEngine::map_basic_basic &sub_map) const = 0;
+      const SymEngine::map_basic_basic &sub_map) const {
+    (void)sub_map;
+    throw NotValid();
+  }
 
   /** Sequence of phase parameters, if applicable */
   virtual std::vector<Expr> get_params() const { throw NotValid(); }
@@ -99,7 +102,7 @@ class Op : public std::enable_shared_from_this<Op> {
   OpType get_type() const { return type_; }
 
   /** Set of all free symbols occurring in operation parameters. */
-  virtual SymSet free_symbols() const = 0;
+  virtual SymSet free_symbols() const { throw NotValid(); }
 
   /**
    * Which Pauli, if any, commutes with the operation at a given port
@@ -130,7 +133,7 @@ class Op : public std::enable_shared_from_this<Op> {
   }
 
   /** Vector specifying type of data for each port on op */
-  virtual op_signature_t get_signature() const = 0;
+  virtual op_signature_t get_signature() const { throw NotValid(); }
 
   /**
    * Test whether operation is identity up to a phase and return phase if so.
