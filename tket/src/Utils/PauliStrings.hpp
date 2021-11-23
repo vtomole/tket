@@ -20,11 +20,11 @@
 #include <utility>
 #include <vector>
 
-#include "Constants.hpp"
-#include "EigenConfig.hpp"
-#include "Exceptions.hpp"
-#include "Json.hpp"
-#include "UnitID.hpp"
+#include "Utils/Constants.hpp"
+#include "Utils/EigenConfig.hpp"
+#include "Utils/Exceptions.hpp"
+#include "Utils/Json.hpp"
+#include "Utils/UnitID.hpp"
 namespace tket {
 
 /** Pauli not supported */
