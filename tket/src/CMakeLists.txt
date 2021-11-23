@@ -128,5 +128,5 @@ target_link_libraries(${TKET}
     ${TKET_PREDICATES}
     ${CONAN_LIBS})
 if(WIN32)
-    target_link_libraries(${TKET} PRIVATE bcrypt)
+    target_link_libraries(${TKET} INTERFACE bcrypt)
 ENDIF()
