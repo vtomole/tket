@@ -26,7 +26,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2021-11-23 15:11:12</td>
+      <td>2021-11-23 17:15:47</td>
     </tr>
   </table>
 </div>
@@ -183,7 +183,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#ifndef _TKET_FrameRandomisation_H_</span></td>
+      <td class="src "><span class="cp">#pragma once</span></td>
     </tr>
 
     <tr class="source-line">
@@ -191,7 +191,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#define _TKET_FrameRandomisation_H_</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -199,7 +199,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cp">#include</span> <span class="cpf">&quot;Characterisation/Cycles.hpp&quot;</span><span class="cp"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -207,7 +207,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span> <span class="cpf">&quot;Characterisation/Cycles.hpp&quot;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span> <span class="cpf">&quot;Circuit/Circuit.hpp&quot;</span><span class="cp"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -215,7 +215,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span> <span class="cpf">&quot;Circuit/Circuit.hpp&quot;</span><span class="cp"></span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -223,7 +223,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="k">namespace</span> <span class="n">tket</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -231,7 +231,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">namespace</span> <span class="n">tket</span> <span class="p">{</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -239,7 +239,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="c1">// Friend class for testing some private methods in FrameRandomisation</span></td>
     </tr>
 
     <tr class="source-line">
@@ -247,7 +247,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// Friend class for testing some private methods in FrameRandomisation</span></td>
+      <td class="src "><span class="k">class</span> <span class="nc">FrameRandomisationTester</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -255,7 +255,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">class</span> <span class="nc">FrameRandomisationTester</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -263,7 +263,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="c1">// FrameRandomisation provides methods for applying a circuit noise shaping</span></td>
     </tr>
 
     <tr class="source-line">
@@ -271,7 +271,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// FrameRandomisation provides methods for applying a circuit noise shaping</span></td>
+      <td class="src "><span class="c1">// method &#39;Cycles&#39; i.e. sub-circuits of a given circuit are found such that:</span></td>
     </tr>
 
     <tr class="source-line">
@@ -279,7 +279,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// method &#39;Cycles&#39; i.e. sub-circuits of a given circuit are found such that:</span></td>
+      <td class="src "><span class="c1">// • every gate Op has a type in some allowed set of OpTypes (cycle_types_)</span></td>
     </tr>
 
     <tr class="source-line">
@@ -287,7 +287,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// • every gate Op has a type in some allowed set of OpTypes (cycle_types_)</span></td>
+      <td class="src "><span class="c1">// • the minimum number of cycles is found where each allowed Op is in a cycle</span></td>
     </tr>
 
     <tr class="source-line">
@@ -295,7 +295,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// • the minimum number of cycles is found where each allowed Op is in a cycle</span></td>
+      <td class="src "><span class="c1">// New gates are wired into the EdgeType::Quantum boundary of each cycle (adding</span></td>
     </tr>
 
     <tr class="source-line">
@@ -303,7 +303,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// New gates are wired into the EdgeType::Quantum boundary of each cycle (adding</span></td>
+      <td class="src "><span class="c1">// a Frame) such that:</span></td>
     </tr>
 
     <tr class="source-line">
@@ -311,7 +311,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// a Frame) such that:</span></td>
+      <td class="src "><span class="c1">// • Each OpType for vertices in the &quot;in&quot; boundary of each cycle is uniformly</span></td>
     </tr>
 
     <tr class="source-line">
@@ -319,7 +319,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// • Each OpType for vertices in the &quot;in&quot; boundary of each cycle is uniformly</span></td>
+      <td class="src "><span class="c1">//   sampled from some allowed set of 1-qubit OpTypes (frame_types_)</span></td>
     </tr>
 
     <tr class="source-line">
@@ -327,7 +327,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">//   sampled from some allowed set of 1-qubit OpTypes (frame_types_)</span></td>
+      <td class="src "><span class="c1">// • OpTypes for vertices in the &quot;out&quot; boundary and are determined from &quot;in&quot;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -335,7 +335,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// • OpTypes for vertices in the &quot;out&quot; boundary and are determined from &quot;in&quot;</span></td>
+      <td class="src "><span class="c1">//   frame &amp; cycle gates such that the overall circuit unitary is unchanged (up</span></td>
     </tr>
 
     <tr class="source-line">
@@ -343,7 +343,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">//   frame &amp; cycle gates such that the overall circuit unitary is unchanged (up</span></td>
+      <td class="src "><span class="c1">//   to global phase)</span></td>
     </tr>
 
     <tr class="source-line">
@@ -351,7 +351,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">//   to global phase)</span></td>
+      <td class="src "><span class="k">class</span> <span class="nc">FrameRandomisation</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -359,7 +359,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">class</span> <span class="nc">FrameRandomisation</span> <span class="p">{</span></td>
+      <td class="src "> <span class="k">public</span><span class="o">:</span></td>
     </tr>
 
     <tr class="source-line">
@@ -367,19 +367,11 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "> <span class="k">public</span><span class="o">:</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l39" href="#l39">39</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
       <td class="src ">  <span class="n">FrameRandomisation</span><span class="p">()</span> <span class="p">{}</span></td>
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l40" href="#l40">40</a></td>
+      <td class="lineno"><a id="l39" href="#l39">39</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
@@ -387,7 +379,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l41" href="#l41">41</a></td>
+      <td class="lineno"><a id="l40" href="#l40">40</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -395,7 +387,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l42" href="#l42">42</a></td>
+      <td class="lineno"><a id="l41" href="#l41">41</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -403,7 +395,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l43" href="#l43">43</a></td>
+      <td class="lineno"><a id="l42" href="#l42">42</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -411,7 +403,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l44" href="#l44">44</a></td>
+      <td class="lineno"><a id="l43" href="#l43">43</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -419,7 +411,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l45" href="#l45">45</a></td>
+      <td class="lineno"><a id="l44" href="#l44">44</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -427,7 +419,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l46" href="#l46">46</a></td>
+      <td class="lineno"><a id="l45" href="#l45">45</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -435,7 +427,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l47" href="#l47">47</a></td>
+      <td class="lineno"><a id="l46" href="#l46">46</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -443,7 +435,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l48" href="#l48">48</a></td>
+      <td class="lineno"><a id="l47" href="#l47">47</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -451,7 +443,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l49" href="#l49">49</a></td>
+      <td class="lineno"><a id="l48" href="#l48">48</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -459,7 +451,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l50" href="#l50">50</a></td>
+      <td class="lineno"><a id="l49" href="#l49">49</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -467,7 +459,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l51" href="#l51">51</a></td>
+      <td class="lineno"><a id="l50" href="#l50">50</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -475,7 +467,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l52" href="#l52">52</a></td>
+      <td class="lineno"><a id="l51" href="#l51">51</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -483,7 +475,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l53" href="#l53">53</a></td>
+      <td class="lineno"><a id="l52" href="#l52">52</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -491,7 +483,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l54" href="#l54">54</a></td>
+      <td class="lineno"><a id="l53" href="#l53">53</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -499,7 +491,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l55" href="#l55">55</a></td>
+      <td class="lineno"><a id="l54" href="#l54">54</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -507,7 +499,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l56" href="#l56">56</a></td>
+      <td class="lineno"><a id="l55" href="#l55">55</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -515,7 +507,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l57" href="#l57">57</a></td>
+      <td class="lineno"><a id="l56" href="#l56">56</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -523,11 +515,19 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l58" href="#l58">58</a></td>
+      <td class="lineno"><a id="l57" href="#l57">57</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
       <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l58" href="#l58">58</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "> <span class="k">protected</span><span class="o">:</span></td>
     </tr>
 
     <tr class="source-line">
@@ -535,7 +535,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "> <span class="k">protected</span><span class="o">:</span></td>
+      <td class="src ">  <span class="n">OpTypeSet</span> <span class="n">cycle_types_</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -543,7 +543,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">OpTypeSet</span> <span class="n">cycle_types_</span><span class="p">;</span></td>
+      <td class="src ">  <span class="n">OpTypeSet</span> <span class="n">frame_types_</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -551,7 +551,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">OpTypeSet</span> <span class="n">frame_types_</span><span class="p">;</span></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">OpType</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">OpTypeVector</span><span class="p">,</span> <span class="n">OpTypeVector</span><span class="o">&gt;&gt;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -559,7 +559,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">OpType</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">OpTypeVector</span><span class="p">,</span> <span class="n">OpTypeVector</span><span class="o">&gt;&gt;</span></td>
+      <td class="src ">      <span class="n">frame_cycle_conjugates_</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -567,7 +567,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="n">frame_cycle_conjugates_</span><span class="p">;</span></td>
+      <td class="src ">  <span class="n">Circuit</span> <span class="n">circuit_</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -575,7 +575,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">Circuit</span> <span class="n">circuit_</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -583,7 +583,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="c1">// Each Cycle in cycles has corresponding addresses of frame vertices in circ</span></td>
     </tr>
 
     <tr class="source-line">
@@ -591,7 +591,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// Each Cycle in cycles has corresponding addresses of frame vertices in circ</span></td>
+      <td class="src ">  <span class="c1">// The OpType of each frame vertex is reassigned given all_frame_ops</span></td>
     </tr>
 
     <tr class="source-line">
@@ -599,7 +599,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// The OpType of each frame vertex is reassigned given all_frame_ops</span></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Circuit</span><span class="o">&gt;</span> <span class="n">label_frames</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -607,7 +607,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Circuit</span><span class="o">&gt;</span> <span class="n">label_frames</span><span class="p">(</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">OpTypeVector</span><span class="o">&gt;&gt;&amp;</span> <span class="n">all_frame_ops</span><span class="p">,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -615,7 +615,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">OpTypeVector</span><span class="o">&gt;&gt;&amp;</span> <span class="n">all_frame_ops</span><span class="p">,</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Cycle</span><span class="o">&gt;&amp;</span> <span class="n">cycles</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -623,7 +623,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Cycle</span><span class="o">&gt;&amp;</span> <span class="n">cycles</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -631,7 +631,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="c1">// Labels frame_vertices with in_frame &amp; out_frame OpType</span></td>
     </tr>
 
     <tr class="source-line">
@@ -639,7 +639,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// Labels frame_vertices with in_frame &amp; out_frame OpType</span></td>
+      <td class="src ">  <span class="kt">void</span> <span class="nf">assign_vertices</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -647,7 +647,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">void</span> <span class="nf">assign_vertices</span><span class="p">(</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">OpTypeVector</span><span class="o">&amp;</span> <span class="n">in_frame</span><span class="p">,</span> <span class="k">const</span> <span class="n">OpTypeVector</span><span class="o">&amp;</span> <span class="n">out_frame</span><span class="p">,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -655,7 +655,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">OpTypeVector</span><span class="o">&amp;</span> <span class="n">in_frame</span><span class="p">,</span> <span class="k">const</span> <span class="n">OpTypeVector</span><span class="o">&amp;</span> <span class="n">out_frame</span><span class="p">,</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="p">,</span> <span class="n">Vertex</span><span class="o">&gt;&gt;&amp;</span> <span class="n">frame_vertices</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -663,7 +663,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="p">,</span> <span class="n">Vertex</span><span class="o">&gt;&gt;&amp;</span> <span class="n">frame_vertices</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -671,7 +671,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="c1">// Finds cycles of cycle_types_ Op in circ using CycleFinder class</span></td>
     </tr>
 
     <tr class="source-line">
@@ -679,7 +679,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// Finds cycles of cycle_types_ Op in circ using CycleFinder class</span></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Cycle</span><span class="o">&gt;</span> <span class="n">get_cycles</span><span class="p">(</span><span class="k">const</span> <span class="n">Circuit</span><span class="o">&amp;</span> <span class="n">circ</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -687,7 +687,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Cycle</span><span class="o">&gt;</span> <span class="n">get_cycles</span><span class="p">(</span><span class="k">const</span> <span class="n">Circuit</span><span class="o">&amp;</span> <span class="n">circ</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -695,7 +695,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="c1">// Uniformly samples size OpType from frame_types_</span></td>
     </tr>
 
     <tr class="source-line">
@@ -703,7 +703,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// Uniformly samples size OpType from frame_types_</span></td>
+      <td class="src ">  <span class="n">OpTypeVector</span> <span class="nf">sample_frame</span><span class="p">(</span><span class="k">const</span> <span class="kt">unsigned</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -711,7 +711,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">OpTypeVector</span> <span class="nf">sample_frame</span><span class="p">(</span><span class="k">const</span> <span class="kt">unsigned</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -719,7 +719,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="c1">// Returns every permutation of OpType in frame_types_ up to largest</span></td>
     </tr>
 
     <tr class="source-line">
@@ -727,7 +727,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// Returns every permutation of OpType in frame_types_ up to largest</span></td>
+      <td class="src ">  <span class="c1">// frame_sizes value</span></td>
     </tr>
 
     <tr class="source-line">
@@ -735,7 +735,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// frame_sizes value</span></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">OpTypeVector</span><span class="o">&gt;&gt;</span> <span class="n">get_all_samples</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -743,7 +743,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">OpTypeVector</span><span class="o">&gt;&gt;</span> <span class="n">get_all_samples</span><span class="p">(</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="kt">unsigned</span><span class="o">&amp;</span> <span class="n">samples</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;&amp;</span> <span class="n">frame_sizes</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -751,7 +751,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="kt">unsigned</span><span class="o">&amp;</span> <span class="n">samples</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;&amp;</span> <span class="n">frame_sizes</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -759,7 +759,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "> <span class="k">private</span><span class="o">:</span></td>
     </tr>
 
     <tr class="source-line">
@@ -767,7 +767,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "> <span class="k">private</span><span class="o">:</span></td>
+      <td class="src ">  <span class="c1">// Returns new OpTypeVector &quot;out_frame&quot;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -775,7 +775,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// Returns new OpTypeVector &quot;out_frame&quot;</span></td>
+      <td class="src ">  <span class="c1">// Sets &quot;out_frame&quot; equal to &quot;in_frame&quot;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -783,7 +783,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// Sets &quot;out_frame&quot; equal to &quot;in_frame&quot;</span></td>
+      <td class="src ">  <span class="c1">// given OpType in &quot;out_frame&quot;, sequentially finds action of OpType in cycle</span></td>
     </tr>
 
     <tr class="source-line">
@@ -791,7 +791,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// given OpType in &quot;out_frame&quot;, sequentially finds action of OpType in cycle</span></td>
+      <td class="src ">  <span class="c1">// on &quot;out_frame&quot; OpType using frame_cycle_conjugates_ Unitarity of circuit</span></td>
     </tr>
 
     <tr class="source-line">
@@ -799,7 +799,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// on &quot;out_frame&quot; OpType using frame_cycle_conjugates_ Unitarity of circuit</span></td>
+      <td class="src ">  <span class="c1">// preserved up to global phase</span></td>
     </tr>
 
     <tr class="source-line">
@@ -807,7 +807,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// preserved up to global phase</span></td>
+      <td class="src ">  <span class="k">virtual</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">OpTypeVector</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="o">&gt;&gt;</span> <span class="n">get_out_frame</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -815,7 +815,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">virtual</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">OpTypeVector</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="o">&gt;&gt;</span> <span class="n">get_out_frame</span><span class="p">(</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">OpTypeVector</span><span class="o">&amp;</span> <span class="n">in_frame</span><span class="p">,</span> <span class="k">const</span> <span class="n">Cycle</span><span class="o">&amp;</span> <span class="n">cycle</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -823,7 +823,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">OpTypeVector</span><span class="o">&amp;</span> <span class="n">in_frame</span><span class="p">,</span> <span class="k">const</span> <span class="n">Cycle</span><span class="o">&amp;</span> <span class="n">cycle</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -831,7 +831,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="k">friend</span> <span class="k">class</span> <span class="nc">FrameRandomisationTester</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -839,7 +839,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">friend</span> <span class="k">class</span> <span class="nc">FrameRandomisationTester</span><span class="p">;</span></td>
+      <td class="src "><span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -847,7 +847,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">};</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -855,7 +855,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="c1">// Instance of FrameRandomisation where cycle_types_ are &quot;hard&quot; Clifford gates</span></td>
     </tr>
 
     <tr class="source-line">
@@ -863,7 +863,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// Instance of FrameRandomisation where cycle_types_ are &quot;hard&quot; Clifford gates</span></td>
+      <td class="src "><span class="c1">// frame_types_ are Pauli gates</span></td>
     </tr>
 
     <tr class="source-line">
@@ -871,7 +871,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// frame_types_ are Pauli gates</span></td>
+      <td class="src "><span class="k">class</span> <span class="nc">PauliFrameRandomisation</span> <span class="o">:</span> <span class="k">public</span> <span class="n">FrameRandomisation</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -879,7 +879,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">class</span> <span class="nc">PauliFrameRandomisation</span> <span class="o">:</span> <span class="k">public</span> <span class="n">FrameRandomisation</span> <span class="p">{</span></td>
+      <td class="src "> <span class="k">public</span><span class="o">:</span></td>
     </tr>
 
     <tr class="source-line">
@@ -887,7 +887,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "> <span class="k">public</span><span class="o">:</span></td>
+      <td class="src ">  <span class="n">PauliFrameRandomisation</span><span class="p">()</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -895,7 +895,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">PauliFrameRandomisation</span><span class="p">()</span> <span class="p">{</span></td>
+      <td class="src ">    <span class="n">cycle_types_</span> <span class="o">=</span> <span class="p">{</span><span class="n">OpType</span><span class="o">::</span><span class="n">H</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">CX</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">S</span><span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -903,7 +903,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">    <span class="n">cycle_types_</span> <span class="o">=</span> <span class="p">{</span><span class="n">OpType</span><span class="o">::</span><span class="n">H</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">CX</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">S</span><span class="p">};</span></td>
+      <td class="src ">    <span class="n">frame_types_</span> <span class="o">=</span> <span class="p">{</span><span class="n">OpType</span><span class="o">::</span><span class="n">X</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">Y</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">Z</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">noop</span><span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -911,7 +911,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">    <span class="n">frame_types_</span> <span class="o">=</span> <span class="p">{</span><span class="n">OpType</span><span class="o">::</span><span class="n">X</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">Y</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">Z</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">noop</span><span class="p">};</span></td>
+      <td class="src ">  <span class="p">}</span></td>
     </tr>
 
     <tr class="source-line">
@@ -919,7 +919,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="p">}</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -927,7 +927,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "> <span class="k">protected</span><span class="o">:</span></td>
     </tr>
 
     <tr class="source-line">
@@ -935,7 +935,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "> <span class="k">protected</span><span class="o">:</span></td>
+      <td class="src ">  <span class="c1">//   QubitPauliTensor class used to find &quot;out_frame&quot;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -943,7 +943,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">//   QubitPauliTensor class used to find &quot;out_frame&quot;</span></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">OpTypeVector</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="o">&gt;&gt;</span> <span class="n">get_out_frame</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -951,7 +951,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">OpTypeVector</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="o">&gt;&gt;</span> <span class="n">get_out_frame</span><span class="p">(</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">OpTypeVector</span><span class="o">&amp;</span> <span class="n">in_frame</span><span class="p">,</span> <span class="k">const</span> <span class="n">Cycle</span><span class="o">&amp;</span> <span class="n">cycle</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -959,7 +959,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">OpTypeVector</span><span class="o">&amp;</span> <span class="n">in_frame</span><span class="p">,</span> <span class="k">const</span> <span class="n">Cycle</span><span class="o">&amp;</span> <span class="n">cycle</span><span class="p">);</span></td>
+      <td class="src "><span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -967,7 +967,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">};</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -975,7 +975,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="c1">// Instance of FrameRandomisation where cycle gates can be modified</span></td>
     </tr>
 
     <tr class="source-line">
@@ -983,7 +983,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// Instance of FrameRandomisation where cycle gates can be modified</span></td>
+      <td class="src "><span class="k">class</span> <span class="nc">UniversalFrameRandomisation</span> <span class="o">:</span> <span class="k">public</span> <span class="n">FrameRandomisation</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -991,7 +991,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">class</span> <span class="nc">UniversalFrameRandomisation</span> <span class="o">:</span> <span class="k">public</span> <span class="n">FrameRandomisation</span> <span class="p">{</span></td>
+      <td class="src "> <span class="k">public</span><span class="o">:</span></td>
     </tr>
 
     <tr class="source-line">
@@ -999,7 +999,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "> <span class="k">public</span><span class="o">:</span></td>
+      <td class="src ">  <span class="n">UniversalFrameRandomisation</span><span class="p">()</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1007,7 +1007,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">UniversalFrameRandomisation</span><span class="p">()</span> <span class="p">{</span></td>
+      <td class="src ">    <span class="n">cycle_types_</span> <span class="o">=</span> <span class="p">{</span><span class="n">OpType</span><span class="o">::</span><span class="n">H</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">CX</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">Rz</span><span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1015,7 +1015,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">    <span class="n">cycle_types_</span> <span class="o">=</span> <span class="p">{</span><span class="n">OpType</span><span class="o">::</span><span class="n">H</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">CX</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">Rz</span><span class="p">};</span></td>
+      <td class="src ">    <span class="n">frame_types_</span> <span class="o">=</span> <span class="p">{</span><span class="n">OpType</span><span class="o">::</span><span class="n">X</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">Y</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">Z</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">noop</span><span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1023,19 +1023,11 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">    <span class="n">frame_types_</span> <span class="o">=</span> <span class="p">{</span><span class="n">OpType</span><span class="o">::</span><span class="n">X</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">Y</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">Z</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">noop</span><span class="p">};</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l121" href="#l121">121</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
       <td class="src ">  <span class="p">}</span></td>
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l122" href="#l122">122</a></td>
+      <td class="lineno"><a id="l121" href="#l121">121</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
@@ -1043,7 +1035,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l123" href="#l123">123</a></td>
+      <td class="lineno"><a id="l122" href="#l122">122</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -1051,7 +1043,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l124" href="#l124">124</a></td>
+      <td class="lineno"><a id="l123" href="#l123">123</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -1059,7 +1051,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l125" href="#l125">125</a></td>
+      <td class="lineno"><a id="l124" href="#l124">124</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -1067,7 +1059,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l126" href="#l126">126</a></td>
+      <td class="lineno"><a id="l125" href="#l125">125</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -1075,7 +1067,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l127" href="#l127">127</a></td>
+      <td class="lineno"><a id="l126" href="#l126">126</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -1083,11 +1075,19 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l128" href="#l128">128</a></td>
+      <td class="lineno"><a id="l127" href="#l127">127</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
       <td class="src "><span class="p">};</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l128" href="#l128">128</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1095,7 +1095,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="c1">// Special Instance of PauliFrameRandomisation</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1103,7 +1103,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// Special Instance of PauliFrameRandomisation</span></td>
+      <td class="src "><span class="c1">// circ must be one cycle</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1111,7 +1111,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// circ must be one cycle</span></td>
+      <td class="src "><span class="c1">// cycle + &quot;out_frame&quot; appended to circ cycle_repeats number of times</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1119,7 +1119,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// cycle + &quot;out_frame&quot; appended to circ cycle_repeats number of times</span></td>
+      <td class="src "><span class="c1">// one &quot;in_frame&quot; is sampled and each individual &quot;out_frame&quot; for each repeat</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1127,7 +1127,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// one &quot;in_frame&quot; is sampled and each individual &quot;out_frame&quot; for each repeat</span></td>
+      <td class="src "><span class="c1">// determined</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1135,7 +1135,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// determined</span></td>
+      <td class="src "><span class="k">class</span> <span class="nc">PowerCycle</span> <span class="o">:</span> <span class="k">public</span> <span class="n">PauliFrameRandomisation</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1143,7 +1143,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">class</span> <span class="nc">PowerCycle</span> <span class="o">:</span> <span class="k">public</span> <span class="n">PauliFrameRandomisation</span> <span class="p">{</span></td>
+      <td class="src "> <span class="k">public</span><span class="o">:</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1151,7 +1151,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "> <span class="k">public</span><span class="o">:</span></td>
+      <td class="src ">  <span class="n">PowerCycle</span><span class="p">()</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1159,7 +1159,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">PowerCycle</span><span class="p">()</span> <span class="p">{</span></td>
+      <td class="src ">    <span class="n">cycle_types_</span> <span class="o">=</span> <span class="p">{</span><span class="n">OpType</span><span class="o">::</span><span class="n">Z</span><span class="p">,</span>   <span class="n">OpType</span><span class="o">::</span><span class="n">X</span><span class="p">,</span>  <span class="n">OpType</span><span class="o">::</span><span class="n">Y</span><span class="p">,</span>   <span class="n">OpType</span><span class="o">::</span><span class="n">S</span><span class="p">,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1167,7 +1167,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">    <span class="n">cycle_types_</span> <span class="o">=</span> <span class="p">{</span><span class="n">OpType</span><span class="o">::</span><span class="n">Z</span><span class="p">,</span>   <span class="n">OpType</span><span class="o">::</span><span class="n">X</span><span class="p">,</span>  <span class="n">OpType</span><span class="o">::</span><span class="n">Y</span><span class="p">,</span>   <span class="n">OpType</span><span class="o">::</span><span class="n">S</span><span class="p">,</span></td>
+      <td class="src ">                    <span class="n">OpType</span><span class="o">::</span><span class="n">Sdg</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">V</span><span class="p">,</span>  <span class="n">OpType</span><span class="o">::</span><span class="n">Vdg</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">H</span><span class="p">,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1175,7 +1175,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">                    <span class="n">OpType</span><span class="o">::</span><span class="n">Sdg</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">V</span><span class="p">,</span>  <span class="n">OpType</span><span class="o">::</span><span class="n">Vdg</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">H</span><span class="p">,</span></td>
+      <td class="src ">                    <span class="n">OpType</span><span class="o">::</span><span class="n">CX</span><span class="p">,</span>  <span class="n">OpType</span><span class="o">::</span><span class="n">CY</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">CZ</span><span class="p">,</span>  <span class="n">OpType</span><span class="o">::</span><span class="n">noop</span><span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1183,7 +1183,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">                    <span class="n">OpType</span><span class="o">::</span><span class="n">CX</span><span class="p">,</span>  <span class="n">OpType</span><span class="o">::</span><span class="n">CY</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">CZ</span><span class="p">,</span>  <span class="n">OpType</span><span class="o">::</span><span class="n">noop</span><span class="p">};</span></td>
+      <td class="src ">    <span class="n">frame_types_</span> <span class="o">=</span> <span class="p">{</span><span class="n">OpType</span><span class="o">::</span><span class="n">X</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">Y</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">Z</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">noop</span><span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1191,7 +1191,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">    <span class="n">frame_types_</span> <span class="o">=</span> <span class="p">{</span><span class="n">OpType</span><span class="o">::</span><span class="n">X</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">Y</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">Z</span><span class="p">,</span> <span class="n">OpType</span><span class="o">::</span><span class="n">noop</span><span class="p">};</span></td>
+      <td class="src ">  <span class="p">}</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1199,7 +1199,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="p">}</span></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Circuit</span><span class="o">&gt;</span> <span class="n">sample_cycles</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1207,7 +1207,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Circuit</span><span class="o">&gt;</span> <span class="n">sample_cycles</span><span class="p">(</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">Circuit</span><span class="o">&amp;</span> <span class="n">circ</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="n">cycle_repeats</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="n">samples</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1215,7 +1215,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">Circuit</span><span class="o">&amp;</span> <span class="n">circ</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="n">cycle_repeats</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="n">samples</span><span class="p">);</span></td>
+      <td class="src "><span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1223,7 +1223,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">};</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1231,7 +1231,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="c1">// Friend class of FrameRandomisation for testing some private methods</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1239,7 +1239,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// Friend class of FrameRandomisation for testing some private methods</span></td>
+      <td class="src "><span class="k">class</span> <span class="nc">FrameRandomisationTester</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1247,7 +1247,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">class</span> <span class="nc">FrameRandomisationTester</span> <span class="p">{</span></td>
+      <td class="src "> <span class="k">private</span><span class="o">:</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1255,7 +1255,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "> <span class="k">private</span><span class="o">:</span></td>
+      <td class="src ">  <span class="n">FrameRandomisation</span><span class="o">*</span> <span class="n">fr</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1263,7 +1263,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">FrameRandomisation</span><span class="o">*</span> <span class="n">fr</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1271,7 +1271,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "> <span class="k">public</span><span class="o">:</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1279,7 +1279,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "> <span class="k">public</span><span class="o">:</span></td>
+      <td class="src ">  <span class="k">explicit</span> <span class="n">FrameRandomisationTester</span><span class="p">(</span><span class="n">FrameRandomisation</span><span class="o">*</span> <span class="n">_fr</span><span class="p">)</span> <span class="o">:</span> <span class="n">fr</span><span class="p">(</span><span class="n">_fr</span><span class="p">)</span> <span class="p">{}</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1287,7 +1287,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">explicit</span> <span class="n">FrameRandomisationTester</span><span class="p">(</span><span class="n">FrameRandomisation</span><span class="o">*</span> <span class="n">_fr</span><span class="p">)</span> <span class="o">:</span> <span class="n">fr</span><span class="p">(</span><span class="n">_fr</span><span class="p">)</span> <span class="p">{}</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1295,7 +1295,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Cycle</span><span class="o">&gt;</span> <span class="n">get_cycles</span><span class="p">(</span><span class="k">const</span> <span class="n">Circuit</span><span class="o">&amp;</span> <span class="n">circ</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1303,7 +1303,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Cycle</span><span class="o">&gt;</span> <span class="n">get_cycles</span><span class="p">(</span><span class="k">const</span> <span class="n">Circuit</span><span class="o">&amp;</span> <span class="n">circ</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1311,7 +1311,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="n">OpTypeVector</span> <span class="nf">get_out_frame</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1319,7 +1319,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">OpTypeVector</span> <span class="nf">get_out_frame</span><span class="p">(</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">OpTypeVector</span><span class="o">&amp;</span> <span class="n">in_frame</span><span class="p">,</span> <span class="k">const</span> <span class="n">Cycle</span><span class="o">&amp;</span> <span class="n">cycle_ops</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1327,7 +1327,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">OpTypeVector</span><span class="o">&amp;</span> <span class="n">in_frame</span><span class="p">,</span> <span class="k">const</span> <span class="n">Cycle</span><span class="o">&amp;</span> <span class="n">cycle_ops</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1335,7 +1335,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">OpTypeVector</span><span class="o">&gt;&gt;</span> <span class="n">get_all_samples</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1343,7 +1343,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">OpTypeVector</span><span class="o">&gt;&gt;</span> <span class="n">get_all_samples</span><span class="p">(</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="kt">unsigned</span><span class="o">&amp;</span> <span class="n">samples</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;&amp;</span> <span class="n">frame_sizes</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1351,7 +1351,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="kt">unsigned</span><span class="o">&amp;</span> <span class="n">samples</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;&amp;</span> <span class="n">frame_sizes</span><span class="p">);</span></td>
+      <td class="src "><span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1359,7 +1359,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">};</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1367,27 +1367,11 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l164" href="#l164">164</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
       <td class="src "><span class="p">}</span>  <span class="c1">// namespace tket</span></td>
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l165" href="#l165">165</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="cp">#endif</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l166" href="#l166">166</a></td>
+      <td class="lineno"><a id="l164" href="#l164">164</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>

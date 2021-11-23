@@ -26,7 +26,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2021-11-23 15:11:12</td>
+      <td>2021-11-23 17:15:47</td>
     </tr>
   </table>
 </div>
@@ -183,7 +183,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#ifndef _TKET_CliffordReductionPass_H_</span></td>
+      <td class="src "><span class="cp">#pragma once</span></td>
     </tr>
 
     <tr class="source-line">
@@ -191,7 +191,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#define _TKET_CliffordReductionPass_H_</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -199,7 +199,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cp">#include</span> <span class="cpf">&quot;Transform.hpp&quot;</span><span class="cp"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -207,7 +207,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span> <span class="cpf">&quot;Transform.hpp&quot;</span><span class="cp"></span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -215,7 +215,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="k">namespace</span> <span class="n">tket</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -223,7 +223,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">namespace</span> <span class="n">tket</span> <span class="p">{</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -231,7 +231,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -239,7 +239,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">/**</span></td>
+      <td class="src "><span class="cm"> * Represents a position that one port of a 2qb Clifford gadget could be</span></td>
     </tr>
 
     <tr class="source-line">
@@ -247,7 +247,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * Represents a position that one port of a 2qb Clifford gadget could be</span></td>
+      <td class="src "><span class="cm"> * commuted to (towards the end of the circuit).</span></td>
     </tr>
 
     <tr class="source-line">
@@ -255,7 +255,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * commuted to (towards the end of the circuit).</span></td>
+      <td class="src "><span class="cm"> */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -263,7 +263,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> */</span></td>
+      <td class="src "><span class="k">struct</span> <span class="n">InteractionPoint</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -271,7 +271,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">struct</span> <span class="n">InteractionPoint</span> <span class="p">{</span></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -279,7 +279,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * Edge to which one point of the interaction could potentially be moved.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -287,7 +287,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * Edge to which one point of the interaction could potentially be moved.</span></td>
+      <td class="src "><span class="cm">   * This is always in the causal future of the source vertex.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -295,7 +295,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * This is always in the causal future of the source vertex.</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -303,7 +303,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="n">Edge</span> <span class="n">e</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -311,7 +311,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">Edge</span> <span class="n">e</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -319,7 +319,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/** Vertex representing the current interaction */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -327,7 +327,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/** Vertex representing the current interaction */</span></td>
+      <td class="src ">  <span class="n">Vertex</span> <span class="n">source</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -335,7 +335,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">Vertex</span> <span class="n">source</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -343,7 +343,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/** What the Pauli term would be transformed to if moved to new location */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -351,7 +351,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/** What the Pauli term would be transformed to if moved to new location */</span></td>
+      <td class="src ">  <span class="n">Pauli</span> <span class="n">p</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -359,7 +359,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">Pauli</span> <span class="n">p</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -367,7 +367,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/** Phase of source (true for -pi/2, false for +pi/2) */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -375,7 +375,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/** Phase of source (true for -pi/2, false for +pi/2) */</span></td>
+      <td class="src ">  <span class="kt">bool</span> <span class="n">phase</span><span class="p">;</span>  <span class="c1">// For each source of an interaction, True for -pi/2, false for</span></td>
     </tr>
 
     <tr class="source-line">
@@ -383,7 +383,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">bool</span> <span class="n">phase</span><span class="p">;</span>  <span class="c1">// For each source of an interaction, True for -pi/2, false for</span></td>
+      <td class="src ">               <span class="c1">// +pi/2</span></td>
     </tr>
 
     <tr class="source-line">
@@ -391,23 +391,23 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">               <span class="c1">// +pi/2</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l42" href="#l42">42</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="linecount coveredLine">34410</td>
+      <td class="src coveredLine">  <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">Edge</span><span class="p">,</span> <span class="n">Vertex</span><span class="o">&gt;</span> <span class="n">key</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="p">{</span><span class="n">e</span><span class="p">,</span> <span class="n">source</span><span class="p">};</span> <span class="p">}</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l43" href="#l43">43</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">34729</td>
-      <td class="src coveredLine">  <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">Edge</span><span class="p">,</span> <span class="n">Vertex</span><span class="o">&gt;</span> <span class="n">key</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="p">{</span><span class="n">e</span><span class="p">,</span> <span class="n">source</span><span class="p">};</span> <span class="p">}</span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -415,7 +415,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">};</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -423,7 +423,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -431,7 +431,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">/**</span></td>
+      <td class="src "><span class="cm"> * Represents a position that one port of a 2qb Clifford gadget could be</span></td>
     </tr>
 
     <tr class="source-line">
@@ -439,7 +439,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * Represents a position that one port of a 2qb Clifford gadget could be</span></td>
+      <td class="src "><span class="cm"> * commuted to (towards the start of the circuit). We don&#39;t need to store the</span></td>
     </tr>
 
     <tr class="source-line">
@@ -447,7 +447,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * commuted to (towards the start of the circuit). We don&#39;t need to store the</span></td>
+      <td class="src "><span class="cm"> * source since we only consider commuting one gadget backwards at a time to</span></td>
     </tr>
 
     <tr class="source-line">
@@ -455,7 +455,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * source since we only consider commuting one gadget backwards at a time to</span></td>
+      <td class="src "><span class="cm"> * search for matches.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -463,7 +463,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * search for matches.</span></td>
+      <td class="src "><span class="cm"> */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -471,7 +471,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> */</span></td>
+      <td class="src "><span class="k">struct</span> <span class="n">RevInteractionPoint</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -479,7 +479,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">struct</span> <span class="n">RevInteractionPoint</span> <span class="p">{</span></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -487,7 +487,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * Edge to which one point of the interaction could potentially be moved.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -495,7 +495,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * Edge to which one point of the interaction could potentially be moved.</span></td>
+      <td class="src "><span class="cm">   * This is always in the causal past of the source vertex.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -503,7 +503,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * This is always in the causal past of the source vertex.</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -511,7 +511,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="n">Edge</span> <span class="n">e</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -519,7 +519,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">Edge</span> <span class="n">e</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -527,7 +527,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/** What the Pauli term would be transformed to if moved to new location */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -535,7 +535,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/** What the Pauli term would be transformed to if moved to new location */</span></td>
+      <td class="src ">  <span class="n">Pauli</span> <span class="n">p</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -543,7 +543,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">Pauli</span> <span class="n">p</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -551,7 +551,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/** Phase of source (true for -pi/2, false for +pi/2) */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -559,7 +559,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/** Phase of source (true for -pi/2, false for +pi/2) */</span></td>
+      <td class="src ">  <span class="kt">bool</span> <span class="n">phase</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -567,7 +567,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">bool</span> <span class="n">phase</span><span class="p">;</span></td>
+      <td class="src "><span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -575,7 +575,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">};</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -583,7 +583,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -591,7 +591,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">/**</span></td>
+      <td class="src "><span class="cm"> * Represents a position to which two 2q Clifford gadgets could be commuted to</span></td>
     </tr>
 
     <tr class="source-line">
@@ -599,7 +599,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * Represents a position to which two 2q Clifford gadgets could be commuted to</span></td>
+      <td class="src "><span class="cm"> * Assumes:</span></td>
     </tr>
 
     <tr class="source-line">
@@ -607,7 +607,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * Assumes:</span></td>
+      <td class="src "><span class="cm"> * - point0.source == point1.source</span></td>
     </tr>
 
     <tr class="source-line">
@@ -615,7 +615,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * - point0.source == point1.source</span></td>
+      <td class="src "><span class="cm"> * - point0.e == rev0.e</span></td>
     </tr>
 
     <tr class="source-line">
@@ -623,7 +623,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * - point0.e == rev0.e</span></td>
+      <td class="src "><span class="cm"> * - point1.e == rev1.e</span></td>
     </tr>
 
     <tr class="source-line">
@@ -631,7 +631,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * - point1.e == rev1.e</span></td>
+      <td class="src "><span class="cm"> */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -639,7 +639,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> */</span></td>
+      <td class="src "><span class="k">struct</span> <span class="n">InteractionMatch</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -647,7 +647,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">struct</span> <span class="n">InteractionMatch</span> <span class="p">{</span></td>
+      <td class="src ">  <span class="n">InteractionPoint</span> <span class="n">point0</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -655,7 +655,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">InteractionPoint</span> <span class="n">point0</span><span class="p">;</span></td>
+      <td class="src ">  <span class="n">InteractionPoint</span> <span class="n">point1</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -663,7 +663,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">InteractionPoint</span> <span class="n">point1</span><span class="p">;</span></td>
+      <td class="src ">  <span class="n">RevInteractionPoint</span> <span class="n">rev0</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -671,7 +671,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">RevInteractionPoint</span> <span class="n">rev0</span><span class="p">;</span></td>
+      <td class="src ">  <span class="n">RevInteractionPoint</span> <span class="n">rev1</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -679,7 +679,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">RevInteractionPoint</span> <span class="n">rev1</span><span class="p">;</span></td>
+      <td class="src "><span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -687,7 +687,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">};</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -695,7 +695,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="k">struct</span> <span class="n">TagEdge</span> <span class="p">{};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -703,7 +703,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">struct</span> <span class="n">TagEdge</span> <span class="p">{};</span></td>
+      <td class="src "><span class="k">struct</span> <span class="n">TagSource</span> <span class="p">{};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -711,7 +711,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">struct</span> <span class="n">TagSource</span> <span class="p">{};</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -719,7 +719,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -727,7 +727,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">/**</span></td>
+      <td class="src "><span class="cm"> * Stores all current InteractionPoints encountered.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -735,7 +735,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * Stores all current InteractionPoints encountered.</span></td>
+      <td class="src "><span class="cm"> * Each gadget can only commute to a given edge in a unique way.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -743,7 +743,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * Each gadget can only commute to a given edge in a unique way.</span></td>
+      <td class="src "><span class="cm"> * Searching by edge is needed to search for possible matches.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -751,7 +751,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * Searching by edge is needed to search for possible matches.</span></td>
+      <td class="src "><span class="cm"> * Searching by vertex is needed to remove InteractionPoints when a pair merge.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -759,7 +759,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * Searching by vertex is needed to remove InteractionPoints when a pair merge.</span></td>
+      <td class="src "><span class="cm"> */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -767,7 +767,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> */</span></td>
+      <td class="src "><span class="k">typedef</span> <span class="n">boost</span><span class="o">::</span><span class="n">multi_index</span><span class="o">::</span><span class="n">multi_index_container</span><span class="o">&lt;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -775,7 +775,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">typedef</span> <span class="n">boost</span><span class="o">::</span><span class="n">multi_index</span><span class="o">::</span><span class="n">multi_index_container</span><span class="o">&lt;</span></td>
+      <td class="src ">    <span class="n">InteractionPoint</span><span class="p">,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -783,7 +783,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">    <span class="n">InteractionPoint</span><span class="p">,</span></td>
+      <td class="src ">    <span class="n">boost</span><span class="o">::</span><span class="n">multi_index</span><span class="o">::</span><span class="n">indexed_by</span><span class="o">&lt;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -791,7 +791,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">    <span class="n">boost</span><span class="o">::</span><span class="n">multi_index</span><span class="o">::</span><span class="n">indexed_by</span><span class="o">&lt;</span></td>
+      <td class="src ">        <span class="n">boost</span><span class="o">::</span><span class="n">multi_index</span><span class="o">::</span><span class="n">hashed_unique</span><span class="o">&lt;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -799,7 +799,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">        <span class="n">boost</span><span class="o">::</span><span class="n">multi_index</span><span class="o">::</span><span class="n">hashed_unique</span><span class="o">&lt;</span></td>
+      <td class="src ">            <span class="n">boost</span><span class="o">::</span><span class="n">multi_index</span><span class="o">::</span><span class="n">tag</span><span class="o">&lt;</span><span class="n">TagKey</span><span class="o">&gt;</span><span class="p">,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -807,7 +807,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">            <span class="n">boost</span><span class="o">::</span><span class="n">multi_index</span><span class="o">::</span><span class="n">tag</span><span class="o">&lt;</span><span class="n">TagKey</span><span class="o">&gt;</span><span class="p">,</span></td>
+      <td class="src ">            <span class="n">boost</span><span class="o">::</span><span class="n">multi_index</span><span class="o">::</span><span class="n">const_mem_fun</span><span class="o">&lt;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -815,7 +815,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">            <span class="n">boost</span><span class="o">::</span><span class="n">multi_index</span><span class="o">::</span><span class="n">const_mem_fun</span><span class="o">&lt;</span></td>
+      <td class="src ">                <span class="n">InteractionPoint</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">Edge</span><span class="p">,</span> <span class="n">Vertex</span><span class="o">&gt;</span><span class="p">,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -823,7 +823,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">                <span class="n">InteractionPoint</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">Edge</span><span class="p">,</span> <span class="n">Vertex</span><span class="o">&gt;</span><span class="p">,</span></td>
+      <td class="src ">                <span class="o">&amp;</span><span class="n">InteractionPoint</span><span class="o">::</span><span class="n">key</span><span class="o">&gt;&gt;</span><span class="p">,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -831,7 +831,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">                <span class="o">&amp;</span><span class="n">InteractionPoint</span><span class="o">::</span><span class="n">key</span><span class="o">&gt;&gt;</span><span class="p">,</span></td>
+      <td class="src ">        <span class="n">boost</span><span class="o">::</span><span class="n">multi_index</span><span class="o">::</span><span class="n">hashed_non_unique</span><span class="o">&lt;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -839,7 +839,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">        <span class="n">boost</span><span class="o">::</span><span class="n">multi_index</span><span class="o">::</span><span class="n">hashed_non_unique</span><span class="o">&lt;</span></td>
+      <td class="src ">            <span class="n">boost</span><span class="o">::</span><span class="n">multi_index</span><span class="o">::</span><span class="n">tag</span><span class="o">&lt;</span><span class="n">TagEdge</span><span class="o">&gt;</span><span class="p">,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -847,7 +847,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">            <span class="n">boost</span><span class="o">::</span><span class="n">multi_index</span><span class="o">::</span><span class="n">tag</span><span class="o">&lt;</span><span class="n">TagEdge</span><span class="o">&gt;</span><span class="p">,</span></td>
+      <td class="src ">            <span class="n">boost</span><span class="o">::</span><span class="n">multi_index</span><span class="o">::</span><span class="n">member</span><span class="o">&lt;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -855,7 +855,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">            <span class="n">boost</span><span class="o">::</span><span class="n">multi_index</span><span class="o">::</span><span class="n">member</span><span class="o">&lt;</span></td>
+      <td class="src ">                <span class="n">InteractionPoint</span><span class="p">,</span> <span class="n">Edge</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">InteractionPoint</span><span class="o">::</span><span class="n">e</span><span class="o">&gt;&gt;</span><span class="p">,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -863,7 +863,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">                <span class="n">InteractionPoint</span><span class="p">,</span> <span class="n">Edge</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">InteractionPoint</span><span class="o">::</span><span class="n">e</span><span class="o">&gt;&gt;</span><span class="p">,</span></td>
+      <td class="src ">        <span class="n">boost</span><span class="o">::</span><span class="n">multi_index</span><span class="o">::</span><span class="n">hashed_non_unique</span><span class="o">&lt;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -871,7 +871,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">        <span class="n">boost</span><span class="o">::</span><span class="n">multi_index</span><span class="o">::</span><span class="n">hashed_non_unique</span><span class="o">&lt;</span></td>
+      <td class="src ">            <span class="n">boost</span><span class="o">::</span><span class="n">multi_index</span><span class="o">::</span><span class="n">tag</span><span class="o">&lt;</span><span class="n">TagSource</span><span class="o">&gt;</span><span class="p">,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -879,7 +879,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">            <span class="n">boost</span><span class="o">::</span><span class="n">multi_index</span><span class="o">::</span><span class="n">tag</span><span class="o">&lt;</span><span class="n">TagSource</span><span class="o">&gt;</span><span class="p">,</span></td>
+      <td class="src ">            <span class="n">boost</span><span class="o">::</span><span class="n">multi_index</span><span class="o">::</span><span class="n">member</span><span class="o">&lt;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -887,7 +887,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">            <span class="n">boost</span><span class="o">::</span><span class="n">multi_index</span><span class="o">::</span><span class="n">member</span><span class="o">&lt;</span></td>
+      <td class="src ">                <span class="n">InteractionPoint</span><span class="p">,</span> <span class="n">Vertex</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">InteractionPoint</span><span class="o">::</span><span class="n">source</span><span class="o">&gt;&gt;&gt;&gt;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -895,7 +895,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">                <span class="n">InteractionPoint</span><span class="p">,</span> <span class="n">Vertex</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">InteractionPoint</span><span class="o">::</span><span class="n">source</span><span class="o">&gt;&gt;&gt;&gt;</span></td>
+      <td class="src ">    <span class="n">interaction_table_t</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -903,7 +903,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">    <span class="n">interaction_table_t</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -911,7 +911,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="k">class</span> <span class="nc">CliffordReductionPass</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -919,7 +919,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">class</span> <span class="nc">CliffordReductionPass</span> <span class="p">{</span></td>
+      <td class="src "> <span class="k">public</span><span class="o">:</span></td>
     </tr>
 
     <tr class="source-line">
@@ -927,7 +927,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "> <span class="k">public</span><span class="o">:</span></td>
+      <td class="src ">  <span class="cm">/** Apply the transformation to a circuit */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -935,7 +935,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/** Apply the transformation to a circuit */</span></td>
+      <td class="src ">  <span class="k">static</span> <span class="kt">bool</span> <span class="n">reduce_circuit</span><span class="p">(</span><span class="n">Circuit</span> <span class="o">&amp;</span><span class="n">circ</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">allow_swaps</span> <span class="o">=</span> <span class="nb">false</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -943,7 +943,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">static</span> <span class="kt">bool</span> <span class="n">reduce_circuit</span><span class="p">(</span><span class="n">Circuit</span> <span class="o">&amp;</span><span class="n">circ</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">allow_swaps</span> <span class="o">=</span> <span class="nb">false</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -951,7 +951,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "> <span class="k">private</span><span class="o">:</span></td>
     </tr>
 
     <tr class="source-line">
@@ -959,7 +959,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "> <span class="k">private</span><span class="o">:</span></td>
+      <td class="src ">  <span class="cm">/** The circuit under transformation */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -967,7 +967,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/** The circuit under transformation */</span></td>
+      <td class="src ">  <span class="n">Circuit</span> <span class="o">&amp;</span><span class="n">circ</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -975,7 +975,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">Circuit</span> <span class="o">&amp;</span><span class="n">circ</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -983,7 +983,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/** Table of potential transports of 2qb interactions through the circuit */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -991,7 +991,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/** Table of potential transports of 2qb interactions through the circuit */</span></td>
+      <td class="src ">  <span class="n">interaction_table_t</span> <span class="n">itable</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -999,7 +999,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">interaction_table_t</span> <span class="n">itable</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1007,7 +1007,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/** Map from vertex to depth in circuit */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1015,7 +1015,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/** Map from vertex to depth in circuit */</span></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="p">,</span> <span class="kt">unsigned</span><span class="o">&gt;</span> <span class="n">v_to_depth</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1023,7 +1023,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="p">,</span> <span class="kt">unsigned</span><span class="o">&gt;</span> <span class="n">v_to_depth</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1031,7 +1031,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/** Map from vertex to sets of units that it acts on */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1039,7 +1039,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/** Map from vertex to sets of units that it acts on */</span></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="p">,</span> <span class="n">unit_set_t</span><span class="o">&gt;</span> <span class="n">v_to_units</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1047,7 +1047,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="p">,</span> <span class="n">unit_set_t</span><span class="o">&gt;</span> <span class="n">v_to_units</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1055,7 +1055,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/** Map from edge to corresponding unit */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1063,7 +1063,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/** Map from edge to corresponding unit */</span></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">Edge</span><span class="p">,</span> <span class="n">UnitID</span><span class="o">&gt;</span> <span class="n">e_to_unit</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1071,7 +1071,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">Edge</span><span class="p">,</span> <span class="n">UnitID</span><span class="o">&gt;</span> <span class="n">e_to_unit</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1079,7 +1079,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/** Whether any changes have been made to the circuit */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1087,7 +1087,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/** Whether any changes have been made to the circuit */</span></td>
+      <td class="src ">  <span class="kt">bool</span> <span class="n">success</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1095,7 +1095,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">bool</span> <span class="n">success</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1103,7 +1103,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/** Current depth in forward pass through circuit. */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1111,7 +1111,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/** Current depth in forward pass through circuit. */</span></td>
+      <td class="src ">  <span class="kt">unsigned</span> <span class="n">current_depth</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1119,7 +1119,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">unsigned</span> <span class="n">current_depth</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1127,7 +1127,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/** Whether to allow SWAP gates in the final circuit */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1135,7 +1135,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/** Whether to allow SWAP gates in the final circuit */</span></td>
+      <td class="src ">  <span class="kt">bool</span> <span class="n">allow_swaps</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1143,7 +1143,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">bool</span> <span class="n">allow_swaps</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1151,7 +1151,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1159,7 +1159,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * Inserts a new interaction point into the table and tries to commute it as</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1167,7 +1167,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * Inserts a new interaction point into the table and tries to commute it as</span></td>
+      <td class="src "><span class="cm">   * far forwards as possible, taking into account commutations and</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1175,7 +1175,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * far forwards as possible, taking into account commutations and</span></td>
+      <td class="src "><span class="cm">   * change-of-basis through 1q Cliffords. Does not change the circuit, but</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1183,7 +1183,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * change-of-basis through 1q Cliffords. Does not change the circuit, but</span></td>
+      <td class="src "><span class="cm">   * extends the table of interaction points as it goes. Stops propagating</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1191,7 +1191,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * extends the table of interaction points as it goes. Stops propagating</span></td>
+      <td class="src "><span class="cm">   * when it reaches an interaction point that is already in the table.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1199,7 +1199,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * when it reaches an interaction point that is already in the table.</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1207,7 +1207,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="kt">void</span> <span class="nf">insert_interaction_point</span><span class="p">(</span><span class="n">InteractionPoint</span> <span class="n">ip</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1215,7 +1215,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">void</span> <span class="nf">insert_interaction_point</span><span class="p">(</span><span class="n">InteractionPoint</span> <span class="n">ip</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1223,7 +1223,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1231,7 +1231,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * Tries to commute an interaction backwards to search for a match,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1239,7 +1239,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * Tries to commute an interaction backwards to search for a match,</span></td>
+      <td class="src "><span class="cm">   * consulting the current table of interaction points to find canditates.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1247,7 +1247,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * consulting the current table of interaction points to find canditates.</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1255,7 +1255,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">InteractionMatch</span><span class="o">&gt;</span> <span class="n">search_back_for_match</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1263,7 +1263,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">InteractionMatch</span><span class="o">&gt;</span> <span class="n">search_back_for_match</span><span class="p">(</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">RevInteractionPoint</span> <span class="o">&amp;</span><span class="n">rip0</span><span class="p">,</span> <span class="k">const</span> <span class="n">RevInteractionPoint</span> <span class="o">&amp;</span><span class="n">rip1</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1271,7 +1271,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">RevInteractionPoint</span> <span class="o">&amp;</span><span class="n">rip0</span><span class="p">,</span> <span class="k">const</span> <span class="n">RevInteractionPoint</span> <span class="o">&amp;</span><span class="n">rip1</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1279,7 +1279,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1287,7 +1287,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * Called when a new 2q Clifford gate is observed (either encountered by</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1295,7 +1295,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * Called when a new 2q Clifford gate is observed (either encountered by</span></td>
+      <td class="src "><span class="cm">   * advancing through the circuit or by substitution mid-circuit). Handles</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1303,7 +1303,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * advancing through the circuit or by substitution mid-circuit). Handles</span></td>
+      <td class="src "><span class="cm">   * scanning for pattern matches and substituting, and adding new</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1311,7 +1311,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * scanning for pattern matches and substituting, and adding new</span></td>
+      <td class="src "><span class="cm">   * InteractionPoints to look for matches further into the circuit.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1319,7 +1319,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * InteractionPoints to look for matches further into the circuit.</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1327,7 +1327,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="kt">void</span> <span class="nf">process_new_interaction</span><span class="p">(</span><span class="k">const</span> <span class="n">Vertex</span> <span class="o">&amp;</span><span class="n">v</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1335,7 +1335,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">void</span> <span class="nf">process_new_interaction</span><span class="p">(</span><span class="k">const</span> <span class="n">Vertex</span> <span class="o">&amp;</span><span class="n">v</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1343,7 +1343,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1351,7 +1351,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * Inserts a circuit at the given point, updating itable, v_to_depth,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1359,7 +1359,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * Inserts a circuit at the given point, updating itable, v_to_depth,</span></td>
+      <td class="src "><span class="cm">   * v_to_units, and e_to_unit appropriately.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1367,7 +1367,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * v_to_units, and e_to_unit appropriately.</span></td>
+      <td class="src "><span class="cm">   *</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1375,7 +1375,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   *</span></td>
+      <td class="src "><span class="cm">   * @pre Depth of `to_replace` is at most 1.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1383,7 +1383,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @pre Depth of `to_replace` is at most 1.</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1391,7 +1391,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="n">Subcircuit</span> <span class="nf">substitute</span><span class="p">(</span><span class="k">const</span> <span class="n">Circuit</span> <span class="o">&amp;</span><span class="n">to_insert</span><span class="p">,</span> <span class="k">const</span> <span class="n">Subcircuit</span> <span class="o">&amp;</span><span class="n">to_replace</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1399,7 +1399,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">Subcircuit</span> <span class="nf">substitute</span><span class="p">(</span><span class="k">const</span> <span class="n">Circuit</span> <span class="o">&amp;</span><span class="n">to_insert</span><span class="p">,</span> <span class="k">const</span> <span class="n">Subcircuit</span> <span class="o">&amp;</span><span class="n">to_replace</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1407,7 +1407,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1415,7 +1415,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * Given a set of candidate edges, finds the earliest one that is in the</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1423,7 +1423,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * Given a set of candidate edges, finds the earliest one that is in the</span></td>
+      <td class="src "><span class="cm">   * strict causal future of source. Returns nullopt if none are in the future</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1431,7 +1431,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * strict causal future of source. Returns nullopt if none are in the future</span></td>
+      <td class="src "><span class="cm">   * of source. Search threshold is set by only having v_to_depth defined for</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1439,7 +1439,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * of source. Search threshold is set by only having v_to_depth defined for</span></td>
+      <td class="src "><span class="cm">   * the vertices to search.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1447,7 +1447,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * the vertices to search.</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1455,7 +1455,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">Edge</span><span class="o">&gt;</span> <span class="n">find_earliest_successor</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1463,7 +1463,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">Edge</span><span class="o">&gt;</span> <span class="n">find_earliest_successor</span><span class="p">(</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">Edge</span> <span class="o">&amp;</span><span class="n">source</span><span class="p">,</span> <span class="k">const</span> <span class="n">EdgeSet</span> <span class="o">&amp;</span><span class="n">candidates</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1471,7 +1471,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">Edge</span> <span class="o">&amp;</span><span class="n">source</span><span class="p">,</span> <span class="k">const</span> <span class="n">EdgeSet</span> <span class="o">&amp;</span><span class="n">candidates</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1479,7 +1479,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1487,7 +1487,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * Given two lists of edges, identifies a cut where a two-qubit operation</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1495,7 +1495,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * Given two lists of edges, identifies a cut where a two-qubit operation</span></td>
+      <td class="src "><span class="cm">   * could feasibly be introduced without breaking the causal structure (i.e.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1503,7 +1503,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * could feasibly be introduced without breaking the causal structure (i.e.</span></td>
+      <td class="src "><span class="cm">   * introducing loops in the DAG). Returns nullopt if there is no such cut,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1511,7 +1511,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * introducing loops in the DAG). Returns nullopt if there is no such cut,</span></td>
+      <td class="src "><span class="cm">   * otherwise will yield the future-most valid point with respect to each of</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1519,7 +1519,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * otherwise will yield the future-most valid point with respect to each of</span></td>
+      <td class="src "><span class="cm">   * the sequences.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1527,7 +1527,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * the sequences.</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1535,7 +1535,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">InteractionPoint</span><span class="p">,</span> <span class="n">InteractionPoint</span><span class="o">&gt;&gt;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1543,7 +1543,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">InteractionPoint</span><span class="p">,</span> <span class="n">InteractionPoint</span><span class="o">&gt;&gt;</span></td>
+      <td class="src ">  <span class="n">valid_insertion_point</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1551,7 +1551,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">valid_insertion_point</span><span class="p">(</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="n">InteractionPoint</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">seq0</span><span class="p">,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1559,7 +1559,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="n">InteractionPoint</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">seq0</span><span class="p">,</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="n">InteractionPoint</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">seq1</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1567,7 +1567,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="n">InteractionPoint</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">seq1</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1575,7 +1575,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="n">CliffordReductionPass</span><span class="p">(</span><span class="n">Circuit</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">swaps</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1583,7 +1583,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">CliffordReductionPass</span><span class="p">(</span><span class="n">Circuit</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">swaps</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1591,7 +1591,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="k">friend</span> <span class="k">class</span> <span class="nc">CliffordReductionPassTester</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1599,7 +1599,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">friend</span> <span class="k">class</span> <span class="nc">CliffordReductionPassTester</span><span class="p">;</span></td>
+      <td class="src "><span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1607,7 +1607,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">};</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1615,7 +1615,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">/** a simple friend class of `CliffordReductionPass` used for testing</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1623,7 +1623,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">/** a simple friend class of `CliffordReductionPass` used for testing</span></td>
+      <td class="src "><span class="cm"> * private member functions */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1631,7 +1631,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * private member functions */</span></td>
+      <td class="src "><span class="k">class</span> <span class="nc">CliffordReductionPassTester</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1639,7 +1639,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">class</span> <span class="nc">CliffordReductionPassTester</span> <span class="p">{</span></td>
+      <td class="src "> <span class="k">public</span><span class="o">:</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1647,7 +1647,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "> <span class="k">public</span><span class="o">:</span></td>
+      <td class="src ">  <span class="k">explicit</span> <span class="n">CliffordReductionPassTester</span><span class="p">(</span><span class="n">Circuit</span> <span class="o">&amp;</span><span class="n">circ</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1655,7 +1655,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">explicit</span> <span class="n">CliffordReductionPassTester</span><span class="p">(</span><span class="n">Circuit</span> <span class="o">&amp;</span><span class="n">circ</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1663,7 +1663,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">InteractionPoint</span><span class="p">,</span> <span class="n">InteractionPoint</span><span class="o">&gt;&gt;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1671,7 +1671,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">InteractionPoint</span><span class="p">,</span> <span class="n">InteractionPoint</span><span class="o">&gt;&gt;</span></td>
+      <td class="src ">  <span class="n">valid_insertion_point</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1679,7 +1679,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">valid_insertion_point</span><span class="p">(</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="n">InteractionPoint</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">seq0</span><span class="p">,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1687,7 +1687,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="n">InteractionPoint</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">seq0</span><span class="p">,</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="n">InteractionPoint</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">seq1</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1695,7 +1695,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="n">InteractionPoint</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">seq1</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1703,7 +1703,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "> <span class="k">private</span><span class="o">:</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1711,7 +1711,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "> <span class="k">private</span><span class="o">:</span></td>
+      <td class="src ">  <span class="n">CliffordReductionPass</span> <span class="n">context</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1719,7 +1719,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">CliffordReductionPass</span> <span class="n">context</span><span class="p">;</span></td>
+      <td class="src "><span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1727,7 +1727,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">};</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1735,35 +1735,11 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l210" href="#l210">210</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
       <td class="src "><span class="p">}</span>  <span class="c1">// namespace tket</span></td>
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l211" href="#l211">211</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l212" href="#l212">212</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="cp">#endif</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l213" href="#l213">213</a></td>
+      <td class="lineno"><a id="l210" href="#l210">210</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>

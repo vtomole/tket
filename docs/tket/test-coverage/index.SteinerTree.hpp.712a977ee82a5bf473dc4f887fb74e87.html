@@ -26,7 +26,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2021-11-23 15:11:12</td>
+      <td>2021-11-23 17:15:47</td>
     </tr>
   </table>
 </div>
@@ -183,7 +183,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#ifndef _TKET_SteinerTree_H_</span></td>
+      <td class="src "><span class="cp">#pragma once</span></td>
     </tr>
 
     <tr class="source-line">
@@ -191,7 +191,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#define _TKET_SteinerTree_H_</span></td>
+      <td class="src "><span class="cp">#include</span> <span class="cpf">&quot;Converters/Gauss.hpp&quot;</span><span class="cp"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -199,7 +199,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span> <span class="cpf">&quot;Converters/Gauss.hpp&quot;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span> <span class="cpf">&quot;Path.hpp&quot;</span><span class="cp"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -207,7 +207,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span> <span class="cpf">&quot;Path.hpp&quot;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span> <span class="cpf">&quot;Utils/Exceptions.hpp&quot;</span><span class="cp"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -215,7 +215,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span> <span class="cpf">&quot;Utils/Exceptions.hpp&quot;</span><span class="cp"></span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -223,7 +223,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="k">namespace</span> <span class="n">tket</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -231,7 +231,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">namespace</span> <span class="n">tket</span> <span class="p">{</span></td>
+      <td class="src "><span class="k">namespace</span> <span class="n">aas</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -239,7 +239,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">namespace</span> <span class="n">aas</span> <span class="p">{</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -247,7 +247,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="p">,</span> <span class="kt">unsigned</span><span class="o">&gt;</span> <span class="n">Operation</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -255,7 +255,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="p">,</span> <span class="kt">unsigned</span><span class="o">&gt;</span> <span class="n">Operation</span><span class="p">;</span></td>
+      <td class="src "><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="n">Operation</span><span class="o">&gt;</span> <span class="n">OperationList</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -263,7 +263,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="n">Operation</span><span class="o">&gt;</span> <span class="n">OperationList</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -271,7 +271,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="k">enum</span> <span class="k">class</span> <span class="nc">CNotSynthType</span> <span class="p">{</span> <span class="n">SWAP</span><span class="p">,</span> <span class="n">HamPath</span><span class="p">,</span> <span class="n">Rec</span> <span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -279,7 +279,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">enum</span> <span class="k">class</span> <span class="nc">CNotSynthType</span> <span class="p">{</span> <span class="n">SWAP</span><span class="p">,</span> <span class="n">HamPath</span><span class="p">,</span> <span class="n">Rec</span> <span class="p">};</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -287,7 +287,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -295,7 +295,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">/**</span></td>
+      <td class="src "><span class="cm"> * Nodes in a Steiner tree may correspond to different values in the biadjacency</span></td>
     </tr>
 
     <tr class="source-line">
@@ -303,7 +303,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * Nodes in a Steiner tree may correspond to different values in the biadjacency</span></td>
+      <td class="src "><span class="cm"> * action matrix or phase polynomial</span></td>
     </tr>
 
     <tr class="source-line">
@@ -311,7 +311,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * action matrix or phase polynomial</span></td>
+      <td class="src "><span class="cm"> */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -319,7 +319,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> */</span></td>
+      <td class="src "><span class="k">enum</span> <span class="k">class</span> <span class="nc">SteinerNodeType</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -327,7 +327,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">enum</span> <span class="k">class</span> <span class="nc">SteinerNodeType</span> <span class="p">{</span></td>
+      <td class="src ">  <span class="c1">// &quot;in tree&quot; := not a leaf &amp; not disconnected from tree</span></td>
     </tr>
 
     <tr class="source-line">
@@ -335,7 +335,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// &quot;in tree&quot; := not a leaf &amp; not disconnected from tree</span></td>
+      <td class="src ">  <span class="n">ZeroInTree</span><span class="p">,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -343,7 +343,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">ZeroInTree</span><span class="p">,</span></td>
+      <td class="src ">  <span class="n">OneInTree</span><span class="p">,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -351,7 +351,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">OneInTree</span><span class="p">,</span></td>
+      <td class="src ">  <span class="c1">// all leaves are 1s by definition</span></td>
     </tr>
 
     <tr class="source-line">
@@ -359,7 +359,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// all leaves are 1s by definition</span></td>
+      <td class="src ">  <span class="n">Leaf</span><span class="p">,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -367,7 +367,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">Leaf</span><span class="p">,</span></td>
+      <td class="src ">  <span class="n">OutOfTree</span></td>
     </tr>
 
     <tr class="source-line">
@@ -375,7 +375,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">OutOfTree</span></td>
+      <td class="src "><span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -383,7 +383,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">};</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -391,7 +391,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="k">class</span> <span class="nc">InvalidCostCalculation</span> <span class="o">:</span> <span class="k">public</span> <span class="n">std</span><span class="o">::</span><span class="n">logic_error</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -399,19 +399,11 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">class</span> <span class="nc">InvalidCostCalculation</span> <span class="o">:</span> <span class="k">public</span> <span class="n">std</span><span class="o">::</span><span class="n">logic_error</span> <span class="p">{</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l43" href="#l43">43</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
       <td class="src "> <span class="k">public</span><span class="o">:</span></td>
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l44" href="#l44">44</a></td>
+      <td class="lineno"><a id="l43" href="#l43">43</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
@@ -419,11 +411,19 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l45" href="#l45">45</a></td>
+      <td class="lineno"><a id="l44" href="#l44">44</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
       <td class="src uncoveredLine">      <span class="o">:</span> <span class="n">std</span><span class="o">::</span><span class="n">logic_error</span><span class="p">(</span><span class="n">message</span><span class="p">)</span> <span class="p">{}</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l45" href="#l45">45</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -431,7 +431,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">};</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -439,7 +439,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="k">class</span> <span class="nc">InvalidRowOperation</span> <span class="o">:</span> <span class="k">public</span> <span class="n">std</span><span class="o">::</span><span class="n">logic_error</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -447,19 +447,11 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">class</span> <span class="nc">InvalidRowOperation</span> <span class="o">:</span> <span class="k">public</span> <span class="n">std</span><span class="o">::</span><span class="n">logic_error</span> <span class="p">{</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l49" href="#l49">49</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
       <td class="src "> <span class="k">public</span><span class="o">:</span></td>
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l50" href="#l50">50</a></td>
+      <td class="lineno"><a id="l49" href="#l49">49</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
@@ -467,7 +459,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l51" href="#l51">51</a></td>
+      <td class="lineno"><a id="l50" href="#l50">50</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
@@ -475,11 +467,19 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l52" href="#l52">52</a></td>
+      <td class="lineno"><a id="l51" href="#l51">51</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
       <td class="src "><span class="p">};</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l52" href="#l52">52</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -487,7 +487,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -495,7 +495,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">/**</span></td>
+      <td class="src "><span class="cm"> * This clas is creating a steiner tree, which is a mst including all the nodes</span></td>
     </tr>
 
     <tr class="source-line">
@@ -503,7 +503,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * This clas is creating a steiner tree, which is a mst including all the nodes</span></td>
+      <td class="src "><span class="cm"> * of a given phase gadget plus all the nodes which are neede to connect all the</span></td>
     </tr>
 
     <tr class="source-line">
@@ -511,7 +511,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * of a given phase gadget plus all the nodes which are neede to connect all the</span></td>
+      <td class="src "><span class="cm"> * nodes of the gadget. This class also offers the function to reduce this tree</span></td>
     </tr>
 
     <tr class="source-line">
@@ -519,7 +519,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * nodes of the gadget. This class also offers the function to reduce this tree</span></td>
+      <td class="src "><span class="cm"> * by extracting operations steps by step. This class is designed with</span></td>
     </tr>
 
     <tr class="source-line">
@@ -527,7 +527,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * by extracting operations steps by step. This class is designed with</span></td>
+      <td class="src "><span class="cm"> * architecture aware synthesis in mind; it may not be suitable for other</span></td>
     </tr>
 
     <tr class="source-line">
@@ -535,7 +535,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * architecture aware synthesis in mind; it may not be suitable for other</span></td>
+      <td class="src "><span class="cm"> * generic purposes.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -543,7 +543,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * generic purposes.</span></td>
+      <td class="src "><span class="cm"> */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -551,7 +551,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> */</span></td>
+      <td class="src "><span class="k">class</span> <span class="nc">SteinerTree</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -559,7 +559,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">class</span> <span class="nc">SteinerTree</span> <span class="p">{</span></td>
+      <td class="src "> <span class="k">public</span><span class="o">:</span></td>
     </tr>
 
     <tr class="source-line">
@@ -567,7 +567,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "> <span class="k">public</span><span class="o">:</span></td>
+      <td class="src ">  <span class="n">SteinerTree</span><span class="p">()</span> <span class="p">{}</span></td>
     </tr>
 
     <tr class="source-line">
@@ -575,7 +575,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">SteinerTree</span><span class="p">()</span> <span class="p">{}</span></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -583,7 +583,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * Construct a Steinertree from given parameters</span></td>
     </tr>
 
     <tr class="source-line">
@@ -591,7 +591,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * Construct a Steinertree from given parameters</span></td>
+      <td class="src "><span class="cm">   * @param pathhandler giving the included edges</span></td>
     </tr>
 
     <tr class="source-line">
@@ -599,7 +599,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @param pathhandler giving the included edges</span></td>
+      <td class="src "><span class="cm">   * @param nodes_to_add list by ref, will be changed during the construction of</span></td>
     </tr>
 
     <tr class="source-line">
@@ -607,7 +607,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @param nodes_to_add list by ref, will be changed during the construction of</span></td>
+      <td class="src "><span class="cm">   * the tree</span></td>
     </tr>
 
     <tr class="source-line">
@@ -615,7 +615,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * the tree</span></td>
+      <td class="src "><span class="cm">   * @param root_node initial node, deleted in the last step</span></td>
     </tr>
 
     <tr class="source-line">
@@ -623,7 +623,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @param root_node initial node, deleted in the last step</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -631,7 +631,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="k">explicit</span> <span class="n">SteinerTree</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -639,7 +639,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">explicit</span> <span class="n">SteinerTree</span><span class="p">(</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">PathHandler</span> <span class="o">&amp;</span><span class="n">pathhandler</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">nodes_to_add</span><span class="p">,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -647,7 +647,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">PathHandler</span> <span class="o">&amp;</span><span class="n">pathhandler</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">nodes_to_add</span><span class="p">,</span></td>
+      <td class="src ">      <span class="kt">unsigned</span> <span class="n">root_node</span><span class="p">);</span>  <span class="c1">// N.B. non-const list by ref!</span></td>
     </tr>
 
     <tr class="source-line">
@@ -655,7 +655,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="kt">unsigned</span> <span class="n">root_node</span><span class="p">);</span>  <span class="c1">// N.B. non-const list by ref!</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -663,7 +663,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -671,7 +671,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * calculate cost of performing a CNOT between two neighbouring nodes,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -679,7 +679,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * calculate cost of performing a CNOT between two neighbouring nodes,</span></td>
+      <td class="src "><span class="cm">   * dependent on the SteinerNodeTypes.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -687,7 +687,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * dependent on the SteinerNodeTypes.</span></td>
+      <td class="src "><span class="cm">   * @param i control index of operation</span></td>
     </tr>
 
     <tr class="source-line">
@@ -695,7 +695,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @param i control index of operation</span></td>
+      <td class="src "><span class="cm">   * @param j target index of operation</span></td>
     </tr>
 
     <tr class="source-line">
@@ -703,7 +703,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @param j target index of operation</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -711,7 +711,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="kt">int</span> <span class="nf">cost_of_operation</span><span class="p">(</span><span class="kt">unsigned</span> <span class="n">i</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="n">j</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -719,7 +719,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">int</span> <span class="nf">cost_of_operation</span><span class="p">(</span><span class="kt">unsigned</span> <span class="n">i</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="n">j</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -727,7 +727,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -735,7 +735,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * initialises the tree</span></td>
     </tr>
 
     <tr class="source-line">
@@ -743,7 +743,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * initialises the tree</span></td>
+      <td class="src "><span class="cm">   * @param pathhandler connectivity for the construction</span></td>
     </tr>
 
     <tr class="source-line">
@@ -751,7 +751,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @param pathhandler connectivity for the construction</span></td>
+      <td class="src "><span class="cm">   * @param nodes_to_add list of nodes which should be added, the list will be</span></td>
     </tr>
 
     <tr class="source-line">
@@ -759,7 +759,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @param nodes_to_add list of nodes which should be added, the list will be</span></td>
+      <td class="src "><span class="cm">   * changes during the process</span></td>
     </tr>
 
     <tr class="source-line">
@@ -767,7 +767,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * changes during the process</span></td>
+      <td class="src "><span class="cm">   *</span></td>
     </tr>
 
     <tr class="source-line">
@@ -775,7 +775,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   *</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -783,7 +783,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="kt">void</span> <span class="nf">init_tree</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -791,7 +791,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">void</span> <span class="nf">init_tree</span><span class="p">(</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">PathHandler</span> <span class="o">&amp;</span><span class="n">pathhandler</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">nodes_to_add</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -799,7 +799,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">PathHandler</span> <span class="o">&amp;</span><span class="n">pathhandler</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">nodes_to_add</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -807,7 +807,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -815,7 +815,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * adds the closesd nodes to a given list to the tree</span></td>
     </tr>
 
     <tr class="source-line">
@@ -823,7 +823,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * adds the closesd nodes to a given list to the tree</span></td>
+      <td class="src "><span class="cm">   * @param pathhandler connectivity for the construction</span></td>
     </tr>
 
     <tr class="source-line">
@@ -831,7 +831,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @param pathhandler connectivity for the construction</span></td>
+      <td class="src "><span class="cm">   * @param nodes_to_add list of nodes which should be added, the list will be</span></td>
     </tr>
 
     <tr class="source-line">
@@ -839,7 +839,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @param nodes_to_add list of nodes which should be added, the list will be</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -847,7 +847,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="kt">void</span> <span class="nf">add_closest_node_to_tree</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -855,7 +855,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">void</span> <span class="nf">add_closest_node_to_tree</span><span class="p">(</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">PathHandler</span> <span class="o">&amp;</span><span class="n">pathhandler</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">nodes_to_add</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -863,7 +863,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">PathHandler</span> <span class="o">&amp;</span><span class="n">pathhandler</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">nodes_to_add</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -871,7 +871,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -879,7 +879,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * adds a list of nodes to a given list to the tree</span></td>
     </tr>
 
     <tr class="source-line">
@@ -887,7 +887,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * adds a list of nodes to a given list to the tree</span></td>
+      <td class="src "><span class="cm">   * @param pathhandler connectivity for the construction</span></td>
     </tr>
 
     <tr class="source-line">
@@ -895,7 +895,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @param pathhandler connectivity for the construction</span></td>
+      <td class="src "><span class="cm">   * @param node_in_tree node in tree which is closest to the node to add</span></td>
     </tr>
 
     <tr class="source-line">
@@ -903,7 +903,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @param node_in_tree node in tree which is closest to the node to add</span></td>
+      <td class="src "><span class="cm">   * @param node_to_add node which should be added</span></td>
     </tr>
 
     <tr class="source-line">
@@ -911,7 +911,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @param node_to_add node which should be added</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -919,7 +919,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="kt">void</span> <span class="nf">add_path_to_tree</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -927,7 +927,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">void</span> <span class="nf">add_path_to_tree</span><span class="p">(</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">PathHandler</span> <span class="o">&amp;</span><span class="n">pathhandler</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="n">node_in_tree</span><span class="p">,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -935,7 +935,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">PathHandler</span> <span class="o">&amp;</span><span class="n">pathhandler</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="n">node_in_tree</span><span class="p">,</span></td>
+      <td class="src ">      <span class="kt">unsigned</span> <span class="n">node_to_add</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -943,7 +943,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="kt">unsigned</span> <span class="n">node_to_add</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -951,7 +951,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -959,7 +959,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * calculates the available operation in this tree which could be executed</span></td>
     </tr>
 
     <tr class="source-line">
@@ -967,7 +967,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * calculates the available operation in this tree which could be executed</span></td>
+      <td class="src "><span class="cm">   * @param pathhandler conections used for the calculation</span></td>
     </tr>
 
     <tr class="source-line">
@@ -975,7 +975,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @param pathhandler conections used for the calculation</span></td>
+      <td class="src "><span class="cm">   * @return gives the list of all avilable operations</span></td>
     </tr>
 
     <tr class="source-line">
@@ -983,7 +983,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @return gives the list of all avilable operations</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -991,7 +991,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="n">OperationList</span> <span class="nf">operations_available</span><span class="p">(</span><span class="k">const</span> <span class="n">PathHandler</span> <span class="o">&amp;</span><span class="n">pathhandler</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -999,7 +999,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">OperationList</span> <span class="nf">operations_available</span><span class="p">(</span><span class="k">const</span> <span class="n">PathHandler</span> <span class="o">&amp;</span><span class="n">pathhandler</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1007,7 +1007,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1015,7 +1015,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * Implements a CNOT from node j to node i, updates costs and tree</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1023,7 +1023,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * Implements a CNOT from node j to node i, updates costs and tree</span></td>
+      <td class="src "><span class="cm">   * @param i control index</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1031,7 +1031,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @param i control index</span></td>
+      <td class="src "><span class="cm">   * @param j target index</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1039,7 +1039,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @param j target index</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1047,7 +1047,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="kt">void</span> <span class="nf">add_row</span><span class="p">(</span><span class="kt">unsigned</span> <span class="n">i</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="n">j</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1055,7 +1055,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">void</span> <span class="nf">add_row</span><span class="p">(</span><span class="kt">unsigned</span> <span class="n">i</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="n">j</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1063,7 +1063,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1071,7 +1071,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * checks is the tree is fully reduced</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1079,7 +1079,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * checks is the tree is fully reduced</span></td>
+      <td class="src "><span class="cm">   * @return true if fully reduced</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1087,7 +1087,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @return true if fully reduced</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1095,7 +1095,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="kt">bool</span> <span class="nf">fully_reduced</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1103,7 +1103,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">bool</span> <span class="nf">fully_reduced</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1111,7 +1111,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1119,7 +1119,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * gives the cost of the tree</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1127,7 +1127,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * gives the cost of the tree</span></td>
+      <td class="src "><span class="cm">   * @return cost of the tree</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1135,7 +1135,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @return cost of the tree</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1143,7 +1143,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="kt">unsigned</span> <span class="nf">calculate_cost</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1151,7 +1151,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">unsigned</span> <span class="nf">calculate_cost</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1159,7 +1159,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1167,7 +1167,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * returns the nodes of the tree which has the highest index. only the out of</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1175,7 +1175,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * returns the nodes of the tree which has the highest index. only the out of</span></td>
+      <td class="src "><span class="cm">   * tree nodes are not taken into consideration</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1183,7 +1183,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * tree nodes are not taken into consideration</span></td>
+      <td class="src "><span class="cm">   * @return index of maximum node</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1191,7 +1191,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @return index of maximum node</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1199,7 +1199,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="kt">unsigned</span> <span class="nf">get_max_element</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1207,7 +1207,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">unsigned</span> <span class="nf">get_max_element</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1215,7 +1215,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1223,7 +1223,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * gives all nodes of the tree which are leaf, one in or zero in</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1231,7 +1231,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * gives all nodes of the tree which are leaf, one in or zero in</span></td>
+      <td class="src "><span class="cm">   * @return ordered list of all nodes</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1239,7 +1239,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @return ordered list of all nodes</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1247,7 +1247,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span> <span class="n">get_all_nodes</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1255,7 +1255,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span> <span class="n">get_all_nodes</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1263,7 +1263,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1271,7 +1271,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * function to stream a steiner tree</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1279,7 +1279,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * function to stream a steiner tree</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1287,7 +1287,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="k">friend</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">out</span><span class="p">,</span> <span class="k">const</span> <span class="n">SteinerTree</span> <span class="o">&amp;</span><span class="n">st</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1295,7 +1295,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">friend</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">out</span><span class="p">,</span> <span class="k">const</span> <span class="n">SteinerTree</span> <span class="o">&amp;</span><span class="n">st</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1303,7 +1303,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="kt">unsigned</span> <span class="n">tree_cost</span><span class="p">;</span>  <span class="c1">// the cost to reduce the Steiner tree alone</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1311,7 +1311,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">unsigned</span> <span class="n">tree_cost</span><span class="p">;</span>  <span class="c1">// the cost to reduce the Steiner tree alone</span></td>
+      <td class="src ">  <span class="kt">int</span> <span class="n">last_operation_cost</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1319,7 +1319,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">int</span> <span class="n">last_operation_cost</span><span class="p">;</span></td>
+      <td class="src ">  <span class="kt">unsigned</span> <span class="n">root</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1327,7 +1327,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">unsigned</span> <span class="n">root</span><span class="p">;</span></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SteinerNodeType</span><span class="o">&gt;</span> <span class="n">node_types</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1335,7 +1335,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SteinerNodeType</span><span class="o">&gt;</span> <span class="n">node_types</span><span class="p">;</span></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span> <span class="n">num_neighbours</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1343,7 +1343,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span> <span class="n">num_neighbours</span><span class="p">;</span></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span> <span class="n">tree_nodes</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1351,7 +1351,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span> <span class="n">tree_nodes</span><span class="p">;</span></td>
+      <td class="src "><span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1359,7 +1359,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">};</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1367,7 +1367,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1375,7 +1375,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">/**</span></td>
+      <td class="src "><span class="cm"> * object to store and perform the swap nased cnot synthesis</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1383,7 +1383,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * object to store and perform the swap nased cnot synthesis</span></td>
+      <td class="src "><span class="cm"> */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1391,7 +1391,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> */</span></td>
+      <td class="src "><span class="k">class</span> <span class="nc">CNotSwapSynth</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1399,7 +1399,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">class</span> <span class="nc">CNotSwapSynth</span> <span class="p">{</span></td>
+      <td class="src "> <span class="k">public</span><span class="o">:</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1407,7 +1407,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "> <span class="k">public</span><span class="o">:</span></td>
+      <td class="src ">  <span class="n">CNotSwapSynth</span><span class="p">()</span> <span class="p">{}</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1415,7 +1415,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">CNotSwapSynth</span><span class="p">()</span> <span class="p">{}</span></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1423,7 +1423,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * construct the object for the cnot swap synth and perform the reduction</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1431,7 +1431,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * construct the object for the cnot swap synth and perform the reduction</span></td>
+      <td class="src "><span class="cm">   * @param pathhandler path for reduction</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1439,7 +1439,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @param pathhandler path for reduction</span></td>
+      <td class="src "><span class="cm">   * @param CNOT_mat input of executed cnots which should be reduced</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1447,7 +1447,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @param CNOT_mat input of executed cnots which should be reduced</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1455,7 +1455,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="k">explicit</span> <span class="n">CNotSwapSynth</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1463,7 +1463,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">explicit</span> <span class="n">CNotSwapSynth</span><span class="p">(</span></td>
+      <td class="src ">      <span class="k">const</span> <span class="n">PathHandler</span> <span class="o">&amp;</span><span class="n">pathhandler</span><span class="p">,</span> <span class="k">const</span> <span class="n">DiagMatrix</span> <span class="o">&amp;</span><span class="n">CNOT_mat</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1471,7 +1471,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">      <span class="k">const</span> <span class="n">PathHandler</span> <span class="o">&amp;</span><span class="n">pathhandler</span><span class="p">,</span> <span class="k">const</span> <span class="n">DiagMatrix</span> <span class="o">&amp;</span><span class="n">CNOT_mat</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1479,7 +1479,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1487,7 +1487,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * gives the calculated circuit</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1495,7 +1495,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * gives the calculated circuit</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1503,7 +1503,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="n">Circuit</span> <span class="nf">get_circuit</span><span class="p">();</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1511,7 +1511,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">Circuit</span> <span class="nf">get_circuit</span><span class="p">();</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1519,7 +1519,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1527,7 +1527,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * checks if the matrix is id after reduction</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1535,7 +1535,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * checks if the matrix is id after reduction</span></td>
+      <td class="src "><span class="cm">   * @return true if matrix is id</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1543,7 +1543,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * @return true if matrix is id</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1551,7 +1551,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="kt">bool</span> <span class="nf">valid_result</span><span class="p">();</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1559,7 +1559,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">bool</span> <span class="nf">valid_result</span><span class="p">();</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1567,7 +1567,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1575,7 +1575,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="cm">/**</span></td>
+      <td class="src "><span class="cm">   * function to stream a CNotSwapSynth</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1583,7 +1583,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   * function to stream a CNotSwapSynth</span></td>
+      <td class="src "><span class="cm">   */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1591,7 +1591,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">   */</span></td>
+      <td class="src ">  <span class="k">friend</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">out</span><span class="p">,</span> <span class="k">const</span> <span class="n">CNotSwapSynth</span> <span class="o">&amp;</span><span class="n">cnot</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1599,7 +1599,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">friend</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">out</span><span class="p">,</span> <span class="k">const</span> <span class="n">CNotSwapSynth</span> <span class="o">&amp;</span><span class="n">cnot</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1607,7 +1607,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "> <span class="k">private</span><span class="o">:</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1615,7 +1615,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "> <span class="k">private</span><span class="o">:</span></td>
+      <td class="src ">  <span class="kt">void</span> <span class="n">add_swap</span><span class="p">(</span><span class="kt">unsigned</span> <span class="n">first</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="n">second</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1623,7 +1623,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">void</span> <span class="n">add_swap</span><span class="p">(</span><span class="kt">unsigned</span> <span class="n">first</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="n">second</span><span class="p">);</span></td>
+      <td class="src ">  <span class="kt">void</span> <span class="nf">cleanup_swaps</span><span class="p">();</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1631,7 +1631,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">void</span> <span class="nf">cleanup_swaps</span><span class="p">();</span></td>
+      <td class="src ">  <span class="kt">unsigned</span> <span class="nf">swap_to_root</span><span class="p">(</span><span class="kt">unsigned</span> <span class="n">start_node</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="n">current_row</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1639,7 +1639,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">unsigned</span> <span class="nf">swap_to_root</span><span class="p">(</span><span class="kt">unsigned</span> <span class="n">start_node</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="n">current_row</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1647,7 +1647,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="n">PathHandler</span> <span class="n">paths</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1655,7 +1655,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">PathHandler</span> <span class="n">paths</span><span class="p">;</span></td>
+      <td class="src ">  <span class="n">DiagMatrix</span> <span class="n">CNOT_matrix</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1663,7 +1663,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">DiagMatrix</span> <span class="n">CNOT_matrix</span><span class="p">;</span></td>
+      <td class="src ">  <span class="n">Circuit</span> <span class="n">circ</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1671,7 +1671,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">Circuit</span> <span class="n">circ</span><span class="p">;</span></td>
+      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">stack</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="p">,</span> <span class="kt">unsigned</span><span class="o">&gt;&gt;</span> <span class="n">swaps</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1679,7 +1679,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">std</span><span class="o">::</span><span class="n">stack</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="p">,</span> <span class="kt">unsigned</span><span class="o">&gt;&gt;</span> <span class="n">swaps</span><span class="p">;</span></td>
+      <td class="src "><span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1687,7 +1687,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">};</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1695,7 +1695,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1703,7 +1703,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">/**</span></td>
+      <td class="src "><span class="cm"> * This method uses Kissinger &amp; de Meijer&#39;s Steiner-Gauss</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1711,7 +1711,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * This method uses Kissinger &amp; de Meijer&#39;s Steiner-Gauss</span></td>
+      <td class="src "><span class="cm"> * (https://arxiv.org/abs/1904.00633), and reduces the CNOT_matrix, which is</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1719,7 +1719,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * (https://arxiv.org/abs/1904.00633), and reduces the CNOT_matrix, which is</span></td>
+      <td class="src "><span class="cm"> * non-const. This function offers the recursive algorithm and the Hamilton</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1727,7 +1727,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * non-const. This function offers the recursive algorithm and the Hamilton</span></td>
+      <td class="src "><span class="cm"> * based algorithm</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1735,7 +1735,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * based algorithm</span></td>
+      <td class="src "><span class="cm"> * @param CNOT_matrix input of executed cnots which should be reduced</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1743,7 +1743,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * @param CNOT_matrix input of executed cnots which should be reduced</span></td>
+      <td class="src "><span class="cm"> * @param paths pathhandler used for the reduction</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1751,7 +1751,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * @param paths pathhandler used for the reduction</span></td>
+      <td class="src "><span class="cm"> * @param cnottype type of algorithm which could be CNotSynthType::Rec or</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1759,7 +1759,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * @param cnottype type of algorithm which could be CNotSynthType::Rec or</span></td>
+      <td class="src "><span class="cm"> * CNotSynthType::HamPath</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1767,7 +1767,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * CNotSynthType::HamPath</span></td>
+      <td class="src "><span class="cm"> * @return routed circuit</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1775,7 +1775,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * @return routed circuit</span></td>
+      <td class="src "><span class="cm"> */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1783,7 +1783,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> */</span></td>
+      <td class="src "><span class="n">Circuit</span> <span class="nf">aas_CNOT_synth</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1791,7 +1791,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="n">Circuit</span> <span class="nf">aas_CNOT_synth</span><span class="p">(</span></td>
+      <td class="src ">    <span class="n">DiagMatrix</span> <span class="o">&amp;</span><span class="n">CNOT_matrix</span><span class="p">,</span> <span class="k">const</span> <span class="n">PathHandler</span> <span class="o">&amp;</span><span class="n">paths</span><span class="p">,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1799,7 +1799,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">    <span class="n">DiagMatrix</span> <span class="o">&amp;</span><span class="n">CNOT_matrix</span><span class="p">,</span> <span class="k">const</span> <span class="n">PathHandler</span> <span class="o">&amp;</span><span class="n">paths</span><span class="p">,</span></td>
+      <td class="src ">    <span class="n">CNotSynthType</span> <span class="n">cnottype</span> <span class="o">=</span> <span class="n">CNotSynthType</span><span class="o">::</span><span class="n">Rec</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1807,7 +1807,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">    <span class="n">CNotSynthType</span> <span class="n">cnottype</span> <span class="o">=</span> <span class="n">CNotSynthType</span><span class="o">::</span><span class="n">Rec</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1815,7 +1815,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1823,7 +1823,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">/**</span></td>
+      <td class="src "><span class="cm"> * this method offers the swap bases cnot synth</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1831,7 +1831,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * this method offers the swap bases cnot synth</span></td>
+      <td class="src "><span class="cm"> * @param CNOT_matrix input of executed cnots which should be reduced</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1839,7 +1839,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * @param CNOT_matrix input of executed cnots which should be reduced</span></td>
+      <td class="src "><span class="cm"> * @param paths pathhandler used for the reduction</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1847,7 +1847,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * @param paths pathhandler used for the reduction</span></td>
+      <td class="src "><span class="cm"> * @return routed circuit</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1855,7 +1855,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * @return routed circuit</span></td>
+      <td class="src "><span class="cm"> */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1863,7 +1863,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> */</span></td>
+      <td class="src "><span class="n">Circuit</span> <span class="nf">aas_CNOT_synth_SWAP</span><span class="p">(</span><span class="n">DiagMatrix</span> <span class="o">&amp;</span><span class="n">CNOT_matrix</span><span class="p">,</span> <span class="k">const</span> <span class="n">PathHandler</span> <span class="o">&amp;</span><span class="n">paths</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1871,7 +1871,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="n">Circuit</span> <span class="nf">aas_CNOT_synth_SWAP</span><span class="p">(</span><span class="n">DiagMatrix</span> <span class="o">&amp;</span><span class="n">CNOT_matrix</span><span class="p">,</span> <span class="k">const</span> <span class="n">PathHandler</span> <span class="o">&amp;</span><span class="n">paths</span><span class="p">);</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1879,7 +1879,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="p">}</span>  <span class="c1">// namespace aas</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1887,27 +1887,11 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">}</span>  <span class="c1">// namespace aas</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l229" href="#l229">229</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
       <td class="src "><span class="p">}</span>  <span class="c1">// namespace tket</span></td>
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l230" href="#l230">230</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="cp">#endif  </span><span class="c1">//_TKET_SteinerTree_H_</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l231" href="#l231">231</a></td>
+      <td class="lineno"><a id="l229" href="#l229">229</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
