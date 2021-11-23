@@ -22,7 +22,9 @@ add_library(${TKET_AAS}
 target_include_directories(${TKET_AAS} PRIVATE ${TKET_SRC_DIR})
 target_link_libraries(${TKET_AAS}
     PRIVATE
+    ${TKET_UTILS}
     ${TKET_CIRCUIT}
+    ${TKET_GRAPHS}
     ${TKET_ROUTING}
     ${TKET_CONVERTERS}
     ${CONAN_LIBS})
