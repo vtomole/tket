@@ -28,6 +28,7 @@ target_include_directories(${TKET_ROUTING} PRIVATE ${TKET_SRC_DIR})
 target_link_libraries(${TKET_ROUTING}
     PRIVATE
     ${TKET_UTILS}
+    ${TKET_GATE}
     ${TKET_GRAPHS}
     ${TKET_CIRCUIT}
     ${TKET_ARCHITECTURE}
