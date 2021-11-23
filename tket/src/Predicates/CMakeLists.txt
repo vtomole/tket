@@ -30,7 +30,7 @@ target_link_libraries(${TKET_PREDICATES}
     ${TKET_CIRCUIT}
     ${TKET_GRAPHS}
     ${TKET_ROUTING}
-    ${TKET_TRANSFORMATIONS}
+    ${TKET_TRANSFORM}
     ${TKET_AAS}
     ${TKET_CONVERTERS}
     ${CONAN_LIBS})
