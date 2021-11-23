@@ -24,3 +24,4 @@ add_library(${TKET_UTILS}
     Expression.cpp)
 
 target_include_directories(${TKET_UTILS} PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(${TKET_UTILS} PRIVATE ${CONAN_LIBS})

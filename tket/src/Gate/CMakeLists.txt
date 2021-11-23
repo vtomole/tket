@@ -34,4 +34,5 @@ target_link_libraries(${TKET_GATE}
     PRIVATE
     ${TKET_UTILS}
     ${TKET_OPTYPE}
-    ${TKET_OPS})
+    ${TKET_OPS}
+    ${CONAN_LIBS})

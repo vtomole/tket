@@ -24,4 +24,5 @@ target_link_libraries(${TKET_PAULIGRAPH}
     ${TKET_UTILS}
     ${TKET_OPTYPE}
     ${TKET_GATE}
-    ${TKET_CLIFFORD})
+    ${TKET_CLIFFORD}
+    ${CONAN_LIBS})

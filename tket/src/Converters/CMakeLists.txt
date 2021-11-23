@@ -30,4 +30,5 @@ target_link_libraries(${TKET_CONVERTERS}
     ${TKET_GATE}
     ${TKET_PAULIGRAPH}
     ${TKET_CIRCUIT}
-    ${TKET_DIAGONALISATION})
+    ${TKET_DIAGONALISATION}
+    ${CONAN_LIBS})

@@ -27,4 +27,5 @@ target_link_libraries(${TKET_CHARACTERISATION}
     ${TKET_OPS}
     ${TKET_PAULIGRAPH}
     ${TKET_CIRCUIT}
-    ${TKET_ARCHITECTURE})
+    ${TKET_ARCHITECTURE}
+    ${CONAN_LIBS})
