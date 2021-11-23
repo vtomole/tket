@@ -149,7 +149,7 @@ Public Attributes</h2></td></tr>
 <p>The broad structure is similar to the <a class="el" href="classtket_1_1Transform.html">Transform</a> class for Circuits. Each rewrite is encapsulated by a single method <code>apply</code> which searches for and performs all instances of a rewrite on a given diagram. The <code>apply</code> method has an optional <code>Subdiagram</code> argument to operate locally on some region of the diagram. This will also update the <code>Subdiagram</code> to use the new vertices and edges. The <code>apply</code> method returns whether or not a rewrite was performed. The main way to compose rewrites is in sequence or loops. Each rewrite is expected to preserve global semantics of the diagram (or restricted subdiagram) including global scalar.</p>
 <p>Previous designs used a separate method to identify independent matches from performing the rewrite on a single match. This added extra complexity to the structure, more reliance on users to be sensible, and reduced efficiency of the rewrites. We decided that interactive rewriting was something we were happy to go without as tket is not intended to be a proof assistant. </p>
 
-<p class="definition">Definition at line <a class="el" href="Rewrite_8hpp_source.html#l00027">27</a> of file <a class="el" href="Rewrite_8hpp_source.html">Rewrite.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Rewrite_8hpp_source.html#l00041">41</a> of file <a class="el" href="Rewrite_8hpp_source.html">Rewrite.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a57c261f6d93d161d8018771410e63cca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a57c261f6d93d161d8018771410e63cca">&#9670;&nbsp;</a></span>Metric</h2>
@@ -163,7 +163,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Rewrite_8hpp_source.html#l00030">30</a> of file <a class="el" href="Rewrite_8hpp_source.html">Rewrite.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Rewrite_8hpp_source.html#l00044">44</a> of file <a class="el" href="Rewrite_8hpp_source.html">Rewrite.hpp</a>.</p>
 
 </div>
 </div>
@@ -179,7 +179,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Rewrite_8hpp_source.html#l00029">29</a> of file <a class="el" href="Rewrite_8hpp_source.html">Rewrite.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Rewrite_8hpp_source.html#l00043">43</a> of file <a class="el" href="Rewrite_8hpp_source.html">Rewrite.hpp</a>.</p>
 
 </div>
 </div>
@@ -209,7 +209,7 @@ Public Attributes</h2></td></tr>
 
 <p>Replaces every Hadamard wire by an explicit Hbox node. </p>
 
-<p class="definition">Definition at line <a class="el" href="ZXRWDecompositions_8cpp_source.html#l00092">92</a> of file <a class="el" href="ZXRWDecompositions_8cpp_source.html">ZXRWDecompositions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ZXRWDecompositions_8cpp_source.html#l00106">106</a> of file <a class="el" href="ZXRWDecompositions_8cpp_source.html">ZXRWDecompositions.cpp</a>.</p>
 
 </div>
 </div>
@@ -238,7 +238,7 @@ Public Attributes</h2></td></tr>
 
 <p>Replaces every <a class="el" href="classtket_1_1zx_1_1ZXBox.html">ZXBox</a> by its internal diagram recursively until no ZXBoxes remain. </p>
 
-<p class="definition">Definition at line <a class="el" href="ZXRWDecompositions_8cpp_source.html#l00064">64</a> of file <a class="el" href="ZXRWDecompositions_8cpp_source.html">ZXRWDecompositions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ZXRWDecompositions_8cpp_source.html#l00078">78</a> of file <a class="el" href="ZXRWDecompositions_8cpp_source.html">ZXRWDecompositions.cpp</a>.</p>
 
 </div>
 </div>
@@ -268,7 +268,7 @@ Public Attributes</h2></td></tr>
 <p>Identifies adjacent Pauli spiders where one is adjacent to a boundary. </p>
 <p>This rule applies I/O extensions to push the match into the interior from which it can be handled by <code>remove_interior_paulis</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="ZXRWGraphLikeSimplification_8cpp_source.html#l00222">222</a> of file <a class="el" href="ZXRWGraphLikeSimplification_8cpp_source.html">ZXRWGraphLikeSimplification.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ZXRWGraphLikeSimplification_8cpp_source.html#l00236">236</a> of file <a class="el" href="ZXRWGraphLikeSimplification_8cpp_source.html">ZXRWGraphLikeSimplification.cpp</a>.</p>
 
 </div>
 </div>
@@ -298,7 +298,7 @@ Public Attributes</h2></td></tr>
 <p>Guarantees that the edge on each boundary vertex is Basic. </p>
 <p>If a boundary has a Hadamard, then we add a ZSpider identity as in I/O extensions in MBQC. </p>
 
-<p class="definition">Definition at line <a class="el" href="ZXRWGraphLikeForm_8cpp_source.html#l00074">74</a> of file <a class="el" href="ZXRWGraphLikeForm_8cpp_source.html">ZXRWGraphLikeForm.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ZXRWGraphLikeForm_8cpp_source.html#l00088">88</a> of file <a class="el" href="ZXRWGraphLikeForm_8cpp_source.html">ZXRWGraphLikeForm.cpp</a>.</p>
 
 </div>
 </div>
@@ -328,7 +328,7 @@ Public Attributes</h2></td></tr>
 <p>Remove parallel edges between ZX spiders (Hopf rule). </p>
 <p>Matches either pairs of H edges between spiders of the same colour or Basic edges between spiders of different colour. This applies to Quantum edges between a pair of Classical spiders. </p>
 
-<p class="definition">Definition at line <a class="el" href="ZXRWAxioms_8cpp_source.html#l00177">177</a> of file <a class="el" href="ZXRWAxioms_8cpp_source.html">ZXRWAxioms.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ZXRWAxioms_8cpp_source.html#l00191">191</a> of file <a class="el" href="ZXRWAxioms_8cpp_source.html">ZXRWAxioms.cpp</a>.</p>
 
 </div>
 </div>
@@ -358,7 +358,7 @@ Public Attributes</h2></td></tr>
 <p>Converts all red spiders (XSpider) to green (ZSpider) with Hadamards around it. </p>
 <p>The Hadamards are applied by flipping the wire type of incident edges between Basic and H. </p>
 
-<p class="definition">Definition at line <a class="el" href="ZXRWAxioms_8cpp_source.html#l00029">29</a> of file <a class="el" href="ZXRWAxioms_8cpp_source.html">ZXRWAxioms.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ZXRWAxioms_8cpp_source.html#l00043">43</a> of file <a class="el" href="ZXRWAxioms_8cpp_source.html">ZXRWAxioms.cpp</a>.</p>
 
 </div>
 </div>
@@ -388,7 +388,7 @@ Public Attributes</h2></td></tr>
 <p>Removes interior proper Cliffords (spiders where the phase is an odd multiple of pi/2). </p>
 <p>Performs local complementation about the vertex and removes it. </p>
 
-<p class="definition">Definition at line <a class="el" href="ZXRWGraphLikeSimplification_8cpp_source.html#l00078">78</a> of file <a class="el" href="ZXRWGraphLikeSimplification_8cpp_source.html">ZXRWGraphLikeSimplification.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ZXRWGraphLikeSimplification_8cpp_source.html#l00092">92</a> of file <a class="el" href="ZXRWGraphLikeSimplification_8cpp_source.html">ZXRWGraphLikeSimplification.cpp</a>.</p>
 
 </div>
 </div>
@@ -418,7 +418,7 @@ Public Attributes</h2></td></tr>
 <p>Removes adjacent interior Paulis (spiders where the phase is an integer multiple of pi). </p>
 <p>Pivots about the edge connecting the vertices and removes them. </p>
 
-<p class="definition">Definition at line <a class="el" href="ZXRWGraphLikeSimplification_8cpp_source.html#l00178">178</a> of file <a class="el" href="ZXRWGraphLikeSimplification_8cpp_source.html">ZXRWGraphLikeSimplification.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ZXRWGraphLikeSimplification_8cpp_source.html#l00192">192</a> of file <a class="el" href="ZXRWGraphLikeSimplification_8cpp_source.html">ZXRWGraphLikeSimplification.cpp</a>.</p>
 
 </div>
 </div>
@@ -446,7 +446,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ZXRWCombinators_8cpp_source.html#l00020">20</a> of file <a class="el" href="ZXRWCombinators_8cpp_source.html">ZXRWCombinators.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ZXRWCombinators_8cpp_source.html#l00034">34</a> of file <a class="el" href="ZXRWCombinators_8cpp_source.html">ZXRWCombinators.cpp</a>.</p>
 
 </div>
 </div>
@@ -484,7 +484,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ZXRWCombinators_8cpp_source.html#l00049">49</a> of file <a class="el" href="ZXRWCombinators_8cpp_source.html">ZXRWCombinators.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ZXRWCombinators_8cpp_source.html#l00063">63</a> of file <a class="el" href="ZXRWCombinators_8cpp_source.html">ZXRWCombinators.cpp</a>.</p>
 
 </div>
 </div>
@@ -522,7 +522,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ZXRWCombinators_8cpp_source.html#l00028">28</a> of file <a class="el" href="ZXRWCombinators_8cpp_source.html">ZXRWCombinators.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ZXRWCombinators_8cpp_source.html#l00042">42</a> of file <a class="el" href="ZXRWCombinators_8cpp_source.html">ZXRWCombinators.cpp</a>.</p>
 
 </div>
 </div>
@@ -552,7 +552,7 @@ Public Attributes</h2></td></tr>
 <p>Removes both H and Basic self loop edges around ZX spiders. </p>
 <p>Basic edges can simply be removed. Removing H loops introduces an extra pi phase on the spider. </p>
 
-<p class="definition">Definition at line <a class="el" href="ZXRWAxioms_8cpp_source.html#l00137">137</a> of file <a class="el" href="ZXRWAxioms_8cpp_source.html">ZXRWAxioms.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ZXRWAxioms_8cpp_source.html#l00151">151</a> of file <a class="el" href="ZXRWAxioms_8cpp_source.html">ZXRWAxioms.cpp</a>.</p>
 
 </div>
 </div>
@@ -582,7 +582,7 @@ Public Attributes</h2></td></tr>
 <p>Guarantees that each boundary vertex is adjacent to a unique ZSpider. </p>
 <p>This adds identity chains when two boundaries are either directly connected or are adjacent to the same spider. </p>
 
-<p class="definition">Definition at line <a class="el" href="ZXRWGraphLikeForm_8cpp_source.html#l00048">48</a> of file <a class="el" href="ZXRWGraphLikeForm_8cpp_source.html">ZXRWGraphLikeForm.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ZXRWGraphLikeForm_8cpp_source.html#l00062">62</a> of file <a class="el" href="ZXRWGraphLikeForm_8cpp_source.html">ZXRWGraphLikeForm.cpp</a>.</p>
 
 </div>
 </div>
@@ -610,7 +610,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ZXRWCombinators_8cpp_source.html#l00009">9</a> of file <a class="el" href="ZXRWCombinators_8cpp_source.html">ZXRWCombinators.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ZXRWCombinators_8cpp_source.html#l00023">23</a> of file <a class="el" href="ZXRWCombinators_8cpp_source.html">ZXRWCombinators.cpp</a>.</p>
 
 </div>
 </div>
@@ -640,7 +640,7 @@ Public Attributes</h2></td></tr>
 <p>Merges two adjacent ZX spiders (XSpider, ZSpider) of the same colour connected by a Basic wire into a single spider. </p>
 <p>Also merges two adjacent spiders of different colour connected by a H edge. </p>
 
-<p class="definition">Definition at line <a class="el" href="ZXRWAxioms_8cpp_source.html#l00098">98</a> of file <a class="el" href="ZXRWAxioms_8cpp_source.html">ZXRWAxioms.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ZXRWAxioms_8cpp_source.html#l00112">112</a> of file <a class="el" href="ZXRWAxioms_8cpp_source.html">ZXRWAxioms.cpp</a>.</p>
 
 </div>
 </div>
@@ -660,7 +660,7 @@ Public Attributes</h2></td></tr>
 <p>The actual rewrite to be applied. </p>
 <p>Performs the rewrite in place (optionally restricted to some subdiagram) and returns true iff some change is made. </p>
 
-<p class="definition">Definition at line <a class="el" href="Rewrite_8hpp_source.html#l00037">37</a> of file <a class="el" href="Rewrite_8hpp_source.html">Rewrite.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Rewrite_8hpp_source.html#l00051">51</a> of file <a class="el" href="Rewrite_8hpp_source.html">Rewrite.hpp</a>.</p>
 
 </div>
 </div>
