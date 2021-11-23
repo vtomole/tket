@@ -22,7 +22,10 @@ add_library(${TKET_DIAGONALISATION}
 target_include_directories(${TKET_DIAGONALISATION} PRIVATE ${TKET_SRC_DIR})
 target_link_libraries(${TKET_DIAGONALISATION}
     PRIVATE
+    ${TKET_UTILS}
+    ${TKET_OPTYPE}
     ${TKET_OPS}
+    ${TKET_GATE}
     ${TKET_GRAPHS}
     ${TKET_PAULIGRAPH}
     ${TKET_CIRCUIT}
