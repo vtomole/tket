@@ -25,6 +25,7 @@ target_include_directories(${TKET_CONVERTERS} PRIVATE ${TKET_SRC_DIR})
 target_link_libraries(${TKET_CONVERTERS}
     PRIVATE
     ${TKET_UTILS}
+    ${TKET_OPTYPE}
     ${TKET_CLIFFORD}
     ${TKET_OPS}
     ${TKET_GATE}
