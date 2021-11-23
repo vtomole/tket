@@ -24,4 +24,5 @@ target_link_libraries(${TKET_AAS}
     PRIVATE
     ${TKET_CIRCUIT}
     ${TKET_ROUTING}
-    ${TKET_CONVERTERS})
+    ${TKET_CONVERTERS}
+    ${CONAN_LIBS})

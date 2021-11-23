@@ -25,4 +25,5 @@ target_include_directories(${TKET_PROGRAM} PRIVATE ${TKET_SRC_DIR})
 target_link_libraries(${TKET_PROGRAM}
     PRIVATE
     ${TKET_OPS}
-    ${TKET_CIRCUIT})
+    ${TKET_CIRCUIT}
+    ${CONAN_LIBS})
