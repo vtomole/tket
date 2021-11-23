@@ -21,4 +21,5 @@ target_include_directories(${TKET_ARCHITECTURE} PRIVATE ${TKET_SRC_DIR})
 target_link_libraries(${TKET_ARCHITECTURE}
     PRIVATE
     ${TKET_UTILS}
-    ${TKET_GRAPHS})
+    ${TKET_GRAPHS}
+    ${CONAN_LIBS})

@@ -25,4 +25,5 @@ target_link_libraries(${TKET_DIAGONALISATION}
     ${TKET_OPS}
     ${TKET_GRAPHS}
     ${TKET_PAULIGRAPH}
-    ${TKET_CIRCUIT})
+    ${TKET_CIRCUIT}
+    ${CONAN_LIBS})

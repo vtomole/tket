@@ -28,4 +28,5 @@ target_link_libraries(${TKET_PREDICATES}
     ${TKET_ROUTING}
     ${TKET_TRANSFORMATIONS}
     ${TKET_AAS}
-    ${TKET_CONVERTERS})
+    ${TKET_CONVERTERS}
+    ${CONAN_LIBS})
