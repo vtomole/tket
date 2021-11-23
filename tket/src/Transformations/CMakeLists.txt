@@ -38,6 +38,8 @@ target_link_libraries(${TKET_TRANSFORM}
     ${TKET_OPS}
     ${TKET_GATE}
     ${TKET_CIRCUIT}
+    ${TKET_GRAPHS}
+    ${TKET_PAULIGRAPH}
     ${TKET_CONVERTERS}
     ${TKET_CHARACTERISATION}
     ${TKET_ARCHITECTURE}
