@@ -31,8 +31,6 @@ find_file(CONANBUILDINFO_FILE conanbuildinfo.cmake HINTS ${CMAKE_BINARY_DIR})
 include(${CONANBUILDINFO_FILE})
 conan_basic_setup()
 
-set(TKET tket)
-
 IF (WIN32)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /WX /EHsc")
 ELSE()
@@ -61,27 +59,6 @@ ELSEIF(APPLE)
     set(CMAKE_BUILD_WITH_INSTALL_NAME_DIR ON)
 ENDIF()
 
-set(TKET_UTILS tket-utils)
-set(TKET_ZX tket-zx)
-set(TKET_OPTYPE tket-optype)
-set(TKET_CLIFFORD tket-clifford)
-set(TKET_OPS tket-ops)
-set(TKET_GRAPHS tket-graphs)
-set(TKET_GATE tket-gate)
-set(TKET_PAULIGRAPH tket-pauligraph)
-set(TKET_CIRCUIT tket-circuit)
-set(TKET_ARCHITECTURE tket-architecture)
-set(TKET_SIMULATION tket-simulation)
-set(TKET_DIAGONALISATION tket-diagonalisation)
-set(TKET_PROGRAM tket-program)
-set(TKET_CHARACTERISATION tket-characterisation)
-set(TKET_CONVERTERS tket-converters)
-set(TKET_ROUTING tket-routing)
-set(TKET_MEASUREMENT tket-measurement)
-set(TKET_TRANSFORM tket-transform)
-set(TKET_AAS tket-aas)
-set(TKET_PREDICATES tket-predicates)
-
 add_subdirectory(Utils)
 add_subdirectory(ZX)
 add_subdirectory(OpType)
@@ -103,30 +80,29 @@ add_subdirectory(Transformations)
 add_subdirectory(ArchAwareSynth)
 add_subdirectory(Predicates)
 
-add_library(${TKET} INTERFACE)
-target_link_libraries(${TKET}
+add_library(tket INTERFACE)
+target_link_libraries(tket
     INTERFACE
-    ${TKET_UTILS}
-    ${TKET_ZX}
-    ${TKET_CLIFFORD}
-    ${TKET_OPS}
-    ${TKET_GRAPHS}
-    ${TKET_GATE}
-    ${TKET_PAULIGRAPH}
-    ${TKET_CIRCUIT}
-    ${TKET_ARCHITECTURE}
-    ${TKET_SIMULATION}
-    ${TKET_DIAGONALISATION}
-    ${TKET_PROGRAM}
-    ${TKET_CHARACTERISATION}
-    ${TKET_CHARACTERISATION}
-    ${TKET_CONVERTERS}
-    ${TKET_ROUTING}
-    ${TKET_MEASUREMENT}
-    ${TKET_TRANSFORM}
-    ${TKET_AAS}
-    ${TKET_PREDICATES}
+    tket-utils
+    tket-zx
+    tket-clifford
+    tket-ops
+    tket-graphs
+    tket-gate
+    tket-pauligraph
+    tket-circuit
+    tket-architecture
+    tket-simulation
+    tket-diagonalisation
+    tket-program
+    tket-characterisation
+    tket-converters
+    tket-routing
+    tket-measurement
+    tket-transform
+    tket-aas
+    tket-predicates
     ${CONAN_LIBS})
 if(WIN32)
-    target_link_libraries(${TKET} INTERFACE bcrypt)
+    target_link_libraries(tket INTERFACE bcrypt)
 ENDIF()

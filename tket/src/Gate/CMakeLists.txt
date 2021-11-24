@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-project(${TKET_GATE})
+project(tket-gate)
 
-add_library(${TKET_GATE}
+add_library(tket-gate
     Gate.cpp
     GatePtr.cpp
     OpPtrFunctions.cpp
@@ -29,10 +29,10 @@ add_library(${TKET_GATE}
     GateUnitaryMatrixVariableQubits.cpp
     GateUnitarySparseMatrix.cpp)
 
-target_include_directories(${TKET_GATE} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_GATE}
+target_include_directories(tket-gate PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(tket-gate
     PRIVATE
-    ${TKET_UTILS}
-    ${TKET_OPTYPE}
-    ${TKET_OPS}
+    tket-utils
+    tket-optype
+    tket-ops
     ${CONAN_LIBS})

@@ -12,14 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-project(${TKET_CLIFFORD})
+project(tket-clifford)
 
-add_library(${TKET_CLIFFORD}
+add_library(tket-clifford
     CliffTableau.cpp)
 
-target_include_directories(${TKET_CLIFFORD} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_CLIFFORD}
+target_include_directories(tket-clifford PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(tket-clifford
     PRIVATE
-    ${TKET_UTILS}
-    ${TKET_OPTYPE}
+    tket-utils
+    tket-optype
     ${CONAN_LIBS})

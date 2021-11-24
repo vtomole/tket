@@ -12,21 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-project(${TKET_CHARACTERISATION})
+project(tket-characterisation)
 
-add_library(${TKET_CHARACTERISATION}
+add_library(tket-characterisation
     Cycles.cpp
     FrameRandomisation.cpp
     DeviceCharacterisation.cpp)
 
-target_include_directories(${TKET_CHARACTERISATION} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_CHARACTERISATION}
+target_include_directories(tket-characterisation PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(tket-characterisation
     PRIVATE
-    ${TKET_UTILS}
-    ${TKET_OPTYPE}
-    ${TKET_OPS}
-    ${TKET_GATE}
-    ${TKET_PAULIGRAPH}
-    ${TKET_CIRCUIT}
-    ${TKET_ARCHITECTURE}
+    tket-utils
+    tket-optype
+    tket-ops
+    tket-gate
+    tket-pauligraph
+    tket-circuit
+    tket-architecture
     ${CONAN_LIBS})

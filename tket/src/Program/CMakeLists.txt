@@ -12,19 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-project(${TKET_PROGRAM})
+project(tket-program)
 
-add_library(${TKET_PROGRAM}
+add_library(tket-program
     Program_accessors.cpp
     Program_analysis.cpp
     Program_iteration.cpp
     Program_manipulation.cpp
     Program_units.cpp)
 
-target_include_directories(${TKET_PROGRAM} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_PROGRAM}
+target_include_directories(tket-program PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(tket-program
     PRIVATE
-    ${TKET_UTILS}
-    ${TKET_OPS}
-    ${TKET_CIRCUIT}
+    tket-utils
+    tket-ops
+    tket-circuit
     ${CONAN_LIBS})

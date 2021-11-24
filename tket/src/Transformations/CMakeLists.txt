@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-project(${TKET_TRANSFORM})
+project(tket-transform)
 
-add_library(${TKET_TRANSFORM}
+add_library(tket-transform
     Combinator.cpp
     Rebase.cpp
     BasicOptimisation.cpp
@@ -30,17 +30,17 @@ add_library(${TKET_TRANSFORM}
     ContextualReduction.cpp
     ThreeQubitSquash.cpp)
 
-target_include_directories(${TKET_TRANSFORM} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_TRANSFORM}
+target_include_directories(tket-transform PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(tket-transform
     PRIVATE
-    ${TKET_UTILS}
-    ${TKET_OPTYPE}
-    ${TKET_OPS}
-    ${TKET_GATE}
-    ${TKET_CIRCUIT}
-    ${TKET_GRAPHS}
-    ${TKET_PAULIGRAPH}
-    ${TKET_CONVERTERS}
-    ${TKET_CHARACTERISATION}
-    ${TKET_ARCHITECTURE}
+    tket-utils
+    tket-optype
+    tket-ops
+    tket-gate
+    tket-circuit
+    tket-graphs
+    tket-pauligraph
+    tket-converters
+    tket-characterisation
+    tket-architecture
     ${CONAN_LIBS})
