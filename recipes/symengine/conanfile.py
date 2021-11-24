@@ -35,7 +35,6 @@ class SymengineConan(ConanFile):
 
     def build(self):
         cmake = CMake(self)
-        # source_folder = os.path.join(self.source_folder, f"symengine-{self.version}")
         tools.replace_in_file(
             os.path.join(self.source_folder, "CMakeLists.txt"),
             "project(symengine)",
@@ -50,7 +49,6 @@ conan_basic_setup()""",
                 "BUILD_BENCHMARKS": "OFF",
                 "INTEGER_CLASS": "boostmp",
                 "MSVC_USE_MT": "OFF",
-                "WITH_SYMENGINE_TEUCHOS": "yes",
             },
         )
 
@@ -67,4 +65,4 @@ conan_basic_setup()""",
         self.copy("*.a", dst="lib", keep_path=False)
 
     def package_info(self):
-        self.cpp_info.libs = ["symengine", "teuchos"]
+        self.cpp_info.libs = ["symengine"]
