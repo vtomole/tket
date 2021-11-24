@@ -39,6 +39,13 @@ jobs:
         key: ${{ runner.os }}-tket-ccache-${{ steps.current_time.outputs.formattedTime }}
         restore-keys: |
           ${{ runner.os }}-tket-ccache-
+    - name: Cache conan data
+      uses: actions/cache@v2
+      with:
+        path: ~/.conan
+        key: ${{ runner.os }}-tket-conan-${{ steps.current_time.outputs.formattedTime }}
+        restore-keys: |
+          ${{ runner.os }}-tket-conan-
     - name: apt update
       run: sudo apt update
     - name: Check doxygen
@@ -316,6 +323,18 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: '0'
+    - name: Get current time
+      uses: srfrnk/current-time@v1.1.0
+      id: current_time
+      with:
+        format: YYYYMMDDHHmmss
+    - name: Cache conan data
+      uses: actions/cache@v2
+      with:
+        path: C:\Users\runneradmin\.conan
+        key: ${{ runner.os }}-tket-conan-${{ steps.current_time.outputs.formattedTime }}
+        restore-keys: |
+          ${{ runner.os }}-tket-conan-
     - name: Hash tket source
       id: hash_tket_source
       run: |
