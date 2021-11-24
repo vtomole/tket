@@ -12,26 +12,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-project(${TKET_PREDICATES})
+project(tket-predicates)
 
-add_library(${TKET_PREDICATES}
+add_library(tket-predicates
     Predicates.cpp
     CompilationUnit.cpp
     CompilerPass.cpp
     PassGenerators.cpp
     PassLibrary.cpp)
 
-target_include_directories(${TKET_PREDICATES} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_PREDICATES}
+target_include_directories(tket-predicates PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(tket-predicates
     PRIVATE
-    ${TKET_UTILS}
-    ${TKET_OPTYPE}
-    ${TKET_GATE}
-    ${TKET_CIRCUIT}
-    ${TKET_GRAPHS}
-    ${TKET_ARCHITECTURE}
-    ${TKET_ROUTING}
-    ${TKET_TRANSFORM}
-    ${TKET_AAS}
-    ${TKET_CONVERTERS}
+    tket-utils
+    tket-optype
+    tket-gate
+    tket-circuit
+    tket-graphs
+    tket-architecture
+    tket-routing
+    tket-transform
+    tket-aas
+    tket-converters
     ${CONAN_LIBS})

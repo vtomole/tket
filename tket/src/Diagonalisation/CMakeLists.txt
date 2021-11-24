@@ -12,21 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-project(${TKET_DIAGONALISATION})
+project(tket-diagonalisation)
 
-add_library(${TKET_DIAGONALISATION}
+add_library(tket-diagonalisation
     DiagUtils.cpp
     Diagonalisation.cpp
     PauliPartition.cpp)
 
-target_include_directories(${TKET_DIAGONALISATION} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_DIAGONALISATION}
+target_include_directories(tket-diagonalisation PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(tket-diagonalisation
     PRIVATE
-    ${TKET_UTILS}
-    ${TKET_OPTYPE}
-    ${TKET_OPS}
-    ${TKET_GATE}
-    ${TKET_GRAPHS}
-    ${TKET_PAULIGRAPH}
-    ${TKET_CIRCUIT}
+    tket-utils
+    tket-optype
+    tket-ops
+    tket-gate
+    tket-graphs
+    tket-pauligraph
+    tket-circuit
     ${CONAN_LIBS})

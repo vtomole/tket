@@ -12,17 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-project(${TKET_PAULIGRAPH})
+project(tket-pauligraph)
 
-add_library(${TKET_PAULIGRAPH}
+add_library(tket-pauligraph
     ConjugatePauliFunctions.cpp
     PauliGraph.cpp)
 
-target_include_directories(${TKET_PAULIGRAPH} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_PAULIGRAPH}
+target_include_directories(tket-pauligraph PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(tket-pauligraph
     PRIVATE
-    ${TKET_UTILS}
-    ${TKET_OPTYPE}
-    ${TKET_GATE}
-    ${TKET_CLIFFORD}
+    tket-utils
+    tket-optype
+    tket-gate
+    tket-clifford
     ${CONAN_LIBS})

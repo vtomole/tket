@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-project(${TKET_CIRCUIT})
+project(tket-circuit)
 
-add_library(${TKET_CIRCUIT}
+add_library(tket-circuit
     Boxes.cpp
     Circuit.cpp
     CircuitJson.cpp
@@ -32,11 +32,11 @@ add_library(${TKET_CIRCUIT}
     OpJson.cpp
     Conditional.cpp)
 
-target_include_directories(${TKET_CIRCUIT} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_CIRCUIT}
+target_include_directories(tket-circuit PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(tket-circuit
     PRIVATE
-    ${TKET_UTILS}
-    ${TKET_OPTYPE}
-    ${TKET_OPS}
-    ${TKET_GATE}
+    tket-utils
+    tket-optype
+    tket-ops
+    tket-gate
     ${CONAN_LIBS})

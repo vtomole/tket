@@ -12,23 +12,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-project(${TKET_AAS})
+project(tket-aas)
 
-add_library(${TKET_AAS}
+add_library(tket-aas
     Path.cpp
     SteinerTree.cpp
     SteinerForest.cpp)
 
-target_include_directories(${TKET_AAS} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_AAS}
+target_include_directories(tket-aas PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(tket-aas
     PRIVATE
-    ${TKET_UTILS}
-    ${TKET_OPTYPE}
-    ${TKET_OP}
-    ${TKET_GATE}
-    ${TKET_CIRCUIT}
-    ${TKET_GRAPHS}
-    ${TKET_ARCHITECTURE}
-    ${TKET_ROUTING}
-    ${TKET_CONVERTERS}
+    tket-utils
+    tket-optype
+    tket-gate
+    tket-circuit
+    tket-graphs
+    tket-architecture
+    tket-routing
+    tket-converters
     ${CONAN_LIBS})
