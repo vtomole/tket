@@ -12,16 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-project(${TKET_OPTYPE})
+project(tket-optype)
 
-add_library(${TKET_OPTYPE}
+add_library(tket-optype
     OpDesc.cpp
     OpTypeInfo.cpp
     OpTypeFunctions.cpp
     OpTypeJson.cpp)
 
-target_include_directories(${TKET_OPTYPE} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_OPTYPE}
+target_include_directories(tket-optype PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(tket-optype
     PRIVATE
-    ${TKET_UTILS}
+    tket-utils
     ${CONAN_LIBS})

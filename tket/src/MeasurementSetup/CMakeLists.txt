@@ -12,20 +12,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-project(${TKET_MEASUREMENT})
+project(tket-measurement)
 
-add_library(${TKET_MEASUREMENT}
+add_library(tket-measurement
     MeasurementSetup.cpp
     MeasurementReduction.cpp)
 
-target_include_directories(${TKET_MEASUREMENT} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_MEASUREMENT}
+target_include_directories(tket-measurement PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(tket-measurement
     PRIVATE
-    ${TKET_UTILS}
-    ${TKET_OPTYPE}
-    ${TKET_GATE}
-    ${TKET_CIRCUIT}
-    ${TKET_CLIFFORD}
-    ${TKET_DIAGONALISATION}
-    ${TKET_CONVERTERS}
+    tket-utils
+    tket-optype
+    tket-gate
+    tket-circuit
+    tket-clifford
+    tket-diagonalisation
+    tket-converters
     ${CONAN_LIBS})

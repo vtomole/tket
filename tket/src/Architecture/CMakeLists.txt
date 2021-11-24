@@ -12,14 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-project(${TKET_ARCHITECTURE})
+project(tket-architecture)
 
-add_library(${TKET_ARCHITECTURE}
+add_library(tket-architecture
     Architecture.cpp)
 
-target_include_directories(${TKET_ARCHITECTURE} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_ARCHITECTURE}
+target_include_directories(tket-architecture PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(tket-architecture
     PRIVATE
-    ${TKET_UTILS}
-    ${TKET_GRAPHS}
+    tket-utils
+    tket-graphs
     ${CONAN_LIBS})

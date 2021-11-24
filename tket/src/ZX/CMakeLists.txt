@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-project(${TKET_ZX})
+project(tket-zx)
 
-add_library(${TKET_ZX}
+add_library(tket-zx
     ZXDConstructors.cpp
     ZXDExpansions.cpp
     ZXDGettersSetters.cpp
@@ -26,8 +26,8 @@ add_library(${TKET_ZX}
     ZXRWGraphLikeForm.cpp
     ZXRWGraphLikeSimplification.cpp)
 
-target_include_directories(${TKET_ZX} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_ZX}
+target_include_directories(tket-zx PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(tket-zx
     PRIVATE
-    ${TKET_UTILS}
+    tket-utils
     ${CONAN_LIBS})
