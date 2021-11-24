@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-project(${TKET_SIMULATION})
+project(tket-simulation)
 
-add_library(${TKET_SIMULATION}
+add_library(tket-simulation
     BitOperations.cpp
     CircuitSimulator.cpp
     DecomposeCircuit.cpp
@@ -22,12 +22,11 @@ add_library(${TKET_SIMULATION}
     GateNodesBuffer.cpp
     PauliExpBoxUnitaryCalculator.cpp)
 
-target_include_directories(${TKET_SIMULATION} PRIVATE ${TKET_SRC_DIR})
-target_link_libraries(${TKET_SIMULATION}
+target_include_directories(tket-simulation PRIVATE ${TKET_SRC_DIR})
+target_link_libraries(tket-simulation
     PRIVATE
-    ${TKET_UTILS}
-    ${TKET_OPTYPE}
-    ${TKET_OP}
-    ${TKET_GATE}
-    ${TKET_CIRCUIT}
+    tket-utils
+    tket-optype
+    tket-gate
+    tket-circuit
     ${CONAN_LIBS})
