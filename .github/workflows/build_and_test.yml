@@ -56,6 +56,8 @@ jobs:
         echo "CONAN_CMD=${conan_cmd}" >> $GITHUB_ENV
     - name: Install ninja and ccache
       run: sudo apt-get install ninja-build ccache
+    - name: Build symengine
+      run: ${CONAN_CMD} create --profile=tket recipes/symengine
     - name: Build tket
       run: ${CONAN_CMD} create --profile=tket --build=missing recipes/tket
     - name: Install runtime test requirements
@@ -174,6 +176,8 @@ jobs:
         conan config set general.revisions_enabled=1
         export CC=`which conan`
         echo "CONAN_CMD=${CC}" >> $GITHUB_ENV
+    - name: Build symengine
+      run: conan create --profile=tket recipes/symengine
     - name: Build tket
       run: conan create --profile=tket --build=missing recipes/tket
     - name: Build and run tket tests
@@ -261,6 +265,8 @@ jobs:
         echo "CONAN_CMD=${CC}" >> $GITHUB_ENV
     - name: Install boost
       run: conan install --profile=tket boost/1.77.0@ --build=missing -o boost:without_fiber=True -o boost:without_json=True -o boost:without_nowide=True
+    - name: Build symengine
+      run: conan create --profile=tket recipes/symengine -o boost:without_fiber=True -o boost:without_json=True -o boost:without_nowide=True
     - name: Build tket
       run: conan create --profile=tket recipes/tket --build=missing -o boost:without_fiber=True -o boost:without_json=True -o boost:without_nowide=True
     - name: Build and run tket tests
@@ -342,6 +348,9 @@ jobs:
       with:
         path: C:\Users\runneradmin\.conan\data\tket
         key: ${{ runner.os }}-tket-tket-${{ steps.hash_tket_source.outputs.tket_hash }}-11
+    - name: Build symengine
+      if: steps.cache-tket.outputs.cache-hit != 'true'
+      run: conan create --profile=tket recipes/symengine
     - name: Build tket
       if: steps.cache-tket.outputs.cache-hit != 'true'
       run: conan create --profile=tket recipes/tket
