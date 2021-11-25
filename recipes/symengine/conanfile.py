@@ -23,9 +23,25 @@ class SymengineConan(ConanFile):
     options = {"shared": [True, False]}
     default_options = {"shared": False}
     generators = "cmake"
-    requires = "boost/1.77.0"
+    options = {
+        "shared": [True, False],
+        "fPIC": [True, False],
+        "integer_class": ["boostmp", "gmp"],
+    }
+    default_options = {
+        "shared": False,
+        "fPIC": True,
+        "integer_class": "boostmp",
+    }
+    short_paths = True
 
     _cmake = None
+
+    def requirements(self):
+        if self.options.integer_class == "boostmp":
+            self.requires("boost/1.77.0")
+        else:
+            self.requires("gmp/6.2.1")
 
     def source(self):
         git = tools.Git()
@@ -40,10 +56,18 @@ class SymengineConan(ConanFile):
             self._cmake = CMake(self)
             self._cmake.definitions["BUILD_TESTS"] = False
             self._cmake.definitions["BUILD_BENCHMARKS"] = False
-            self._cmake.definitions["INTEGER_CLASS"] = "boostmp"
+            self._cmake.definitions["INTEGER_CLASS"] = self.options.integer_class
             self._cmake.definitions["MSVC_USE_MT"] = False
             self._cmake.configure()
         return self._cmake
+
+    def config_options(self):
+        if self.settings.os == "Windows":
+            del self.options.fPIC
+
+    def configure(self):
+        if self.options.shared:
+            del self.options.fPIC
 
     def build(self):
         tools.replace_in_file(
