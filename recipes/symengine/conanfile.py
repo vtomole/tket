@@ -25,6 +25,8 @@ class SymengineConan(ConanFile):
     generators = "cmake"
     requires = "boost/1.77.0"
 
+    _cmake = None
+
     def source(self):
         git = tools.Git()
         git.clone(
@@ -33,8 +35,17 @@ class SymengineConan(ConanFile):
             shallow=True,
         )
 
+    def _configure_cmake(self):
+        if self._cmake is None:
+            self._cmake = CMake(self)
+            self._cmake.definitions["BUILD_TESTS"] = False
+            self._cmake.definitions["BUILD_BENCHMARKS"] = False
+            self._cmake.definitions["INTEGER_CLASS"] = "boostmp"
+            self._cmake.definitions["MSVC_USE_MT"] = False
+            self._cmake.configure()
+        return self._cmake
+
     def build(self):
-        cmake = CMake(self)
         tools.replace_in_file(
             os.path.join(self.source_folder, "CMakeLists.txt"),
             "project(symengine)",
@@ -42,27 +53,22 @@ class SymengineConan(ConanFile):
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()""",
         )
-        cmake.configure(
-            source_folder=self.source_folder,
-            defs={
-                "BUILD_TESTS": "OFF",
-                "BUILD_BENCHMARKS": "OFF",
-                "INTEGER_CLASS": "boostmp",
-                "MSVC_USE_MT": "OFF",
-            },
-        )
-
+        cmake = self._configure_cmake()
         cmake.build()
-        cmake.install()
-        cmake.patch_config_paths()
 
     def package(self):
-        self.copy("*.h", dst="include", src="include")
-        self.copy("*symengine.lib", dst="lib", keep_path=False)
-        self.copy("*.dll", dst="bin", keep_path=False)
-        self.copy("*.so", dst="lib", keep_path=False)
-        self.copy("*.dylib", dst="lib", keep_path=False)
-        self.copy("*.a", dst="lib", keep_path=False)
+        self.copy("LICENSE", dst="licenses", src=self.source_folder)
+        cmake = self._configure_cmake()
+        cmake.install()
+        cmake.patch_config_paths()
+        # [CMAKE-MODULES-CONFIG-FILES (KB-H016)]
+        tools.remove_files_by_mask(self.package_folder, "*.cmake")
+        # [DEFAULT PACKAGE LAYOUT (KB-H013)]
+        tools.rmdir(os.path.join(self.package_folder, "CMake"))
 
     def package_info(self):
         self.cpp_info.libs = ["symengine"]
+        if any("teuchos" in v for v in tools.collect_libs(self)):
+            self.cpp_info.libs.append("teuchos")
+        self.cpp_info.names["cmake_find_package"] = "symengine"
+        self.cpp_info.names["cmake_find_package_multi"] = "symengine"
