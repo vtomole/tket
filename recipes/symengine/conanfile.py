@@ -19,10 +19,15 @@ import os
 class SymengineConan(ConanFile):
     name = "symengine"
     version = "0.8.1.1"
+    description = "A fast symbolic manipulation library, written in C++"
+    license = "MIT"
+    topics = ("symbolic", "algebra")
+    homepage = "https://symengine.org/"
+    exports_sources = ["CMakeLists.txt"]
+    generators = "cmake"
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared": [True, False]}
     default_options = {"shared": False}
-    generators = "cmake"
     options = {
         "shared": [True, False],
         "fPIC": [True, False],
