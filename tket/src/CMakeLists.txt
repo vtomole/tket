@@ -80,9 +80,8 @@ add_subdirectory(Transformations)
 add_subdirectory(ArchAwareSynth)
 add_subdirectory(Predicates)
 
-add_library(tket INTERFACE)
+add_library(tket Empty.cpp)
 target_link_libraries(tket
-    INTERFACE
     tket-utils
     tket-zx
     tket-clifford
@@ -104,5 +103,5 @@ target_link_libraries(tket
     tket-predicates
     ${CONAN_LIBS})
 if(WIN32)
-    target_link_libraries(tket INTERFACE bcrypt)
+    target_link_libraries(tket PRIVATE bcrypt)
 ENDIF()
