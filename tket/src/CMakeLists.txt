@@ -82,6 +82,7 @@ add_subdirectory(Predicates)
 
 add_library(tket Empty.cpp)
 target_link_libraries(tket
+    PRIVATE
     tket-utils
     tket-zx
     tket-clifford
