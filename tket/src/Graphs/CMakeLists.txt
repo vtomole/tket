@@ -24,7 +24,12 @@ add_library(tket-graphs
     ArticulationPoints.cpp
     UIDConnectivity.cpp)
 
-target_include_directories(tket-graphs PRIVATE ${TKET_SRC_DIR})
+target_include_directories(tket-graphs
+    PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${TKET_GRAPHS_INCLUDE_DIR}
+    ${TKET_GRAPHS_INCLUDE_DIR}/Graphs
+    ${TKET_UTILS_INCLUDE_DIR})
 
 target_link_libraries(tket-graphs
     PRIVATE

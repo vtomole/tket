@@ -17,7 +17,13 @@ project(tket-architecture)
 add_library(tket-architecture
     Architecture.cpp)
 
-target_include_directories(tket-architecture PRIVATE ${TKET_SRC_DIR})
+target_include_directories(tket-architecture
+    PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${TKET_ARCHITECTURE_INCLUDE_DIR}
+    ${TKET_ARCHITECTURE_INCLUDE_DIR}/Architecture
+    ${TKET_UTILS_INCLUDE_DIR}
+    ${TKET_GRAPHS_INCLUDE_DIR})
 
 target_link_libraries(tket-architecture
     PRIVATE
