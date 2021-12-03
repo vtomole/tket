@@ -12,16 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-project(tket-converters)
+project(tket-Converters)
 
-add_library(tket-converters
+add_library(tket-Converters
     CliffTableauConverters.cpp
     PauliGadget.cpp
     PauliGraphConverters.cpp
     Gauss.cpp
     PhasePoly.cpp)
 
-target_include_directories(tket-converters
+target_include_directories(tket-Converters
     PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${TKET_Converters_INCLUDE_DIR}
@@ -35,14 +35,14 @@ target_include_directories(tket-converters
     ${TKET_Circuit_INCLUDE_DIR}
     ${TKET_Diagonalisation_INCLUDE_DIR})
 
-target_link_libraries(tket-converters
+target_link_libraries(tket-Converters
     PRIVATE
-    tket-utils
-    tket-optype
-    tket-clifford
-    tket-ops
-    tket-gate
-    tket-pauligraph
-    tket-circuit
-    tket-diagonalisation
+    tket-Utils
+    tket-OpType
+    tket-Clifford
+    tket-Ops
+    tket-Gate
+    tket-PauliGraph
+    tket-Circuit
+    tket-Diagonalisation
     ${CONAN_LIBS})
