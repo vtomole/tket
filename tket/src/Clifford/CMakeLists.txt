@@ -12,12 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-project(tket-clifford)
+project(tket-Clifford)
 
-add_library(tket-clifford
+add_library(tket-Clifford
     CliffTableau.cpp)
 
-target_include_directories(tket-clifford
+target_include_directories(tket-Clifford
     PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${TKET_Clifford_INCLUDE_DIR}
@@ -25,8 +25,8 @@ target_include_directories(tket-clifford
     ${TKET_Utils_INCLUDE_DIR}
     ${TKET_OpType_INCLUDE_DIR})
 
-target_link_libraries(tket-clifford
+target_link_libraries(tket-Clifford
     PRIVATE
-    tket-utils
-    tket-optype
+    tket-Utils
+    tket-OpType
     ${CONAN_LIBS})
