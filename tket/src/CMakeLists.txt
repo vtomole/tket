@@ -57,44 +57,29 @@ ELSEIF(APPLE)
     set(CMAKE_BUILD_WITH_INSTALL_NAME_DIR ON)
 ENDIF()
 
-set(TKET_UTILS_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Utils/include)
-set(TKET_ZX_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/ZX/include)
-set(TKET_OPTYPE_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/OpType/include)
-set(TKET_CLIFFORD_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Clifford/include)
-set(TKET_OPS_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Ops/include)
-set(TKET_GRAPHS_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Graphs/include)
-set(TKET_GATE_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Gate/include)
-set(TKET_PAULIGRAPH_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/PauliGraph/include)
-set(TKET_CIRCUIT_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Circuit/include)
-set(TKET_ARCHITECTURE_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Architecture/include)
-set(TKET_SIMULATION_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Simulation/include)
-set(TKET_DIAGONALISATION_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Diagonalisation/include)
-set(TKET_PROGRAM_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Program/include)
-set(TKET_CHARACTERISATION_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Characterisation/include)
-set(TKET_CONVERTERS_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Converters/include)
-set(TKET_ROUTING_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Routing/include)
-set(TKET_MEASUREMENT_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/MeasurementSetup/include)
-set(TKET_TRANSFORM_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Transformations/include)
-set(TKET_AAS_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/ArchAwareSynth/include)
-set(TKET_PREDICATES_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Predicates/include)
+list(APPEND TKET_COMPS
+    Utils
+    ZX
+    OpType
+    Clifford
+    Ops
+    Graphs
+    Gate
+    PauliGraph
+    Circuit
+    Architecture
+    Simulation
+    Diagonalisation
+    Program
+    Characterisation
+    Converters
+    Routing
+    MeasurementSetup
+    Transformations
+    ArchAwareSynth
+    Predicates)
 
-add_subdirectory(Utils)
-add_subdirectory(ZX)
-add_subdirectory(OpType)
-add_subdirectory(Clifford)
-add_subdirectory(Ops)
-add_subdirectory(Graphs)
-add_subdirectory(Gate)
-add_subdirectory(PauliGraph)
-add_subdirectory(Circuit)
-add_subdirectory(Architecture)
-add_subdirectory(Simulation)
-add_subdirectory(Diagonalisation)
-add_subdirectory(Program)
-add_subdirectory(Characterisation)
-add_subdirectory(Converters)
-add_subdirectory(Routing)
-add_subdirectory(MeasurementSetup)
-add_subdirectory(Transformations)
-add_subdirectory(ArchAwareSynth)
-add_subdirectory(Predicates)
+foreach(COMP ${TKET_COMPS})
+    set(TKET_${COMP}_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/${COMP}/include)
+    add_subdirectory(${COMP})
+endforeach()
