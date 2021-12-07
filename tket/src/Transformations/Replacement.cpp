@@ -17,6 +17,7 @@
 #include "Circuit/CircPool.hpp"
 #include "Circuit/CircUtils.hpp"
 #include "Gate/GatePtr.hpp"
+#include "ControlledGates.hpp"
 #include "Decomposition.hpp"
 #include "Transform.hpp"
 
@@ -33,9 +34,9 @@ Circuit CX_circ_from_multiq(const Op_ptr op) {
   unsigned n_qubits = op->n_qubits();
   switch (desc.type()) {
     case OpType::CnRy:
-      return Transform::decomposed_CnRy(op, n_qubits);
+      return decomposed_CnRy(op, n_qubits);
     case OpType::CnX:
-      return Transform::cnx_normal_decomp(n_qubits - 1);
+      return cnx_normal_decomp(n_qubits - 1);
     default:
       return with_CX(as_gate_ptr(op));
   }
