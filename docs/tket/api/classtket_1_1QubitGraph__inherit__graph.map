@@ -1,5 +1,6 @@
 <map id="tket::QubitGraph" name="tket::QubitGraph">
-<area shape="rect" id="node1" title=" " alt="" coords="47,213,177,240"/>
-<area shape="rect" id="node2" href="$classtket_1_1graphs_1_1UIDConnectivity.html" title=" " alt="" coords="5,124,219,165"/>
-<area shape="rect" id="node3" href="$classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html" title=" " alt="" coords="28,5,196,76"/>
+<area shape="rect" id="node1" title=" " alt="" coords="41,273,171,300"/>
+<area shape="rect" id="node2" href="$classtket_1_1graphs_1_1DirectedGraph.html" title=" " alt="" coords="5,184,207,225"/>
+<area shape="rect" id="node3" href="$classtket_1_1graphs_1_1DirectedGraphBase.html" title=" " alt="" coords="5,95,207,136"/>
+<area shape="rect" id="node4" href="$classtket_1_1graphs_1_1AbstractGraph.html" title=" " alt="" coords="6,5,206,47"/>
 </map>

@@ -1,16 +1,5 @@
 var searchData=
 [
-  ['uidconnectivity_2200',['UIDConnectivity',['../classtket_1_1graphs_1_1UIDConnectivity.html',1,'tket::graphs']]],
-  ['uidconnectivity_3c_20node_20_3e_2201',['UIDConnectivity&lt; Node &gt;',['../classtket_1_1graphs_1_1UIDConnectivity.html',1,'tket::graphs']]],
-  ['uidconnectivity_3c_20qubit_20_3e_2202',['UIDConnectivity&lt; Qubit &gt;',['../classtket_1_1graphs_1_1UIDConnectivity.html',1,'tket::graphs']]],
-  ['uidconnectivitybase_2203',['UIDConnectivityBase',['../classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html',1,'tket::graphs::detail']]],
-  ['uidconnectivitybase_3c_20node_2c_20boost_3a_3avecs_2c_20boost_3a_3avecs_20_3e_2204',['UIDConnectivityBase&lt; Node, boost::vecS, boost::vecS &gt;',['../classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html',1,'tket::graphs::detail']]],
-  ['uidconnectivitybase_3c_20qubit_2c_20boost_3a_3avecs_2c_20boost_3a_3avecs_20_3e_2205',['UIDConnectivityBase&lt; Qubit, boost::vecS, boost::vecS &gt;',['../classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html',1,'tket::graphs::detail']]],
-  ['uidconnectivitybase_3c_20uid_5ft_2c_20boost_3a_3avecs_2c_20boost_3a_3avecs_20_3e_2206',['UIDConnectivityBase&lt; UID_t, boost::vecS, boost::vecS &gt;',['../classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html',1,'tket::graphs::detail']]],
-  ['uiddoesnotexisterror_2207',['UIDDoesNotExistError',['../classtket_1_1graphs_1_1detail_1_1UIDDoesNotExistError.html',1,'tket::graphs::detail']]],
-  ['uidinteraction_2208',['UIDInteraction',['../structtket_1_1graphs_1_1detail_1_1UIDInteraction.html',1,'tket::graphs::detail']]],
-  ['uidsnotconnected_2209',['UIDsNotConnected',['../classtket_1_1graphs_1_1UIDsNotConnected.html',1,'tket::graphs']]],
-  ['uidvertex_2210',['UIDVertex',['../structtket_1_1graphs_1_1detail_1_1UIDVertex.html',1,'tket::graphs::detail']]],
   ['unitary1qbox_2211',['Unitary1qBox',['../classtket_1_1Unitary1qBox.html',1,'tket']]],
   ['unitary2qbox_2212',['Unitary2qBox',['../classtket_1_1Unitary2qBox.html',1,'tket']]],
   ['unitary3qbox_2213',['Unitary3qBox',['../classtket_1_1Unitary3qBox.html',1,'tket']]],

@@ -193,6 +193,7 @@ var menudata={children:[
 {text:"Typedefs",url:"functions_type.html",children:[
 {text:"c",url:"functions_type.html#index_c"},
 {text:"d",url:"functions_type.html#index_d"},
+{text:"e",url:"functions_type.html#index_e"},
 {text:"i",url:"functions_type.html#index_i"},
 {text:"j",url:"functions_type.html#index_j"},
 {text:"l",url:"functions_type.html#index_l"},

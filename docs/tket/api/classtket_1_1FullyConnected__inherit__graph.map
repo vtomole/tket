@@ -1,6 +1,6 @@
 <map id="tket::FullyConnected" name="tket::FullyConnected">
-<area shape="rect" id="node1" title=" " alt="" coords="35,288,189,315"/>
-<area shape="rect" id="node2" href="$classtket_1_1Architecture.html" title=" " alt="" coords="45,213,179,240"/>
-<area shape="rect" id="node3" href="$classtket_1_1graphs_1_1UIDConnectivity.html" title=" " alt="" coords="5,124,219,165"/>
-<area shape="rect" id="node4" href="$classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html" title=" " alt="" coords="13,5,211,76"/>
+<area shape="rect" id="node1" title=" " alt="" coords="33,288,187,315"/>
+<area shape="rect" id="node2" href="$classtket_1_1ArchitectureBase.html" title=" " alt="" coords="15,184,205,240"/>
+<area shape="rect" id="node3" href="$classtket_1_1graphs_1_1CompleteGraph.html" title=" " alt="" coords="5,95,215,136"/>
+<area shape="rect" id="node4" href="$classtket_1_1graphs_1_1AbstractGraph.html" title=" " alt="" coords="10,5,210,47"/>
 </map>

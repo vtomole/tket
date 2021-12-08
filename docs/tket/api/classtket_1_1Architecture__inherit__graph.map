@@ -1,8 +1,9 @@
 <map id="tket::Architecture" name="tket::Architecture">
-<area shape="rect" id="node1" title=" " alt="" coords="174,213,309,240"/>
-<area shape="rect" id="node4" href="$classtket_1_1FullyConnected.html" title=" " alt="" coords="5,288,160,315"/>
-<area shape="rect" id="node5" href="$classtket_1_1RingArch.html" title=" " alt="" coords="185,288,298,315"/>
-<area shape="rect" id="node6" href="$classtket_1_1SquareGrid.html" title=" " alt="" coords="322,288,449,315"/>
-<area shape="rect" id="node2" href="$classtket_1_1graphs_1_1UIDConnectivity.html" title=" " alt="" coords="135,124,348,165"/>
-<area shape="rect" id="node3" href="$classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html" title=" " alt="" coords="142,5,341,76"/>
+<area shape="rect" id="node1" title=" " alt="" coords="67,377,201,404"/>
+<area shape="rect" id="node6" href="$classtket_1_1RingArch.html" title=" " alt="" coords="5,452,119,479"/>
+<area shape="rect" id="node7" href="$classtket_1_1SquareGrid.html" title=" " alt="" coords="143,452,269,479"/>
+<area shape="rect" id="node2" href="$classtket_1_1ArchitectureBase.html" title=" " alt="" coords="43,273,225,329"/>
+<area shape="rect" id="node3" href="$classtket_1_1graphs_1_1DirectedGraph.html" title=" " alt="" coords="33,184,235,225"/>
+<area shape="rect" id="node4" href="$classtket_1_1graphs_1_1DirectedGraphBase.html" title=" " alt="" coords="33,95,235,136"/>
+<area shape="rect" id="node5" href="$classtket_1_1graphs_1_1AbstractGraph.html" title=" " alt="" coords="34,5,234,47"/>
 </map>

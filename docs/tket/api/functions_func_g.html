@@ -116,8 +116,13 @@ $(function() {
 <li>get_all_circuits()
 : <a class="el" href="classtket_1_1FrameRandomisation.html#a86bc548572fcf3dc4c7265f384cdebd4">tket::FrameRandomisation</a>
 </li>
-<li>get_all_nodes()
-: <a class="el" href="classtket_1_1aas_1_1SteinerTree.html#ad7d371cec05b0a8ee71f5d3aee97d8bf">tket::aas::SteinerTree</a>
+<li>get_all_edges_vec()
+: <a class="el" href="classtket_1_1graphs_1_1AbstractGraph.html#a7966d2cba0342dccc317a2417f500ad0">tket::graphs::AbstractGraph&lt; T &gt;</a>
+, <a class="el" href="classtket_1_1graphs_1_1CompleteGraph.html#a86008c66d7dc53b0aa6d2473fd482742">tket::graphs::CompleteGraph&lt; T &gt;</a>
+, <a class="el" href="classtket_1_1graphs_1_1DirectedGraphBase.html#a009857b4bd485dc4eddf2fe948289d85">tket::graphs::DirectedGraphBase&lt; T &gt;</a>
+</li>
+<li>get_all_nodes_vec()
+: <a class="el" href="classtket_1_1graphs_1_1AbstractGraph.html#a20fd7f5841f214f8e7ac4bfe09a40c24">tket::graphs::AbstractGraph&lt; T &gt;</a>
 </li>
 <li>get_all_out_edges()
 : <a class="el" href="classtket_1_1Circuit.html#a596b60f3400da0dd1d8371ad2eb409a1">tket::Circuit</a>
@@ -131,15 +136,6 @@ $(function() {
 <li>get_all_samples()
 : <a class="el" href="classtket_1_1FrameRandomisation.html#af69819d0ccb2db20264e97867e0d7752">tket::FrameRandomisation</a>
 , <a class="el" href="classtket_1_1FrameRandomisationTester.html#afce824ad8e786667d84c414c9219a3e7">tket::FrameRandomisationTester</a>
-</li>
-<li>get_all_uids()
-: <a class="el" href="classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html#aaffbae955871766b42031ab28545a233">tket::graphs::detail::UIDConnectivityBase&lt; UID_t, OutEdgeListS, VertexListS &gt;</a>
-</li>
-<li>get_all_uids_set()
-: <a class="el" href="classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html#ae774b768d4a268c2d45b5dc5171ef3e4">tket::graphs::detail::UIDConnectivityBase&lt; UID_t, OutEdgeListS, VertexListS &gt;</a>
-</li>
-<li>get_all_uids_vec()
-: <a class="el" href="classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html#a0f2e63b17f4869fe7fd26e54366e4964">tket::graphs::detail::UIDConnectivityBase&lt; UID_t, OutEdgeListS, VertexListS &gt;</a>
 </li>
 <li>get_allowed_types()
 : <a class="el" href="classtket_1_1GateSetPredicate.html#a877044ab9bff6feb2c596af1612c9b64">tket::GateSetPredicate</a>
@@ -231,7 +227,7 @@ $(function() {
 : <a class="el" href="classtket_1_1Circuit.html#adf9818e28b034cf646169efa3c577db0">tket::Circuit</a>
 </li>
 <li>get_comps()
-: <a class="el" href="classtket_1_1graphs_1_1detail_1_1BicomponentGraphTester.html#aaf31d0dec2eead99bf5c2f939968179a">tket::graphs::detail::BicomponentGraphTester</a>
+: <a class="el" href="classtket_1_1graphs_1_1detail_1_1BicomponentGraphTester.html#af4bd6fd83bf013957b62f27daedd3736">tket::graphs::detail::BicomponentGraphTester</a>
 </li>
 <li>get_condition()
 : <a class="el" href="classtket_1_1Program_1_1BlockIterator.html#aaca55015ff027d80f488e6a413a6ae43">tket::Program::BlockIterator</a>
@@ -254,13 +250,7 @@ $(function() {
 : <a class="el" href="structtket_1_1graphs_1_1GraphRoutines.html#aa25fd14ff94d591ddc8f80674f6631bc">tket::graphs::GraphRoutines</a>
 </li>
 <li>get_connection_weight()
-: <a class="el" href="classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html#a86038c16d733eb85783af8fb22ca58f0">tket::graphs::detail::UIDConnectivityBase&lt; UID_t, OutEdgeListS, VertexListS &gt;</a>
-</li>
-<li>get_connections_set()
-: <a class="el" href="classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html#a639888d901ba9abc3cb1ed0cdb14e948">tket::graphs::detail::UIDConnectivityBase&lt; UID_t, OutEdgeListS, VertexListS &gt;</a>
-</li>
-<li>get_connections_vec()
-: <a class="el" href="classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html#afa0290e220f8f117c41421682a3f7273">tket::graphs::detail::UIDConnectivityBase&lt; UID_t, OutEdgeListS, VertexListS &gt;</a>
+: <a class="el" href="classtket_1_1graphs_1_1DirectedGraphBase.html#a666a198f92905f58a7e94c2694a9569f">tket::graphs::DirectedGraphBase&lt; T &gt;</a>
 </li>
 <li>get_connectivity()
 : <a class="el" href="classtket_1_1Architecture.html#a67129174f5b410ca236a4e345a743220">tket::Architecture</a>
@@ -286,7 +276,7 @@ $(function() {
 : <a class="el" href="classtket_1_1graphs_1_1detail_1_1TreeSearchBase.html#a9f349830112cad22cbeaeb8b0841cd5d">tket::graphs::detail::TreeSearchBase&lt; Graph, BoostPMap &gt;</a>
 </li>
 <li>get_degree()
-: <a class="el" href="classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html#a22ed1102168e33a59960689dd9869dd7">tket::graphs::detail::UIDConnectivityBase&lt; UID_t, OutEdgeListS, VertexListS &gt;</a>
+: <a class="el" href="classtket_1_1graphs_1_1DirectedGraphBase.html#addb1542d900b157b176a377d4215aca8">tket::graphs::DirectedGraphBase&lt; T &gt;</a>
 </li>
 <li>get_dense_unitary()
 : <a class="el" href="classtket_1_1internal_1_1GateUnitaryMatrixVariableQubits.html#ae381da4cdcdf069b5773cd37e3e5f805">tket::internal::GateUnitaryMatrixVariableQubits</a>
@@ -298,21 +288,25 @@ $(function() {
 : <a class="el" href="classtket_1_1zx_1_1ZXBox.html#a5e6f2905bfc9df4b42d375cb69c17e9b">tket::zx::ZXBox</a>
 </li>
 <li>get_diameter()
-: <a class="el" href="classtket_1_1Architecture.html#a7ee908979f16657b063c609fe22f92d7">tket::Architecture</a>
+: <a class="el" href="classtket_1_1graphs_1_1AbstractGraph.html#a009fa8b9dab52d0c6c0414dc14086a08">tket::graphs::AbstractGraph&lt; T &gt;</a>
+, <a class="el" href="classtket_1_1graphs_1_1CompleteGraph.html#a4f26c66c69d8b0d80c709cd4a179940e">tket::graphs::CompleteGraph&lt; T &gt;</a>
+, <a class="el" href="classtket_1_1graphs_1_1DirectedGraph.html#a455d823ab24fdc5c50c998e27f1813e6">tket::graphs::DirectedGraph&lt; T &gt;</a>
 </li>
 <li>get_dist()
 : <a class="el" href="classtket_1_1graphs_1_1detail_1_1TreeSearchBase.html#ac7fe318de98701f696e7ded44e2e6e1c">tket::graphs::detail::TreeSearchBase&lt; Graph, BoostPMap &gt;</a>
 </li>
 <li>get_distance()
-: <a class="el" href="classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html#a2042f8ab7b02e14230fe02ab937f202d">tket::graphs::detail::UIDConnectivityBase&lt; UID_t, OutEdgeListS, VertexListS &gt;</a>
-, <a class="el" href="classtket_1_1graphs_1_1UIDConnectivity.html#a8c54e055a440a94f4e70934afe74cf64">tket::graphs::UIDConnectivity&lt; UID_t, OutEdgeListS, VertexListS &gt;</a>
+: <a class="el" href="classtket_1_1graphs_1_1AbstractGraph.html#abfc35066f0b6d02dbd1db04cc65f308c">tket::graphs::AbstractGraph&lt; T &gt;</a>
+, <a class="el" href="classtket_1_1graphs_1_1CompleteGraph.html#ad9eddd1b7cd84aa57f8078cd56e2a6ae">tket::graphs::CompleteGraph&lt; T &gt;</a>
+, <a class="el" href="classtket_1_1graphs_1_1DirectedGraph.html#a6153644c140f51d101d243812072003d">tket::graphs::DirectedGraph&lt; T &gt;</a>
+, <a class="el" href="classtket_1_1graphs_1_1DirectedGraphBase.html#a02dedb3a85d50a0de1f801b0bd705c08">tket::graphs::DirectedGraphBase&lt; T &gt;</a>
 </li>
 <li>get_distance_matrix()
 : <a class="el" href="classtket_1_1aas_1_1PathHandler.html#a121727b7a33ce43fe340f6da73e8af3f">tket::aas::PathHandler</a>
 </li>
 <li>get_distances()
-: <a class="el" href="classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html#aa99fd6a466a1842139d8744a4cc9e82e">tket::graphs::detail::UIDConnectivityBase&lt; UID_t, OutEdgeListS, VertexListS &gt;</a>
-, <a class="el" href="classtket_1_1graphs_1_1UIDConnectivity.html#a8a4e10c9998a4345d772e7649f6f81b3">tket::graphs::UIDConnectivity&lt; UID_t, OutEdgeListS, VertexListS &gt;</a>
+: <a class="el" href="classtket_1_1graphs_1_1DirectedGraph.html#a3a7b907546d4b0b02da562163bdc0dbf">tket::graphs::DirectedGraph&lt; T &gt;</a>
+, <a class="el" href="classtket_1_1graphs_1_1DirectedGraphBase.html#a92232ce5fdc328dbf1ab27291fc001b9">tket::graphs::DirectedGraphBase&lt; T &gt;</a>
 </li>
 <li>get_dists()
 : <a class="el" href="classtket_1_1graphs_1_1detail_1_1TreeSearchBase.html#a3337330738360fcebd06c5c52f89c70c">tket::graphs::detail::TreeSearchBase&lt; Graph, BoostPMap &gt;</a>
@@ -321,7 +315,7 @@ $(function() {
 : <a class="el" href="classtket_1_1aas_1_1IterationOrder.html#a862bd6bd4669db744e38c0241bf5c87f">tket::aas::IterationOrder</a>
 </li>
 <li>get_edges_it()
-: <a class="el" href="classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html#a166d610bde1be4f5c85d2377e2001198">tket::graphs::detail::UIDConnectivityBase&lt; UID_t, OutEdgeListS, VertexListS &gt;</a>
+: <a class="el" href="classtket_1_1graphs_1_1DirectedGraphBase.html#a85b9a2a5c3ea70a74a8dff758045e15c">tket::graphs::DirectedGraphBase&lt; T &gt;</a>
 </li>
 <li>get_edgetype()
 : <a class="el" href="classtket_1_1Circuit.html#a26d7fe7443ea870ffdfd0bf99dd23de1">tket::Circuit</a>
@@ -383,7 +377,7 @@ $(function() {
 : <a class="el" href="classtket_1_1CompilationUnit.html#a254484b149695124fdc617a3e368447c">tket::CompilationUnit</a>
 </li>
 <li>get_inner_edges()
-: <a class="el" href="classtket_1_1graphs_1_1detail_1_1BicomponentGraph.html#a032ecd954dc511f9efe5a13f526c0413">tket::graphs::detail::BicomponentGraph&lt; UID_t &gt;</a>
+: <a class="el" href="classtket_1_1graphs_1_1detail_1_1BicomponentGraph.html#a76539061bffd9bacb74219079a17c9fc">tket::graphs::detail::BicomponentGraph&lt; T &gt;</a>
 </li>
 <li>get_interaction()
 : <a class="el" href="classtket_1_1RoutingTester.html#af3eea9effa0d37cde44a1a4e73c83d70">tket::RoutingTester</a>
@@ -421,9 +415,6 @@ $(function() {
 </li>
 <li>get_matrix_and_phase()
 : <a class="el" href="classtket_1_1ExpBox.html#ab5d523aae41fd52c9c9bbe0a95728dd2">tket::ExpBox</a>
-</li>
-<li>get_max_depth()
-: <a class="el" href="classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html#a269ad6e40f5ef117d8eaea30b6d95f0d">tket::graphs::detail::UIDConnectivityBase&lt; UID_t, OutEdgeListS, VertexListS &gt;</a>
 </li>
 <li>get_max_element()
 : <a class="el" href="classtket_1_1aas_1_1SteinerTree.html#a0ce6070ba2455d7d72ac9f6eb33950a0">tket::aas::SteinerTree</a>
@@ -480,8 +471,8 @@ $(function() {
 , <a class="el" href="classtket_1_1zx_1_1ZXDiagram.html#a015d65a806a262260619d93331e9f1a3">tket::zx::ZXDiagram</a>
 , <a class="el" href="classtket_1_1zx_1_1ZXGen.html#a8581ed5d87d74cf4c6b8a187e955d222">tket::zx::ZXGen</a>
 </li>
-<li>get_neighbour_uids()
-: <a class="el" href="classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html#a0f3f507688469503fb0118dade7ffc3e">tket::graphs::detail::UIDConnectivityBase&lt; UID_t, OutEdgeListS, VertexListS &gt;</a>
+<li>get_neighbour_nodes()
+: <a class="el" href="classtket_1_1graphs_1_1DirectedGraphBase.html#ac76a46f446777f3195ff2834303839d1">tket::graphs::DirectedGraphBase&lt; T &gt;</a>
 </li>
 <li>get_neighbours()
 : <a class="el" href="classtket_1_1graphs_1_1AdjacencyData.html#adb6dd32fb93926039411efb5a93904a9">tket::graphs::AdjacencyData</a>
@@ -495,14 +486,12 @@ $(function() {
 <li>get_next_pair()
 : <a class="el" href="classtket_1_1Circuit.html#ab9bafba71bfd701726af8f9407ea0abf">tket::Circuit</a>
 </li>
+<li>get_node()
+: <a class="el" href="classtket_1_1graphs_1_1DirectedGraphBase.html#ac5d30252c7ed95dc540cdf05d0f1a40d">tket::graphs::DirectedGraphBase&lt; T &gt;</a>
+</li>
 <li>get_nodes()
 : <a class="el" href="classtket_1_1graphs_1_1ColouringPriority.html#ac42f4e3976514ea6292f08989b80fe52">tket::graphs::ColouringPriority</a>
 , <a class="el" href="classtket_1_1PlacementPredicate.html#a12771ef2038cfb87e9b72724dc1d43dd">tket::PlacementPredicate</a>
-</li>
-<li>get_nodes_canonical_order()
-: <a class="el" href="classtket_1_1FullyConnected.html#a7ae92a18548a4e36dde7e21db82f217c">tket::FullyConnected</a>
-, <a class="el" href="classtket_1_1RingArch.html#a04ce7ed97328e5a2947d73ba64bb8840">tket::RingArch</a>
-, <a class="el" href="classtket_1_1SquareGrid.html#a889e976c03825247827968ae26e10580">tket::SquareGrid</a>
 </li>
 <li>get_nth_b_out_bundle()
 : <a class="el" href="classtket_1_1Circuit.html#a496f4a212d071f7d8f32c9971895122a">tket::Circuit</a>
@@ -552,7 +541,7 @@ $(function() {
 : <a class="el" href="classtket_1_1Circuit.html#a37b421458014135881aaa0f589145c29">tket::Circuit</a>
 </li>
 <li>get_out_degree()
-: <a class="el" href="classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html#afa94e5e45b44005bdfe8a2361f4f088e">tket::graphs::detail::UIDConnectivityBase&lt; UID_t, OutEdgeListS, VertexListS &gt;</a>
+: <a class="el" href="classtket_1_1graphs_1_1DirectedGraphBase.html#afd4e9113cd43e281793b7e8405930041">tket::graphs::DirectedGraphBase&lt; T &gt;</a>
 </li>
 <li>get_out_edges()
 : <a class="el" href="classtket_1_1Program.html#a99f21f93af64fe33dd1877a8132d0ea9">tket::Program</a>
@@ -586,7 +575,7 @@ $(function() {
 , <a class="el" href="classtket_1_1RepeatWithMetricPass.html#a3e51f2c499b636855857e42f5a0175ae">tket::RepeatWithMetricPass</a>
 </li>
 <li>get_path()
-: <a class="el" href="classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html#aa739e20781a0e52cdc0cf4de5946355a">tket::graphs::detail::UIDConnectivityBase&lt; UID_t, OutEdgeListS, VertexListS &gt;</a>
+: <a class="el" href="classtket_1_1graphs_1_1DirectedGraphBase.html#a6da91f2796a8e9521fd9baee12d846a2">tket::graphs::DirectedGraphBase&lt; T &gt;</a>
 </li>
 <li>get_path_matrix()
 : <a class="el" href="classtket_1_1aas_1_1PathHandler.html#a572081898db50f76cc46c14fe3b0ecec">tket::aas::PathHandler</a>
@@ -631,7 +620,7 @@ $(function() {
 , <a class="el" href="classtket_1_1zx_1_1BoundaryGen.html#abd510b938f04ed951d0976812e1b6601">tket::zx::BoundaryGen</a>
 , <a class="el" href="classtket_1_1zx_1_1DirectedGen.html#aa8f6b3b6b9e2f579d0e91b845c8ecaa8">tket::zx::DirectedGen</a>
 , <a class="el" href="classtket_1_1zx_1_1ZXBox.html#aeda4b4856767a9a01c0d2c77ede50a19">tket::zx::ZXBox</a>
-, <a class="el" href="classtket_1_1zx_1_1ZXDiagram.html#a3301114eaae7ff5466aa55984c5f049a">tket::zx::ZXDiagram</a>
+, <a class="el" href="classtket_1_1zx_1_1ZXDiagram.html#a201482d2f76b45f2ec7e99f4dbaba5d5">tket::zx::ZXDiagram</a>
 , <a class="el" href="classtket_1_1zx_1_1ZXGen.html#a4273f220c4c3eae0d634fe20888cc54e">tket::zx::ZXGen</a>
 </li>
 <li>get_qubit_indices()
@@ -729,16 +718,13 @@ $(function() {
 <li>get_u_frontier()
 : <a class="el" href="classtket_1_1Circuit_1_1SliceIterator.html#aa0a70ff3e070ad5b8e10a64ec572ae1d">tket::Circuit::SliceIterator</a>
 </li>
-<li>get_uid()
-: <a class="el" href="classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html#ac7eb9140764fb77d4aceef75da0a9f6b">tket::graphs::detail::UIDConnectivityBase&lt; UID_t, OutEdgeListS, VertexListS &gt;</a>
-</li>
 <li>get_undirected_connectivity()
-: <a class="el" href="classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html#a79d3c0617d0a24bc53ed66a281d83bfc">tket::graphs::detail::UIDConnectivityBase&lt; UID_t, OutEdgeListS, VertexListS &gt;</a>
-, <a class="el" href="classtket_1_1graphs_1_1UIDConnectivity.html#afca9a310baeee97ec15940e3af24547a">tket::graphs::UIDConnectivity&lt; UID_t, OutEdgeListS, VertexListS &gt;</a>
+: <a class="el" href="classtket_1_1graphs_1_1DirectedGraph.html#a8d3d82f0ae953281ebf989922671499d">tket::graphs::DirectedGraph&lt; T &gt;</a>
+, <a class="el" href="classtket_1_1graphs_1_1DirectedGraphBase.html#aeac8f89f54e246d907afdba48564fd86">tket::graphs::DirectedGraphBase&lt; T &gt;</a>
 </li>
 <li>get_unitary()
 : <a class="el" href="classtket_1_1Gate.html#ae11edd0093980d96ec12d5da3bc6cb8a">tket::Gate</a>
-, <a class="el" href="structtket_1_1GateUnitaryMatrix.html#adca5a15e2082784fc446a994241cdf1e">tket::GateUnitaryMatrix</a>
+, <a class="el" href="structtket_1_1GateUnitaryMatrix.html#ad21c8ce352d7cf0e00fd8a7869236eef">tket::GateUnitaryMatrix</a>
 , <a class="el" href="classtket_1_1Op.html#a8036a6e71f1a9c064f692aedb654ddec">tket::Op</a>
 , <a class="el" href="classtket_1_1Unitary1qBox.html#a295a4d1ddb2a19dd07a0d127baefa945">tket::Unitary1qBox</a>
 , <a class="el" href="classtket_1_1Unitary2qBox.html#a6e0a72bad7228234af78d66510bb4bfd">tket::Unitary2qBox</a>
@@ -771,7 +757,7 @@ $(function() {
 : <a class="el" href="classtket_1_1zx_1_1ZXDiagram.html#a233996414ad6791554ba457528be41e6">tket::zx::ZXDiagram</a>
 </li>
 <li>get_vertices_it()
-: <a class="el" href="classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html#aac0954490cfeaf0951802a82cb64d559">tket::graphs::detail::UIDConnectivityBase&lt; UID_t, OutEdgeListS, VertexListS &gt;</a>
+: <a class="el" href="classtket_1_1graphs_1_1DirectedGraphBase.html#a5f92bc12d31053fbbba7bc799c2d544c">tket::graphs::DirectedGraphBase&lt; T &gt;</a>
 </li>
 <li>get_width()
 : <a class="el" href="classtket_1_1Conditional.html#a1ab7bba4e542a62c10fb3928a58488d6">tket::Conditional</a>
@@ -812,7 +798,7 @@ $(function() {
 , <a class="el" href="classtket_1_1graphs_1_1utils_1_1detail_1_1graph__utils__helper__with__map_3_01Derived_00_01Graph4f93c7182dd20c8b27502165efbd87e3.html#a4d210cadd17e373baabf9f0c6878f368">tket::graphs::utils::detail::graph_utils_helper_with_map&lt; Derived, Graph, Map, void, true &gt;</a>
 </li>
 <li>GraphColouringResult()
-: <a class="el" href="structtket_1_1graphs_1_1GraphColouringResult.html#ad00e86e7a8da3db910efee984eb800e2">tket::graphs::GraphColouringResult</a>
+: <a class="el" href="structtket_1_1graphs_1_1GraphColouringResult.html#aa2b79b63483ca99b7543400560c145fb">tket::graphs::GraphColouringResult</a>
 </li>
 <li>GraphPlacement()
 : <a class="el" href="classtket_1_1GraphPlacement.html#a42c9ce1ac6a36e9f18e108e954f1aebb">tket::GraphPlacement</a>

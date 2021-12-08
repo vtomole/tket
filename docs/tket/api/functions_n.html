@@ -92,10 +92,10 @@ $(function() {
 : <a class="el" href="classtket_1_1graphs_1_1detail_1_1BicomponentGraphTester.html#a98a868f38def0eb8f3ed6039cd452518">tket::graphs::detail::BicomponentGraphTester</a>
 </li>
 <li>n_connected()
-: <a class="el" href="classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html#aeabe0aba0be2d4aa12580a877bd7e14f">tket::graphs::detail::UIDConnectivityBase&lt; UID_t, OutEdgeListS, VertexListS &gt;</a>
+: <a class="el" href="classtket_1_1graphs_1_1DirectedGraphBase.html#aa2b2021a6b30ea7979468420466ec74f">tket::graphs::DirectedGraphBase&lt; T &gt;</a>
 </li>
 <li>n_connections()
-: <a class="el" href="classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html#a784069659742eaa4b50d5e8203153fa6">tket::graphs::detail::UIDConnectivityBase&lt; UID_t, OutEdgeListS, VertexListS &gt;</a>
+: <a class="el" href="classtket_1_1graphs_1_1DirectedGraphBase.html#a68dac56e398e47507e48a46d210bf3da">tket::graphs::DirectedGraphBase&lt; T &gt;</a>
 </li>
 <li>n_edges()
 : <a class="el" href="classtket_1_1Circuit.html#a68d7087caa880ea4bd64c558863e8329">tket::Circuit</a>
@@ -121,6 +121,9 @@ $(function() {
 </li>
 <li>n_maps_
 : <a class="el" href="classtket_1_1vf2__match__add__callback.html#a1244486ee36d594e712e4d5d3592f4fd">tket::vf2_match_add_callback&lt; GraphP, GraphT &gt;</a>
+</li>
+<li>n_nodes()
+: <a class="el" href="classtket_1_1graphs_1_1AbstractGraph.html#a1dd52e51660aae6f70754eb64167e8f7">tket::graphs::AbstractGraph&lt; T &gt;</a>
 </li>
 <li>n_o_
 : <a class="el" href="classtket_1_1ClassicalOp.html#a6f19f7559ff1ed01a030fc17d097eaf5">tket::ClassicalOp</a>
@@ -161,9 +164,6 @@ $(function() {
 <li>n_try_all_swaps
 : <a class="el" href="structtket_1_1Routing_1_1Stats.html#ab3840c718c8695bbfca50e62300eebaf">tket::Routing::Stats</a>
 </li>
-<li>n_uids()
-: <a class="el" href="classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html#a7f0eb6b2ec68ada7903f37bf855c6331">tket::graphs::detail::UIDConnectivityBase&lt; UID_t, OutEdgeListS, VertexListS &gt;</a>
-</li>
 <li>n_units()
 : <a class="el" href="classtket_1_1Circuit.html#a0bad2385c1bdb61d3f28ccaf5c6c02e6">tket::Circuit</a>
 </li>
@@ -198,7 +198,13 @@ $(function() {
 : <a class="el" href="structtket_1_1RoutingFrontier.html#a72dbaf5f6e7b4cd5df2bf7bcaacc6da7">tket::RoutingFrontier</a>
 </li>
 <li>Node()
-: <a class="el" href="classtket_1_1Node.html#a5844ecce36ef5be98b304e7ebf80bdea">tket::Node</a>
+: <a class="el" href="classtket_1_1Node.html#ac611f6bea77fa164525e33e1acfe9445">tket::Node</a>
+</li>
+<li>node_exists()
+: <a class="el" href="classtket_1_1graphs_1_1AbstractGraph.html#ac76d6e2555455487441603e255b6251c">tket::graphs::AbstractGraph&lt; T &gt;</a>
+</li>
+<li>node_to_vertex
+: <a class="el" href="classtket_1_1graphs_1_1DirectedGraphBase.html#a33716fc9d0a51b957c339561a94d829b">tket::graphs::DirectedGraphBase&lt; T &gt;</a>
 </li>
 <li>node_types
 : <a class="el" href="classtket_1_1aas_1_1SteinerTree.html#a36a9177d59fab02c55bb9cd9dd5e2bea">tket::aas::SteinerTree</a>
@@ -209,8 +215,21 @@ $(function() {
 <li>NodeInactive()
 : <a class="el" href="classtket_1_1NodeInactive.html#aec6e921043adb40bbf1958223843f4e8">tket::NodeInactive</a>
 </li>
+<li>nodes()
+: <a class="el" href="classtket_1_1aas_1_1SteinerTree.html#a915ae051c669fc4eb640a38e845e1a45">tket::aas::SteinerTree</a>
+, <a class="el" href="classtket_1_1graphs_1_1AbstractGraph.html#a9a9ac744aa2763fc45132a16b8f376f4">tket::graphs::AbstractGraph&lt; T &gt;</a>
+</li>
 <li>Nodes
 : <a class="el" href="classtket_1_1graphs_1_1ColouringPriority.html#a0a2875acea0bebc5992d233c5ba9a1c9">tket::graphs::ColouringPriority</a>
+</li>
+<li>nodes_
+: <a class="el" href="classtket_1_1graphs_1_1AbstractGraph.html#a0be1b923de1c7dfca3ec9b514c605834">tket::graphs::AbstractGraph&lt; T &gt;</a>
+</li>
+<li>nodes_at_distance()
+: <a class="el" href="classtket_1_1graphs_1_1DirectedGraph.html#afe1dae97a811ca738f1fd68cc42b6438">tket::graphs::DirectedGraph&lt; T &gt;</a>
+</li>
+<li>NodesNotConnected()
+: <a class="el" href="classtket_1_1graphs_1_1NodesNotConnected.html#a482974b7d275528ed19e58a15f859778">tket::graphs::NodesNotConnected&lt; T &gt;</a>
 </li>
 <li>NodesRange()
 : <a class="el" href="classtket_1_1NodesRange.html#a99ce679cac77dcb221a400502429a305">tket::NodesRange</a>
@@ -231,7 +250,7 @@ $(function() {
 : <a class="el" href="classtket_1_1NotImplemented.html#a23bb854b597dc29c0df304bd54e80625">tket::NotImplemented</a>
 </li>
 <li>NotUnitary()
-: <a class="el" href="classtket_1_1NotUnitary.html#a076348e393770a4109a4cb901a4c7f88">tket::NotUnitary</a>
+: <a class="el" href="classtket_1_1NotUnitary.html#a45bb0d241b2281e02a4fb131e74f6e3f">tket::NotUnitary</a>
 </li>
 <li>NotValid()
 : <a class="el" href="classtket_1_1NotValid.html#a2975247922125f5681a9181cd502e37a">tket::NotValid</a>

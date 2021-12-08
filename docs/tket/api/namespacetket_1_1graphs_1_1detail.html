@@ -88,8 +88,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtket_1_1graphs_1_1detail_1_1BicomponentGraphTester.html">BicomponentGraphTester</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class exposing private API of <a class="el" href="classtket_1_1graphs_1_1detail_1_1BicomponentGraph.html" title="A BicomponentGraph has biconnected components as vertices and APs as edges: two vertices are connecte...">BicomponentGraph</a> for testing.  <a href="classtket_1_1graphs_1_1detail_1_1BicomponentGraphTester.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtket_1_1graphs_1_1detail_1_1EdgeDoesNotExistError.html">EdgeDoesNotExistError</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtket_1_1graphs_1_1detail_1_1NoSelectedComponent.html">NoSelectedComponent</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception raised when subarchitecture is empty.  <a href="classtket_1_1graphs_1_1detail_1_1NoSelectedComponent.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -99,35 +97,24 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtket_1_1graphs_1_1detail_1_1TreeSearchBase.html">TreeSearchBase</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html">UIDConnectivityBase</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class of <a class="el" href="classtket_1_1graphs_1_1UIDConnectivity.html" title="UIDConnectivity instances are graphs of UnitID vertices.">UIDConnectivity</a>, where all the implementation resides.  <a href="classtket_1_1graphs_1_1detail_1_1UIDConnectivityBase.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtket_1_1graphs_1_1detail_1_1UIDDoesNotExistError.html">UIDDoesNotExistError</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtket_1_1graphs_1_1detail_1_1UIDInteraction.html">UIDInteraction</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">edges of connectivity graph  <a href="structtket_1_1graphs_1_1detail_1_1UIDInteraction.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtket_1_1graphs_1_1detail_1_1UIDVertex.html">UIDVertex</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">vertices of connectivity graph  <a href="structtket_1_1graphs_1_1detail_1_1UIDVertex.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a376a479c59ffb4d82cd491c6e7e585df"><td class="memTemplParams" colspan="2">template&lt;typename UID_t &gt; </td></tr>
-<tr class="memitem:a376a479c59ffb4d82cd491c6e7e585df"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetket_1_1graphs_1_1detail.html#a376a479c59ffb4d82cd491c6e7e585df">EdgeToCompT</a> = std::map&lt; <a class="el" href="namespacetket_1_1graphs_1_1utils.html#a0ddb76f99e73585abb2f33d56bd69710">utils::edge</a>&lt; <a class="el" href="namespacetket_1_1graphs.html#a63de09625abda80235848bb262da2c17">UndirectedConnGraph</a>&lt; UID_t &gt; &gt;, unsigned &gt;</td></tr>
-<tr class="separator:a376a479c59ffb4d82cd491c6e7e585df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6773e91d8ba8baa1b416676bf9263b1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af6773e91d8ba8baa1b416676bf9263b1"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetket_1_1graphs_1_1detail.html#af6773e91d8ba8baa1b416676bf9263b1">EdgeToCompT</a> = std::map&lt; <a class="el" href="namespacetket_1_1graphs_1_1utils.html#a0ddb76f99e73585abb2f33d56bd69710">utils::edge</a>&lt; <a class="el" href="namespacetket_1_1graphs.html#a5afef50e83cc35861eb34bcb569a55ef">UndirectedConnGraph</a>&lt; T &gt; &gt;, unsigned &gt;</td></tr>
+<tr class="separator:af6773e91d8ba8baa1b416676bf9263b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a id="a376a479c59ffb4d82cd491c6e7e585df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a376a479c59ffb4d82cd491c6e7e585df">&#9670;&nbsp;</a></span>EdgeToCompT</h2>
+<a id="af6773e91d8ba8baa1b416676bf9263b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6773e91d8ba8baa1b416676bf9263b1">&#9670;&nbsp;</a></span>EdgeToCompT</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename UID_t &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacetket_1_1graphs_1_1detail.html#a376a479c59ffb4d82cd491c6e7e585df">tket::graphs::detail::EdgeToCompT</a> = typedef std::map&lt;<a class="el" href="namespacetket_1_1graphs_1_1utils.html#a0ddb76f99e73585abb2f33d56bd69710">utils::edge</a>&lt;<a class="el" href="namespacetket_1_1graphs.html#a63de09625abda80235848bb262da2c17">UndirectedConnGraph</a>&lt;UID_t&gt; &gt;, unsigned&gt;</td>
+          <td class="memname">using <a class="el" href="namespacetket_1_1graphs_1_1detail.html#af6773e91d8ba8baa1b416676bf9263b1">tket::graphs::detail::EdgeToCompT</a> = typedef std::map&lt;<a class="el" href="namespacetket_1_1graphs_1_1utils.html#a0ddb76f99e73585abb2f33d56bd69710">utils::edge</a>&lt;<a class="el" href="namespacetket_1_1graphs.html#a5afef50e83cc35861eb34bcb569a55ef">UndirectedConnGraph</a>&lt;T&gt; &gt;, unsigned&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">

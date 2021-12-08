@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['circuit_4224',['Circuit',['../classtket_1_1CompilationUnit.html#a120b136c2c9bc1938e0cd2cca80d91e4',1,'tket::CompilationUnit']]],
-  ['circuit_5fto_5fpauli_5fgraph_4225',['circuit_to_pauli_graph',['../classtket_1_1PauliGraph.html#ad0af0714118fe73e6f5723674beade91',1,'tket::PauliGraph']]],
-  ['circuit_5fto_5ftableau_4226',['circuit_to_tableau',['../classtket_1_1CliffTableau.html#afa7a97a74133ef6251384fa3a3a546d8',1,'tket::CliffTableau']]],
-  ['cliffordreductionpasstester_4227',['CliffordReductionPassTester',['../classtket_1_1CliffordReductionPass.html#ab7860c1a6a6b1a2daa8e93cc9fe51848',1,'tket::CliffordReductionPass']]]
+  ['circuit_4216',['Circuit',['../classtket_1_1CompilationUnit.html#a120b136c2c9bc1938e0cd2cca80d91e4',1,'tket::CompilationUnit']]],
+  ['circuit_5fto_5fpauli_5fgraph_4217',['circuit_to_pauli_graph',['../classtket_1_1PauliGraph.html#ad0af0714118fe73e6f5723674beade91',1,'tket::PauliGraph']]],
+  ['circuit_5fto_5ftableau_4218',['circuit_to_tableau',['../classtket_1_1CliffTableau.html#afa7a97a74133ef6251384fa3a3a546d8',1,'tket::CliffTableau']]],
+  ['cliffordreductionpasstester_4219',['CliffordReductionPassTester',['../classtket_1_1CliffordReductionPass.html#ab7860c1a6a6b1a2daa8e93cc9fe51848',1,'tket::CliffordReductionPass']]]
 ];
