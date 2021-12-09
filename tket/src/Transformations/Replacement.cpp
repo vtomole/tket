@@ -16,9 +16,9 @@
 
 #include "Circuit/CircPool.hpp"
 #include "Circuit/CircUtils.hpp"
-#include "Gate/GatePtr.hpp"
 #include "ControlledGates.hpp"
 #include "Decomposition.hpp"
+#include "Gate/GatePtr.hpp"
 #include "Transform.hpp"
 
 namespace tket {
