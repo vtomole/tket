@@ -14,7 +14,8 @@
 
 project(tket-routing)
 
-add_library(tket-routing
+add_library(tket-Routing
+    PlacementGraphClasses.cpp
     Qubit_Placement.cpp
     Swap_Analysis.cpp
     Board_Analysis.cpp

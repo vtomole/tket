@@ -14,7 +14,8 @@
 
 project(tket-architecture)
 
-add_library(tket-architecture
+add_library(tket-Architecture
+    ArchitectureGraphClasses.cpp
     Architecture.cpp)
 
 target_include_directories(tket-architecture

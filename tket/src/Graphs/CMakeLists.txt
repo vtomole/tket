@@ -21,8 +21,7 @@ add_library(tket-graphs
     GraphColouring.cpp
     GraphRoutines.cpp
     LargeCliquesResult.cpp
-    ArticulationPoints.cpp
-    UIDConnectivity.cpp)
+    ArticulationPoints.cpp)
 
 target_include_directories(tket-graphs
     PRIVATE
