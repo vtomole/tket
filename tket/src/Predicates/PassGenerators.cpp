@@ -23,6 +23,7 @@
 #include "Predicates/PassLibrary.hpp"
 #include "Predicates/Predicates.hpp"
 #include "Routing/Placement.hpp"
+#include "Transformations/BasicOptimisation.hpp"
 #include "Transformations/Decomposition.hpp"
 #include "Transformations/OptimisationPass.hpp"
 #include "Transformations/PauliOptimisation.hpp"
@@ -68,7 +69,7 @@ PassPtr gen_squash_pass(
     const OpTypeSet& singleqs,
     const std::function<Circuit(const Expr&, const Expr&, const Expr&)>&
         tk1_replacement) {
-  Transform t = Transform::squash_factory(singleqs, tk1_replacement);
+  Transform t = Transforms::squash_factory(singleqs, tk1_replacement);
   PostConditions postcon = {{}, {}, Guarantee::Preserve};
   PredicatePtrMap precons;
   // record pass config
@@ -86,7 +87,7 @@ PassPtr gen_euler_pass(const OpType& q, const OpType& p, bool strict) {
   PredicatePtr ccontrol_pred = std::make_shared<NoClassicalControlPredicate>();
   PredicatePtrMap precons{CompilationUnit::make_type_pair(ccontrol_pred)};
 
-  Transform t = Transform::squash_1qb_to_pqp(q, p, strict);
+  Transform t = Transforms::squash_1qb_to_pqp(q, p, strict);
   PostConditions pc{{}, {}, Guarantee::Preserve};
   // record pass config
   nlohmann::json j;
@@ -424,7 +425,7 @@ PassPtr gen_decompose_routing_gates_to_cxs_pass(
   PredicatePtrMap s_postcons;
   Transform t = Transforms::decompose_SWAP_to_CX(arc) >>
                 Transforms::decompose_BRIDGE_to_CX() >>
-                Transform::remove_redundancies();
+                Transforms::remove_redundancies();
   if (directed) {
     OpTypeSet out_optypes{all_single_qubit_types()};
     out_optypes.insert(OpType::CX);
@@ -446,7 +447,7 @@ PassPtr gen_decompose_routing_gates_to_cxs_pass(
         CompilationUnit::make_type_pair(outgates),
         CompilationUnit::make_type_pair(twoqbpred)};
     t = t >> Transforms::decompose_CX_directed(arc) >>
-        Transform::remove_redundancies();
+        Transforms::remove_redundancies();
   }
   PostConditions pc{s_postcons, g_postcons, Guarantee::Preserve};
   // record pass config
@@ -472,7 +473,7 @@ PassPtr gen_user_defined_swap_decomp_pass(const Circuit& replacement_circ) {
 }
 
 PassPtr KAKDecomposition(double cx_fidelity) {
-  Transform t = Transform::two_qubit_squash(cx_fidelity);
+  Transform t = Transforms::two_qubit_squash(cx_fidelity);
   PredicatePtr ccontrol_pred = std::make_shared<NoClassicalControlPredicate>();
   OpTypeSet ots{all_single_qubit_types()};
   ots.insert(OpType::SWAP);
@@ -495,7 +496,7 @@ PassPtr KAKDecomposition(double cx_fidelity) {
 }
 
 PassPtr ThreeQubitSquash(bool allow_swaps) {
-  Transform t = Transform::two_qubit_squash() >>
+  Transform t = Transforms::two_qubit_squash() >>
                 Transform::three_qubit_squash() >>
                 Transforms::clifford_simp(allow_swaps);
   OpTypeSet ots{all_single_qubit_types()};
