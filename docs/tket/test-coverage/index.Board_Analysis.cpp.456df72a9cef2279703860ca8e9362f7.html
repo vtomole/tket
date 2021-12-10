@@ -26,7 +26,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2021-12-09 12:30:31</td>
+      <td>2021-12-10 12:18:23</td>
     </tr>
   </table>
 </div>
@@ -214,7 +214,7 @@
       <td class="lineno"><a id="l19" href="#l19">19</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2078</td>
+      <td class="linecount coveredLine">2083</td>
       <td class="src coveredLine"><span class="kt">bool</span> <span class="n">node_active</span><span class="p">(</span><span class="k">const</span> <span class="n">qubit_bimap_t</span><span class="o">&amp;</span> <span class="n">map</span><span class="p">,</span> <span class="n">Node</span> <span class="n">node</span><span class="p">)</span> <span class="p">{</span></td>
     </tr>
 
@@ -224,14 +224,14 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">2/4</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 2 taken 2078 times.</div>
+          <div class="takenBranch">&check; Branch 2 taken 2083 times.</div>
           <div class="notTakenBranch">&cross; Branch 3 not taken.</div>
-          <div class="takenBranch">&check; Branch 5 taken 2078 times.</div>
+          <div class="takenBranch">&check; Branch 5 taken 2083 times.</div>
           <div class="notTakenBranch">&cross; Branch 6 not taken.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">2078</td>
+      <td class="linecount coveredLine">2083</td>
       <td class="src coveredLine">  <span class="k">const</span> <span class="kt">bool</span> <span class="n">found</span> <span class="o">=</span> <span class="n">map</span><span class="p">.</span><span class="n">right</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">node</span><span class="p">)</span> <span class="o">!=</span> <span class="n">map</span><span class="p">.</span><span class="n">right</span><span class="p">.</span><span class="n">end</span><span class="p">();</span></td>
     </tr>
 
@@ -239,7 +239,7 @@
       <td class="lineno"><a id="l21" href="#l21">21</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2078</td>
+      <td class="linecount coveredLine">2083</td>
       <td class="src coveredLine">  <span class="k">return</span> <span class="n">found</span><span class="p">;</span></td>
     </tr>
 
@@ -263,7 +263,7 @@
       <td class="lineno"><a id="l24" href="#l24">24</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">222</td>
+      <td class="linecount coveredLine">223</td>
       <td class="src coveredLine"><span class="n">Node</span> <span class="n">Routing</span><span class="o">::</span><span class="n">find_best_inactive_node</span><span class="p">(</span></td>
     </tr>
 
@@ -279,7 +279,7 @@
       <td class="lineno"><a id="l26" href="#l26">26</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">222</td>
+      <td class="linecount coveredLine">223</td>
       <td class="src coveredLine">  <span class="k">const</span> <span class="kt">unsigned</span> <span class="n">diameter</span> <span class="o">=</span> <span class="n">arc</span><span class="p">.</span><span class="n">get_diameter</span><span class="p">();</span></td>
     </tr>
 
@@ -289,12 +289,12 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">1/2</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 0 taken 383 times.</div>
+          <div class="takenBranch">&check; Branch 0 taken 385 times.</div>
           <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">383</td>
+      <td class="linecount coveredLine">385</td>
       <td class="src coveredLine">  <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="n">diameter</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span></td>
     </tr>
 
@@ -304,12 +304,12 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">1/2</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 383 times.</div>
+          <div class="takenBranch">&check; Branch 1 taken 385 times.</div>
           <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">383</td>
+      <td class="linecount coveredLine">385</td>
       <td class="src coveredLine">    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="n">potential_nodes</span> <span class="o">=</span> <span class="n">arc</span><span class="p">.</span><span class="n">nodes_at_distance</span><span class="p">(</span><span class="n">target_node</span><span class="p">,</span> <span class="n">k</span><span class="p">);</span></td>
     </tr>
 
@@ -319,12 +319,12 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">2/2</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 3 taken 1323 times.</div>
-          <div class="takenBranch">&check; Branch 4 taken 161 times.</div>
+          <div class="takenBranch">&check; Branch 3 taken 1326 times.</div>
+          <div class="takenBranch">&check; Branch 4 taken 162 times.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">1484</td>
+      <td class="linecount coveredLine">1488</td>
       <td class="src coveredLine">    <span class="k">for</span> <span class="p">(</span><span class="n">Node</span> <span class="nl">potential</span> <span class="p">:</span> <span class="n">potential_nodes</span><span class="p">)</span> <span class="p">{</span></td>
     </tr>
 
@@ -334,14 +334,14 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">3/4</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 2 taken 1323 times.</div>
+          <div class="takenBranch">&check; Branch 2 taken 1326 times.</div>
           <div class="notTakenBranch">&cross; Branch 3 not taken.</div>
-          <div class="takenBranch">&check; Branch 5 taken 222 times.</div>
-          <div class="takenBranch">&check; Branch 6 taken 1101 times.</div>
+          <div class="takenBranch">&check; Branch 5 taken 223 times.</div>
+          <div class="takenBranch">&check; Branch 6 taken 1103 times.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">1323</td>
+      <td class="linecount coveredLine">1326</td>
       <td class="src coveredLine">      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">node_active</span><span class="p">(</span><span class="n">qmap</span><span class="p">,</span> <span class="n">potential</span><span class="p">))</span> <span class="p">{</span></td>
     </tr>
 
@@ -349,7 +349,7 @@
       <td class="lineno"><a id="l31" href="#l31">31</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">444</td>
+      <td class="linecount coveredLine">446</td>
       <td class="src coveredLine">        <span class="k">return</span> <span class="n">potential</span><span class="p">;</span></td>
     </tr>
 
@@ -405,7 +405,7 @@
       <td class="lineno"><a id="l38" href="#l38">38</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">241</td>
+      <td class="linecount coveredLine">242</td>
       <td class="src coveredLine"><span class="kt">void</span> <span class="n">Routing</span><span class="o">::</span><span class="n">activate_node</span><span class="p">(</span><span class="k">const</span> <span class="n">Node</span><span class="o">&amp;</span> <span class="n">node</span><span class="p">)</span> <span class="p">{</span></td>
     </tr>
 
@@ -413,7 +413,7 @@
       <td class="lineno"><a id="l39" href="#l39">39</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">241</td>
+      <td class="linecount coveredLine">242</td>
       <td class="src coveredLine">  <span class="n">current_arc_</span><span class="p">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">node</span><span class="p">);</span></td>
     </tr>
 
@@ -423,14 +423,14 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">3/4</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 241 times.</div>
+          <div class="takenBranch">&check; Branch 1 taken 242 times.</div>
           <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
-          <div class="takenBranch">&check; Branch 6 taken 755 times.</div>
-          <div class="takenBranch">&check; Branch 7 taken 241 times.</div>
+          <div class="takenBranch">&check; Branch 6 taken 757 times.</div>
+          <div class="takenBranch">&check; Branch 7 taken 242 times.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">996</td>
+      <td class="linecount coveredLine">999</td>
       <td class="src coveredLine">  <span class="k">for</span> <span class="p">(</span><span class="n">Node</span> <span class="nl">neigh</span> <span class="p">:</span> <span class="n">original_arc_</span><span class="p">.</span><span class="n">get_neighbour_nodes</span><span class="p">(</span><span class="n">node</span><span class="p">))</span> <span class="p">{</span></td>
     </tr>
 
@@ -440,14 +440,14 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">3/4</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 2 taken 755 times.</div>
+          <div class="takenBranch">&check; Branch 2 taken 757 times.</div>
           <div class="notTakenBranch">&cross; Branch 3 not taken.</div>
-          <div class="takenBranch">&check; Branch 5 taken 355 times.</div>
-          <div class="takenBranch">&check; Branch 6 taken 400 times.</div>
+          <div class="takenBranch">&check; Branch 5 taken 356 times.</div>
+          <div class="takenBranch">&check; Branch 6 taken 401 times.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">755</td>
+      <td class="linecount coveredLine">757</td>
       <td class="src coveredLine">    <span class="k">if</span> <span class="p">(</span><span class="n">node_active</span><span class="p">(</span><span class="n">qmap</span><span class="p">,</span> <span class="n">neigh</span><span class="p">))</span> <span class="p">{</span></td>
     </tr>
 
@@ -457,14 +457,14 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">3/4</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 355 times.</div>
+          <div class="takenBranch">&check; Branch 1 taken 356 times.</div>
           <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
           <div class="takenBranch">&check; Branch 3 taken 127 times.</div>
-          <div class="takenBranch">&check; Branch 4 taken 228 times.</div>
+          <div class="takenBranch">&check; Branch 4 taken 229 times.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">355</td>
+      <td class="linecount coveredLine">356</td>
       <td class="src coveredLine">      <span class="k">if</span> <span class="p">(</span><span class="n">original_arc_</span><span class="p">.</span><span class="n">edge_exists</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">neigh</span><span class="p">))</span> <span class="p">{</span></td>
     </tr>
 
@@ -497,14 +497,14 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">3/4</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 355 times.</div>
+          <div class="takenBranch">&check; Branch 1 taken 356 times.</div>
           <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
-          <div class="takenBranch">&check; Branch 3 taken 229 times.</div>
+          <div class="takenBranch">&check; Branch 3 taken 230 times.</div>
           <div class="takenBranch">&check; Branch 4 taken 126 times.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">355</td>
+      <td class="linecount coveredLine">356</td>
       <td class="src coveredLine">      <span class="k">if</span> <span class="p">(</span><span class="n">original_arc_</span><span class="p">.</span><span class="n">edge_exists</span><span class="p">(</span><span class="n">neigh</span><span class="p">,</span> <span class="n">node</span><span class="p">))</span> <span class="p">{</span></td>
     </tr>
 
@@ -514,12 +514,12 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">1/2</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 229 times.</div>
+          <div class="takenBranch">&check; Branch 1 taken 230 times.</div>
           <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">229</td>
+      <td class="linecount coveredLine">230</td>
       <td class="src coveredLine">        <span class="n">current_arc_</span><span class="p">.</span><span class="n">add_connection</span><span class="p">(</span><span class="n">neigh</span><span class="p">,</span> <span class="n">node</span><span class="p">);</span></td>
     </tr>
 
@@ -551,7 +551,7 @@
       <td class="lineno"><a id="l50" href="#l50">50</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">241</td>
+      <td class="linecount coveredLine">242</td>
       <td class="src coveredLine"><span class="p">}</span></td>
     </tr>
 
@@ -567,7 +567,7 @@
       <td class="lineno"><a id="l52" href="#l52">52</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">222</td>
+      <td class="linecount coveredLine">223</td>
       <td class="src coveredLine"><span class="kt">void</span> <span class="n">Routing</span><span class="o">::</span><span class="n">reactivate_qubit</span><span class="p">(</span><span class="k">const</span> <span class="n">Qubit</span><span class="o">&amp;</span> <span class="n">qb</span><span class="p">,</span> <span class="k">const</span> <span class="n">Qubit</span><span class="o">&amp;</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span></td>
     </tr>
 
@@ -585,14 +585,14 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">2/4</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 222 times.</div>
+          <div class="takenBranch">&check; Branch 1 taken 223 times.</div>
           <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
-          <div class="takenBranch">&check; Branch 4 taken 222 times.</div>
+          <div class="takenBranch">&check; Branch 4 taken 223 times.</div>
           <div class="notTakenBranch">&cross; Branch 5 not taken.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">444</td>
+      <td class="linecount coveredLine">446</td>
       <td class="src coveredLine">  <span class="n">Node</span> <span class="n">node</span> <span class="o">=</span> <span class="n">find_best_inactive_node</span><span class="p">(</span><span class="n">qmap</span><span class="p">.</span><span class="n">left</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">target</span><span class="p">),</span> <span class="n">original_arc_</span><span class="p">);</span></td>
     </tr>
 
@@ -618,12 +618,12 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">1/2</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 222 times.</div>
+          <div class="takenBranch">&check; Branch 1 taken 223 times.</div>
           <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">222</td>
+      <td class="linecount coveredLine">223</td>
       <td class="src coveredLine">  <span class="n">activate_node</span><span class="p">(</span><span class="n">node</span><span class="p">);</span></td>
     </tr>
 
@@ -631,7 +631,7 @@
       <td class="lineno"><a id="l58" href="#l58">58</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">222</td>
+      <td class="linecount coveredLine">223</td>
       <td class="src coveredLine">  <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">Qubit</span><span class="p">,</span> <span class="n">Node</span><span class="o">&gt;</span> <span class="n">new_in</span> <span class="o">=</span> <span class="p">{</span><span class="n">qb</span><span class="p">,</span> <span class="n">node</span><span class="p">};</span></td>
     </tr>
 
@@ -641,14 +641,14 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">2/4</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 222 times.</div>
+          <div class="takenBranch">&check; Branch 1 taken 223 times.</div>
           <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
-          <div class="takenBranch">&check; Branch 4 taken 222 times.</div>
+          <div class="takenBranch">&check; Branch 4 taken 223 times.</div>
           <div class="notTakenBranch">&cross; Branch 5 not taken.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">222</td>
+      <td class="linecount coveredLine">223</td>
       <td class="src coveredLine">  <span class="n">qmap</span><span class="p">.</span><span class="n">left</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">new_in</span><span class="p">);</span></td>
     </tr>
 
@@ -658,14 +658,14 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">2/4</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 222 times.</div>
+          <div class="takenBranch">&check; Branch 1 taken 223 times.</div>
           <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
-          <div class="takenBranch">&check; Branch 4 taken 222 times.</div>
+          <div class="takenBranch">&check; Branch 4 taken 223 times.</div>
           <div class="notTakenBranch">&cross; Branch 5 not taken.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">222</td>
+      <td class="linecount coveredLine">223</td>
       <td class="src coveredLine">  <span class="n">init_map</span><span class="p">.</span><span class="n">left</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">new_in</span><span class="p">);</span></td>
     </tr>
 
@@ -673,7 +673,7 @@
       <td class="lineno"><a id="l61" href="#l61">61</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">222</td>
+      <td class="linecount coveredLine">223</td>
       <td class="src coveredLine"><span class="p">}</span></td>
     </tr>
 
