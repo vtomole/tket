@@ -74,8 +74,7 @@ list(APPEND TKET_COMPS
     Characterisation
     Converters
     Routing
-    MeasurementSetup
-    Transformations)
+    MeasurementSetup)
 
 foreach(COMP ${TKET_COMPS})
     set(TKET_${COMP}_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/${COMP}/include)
