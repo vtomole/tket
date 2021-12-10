@@ -72,8 +72,7 @@ list(APPEND TKET_COMPS
     Diagonalisation
     Program
     Characterisation
-    Converters
-    Routing)
+    Converters)
 
 foreach(COMP ${TKET_COMPS})
     set(TKET_${COMP}_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/${COMP}/include)
