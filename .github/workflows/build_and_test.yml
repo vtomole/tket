@@ -3,7 +3,7 @@ name: Build and test
 on:
   push:
     branches:
-      - debug-build-refactor.1-winheap
+      - debug-build-refactor.2-winheap
 
 jobs:
 
