@@ -362,7 +362,6 @@ jobs:
     - name: Build symengine
       run: conan create --profile=tket recipes/symengine
     - name: Build tket
-      if: steps.cache-tket.outputs.cache-hit != 'true'
       run: conan create --profile=tket recipes/tket
     - name: Build and run tket tests
       run: conan create --profile=tket recipes/tket-tests

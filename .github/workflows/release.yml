@@ -162,7 +162,6 @@ jobs:
     - name: Build symengine
       run: conan create --profile=tket recipes/symengine
     - name: Build tket
-      if: steps.cache-tket.outputs.cache-hit != 'true'
       run: conan create --profile=tket recipes/tket
     - name: Install pybind11
       run: conan create --profile=tket recipes/pybind11
