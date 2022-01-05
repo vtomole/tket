@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pytket.routing &mdash; pytket 0.17.0 documentation</title>
+  <title>pytket.routing &mdash; pytket 0.18.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -30,7 +30,7 @@
             <a href="index.html" class="icon icon-home"> pytket
           </a>
               <div class="version">
-                0.17
+                0.18
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -102,7 +102,7 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="pytket.routing.Architecture">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pytket.routing.</span></span><span class="sig-name descname"><span class="pre">Architecture</span></span><a class="headerlink" href="#pytket.routing.Architecture" title="Permalink to this definition"></a></dt>
-<dd><p>The base architecture class, describing the connectivity of qubits on a device.</p>
+<dd><p>Class describing the connectivity of qubits on a general device.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.routing.Architecture.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pytket.routing.Architecture.__init__" title="Permalink to this definition"></a></dt>
@@ -149,7 +149,7 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="pytket.routing.Architecture.nodes">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nodes</span></span><a class="headerlink" href="#pytket.routing.Architecture.nodes" title="Permalink to this definition"></a></dt>
-<dd><p>Returns all nodes of architecture as UnitID objects.</p>
+<dd><p>Returns all nodes of architecture as Node objects.</p>
 </dd></dl>
 
 </dd></dl>
@@ -157,12 +157,39 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="pytket.routing.FullyConnected">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pytket.routing.</span></span><span class="sig-name descname"><span class="pre">FullyConnected</span></span><a class="headerlink" href="#pytket.routing.FullyConnected" title="Permalink to this definition"></a></dt>
-<dd><p>Architecture class for number of qubits connected to every other qubit.</p>
+<dd><p>An architecture with full connectivity between qubits.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.routing.FullyConnected.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pytket.routing.FullyConnected" title="pytket.routing.FullyConnected"><span class="pre">pytket.routing.FullyConnected</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.routing.FullyConnected.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>The constructor for a FullyConnected Architecture with some undirected connectivity between qubits.</p>
-<p>:param number of qubits</p>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pytket.routing.FullyConnected" title="pytket.routing.FullyConnected"><span class="pre">pytket.routing.FullyConnected</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pytket.routing.FullyConnected.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Construct a fully-connected architecture.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>n</strong> – number of qubits</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pytket.routing.FullyConnected.from_dict">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">json</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pytket.routing.FullyConnected" title="pytket.routing.FullyConnected"><span class="pre">pytket.routing.FullyConnected</span></a></span></span><a class="headerlink" href="#pytket.routing.FullyConnected.from_dict" title="Permalink to this definition"></a></dt>
+<dd><p>Construct FullyConnected instance from dict representation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pytket.routing.FullyConnected.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pytket.routing.FullyConnected" title="pytket.routing.FullyConnected"><span class="pre">pytket.routing.FullyConnected</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">json</span></span></span><a class="headerlink" href="#pytket.routing.FullyConnected.to_dict" title="Permalink to this definition"></a></dt>
+<dd><p>JSON-serializable dict representation of the architecture.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>dict containing nodes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pytket.routing.FullyConnected.nodes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nodes</span></span><a class="headerlink" href="#pytket.routing.FullyConnected.nodes" title="Permalink to this definition"></a></dt>
+<dd><p>All nodes of the architecture as <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code> objects.</p>
 </dd></dl>
 
 </dd></dl>
@@ -205,6 +232,17 @@
 </dd>
 </dl>
 </dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pytket.routing.NodeGraph">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pytket.routing.</span></span><span class="sig-name descname"><span class="pre">NodeGraph</span></span><a class="headerlink" href="#pytket.routing.NodeGraph" title="Permalink to this definition"></a></dt>
+<dd><p>Abstract class for describing a device connectivity graph.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pytket.routing.NodeGraph.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pytket.routing.NodeGraph.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
