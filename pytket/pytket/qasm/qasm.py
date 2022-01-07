@@ -140,7 +140,7 @@ included_gates = {
     ),
 }
 included_gates["hqslib1"] = included_gates["qelib1"].copy()
-included_gates["hqslib1"].update(("U1q", "rz", "ZZ"))
+included_gates["hqslib1"].update(("U1q", "rz", "ZZ", "RZZ"))
 included_gates["hqslib1"].difference_update(
     ("crx", "cry", "sx", "sxdg", "csx", "swap", "cswap")
 )
@@ -580,6 +580,10 @@ def circuit_to_qasm_io(
             opstr = _tk_to_qasm_noparams[optype]
         elif optype in _tk_to_qasm_params:
             opstr = _tk_to_qasm_params[optype]
+        elif header == "hqslib1" and optype == OpType.ZZPhase:
+            # special handling for zzphase
+            opstr = "RZZ"
+            params = op.params
         else:
             raise QASMUnsupportedError(
                 "Cannot print command of type: {}".format(op.get_name())
