@@ -1,5 +1,5 @@
 <map id="tket::Box" name="tket::Box">
-<area shape="rect" id="node1" title="Abstract class for an operation from which a circuit can be extracted." alt="" coords="320,284,400,311"/>
+<area shape="rect" id="node1" title="Abstract class for an operation from which a circuit can be extracted." alt="" coords="320,309,400,336"/>
 <area shape="rect" id="node4" href="$classtket_1_1CircBox.html" title="Operation defined as a circuit." alt="" coords="497,5,602,32"/>
 <area shape="rect" id="node5" href="$classtket_1_1ClassicalExpBox.html" title="Holding box for abstract expressions on Bits Templated by type which holds expression." alt="" coords="449,56,649,83"/>
 <area shape="rect" id="node6" href="$classtket_1_1CompositeGate.html" title=" " alt="" coords="471,107,627,133"/>
@@ -12,6 +12,7 @@
 <area shape="rect" id="node13" href="$classtket_1_1Unitary1qBox.html" title="One&#45;qubit operation defined as a unitary matrix." alt="" coords="477,461,621,488"/>
 <area shape="rect" id="node14" href="$classtket_1_1Unitary2qBox.html" title="Two&#45;qubit operation defined as a unitary matrix (ILO&#45;BE)" alt="" coords="477,512,621,539"/>
 <area shape="rect" id="node15" href="$classtket_1_1Unitary3qBox.html" title="Three&#45;qubit operation defined as a unitary matrix (ILO&#45;BE)" alt="" coords="477,563,621,589"/>
-<area shape="rect" id="node2" href="$classtket_1_1Op.html" title="Abstract class representing an operation type." alt="" coords="199,284,272,311"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,277,151,318"/>
+<area shape="rect" id="node16" href="$classtket_1_1UnitaryTableauBox.html" title="Encapsulation of a unitary stabilizer tableau as a Box to use within a circuit." alt="" coords="460,613,639,640"/>
+<area shape="rect" id="node2" href="$classtket_1_1Op.html" title="Abstract class representing an operation type." alt="" coords="199,309,272,336"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,302,151,343"/>
 </map>

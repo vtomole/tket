@@ -94,7 +94,7 @@ Inheritance diagram for tket::Box:</div>
 <div class="dyncontent">
 <div class="center"><img src="classtket_1_1Box__inherit__graph.png" border="0" usemap="#tket_1_1Box_inherit__map" alt="Inheritance graph"/></div>
 <map name="tket_1_1Box_inherit__map" id="tket_1_1Box_inherit__map">
-<area shape="rect" title="Abstract class for an operation from which a circuit can be extracted." alt="" coords="320,284,400,311"/>
+<area shape="rect" title="Abstract class for an operation from which a circuit can be extracted." alt="" coords="320,309,400,336"/>
 <area shape="rect" href="classtket_1_1CircBox.html" title="Operation defined as a circuit." alt="" coords="497,5,602,32"/>
 <area shape="rect" href="classtket_1_1ClassicalExpBox.html" title="Holding box for abstract expressions on Bits Templated by type which holds expression." alt="" coords="449,56,649,83"/>
 <area shape="rect" href="classtket_1_1CompositeGate.html" title=" " alt="" coords="471,107,627,133"/>
@@ -107,8 +107,9 @@ Inheritance diagram for tket::Box:</div>
 <area shape="rect" href="classtket_1_1Unitary1qBox.html" title="One&#45;qubit operation defined as a unitary matrix." alt="" coords="477,461,621,488"/>
 <area shape="rect" href="classtket_1_1Unitary2qBox.html" title="Two&#45;qubit operation defined as a unitary matrix (ILO&#45;BE)" alt="" coords="477,512,621,539"/>
 <area shape="rect" href="classtket_1_1Unitary3qBox.html" title="Three&#45;qubit operation defined as a unitary matrix (ILO&#45;BE)" alt="" coords="477,563,621,589"/>
-<area shape="rect" href="classtket_1_1Op.html" title="Abstract class representing an operation type." alt="" coords="199,284,272,311"/>
-<area shape="rect" title=" " alt="" coords="5,277,151,318"/>
+<area shape="rect" href="classtket_1_1UnitaryTableauBox.html" title="Encapsulation of a unitary stabilizer tableau as a Box to use within a circuit." alt="" coords="460,613,639,640"/>
+<area shape="rect" href="classtket_1_1Op.html" title="Abstract class representing an operation type." alt="" coords="199,309,272,336"/>
+<area shape="rect" title=" " alt="" coords="5,302,151,343"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -375,7 +376,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classtket_1_1StabiliserAssertionBox.html#af025f46471df60e39e636b0b5362bf76">tket::StabiliserAssertionBox</a>, <a class="el" href="classtket_1_1ProjectorAssertionBox.html#af5a74731d878146ac10f02a1c81cd4c5">tket::ProjectorAssertionBox</a>, <a class="el" href="classtket_1_1QControlBox.html#a10720cf234636fbb28499e738de27cb6">tket::QControlBox</a>, <a class="el" href="classtket_1_1CompositeGate.html#a47d260e42f2c3e41a8ca97ad72d93483">tket::CompositeGate</a>, <a class="el" href="classtket_1_1PauliExpBox.html#a30d92158e88da0282f11b5b0861f660e">tket::PauliExpBox</a>, <a class="el" href="classtket_1_1ExpBox.html#ad19a5a117270ea9b9d66d1cad90d2882">tket::ExpBox</a>, <a class="el" href="classtket_1_1Unitary3qBox.html#a60c7ffa0d1845aed6e773cdf0789fd45">tket::Unitary3qBox</a>, <a class="el" href="classtket_1_1Unitary2qBox.html#a250638d1f5af7bd4e34e0c4024358c4a">tket::Unitary2qBox</a>, <a class="el" href="classtket_1_1Unitary1qBox.html#aa92be322f3696dd47cd6448fe039d291">tket::Unitary1qBox</a>, <a class="el" href="classtket_1_1CircBox.html#ae01d8561eaf28ae2bcfc35ff1e28db5f">tket::CircBox</a>, <a class="el" href="classtket_1_1ClassicalExpBox.html#afa4899274b9ae7741788035aa8c0fc3b">tket::ClassicalExpBox&lt; T &gt;</a>, and <a class="el" href="classtket_1_1PhasePolyBox.html#a3d0775c20d900ed8b91c99b1fdb5a2f0">tket::PhasePolyBox</a>.</p>
+<p>Implemented in <a class="el" href="classtket_1_1StabiliserAssertionBox.html#af025f46471df60e39e636b0b5362bf76">tket::StabiliserAssertionBox</a>, <a class="el" href="classtket_1_1ProjectorAssertionBox.html#af5a74731d878146ac10f02a1c81cd4c5">tket::ProjectorAssertionBox</a>, <a class="el" href="classtket_1_1QControlBox.html#a10720cf234636fbb28499e738de27cb6">tket::QControlBox</a>, <a class="el" href="classtket_1_1CompositeGate.html#a47d260e42f2c3e41a8ca97ad72d93483">tket::CompositeGate</a>, <a class="el" href="classtket_1_1PauliExpBox.html#a30d92158e88da0282f11b5b0861f660e">tket::PauliExpBox</a>, <a class="el" href="classtket_1_1ExpBox.html#ad19a5a117270ea9b9d66d1cad90d2882">tket::ExpBox</a>, <a class="el" href="classtket_1_1Unitary3qBox.html#a60c7ffa0d1845aed6e773cdf0789fd45">tket::Unitary3qBox</a>, <a class="el" href="classtket_1_1Unitary2qBox.html#a250638d1f5af7bd4e34e0c4024358c4a">tket::Unitary2qBox</a>, <a class="el" href="classtket_1_1Unitary1qBox.html#aa92be322f3696dd47cd6448fe039d291">tket::Unitary1qBox</a>, <a class="el" href="classtket_1_1CircBox.html#ae01d8561eaf28ae2bcfc35ff1e28db5f">tket::CircBox</a>, <a class="el" href="classtket_1_1ClassicalExpBox.html#afa4899274b9ae7741788035aa8c0fc3b">tket::ClassicalExpBox&lt; T &gt;</a>, <a class="el" href="classtket_1_1PhasePolyBox.html#a3d0775c20d900ed8b91c99b1fdb5a2f0">tket::PhasePolyBox</a>, and <a class="el" href="classtket_1_1UnitaryTableauBox.html#a111c0d9dd0207ff8bb0767ffc1812a9d">tket::UnitaryTableauBox</a>.</p>
 
 </div>
 </div>
@@ -435,7 +436,7 @@ Friends</h2></td></tr>
 
 <p>Implements <a class="el" href="classtket_1_1Op.html#af064c3b97d9c69ab70d622a425bf353b">tket::Op</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classtket_1_1StabiliserAssertionBox.html#ae0fd729815fe93347e18a5c9de7b987a">tket::StabiliserAssertionBox</a>, <a class="el" href="classtket_1_1ProjectorAssertionBox.html#a1dd0386609be5a76a806d45157f5d0b4">tket::ProjectorAssertionBox</a>, and <a class="el" href="classtket_1_1ClassicalExpBox.html#ac52995bb8395a40fd54f7bddba46b274">tket::ClassicalExpBox&lt; T &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classtket_1_1StabiliserAssertionBox.html#ae0fd729815fe93347e18a5c9de7b987a">tket::StabiliserAssertionBox</a>, <a class="el" href="classtket_1_1ProjectorAssertionBox.html#a1dd0386609be5a76a806d45157f5d0b4">tket::ProjectorAssertionBox</a>, <a class="el" href="classtket_1_1ClassicalExpBox.html#ac52995bb8395a40fd54f7bddba46b274">tket::ClassicalExpBox&lt; T &gt;</a>, and <a class="el" href="classtket_1_1UnitaryTableauBox.html#a22d0aa9f6eb7c89d4631068bff693c56">tket::UnitaryTableauBox</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="Boxes_8cpp_source.html#l00046">46</a> of file <a class="el" href="Boxes_8cpp_source.html">Boxes.cpp</a>.</p>
 
