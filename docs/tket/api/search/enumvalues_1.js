@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['barrier_4135',['Barrier',['../namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a48656da7a6e48c6887d94f4c69c731b6',1,'tket']]],
-  ['basic_4136',['Basic',['../namespacetket_1_1zx.html#a1dfd6ba927de6d65e68751fef88b62e1a972e73b7a882d0802a4e3a16946a2f94',1,'tket::zx']]],
-  ['bit_4137',['Bit',['../namespacetket.html#ab638aca8b1f14267ebf40f93686b7ac9aed98fd4f2d1aeadad43670b2d07d5b40',1,'tket']]],
-  ['boolean_4138',['Boolean',['../namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526ea27226c864bac7454a8504f8edb15d95b',1,'tket']]],
-  ['branch_4139',['Branch',['../namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3adacdb83ade6c4e8878717e206175dfd8',1,'tket']]],
-  ['bridge_4140',['BRIDGE',['../namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3aa75a1789547188e39e2e344c286d2b62',1,'tket']]]
+  ['barrier_4137',['Barrier',['../namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3a48656da7a6e48c6887d94f4c69c731b6',1,'tket']]],
+  ['basic_4138',['Basic',['../namespacetket_1_1zx.html#a1dfd6ba927de6d65e68751fef88b62e1a972e73b7a882d0802a4e3a16946a2f94',1,'tket::zx']]],
+  ['bit_4139',['Bit',['../namespacetket.html#ab638aca8b1f14267ebf40f93686b7ac9aed98fd4f2d1aeadad43670b2d07d5b40',1,'tket']]],
+  ['boolean_4140',['Boolean',['../namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526ea27226c864bac7454a8504f8edb15d95b',1,'tket']]],
+  ['branch_4141',['Branch',['../namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3adacdb83ade6c4e8878717e206175dfd8',1,'tket']]],
+  ['bridge_4142',['BRIDGE',['../namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3aa75a1789547188e39e2e344c286d2b62',1,'tket']]]
 ];
