@@ -1,5 +1,5 @@
-<map id="tket::CompositeGate" name="tket::CompositeGate">
-<area shape="rect" id="node1" title=" " alt="" coords="275,572,431,599"/>
+<map id="tket::CustomGate" name="tket::CustomGate">
+<area shape="rect" id="node1" title=" " alt="" coords="285,572,421,599"/>
 <area shape="rect" id="node2" href="$classtket_1_1Box.html" title="Abstract class for an operation from which a circuit can be extracted." alt="" coords="313,496,393,523"/>
 <area shape="rect" id="node3" href="$classtket_1_1Op.html" title="Abstract class representing an operation type." alt="" coords="164,399,237,426"/>
 <area shape="rect" id="node4" title=" " alt="" coords="5,288,151,329"/>

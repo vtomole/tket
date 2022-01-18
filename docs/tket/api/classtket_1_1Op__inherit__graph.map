@@ -9,7 +9,7 @@
 <area shape="rect" id="node2" title=" " alt="" coords="5,834,151,875"/>
 <area shape="rect" id="node4" href="$classtket_1_1CircBox.html" title="Operation defined as a circuit." alt="" coords="547,5,653,32"/>
 <area shape="rect" id="node5" href="$classtket_1_1ClassicalExpBox.html" title="Holding box for abstract expressions on Bits Templated by type which holds expression." alt="" coords="500,56,700,83"/>
-<area shape="rect" id="node6" href="$classtket_1_1CompositeGate.html" title=" " alt="" coords="522,107,678,133"/>
+<area shape="rect" id="node6" href="$classtket_1_1CustomGate.html" title=" " alt="" coords="532,107,668,133"/>
 <area shape="rect" id="node7" href="$classtket_1_1ExpBox.html" title="Two&#45;qubit operation defined in terms of a hermitian matrix and a phase." alt="" coords="548,157,652,184"/>
 <area shape="rect" id="node8" href="$classtket_1_1PauliExpBox.html" title="Operation defined as the exponential of a tensor of Pauli operators." alt="" coords="533,208,667,235"/>
 <area shape="rect" id="node9" href="$classtket_1_1PhasePolyBox.html" title="A PhasePolyBox is capable of representing arbitrary Circuits made up of CNOT and RZ,..." alt="" coords="527,259,673,285"/>
