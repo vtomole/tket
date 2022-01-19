@@ -696,11 +696,11 @@ Typedefs</h2></td></tr>
 <tr class="separator:ae5528117c7216ebc94c2449d584b6918"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4be712a96dd59d03a8ada81a8c380d47"><td class="memItemLeft" align="right" valign="top">typedef Eigen::VectorXcd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a4be712a96dd59d03a8ada81a8c380d47">StateVector</a></td></tr>
 <tr class="separator:a4be712a96dd59d03a8ada81a8c380d47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52dee610d0ead12f0722f56c7e75e6b0"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; std::pair&lt; <a class="el" href="namespacetket.html#a6a99d9f2b64decd8803090cc890e1e7d">Edge</a>, <a class="el" href="namespacetket.html#a0bf6a146dadc36738e597ab8892a09f5">Vertex</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a52dee610d0ead12f0722f56c7e75e6b0">candidate_t</a></td></tr>
+<tr class="separator:a52dee610d0ead12f0722f56c7e75e6b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a750d70d7e8beef5ef39831f9417ed698"><td class="memItemLeft" align="right" valign="top">typedef boost::multi_index::multi_index_container&lt; <a class="el" href="structtket_1_1InteractionPoint.html">InteractionPoint</a>, boost::multi_index::indexed_by&lt; boost::multi_index::hashed_unique&lt; boost::multi_index::tag&lt; <a class="el" href="structtket_1_1TagKey.html">TagKey</a> &gt;, boost::multi_index::const_mem_fun&lt; <a class="el" href="structtket_1_1InteractionPoint.html">InteractionPoint</a>, std::pair&lt; <a class="el" href="namespacetket.html#a6a99d9f2b64decd8803090cc890e1e7d">Edge</a>, <a class="el" href="namespacetket.html#a0bf6a146dadc36738e597ab8892a09f5">Vertex</a> &gt;, &amp;<a class="el" href="structtket_1_1InteractionPoint.html#a3e4ee9a1083e95157bddbd988f2adbe7">InteractionPoint::key</a> &gt; &gt;, boost::multi_index::hashed_non_unique&lt; boost::multi_index::tag&lt; <a class="el" href="structtket_1_1TagEdge.html">TagEdge</a> &gt;, boost::multi_index::member&lt; <a class="el" href="structtket_1_1InteractionPoint.html">InteractionPoint</a>, <a class="el" href="namespacetket.html#a6a99d9f2b64decd8803090cc890e1e7d">Edge</a>, &amp;<a class="el" href="structtket_1_1InteractionPoint.html#a01f26d05d496984ff369f6395f683826">InteractionPoint::e</a> &gt; &gt;, boost::multi_index::hashed_non_unique&lt; boost::multi_index::tag&lt; <a class="el" href="structtket_1_1TagSource.html">TagSource</a> &gt;, boost::multi_index::member&lt; <a class="el" href="structtket_1_1InteractionPoint.html">InteractionPoint</a>, <a class="el" href="namespacetket.html#a0bf6a146dadc36738e597ab8892a09f5">Vertex</a>, &amp;<a class="el" href="structtket_1_1InteractionPoint.html#ad02e3e181e86b781292634088fdd911a">InteractionPoint::source</a> &gt; &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a750d70d7e8beef5ef39831f9417ed698">interaction_table_t</a></td></tr>
 <tr class="memdesc:a750d70d7e8beef5ef39831f9417ed698"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores all current InteractionPoints encountered.  <a href="namespacetket.html#a750d70d7e8beef5ef39831f9417ed698">More...</a><br /></td></tr>
 <tr class="separator:a750d70d7e8beef5ef39831f9417ed698"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52dee610d0ead12f0722f56c7e75e6b0"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; std::pair&lt; <a class="el" href="namespacetket.html#a6a99d9f2b64decd8803090cc890e1e7d">Edge</a>, <a class="el" href="namespacetket.html#a0bf6a146dadc36738e597ab8892a09f5">Vertex</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a52dee610d0ead12f0722f56c7e75e6b0">candidate_t</a></td></tr>
-<tr class="separator:a52dee610d0ead12f0722f56c7e75e6b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af57cecce2730d872099e4fe518755ab1"><td class="memItemLeft" align="right" valign="top">typedef std::unique_ptr&lt; QInteraction &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#af57cecce2730d872099e4fe518755ab1">iptr</a></td></tr>
 <tr class="separator:af57cecce2730d872099e4fe518755ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68999408b52ab2f0f191f814ec93f4de"><td class="memItemLeft" align="right" valign="top">typedef std::complex&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a68999408b52ab2f0f191f814ec93f4de">Complex</a></td></tr>
@@ -786,15 +786,15 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a0f814e0f8e98465926bde71420d68cf6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a0f814e0f8e98465926bde71420d68cf6">ReverseType</a> { <a class="el" href="namespacetket.html#a0f814e0f8e98465926bde71420d68cf6aff3515281dbe7196dc30f3b7e3cf43cc">dagger</a> = 1, 
-<a class="el" href="namespacetket.html#a0f814e0f8e98465926bde71420d68cf6aa0384d313f8d9e42660fa7de18b7ed9e">transpose</a> = 2
- }</td></tr>
-<tr class="separator:a0f814e0f8e98465926bde71420d68cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5339172fa072164a0c7baa91f2e5b536"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a5339172fa072164a0c7baa91f2e5b536">VertexType</a> { <a class="el" href="namespacetket.html#a5339172fa072164a0c7baa91f2e5b536a033b1e7914d380b381c8b7f9f131328d">VertexType::Quantum</a>, 
 <a class="el" href="namespacetket.html#a5339172fa072164a0c7baa91f2e5b536a2091523979dbedcad728958414922c72">VertexType::Classical</a>, 
 <a class="el" href="namespacetket.html#a5339172fa072164a0c7baa91f2e5b536a0cbbe0321e0c40dfa77a159ef6bfad6b">VertexType::Measure</a>
  }</td></tr>
 <tr class="separator:a5339172fa072164a0c7baa91f2e5b536"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f814e0f8e98465926bde71420d68cf6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a0f814e0f8e98465926bde71420d68cf6">ReverseType</a> { <a class="el" href="namespacetket.html#a0f814e0f8e98465926bde71420d68cf6aff3515281dbe7196dc30f3b7e3cf43cc">dagger</a> = 1, 
+<a class="el" href="namespacetket.html#a0f814e0f8e98465926bde71420d68cf6aa0384d313f8d9e42660fa7de18b7ed9e">transpose</a> = 2
+ }</td></tr>
+<tr class="separator:a0f814e0f8e98465926bde71420d68cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d578ba7a7267e8172ac6a302fab7f67"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a2d578ba7a7267e8172ac6a302fab7f67">PauliPartitionStrat</a> { <a class="el" href="namespacetket.html#a2d578ba7a7267e8172ac6a302fab7f67aa14f01b7f06d08c48fcd7d489a614123">PauliPartitionStrat::NonConflictingSets</a>, 
 <a class="el" href="namespacetket.html#a2d578ba7a7267e8172ac6a302fab7f67a86136b8cb28f581080492c00147a2976">PauliPartitionStrat::CommutingSets</a>
  }</td></tr>
@@ -1020,10 +1020,6 @@ Functions</h2></td></tr>
 <tr class="separator:a8f3c55b5848ce021bac9642afa763d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ca885e368fdafd84fe074a22facbd83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a8ca885e368fdafd84fe074a22facbd83">from_json</a> (const nlohmann::json &amp;j, <a class="el" href="namespacetket.html#af75542439fd2b810fa80c3fcea30c236">composite_def_ptr_t</a> &amp;cdef)</td></tr>
 <tr class="separator:a8ca885e368fdafd84fe074a22facbd83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a341757251e63fcd3f5051c6a419ad53f"><td class="memTemplParams" colspan="2">template&lt;typename BoxT &gt; </td></tr>
-<tr class="memitem:a341757251e63fcd3f5051c6a419ad53f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a75405147f5ffd3ff1ff1118fba63bcd0">Op_ptr</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetket.html#a341757251e63fcd3f5051c6a419ad53f">set_box_id</a> (BoxT &amp;b, boost::uuids::uuid newid)</td></tr>
-<tr class="memdesc:a341757251e63fcd3f5051c6a419ad53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set explicit ID on a box.  <a href="namespacetket.html#a341757251e63fcd3f5051c6a419ad53f">More...</a><br /></td></tr>
-<tr class="separator:a341757251e63fcd3f5051c6a419ad53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8ac411c8fdf32607b7fb7801531d367"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#aa8ac411c8fdf32607b7fb7801531d367">to_json</a> (nlohmann::json &amp;j, const <a class="el" href="classtket_1_1Circuit.html">Circuit</a> &amp;circ)</td></tr>
 <tr class="separator:aa8ac411c8fdf32607b7fb7801531d367"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a366cedf47a3be4f0b69f9d91c9be3b80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a366cedf47a3be4f0b69f9d91c9be3b80">from_json</a> (const nlohmann::json &amp;j, <a class="el" href="classtket_1_1Circuit.html">Circuit</a> &amp;circ)</td></tr>
@@ -1065,6 +1061,16 @@ Functions</h2></td></tr>
 <tr class="memitem:a9baf176b894f317f5199c0c3af4ef843"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a9baf176b894f317f5199c0c3af4ef843">is_valid</a> (const <a class="el" href="namespacetket.html#acaa3eca1694fd98b7188f988764af8f0">DAG</a> &amp;G)</td></tr>
 <tr class="memdesc:a9baf176b894f317f5199c0c3af4ef843"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check that the DAG satisfies the requirements of the <a class="el" href="classtket_1_1Circuit.html" title="A circuit.">Circuit</a> class.  <a href="namespacetket.html#a9baf176b894f317f5199c0c3af4ef843">More...</a><br /></td></tr>
 <tr class="separator:a9baf176b894f317f5199c0c3af4ef843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a341757251e63fcd3f5051c6a419ad53f"><td class="memTemplParams" colspan="2">template&lt;typename BoxT &gt; </td></tr>
+<tr class="memitem:a341757251e63fcd3f5051c6a419ad53f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a75405147f5ffd3ff1ff1118fba63bcd0">Op_ptr</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetket.html#a341757251e63fcd3f5051c6a419ad53f">set_box_id</a> (BoxT &amp;b, boost::uuids::uuid newid)</td></tr>
+<tr class="memdesc:a341757251e63fcd3f5051c6a419ad53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set explicit ID on a box.  <a href="namespacetket.html#a341757251e63fcd3f5051c6a419ad53f">More...</a><br /></td></tr>
+<tr class="separator:a341757251e63fcd3f5051c6a419ad53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e01316d325719d3e3eab4d5e49e21d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtket_1_1Circuit.html">Circuit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a4e01316d325719d3e3eab4d5e49e21d4">three_qubit_synthesis</a> (const Eigen::MatrixXcd &amp;U)</td></tr>
+<tr class="memdesc:a4e01316d325719d3e3eab4d5e49e21d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synthesise a 3-qubit circuit from an arbitrary 8x8 unitary.  <a href="namespacetket.html#a4e01316d325719d3e3eab4d5e49e21d4">More...</a><br /></td></tr>
+<tr class="separator:a4e01316d325719d3e3eab4d5e49e21d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49ba27c6b60daf2678b329efd1f7602e"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXcd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a49ba27c6b60daf2678b329efd1f7602e">get_3q_unitary</a> (const <a class="el" href="classtket_1_1Circuit.html">Circuit</a> &amp;c)</td></tr>
+<tr class="memdesc:a49ba27c6b60daf2678b329efd1f7602e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a 3-qubit circuit to its corresponding unitary matrix.  <a href="namespacetket.html#a49ba27c6b60daf2678b329efd1f7602e">More...</a><br /></td></tr>
+<tr class="separator:a49ba27c6b60daf2678b329efd1f7602e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a0240d1e7ccf9f2730f0ed111f171ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a3a0240d1e7ccf9f2730f0ed111f171ca">add_latex_for_command</a> (LatexContext &amp;context, const <a class="el" href="classtket_1_1Command.html">Command</a> &amp;command)</td></tr>
 <tr class="separator:a3a0240d1e7ccf9f2730f0ed111f171ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3b5b1ee4365cf7d9aa365d5aca128c7"><td class="memItemLeft" align="right" valign="top">boundary_t::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ac3b5b1ee4365cf7d9aa365d5aca128c7">boundary_elem</a> (const <a class="el" href="classtket_1_1Circuit.html">Circuit</a> &amp;circ, const <a class="el" href="classtket_1_1UnitID.html">UnitID</a> &amp;unit)</td></tr>
@@ -1075,22 +1081,16 @@ Functions</h2></td></tr>
 <tr class="separator:a9e34ddb30dbc05b8b1fb0167e55e0587"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5cfd76224bd2a945c23f62bb1ed1fc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ab5cfd76224bd2a945c23f62bb1ed1fc7">from_json</a> (const nlohmann::json &amp;j, <a class="el" href="namespacetket.html#a75405147f5ffd3ff1ff1118fba63bcd0">Op_ptr</a> &amp;op)</td></tr>
 <tr class="separator:ab5cfd76224bd2a945c23f62bb1ed1fc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e01316d325719d3e3eab4d5e49e21d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtket_1_1Circuit.html">Circuit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a4e01316d325719d3e3eab4d5e49e21d4">three_qubit_synthesis</a> (const Eigen::MatrixXcd &amp;U)</td></tr>
-<tr class="memdesc:a4e01316d325719d3e3eab4d5e49e21d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synthesise a 3-qubit circuit from an arbitrary 8x8 unitary.  <a href="namespacetket.html#a4e01316d325719d3e3eab4d5e49e21d4">More...</a><br /></td></tr>
-<tr class="separator:a4e01316d325719d3e3eab4d5e49e21d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49ba27c6b60daf2678b329efd1f7602e"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXcd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a49ba27c6b60daf2678b329efd1f7602e">get_3q_unitary</a> (const <a class="el" href="classtket_1_1Circuit.html">Circuit</a> &amp;c)</td></tr>
-<tr class="memdesc:a49ba27c6b60daf2678b329efd1f7602e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a 3-qubit circuit to its corresponding unitary matrix.  <a href="namespacetket.html#a49ba27c6b60daf2678b329efd1f7602e">More...</a><br /></td></tr>
-<tr class="separator:a49ba27c6b60daf2678b329efd1f7602e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6659caa295e4d603e0a2f99153c0c8c6"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a6659caa295e4d603e0a2f99153c0c8c6">operator&lt;&lt;</a> (std::ostream &amp;os, <a class="el" href="classtket_1_1CliffTableau.html">CliffTableau</a> const &amp;tab)</td></tr>
 <tr class="separator:a6659caa295e4d603e0a2f99153c0c8c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbf7bf989e70c814e53a8cf807869dc9"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#afbf7bf989e70c814e53a8cf807869dc9">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classtket_1_1SymplecticTableau.html">SymplecticTableau</a> &amp;tab)</td></tr>
 <tr class="separator:afbf7bf989e70c814e53a8cf807869dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af77b256200e94c75d42e9fe80ca88cc2"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#af77b256200e94c75d42e9fe80ca88cc2">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classtket_1_1UnitaryTableau.html">UnitaryTableau</a> &amp;tab)</td></tr>
+<tr class="separator:af77b256200e94c75d42e9fe80ca88cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52597b988342641e65c81c1e39cc626a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a52597b988342641e65c81c1e39cc626a">to_json</a> (nlohmann::json &amp;j, const <a class="el" href="classtket_1_1SymplecticTableau.html">SymplecticTableau</a> &amp;tab)</td></tr>
 <tr class="separator:a52597b988342641e65c81c1e39cc626a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cf840b2fd4a49f60d559bdf328ad73c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a2cf840b2fd4a49f60d559bdf328ad73c">from_json</a> (const nlohmann::json &amp;j, <a class="el" href="classtket_1_1SymplecticTableau.html">SymplecticTableau</a> &amp;tab)</td></tr>
 <tr class="separator:a2cf840b2fd4a49f60d559bdf328ad73c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af77b256200e94c75d42e9fe80ca88cc2"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#af77b256200e94c75d42e9fe80ca88cc2">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classtket_1_1UnitaryTableau.html">UnitaryTableau</a> &amp;tab)</td></tr>
-<tr class="separator:af77b256200e94c75d42e9fe80ca88cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f7d62bf33d0168c3728124e63282db6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a3f7d62bf33d0168c3728124e63282db6">to_json</a> (nlohmann::json &amp;j, const <a class="el" href="classtket_1_1UnitaryTableau.html">UnitaryTableau</a> &amp;tab)</td></tr>
 <tr class="separator:a3f7d62bf33d0168c3728124e63282db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06b460c582581f8c159d245411828117"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a06b460c582581f8c159d245411828117">from_json</a> (const nlohmann::json &amp;j, <a class="el" href="classtket_1_1UnitaryTableau.html">UnitaryTableau</a> &amp;tab)</td></tr>
@@ -1101,6 +1101,8 @@ Functions</h2></td></tr>
 <tr class="memitem:ab46224ff036f91009e465938cfb23177"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtket_1_1Circuit.html">Circuit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ab46224ff036f91009e465938cfb23177">tableau_to_circuit</a> (const <a class="el" href="classtket_1_1CliffTableau.html">CliffTableau</a> &amp;tab)</td></tr>
 <tr class="memdesc:ab46224ff036f91009e465938cfb23177"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a circuit producing the same effect as the tableau.  <a href="namespacetket.html#ab46224ff036f91009e465938cfb23177">More...</a><br /></td></tr>
 <tr class="separator:ab46224ff036f91009e465938cfb23177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ee84900c6f189caa05834c34389a824"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a2ee84900c6f189caa05834c34389a824">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classtket_1_1DiagMatrix.html">DiagMatrix</a> &amp;diam)</td></tr>
+<tr class="separator:a2ee84900c6f189caa05834c34389a824"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace2143bc6b068ad3ab0e65bbffda8f06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtket_1_1UnitaryTableau.html">UnitaryTableau</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ace2143bc6b068ad3ab0e65bbffda8f06">circuit_to_unitary_tableau</a> (const <a class="el" href="classtket_1_1Circuit.html">Circuit</a> &amp;circ)</td></tr>
 <tr class="separator:ace2143bc6b068ad3ab0e65bbffda8f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1c5437a4e8e7bb96d13513fa0619f7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtket_1_1Circuit.html">Circuit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ae1c5437a4e8e7bb96d13513fa0619f7d">unitary_tableau_to_circuit</a> (const <a class="el" href="classtket_1_1UnitaryTableau.html">UnitaryTableau</a> &amp;tab)</td></tr>
@@ -1116,18 +1118,16 @@ Functions</h2></td></tr>
 <tr class="memitem:aff68530a447b753166638c4500742c05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtket_1_1Circuit.html">Circuit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#aff68530a447b753166638c4500742c05">pauli_graph_to_circuit_sets</a> (const <a class="el" href="classtket_1_1PauliGraph.html">PauliGraph</a> &amp;pg, <a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7">CXConfigType</a> cx_config=<a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7adfa90f1b4eb3affbd3b46af34ed2477c">CXConfigType::Snake</a>)</td></tr>
 <tr class="memdesc:aff68530a447b753166638c4500742c05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synthesises a circuit equivalent to the <a class="el" href="classtket_1_1PauliGraph.html" title="Dependency graph of a circuit wrt Pauli Gadgets.">PauliGraph</a> by building sets of mutually commuting pauli gadgets and simultaneously diagonalizing each gadget in a set.  <a href="namespacetket.html#aff68530a447b753166638c4500742c05">More...</a><br /></td></tr>
 <tr class="separator:aff68530a447b753166638c4500742c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ee84900c6f189caa05834c34389a824"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a2ee84900c6f189caa05834c34389a824">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classtket_1_1DiagMatrix.html">DiagMatrix</a> &amp;diam)</td></tr>
-<tr class="separator:a2ee84900c6f189caa05834c34389a824"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e72f1332998ecf4ef5d1047cfe5a95d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a8e72f1332998ecf4ef5d1047cfe5a95d">append_single_pauli_gadget</a> (<a class="el" href="classtket_1_1Circuit.html">Circuit</a> &amp;circ, const <a class="el" href="classtket_1_1QubitPauliTensor.html">QubitPauliTensor</a> &amp;pauli, <a class="el" href="namespacetket.html#a6817cd1c8a5630b406c86a59173edd21">Expr</a> angle, <a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7">CXConfigType</a> cx_config=<a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7adfa90f1b4eb3affbd3b46af34ed2477c">CXConfigType::Snake</a>)</td></tr>
 <tr class="memdesc:a8e72f1332998ecf4ef5d1047cfe5a95d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a Pauli gadget to the end of a given circuit.  <a href="namespacetket.html#a8e72f1332998ecf4ef5d1047cfe5a95d">More...</a><br /></td></tr>
 <tr class="separator:a8e72f1332998ecf4ef5d1047cfe5a95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4cafa843d160e028e5d01bed9bb5e1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#aa4cafa843d160e028e5d01bed9bb5e1a">append_pauli_gadget_pair</a> (<a class="el" href="classtket_1_1Circuit.html">Circuit</a> &amp;circ, <a class="el" href="classtket_1_1QubitPauliTensor.html">QubitPauliTensor</a> pauli0, <a class="el" href="namespacetket.html#a6817cd1c8a5630b406c86a59173edd21">Expr</a> angle0, <a class="el" href="classtket_1_1QubitPauliTensor.html">QubitPauliTensor</a> pauli1, <a class="el" href="namespacetket.html#a6817cd1c8a5630b406c86a59173edd21">Expr</a> angle1, <a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7">CXConfigType</a> cx_config=<a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7adfa90f1b4eb3affbd3b46af34ed2477c">CXConfigType::Snake</a>)</td></tr>
 <tr class="memdesc:aa4cafa843d160e028e5d01bed9bb5e1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a pair of Pauli gadgets to the end of a given circuit.  <a href="namespacetket.html#aa4cafa843d160e028e5d01bed9bb5e1a">More...</a><br /></td></tr>
 <tr class="separator:aa4cafa843d160e028e5d01bed9bb5e1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8635d43399ecceae017954a465215061"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtket_1_1Circuit.html">Circuit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a8635d43399ecceae017954a465215061">pauli_graph_to_circuit</a> (const <a class="el" href="classtket_1_1PauliGraph.html">PauliGraph</a> &amp;pg)</td></tr>
-<tr class="separator:a8635d43399ecceae017954a465215061"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a932186c537c4578b1de77ccb4cc36a45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtket_1_1Circuit.html">Circuit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a932186c537c4578b1de77ccb4cc36a45">gray_synth</a> (unsigned n_qubits, const std::list&lt; <a class="el" href="namespacetket.html#ac8f21c5b5b88cc7d6c575ad14cdebc7d">phase_term_t</a> &gt; &amp;parities, const <a class="el" href="namespacetket.html#afc6a69cf78c26da6848112274764acc6">MatrixXb</a> &amp;linear_transformation)</td></tr>
 <tr class="separator:a932186c537c4578b1de77ccb4cc36a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8635d43399ecceae017954a465215061"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtket_1_1Circuit.html">Circuit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a8635d43399ecceae017954a465215061">pauli_graph_to_circuit</a> (const <a class="el" href="classtket_1_1PauliGraph.html">PauliGraph</a> &amp;pg)</td></tr>
+<tr class="separator:a8635d43399ecceae017954a465215061"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8676ea2e430ed41e948245bec68788bf"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a8676ea2e430ed41e948245bec68788bf"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Matrix&lt; T, Eigen::Dynamic, Eigen::Dynamic &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetket.html#a8676ea2e430ed41e948245bec68788bf">load_dynamic_matrix</a> (const nlohmann::json &amp;j, size_t rows, size_t cols)</td></tr>
 <tr class="separator:a8676ea2e430ed41e948245bec68788bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1146,11 +1146,11 @@ Functions</h2></td></tr>
 <tr class="memitem:adaf20f64ee900050ef56e989d9eeb36e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#adaf20f64ee900050ef56e989d9eeb36e">apply_conjugations</a> (<a class="el" href="classtket_1_1QubitPauliTensor.html">QubitPauliTensor</a> &amp;qps, const <a class="el" href="namespacetket.html#af68c3d1ae6d4e2b35060ce06befbb61d">Conjugations</a> &amp;conjugations)</td></tr>
 <tr class="memdesc:adaf20f64ee900050ef56e989d9eeb36e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies Clifford conjugations to a <a class="el" href="classtket_1_1QubitPauliTensor.html" title="A tensor of Pauli terms .">QubitPauliTensor</a>.  <a href="namespacetket.html#adaf20f64ee900050ef56e989d9eeb36e">More...</a><br /></td></tr>
 <tr class="separator:adaf20f64ee900050ef56e989d9eeb36e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a829aa71448a24707faab84888d1351b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a829aa71448a24707faab84888d1351b8">insert_into_gadget_map</a> (<a class="el" href="namespacetket.html#a47a141804781ea2c3f8b6175fc14bb1e">QubitOperator</a> &amp;gadget_map, const <a class="el" href="structtket_1_1PauliGadgetProperties.html">PauliGadgetProperties</a> &amp;pgp)</td></tr>
+<tr class="separator:a829aa71448a24707faab84888d1351b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a927111948a205d5c6f6bf3a2a9a80305"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a927111948a205d5c6f6bf3a2a9a80305">conjugate_with_xxphase3</a> (const <a class="el" href="classtket_1_1Qubit.html">Qubit</a> &amp;qb_a, const <a class="el" href="classtket_1_1Qubit.html">Qubit</a> &amp;qb_b, <a class="el" href="namespacetket.html#af68c3d1ae6d4e2b35060ce06befbb61d">Conjugations</a> &amp;conjugations, <a class="el" href="classtket_1_1Circuit.html">Circuit</a> &amp;cliff_circ)</td></tr>
 <tr class="memdesc:a927111948a205d5c6f6bf3a2a9a80305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given two qubits on which to conjugate a CX gate, try to conjugate with a XXPhase3 instead.  <a href="namespacetket.html#a927111948a205d5c6f6bf3a2a9a80305">More...</a><br /></td></tr>
 <tr class="separator:a927111948a205d5c6f6bf3a2a9a80305"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a829aa71448a24707faab84888d1351b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a829aa71448a24707faab84888d1351b8">insert_into_gadget_map</a> (<a class="el" href="namespacetket.html#a47a141804781ea2c3f8b6175fc14bb1e">QubitOperator</a> &amp;gadget_map, const <a class="el" href="structtket_1_1PauliGadgetProperties.html">PauliGadgetProperties</a> &amp;pgp)</td></tr>
-<tr class="separator:a829aa71448a24707faab84888d1351b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0978e9c57c22fc52b7f593982ed9497a"><td class="memItemLeft" align="right" valign="top">std::list&lt; std::list&lt; <a class="el" href="classtket_1_1QubitPauliString.html">QubitPauliString</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a0978e9c57c22fc52b7f593982ed9497a">term_sequence</a> (const std::list&lt; <a class="el" href="classtket_1_1QubitPauliString.html">QubitPauliString</a> &gt; &amp;strings, <a class="el" href="namespacetket.html#a2d578ba7a7267e8172ac6a302fab7f67">PauliPartitionStrat</a> strat, <a class="el" href="namespacetket.html#a4e74bb747130174e23260df03944dd0c">GraphColourMethod</a> method=<a class="el" href="namespacetket.html#a4e74bb747130174e23260df03944dd0ca46a9ebdb80117bfa1f0cdea65438290a">GraphColourMethod::Lazy</a>)</td></tr>
 <tr class="memdesc:a0978e9c57c22fc52b7f593982ed9497a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitions a QubitOperator into lists of mutually commuting gadgets.  <a href="namespacetket.html#a0978e9c57c22fc52b7f593982ed9497a">More...</a><br /></td></tr>
 <tr class="separator:a0978e9c57c22fc52b7f593982ed9497a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1163,14 +1163,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a5f13b3eae392d361c4034346aa3ab52a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a75405147f5ffd3ff1ff1118fba63bcd0">Op_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a5f13b3eae392d361c4034346aa3ab52a">get_op_ptr</a> (<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3">OpType</a> chosen_type, const std::vector&lt; <a class="el" href="namespacetket.html#a6817cd1c8a5630b406c86a59173edd21">Expr</a> &gt; &amp;params={}, unsigned n_qubits=0)</td></tr>
 <tr class="memdesc:a5f13b3eae392d361c4034346aa3ab52a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an operation from a type, vector of parameters and qubit count.  <a href="namespacetket.html#a5f13b3eae392d361c4034346aa3ab52a">More...</a><br /></td></tr>
 <tr class="separator:a5f13b3eae392d361c4034346aa3ab52a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a319e7088617e746ed10901b8ae8c1a59"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a319e7088617e746ed10901b8ae8c1a59">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classtket_1_1Rotation.html">Rotation</a> &amp;q)</td></tr>
-<tr class="separator:a319e7088617e746ed10901b8ae8c1a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37dcfa730319c0af923800c927c60e4a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a37dcfa730319c0af923800c927c60e4a">tk1_angles_from_unitary</a> (const Eigen::Matrix2cd &amp;U)</td></tr>
 <tr class="memdesc:a37dcfa730319c0af923800c927c60e4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct TK1 angles and phase from matrix.  <a href="namespacetket.html#a37dcfa730319c0af923800c927c60e4a">More...</a><br /></td></tr>
 <tr class="separator:a37dcfa730319c0af923800c927c60e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6daa2a7afeb4ad439aba3cb30e3b0ba1"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix2cd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a6daa2a7afeb4ad439aba3cb30e3b0ba1">get_matrix_from_tk1_angles</a> (std::vector&lt; <a class="el" href="namespacetket.html#a6817cd1c8a5630b406c86a59173edd21">Expr</a> &gt; params)</td></tr>
 <tr class="memdesc:a6daa2a7afeb4ad439aba3cb30e3b0ba1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct matrix from TK1 angles and phase.  <a href="namespacetket.html#a6daa2a7afeb4ad439aba3cb30e3b0ba1">More...</a><br /></td></tr>
 <tr class="separator:a6daa2a7afeb4ad439aba3cb30e3b0ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a319e7088617e746ed10901b8ae8c1a59"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a319e7088617e746ed10901b8ae8c1a59">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classtket_1_1Rotation.html">Rotation</a> &amp;q)</td></tr>
+<tr class="separator:a319e7088617e746ed10901b8ae8c1a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e79753b023b7d8cb018af7762324388"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtket_1_1MeasurementSetup.html">MeasurementSetup</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a9e79753b023b7d8cb018af7762324388">measurement_reduction</a> (const std::list&lt; <a class="el" href="classtket_1_1QubitPauliString.html">QubitPauliString</a> &gt; &amp;strings, <a class="el" href="namespacetket.html#a2d578ba7a7267e8172ac6a302fab7f67">PauliPartitionStrat</a> strat, <a class="el" href="namespacetket.html#a4e74bb747130174e23260df03944dd0c">GraphColourMethod</a> method=<a class="el" href="namespacetket.html#a4e74bb747130174e23260df03944dd0ca46a9ebdb80117bfa1f0cdea65438290a">GraphColourMethod::Lazy</a>, <a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7">CXConfigType</a> cx_config=<a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7adfa90f1b4eb3affbd3b46af34ed2477c">CXConfigType::Snake</a>)</td></tr>
 <tr class="memdesc:a9e79753b023b7d8cb018af7762324388"><td class="mdescLeft">&#160;</td><td class="mdescRight">A tool for reducing the number of measurements required for variational quantum algorithms by partitioning Pauli strings into mutually commuting sets.  <a href="namespacetket.html#a9e79753b023b7d8cb018af7762324388">More...</a><br /></td></tr>
 <tr class="separator:a9e79753b023b7d8cb018af7762324388"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1207,9 +1207,6 @@ Functions</h2></td></tr>
 <tr class="separator:a7abfb8c99b6073b5bc9b759ed22983fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59e3aaaf5c90d85da65f8abd18a73670"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a59e3aaaf5c90d85da65f8abd18a73670">NLOHMANN_JSON_SERIALIZE_ENUM</a> (<a class="el" href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526e">EdgeType</a>, { {<a class="el" href="namespacetket.html#a4c73a949b027dea7f23b1d5a1bdd526ea033b1e7914d380b381c8b7f9f131328d">EdgeType::Quantum</a>, &quot;Q&quot;}, {EdgeType::Classical, &quot;C&quot;}, {EdgeType::Boolean, &quot;B&quot;}, })</td></tr>
 <tr class="separator:a59e3aaaf5c90d85da65f8abd18a73670"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4154694047fd9c2d7ea10b93fada082"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#aa4154694047fd9c2d7ea10b93fada082">find_in_set</a> (const <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3">OpType</a> &amp;val, const <a class="el" href="namespacetket.html#a165b1d270a350af87f1c7a63d68f9276">OpTypeSet</a> &amp;set)</td></tr>
-<tr class="memdesc:aa4154694047fd9c2d7ea10b93fada082"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether a given operation type belongs to a given set.  <a href="namespacetket.html#aa4154694047fd9c2d7ea10b93fada082">More...</a><br /></td></tr>
-<tr class="separator:aa4154694047fd9c2d7ea10b93fada082"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58cfa7b63277a3124e19fe6bb098fc06"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a165b1d270a350af87f1c7a63d68f9276">OpTypeSet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a58cfa7b63277a3124e19fe6bb098fc06">all_gate_types</a> ()</td></tr>
 <tr class="memdesc:a58cfa7b63277a3124e19fe6bb098fc06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of all elementary gates.  <a href="namespacetket.html#a58cfa7b63277a3124e19fe6bb098fc06">More...</a><br /></td></tr>
 <tr class="separator:a58cfa7b63277a3124e19fe6bb098fc06"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1270,6 +1267,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a1dde40d41ce2d0f7d423345cc92198ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a1dde40d41ce2d0f7d423345cc92198ef">is_classical_type</a> (<a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3">OpType</a> optype)</td></tr>
 <tr class="memdesc:a1dde40d41ce2d0f7d423345cc92198ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for purely classical gates derived from <a class="el" href="classtket_1_1ClassicalOp.html" title="A purely classical operation.">ClassicalOp</a>.  <a href="namespacetket.html#a1dde40d41ce2d0f7d423345cc92198ef">More...</a><br /></td></tr>
 <tr class="separator:a1dde40d41ce2d0f7d423345cc92198ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4154694047fd9c2d7ea10b93fada082"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#aa4154694047fd9c2d7ea10b93fada082">find_in_set</a> (const <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3">OpType</a> &amp;val, const <a class="el" href="namespacetket.html#a165b1d270a350af87f1c7a63d68f9276">OpTypeSet</a> &amp;set)</td></tr>
+<tr class="memdesc:aa4154694047fd9c2d7ea10b93fada082"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether a given operation type belongs to a given set.  <a href="namespacetket.html#aa4154694047fd9c2d7ea10b93fada082">More...</a><br /></td></tr>
+<tr class="separator:aa4154694047fd9c2d7ea10b93fada082"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcad9d32bc10a4c7369c92e3ef2f4be4"><td class="memItemLeft" align="right" valign="top">const std::map&lt; <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3">OpType</a>, <a class="el" href="structtket_1_1OpTypeInfo.html">OpTypeInfo</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#afcad9d32bc10a4c7369c92e3ef2f4be4">optypeinfo</a> ()</td></tr>
 <tr class="memdesc:afcad9d32bc10a4c7369c92e3ef2f4be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Information including name and shape of each operation type.  <a href="namespacetket.html#afcad9d32bc10a4c7369c92e3ef2f4be4">More...</a><br /></td></tr>
 <tr class="separator:afcad9d32bc10a4c7369c92e3ef2f4be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1304,36 +1304,36 @@ Functions</h2></td></tr>
 <tr class="separator:abbd9e439893a135ef75fe4e0002b04e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a45c5f1a8abc71d0e82b07118447a13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a7a45c5f1a8abc71d0e82b07118447a13">gen_squash_pass</a> (const <a class="el" href="namespacetket.html#a165b1d270a350af87f1c7a63d68f9276">OpTypeSet</a> &amp;singleqs, const std::function&lt; <a class="el" href="classtket_1_1Circuit.html">Circuit</a>(const <a class="el" href="namespacetket.html#a6817cd1c8a5630b406c86a59173edd21">Expr</a> &amp;, const <a class="el" href="namespacetket.html#a6817cd1c8a5630b406c86a59173edd21">Expr</a> &amp;, const <a class="el" href="namespacetket.html#a6817cd1c8a5630b406c86a59173edd21">Expr</a> &amp;)&gt; &amp;tk1_replacement)</td></tr>
 <tr class="separator:a7a45c5f1a8abc71d0e82b07118447a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a864a56176ac3f123b6b3a7f8f1ae14b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a864a56176ac3f123b6b3a7f8f1ae14b6">gen_euler_pass</a> (const <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3">OpType</a> &amp;q, const <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3">OpType</a> &amp;p, bool strict)</td></tr>
-<tr class="separator:a864a56176ac3f123b6b3a7f8f1ae14b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed2e05e652ba5938bbc5c21306d62e5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#aed2e05e652ba5938bbc5c21306d62e5f">gen_clifford_simp_pass</a> (bool allow_swaps)</td></tr>
-<tr class="separator:aed2e05e652ba5938bbc5c21306d62e5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e45753f2d4e755ed60ed47cf8cc9920"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a8e45753f2d4e755ed60ed47cf8cc9920">gen_euler_pass</a> (const <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3">OpType</a> &amp;q, const <a class="el" href="namespacetket.html#a13e81344da4794f2648eb9a7b286fcf3">OpType</a> &amp;p, bool strict=false)</td></tr>
+<tr class="separator:a8e45753f2d4e755ed60ed47cf8cc9920"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79e18754200c9d1c04c5da83df46a092"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a79e18754200c9d1c04c5da83df46a092">gen_clifford_simp_pass</a> (bool allow_swaps=true)</td></tr>
+<tr class="separator:a79e18754200c9d1c04c5da83df46a092"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2efc79966cabc6d9028cd8d7aea5631"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ad2efc79966cabc6d9028cd8d7aea5631">gen_rename_qubits_pass</a> (const std::map&lt; <a class="el" href="classtket_1_1Qubit.html">Qubit</a>, <a class="el" href="classtket_1_1Qubit.html">Qubit</a> &gt; &amp;qm)</td></tr>
 <tr class="memdesc:ad2efc79966cabc6d9028cd8d7aea5631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pass to rename some or all qubits according to the given map.  <a href="namespacetket.html#ad2efc79966cabc6d9028cd8d7aea5631">More...</a><br /></td></tr>
 <tr class="separator:ad2efc79966cabc6d9028cd8d7aea5631"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ef1dd16aa2e2ffae269f18d6b9bbf1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a2ef1dd16aa2e2ffae269f18d6b9bbf1d">gen_placement_pass</a> (const <a class="el" href="namespacetket.html#a1e9ef2f54928c21910e7463fed578f88">PlacementPtr</a> &amp;placement_ptr)</td></tr>
 <tr class="separator:a2ef1dd16aa2e2ffae269f18d6b9bbf1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b08f0f414af9a3956ded22cf58967e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a0b08f0f414af9a3956ded22cf58967e3">gen_full_mapping_pass</a> (const <a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arc, const <a class="el" href="namespacetket.html#a1e9ef2f54928c21910e7463fed578f88">PlacementPtr</a> &amp;placement_ptr, const <a class="el" href="structtket_1_1RoutingConfig.html">RoutingConfig</a> &amp;config)</td></tr>
-<tr class="separator:a0b08f0f414af9a3956ded22cf58967e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c77b3895e23383a6abbbdaac6d41750"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a9c77b3895e23383a6abbbdaac6d41750">gen_full_mapping_pass</a> (const <a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arc, const <a class="el" href="namespacetket.html#a1e9ef2f54928c21910e7463fed578f88">PlacementPtr</a> &amp;placement_ptr, const <a class="el" href="structtket_1_1RoutingConfig.html">RoutingConfig</a> &amp;config={})</td></tr>
+<tr class="separator:a9c77b3895e23383a6abbbdaac6d41750"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2400d96eafe9aba36418634996b55664"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a2400d96eafe9aba36418634996b55664">gen_default_mapping_pass</a> (const <a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arc)</td></tr>
 <tr class="separator:a2400d96eafe9aba36418634996b55664"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae340e84685eaed52d0e6e9395ddeedf4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ae340e84685eaed52d0e6e9395ddeedf4">gen_cx_mapping_pass</a> (const <a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arc, const <a class="el" href="namespacetket.html#a1e9ef2f54928c21910e7463fed578f88">PlacementPtr</a> &amp;placement_ptr, const <a class="el" href="structtket_1_1RoutingConfig.html">RoutingConfig</a> &amp;config, bool directed_cx, bool delay_measures)</td></tr>
 <tr class="separator:ae340e84685eaed52d0e6e9395ddeedf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a931e08e59ebd9bb689ac2de7be3dd3a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a931e08e59ebd9bb689ac2de7be3dd3a8">gen_routing_pass</a> (const <a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arc, const <a class="el" href="structtket_1_1RoutingConfig.html">RoutingConfig</a> &amp;config)</td></tr>
-<tr class="separator:a931e08e59ebd9bb689ac2de7be3dd3a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f80c7c3cd3cd366678f3f636f1df16d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a5f80c7c3cd3cd366678f3f636f1df16d">gen_placement_pass_phase_poly</a> (const <a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arc)</td></tr>
-<tr class="memdesc:a5f80c7c3cd3cd366678f3f636f1df16d"><td class="mdescLeft">&#160;</td><td class="mdescRight">pass to place all not yet placed qubits of the circuit to the given architecture for the architecture aware synthesis.  <a href="namespacetket.html#a5f80c7c3cd3cd366678f3f636f1df16d">More...</a><br /></td></tr>
-<tr class="separator:a5f80c7c3cd3cd366678f3f636f1df16d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf585e6899778ef16796bf57480e519d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#aaf585e6899778ef16796bf57480e519d">gen_routing_pass</a> (const <a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arc, const <a class="el" href="structtket_1_1RoutingConfig.html">RoutingConfig</a> &amp;config={})</td></tr>
+<tr class="separator:aaf585e6899778ef16796bf57480e519d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2f9d7fb37eca99eb329f66ed4605af8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ac2f9d7fb37eca99eb329f66ed4605af8">gen_directed_cx_routing_pass</a> (const <a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arc, const <a class="el" href="structtket_1_1RoutingConfig.html">RoutingConfig</a> &amp;config={})</td></tr>
+<tr class="separator:ac2f9d7fb37eca99eb329f66ed4605af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58f426cda6a5527b6c273adff59cf493"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a58f426cda6a5527b6c273adff59cf493">aas_routing_pass</a> (const <a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arc, const unsigned lookahead=1, const <a class="el" href="namespacetket_1_1aas.html#af7e883680036ba6f4ba75d9729a443c5">aas::CNotSynthType</a> cnotsynthtype=<a class="el" href="namespacetket_1_1aas.html#af7e883680036ba6f4ba75d9729a443c5a59506b7d50499cf62e3099491c108c9d">aas::CNotSynthType::Rec</a>)</td></tr>
 <tr class="memdesc:a58f426cda6a5527b6c273adff59cf493"><td class="mdescLeft">&#160;</td><td class="mdescRight">execute architecture aware synthesis on a given architecture for an allready place circuit, only for circuit which contains Cx+Rz+H gates  <a href="namespacetket.html#a58f426cda6a5527b6c273adff59cf493">More...</a><br /></td></tr>
 <tr class="separator:a58f426cda6a5527b6c273adff59cf493"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7035ff6c0d1cf8177d6dbb3f9093c2e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a7035ff6c0d1cf8177d6dbb3f9093c2e7">gen_full_mapping_pass_phase_poly</a> (const <a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arc, const unsigned lookahead=1, const <a class="el" href="namespacetket_1_1aas.html#af7e883680036ba6f4ba75d9729a443c5">aas::CNotSynthType</a> cnotsynthtype=<a class="el" href="namespacetket_1_1aas.html#af7e883680036ba6f4ba75d9729a443c5a59506b7d50499cf62e3099491c108c9d">aas::CNotSynthType::Rec</a>)</td></tr>
 <tr class="memdesc:a7035ff6c0d1cf8177d6dbb3f9093c2e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">execute architecture aware synthesis on a given architecture for any circuit.  <a href="namespacetket.html#a7035ff6c0d1cf8177d6dbb3f9093c2e7">More...</a><br /></td></tr>
 <tr class="separator:a7035ff6c0d1cf8177d6dbb3f9093c2e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc545f0f3e8e88962d68fe0f17491929"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#abc545f0f3e8e88962d68fe0f17491929">gen_directed_cx_routing_pass</a> (const <a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arc, const <a class="el" href="structtket_1_1RoutingConfig.html">RoutingConfig</a> &amp;config)</td></tr>
-<tr class="separator:abc545f0f3e8e88962d68fe0f17491929"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a906d3a97e59bef558312f56b7c0098ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a906d3a97e59bef558312f56b7c0098ec">gen_decompose_routing_gates_to_cxs_pass</a> (const <a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arc, bool directed)</td></tr>
-<tr class="separator:a906d3a97e59bef558312f56b7c0098ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f80c7c3cd3cd366678f3f636f1df16d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a5f80c7c3cd3cd366678f3f636f1df16d">gen_placement_pass_phase_poly</a> (const <a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arc)</td></tr>
+<tr class="memdesc:a5f80c7c3cd3cd366678f3f636f1df16d"><td class="mdescLeft">&#160;</td><td class="mdescRight">pass to place all not yet placed qubits of the circuit to the given architecture for the architecture aware synthesis.  <a href="namespacetket.html#a5f80c7c3cd3cd366678f3f636f1df16d">More...</a><br /></td></tr>
+<tr class="separator:a5f80c7c3cd3cd366678f3f636f1df16d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11e148349270e1d6b8367dfaef31327a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a11e148349270e1d6b8367dfaef31327a">gen_decompose_routing_gates_to_cxs_pass</a> (const <a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arc=<a class="el" href="classtket_1_1Architecture.html">Architecture</a>(), bool directed=false)</td></tr>
+<tr class="separator:a11e148349270e1d6b8367dfaef31327a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6661ec3354e36f7c23bb2cf07e5a9fab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a6661ec3354e36f7c23bb2cf07e5a9fab">gen_user_defined_swap_decomp_pass</a> (const <a class="el" href="classtket_1_1Circuit.html">Circuit</a> &amp;replacement_circ)</td></tr>
 <tr class="separator:a6661ec3354e36f7c23bb2cf07e5a9fab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4efeea4f6c332895a01188032ad3886b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a4efeea4f6c332895a01188032ad3886b">KAKDecomposition</a> (double cx_fidelity=1.)</td></tr>
@@ -1345,14 +1345,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a189e634314337fed3c247b428f2aea3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a189e634314337fed3c247b428f2aea3c">FullPeepholeOptimise</a> (bool allow_swaps=true)</td></tr>
 <tr class="memdesc:a189e634314337fed3c247b428f2aea3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs peephole optimisation including resynthesis of 2- and 3-qubit gate sequences, and converts to a circuit containing only CX and TK1 gates.  <a href="namespacetket.html#a189e634314337fed3c247b428f2aea3c">More...</a><br /></td></tr>
 <tr class="separator:a189e634314337fed3c247b428f2aea3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95690781262d22df0071113af874dcb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a95690781262d22df0071113af874dcb8">gen_optimise_phase_gadgets</a> (<a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7">CXConfigType</a> cx_config)</td></tr>
-<tr class="separator:a95690781262d22df0071113af874dcb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b2b50dc805ddddaa8670c06b73db427"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a7b2b50dc805ddddaa8670c06b73db427">gen_pairwise_pauli_gadgets</a> (<a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7">CXConfigType</a> cx_config)</td></tr>
-<tr class="separator:a7b2b50dc805ddddaa8670c06b73db427"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8739e2abd0fb2cd18fcabe8c343bf861"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a8739e2abd0fb2cd18fcabe8c343bf861">gen_synthesise_pauli_graph</a> (<a class="el" href="namespacetket.html#a6ca1119d69af1780bb19f416a7d5980a">PauliSynthStrat</a> strat, <a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7">CXConfigType</a> cx_config)</td></tr>
-<tr class="separator:a8739e2abd0fb2cd18fcabe8c343bf861"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5304d669807a2cefa6b122e0d4c3d2c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a5304d669807a2cefa6b122e0d4c3d2c6">gen_special_UCC_synthesis</a> (<a class="el" href="namespacetket.html#a6ca1119d69af1780bb19f416a7d5980a">PauliSynthStrat</a> strat, <a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7">CXConfigType</a> cx_config)</td></tr>
-<tr class="separator:a5304d669807a2cefa6b122e0d4c3d2c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1940dc4d6b6d29ea44d4120e03b9c5a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a1940dc4d6b6d29ea44d4120e03b9c5a4">gen_optimise_phase_gadgets</a> (<a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7">CXConfigType</a> cx_config=<a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7adfa90f1b4eb3affbd3b46af34ed2477c">CXConfigType::Snake</a>)</td></tr>
+<tr class="separator:a1940dc4d6b6d29ea44d4120e03b9c5a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a397234e6a5bd81a30153dadbe26fb6b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a397234e6a5bd81a30153dadbe26fb6b2">gen_pairwise_pauli_gadgets</a> (<a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7">CXConfigType</a> cx_config=<a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7adfa90f1b4eb3affbd3b46af34ed2477c">CXConfigType::Snake</a>)</td></tr>
+<tr class="separator:a397234e6a5bd81a30153dadbe26fb6b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f1f5dcf60c209920157abb3962a8721"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a8f1f5dcf60c209920157abb3962a8721">gen_synthesise_pauli_graph</a> (<a class="el" href="namespacetket.html#a6ca1119d69af1780bb19f416a7d5980a">PauliSynthStrat</a> strat=<a class="el" href="namespacetket.html#a6ca1119d69af1780bb19f416a7d5980aa86f5baf708c6c250204451eb89736947">PauliSynthStrat::Sets</a>, <a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7">CXConfigType</a> cx_config=<a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7adfa90f1b4eb3affbd3b46af34ed2477c">CXConfigType::Snake</a>)</td></tr>
+<tr class="separator:a8f1f5dcf60c209920157abb3962a8721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7c0cd7881c4f7bbe8bd7681585b273c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#aa7c0cd7881c4f7bbe8bd7681585b273c">gen_special_UCC_synthesis</a> (<a class="el" href="namespacetket.html#a6ca1119d69af1780bb19f416a7d5980a">PauliSynthStrat</a> strat=<a class="el" href="namespacetket.html#a6ca1119d69af1780bb19f416a7d5980aa86f5baf708c6c250204451eb89736947">PauliSynthStrat::Sets</a>, <a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7">CXConfigType</a> cx_config=<a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7adfa90f1b4eb3affbd3b46af34ed2477c">CXConfigType::Snake</a>)</td></tr>
+<tr class="separator:aa7c0cd7881c4f7bbe8bd7681585b273c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a380d6cf0011ef54231ba00cb449eacd2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a380d6cf0011ef54231ba00cb449eacd2">gen_simplify_initial</a> (<a class="el" href="classtket_1_1Transform.html#a1119ac3b38675c88d1f7ca11e581019c">Transform::AllowClassical</a> allow_classical=<a class="el" href="classtket_1_1Transform.html#a1119ac3b38675c88d1f7ca11e581019ca93cba07454f06a4a960172bbd6e2a435">Transform::AllowClassical::Yes</a>, <a class="el" href="classtket_1_1Transform.html#a952598122b3ce535e6c174fa04703e67">Transform::CreateAllQubits</a> create_all_qubits=<a class="el" href="classtket_1_1Transform.html#a952598122b3ce535e6c174fa04703e67abafd7322c6e97d25b6299b5d6fe8920b">Transform::CreateAllQubits::No</a>, std::shared_ptr&lt; const <a class="el" href="classtket_1_1Circuit.html">Circuit</a> &gt; xcirc=0)</td></tr>
 <tr class="memdesc:a380d6cf0011ef54231ba00cb449eacd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a pass to simplify the circuit where it acts on known basis states.  <a href="namespacetket.html#a380d6cf0011ef54231ba00cb449eacd2">More...</a><br /></td></tr>
 <tr class="separator:a380d6cf0011ef54231ba00cb449eacd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1370,6 +1370,30 @@ Functions</h2></td></tr>
 <tr class="separator:a86c285ff20e6866b32416e1823c1a9a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03635f2d784b9ea65050cc7879d6590d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a03635f2d784b9ea65050cc7879d6590d">SynthesiseUMD</a> ()</td></tr>
 <tr class="separator:a03635f2d784b9ea65050cc7879d6590d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6881aa2934bd98d916a6c679e1662835"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a6881aa2934bd98d916a6c679e1662835">PeepholeOptimise2Q</a> ()</td></tr>
+<tr class="separator:a6881aa2934bd98d916a6c679e1662835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7133491e626469a2be1c2fbb7b7f52ad"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a7133491e626469a2be1c2fbb7b7f52ad">RemoveRedundancies</a> ()</td></tr>
+<tr class="separator:a7133491e626469a2be1c2fbb7b7f52ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abea9ccde3a73d57244810ed055bc9aae"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#abea9ccde3a73d57244810ed055bc9aae">CommuteThroughMultis</a> ()</td></tr>
+<tr class="separator:abea9ccde3a73d57244810ed055bc9aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44431d4439944c1bb8341ac171115b6f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a44431d4439944c1bb8341ac171115b6f">GlobalisePhasedX</a> ()</td></tr>
+<tr class="separator:a44431d4439944c1bb8341ac171115b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7dc1ef75fef790265269e949e500c57"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ad7dc1ef75fef790265269e949e500c57">DecomposeArbitrarilyControlledGates</a> ()</td></tr>
+<tr class="separator:ad7dc1ef75fef790265269e949e500c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8af76b0265bcc1c9b9a20b77020ec894"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a8af76b0265bcc1c9b9a20b77020ec894">DecomposeMultiQubitsCX</a> ()</td></tr>
+<tr class="separator:a8af76b0265bcc1c9b9a20b77020ec894"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5e18ce76c2caf1e48feca2c1525f0db"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#af5e18ce76c2caf1e48feca2c1525f0db">DecomposeSingleQubitsTK1</a> ()</td></tr>
+<tr class="separator:af5e18ce76c2caf1e48feca2c1525f0db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b6653dc02103205ef74ff4df63d85db"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a6b6653dc02103205ef74ff4df63d85db">DecomposeBoxes</a> ()</td></tr>
+<tr class="separator:a6b6653dc02103205ef74ff4df63d85db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a881dc403670ae085bbe25375375f3350"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a881dc403670ae085bbe25375375f3350">ComposePhasePolyBoxes</a> ()</td></tr>
+<tr class="memdesc:a881dc403670ae085bbe25375375f3350"><td class="mdescLeft">&#160;</td><td class="mdescRight">converts a circuit containing all possible gates to a circuit containing only phase poly boxes + H gates (and measure + reset + collapse + barrier)  <a href="namespacetket.html#a881dc403670ae085bbe25375375f3350">More...</a><br /></td></tr>
+<tr class="separator:a881dc403670ae085bbe25375375f3350"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a278646f17409e315c09ea2f3ec19af1f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a278646f17409e315c09ea2f3ec19af1f">SquashTK1</a> ()</td></tr>
+<tr class="memdesc:a278646f17409e315c09ea2f3ec19af1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Squash sequences of single-qubit gates to TK1 gates.  <a href="namespacetket.html#a278646f17409e315c09ea2f3ec19af1f">More...</a><br /></td></tr>
+<tr class="separator:a278646f17409e315c09ea2f3ec19af1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2963dca68b6522f7c136198c5f4aa346"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a2963dca68b6522f7c136198c5f4aa346">SquashHQS</a> ()</td></tr>
+<tr class="separator:a2963dca68b6522f7c136198c5f4aa346"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19864aeef9f30981a0b067496282fd13"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a19864aeef9f30981a0b067496282fd13">RebaseCirq</a> ()</td></tr>
 <tr class="separator:a19864aeef9f30981a0b067496282fd13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34b010fdb53c253118de9379bec0746b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a34b010fdb53c253118de9379bec0746b">RebaseTket</a> ()</td></tr>
@@ -1388,30 +1412,6 @@ Functions</h2></td></tr>
 <tr class="separator:ac4c4aabda57ba444c88f95babc7d5ae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27f1700c17987d85b947c2ff56762f06"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a27f1700c17987d85b947c2ff56762f06">RebaseOQC</a> ()</td></tr>
 <tr class="separator:a27f1700c17987d85b947c2ff56762f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6881aa2934bd98d916a6c679e1662835"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a6881aa2934bd98d916a6c679e1662835">PeepholeOptimise2Q</a> ()</td></tr>
-<tr class="separator:a6881aa2934bd98d916a6c679e1662835"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7133491e626469a2be1c2fbb7b7f52ad"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a7133491e626469a2be1c2fbb7b7f52ad">RemoveRedundancies</a> ()</td></tr>
-<tr class="separator:a7133491e626469a2be1c2fbb7b7f52ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abea9ccde3a73d57244810ed055bc9aae"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#abea9ccde3a73d57244810ed055bc9aae">CommuteThroughMultis</a> ()</td></tr>
-<tr class="separator:abea9ccde3a73d57244810ed055bc9aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44431d4439944c1bb8341ac171115b6f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a44431d4439944c1bb8341ac171115b6f">GlobalisePhasedX</a> ()</td></tr>
-<tr class="separator:a44431d4439944c1bb8341ac171115b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7dc1ef75fef790265269e949e500c57"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ad7dc1ef75fef790265269e949e500c57">DecomposeArbitrarilyControlledGates</a> ()</td></tr>
-<tr class="separator:ad7dc1ef75fef790265269e949e500c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8af76b0265bcc1c9b9a20b77020ec894"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a8af76b0265bcc1c9b9a20b77020ec894">DecomposeMultiQubitsCX</a> ()</td></tr>
-<tr class="separator:a8af76b0265bcc1c9b9a20b77020ec894"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5e18ce76c2caf1e48feca2c1525f0db"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#af5e18ce76c2caf1e48feca2c1525f0db">DecomposeSingleQubitsTK1</a> ()</td></tr>
-<tr class="separator:af5e18ce76c2caf1e48feca2c1525f0db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a881dc403670ae085bbe25375375f3350"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a881dc403670ae085bbe25375375f3350">ComposePhasePolyBoxes</a> ()</td></tr>
-<tr class="memdesc:a881dc403670ae085bbe25375375f3350"><td class="mdescLeft">&#160;</td><td class="mdescRight">converts a circuit containing all possible gates to a circuit containing only phase poly boxes + H gates (and measure + reset + collapse + barrier)  <a href="namespacetket.html#a881dc403670ae085bbe25375375f3350">More...</a><br /></td></tr>
-<tr class="separator:a881dc403670ae085bbe25375375f3350"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b6653dc02103205ef74ff4df63d85db"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a6b6653dc02103205ef74ff4df63d85db">DecomposeBoxes</a> ()</td></tr>
-<tr class="separator:a6b6653dc02103205ef74ff4df63d85db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a278646f17409e315c09ea2f3ec19af1f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a278646f17409e315c09ea2f3ec19af1f">SquashTK1</a> ()</td></tr>
-<tr class="memdesc:a278646f17409e315c09ea2f3ec19af1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Squash sequences of single-qubit gates to TK1 gates.  <a href="namespacetket.html#a278646f17409e315c09ea2f3ec19af1f">More...</a><br /></td></tr>
-<tr class="separator:a278646f17409e315c09ea2f3ec19af1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2963dca68b6522f7c136198c5f4aa346"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a2963dca68b6522f7c136198c5f4aa346">SquashHQS</a> ()</td></tr>
-<tr class="separator:a2963dca68b6522f7c136198c5f4aa346"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace6b7d8b2389a67dfe99b91f7355779e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ace6b7d8b2389a67dfe99b91f7355779e">DecomposeBridges</a> ()</td></tr>
 <tr class="separator:ace6b7d8b2389a67dfe99b91f7355779e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdf2f51de87dfbec78c20e072a697576"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#afdf2f51de87dfbec78c20e072a697576">FlattenRegisters</a> ()</td></tr>
@@ -1438,16 +1438,6 @@ Functions</h2></td></tr>
 <tr class="separator:ad2ff38d1ea7442cc2b00846c2de03262"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad07d64aab6460c67fccb94ae78254389"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ad07d64aab6460c67fccb94ae78254389">node_active</a> (const <a class="el" href="namespacetket.html#a0e7c9f29964bb7b8f23a98bafe824702">qubit_bimap_t</a> &amp;map, <a class="el" href="classtket_1_1Node.html">Node</a> node)</td></tr>
 <tr class="separator:ad07d64aab6460c67fccb94ae78254389"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd3f8ef05d4dcb5bccf103055b28280d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#acd3f8ef05d4dcb5bccf103055b28280d">to_json</a> (nlohmann::json &amp;j, const <a class="el" href="namespacetket.html#a1e9ef2f54928c21910e7463fed578f88">PlacementPtr</a> &amp;placement_ptr)</td></tr>
-<tr class="separator:acd3f8ef05d4dcb5bccf103055b28280d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa79e55ea529a7216ac8766240db0c76c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#aa79e55ea529a7216ac8766240db0c76c">from_json</a> (const nlohmann::json &amp;j, <a class="el" href="namespacetket.html#a1e9ef2f54928c21910e7463fed578f88">PlacementPtr</a> &amp;placement_ptr)</td></tr>
-<tr class="separator:aa79e55ea529a7216ac8766240db0c76c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f34bdc7c9cc83bf203b8a69ef431403"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a3f34bdc7c9cc83bf203b8a69ef431403">to_json</a> (nlohmann::json &amp;j, const <a class="el" href="structtket_1_1PlacementConfig.html">PlacementConfig</a> &amp;config)</td></tr>
-<tr class="separator:a3f34bdc7c9cc83bf203b8a69ef431403"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af443bf5a4acc69ef066af0c293b621a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#af443bf5a4acc69ef066af0c293b621a7">from_json</a> (const nlohmann::json &amp;j, <a class="el" href="structtket_1_1PlacementConfig.html">PlacementConfig</a> &amp;config)</td></tr>
-<tr class="separator:af443bf5a4acc69ef066af0c293b621a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50a32fc14ae09d66a67e0735e005a260"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a50a32fc14ae09d66a67e0735e005a260">fill_partial_mapping</a> (const <a class="el" href="namespacetket.html#ad949814c463d9f998540c0f812e76aa6">qubit_vector_t</a> &amp;current_qubits, <a class="el" href="namespacetket.html#a966ac0999b4d9e8b395ed7c69f0fbeb6">qubit_mapping_t</a> &amp;partial_mapping)</td></tr>
-<tr class="separator:a50a32fc14ae09d66a67e0735e005a260"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c9fbc04e4615d9844eaa5b0e3243830"><td class="memTemplParams" colspan="2">template&lt;class MapType &gt; </td></tr>
 <tr class="memitem:a1c9fbc04e4615d9844eaa5b0e3243830"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetket.html#a1c9fbc04e4615d9844eaa5b0e3243830">print_map</a> (const MapType &amp;m)</td></tr>
 <tr class="memdesc:a1c9fbc04e4615d9844eaa5b0e3243830"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a map to stdout.  <a href="namespacetket.html#a1c9fbc04e4615d9844eaa5b0e3243830">More...</a><br /></td></tr>
@@ -1465,6 +1455,25 @@ Functions</h2></td></tr>
 <tr class="separator:a6cb01fc09f4f0eb66406ce5d9ea3a1f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fafe7fe0e3b498404d03fd29415bdb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#ae0783a3ad2fcb131346b928d76ad0699">node_set_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a5fafe7fe0e3b498404d03fd29415bdb4">best_nodes</a> (<a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arc, unsigned n_remove)</td></tr>
 <tr class="separator:a5fafe7fe0e3b498404d03fd29415bdb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ebda7e67987f6f1136510567d16ce4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a2ebda7e67987f6f1136510567d16ce4c">remove_unmapped_nodes</a> (<a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arc, <a class="el" href="namespacetket.html#a0e7c9f29964bb7b8f23a98bafe824702">qubit_bimap_t</a> &amp;map, <a class="el" href="classtket_1_1Circuit.html">Circuit</a> &amp;circ)</td></tr>
+<tr class="separator:a2ebda7e67987f6f1136510567d16ce4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a697c69d636ddf7d53922a869a0424ebb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a697c69d636ddf7d53922a869a0424ebb">subgraph_remove_if_connected</a> (<a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arc, const <a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;subarc, const <a class="el" href="classtket_1_1Node.html">Node</a> &amp;node)</td></tr>
+<tr class="separator:a697c69d636ddf7d53922a869a0424ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78c61fe6cf97e96d31060c7fc8a66082"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtket_1_1Circuit.html">Circuit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a78c61fe6cf97e96d31060c7fc8a66082">autoroute</a> (const <a class="el" href="classtket_1_1Circuit.html">Circuit</a> &amp;circ, const <a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arc)</td></tr>
+<tr class="separator:a78c61fe6cf97e96d31060c7fc8a66082"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57d6dd3bedfc60a482c50c8eb4a155af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a57d6dd3bedfc60a482c50c8eb4a155af">respects_connectivity_constraints</a> (const <a class="el" href="classtket_1_1Circuit.html">Circuit</a> &amp;circ, const <a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arch, bool directed, bool bridge_allowed=false)</td></tr>
+<tr class="memdesc:a57d6dd3bedfc60a482c50c8eb4a155af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check that the circuit respects architectural constraints.  <a href="namespacetket.html#a57d6dd3bedfc60a482c50c8eb4a155af">More...</a><br /></td></tr>
+<tr class="separator:a57d6dd3bedfc60a482c50c8eb4a155af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd3f8ef05d4dcb5bccf103055b28280d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#acd3f8ef05d4dcb5bccf103055b28280d">to_json</a> (nlohmann::json &amp;j, const <a class="el" href="namespacetket.html#a1e9ef2f54928c21910e7463fed578f88">PlacementPtr</a> &amp;placement_ptr)</td></tr>
+<tr class="separator:acd3f8ef05d4dcb5bccf103055b28280d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa79e55ea529a7216ac8766240db0c76c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#aa79e55ea529a7216ac8766240db0c76c">from_json</a> (const nlohmann::json &amp;j, <a class="el" href="namespacetket.html#a1e9ef2f54928c21910e7463fed578f88">PlacementPtr</a> &amp;placement_ptr)</td></tr>
+<tr class="separator:aa79e55ea529a7216ac8766240db0c76c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f34bdc7c9cc83bf203b8a69ef431403"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a3f34bdc7c9cc83bf203b8a69ef431403">to_json</a> (nlohmann::json &amp;j, const <a class="el" href="structtket_1_1PlacementConfig.html">PlacementConfig</a> &amp;config)</td></tr>
+<tr class="separator:a3f34bdc7c9cc83bf203b8a69ef431403"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af443bf5a4acc69ef066af0c293b621a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#af443bf5a4acc69ef066af0c293b621a7">from_json</a> (const nlohmann::json &amp;j, <a class="el" href="structtket_1_1PlacementConfig.html">PlacementConfig</a> &amp;config)</td></tr>
+<tr class="separator:af443bf5a4acc69ef066af0c293b621a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50a32fc14ae09d66a67e0735e005a260"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a50a32fc14ae09d66a67e0735e005a260">fill_partial_mapping</a> (const <a class="el" href="namespacetket.html#ad949814c463d9f998540c0f812e76aa6">qubit_vector_t</a> &amp;current_qubits, <a class="el" href="namespacetket.html#a966ac0999b4d9e8b395ed7c69f0fbeb6">qubit_mapping_t</a> &amp;partial_mapping)</td></tr>
+<tr class="separator:a50a32fc14ae09d66a67e0735e005a260"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71563a7be7947aa750987c38e3fb1355"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="classtket_1_1Qubit.html">Qubit</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a71563a7be7947aa750987c38e3fb1355">interacting_qbs</a> (const <a class="el" href="classtket_1_1Circuit.html">Circuit</a> &amp;circ)</td></tr>
 <tr class="separator:a71563a7be7947aa750987c38e3fb1355"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a734058ad6bcc5adb686220568c40e53c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a966ac0999b4d9e8b395ed7c69f0fbeb6">qubit_mapping_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a734058ad6bcc5adb686220568c40e53c">map_lines</a> (<a class="el" href="namespacetket.html#a395b2a6581622ba168664c866fa57ac0">QubitLineList</a> &amp;qb_lines, const std::vector&lt; <a class="el" href="namespacetket.html#aa69b939e387dec2594785178af37f56e">node_vector_t</a> &gt; &amp;node_lines)</td></tr>
@@ -1477,19 +1486,10 @@ Functions</h2></td></tr>
 <tr class="separator:afc7345df999678dc312cfa9316f8ab57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af237233afb2d6cd77a113b8d9735735d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#af237233afb2d6cd77a113b8d9735735d">from_json</a> (const nlohmann::json &amp;j, <a class="el" href="structtket_1_1RoutingConfig.html">RoutingConfig</a> &amp;config)</td></tr>
 <tr class="separator:af237233afb2d6cd77a113b8d9735735d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a697c69d636ddf7d53922a869a0424ebb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a697c69d636ddf7d53922a869a0424ebb">subgraph_remove_if_connected</a> (<a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arc, const <a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;subarc, const <a class="el" href="classtket_1_1Node.html">Node</a> &amp;node)</td></tr>
-<tr class="separator:a697c69d636ddf7d53922a869a0424ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ebda7e67987f6f1136510567d16ce4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a2ebda7e67987f6f1136510567d16ce4c">remove_unmapped_nodes</a> (<a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arc, <a class="el" href="namespacetket.html#a0e7c9f29964bb7b8f23a98bafe824702">qubit_bimap_t</a> &amp;map, <a class="el" href="classtket_1_1Circuit.html">Circuit</a> &amp;circ)</td></tr>
-<tr class="separator:a2ebda7e67987f6f1136510567d16ce4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d084d5bc30611b70affb40ed747dc0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a966ac0999b4d9e8b395ed7c69f0fbeb6">qubit_mapping_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a2d084d5bc30611b70affb40ed747dc0b">get_qmap_from_circuit</a> (<a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arc, <a class="el" href="classtket_1_1Circuit.html">Circuit</a> &amp;circ)</td></tr>
 <tr class="separator:a2d084d5bc30611b70affb40ed747dc0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78c61fe6cf97e96d31060c7fc8a66082"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtket_1_1Circuit.html">Circuit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a78c61fe6cf97e96d31060c7fc8a66082">autoroute</a> (const <a class="el" href="classtket_1_1Circuit.html">Circuit</a> &amp;circ, const <a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arc)</td></tr>
-<tr class="separator:a78c61fe6cf97e96d31060c7fc8a66082"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86e9f0416d1f5f89c6b9eb00a149fc60"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a86e9f0416d1f5f89c6b9eb00a149fc60">check_vertex_is_CX</a> (const <a class="el" href="classtket_1_1Circuit.html">Circuit</a> &amp;circ_, const <a class="el" href="namespacetket.html#a0bf6a146dadc36738e597ab8892a09f5">Vertex</a> &amp;v)</td></tr>
 <tr class="separator:a86e9f0416d1f5f89c6b9eb00a149fc60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57d6dd3bedfc60a482c50c8eb4a155af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a57d6dd3bedfc60a482c50c8eb4a155af">respects_connectivity_constraints</a> (const <a class="el" href="classtket_1_1Circuit.html">Circuit</a> &amp;circ, const <a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;arch, bool directed, bool bridge_allowed=false)</td></tr>
-<tr class="memdesc:a57d6dd3bedfc60a482c50c8eb4a155af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check that the circuit respects architectural constraints.  <a href="namespacetket.html#a57d6dd3bedfc60a482c50c8eb4a155af">More...</a><br /></td></tr>
-<tr class="separator:a57d6dd3bedfc60a482c50c8eb4a155af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa2833accb0866b54dd52cbc19b88939"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtket_1_1Transform.html">Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#aaa2833accb0866b54dd52cbc19b88939">operator&gt;&gt;</a> (const <a class="el" href="classtket_1_1Transform.html">Transform</a> &amp;lhs, const <a class="el" href="classtket_1_1Transform.html">Transform</a> &amp;rhs)</td></tr>
 <tr class="separator:aaa2833accb0866b54dd52cbc19b88939"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a277e652b62eb180012a571c8a0a94e9e"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::shared_ptr&lt; const <a class="el" href="classtket_1_1ClassicalTransformOp.html">ClassicalTransformOp</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a277e652b62eb180012a571c8a0a94e9e">classical_transform</a> (<a class="el" href="namespacetket.html#a75405147f5ffd3ff1ff1118fba63bcd0">Op_ptr</a> op)</td></tr>
@@ -1505,12 +1505,6 @@ Functions</h2></td></tr>
 <tr class="separator:afa9cf7b306e00efd72e50d278d8c2c23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a369710f65cf8d0a6fb7cc1c62724e426"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a369710f65cf8d0a6fb7cc1c62724e426">NLOHMANN_JSON_SERIALIZE_ENUM</a> (<a class="el" href="namespacetket.html#a6ca1119d69af1780bb19f416a7d5980a">PauliSynthStrat</a>, {{<a class="el" href="namespacetket.html#a6ca1119d69af1780bb19f416a7d5980aa2dd4472245a696bc0b4b944db2a8b519">PauliSynthStrat::Individual</a>, &quot;Individual&quot;}, {PauliSynthStrat::Pairwise, &quot;Pairwise&quot;}, {PauliSynthStrat::Sets, &quot;Sets&quot;}})</td></tr>
 <tr class="separator:a369710f65cf8d0a6fb7cc1c62724e426"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4789ee8e9c894506ddeeb3c0653bc021"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespacetket.html#a68999408b52ab2f0f191f814ec93f4de">Complex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a4789ee8e9c894506ddeeb3c0653bc021">i_</a> (0, 1)</td></tr>
-<tr class="memdesc:a4789ee8e9c894506ddeeb3c0653bc021"><td class="mdescLeft">&#160;</td><td class="mdescRight">A fixed square root of -1.  <a href="namespacetket.html#a4789ee8e9c894506ddeeb3c0653bc021">More...</a><br /></td></tr>
-<tr class="separator:a4789ee8e9c894506ddeeb3c0653bc021"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e103e33627609ddcee6a424b7fc63aa"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespacetket.html#a68999408b52ab2f0f191f814ec93f4de">Complex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a0e103e33627609ddcee6a424b7fc63aa">czero</a> (0, 0)</td></tr>
-<tr class="memdesc:a0e103e33627609ddcee6a424b7fc63aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Complex zero.  <a href="namespacetket.html#a0e103e33627609ddcee6a424b7fc63aa">More...</a><br /></td></tr>
-<tr class="separator:a0e103e33627609ddcee6a424b7fc63aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa887e5f888ccafbec6d589bfcbdad3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a6aac7c33e30bd03cd80947edc87ada23">csd_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#aaa887e5f888ccafbec6d589bfcbdad3a">CS_decomp</a> (const Eigen::MatrixXcd &amp;u)</td></tr>
 <tr class="memdesc:aaa887e5f888ccafbec6d589bfcbdad3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a cosine-sine decomposition of a unitary matrix.  <a href="namespacetket.html#aaa887e5f888ccafbec6d589bfcbdad3a">More...</a><br /></td></tr>
 <tr class="separator:aaa887e5f888ccafbec6d589bfcbdad3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1557,6 +1551,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a1a6f95ad0af21ec94f0f438ca69abf4c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a1a6f95ad0af21ec94f0f438ca69abf4c">reverse_bits</a> (uint32_t v, unsigned w)</td></tr>
 <tr class="memdesc:a1a6f95ad0af21ec94f0f438ca69abf4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverse bits 0,1,...,w-1 of the number v, assuming v &lt; 2^w and w &lt;= 32.  <a href="namespacetket.html#a1a6f95ad0af21ec94f0f438ca69abf4c">More...</a><br /></td></tr>
 <tr class="separator:a1a6f95ad0af21ec94f0f438ca69abf4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4789ee8e9c894506ddeeb3c0653bc021"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespacetket.html#a68999408b52ab2f0f191f814ec93f4de">Complex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a4789ee8e9c894506ddeeb3c0653bc021">i_</a> (0, 1)</td></tr>
+<tr class="memdesc:a4789ee8e9c894506ddeeb3c0653bc021"><td class="mdescLeft">&#160;</td><td class="mdescRight">A fixed square root of -1.  <a href="namespacetket.html#a4789ee8e9c894506ddeeb3c0653bc021">More...</a><br /></td></tr>
+<tr class="separator:a4789ee8e9c894506ddeeb3c0653bc021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e103e33627609ddcee6a424b7fc63aa"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespacetket.html#a68999408b52ab2f0f191f814ec93f4de">Complex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a0e103e33627609ddcee6a424b7fc63aa">czero</a> (0, 0)</td></tr>
+<tr class="memdesc:a0e103e33627609ddcee6a424b7fc63aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Complex zero.  <a href="namespacetket.html#a0e103e33627609ddcee6a424b7fc63aa">More...</a><br /></td></tr>
+<tr class="separator:a0e103e33627609ddcee6a424b7fc63aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ef2d4e5c20758b53e2c4d7ef7a1c091"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a5ef2d4e5c20758b53e2c4d7ef7a1c091"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetket.html#a5ef2d4e5c20758b53e2c4d7ef7a1c091">check_iterators_equality</a> (const T &amp;first, const T &amp;second)</td></tr>
 <tr class="memdesc:a5ef2d4e5c20758b53e2c4d7ef7a1c091"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check equality of each element of first and second when first and second can provide begin, end iterators.  <a href="namespacetket.html#a5ef2d4e5c20758b53e2c4d7ef7a1c091">More...</a><br /></td></tr>
@@ -1564,14 +1564,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a85a557b9186a43dd79f284d4ac6d5bff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a85a557b9186a43dd79f284d4ac6d5bff">is_unitary</a> (const Eigen::MatrixXcd &amp;U, double tol=<a class="el" href="namespacetket.html#a9cdfe3f23ec01d10a956474db74c9fc1">EPS</a>)</td></tr>
 <tr class="memdesc:a85a557b9186a43dd79f284d4ac6d5bff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test matrix for unitarity.  <a href="namespacetket.html#a85a557b9186a43dd79f284d4ac6d5bff">More...</a><br /></td></tr>
 <tr class="separator:a85a557b9186a43dd79f284d4ac6d5bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a631dbefe077ecb1e6313b3055f558e43"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a631dbefe077ecb1e6313b3055f558e43">is_projector</a> (const Eigen::MatrixXcd &amp;P, double tol)</td></tr>
-<tr class="separator:a631dbefe077ecb1e6313b3055f558e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7975b7e1e2c7c442e69858f391a757f9"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacetket.html#afc6a69cf78c26da6848112274764acc6">MatrixXb</a>, <a class="el" href="namespacetket.html#afc6a69cf78c26da6848112274764acc6">MatrixXb</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a7975b7e1e2c7c442e69858f391a757f9">binary_LLT_decomposition</a> (const <a class="el" href="namespacetket.html#afc6a69cf78c26da6848112274764acc6">MatrixXb</a> &amp;a)</td></tr>
-<tr class="separator:a7975b7e1e2c7c442e69858f391a757f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad494a0b329d933e883058ad9bdf34a48"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; unsigned, unsigned &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ad494a0b329d933e883058ad9bdf34a48">gaussian_elimination_col_ops</a> (const <a class="el" href="namespacetket.html#afc6a69cf78c26da6848112274764acc6">MatrixXb</a> &amp;a, unsigned blocksize)</td></tr>
-<tr class="separator:ad494a0b329d933e883058ad9bdf34a48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8c225a8ea66be8b88f6b7ef09e9c93c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; unsigned, unsigned &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#af8c225a8ea66be8b88f6b7ef09e9c93c">gaussian_elimination_row_ops</a> (const <a class="el" href="namespacetket.html#afc6a69cf78c26da6848112274764acc6">MatrixXb</a> &amp;a, unsigned blocksize)</td></tr>
-<tr class="separator:af8c225a8ea66be8b88f6b7ef09e9c93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeff7b1db4efc7ea4209d2c890346294c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#aeff7b1db4efc7ea4209d2c890346294c">is_projector</a> (const Eigen::MatrixXcd &amp;P, double tol=<a class="el" href="namespacetket.html#a9cdfe3f23ec01d10a956474db74c9fc1">EPS</a>)</td></tr>
+<tr class="separator:aeff7b1db4efc7ea4209d2c890346294c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46b9aa11f0d4e2e1f4cfe82a7813e9f3"><td class="memItemLeft" align="right" valign="top">Eigen::PermutationMatrix&lt; Eigen::Dynamic &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a46b9aa11f0d4e2e1f4cfe82a7813e9f3">lift_perm</a> (const std::map&lt; unsigned, unsigned &gt; &amp;p)</td></tr>
 <tr class="memdesc:a46b9aa11f0d4e2e1f4cfe82a7813e9f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lift a permutation of \( [0,n) \) to a permutation of \( [0,2^n) \) as a matrix.  <a href="namespacetket.html#a46b9aa11f0d4e2e1f4cfe82a7813e9f3">More...</a><br /></td></tr>
 <tr class="separator:a46b9aa11f0d4e2e1f4cfe82a7813e9f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1587,14 +1581,18 @@ Functions</h2></td></tr>
 <tr class="separator:a22ce86bf9523f3f6bb03f89f807971e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecff5f827e84bf2d1f40dc346b4d96ce"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXcd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#aecff5f827e84bf2d1f40dc346b4d96ce">apply_qubit_permutation</a> (const Eigen::VectorXcd &amp;v, const <a class="el" href="namespacetket.html#a450cc2961f11bfc1999916262675f08f">qubit_map_t</a> &amp;perm)</td></tr>
 <tr class="separator:aecff5f827e84bf2d1f40dc346b4d96ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a552e09a87e38ec780071637947b677a0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::tuple&lt; Eigen::Matrix2cd, Eigen::Matrix2cd &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a552e09a87e38ec780071637947b677a0">expgate_as_CX</a> (const std::tuple&lt; double, double, double &gt; &amp;k, double cx_fidelity=1.)</td></tr>
-<tr class="memdesc:a552e09a87e38ec780071637947b677a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">given information content and cnot fidelity, returns decomposition of information content as CNOT + local gates minimising number of CNOTs  <a href="namespacetket.html#a552e09a87e38ec780071637947b677a0">More...</a><br /></td></tr>
-<tr class="separator:a552e09a87e38ec780071637947b677a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1990d5c3a874ac46e20662c6ea67378b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a1990d5c3a874ac46e20662c6ea67378b">mod</a> (double d, double max)</td></tr>
-<tr class="separator:a1990d5c3a874ac46e20662c6ea67378b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7975b7e1e2c7c442e69858f391a757f9"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacetket.html#afc6a69cf78c26da6848112274764acc6">MatrixXb</a>, <a class="el" href="namespacetket.html#afc6a69cf78c26da6848112274764acc6">MatrixXb</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a7975b7e1e2c7c442e69858f391a757f9">binary_LLT_decomposition</a> (const <a class="el" href="namespacetket.html#afc6a69cf78c26da6848112274764acc6">MatrixXb</a> &amp;a)</td></tr>
+<tr class="separator:a7975b7e1e2c7c442e69858f391a757f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cbda9525a2b3ca649ee06cc18569e2a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; unsigned, unsigned &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a0cbda9525a2b3ca649ee06cc18569e2a">gaussian_elimination_col_ops</a> (const <a class="el" href="namespacetket.html#afc6a69cf78c26da6848112274764acc6">MatrixXb</a> &amp;a, unsigned blocksize=6)</td></tr>
+<tr class="separator:a0cbda9525a2b3ca649ee06cc18569e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4c0b6da2bfd9031d4cb48361d89f319"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; unsigned, unsigned &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ab4c0b6da2bfd9031d4cb48361d89f319">gaussian_elimination_row_ops</a> (const <a class="el" href="namespacetket.html#afc6a69cf78c26da6848112274764acc6">MatrixXb</a> &amp;a, unsigned blocksize=6)</td></tr>
+<tr class="separator:ab4c0b6da2bfd9031d4cb48361d89f319"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8305947a7ed51f43061b1e826fb5e0ce"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; Eigen::Matrix4cd, std::tuple&lt; double, double, double &gt;, Eigen::Matrix4cd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a8305947a7ed51f43061b1e826fb5e0ce">get_information_content</a> (const Eigen::Matrix4cd &amp;<a class="el" href="namespacetket.html#a342a289d54f4f5f5a405373c07aca66aa86558f4a89f17fc46dd071c4616af9b5">X</a>)</td></tr>
 <tr class="memdesc:a8305947a7ed51f43061b1e826fb5e0ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs KAK decomposition.  <a href="namespacetket.html#a8305947a7ed51f43061b1e826fb5e0ce">More...</a><br /></td></tr>
 <tr class="separator:a8305947a7ed51f43061b1e826fb5e0ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a552e09a87e38ec780071637947b677a0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::tuple&lt; Eigen::Matrix2cd, Eigen::Matrix2cd &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a552e09a87e38ec780071637947b677a0">expgate_as_CX</a> (const std::tuple&lt; double, double, double &gt; &amp;k, double cx_fidelity=1.)</td></tr>
+<tr class="memdesc:a552e09a87e38ec780071637947b677a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">given information content and cnot fidelity, returns decomposition of information content as CNOT + local gates minimising number of CNOTs  <a href="namespacetket.html#a552e09a87e38ec780071637947b677a0">More...</a><br /></td></tr>
+<tr class="separator:a552e09a87e38ec780071637947b677a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4588e04dded1342326dcdffd7d7fa432"><td class="memItemLeft" align="right" valign="top">std::pair&lt; Eigen::Matrix2cd, Eigen::Matrix2cd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a4588e04dded1342326dcdffd7d7fa432">kronecker_decomposition</a> (Eigen::Matrix4cd &amp;U)</td></tr>
 <tr class="separator:a4588e04dded1342326dcdffd7d7fa432"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46089d409da2402d0d05bfe258536643"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a46089d409da2402d0d05bfe258536643">get_matrix_size</a> (unsigned number_of_qubits)</td></tr>
@@ -1613,8 +1611,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a56887ab1e1830c705857d396f22d1572"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacetket.html#aee60c42e3c64cd55862f6217cb41a07e">TripletCd</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a56887ab1e1830c705857d396f22d1572">get_triplets</a> (const Eigen::MatrixXcd &amp;matr, double abs_epsilon=<a class="el" href="namespacetket.html#a9cdfe3f23ec01d10a956474db74c9fc1">EPS</a>)</td></tr>
 <tr class="memdesc:a56887ab1e1830c705857d396f22d1572"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a matrix M into a list of tuples (i,j,z), meaning that M(i,j)=z, used in sparse representations of M.  <a href="namespacetket.html#a56887ab1e1830c705857d396f22d1572">More...</a><br /></td></tr>
 <tr class="separator:a56887ab1e1830c705857d396f22d1572"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75fe175eedc13340a360c79bf194f4c6"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a75fe175eedc13340a360c79bf194f4c6">get_n_qb_from_statevector</a> (const Eigen::VectorXcd &amp;state)</td></tr>
-<tr class="separator:a75fe175eedc13340a360c79bf194f4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5f3bbf274366dd15f89a1453874b7fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#aa5f3bbf274366dd15f89a1453874b7fe">NLOHMANN_JSON_SERIALIZE_ENUM</a> (<a class="el" href="namespacetket.html#a342a289d54f4f5f5a405373c07aca66a">Pauli</a>, { {Pauli::I, &quot;I&quot;}, {Pauli::X, &quot;X&quot;}, {Pauli::Y, &quot;Y&quot;}, {Pauli::Z, &quot;Z&quot;}, })</td></tr>
+<tr class="separator:aa5f3bbf274366dd15f89a1453874b7fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a283bc95e31c391e217ac10465a88afbb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a283bc95e31c391e217ac10465a88afbb">NLOHMANN_JSON_SERIALIZE_ENUM</a> (<a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7">CXConfigType</a>, {{<a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7adfa90f1b4eb3affbd3b46af34ed2477c">CXConfigType::Snake</a>, &quot;Snake&quot;}, {CXConfigType::Tree, &quot;Tree&quot;}, {CXConfigType::Star, &quot;Star&quot;}, {CXConfigType::MultiQGate, &quot;MultiQGate&quot;}})</td></tr>
+<tr class="separator:a283bc95e31c391e217ac10465a88afbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2356c8aa4b2c14f3a8f0627edfc03a4e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a2356c8aa4b2c14f3a8f0627edfc03a4e">JSON_DECL</a> (<a class="el" href="classtket_1_1QubitPauliString.html">QubitPauliString</a>)</td></tr>
+<tr class="separator:a2356c8aa4b2c14f3a8f0627edfc03a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad388ba923ebf1c31e34f6feee34bc52a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a0b2a87e4bf360a357e15dad177551ed8">CmplxSpMat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ad388ba923ebf1c31e34f6feee34bc52a">operator_tensor</a> (const <a class="el" href="namespacetket.html#a587e3bb9386c6c74187167f2542de7e6">OperatorSum</a> &amp;total_operator, unsigned n_qubits)</td></tr>
 <tr class="memdesc:ad388ba923ebf1c31e34f6feee34bc52a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate a sparse matrix corresponding to a sum of <a class="el" href="classtket_1_1QubitPauliString.html" title="A string of Pauli letters from the alphabet {I, X, Y, Z}, implemented as a sparse list,...">QubitPauliString</a>.  <a href="namespacetket.html#ad388ba923ebf1c31e34f6feee34bc52a">More...</a><br /></td></tr>
 <tr class="separator:ad388ba923ebf1c31e34f6feee34bc52a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1625,46 +1627,12 @@ Functions</h2></td></tr>
 <tr class="separator:a03ed8c041052ab344e3e64ea48290702"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad93a1c5cdfacefeeb9a34f83063d5f19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#a68999408b52ab2f0f191f814ec93f4de">Complex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ad93a1c5cdfacefeeb9a34f83063d5f19">operator_expectation</a> (const <a class="el" href="namespacetket.html#a587e3bb9386c6c74187167f2542de7e6">OperatorSum</a> &amp;total_operator, const Eigen::VectorXcd &amp;state, const <a class="el" href="namespacetket.html#ad949814c463d9f998540c0f812e76aa6">qubit_vector_t</a> &amp;qubits)</td></tr>
 <tr class="separator:ad93a1c5cdfacefeeb9a34f83063d5f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60e054520f9c4bd78cab427adaff17ff"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a60e054520f9c4bd78cab427adaff17ff">hash_value</a> (const <a class="el" href="classtket_1_1QubitPauliString.html">QubitPauliString</a> &amp;qps)</td></tr>
-<tr class="separator:a60e054520f9c4bd78cab427adaff17ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3eb5506cf530f09a7158760012b494f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a3eb5506cf530f09a7158760012b494f3">to_json</a> (nlohmann::json &amp;j, const <a class="el" href="classtket_1_1QubitPauliString.html">QubitPauliString</a> &amp;paulistr)</td></tr>
-<tr class="separator:a3eb5506cf530f09a7158760012b494f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68687314e2c481e984ee323aab4a7495"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a68687314e2c481e984ee323aab4a7495">from_json</a> (const nlohmann::json &amp;j, <a class="el" href="classtket_1_1QubitPauliString.html">QubitPauliString</a> &amp;paulistr)</td></tr>
-<tr class="separator:a68687314e2c481e984ee323aab4a7495"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6aa27ebf01838bb556098fc6d2d6fb92"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a6aa27ebf01838bb556098fc6d2d6fb92">hash_value</a> (const <a class="el" href="classtket_1_1QubitPauliTensor.html">QubitPauliTensor</a> &amp;qpt)</td></tr>
-<tr class="separator:a6aa27ebf01838bb556098fc6d2d6fb92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf321f88bb98fc394cad02ca9f5b34c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtket_1_1QubitPauliTensor.html">QubitPauliTensor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#acf321f88bb98fc394cad02ca9f5b34c8">operator*</a> (<a class="el" href="namespacetket.html#a68999408b52ab2f0f191f814ec93f4de">Complex</a> a, const <a class="el" href="classtket_1_1QubitPauliTensor.html">QubitPauliTensor</a> &amp;qpt)</td></tr>
 <tr class="memdesc:acf321f88bb98fc394cad02ca9f5b34c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply coefficient by a scalar.  <a href="namespacetket.html#acf321f88bb98fc394cad02ca9f5b34c8">More...</a><br /></td></tr>
 <tr class="separator:acf321f88bb98fc394cad02ca9f5b34c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a930f453f5886d252c3fb7a45ea0bc4fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a930f453f5886d252c3fb7a45ea0bc4fa">to_json</a> (nlohmann::json &amp;j, const <a class="el" href="structtket_1_1PauliStabiliser.html">PauliStabiliser</a> &amp;pauli_stabiliser)</td></tr>
-<tr class="separator:a930f453f5886d252c3fb7a45ea0bc4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a581d9c405547974363fb647e7f494db6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a581d9c405547974363fb647e7f494db6">from_json</a> (const nlohmann::json &amp;j, <a class="el" href="structtket_1_1PauliStabiliser.html">PauliStabiliser</a> &amp;pauli_stabiliser)</td></tr>
-<tr class="separator:a581d9c405547974363fb647e7f494db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5f3bbf274366dd15f89a1453874b7fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#aa5f3bbf274366dd15f89a1453874b7fe">NLOHMANN_JSON_SERIALIZE_ENUM</a> (<a class="el" href="namespacetket.html#a342a289d54f4f5f5a405373c07aca66a">Pauli</a>, { {Pauli::I, &quot;I&quot;}, {Pauli::X, &quot;X&quot;}, {Pauli::Y, &quot;Y&quot;}, {Pauli::Z, &quot;Z&quot;}, })</td></tr>
-<tr class="separator:aa5f3bbf274366dd15f89a1453874b7fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a283bc95e31c391e217ac10465a88afbb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a283bc95e31c391e217ac10465a88afbb">NLOHMANN_JSON_SERIALIZE_ENUM</a> (<a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7">CXConfigType</a>, {{<a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7adfa90f1b4eb3affbd3b46af34ed2477c">CXConfigType::Snake</a>, &quot;Snake&quot;}, {CXConfigType::Tree, &quot;Tree&quot;}, {CXConfigType::Star, &quot;Star&quot;}, {CXConfigType::MultiQGate, &quot;MultiQGate&quot;}})</td></tr>
-<tr class="separator:a283bc95e31c391e217ac10465a88afbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2356c8aa4b2c14f3a8f0627edfc03a4e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a2356c8aa4b2c14f3a8f0627edfc03a4e">JSON_DECL</a> (<a class="el" href="classtket_1_1QubitPauliString.html">QubitPauliString</a>)</td></tr>
-<tr class="separator:a2356c8aa4b2c14f3a8f0627edfc03a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf17a7f6b999a13aebc2d2edad971487"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetket.html#acdcb01ee175bf50c1f83be50b63f4f0e">LogPtr_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#acf17a7f6b999a13aebc2d2edad971487">tket_log</a> ()</td></tr>
 <tr class="memdesc:acf17a7f6b999a13aebc2d2edad971487"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logger for tket messages.  <a href="namespacetket.html#acf17a7f6b999a13aebc2d2edad971487">More...</a><br /></td></tr>
 <tr class="separator:acf17a7f6b999a13aebc2d2edad971487"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad92ba0223225b2432b3754047387b5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#aad92ba0223225b2432b3754047387b5e">to_json</a> (nlohmann::json &amp;j, const <a class="el" href="classtket_1_1Qubit.html">Qubit</a> &amp;qb)</td></tr>
-<tr class="separator:aad92ba0223225b2432b3754047387b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53429249cb60afd24b0e046ae65b467b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a53429249cb60afd24b0e046ae65b467b">from_json</a> (const nlohmann::json &amp;j, <a class="el" href="classtket_1_1Qubit.html">Qubit</a> &amp;qb)</td></tr>
-<tr class="separator:a53429249cb60afd24b0e046ae65b467b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac805d7e6f93710cccba66bac03f62402"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ac805d7e6f93710cccba66bac03f62402">to_json</a> (nlohmann::json &amp;j, const <a class="el" href="classtket_1_1Bit.html">Bit</a> &amp;cb)</td></tr>
-<tr class="separator:ac805d7e6f93710cccba66bac03f62402"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa288b45e0dc758918b68eec30c5a757d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#aa288b45e0dc758918b68eec30c5a757d">from_json</a> (const nlohmann::json &amp;j, <a class="el" href="classtket_1_1Bit.html">Bit</a> &amp;cb)</td></tr>
-<tr class="separator:aa288b45e0dc758918b68eec30c5a757d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0a3a70e84db9e4a2f8d15febf11d135"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ae0a3a70e84db9e4a2f8d15febf11d135">to_json</a> (nlohmann::json &amp;j, const <a class="el" href="classtket_1_1Node.html">Node</a> &amp;node)</td></tr>
-<tr class="separator:ae0a3a70e84db9e4a2f8d15febf11d135"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa39733fdaf85545358ea465b019deab0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#aa39733fdaf85545358ea465b019deab0">from_json</a> (const nlohmann::json &amp;j, <a class="el" href="classtket_1_1Node.html">Node</a> &amp;node)</td></tr>
-<tr class="separator:aa39733fdaf85545358ea465b019deab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac759ed39e053a1136881124ac753b6bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ac759ed39e053a1136881124ac753b6bf">to_json</a> (nlohmann::json &amp;j, const <a class="el" href="namespacetket.html#a450cc2961f11bfc1999916262675f08f">qubit_map_t</a> &amp;qm)</td></tr>
-<tr class="separator:ac759ed39e053a1136881124ac753b6bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68933b29c20e6356e20a1852a018bf6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a68933b29c20e6356e20a1852a018bf6c">from_json</a> (const nlohmann::json &amp;j, <a class="el" href="namespacetket.html#a450cc2961f11bfc1999916262675f08f">qubit_map_t</a> &amp;qm)</td></tr>
-<tr class="separator:a68933b29c20e6356e20a1852a018bf6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a392f41338f191768e8b7ac91b19bc8ce"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a392f41338f191768e8b7ac91b19bc8ce">q_default_reg</a> ()</td></tr>
 <tr class="separator:a392f41338f191768e8b7ac91b19bc8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15b37bcb17a543d2716a481f41482b8e"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a15b37bcb17a543d2716a481f41482b8e">c_default_reg</a> ()</td></tr>
@@ -1683,6 +1651,38 @@ Functions</h2></td></tr>
 <tr class="memitem:a7ecb2085cd12dff31e993c438a8b8edb"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a7ecb2085cd12dff31e993c438a8b8edb"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetket.html#a7ecb2085cd12dff31e993c438a8b8edb">json_to_unitid</a> (const nlohmann::json &amp;j, T &amp;unit)</td></tr>
 <tr class="separator:a7ecb2085cd12dff31e993c438a8b8edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1990d5c3a874ac46e20662c6ea67378b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a1990d5c3a874ac46e20662c6ea67378b">mod</a> (double d, double max)</td></tr>
+<tr class="separator:a1990d5c3a874ac46e20662c6ea67378b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75fe175eedc13340a360c79bf194f4c6"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a75fe175eedc13340a360c79bf194f4c6">get_n_qb_from_statevector</a> (const Eigen::VectorXcd &amp;state)</td></tr>
+<tr class="separator:a75fe175eedc13340a360c79bf194f4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60e054520f9c4bd78cab427adaff17ff"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a60e054520f9c4bd78cab427adaff17ff">hash_value</a> (const <a class="el" href="classtket_1_1QubitPauliString.html">QubitPauliString</a> &amp;qps)</td></tr>
+<tr class="separator:a60e054520f9c4bd78cab427adaff17ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eb5506cf530f09a7158760012b494f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a3eb5506cf530f09a7158760012b494f3">to_json</a> (nlohmann::json &amp;j, const <a class="el" href="classtket_1_1QubitPauliString.html">QubitPauliString</a> &amp;paulistr)</td></tr>
+<tr class="separator:a3eb5506cf530f09a7158760012b494f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68687314e2c481e984ee323aab4a7495"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a68687314e2c481e984ee323aab4a7495">from_json</a> (const nlohmann::json &amp;j, <a class="el" href="classtket_1_1QubitPauliString.html">QubitPauliString</a> &amp;paulistr)</td></tr>
+<tr class="separator:a68687314e2c481e984ee323aab4a7495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6aa27ebf01838bb556098fc6d2d6fb92"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a6aa27ebf01838bb556098fc6d2d6fb92">hash_value</a> (const <a class="el" href="classtket_1_1QubitPauliTensor.html">QubitPauliTensor</a> &amp;qpt)</td></tr>
+<tr class="separator:a6aa27ebf01838bb556098fc6d2d6fb92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a930f453f5886d252c3fb7a45ea0bc4fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a930f453f5886d252c3fb7a45ea0bc4fa">to_json</a> (nlohmann::json &amp;j, const <a class="el" href="structtket_1_1PauliStabiliser.html">PauliStabiliser</a> &amp;pauli_stabiliser)</td></tr>
+<tr class="separator:a930f453f5886d252c3fb7a45ea0bc4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a581d9c405547974363fb647e7f494db6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a581d9c405547974363fb647e7f494db6">from_json</a> (const nlohmann::json &amp;j, <a class="el" href="structtket_1_1PauliStabiliser.html">PauliStabiliser</a> &amp;pauli_stabiliser)</td></tr>
+<tr class="separator:a581d9c405547974363fb647e7f494db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad92ba0223225b2432b3754047387b5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#aad92ba0223225b2432b3754047387b5e">to_json</a> (nlohmann::json &amp;j, const <a class="el" href="classtket_1_1Qubit.html">Qubit</a> &amp;qb)</td></tr>
+<tr class="separator:aad92ba0223225b2432b3754047387b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53429249cb60afd24b0e046ae65b467b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a53429249cb60afd24b0e046ae65b467b">from_json</a> (const nlohmann::json &amp;j, <a class="el" href="classtket_1_1Qubit.html">Qubit</a> &amp;qb)</td></tr>
+<tr class="separator:a53429249cb60afd24b0e046ae65b467b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac805d7e6f93710cccba66bac03f62402"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ac805d7e6f93710cccba66bac03f62402">to_json</a> (nlohmann::json &amp;j, const <a class="el" href="classtket_1_1Bit.html">Bit</a> &amp;cb)</td></tr>
+<tr class="separator:ac805d7e6f93710cccba66bac03f62402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa288b45e0dc758918b68eec30c5a757d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#aa288b45e0dc758918b68eec30c5a757d">from_json</a> (const nlohmann::json &amp;j, <a class="el" href="classtket_1_1Bit.html">Bit</a> &amp;cb)</td></tr>
+<tr class="separator:aa288b45e0dc758918b68eec30c5a757d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0a3a70e84db9e4a2f8d15febf11d135"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ae0a3a70e84db9e4a2f8d15febf11d135">to_json</a> (nlohmann::json &amp;j, const <a class="el" href="classtket_1_1Node.html">Node</a> &amp;node)</td></tr>
+<tr class="separator:ae0a3a70e84db9e4a2f8d15febf11d135"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa39733fdaf85545358ea465b019deab0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#aa39733fdaf85545358ea465b019deab0">from_json</a> (const nlohmann::json &amp;j, <a class="el" href="classtket_1_1Node.html">Node</a> &amp;node)</td></tr>
+<tr class="separator:aa39733fdaf85545358ea465b019deab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac759ed39e053a1136881124ac753b6bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ac759ed39e053a1136881124ac753b6bf">to_json</a> (nlohmann::json &amp;j, const <a class="el" href="namespacetket.html#a450cc2961f11bfc1999916262675f08f">qubit_map_t</a> &amp;qm)</td></tr>
+<tr class="separator:ac759ed39e053a1136881124ac753b6bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68933b29c20e6356e20a1852a018bf6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a68933b29c20e6356e20a1852a018bf6c">from_json</a> (const nlohmann::json &amp;j, <a class="el" href="namespacetket.html#a450cc2961f11bfc1999916262675f08f">qubit_map_t</a> &amp;qm)</td></tr>
+<tr class="separator:a68933b29c20e6356e20a1852a018bf6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -5303,6 +5303,9 @@ template&lt;typename T &gt; </div>
 <p>converts a circuit containing all possible gates to a circuit containing only phase poly boxes + H gates (and measure + reset + collapse</p><ul>
 <li>barrier)</li>
 </ul>
+<p>converts a circuit containing all possible gates to a circuit containing only phase poly boxes + H gates (and measure + reset + collapse</p><ul>
+<li>barrier)</li>
+</ul>
 
 <p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00276">276</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
 
@@ -5789,6 +5792,8 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Preserves Max2QubitGatesPredicate since any box with &gt;2 qubits is already invalid. Preserves <a class="el" href="classtket_1_1ConnectivityPredicate.html">ConnectivityPredicate</a> (and <a class="el" href="classtket_1_1DirectednessPredicate.html">DirectednessPredicate</a>) since the verification looks inside CircBoxes and any other boxes with &gt;2 qubits are already invalid. Most others are preserved since the predicates look within CircBoxes.</p>
 <p>Invalidates <a class="el" href="classtket_1_1GateSetPredicate.html">GateSetPredicate</a> because it doesn't look inside boxes or account for the gate set of their decomposition.</p>
+<p>Preserves Max2QubitGatesPredicate since any box with &gt;2 qubits is already invalid. Preserves <a class="el" href="classtket_1_1ConnectivityPredicate.html">ConnectivityPredicate</a> (and <a class="el" href="classtket_1_1DirectednessPredicate.html">DirectednessPredicate</a>) since the verification looks inside CircBoxes and any other boxes with &gt;2 qubits are already invalid. Most others are preserved since the predicates look within CircBoxes.</p>
+<p>Invalidates <a class="el" href="classtket_1_1GateSetPredicate.html">GateSetPredicate</a> because it doesn't look inside boxes or account for the gate set of their decomposition.</p>
 
 <p class="definition">Definition at line <a class="el" href="PassLibrary_8cpp_source.html#l00297">297</a> of file <a class="el" href="PassLibrary_8cpp_source.html">PassLibrary.cpp</a>.</p>
 
@@ -6195,7 +6200,7 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>cx_fidelity</em>&#160;</td>
+          <td class="paramname"><em>cx_fidelity</em> = <code>1.</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -7064,8 +7069,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="ad494a0b329d933e883058ad9bdf34a48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad494a0b329d933e883058ad9bdf34a48">&#9670;&nbsp;</a></span>gaussian_elimination_col_ops()</h2>
+<a id="a0cbda9525a2b3ca649ee06cc18569e2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cbda9525a2b3ca649ee06cc18569e2a">&#9670;&nbsp;</a></span>gaussian_elimination_col_ops()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7080,7 +7085,7 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>blocksize</em>&#160;</td>
+          <td class="paramname"><em>blocksize</em> = <code>6</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -7094,8 +7099,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="af8c225a8ea66be8b88f6b7ef09e9c93c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8c225a8ea66be8b88f6b7ef09e9c93c">&#9670;&nbsp;</a></span>gaussian_elimination_row_ops()</h2>
+<a id="ab4c0b6da2bfd9031d4cb48361d89f319"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4c0b6da2bfd9031d4cb48361d89f319">&#9670;&nbsp;</a></span>gaussian_elimination_row_ops()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7110,7 +7115,7 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>blocksize</em>&#160;</td>
+          <td class="paramname"><em>blocksize</em> = <code>6</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -7124,8 +7129,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="aed2e05e652ba5938bbc5c21306d62e5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed2e05e652ba5938bbc5c21306d62e5f">&#9670;&nbsp;</a></span>gen_clifford_simp_pass()</h2>
+<a id="a79e18754200c9d1c04c5da83df46a092"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79e18754200c9d1c04c5da83df46a092">&#9670;&nbsp;</a></span>gen_clifford_simp_pass()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7134,7 +7139,7 @@ template&lt;typename T &gt; </div>
           <td class="memname"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> tket::gen_clifford_simp_pass </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>allow_swaps</em></td><td>)</td>
+          <td class="paramname"><em>allow_swaps</em> = <code>true</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -7231,8 +7236,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a906d3a97e59bef558312f56b7c0098ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a906d3a97e59bef558312f56b7c0098ec">&#9670;&nbsp;</a></span>gen_decompose_routing_gates_to_cxs_pass()</h2>
+<a id="a11e148349270e1d6b8367dfaef31327a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11e148349270e1d6b8367dfaef31327a">&#9670;&nbsp;</a></span>gen_decompose_routing_gates_to_cxs_pass()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7241,13 +7246,13 @@ template&lt;typename T &gt; </div>
           <td class="memname"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> tket::gen_decompose_routing_gates_to_cxs_pass </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classtket_1_1Architecture.html">Architecture</a> &amp;&#160;</td>
-          <td class="paramname"><em>arc</em>, </td>
+          <td class="paramname"><em>arc</em> = <code><a class="el" href="classtket_1_1Architecture.html">Architecture</a>()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>directed</em>&#160;</td>
+          <td class="paramname"><em>directed</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -7281,8 +7286,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="abc545f0f3e8e88962d68fe0f17491929"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc545f0f3e8e88962d68fe0f17491929">&#9670;&nbsp;</a></span>gen_directed_cx_routing_pass()</h2>
+<a id="ac2f9d7fb37eca99eb329f66ed4605af8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2f9d7fb37eca99eb329f66ed4605af8">&#9670;&nbsp;</a></span>gen_directed_cx_routing_pass()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7297,7 +7302,7 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="structtket_1_1RoutingConfig.html">RoutingConfig</a> &amp;&#160;</td>
-          <td class="paramname"><em>config</em>&#160;</td>
+          <td class="paramname"><em>config</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -7311,8 +7316,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a864a56176ac3f123b6b3a7f8f1ae14b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a864a56176ac3f123b6b3a7f8f1ae14b6">&#9670;&nbsp;</a></span>gen_euler_pass()</h2>
+<a id="a8e45753f2d4e755ed60ed47cf8cc9920"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e45753f2d4e755ed60ed47cf8cc9920">&#9670;&nbsp;</a></span>gen_euler_pass()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7333,7 +7338,7 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>strict</em>&#160;</td>
+          <td class="paramname"><em>strict</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -7347,8 +7352,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a0b08f0f414af9a3956ded22cf58967e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b08f0f414af9a3956ded22cf58967e3">&#9670;&nbsp;</a></span>gen_full_mapping_pass()</h2>
+<a id="a9c77b3895e23383a6abbbdaac6d41750"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c77b3895e23383a6abbbdaac6d41750">&#9670;&nbsp;</a></span>gen_full_mapping_pass()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7369,7 +7374,7 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="structtket_1_1RoutingConfig.html">RoutingConfig</a> &amp;&#160;</td>
-          <td class="paramname"><em>config</em>&#160;</td>
+          <td class="paramname"><em>config</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -7458,8 +7463,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a95690781262d22df0071113af874dcb8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95690781262d22df0071113af874dcb8">&#9670;&nbsp;</a></span>gen_optimise_phase_gadgets()</h2>
+<a id="a1940dc4d6b6d29ea44d4120e03b9c5a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1940dc4d6b6d29ea44d4120e03b9c5a4">&#9670;&nbsp;</a></span>gen_optimise_phase_gadgets()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7468,7 +7473,7 @@ template&lt;typename T &gt; </div>
           <td class="memname"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> tket::gen_optimise_phase_gadgets </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7">CXConfigType</a>&#160;</td>
-          <td class="paramname"><em>cx_config</em></td><td>)</td>
+          <td class="paramname"><em>cx_config</em> = <code><a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7adfa90f1b4eb3affbd3b46af34ed2477c">CXConfigType::Snake</a></code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -7478,8 +7483,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a7b2b50dc805ddddaa8670c06b73db427"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b2b50dc805ddddaa8670c06b73db427">&#9670;&nbsp;</a></span>gen_pairwise_pauli_gadgets()</h2>
+<a id="a397234e6a5bd81a30153dadbe26fb6b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a397234e6a5bd81a30153dadbe26fb6b2">&#9670;&nbsp;</a></span>gen_pairwise_pauli_gadgets()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7488,7 +7493,7 @@ template&lt;typename T &gt; </div>
           <td class="memname"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> tket::gen_pairwise_pauli_gadgets </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7">CXConfigType</a>&#160;</td>
-          <td class="paramname"><em>cx_config</em></td><td>)</td>
+          <td class="paramname"><em>cx_config</em> = <code><a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7adfa90f1b4eb3affbd3b46af34ed2477c">CXConfigType::Snake</a></code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -7612,8 +7617,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a931e08e59ebd9bb689ac2de7be3dd3a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a931e08e59ebd9bb689ac2de7be3dd3a8">&#9670;&nbsp;</a></span>gen_routing_pass()</h2>
+<a id="aaf585e6899778ef16796bf57480e519d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf585e6899778ef16796bf57480e519d">&#9670;&nbsp;</a></span>gen_routing_pass()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7628,7 +7633,7 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="structtket_1_1RoutingConfig.html">RoutingConfig</a> &amp;&#160;</td>
-          <td class="paramname"><em>config</em>&#160;</td>
+          <td class="paramname"><em>config</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -7688,8 +7693,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a5304d669807a2cefa6b122e0d4c3d2c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5304d669807a2cefa6b122e0d4c3d2c6">&#9670;&nbsp;</a></span>gen_special_UCC_synthesis()</h2>
+<a id="aa7c0cd7881c4f7bbe8bd7681585b273c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7c0cd7881c4f7bbe8bd7681585b273c">&#9670;&nbsp;</a></span>gen_special_UCC_synthesis()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7698,13 +7703,13 @@ template&lt;typename T &gt; </div>
           <td class="memname"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> tket::gen_special_UCC_synthesis </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacetket.html#a6ca1119d69af1780bb19f416a7d5980a">PauliSynthStrat</a>&#160;</td>
-          <td class="paramname"><em>strat</em>, </td>
+          <td class="paramname"><em>strat</em> = <code><a class="el" href="namespacetket.html#a6ca1119d69af1780bb19f416a7d5980aa86f5baf708c6c250204451eb89736947">PauliSynthStrat::Sets</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7">CXConfigType</a>&#160;</td>
-          <td class="paramname"><em>cx_config</em>&#160;</td>
+          <td class="paramname"><em>cx_config</em> = <code><a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7adfa90f1b4eb3affbd3b46af34ed2477c">CXConfigType::Snake</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -7748,8 +7753,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a8739e2abd0fb2cd18fcabe8c343bf861"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8739e2abd0fb2cd18fcabe8c343bf861">&#9670;&nbsp;</a></span>gen_synthesise_pauli_graph()</h2>
+<a id="a8f1f5dcf60c209920157abb3962a8721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f1f5dcf60c209920157abb3962a8721">&#9670;&nbsp;</a></span>gen_synthesise_pauli_graph()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7758,13 +7763,13 @@ template&lt;typename T &gt; </div>
           <td class="memname"><a class="el" href="namespacetket.html#a16f42886ddb3e4e93daaacdd772886b1">PassPtr</a> tket::gen_synthesise_pauli_graph </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacetket.html#a6ca1119d69af1780bb19f416a7d5980a">PauliSynthStrat</a>&#160;</td>
-          <td class="paramname"><em>strat</em>, </td>
+          <td class="paramname"><em>strat</em> = <code><a class="el" href="namespacetket.html#a6ca1119d69af1780bb19f416a7d5980aa86f5baf708c6c250204451eb89736947">PauliSynthStrat::Sets</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7">CXConfigType</a>&#160;</td>
-          <td class="paramname"><em>cx_config</em>&#160;</td>
+          <td class="paramname"><em>cx_config</em> = <code><a class="el" href="namespacetket.html#a372ac8e74a26d74ac66c0a2233f532c7adfa90f1b4eb3affbd3b46af34ed2477c">CXConfigType::Snake</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -8979,8 +8984,8 @@ circuit has no symbolic parameters</dd></dl>
 
 </div>
 </div>
-<a id="a631dbefe077ecb1e6313b3055f558e43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a631dbefe077ecb1e6313b3055f558e43">&#9670;&nbsp;</a></span>is_projector()</h2>
+<a id="aeff7b1db4efc7ea4209d2c890346294c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeff7b1db4efc7ea4209d2c890346294c">&#9670;&nbsp;</a></span>is_projector()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8995,7 +9000,7 @@ circuit has no symbolic parameters</dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>tol</em>&#160;</td>
+          <td class="paramname"><em>tol</em> = <code><a class="el" href="namespacetket.html#a9cdfe3f23ec01d10a956474db74c9fc1">EPS</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>

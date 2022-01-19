@@ -1,17 +1,17 @@
 <map id="src/Predicates/CompilationUnit.cpp" name="src/Predicates/CompilationUnit.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="2498,5,2694,47"/>
-<area shape="rect" id="node2" href="$CompilationUnit_8hpp.html" title=" " alt="" coords="2518,95,2674,121"/>
-<area shape="rect" id="node3" href="$Predicates_8hpp.html" title=" " alt="" coords="2537,169,2655,196"/>
-<area shape="rect" id="node4" title=" " alt="" coords="2407,244,2494,271"/>
-<area shape="rect" id="node5" href="$Routing_8hpp.html" title=" " alt="" coords="2519,244,2673,271"/>
-<area shape="rect" id="node49" href="$Transform_8hpp.html" title=" " alt="" coords="3101,319,3325,345"/>
-<area shape="rect" id="node6" title=" " alt="" coords="4509,692,4560,719"/>
+<area shape="rect" id="node1" title=" " alt="" coords="2490,5,2686,47"/>
+<area shape="rect" id="node2" href="$CompilationUnit_8hpp.html" title=" " alt="" coords="2510,95,2666,121"/>
+<area shape="rect" id="node3" href="$Predicates_8hpp.html" title=" " alt="" coords="2529,169,2647,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="2399,244,2486,271"/>
+<area shape="rect" id="node5" href="$Routing_8hpp.html" title=" " alt="" coords="2511,244,2665,271"/>
+<area shape="rect" id="node49" href="$Transform_8hpp.html" title=" " alt="" coords="3072,319,3296,345"/>
+<area shape="rect" id="node6" title=" " alt="" coords="4480,692,4531,719"/>
 <area shape="rect" id="node7" title=" " alt="" coords="1859,692,1917,719"/>
 <area shape="rect" id="node8" title=" " alt="" coords="2205,617,2265,644"/>
-<area shape="rect" id="node9" title=" " alt="" coords="3449,617,3511,644"/>
+<area shape="rect" id="node9" title=" " alt="" coords="3419,617,3482,644"/>
 <area shape="rect" id="node10" href="$Architecture_8hpp.html" title=" " alt="" coords="2693,468,2905,495"/>
 <area shape="rect" id="node23" href="$BiMapHeaders_8hpp.html" title=" " alt="" coords="2709,692,2888,719"/>
-<area shape="rect" id="node27" href="$Json_8hpp.html" title=" " alt="" coords="3798,692,3909,719"/>
+<area shape="rect" id="node27" href="$Json_8hpp.html" title=" " alt="" coords="3769,692,3879,719"/>
 <area shape="rect" id="node36" href="$Circuit_8hpp.html" title=" " alt="" coords="1364,393,1503,420"/>
 <area shape="rect" id="node47" href="$Placement_8hpp.html" title=" " alt="" coords="2258,319,2377,345"/>
 <area shape="rect" id="node11" title=" " alt="" coords="2355,617,2435,644"/>
@@ -19,8 +19,8 @@
 <area shape="rect" id="node13" title=" " alt="" coords="2619,692,2661,719"/>
 <area shape="rect" id="node14" href="$CompleteGraph_8hpp.html" title=" " alt="" coords="2912,543,3115,569"/>
 <area shape="rect" id="node15" href="$DirectedGraph_8hpp.html" title=" " alt="" coords="1275,543,1469,569"/>
-<area shape="rect" id="node26" href="$EigenConfig_8hpp.html" title="Include this file rather than including the Eigen headers directly." alt="" coords="3898,617,4059,644"/>
-<area shape="rect" id="node31" href="$MatrixAnalysis_8hpp.html" title=" " alt="" coords="3955,543,4136,569"/>
+<area shape="rect" id="node26" href="$EigenConfig_8hpp.html" title="Include this file rather than including the Eigen headers directly." alt="" coords="3869,617,4030,644"/>
+<area shape="rect" id="node31" href="$MatrixAnalysis_8hpp.html" title=" " alt="" coords="3925,543,4107,569"/>
 <area shape="rect" id="node32" href="$UnitID_8hpp.html" title="Named registers of arrays of (quantum or classical) nodes." alt="" coords="2595,617,2685,644"/>
 <area shape="rect" id="node34" href="$TketLog_8hpp.html" title="Logging." alt="" coords="359,692,460,719"/>
 <area shape="rect" id="node16" title=" " alt="" coords="687,692,772,719"/>
@@ -32,21 +32,21 @@
 <area shape="rect" id="node22" href="$Utils_8hpp.html" title=" " alt="" coords="1219,617,1349,644"/>
 <area shape="rect" id="node25" href="$GraphHeaders_8hpp.html" title=" " alt="" coords="485,692,662,719"/>
 <area shape="rect" id="node24" title=" " alt="" coords="2733,767,2864,793"/>
-<area shape="rect" id="node28" title=" " alt="" coords="3989,767,4067,793"/>
-<area shape="rect" id="node29" title=" " alt="" coords="3486,767,3573,793"/>
-<area shape="rect" id="node30" title=" " alt="" coords="4539,767,4685,793"/>
-<area shape="rect" id="node35" href="$Constants_8hpp.html" title="Generally useful typedefs and constants." alt="" coords="4084,617,4233,644"/>
+<area shape="rect" id="node28" title=" " alt="" coords="3959,767,4038,793"/>
+<area shape="rect" id="node29" title=" " alt="" coords="3471,767,3558,793"/>
+<area shape="rect" id="node30" title=" " alt="" coords="4509,767,4656,793"/>
+<area shape="rect" id="node35" href="$Constants_8hpp.html" title="Generally useful typedefs and constants." alt="" coords="4055,617,4204,644"/>
 <area shape="rect" id="node33" title=" " alt="" coords="796,692,871,719"/>
 <area shape="rect" id="node37" title=" " alt="" coords="699,617,741,644"/>
 <area shape="rect" id="node38" title=" " alt="" coords="1242,468,1318,495"/>
 <area shape="rect" id="node39" title=" " alt="" coords="766,617,890,644"/>
-<area shape="rect" id="node40" href="$Boxes_8hpp.html" title=" " alt="" coords="4129,468,4218,495"/>
+<area shape="rect" id="node40" href="$Boxes_8hpp.html" title=" " alt="" coords="4099,468,4189,495"/>
 <area shape="rect" id="node41" href="$Command_8hpp.html" title=" " alt="" coords="897,468,1015,495"/>
 <area shape="rect" id="node42" href="$DAGDefs_8hpp.html" title=" " alt="" coords="883,543,992,569"/>
-<area shape="rect" id="node43" href="$OpPtrFunctions_8hpp.html" title=" " alt="" coords="1342,468,1525,495"/>
-<area shape="rect" id="node44" href="$Conditional_8hpp.html" title=" " alt="" coords="3289,543,3442,569"/>
+<area shape="rect" id="node43" href="$Conditional_8hpp.html" title=" " alt="" coords="3289,543,3413,569"/>
+<area shape="rect" id="node44" href="$OpPtrFunctions_8hpp.html" title=" " alt="" coords="1342,468,1525,495"/>
 <area shape="rect" id="node45" href="$Assert_8hpp.html" title=" " alt="" coords="347,617,472,644"/>
 <area shape="rect" id="node46" href="$SequencedContainers_8hpp.html" title=" " alt="" coords="1549,468,1774,495"/>
-<area shape="rect" id="node48" href="$DeviceCharacterisation_8hpp.html" title=" " alt="" coords="3179,393,3493,420"/>
-<area shape="rect" id="node50" href="$PauliStrings_8hpp.html" title=" " alt="" coords="3619,543,3779,569"/>
+<area shape="rect" id="node48" href="$DeviceCharacterisation_8hpp.html" title=" " alt="" coords="3150,393,3463,420"/>
+<area shape="rect" id="node50" href="$PauliStrings_8hpp.html" title=" " alt="" coords="3589,543,3749,569"/>
 </map>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>tket: src/Graphs/AbstractGraph.hpp Source File</title>
+<title>tket: src/Graphs/include/Graphs/AbstractGraph.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -68,7 +68,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_954f34a4c1a614bca635d82fe58a5aa6.html">Graphs</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_954f34a4c1a614bca635d82fe58a5aa6.html">Graphs</a></li><li class="navelem"><a class="el" href="dir_b68e5e5ba23b9c2f77652acab9f61ee9.html">include</a></li><li class="navelem"><a class="el" href="dir_2e9f0dddbcdd1bd43f3ee7592f2a5c64.html">Graphs</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -97,7 +97,7 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="namespacetket_1_1graphs.html">   22</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacetket_1_1graphs.html">tket::graphs</a> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacetket_1_1graphs.html">tket::graphs</a> {</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classtket_1_1graphs_1_1NodeDoesNotExistError.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classtket_1_1graphs_1_1NodeDoesNotExistError.html">NodeDoesNotExistError</a> : <span class="keyword">public</span> std::logic_error {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">using</span> std::logic_error::logic_error;</div>
@@ -158,7 +158,7 @@ $(function() {
 <div class="ttc" id="aclasstket_1_1graphs_1_1NodeDoesNotExistError_html"><div class="ttname"><a href="classtket_1_1graphs_1_1NodeDoesNotExistError.html">tket::graphs::NodeDoesNotExistError</a></div><div class="ttdef"><b>Definition:</b> <a href="AbstractGraph_8hpp_source.html#l00024">AbstractGraph.hpp:24</a></div></div>
 <div class="ttc" id="aclasstket_1_1graphs_1_1AbstractGraph_html_ac76d6e2555455487441603e255b6251c"><div class="ttname"><a href="classtket_1_1graphs_1_1AbstractGraph.html#ac76d6e2555455487441603e255b6251c">tket::graphs::AbstractGraph::node_exists</a></div><div class="ttdeci">bool node_exists(const T &amp;node) const</div><div class="ttdoc">Check if a node exists.</div><div class="ttdef"><b>Definition:</b> <a href="AbstractGraph_8hpp_source.html#l00057">AbstractGraph.hpp:57</a></div></div>
 <div class="ttc" id="aclasstket_1_1graphs_1_1AbstractGraph_html_abfc35066f0b6d02dbd1db04cc65f308c"><div class="ttname"><a href="classtket_1_1graphs_1_1AbstractGraph.html#abfc35066f0b6d02dbd1db04cc65f308c">tket::graphs::AbstractGraph::get_distance</a></div><div class="ttdeci">virtual unsigned get_distance(const T &amp;node1, const T &amp;node2) const =0</div><div class="ttdoc">Graph distance between two nodes.</div></div>
-<div class="ttc" id="anamespacetket_1_1graphs_html"><div class="ttname"><a href="namespacetket_1_1graphs.html">tket::graphs</a></div><div class="ttdoc">Computation of Articulation Points (APs) on undirected graphs.</div><div class="ttdef"><b>Definition:</b> <a href="AbstractGraph_8hpp_source.html#l00022">AbstractGraph.hpp:22</a></div></div>
+<div class="ttc" id="anamespacetket_1_1graphs_html"><div class="ttname"><a href="namespacetket_1_1graphs.html">tket::graphs</a></div><div class="ttdoc">Computation of Articulation Points (APs) on undirected graphs.</div><div class="ttdef"><b>Definition:</b> <a href="AdjacencyData_8cpp_source.html#l00031">AdjacencyData.cpp:31</a></div></div>
 <div class="ttc" id="aclasstket_1_1graphs_1_1AbstractGraph_html_a4d2081b182c6cb76486d87874b58fcb2"><div class="ttname"><a href="classtket_1_1graphs_1_1AbstractGraph.html#a4d2081b182c6cb76486d87874b58fcb2">tket::graphs::AbstractGraph::edge_exists</a></div><div class="ttdeci">virtual bool edge_exists(const T &amp;node1, const T &amp;node2) const =0</div><div class="ttdoc">Check if an edge exists between two nodes.</div></div>
 <div class="ttc" id="aclasstket_1_1graphs_1_1EdgeDoesNotExistError_html"><div class="ttname"><a href="classtket_1_1graphs_1_1EdgeDoesNotExistError.html">tket::graphs::EdgeDoesNotExistError</a></div><div class="ttdef"><b>Definition:</b> <a href="AbstractGraph_8hpp_source.html#l00028">AbstractGraph.hpp:28</a></div></div>
 <!-- start footer part -->
