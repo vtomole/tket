@@ -1,5 +1,5 @@
 <map id="src/Transformations/include/Transformations/Transform.hpp" name="src/Transformations/include/Transformations/Transform.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="2003,5,2186,61"/>
+<area shape="rect" id="node1" title=" " alt="" coords="2201,5,2383,61"/>
 <area shape="rect" id="node2" href="$Predicates_8hpp.html" title=" " alt="" coords="713,117,908,158"/>
 <area shape="rect" id="node8" href="$PassGenerators_8cpp.html" title=" " alt="" coords="559,481,804,508"/>
 <area shape="rect" id="node9" href="$PassLibrary_8cpp.html" title=" " alt="" coords="5,481,221,508"/>
@@ -14,9 +14,11 @@
 <area shape="rect" id="node21" href="$OptimisationPass_8cpp.html" title=" " alt="" coords="2589,117,2755,158"/>
 <area shape="rect" id="node22" href="$PauliOptimisation_8cpp.html" title=" " alt="" coords="2780,117,2948,158"/>
 <area shape="rect" id="node23" href="$PhaseOptimisation_8cpp.html" title=" " alt="" coords="2972,117,3148,158"/>
-<area shape="rect" id="node24" href="$Rebase_8cpp.html" title=" " alt="" coords="3173,117,3323,158"/>
-<area shape="rect" id="node25" href="$Replacement_8cpp.html" title=" " alt="" coords="3347,117,3498,158"/>
-<area shape="rect" id="node26" href="$ThreeQubitSquash_8cpp.html" title=" " alt="" coords="3522,117,3694,158"/>
+<area shape="rect" id="node24" href="$PQPSquash_8cpp.html" title=" " alt="" coords="3173,117,3323,158"/>
+<area shape="rect" id="node25" href="$Rebase_8cpp.html" title=" " alt="" coords="3347,117,3498,158"/>
+<area shape="rect" id="node26" href="$Replacement_8cpp.html" title=" " alt="" coords="3522,117,3673,158"/>
+<area shape="rect" id="node27" href="$StandardSquash_8cpp.html" title=" " alt="" coords="3697,117,3855,158"/>
+<area shape="rect" id="node28" href="$ThreeQubitSquash_8cpp.html" title=" " alt="" coords="3879,117,4051,158"/>
 <area shape="rect" id="node3" href="$CompilationUnit_8hpp.html" title=" " alt="" coords="448,213,680,255"/>
 <area shape="rect" id="node5" href="$CompilerPass_8hpp.html" title=" " alt="" coords="322,303,537,344"/>
 <area shape="rect" id="node11" href="$Predicates_8cpp.html" title=" " alt="" coords="705,221,917,247"/>
