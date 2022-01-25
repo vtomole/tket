@@ -332,7 +332,7 @@ jobs:
 
   windows:
     name: Build and test (Windows)
-    runs-on: windows-2019
+    runs-on: windows-2022
     env:
       PYTKET_SKIP_REGISTRATION: "true"
     steps:
