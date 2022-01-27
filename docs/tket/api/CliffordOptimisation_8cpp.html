@@ -73,70 +73,74 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">CliffordOptimisation.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="CliffordOptimisation_8hpp_source.html">CliffordOptimisation.hpp</a>&quot;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="BasicOptimisation_8hpp_source.html">BasicOptimisation.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="CircPool_8hpp_source.html">Circuit/CircPool.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="DAGDefs_8hpp_source.html">Circuit/DAGDefs.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Decomposition_8hpp_source.html">Decomposition.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Transform_8hpp_source.html">Transform.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for CliffordOptimisation.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="CliffordOptimisation_8cpp__incl.png" border="0" usemap="#src_2Transformations_2CliffordOptimisation_8cpp" alt=""/></div>
 <map name="src_2Transformations_2CliffordOptimisation_8cpp" id="src_2Transformations_2CliffordOptimisation_8cpp">
-<area shape="rect" title=" " alt="" coords="1380,5,1564,47"/>
-<area shape="rect" title=" " alt="" coords="1882,557,1945,584"/>
-<area shape="rect" href="CircPool_8hpp.html" title=" " alt="" coords="1453,95,1603,121"/>
-<area shape="rect" href="DAGDefs_8hpp.html" title=" " alt="" coords="2393,319,2503,345"/>
-<area shape="rect" href="Transform_8hpp.html" title=" " alt="" coords="4255,95,4369,121"/>
-<area shape="rect" href="Circuit_8hpp.html" title=" " alt="" coords="2715,169,2807,196"/>
-<area shape="rect" href="Expression_8hpp.html" title="Functions related to (possibly symbolic) phase values." alt="" coords="2319,475,2473,502"/>
-<area shape="rect" title=" " alt="" coords="2679,244,2764,271"/>
-<area shape="rect" title=" " alt="" coords="2105,707,2191,733"/>
-<area shape="rect" title=" " alt="" coords="4162,244,4249,271"/>
-<area shape="rect" title=" " alt="" coords="2319,393,2361,420"/>
-<area shape="rect" title=" " alt="" coords="4225,632,4276,659"/>
-<area shape="rect" title=" " alt="" coords="2885,707,2963,733"/>
-<area shape="rect" title=" " alt="" coords="1265,632,1340,659"/>
-<area shape="rect" title=" " alt="" coords="2810,475,2886,502"/>
-<area shape="rect" title=" " alt="" coords="4603,632,4677,659"/>
-<area shape="rect" title=" " alt="" coords="3784,632,3843,659"/>
-<area shape="rect" title=" " alt="" coords="2839,244,2931,271"/>
-<area shape="rect" title=" " alt="" coords="2386,393,2510,420"/>
-<area shape="rect" title=" " alt="" coords="3759,557,3819,584"/>
-<area shape="rect" href="Boxes_8hpp.html" title=" " alt="" coords="2982,319,3071,345"/>
-<area shape="rect" href="Json_8hpp.html" title=" " alt="" coords="2389,632,2499,659"/>
-<area shape="rect" href="Constants_8hpp.html" title="Generally useful typedefs and constants." alt="" coords="3113,557,3263,584"/>
-<area shape="rect" href="UnitID_8hpp.html" title="Named registers of arrays of (quantum or classical) nodes." alt="" coords="3909,557,4035,584"/>
-<area shape="rect" href="TketLog_8hpp.html" title="Logging." alt="" coords="4721,632,4823,659"/>
-<area shape="rect" href="Command_8hpp.html" title=" " alt="" coords="3007,244,3124,271"/>
-<area shape="rect" href="GraphHeaders_8hpp.html" title=" " alt="" coords="810,393,987,420"/>
-<area shape="rect" href="Conditional_8hpp.html" title=" " alt="" coords="2194,319,2318,345"/>
-<area shape="rect" href="OpPtrFunctions_8hpp.html" title=" " alt="" coords="2111,393,2294,420"/>
-<area shape="rect" href="Assert_8hpp.html" title=" " alt="" coords="4871,557,4996,584"/>
-<area shape="rect" href="SequencedContainers_8hpp.html" title=" " alt="" coords="2043,244,2269,271"/>
-<area shape="rect" href="Op_8hpp.html" title="Operations." alt="" coords="2586,393,2683,420"/>
-<area shape="rect" href="MatrixAnalysis_8hpp.html" title=" " alt="" coords="3652,475,3833,502"/>
-<area shape="rect" title=" " alt="" coords="1793,632,1879,659"/>
-<area shape="rect" href="OpPtr_8hpp.html" title=" " alt="" coords="2599,475,2684,502"/>
-<area shape="rect" href="OpDesc_8hpp.html" title=" " alt="" coords="2583,557,2735,584"/>
-<area shape="rect" href="OpTypeFunctions_8hpp.html" title=" " alt="" coords="1694,475,1906,502"/>
-<area shape="rect" href="Exceptions_8hpp.html" title=" " alt="" coords="2071,557,2225,584"/>
-<area shape="rect" href="PauliStrings_8hpp.html" title=" " alt="" coords="3215,475,3375,502"/>
-<area shape="rect" title=" " alt="" coords="1423,557,1537,584"/>
-<area shape="rect" title=" " alt="" coords="3431,632,3473,659"/>
-<area shape="rect" href="Symbols_8hpp.html" title=" " alt="" coords="2300,557,2407,584"/>
-<area shape="rect" href="EdgeType_8hpp.html" title=" " alt="" coords="1929,475,2041,502"/>
-<area shape="rect" title=" " alt="" coords="601,468,770,509"/>
-<area shape="rect" title=" " alt="" coords="794,475,1003,502"/>
-<area shape="rect" title=" " alt="" coords="1028,475,1215,502"/>
-<area shape="rect" title=" " alt="" coords="195,468,354,509"/>
-<area shape="rect" title=" " alt="" coords="379,475,576,502"/>
-<area shape="rect" href="Architecture_8hpp.html" title=" " alt="" coords="4059,393,4271,420"/>
-<area shape="rect" href="DeviceCharacterisation_8hpp.html" title=" " alt="" coords="4111,319,4425,345"/>
+<area shape="rect" title=" " alt="" coords="1135,5,1319,47"/>
+<area shape="rect" href="CliffordOptimisation_8hpp.html" title=" " alt="" coords="897,95,1078,121"/>
+<area shape="rect" href="Transform_8hpp.html" title=" " alt="" coords="930,169,1045,196"/>
+<area shape="rect" title=" " alt="" coords="3059,632,3121,659"/>
+<area shape="rect" href="DAGDefs_8hpp.html" title=" " alt="" coords="2703,393,2813,420"/>
+<area shape="rect" href="BasicOptimisation_8hpp.html" title=" " alt="" coords="703,95,872,121"/>
+<area shape="rect" href="CircPool_8hpp.html" title=" " alt="" coords="1815,169,1965,196"/>
+<area shape="rect" href="Decomposition_8hpp.html" title=" " alt="" coords="1153,95,1301,121"/>
+<area shape="rect" title=" " alt="" coords="28,319,115,345"/>
+<area shape="rect" href="Circuit_8hpp.html" title=" " alt="" coords="1821,244,1959,271"/>
+<area shape="rect" title=" " alt="" coords="3223,319,3309,345"/>
+<area shape="rect" title=" " alt="" coords="1153,781,1240,808"/>
+<area shape="rect" title=" " alt="" coords="3306,468,3349,495"/>
+<area shape="rect" title=" " alt="" coords="2791,707,2842,733"/>
+<area shape="rect" title=" " alt="" coords="3446,781,3523,808"/>
+<area shape="rect" title=" " alt="" coords="1503,707,1578,733"/>
+<area shape="rect" title=" " alt="" coords="3320,550,3396,577"/>
+<area shape="rect" title=" " alt="" coords="218,707,293,733"/>
+<area shape="rect" title=" " alt="" coords="1917,707,1975,733"/>
+<area shape="rect" title=" " alt="" coords="2857,319,2949,345"/>
+<area shape="rect" title=" " alt="" coords="3373,468,3497,495"/>
+<area shape="rect" title=" " alt="" coords="1984,632,2044,659"/>
+<area shape="rect" href="Boxes_8hpp.html" title=" " alt="" coords="1763,393,1852,420"/>
+<area shape="rect" href="Json_8hpp.html" title=" " alt="" coords="1141,707,1252,733"/>
+<area shape="rect" href="Constants_8hpp.html" title="Generally useful typedefs and constants." alt="" coords="2653,632,2802,659"/>
+<area shape="rect" href="UnitID_8hpp.html" title="Named registers of arrays of (quantum or classical) nodes." alt="" coords="1277,632,1402,659"/>
+<area shape="rect" href="TketLog_8hpp.html" title="Logging." alt="" coords="710,707,811,733"/>
+<area shape="rect" href="Command_8hpp.html" title=" " alt="" coords="770,319,887,345"/>
+<area shape="rect" href="GraphHeaders_8hpp.html" title=" " alt="" coords="3733,468,3911,495"/>
+<area shape="rect" href="Conditional_8hpp.html" title=" " alt="" coords="1563,393,1687,420"/>
+<area shape="rect" href="OpPtrFunctions_8hpp.html" title=" " alt="" coords="1171,468,1353,495"/>
+<area shape="rect" href="Assert_8hpp.html" title=" " alt="" coords="243,632,369,659"/>
+<area shape="rect" href="SequencedContainers_8hpp.html" title=" " alt="" coords="2973,319,3199,345"/>
+<area shape="rect" href="Op_8hpp.html" title="Operations." alt="" coords="2399,468,2496,495"/>
+<area shape="rect" title=" " alt="" coords="3087,707,3173,733"/>
+<area shape="rect" href="OpPtr_8hpp.html" title=" " alt="" coords="1153,550,1238,577"/>
+<area shape="rect" href="OpDesc_8hpp.html" title=" " alt="" coords="1465,550,1617,577"/>
+<area shape="rect" href="OpTypeFunctions_8hpp.html" title=" " alt="" coords="2932,550,3144,577"/>
+<area shape="rect" href="Exceptions_8hpp.html" title=" " alt="" coords="2474,632,2629,659"/>
+<area shape="rect" href="Expression_8hpp.html" title="Functions related to (possibly symbolic) phase values." alt="" coords="2703,550,2858,577"/>
+<area shape="rect" href="PauliStrings_8hpp.html" title=" " alt="" coords="2367,550,2527,577"/>
+<area shape="rect" href="OpType_8hpp.html" title=" " alt="" coords="1103,632,1202,659"/>
+<area shape="rect" title=" " alt="" coords="3146,632,3261,659"/>
+<area shape="rect" title=" " alt="" coords="2365,707,2407,733"/>
+<area shape="rect" href="Symbols_8hpp.html" title=" " alt="" coords="2826,632,2933,659"/>
+<area shape="rect" href="EdgeType_8hpp.html" title=" " alt="" coords="2029,550,2141,577"/>
+<area shape="rect" title=" " alt="" coords="3959,543,4128,584"/>
+<area shape="rect" title=" " alt="" coords="3725,550,3935,577"/>
+<area shape="rect" href="ErrorTypes_8hpp.html" title=" " alt="" coords="747,550,977,577"/>
+<area shape="rect" href="Architecture_8hpp.html" title=" " alt="" coords="1641,550,1853,577"/>
 </map>
 </div>
 </div>
@@ -147,6 +151,17 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacetket"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html">tket</a></td></tr>
 <tr class="memdesc:namespacetket"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines <a class="el" href="classtket_1_1DeviceCharacterisation.html">tket::DeviceCharacterisation</a>, used in <a class="el" href="classtket_1_1NoiseAwarePlacement.html">NoiseAwarePlacement</a> and in commute_SQ_gates_through_SWAPS as a simple device noise model. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacetket_1_1Transforms"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket_1_1Transforms.html">tket::Transforms</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aecf3aac5977a57e0c88dd2d0b1952cd1"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket_1_1Transforms.html#aecf3aac5977a57e0c88dd2d0b1952cd1">tket::Transforms::multiq_clifford_replacement</a> (bool allow_swaps)</td></tr>
+<tr class="separator:aecf3aac5977a57e0c88dd2d0b1952cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6575b6ec25eab321e6b28066f5029ded"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket_1_1Transforms.html#a6575b6ec25eab321e6b28066f5029ded">tket::Transforms::copy_pi_through_CX</a> ()</td></tr>
+<tr class="separator:a6575b6ec25eab321e6b28066f5029ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4c86d0e3d325777cad289822d9316b5"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket_1_1Transforms.html#ac4c86d0e3d325777cad289822d9316b5">tket::Transforms::singleq_clifford_sweep</a> ()</td></tr>
+<tr class="separator:ac4c86d0e3d325777cad289822d9316b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

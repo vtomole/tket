@@ -73,69 +73,79 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">OptimisationPass.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="CircUtils_8hpp_source.html">Circuit/CircUtils.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="OptimisationPass_8hpp_source.html">OptimisationPass.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="BasicOptimisation_8hpp_source.html">BasicOptimisation.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="CircUtils_8hpp_source.html">Circuit/CircUtils.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="CliffordOptimisation_8hpp_source.html">CliffordOptimisation.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="CliffordReductionPass_8hpp_source.html">CliffordReductionPass.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Combinator_8hpp_source.html">Combinator.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Decomposition_8hpp_source.html">Decomposition.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="GatePtr_8hpp_source.html">Gate/GatePtr.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="PhaseOptimisation_8hpp_source.html">PhaseOptimisation.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Rebase_8hpp_source.html">Rebase.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ThreeQubitSquash_8hpp_source.html">ThreeQubitSquash.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Transform_8hpp_source.html">Transform.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for OptimisationPass.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="OptimisationPass_8cpp__incl.png" border="0" usemap="#src_2Transformations_2OptimisationPass_8cpp" alt=""/></div>
 <map name="src_2Transformations_2OptimisationPass_8cpp" id="src_2Transformations_2OptimisationPass_8cpp">
-<area shape="rect" title=" " alt="" coords="2049,5,2215,47"/>
-<area shape="rect" href="CircUtils_8hpp.html" title=" " alt="" coords="2057,95,2207,121"/>
-<area shape="rect" href="GatePtr_8hpp.html" title=" " alt="" coords="93,244,227,271"/>
-<area shape="rect" href="Transform_8hpp.html" title=" " alt="" coords="2988,95,3103,121"/>
-<area shape="rect" href="Circuit_8hpp.html" title=" " alt="" coords="2086,169,2178,196"/>
-<area shape="rect" href="PauliStrings_8hpp.html" title=" " alt="" coords="1849,468,2009,495"/>
-<area shape="rect" href="EigenConfig_8hpp.html" title="Include this file rather than including the Eigen headers directly." alt="" coords="3229,543,3390,569"/>
-<area shape="rect" href="DAGDefs_8hpp.html" title=" " alt="" coords="1461,319,1571,345"/>
-<area shape="rect" title=" " alt="" coords="2009,244,2095,271"/>
-<area shape="rect" title=" " alt="" coords="518,707,605,733"/>
-<area shape="rect" title=" " alt="" coords="2895,244,2982,271"/>
-<area shape="rect" title=" " alt="" coords="1852,393,1895,420"/>
-<area shape="rect" title=" " alt="" coords="3872,625,3923,651"/>
-<area shape="rect" title=" " alt="" coords="1829,707,1907,733"/>
-<area shape="rect" title=" " alt="" coords="727,625,801,651"/>
-<area shape="rect" title=" " alt="" coords="1394,468,1470,495"/>
-<area shape="rect" title=" " alt="" coords="3715,625,3789,651"/>
-<area shape="rect" title=" " alt="" coords="1543,625,1601,651"/>
-<area shape="rect" title=" " alt="" coords="2271,244,2363,271"/>
-<area shape="rect" title=" " alt="" coords="1970,393,2094,420"/>
-<area shape="rect" title=" " alt="" coords="1655,543,1715,569"/>
-<area shape="rect" title=" " alt="" coords="2370,543,2433,569"/>
-<area shape="rect" href="Boxes_8hpp.html" title=" " alt="" coords="2525,319,2614,345"/>
-<area shape="rect" href="Json_8hpp.html" title=" " alt="" coords="506,625,617,651"/>
-<area shape="rect" href="Constants_8hpp.html" title="Generally useful typedefs and constants." alt="" coords="1004,543,1153,569"/>
-<area shape="rect" href="UnitID_8hpp.html" title="Named registers of arrays of (quantum or classical) nodes." alt="" coords="2187,543,2312,569"/>
-<area shape="rect" href="TketLog_8hpp.html" title="Logging." alt="" coords="3545,625,3647,651"/>
-<area shape="rect" href="Command_8hpp.html" title=" " alt="" coords="1365,244,1483,271"/>
-<area shape="rect" href="GraphHeaders_8hpp.html" title=" " alt="" coords="1650,393,1827,420"/>
-<area shape="rect" href="Conditional_8hpp.html" title=" " alt="" coords="559,319,683,345"/>
-<area shape="rect" href="OpPtrFunctions_8hpp.html" title=" " alt="" coords="353,319,535,345"/>
-<area shape="rect" href="Assert_8hpp.html" title=" " alt="" coords="3633,543,3759,569"/>
-<area shape="rect" href="SequencedContainers_8hpp.html" title=" " alt="" coords="1759,244,1985,271"/>
-<area shape="rect" href="Op_8hpp.html" title="Operations." alt="" coords="1045,393,1142,420"/>
-<area shape="rect" href="MatrixAnalysis_8hpp.html" title=" " alt="" coords="2540,468,2721,495"/>
-<area shape="rect" href="OpPtr_8hpp.html" title=" " alt="" coords="337,468,423,495"/>
-<area shape="rect" href="Exceptions_8hpp.html" title=" " alt="" coords="1228,543,1383,569"/>
-<area shape="rect" title=" " alt="" coords="2127,625,2169,651"/>
-<area shape="rect" title=" " alt="" coords="3258,625,3361,651"/>
-<area shape="rect" title=" " alt="" coords="3385,625,3521,651"/>
-<area shape="rect" title=" " alt="" coords="2807,617,3019,659"/>
-<area shape="rect" title=" " alt="" coords="3044,617,3233,659"/>
-<area shape="rect" title=" " alt="" coords="1308,393,1423,420"/>
-<area shape="rect" href="EdgeType_8hpp.html" title=" " alt="" coords="1257,468,1369,495"/>
-<area shape="rect" href="Gate_8hpp.html" title=" " alt="" coords="247,319,329,345"/>
-<area shape="rect" href="Architecture_8hpp.html" title=" " alt="" coords="3006,393,3218,420"/>
-<area shape="rect" href="DeviceCharacterisation_8hpp.html" title=" " alt="" coords="3242,319,3555,345"/>
-<area shape="rect" title=" " alt="" coords="3175,468,3255,495"/>
-<area shape="rect" title=" " alt="" coords="3279,468,3353,495"/>
-<area shape="rect" href="CompleteGraph_8hpp.html" title=" " alt="" coords="2796,468,2999,495"/>
+<area shape="rect" title=" " alt="" coords="1364,5,1531,47"/>
+<area shape="rect" href="OptimisationPass_8hpp.html" title=" " alt="" coords="1307,95,1470,121"/>
+<area shape="rect" href="Transform_8hpp.html" title=" " alt="" coords="1011,169,1126,196"/>
+<area shape="rect" href="BasicOptimisation_8hpp.html" title=" " alt="" coords="1751,95,1920,121"/>
+<area shape="rect" href="CircUtils_8hpp.html" title=" " alt="" coords="2028,169,2179,196"/>
+<area shape="rect" href="GatePtr_8hpp.html" title=" " alt="" coords="2891,319,3025,345"/>
+<area shape="rect" href="CliffordOptimisation_8hpp.html" title=" " alt="" coords="1545,95,1726,121"/>
+<area shape="rect" href="CliffordReductionPass_8hpp.html" title=" " alt="" coords="428,95,619,121"/>
+<area shape="rect" href="Combinator_8hpp.html" title=" " alt="" coords="643,95,769,121"/>
+<area shape="rect" href="Decomposition_8hpp.html" title=" " alt="" coords="1944,95,2092,121"/>
+<area shape="rect" href="PhaseOptimisation_8hpp.html" title=" " alt="" coords="793,95,966,121"/>
+<area shape="rect" href="Rebase_8hpp.html" title=" " alt="" coords="990,95,1089,121"/>
+<area shape="rect" href="ThreeQubitSquash_8hpp.html" title=" " alt="" coords="1113,95,1283,121"/>
+<area shape="rect" title=" " alt="" coords="25,319,112,345"/>
+<area shape="rect" href="Circuit_8hpp.html" title=" " alt="" coords="985,244,1123,271"/>
+<area shape="rect" title=" " alt="" coords="1318,319,1403,345"/>
+<area shape="rect" title=" " alt="" coords="2472,617,2559,644"/>
+<area shape="rect" title=" " alt="" coords="878,468,921,495"/>
+<area shape="rect" title=" " alt="" coords="1366,468,1417,495"/>
+<area shape="rect" title=" " alt="" coords="2703,543,2781,569"/>
+<area shape="rect" title=" " alt="" coords="454,468,529,495"/>
+<area shape="rect" title=" " alt="" coords="1643,319,1719,345"/>
+<area shape="rect" title=" " alt="" coords="1097,468,1171,495"/>
+<area shape="rect" title=" " alt="" coords="1195,468,1254,495"/>
+<area shape="rect" title=" " alt="" coords="289,319,381,345"/>
+<area shape="rect" title=" " alt="" coords="104,468,228,495"/>
+<area shape="rect" title=" " alt="" coords="2248,468,2308,495"/>
+<area shape="rect" title=" " alt="" coords="535,543,597,569"/>
+<area shape="rect" href="Boxes_8hpp.html" title=" " alt="" coords="1529,319,1619,345"/>
+<area shape="rect" href="Json_8hpp.html" title=" " alt="" coords="1913,543,2024,569"/>
+<area shape="rect" href="UnitID_8hpp.html" title="Named registers of arrays of (quantum or classical) nodes." alt="" coords="1329,393,1454,420"/>
+<area shape="rect" href="TketLog_8hpp.html" title="Logging." alt="" coords="2459,468,2561,495"/>
+<area shape="rect" href="Command_8hpp.html" title=" " alt="" coords="826,319,943,345"/>
+<area shape="rect" href="DAGDefs_8hpp.html" title=" " alt="" coords="441,393,550,420"/>
+<area shape="rect" href="GraphHeaders_8hpp.html" title=" " alt="" coords="252,468,429,495"/>
+<area shape="rect" href="Conditional_8hpp.html" title=" " alt="" coords="676,393,800,420"/>
+<area shape="rect" href="OpPtrFunctions_8hpp.html" title=" " alt="" coords="2583,319,2765,345"/>
+<area shape="rect" href="Assert_8hpp.html" title=" " alt="" coords="1129,393,1254,420"/>
+<area shape="rect" href="Constants_8hpp.html" title="Generally useful typedefs and constants." alt="" coords="1630,393,1779,420"/>
+<area shape="rect" href="SequencedContainers_8hpp.html" title=" " alt="" coords="1068,319,1293,345"/>
+<area shape="rect" href="EigenConfig_8hpp.html" title="Include this file rather than including the Eigen headers directly." alt="" coords="2332,393,2493,420"/>
+<area shape="rect" title=" " alt="" coords="1551,468,1594,495"/>
+<area shape="rect" href="OpPtr_8hpp.html" title=" " alt="" coords="2721,393,2806,420"/>
+<area shape="rect" title=" " alt="" coords="739,468,854,495"/>
+<area shape="rect" href="EdgeType_8hpp.html" title=" " alt="" coords="603,468,715,495"/>
+<area shape="rect" href="OpType_8hpp.html" title=" " alt="" coords="2057,393,2155,420"/>
+<area shape="rect" href="ErrorTypes_8hpp.html" title=" " alt="" coords="1743,319,1973,345"/>
+<area shape="rect" href="PauliStrings_8hpp.html" title=" " alt="" coords="1997,319,2157,345"/>
+<area shape="rect" href="Gate_8hpp.html" title=" " alt="" coords="2881,393,2963,420"/>
+<area shape="rect" href="Architecture_8hpp.html" title=" " alt="" coords="2296,319,2508,345"/>
 </map>
 </div>
 </div>
@@ -146,6 +156,34 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacetket"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html">tket</a></td></tr>
 <tr class="memdesc:namespacetket"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines <a class="el" href="classtket_1_1DeviceCharacterisation.html">tket::DeviceCharacterisation</a>, used in <a class="el" href="classtket_1_1NoiseAwarePlacement.html">NoiseAwarePlacement</a> and in commute_SQ_gates_through_SWAPS as a simple device noise model. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacetket_1_1Transforms"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket_1_1Transforms.html">tket::Transforms</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:abcae07645ea5052499fa4285a3e11f9f"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket_1_1Transforms.html#abcae07645ea5052499fa4285a3e11f9f">tket::Transforms::peephole_optimise_2q</a> ()</td></tr>
+<tr class="separator:abcae07645ea5052499fa4285a3e11f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a402cc39d59193c2efdeab1c1e7078894"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket_1_1Transforms.html#a402cc39d59193c2efdeab1c1e7078894">tket::Transforms::full_peephole_optimise</a> (bool allow_swaps=true)</td></tr>
+<tr class="memdesc:a402cc39d59193c2efdeab1c1e7078894"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peephole optimisation including resynthesis of three-qubit gate sequences.  <a href="namespacetket_1_1Transforms.html#a402cc39d59193c2efdeab1c1e7078894">More...</a><br /></td></tr>
+<tr class="separator:a402cc39d59193c2efdeab1c1e7078894"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ce8719a9448ea6928f60749fca6c2ca"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket_1_1Transforms.html#a4ce8719a9448ea6928f60749fca6c2ca">tket::Transforms::canonical_hyper_clifford_squash</a> ()</td></tr>
+<tr class="separator:a4ce8719a9448ea6928f60749fca6c2ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52148ae6b71d9f22bf042ce36c1870ba"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket_1_1Transforms.html#a52148ae6b71d9f22bf042ce36c1870ba">tket::Transforms::hyper_clifford_squash</a> ()</td></tr>
+<tr class="separator:a52148ae6b71d9f22bf042ce36c1870ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d801201cebd0dd5f0f99b0784f07900"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket_1_1Transforms.html#a2d801201cebd0dd5f0f99b0784f07900">tket::Transforms::clifford_simp</a> (bool allow_swaps=true)</td></tr>
+<tr class="separator:a2d801201cebd0dd5f0f99b0784f07900"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a108b4acec5e396c24213d413646d06"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket_1_1Transforms.html#a7a108b4acec5e396c24213d413646d06">tket::Transforms::synthesise_tket</a> ()</td></tr>
+<tr class="memdesc:a7a108b4acec5e396c24213d413646d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synthesise a circuit consisting of CX and TK1 gates only.  <a href="namespacetket_1_1Transforms.html#a7a108b4acec5e396c24213d413646d06">More...</a><br /></td></tr>
+<tr class="separator:a7a108b4acec5e396c24213d413646d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7c10a1186c19594e2ae43fef95183f2"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket_1_1Transforms.html#ae7c10a1186c19594e2ae43fef95183f2">tket::Transforms::optimise_via_PhaseGadget</a> (CXConfigType cx_config=CXConfigType::Snake)</td></tr>
+<tr class="memdesc:ae7c10a1186c19594e2ae43fef95183f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Depth-saving resynthesis of phase gadgets with alignment.  <a href="namespacetket_1_1Transforms.html#ae7c10a1186c19594e2ae43fef95183f2">More...</a><br /></td></tr>
+<tr class="separator:ae7c10a1186c19594e2ae43fef95183f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeccb29133f92d28f96ca1ffe74dd5213"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket_1_1Transforms.html#aeccb29133f92d28f96ca1ffe74dd5213">tket::Transforms::synthesise_OQC</a> ()</td></tr>
+<tr class="separator:aeccb29133f92d28f96ca1ffe74dd5213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa2b9b13451726d765f3a5000e8a7bb0"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket_1_1Transforms.html#aaa2b9b13451726d765f3a5000e8a7bb0">tket::Transforms::synthesise_HQS</a> ()</td></tr>
+<tr class="separator:aaa2b9b13451726d765f3a5000e8a7bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8777f6fc2b64b1ff4fd79710f7f68e17"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket_1_1Transforms.html#a8777f6fc2b64b1ff4fd79710f7f68e17">tket::Transforms::synthesise_UMD</a> ()</td></tr>
+<tr class="separator:a8777f6fc2b64b1ff4fd79710f7f68e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

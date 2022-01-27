@@ -81,61 +81,63 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="SteinerForest_8hpp_source.html">ArchAwareSynth/SteinerForest.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="CompilerPass_8hpp_source.html">CompilerPass.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ContextualReduction_8hpp_source.html">Transformations/ContextualReduction.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="PauliOptimisation_8hpp_source.html">Transformations/PauliOptimisation.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for PassGenerators.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="PassGenerators_8hpp__incl.png" border="0" usemap="#src_2Predicates_2include_2Predicates_2PassGenerators_8hpp" alt=""/></div>
 <map name="src_2Predicates_2include_2Predicates_2PassGenerators_8hpp" id="src_2Predicates_2include_2Predicates_2PassGenerators_8hpp">
-<area shape="rect" title=" " alt="" coords="2465,5,2691,47"/>
-<area shape="rect" href="SteinerForest_8hpp.html" title=" " alt="" coords="2347,95,2593,121"/>
-<area shape="rect" href="CompilerPass_8hpp.html" title=" " alt="" coords="3609,95,3747,121"/>
-<area shape="rect" href="Circuit_8hpp.html" title=" " alt="" coords="1098,319,1237,345"/>
-<area shape="rect" href="UnitID_8hpp.html" title="Named registers of arrays of (quantum or classical) nodes." alt="" coords="865,557,990,584"/>
-<area shape="rect" href="GraphHeaders_8hpp.html" title=" " alt="" coords="3395,639,3572,666"/>
-<area shape="rect" href="PhasePoly_8hpp.html" title=" " alt="" coords="1015,169,1205,196"/>
-<area shape="rect" href="DirectedGraph_8hpp.html" title=" " alt="" coords="2665,319,2859,345"/>
-<area shape="rect" href="Utils_8hpp.html" title=" " alt="" coords="3013,483,3143,509"/>
-<area shape="rect" href="SteinerTree_8hpp.html" title=" " alt="" coords="2213,169,2335,196"/>
-<area shape="rect" title=" " alt="" coords="3262,639,3347,666"/>
-<area shape="rect" title=" " alt="" coords="5,721,92,748"/>
-<area shape="rect" title=" " alt="" coords="2133,401,2220,427"/>
-<area shape="rect" title=" " alt="" coords="1686,639,1729,666"/>
-<area shape="rect" title=" " alt="" coords="2065,639,2115,666"/>
-<area shape="rect" title=" " alt="" coords="466,721,543,748"/>
-<area shape="rect" title=" " alt="" coords="1265,639,1339,666"/>
-<area shape="rect" title=" " alt="" coords="1172,401,1248,427"/>
-<area shape="rect" title=" " alt="" coords="487,639,562,666"/>
-<area shape="rect" title=" " alt="" coords="1039,639,1098,666"/>
-<area shape="rect" title=" " alt="" coords="3035,639,3127,666"/>
-<area shape="rect" title=" " alt="" coords="1535,639,1659,666"/>
-<area shape="rect" title=" " alt="" coords="2419,639,2479,666"/>
-<area shape="rect" title=" " alt="" coords="1932,639,1995,666"/>
-<area shape="rect" href="Boxes_8hpp.html" title=" " alt="" coords="753,401,843,427"/>
-<area shape="rect" href="Json_8hpp.html" title=" " alt="" coords="69,639,180,666"/>
-<area shape="rect" href="TketLog_8hpp.html" title="Logging." alt="" coords="586,639,687,666"/>
-<area shape="rect" href="Constants_8hpp.html" title="Generally useful typedefs and constants." alt="" coords="1065,557,1214,584"/>
-<area shape="rect" href="Command_8hpp.html" title=" " alt="" coords="625,483,742,509"/>
-<area shape="rect" href="DAGDefs_8hpp.html" title=" " alt="" coords="1791,557,1901,584"/>
-<area shape="rect" href="Conditional_8hpp.html" title=" " alt="" coords="159,483,283,509"/>
-<area shape="rect" href="OpPtrFunctions_8hpp.html" title=" " alt="" coords="1272,401,1455,427"/>
-<area shape="rect" href="Assert_8hpp.html" title=" " alt="" coords="462,557,587,584"/>
-<area shape="rect" href="SequencedContainers_8hpp.html" title=" " alt="" coords="1479,401,1704,427"/>
-<area shape="rect" href="BiMapHeaders_8hpp.html" title=" " alt="" coords="1364,639,1509,666"/>
-<area shape="rect" href="MatrixAnalysis_8hpp.html" title=" " alt="" coords="918,483,1099,509"/>
-<area shape="rect" title=" " alt="" coords="2351,639,2394,666"/>
-<area shape="rect" href="CircUtils_8hpp.html" title=" " alt="" coords="1148,244,1299,271"/>
-<area shape="rect" href="HelperFunctions_8hpp.html" title=" " alt="" coords="2073,319,2262,345"/>
-<area shape="rect" title=" " alt="" coords="2296,393,2449,435"/>
-<area shape="rect" title=" " alt="" coords="2769,632,2920,673"/>
-<area shape="rect" title=" " alt="" coords="3074,401,3154,427"/>
-<area shape="rect" title=" " alt="" coords="2525,639,2612,666"/>
-<area shape="rect" href="AbstractGraph_8hpp.html" title=" " alt="" coords="2331,557,2524,584"/>
-<area shape="rect" href="TreeSearch_8hpp.html" title=" " alt="" coords="2677,401,2847,427"/>
-<area shape="rect" title=" " alt="" coords="2994,557,3154,584"/>
-<area shape="rect" href="Utils__impl_8hpp.html" title=" " alt="" coords="2701,557,2868,584"/>
-<area shape="rect" href="Gauss_8hpp.html" title=" " alt="" coords="2118,244,2283,271"/>
-<area shape="rect" href="CompilationUnit_8hpp.html" title=" " alt="" coords="3635,169,3791,196"/>
-<area shape="rect" href="Predicates_8hpp.html" title=" " alt="" coords="3711,244,3829,271"/>
+<area shape="rect" title=" " alt="" coords="3073,5,3300,47"/>
+<area shape="rect" href="SteinerForest_8hpp.html" title=" " alt="" coords="1124,169,1371,196"/>
+<area shape="rect" href="CompilerPass_8hpp.html" title=" " alt="" coords="3233,95,3372,121"/>
+<area shape="rect" href="ContextualReduction_8hpp.html" title=" " alt="" coords="3258,244,3461,285"/>
+<area shape="rect" href="PauliOptimisation_8hpp.html" title=" " alt="" coords="2934,95,3209,121"/>
+<area shape="rect" href="Circuit_8hpp.html" title=" " alt="" coords="2434,408,2573,435"/>
+<area shape="rect" href="UnitID_8hpp.html" title="Named registers of arrays of (quantum or classical) nodes." alt="" coords="2429,647,2554,673"/>
+<area shape="rect" href="GraphHeaders_8hpp.html" title=" " alt="" coords="855,647,1032,673"/>
+<area shape="rect" href="PhasePoly_8hpp.html" title=" " alt="" coords="1503,251,1694,278"/>
+<area shape="rect" href="DirectedGraph_8hpp.html" title=" " alt="" coords="376,408,570,435"/>
+<area shape="rect" href="Utils_8hpp.html" title=" " alt="" coords="626,572,757,599"/>
+<area shape="rect" href="SteinerTree_8hpp.html" title=" " alt="" coords="712,251,834,278"/>
+<area shape="rect" title=" " alt="" coords="460,647,545,673"/>
+<area shape="rect" title=" " alt="" coords="3412,796,3499,823"/>
+<area shape="rect" title=" " alt="" coords="1928,490,2015,517"/>
+<area shape="rect" title=" " alt="" coords="2140,647,2182,673"/>
+<area shape="rect" title=" " alt="" coords="973,721,1024,748"/>
+<area shape="rect" title=" " alt="" coords="2260,796,2337,823"/>
+<area shape="rect" title=" " alt="" coords="2354,721,2429,748"/>
+<area shape="rect" title=" " alt="" coords="2390,490,2466,517"/>
+<area shape="rect" title=" " alt="" coords="2834,721,2909,748"/>
+<area shape="rect" title=" " alt="" coords="2485,721,2544,748"/>
+<area shape="rect" title=" " alt="" coords="343,647,435,673"/>
+<area shape="rect" title=" " alt="" coords="2207,647,2331,673"/>
+<area shape="rect" title=" " alt="" coords="1458,647,1518,673"/>
+<area shape="rect" title=" " alt="" coords="1567,647,1630,673"/>
+<area shape="rect" href="Boxes_8hpp.html" title=" " alt="" coords="1763,490,1852,517"/>
+<area shape="rect" href="Json_8hpp.html" title=" " alt="" coords="3256,721,3367,748"/>
+<area shape="rect" href="TketLog_8hpp.html" title="Logging." alt="" coords="2592,721,2693,748"/>
+<area shape="rect" href="Constants_8hpp.html" title="Generally useful typedefs and constants." alt="" coords="1700,647,1849,673"/>
+<area shape="rect" href="Command_8hpp.html" title=" " alt="" coords="2693,490,2810,517"/>
+<area shape="rect" href="DAGDefs_8hpp.html" title=" " alt="" coords="1992,572,2101,599"/>
+<area shape="rect" href="Conditional_8hpp.html" title=" " alt="" coords="3187,572,3311,599"/>
+<area shape="rect" href="OpPtrFunctions_8hpp.html" title=" " alt="" coords="2987,490,3170,517"/>
+<area shape="rect" href="Assert_8hpp.html" title=" " alt="" coords="2885,647,3010,673"/>
+<area shape="rect" href="SequencedContainers_8hpp.html" title=" " alt="" coords="2090,490,2315,517"/>
+<area shape="rect" href="MatrixAnalysis_8hpp.html" title=" " alt="" coords="1728,572,1909,599"/>
+<area shape="rect" title=" " alt="" coords="1984,721,2026,748"/>
+<area shape="rect" href="CircUtils_8hpp.html" title=" " alt="" coords="1636,333,1787,360"/>
+<area shape="rect" href="HelperFunctions_8hpp.html" title=" " alt="" coords="1026,408,1216,435"/>
+<area shape="rect" title=" " alt="" coords="680,483,834,524"/>
+<area shape="rect" title=" " alt="" coords="46,483,196,524"/>
+<area shape="rect" title=" " alt="" coords="221,490,301,517"/>
+<area shape="rect" title=" " alt="" coords="1056,647,1143,673"/>
+<area shape="rect" href="AbstractGraph_8hpp.html" title=" " alt="" coords="1139,572,1332,599"/>
+<area shape="rect" href="TreeSearch_8hpp.html" title=" " alt="" coords="1162,490,1333,517"/>
+<area shape="rect" title=" " alt="" coords="569,647,729,673"/>
+<area shape="rect" href="CompilationUnit_8hpp.html" title=" " alt="" coords="3216,169,3372,196"/>
+<area shape="rect" href="Predicates_8hpp.html" title=" " alt="" coords="3115,251,3234,278"/>
+<area shape="rect" href="Transform_8hpp.html" title=" " alt="" coords="3005,333,3229,360"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -209,19 +211,19 @@ Functions</h2></td></tr>
 <tr class="separator:a1940dc4d6b6d29ea44d4120e03b9c5a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a397234e6a5bd81a30153dadbe26fb6b2"><td class="memItemLeft" align="right" valign="top">PassPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a397234e6a5bd81a30153dadbe26fb6b2">tket::gen_pairwise_pauli_gadgets</a> (CXConfigType cx_config=CXConfigType::Snake)</td></tr>
 <tr class="separator:a397234e6a5bd81a30153dadbe26fb6b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f1f5dcf60c209920157abb3962a8721"><td class="memItemLeft" align="right" valign="top">PassPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a8f1f5dcf60c209920157abb3962a8721">tket::gen_synthesise_pauli_graph</a> (PauliSynthStrat strat=PauliSynthStrat::Sets, CXConfigType cx_config=CXConfigType::Snake)</td></tr>
-<tr class="separator:a8f1f5dcf60c209920157abb3962a8721"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7c0cd7881c4f7bbe8bd7681585b273c"><td class="memItemLeft" align="right" valign="top">PassPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#aa7c0cd7881c4f7bbe8bd7681585b273c">tket::gen_special_UCC_synthesis</a> (PauliSynthStrat strat=PauliSynthStrat::Sets, CXConfigType cx_config=CXConfigType::Snake)</td></tr>
-<tr class="separator:aa7c0cd7881c4f7bbe8bd7681585b273c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a380d6cf0011ef54231ba00cb449eacd2"><td class="memItemLeft" align="right" valign="top">PassPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a380d6cf0011ef54231ba00cb449eacd2">tket::gen_simplify_initial</a> (Transform::AllowClassical allow_classical=Transform::AllowClassical::Yes, Transform::CreateAllQubits create_all_qubits=Transform::CreateAllQubits::No, std::shared_ptr&lt; const Circuit &gt; xcirc=0)</td></tr>
-<tr class="memdesc:a380d6cf0011ef54231ba00cb449eacd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a pass to simplify the circuit where it acts on known basis states.  <a href="namespacetket.html#a380d6cf0011ef54231ba00cb449eacd2">More...</a><br /></td></tr>
-<tr class="separator:a380d6cf0011ef54231ba00cb449eacd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91420270616650d70d2ca71af8cf88aa"><td class="memItemLeft" align="right" valign="top">PassPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a91420270616650d70d2ca71af8cf88aa">tket::gen_contextual_pass</a> (Transform::AllowClassical allow_classical=Transform::AllowClassical::Yes, std::shared_ptr&lt; const Circuit &gt; xcirc=0)</td></tr>
-<tr class="memdesc:a91420270616650d70d2ca71af8cf88aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a pass to perform simplifications dependent on qubit state.  <a href="namespacetket.html#a91420270616650d70d2ca71af8cf88aa">More...</a><br /></td></tr>
-<tr class="separator:a91420270616650d70d2ca71af8cf88aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00fbfacfe74e5e0c97d4f855c5fa8d64"><td class="memItemLeft" align="right" valign="top">PassPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a00fbfacfe74e5e0c97d4f855c5fa8d64">tket::PauliSquash</a> (PauliSynthStrat strat, CXConfigType cx_config)</td></tr>
-<tr class="memdesc:a00fbfacfe74e5e0c97d4f855c5fa8d64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a sequence of PauliSimp (gen_synthesise_pauli_graph) and FullPeepholeOptimise.  <a href="namespacetket.html#a00fbfacfe74e5e0c97d4f855c5fa8d64">More...</a><br /></td></tr>
-<tr class="separator:a00fbfacfe74e5e0c97d4f855c5fa8d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6add507e8e49c943be6c03561af2e65d"><td class="memItemLeft" align="right" valign="top">PassPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a6add507e8e49c943be6c03561af2e65d">tket::gen_synthesise_pauli_graph</a> (Transforms::PauliSynthStrat strat=Transforms::PauliSynthStrat::Sets, CXConfigType cx_config=CXConfigType::Snake)</td></tr>
+<tr class="separator:a6add507e8e49c943be6c03561af2e65d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e669f1b5513d47c75ba89e48d1ec679"><td class="memItemLeft" align="right" valign="top">PassPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a1e669f1b5513d47c75ba89e48d1ec679">tket::gen_special_UCC_synthesis</a> (Transforms::PauliSynthStrat strat=Transforms::PauliSynthStrat::Sets, CXConfigType cx_config=CXConfigType::Snake)</td></tr>
+<tr class="separator:a1e669f1b5513d47c75ba89e48d1ec679"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a561aa1506457519e30179b6d9e516a8a"><td class="memItemLeft" align="right" valign="top">PassPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a561aa1506457519e30179b6d9e516a8a">tket::gen_simplify_initial</a> (Transforms::AllowClassical allow_classical=Transforms::AllowClassical::Yes, Transforms::CreateAllQubits create_all_qubits=Transforms::CreateAllQubits::No, std::shared_ptr&lt; const Circuit &gt; xcirc=0)</td></tr>
+<tr class="memdesc:a561aa1506457519e30179b6d9e516a8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a pass to simplify the circuit where it acts on known basis states.  <a href="namespacetket.html#a561aa1506457519e30179b6d9e516a8a">More...</a><br /></td></tr>
+<tr class="separator:a561aa1506457519e30179b6d9e516a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93727fa79d5117e997a68cff98864494"><td class="memItemLeft" align="right" valign="top">PassPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#a93727fa79d5117e997a68cff98864494">tket::gen_contextual_pass</a> (Transforms::AllowClassical allow_classical=Transforms::AllowClassical::Yes, std::shared_ptr&lt; const Circuit &gt; xcirc=0)</td></tr>
+<tr class="memdesc:a93727fa79d5117e997a68cff98864494"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a pass to perform simplifications dependent on qubit state.  <a href="namespacetket.html#a93727fa79d5117e997a68cff98864494">More...</a><br /></td></tr>
+<tr class="separator:a93727fa79d5117e997a68cff98864494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3897556973b31db34ea75777d242c8a"><td class="memItemLeft" align="right" valign="top">PassPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetket.html#ab3897556973b31db34ea75777d242c8a">tket::PauliSquash</a> (Transforms::PauliSynthStrat strat, CXConfigType cx_config)</td></tr>
+<tr class="memdesc:ab3897556973b31db34ea75777d242c8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a sequence of PauliSimp (gen_synthesise_pauli_graph) and FullPeepholeOptimise.  <a href="namespacetket.html#ab3897556973b31db34ea75777d242c8a">More...</a><br /></td></tr>
+<tr class="separator:ab3897556973b31db34ea75777d242c8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

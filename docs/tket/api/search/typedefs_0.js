@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['avg_5flink_5ferrors_5ft_3957',['avg_link_errors_t',['../namespacetket.html#a9d40137af27172ca9d76cafd2910e8e2',1,'tket']]],
-  ['avg_5fnode_5ferrors_5ft_3958',['avg_node_errors_t',['../namespacetket.html#acc683fec0032a7b9796dc9aa27be162f',1,'tket']]],
-  ['avg_5freadout_5ferrors_5ft_3959',['avg_readout_errors_t',['../namespacetket.html#a84619a627023e5eeb9cf5cfd8c2eb0ef',1,'tket']]]
+  ['avg_5flink_5ferrors_5ft_3968',['avg_link_errors_t',['../namespacetket.html#a750d0fc1d192a16c2e45d8b9ac311f3e',1,'tket']]],
+  ['avg_5fnode_5ferrors_5ft_3969',['avg_node_errors_t',['../namespacetket.html#ace85b9f029c1ae44a76289ebea0ee42a',1,'tket']]],
+  ['avg_5freadout_5ferrors_5ft_3970',['avg_readout_errors_t',['../namespacetket.html#a0f93975ad651591a2f62a7bf24b0e43d',1,'tket']]]
 ];

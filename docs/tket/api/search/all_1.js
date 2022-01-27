@@ -48,7 +48,7 @@ var searchData=
   ['adl_5fserializer_3c_20tket_3a_3aexpr_20_3e_48',['adl_serializer&lt; tket::Expr &gt;',['../structnlohmann_1_1adl__serializer_3_01tket_1_1Expr_01_4.html',1,'nlohmann']]],
   ['adl_5fserializer_3c_20tket_3a_3asym_20_3e_49',['adl_serializer&lt; tket::Sym &gt;',['../structnlohmann_1_1adl__serializer_3_01tket_1_1Sym_01_4.html',1,'nlohmann']]],
   ['advance_5ffrontier_50',['advance_frontier',['../classtket_1_1RoutingTester.html#acc2813cd4cea694c932f4255cc504622',1,'tket::RoutingTester']]],
-  ['align_5fphasegadgets_51',['align_PhaseGadgets',['../classtket_1_1Transform.html#a46c0e392a9cd080216caf254a41bf59b',1,'tket::Transform']]],
+  ['align_5fphasegadgets_51',['align_PhaseGadgets',['../namespacetket_1_1Transforms.html#af0b70fde74e9a8bbd8b038b519325db7',1,'tket::Transforms']]],
   ['all_5fbits_52',['all_bits',['../classtket_1_1Circuit.html#a79b731d8d4d889642d254aa394abf828',1,'tket::Circuit::all_bits()'],['../classtket_1_1Program.html#a9dd92e223ebb730ffbbd3cbc02e4c3a2',1,'tket::Program::all_bits()']]],
   ['all_5fgate_5ftypes_53',['all_gate_types',['../namespacetket.html#a58cfa7b63277a3124e19fe6bb098fc06',1,'tket']]],
   ['all_5finputs_54',['all_inputs',['../classtket_1_1Circuit.html#ad988e67e874fd0cda97384c4719d6ad6',1,'tket::Circuit']]],
@@ -60,7 +60,7 @@ var searchData=
   ['all_5fsingle_5fqubit_5ftypes_60',['all_single_qubit_types',['../namespacetket.html#ae6be95118f190ec67f1ec14ab6c9cace',1,'tket']]],
   ['all_5funit_5fpaths_61',['all_unit_paths',['../classtket_1_1Circuit.html#a7c148b1ee366ba464447697a13a088ce',1,'tket::Circuit']]],
   ['all_5funits_62',['all_units',['../classtket_1_1Circuit.html#a7c8bb7410047dfd8085e272eb2cdd1bb',1,'tket::Circuit::all_units()'],['../classtket_1_1Program.html#a4c22fcb4822d0bc39667e7decb1e88fb',1,'tket::Program::all_units()']]],
-  ['allowclassical_63',['AllowClassical',['../classtket_1_1Transform.html#a1119ac3b38675c88d1f7ca11e581019c',1,'tket::Transform']]],
+  ['allowclassical_63',['AllowClassical',['../namespacetket_1_1Transforms.html#ac99440e10912adc1db7cde10c39b4690',1,'tket::Transforms']]],
   ['andop_64',['AndOp',['../namespacetket.html#a0f7d5a78ae16deb729d5883239773de3',1,'tket']]],
   ['andwithop_65',['AndWithOp',['../namespacetket.html#a56dd548848afa71d8d9073a21f49ad36',1,'tket']]],
   ['angle_66',['angle',['../classtket_1_1Rotation.html#a360db9877cd88e055e5770eebda60327',1,'tket::Rotation']]],
@@ -120,7 +120,7 @@ var searchData=
   ['assign_5fvertices_120',['assign_vertices',['../classtket_1_1FrameRandomisation.html#a343de2301ef8bf39d9e9afe0f15009d8',1,'tket::FrameRandomisation']]],
   ['audit_121',['Audit',['../namespacetket.html#ab65820ebbcb1ceb848e855a832420396aeda63b570db82e05c2fd7b5f0c3bb20f',1,'tket']]],
   ['autoroute_122',['autoroute',['../namespacetket.html#a78c61fe6cf97e96d31060c7fc8a66082',1,'tket']]],
-  ['avg_5flink_5ferrors_5ft_123',['avg_link_errors_t',['../namespacetket.html#a9d40137af27172ca9d76cafd2910e8e2',1,'tket']]],
-  ['avg_5fnode_5ferrors_5ft_124',['avg_node_errors_t',['../namespacetket.html#acc683fec0032a7b9796dc9aa27be162f',1,'tket']]],
-  ['avg_5freadout_5ferrors_5ft_125',['avg_readout_errors_t',['../namespacetket.html#a84619a627023e5eeb9cf5cfd8c2eb0ef',1,'tket']]]
+  ['avg_5flink_5ferrors_5ft_123',['avg_link_errors_t',['../namespacetket.html#a750d0fc1d192a16c2e45d8b9ac311f3e',1,'tket']]],
+  ['avg_5fnode_5ferrors_5ft_124',['avg_node_errors_t',['../namespacetket.html#ace85b9f029c1ae44a76289ebea0ee42a',1,'tket']]],
+  ['avg_5freadout_5ferrors_5ft_125',['avg_readout_errors_t',['../namespacetket.html#a0f93975ad651591a2f62a7bf24b0e43d',1,'tket']]]
 ];
