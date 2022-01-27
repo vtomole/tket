@@ -16,7 +16,40 @@
 
 #include "ArchAwareSynth/SteinerForest.hpp"
 #include "testutil.hpp"
+#include "Transformations/Transform.hpp"
+
 namespace tket {
+
+SCENARIO("Synthesise a small circuit with an implicit SWAP"){
+    Circuit orig_circ(4);
+    orig_circ.add_op<unsigned>(OpType::CX, {0, 1});
+    orig_circ.add_op<unsigned>(OpType::CX, {1, 0});
+    Circuit circ(orig_circ);
+    Transform::clifford_simp().apply(circ);
+    REQUIRE(circ.has_implicit_wireswaps());
+    const Architecture archi({{Node(0), Node(1)},{Node(1), Node(2)},{Node(2), Node(3)}});
+    PhasePolyBox ppbox(circ);
+    aas::SteinerForest sf = aas::SteinerForest(archi, ppbox);
+    Circuit result = aas::phase_poly_synthesis(archi, ppbox, 1);
+    REQUIRE(test_unitary_comparison(orig_circ, result));
+}
+SCENARIO("Synthesise a larger circuit with an implicit SWAP"){
+  Circuit orig_circ(4);
+  orig_circ.add_op<unsigned>(OpType::CX, {0, 1});
+  orig_circ.add_op<unsigned>(OpType::Rz, 0.7, {0});
+  Circuit circ(orig_circ);
+  Transform::rebase_UFR().apply(circ);
+  Transform::compose_phase_poly_boxes().apply(circ);
+  circ.add_op<unsigned>(OpType::H, {1});
+  circ.add_op<unsigned>(OpType::H, {0});
+  const Architecture archi({{Node(0), Node(1)},{Node(1), Node(2)},{Node(2), Node(3)}});
+  PhasePolyBox ppbox(circ);
+  aas::SteinerForest sf = aas::SteinerForest(archi, ppbox);
+  Circuit result = aas::phase_poly_synthesis(archi, ppbox, 1);
+  REQUIRE(test_unitary_comparison(orig_circ, result));
+}
+
+
 SCENARIO("Synthesise a CNOT-only steiner Forest") {
   GIVEN("Empty circuit") {
     const Architecture archi(
