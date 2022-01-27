@@ -22,7 +22,7 @@
     </tr>
     <tr>
       <th scope="row">File:</th>
-      <td>Gate/OpPtrFunctions.cpp</td>
+      <td>Transformations/include/Transformations/PauliOptimisation.hpp</td>
     </tr>
     <tr>
       <th scope="row">Date:</th>
@@ -40,15 +40,15 @@
     </tr>
     <tr>
       <th scope="row">Lines:</th>
-      <td>7</td>
-      <td>7</td>
+      <td>1</td>
+      <td>1</td>
       <td class="coverage-high">100.0%</td>
     </tr>
     <tr>
       <th scope="row">Branches:</th>
       <td>7</td>
-      <td>12</td>
-      <td class="coverage-low">58.3%</td>
+      <td>16</td>
+      <td class="coverage-low">43.8%</td>
     </tr>
   </table>
 </div>
@@ -183,7 +183,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span> <span class="cpf">&quot;OpPtrFunctions.hpp&quot;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#pragma once</span></td>
     </tr>
 
     <tr class="source-line">
@@ -199,7 +199,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span> <span class="cpf">&quot;Gate.hpp&quot;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span> <span class="cpf">&quot;Transform.hpp&quot;</span><span class="cp"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -207,7 +207,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span> <span class="cpf">&quot;Ops/MetaOp.hpp&quot;</span><span class="cp"></span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -215,7 +215,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span> <span class="cpf">&quot;SymTable.hpp&quot;</span><span class="cp"></span></td>
+      <td class="src "><span class="k">namespace</span> <span class="n">tket</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -231,7 +231,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">namespace</span> <span class="n">tket</span> <span class="p">{</span></td>
+      <td class="src "><span class="k">namespace</span> <span class="n">Transforms</span> <span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -246,29 +246,16 @@
       <td class="lineno"><a id="l23" href="#l23">23</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">57000</td>
-      <td class="src coveredLine"><span class="n">Op_ptr</span> <span class="n">get_op_ptr</span><span class="p">(</span><span class="n">OpType</span> <span class="n">chosen_type</span><span class="p">,</span> <span class="k">const</span> <span class="n">Expr</span><span class="o">&amp;</span> <span class="n">param</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="n">n_qubits</span><span class="p">)</span> <span class="p">{</span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="cm">/* Dictates whether synthesis of a PauliGraph should</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l24" href="#l24">24</a></td>
       <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">4/8</summary>
-        <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 3 taken 57000 times.</div>
-          <div class="notTakenBranch">&cross; Branch 4 not taken.</div>
-          <div class="takenBranch">&check; Branch 6 taken 57000 times.</div>
-          <div class="notTakenBranch">&cross; Branch 7 not taken.</div>
-          <div class="takenBranch">&check; Branch 10 taken 57000 times.</div>
-          <div class="takenBranch">&check; Branch 11 taken 57000 times.</div>
-          <div class="notTakenBranch">&cross; Branch 15 not taken.</div>
-          <div class="notTakenBranch">&cross; Branch 16 not taken.</div>
-        </div>
-        </details>
       </td>
-      <td class="linecount coveredLine">171000</td>
-      <td class="src coveredLine">  <span class="k">return</span> <span class="n">get_op_ptr</span><span class="p">(</span><span class="n">chosen_type</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Expr</span><span class="o">&gt;</span><span class="p">{</span><span class="n">param</span><span class="p">},</span> <span class="n">n_qubits</span><span class="p">);</span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="cm">    be done on the Paulis individually, making use of the pairwise</span></td>
     </tr>
 
     <tr class="source-line">
@@ -276,7 +263,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">}</span></td>
+      <td class="src "><span class="cm">    interactions or collecting into mutually commuting sets. */</span></td>
     </tr>
 
     <tr class="source-line">
@@ -284,61 +271,68 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="k">enum</span> <span class="k">class</span> <span class="nc">PauliSynthStrat</span> <span class="p">{</span> <span class="n">Individual</span><span class="p">,</span> <span class="n">Pairwise</span><span class="p">,</span> <span class="n">Sets</span> <span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l27" href="#l27">27</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">359870</td>
-      <td class="src coveredLine"><span class="n">Op_ptr</span> <span class="n">get_op_ptr</span><span class="p">(</span></td>
+      <td class="linecount "></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l28" href="#l28">28</a></td>
       <td class="linebranch">
+        <details class="linebranchDetails">
+        <summary class="linebranchSummary">7/16</summary>
+        <div class="linebranchContents">
+          <div class="takenBranch">&check; Branch 0 taken 1 times.</div>
+          <div class="takenBranch">&check; Branch 1 taken 3 times.</div>
+          <div class="takenBranch">&check; Branch 3 taken 1 times.</div>
+          <div class="notTakenBranch">&cross; Branch 4 not taken.</div>
+          <div class="takenBranch">&check; Branch 6 taken 1 times.</div>
+          <div class="notTakenBranch">&cross; Branch 7 not taken.</div>
+          <div class="takenBranch">&check; Branch 9 taken 1 times.</div>
+          <div class="notTakenBranch">&cross; Branch 10 not taken.</div>
+          <div class="takenBranch">&check; Branch 12 taken 1 times.</div>
+          <div class="notTakenBranch">&cross; Branch 13 not taken.</div>
+          <div class="notTakenBranch">&cross; Branch 20 not taken.</div>
+          <div class="takenBranch">&check; Branch 21 taken 4 times.</div>
+          <div class="notTakenBranch">&cross; Branch 24 not taken.</div>
+          <div class="notTakenBranch">&cross; Branch 25 not taken.</div>
+          <div class="notTakenBranch">&cross; Branch 27 not taken.</div>
+          <div class="notTakenBranch">&cross; Branch 28 not taken.</div>
+        </div>
+        </details>
       </td>
-      <td class="linecount "></td>
-      <td class="src ">    <span class="n">OpType</span> <span class="n">chosen_type</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Expr</span><span class="o">&gt;&amp;</span> <span class="n">params</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="n">n_qubits</span><span class="p">)</span> <span class="p">{</span></td>
+      <td class="linecount coveredLine">30</td>
+      <td class="src coveredLine"><span class="n">NLOHMANN_JSON_SERIALIZE_ENUM</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l29" href="#l29">29</a></td>
       <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">2/2</summary>
-        <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 221354 times.</div>
-          <div class="takenBranch">&check; Branch 2 taken 138516 times.</div>
-        </div>
-        </details>
       </td>
-      <td class="linecount coveredLine">359870</td>
-      <td class="src coveredLine">  <span class="k">if</span> <span class="p">(</span><span class="n">is_gate_type</span><span class="p">(</span><span class="n">chosen_type</span><span class="p">))</span> <span class="p">{</span></td>
+      <td class="linecount "></td>
+      <td class="src ">    <span class="n">PauliSynthStrat</span><span class="p">,</span> <span class="p">{{</span><span class="n">PauliSynthStrat</span><span class="o">::</span><span class="n">Individual</span><span class="p">,</span> <span class="s">&quot;Individual&quot;</span><span class="p">},</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l30" href="#l30">30</a></td>
       <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">1/2</summary>
-        <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 2 taken 221354 times.</div>
-          <div class="notTakenBranch">&cross; Branch 3 not taken.</div>
-        </div>
-        </details>
       </td>
-      <td class="linecount coveredLine">221354</td>
-      <td class="src coveredLine">    <span class="n">SymTable</span><span class="o">::</span><span class="n">register_symbols</span><span class="p">(</span><span class="n">expr_free_symbols</span><span class="p">(</span><span class="n">params</span><span class="p">));</span></td>
+      <td class="linecount "></td>
+      <td class="src ">                      <span class="p">{</span><span class="n">PauliSynthStrat</span><span class="o">::</span><span class="n">Pairwise</span><span class="p">,</span> <span class="s">&quot;Pairwise&quot;</span><span class="p">},</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l31" href="#l31">31</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">221354</td>
-      <td class="src coveredLine">    <span class="k">return</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="k">const</span> <span class="n">Gate</span><span class="o">&gt;</span><span class="p">(</span><span class="n">chosen_type</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">n_qubits</span><span class="p">);</span></td>
+      <td class="linecount "></td>
+      <td class="src ">                      <span class="p">{</span><span class="n">PauliSynthStrat</span><span class="o">::</span><span class="n">Sets</span><span class="p">,</span> <span class="s">&quot;Sets&quot;</span><span class="p">}});</span></td>
     </tr>
 
     <tr class="source-line">
@@ -346,15 +340,15 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l33" href="#l33">33</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">138516</td>
-      <td class="src coveredLine">    <span class="k">return</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="k">const</span> <span class="n">MetaOp</span><span class="o">&gt;</span><span class="p">(</span><span class="n">chosen_type</span><span class="p">);</span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="n">Transform</span> <span class="nf">pairwise_pauli_gadgets</span><span class="p">(</span><span class="n">CXConfigType</span> <span class="n">cx_config</span> <span class="o">=</span> <span class="n">CXConfigType</span><span class="o">::</span><span class="n">Snake</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -362,7 +356,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="p">}</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -370,7 +364,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">}</span></td>
+      <td class="src "><span class="c1">// always returns true, as it leaves Circuit data structure</span></td>
     </tr>
 
     <tr class="source-line">
@@ -378,7 +372,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="n">Transform</span> <span class="nf">synthesise_pauli_graph</span><span class="p">(</span></td>
     </tr>
 
     <tr class="source-line">
@@ -386,11 +380,99 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">}</span>  <span class="c1">// namespace tket</span></td>
+      <td class="src ">    <span class="n">PauliSynthStrat</span> <span class="n">strat</span> <span class="o">=</span> <span class="n">PauliSynthStrat</span><span class="o">::</span><span class="n">Sets</span><span class="p">,</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l38" href="#l38">38</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src ">    <span class="n">CXConfigType</span> <span class="n">cx_config</span> <span class="o">=</span> <span class="n">CXConfigType</span><span class="o">::</span><span class="n">Snake</span><span class="p">);</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l39" href="#l39">39</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l40" href="#l40">40</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="c1">// Assumes incoming circuit is composed of `CircBox`es with</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l41" href="#l41">41</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="c1">// `PauliExpBox`es inside</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l42" href="#l42">42</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="n">Transform</span> <span class="nf">special_UCC_synthesis</span><span class="p">(</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l43" href="#l43">43</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src ">    <span class="n">PauliSynthStrat</span> <span class="n">strat</span> <span class="o">=</span> <span class="n">PauliSynthStrat</span><span class="o">::</span><span class="n">Sets</span><span class="p">,</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l44" href="#l44">44</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src ">    <span class="n">CXConfigType</span> <span class="n">cx_config</span> <span class="o">=</span> <span class="n">CXConfigType</span><span class="o">::</span><span class="n">Snake</span><span class="p">);</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l45" href="#l45">45</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l46" href="#l46">46</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span>  <span class="c1">// namespace Transforms</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l47" href="#l47">47</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l48" href="#l48">48</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span>  <span class="c1">// namespace tket</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l49" href="#l49">49</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
