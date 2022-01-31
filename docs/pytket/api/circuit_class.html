@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pytket.circuit.Circuit &mdash; pytket 0.18.0 documentation</title>
+  <title>pytket.circuit.Circuit &mdash; pytket 0.19.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -31,7 +31,7 @@
             <a href="index.html" class="icon icon-home"> pytket
           </a>
               <div class="version">
-                0.18
+                0.19
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -72,6 +72,7 @@
 <li class="toctree-l1"><a class="reference internal" href="qasm.html">pytket.qasm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quipper.html">pytket.quipper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="routing.html">pytket.routing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tableau.html">pytket.tableau</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transform.html">pytket.transform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tailoring.html">pytket.tailoring</a></li>
 <li class="toctree-l1"><a class="reference internal" href="zx.html">pytket.zx</a></li>
@@ -1026,7 +1027,7 @@ condition on a specified set of bit values.)</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>n_qubits</strong> – The number of qubits in the circuit</p></li>
-<li><p><strong>c_bits</strong> – The number of classical bits in the circuit</p></li>
+<li><p><strong>n_bits</strong> – The number of classical bits in the circuit</p></li>
 <li><p><strong>name</strong> – Optional name for the circuit.</p></li>
 </ul>
 </dd>
@@ -2586,7 +2587,7 @@ condition on a specified set of bit values.)</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="10">
-<li><p>substitute_named(self: pytket.circuit.Circuit, box: pytket.circuit.CustomGate, opgroup: str) -&gt; bool</p></li>
+<li><p>substitute_named(self: pytket.circuit.Circuit, box: tket::CustomGate, opgroup: str) -&gt; bool</p></li>
 </ol>
 <p>Substitute all ops with the given name for the given box.The replacement boxes retain the same name.</p>
 <dl class="field-list simple">
@@ -2762,7 +2763,7 @@ condition on a specified set of bit values.)</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021, Cambridge Quantum Computing Ltd.</p>
+    <p>&#169; Copyright 2022, Cambridge Quantum Computing Ltd.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

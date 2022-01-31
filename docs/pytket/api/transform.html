@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pytket.transform &mdash; pytket 0.18.0 documentation</title>
+  <title>pytket.transform &mdash; pytket 0.19.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,7 +19,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="pytket.tailoring" href="tailoring.html" />
-    <link rel="prev" title="pytket.routing" href="routing.html" /> 
+    <link rel="prev" title="pytket.tableau" href="tableau.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -30,7 +30,7 @@
             <a href="index.html" class="icon icon-home"> pytket
           </a>
               <div class="version">
-                0.18
+                0.19
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -65,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="qasm.html">pytket.qasm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quipper.html">pytket.quipper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="routing.html">pytket.routing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tableau.html">pytket.tableau</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">pytket.transform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tailoring.html">pytket.tailoring</a></li>
 <li class="toctree-l1"><a class="reference internal" href="zx.html">pytket.zx</a></li>
@@ -269,7 +270,7 @@ PhX(α, β) = PhX(-1/2, β + 1/2) Rz(α) PhX(1/2, β + 1/2)
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.transform.Transform.OptimisePauliGadgets">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OptimisePauliGadgets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cx_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pytket.transform.CXConfigType" title="pytket.transform.CXConfigType"><span class="pre">pytket.transform.CXConfigType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">CXConfigType.Snake</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pytket.transform.Transform" title="pytket.transform.Transform"><span class="pre">pytket.transform.Transform</span></a></span></span><a class="headerlink" href="#pytket.transform.Transform.OptimisePauliGadgets" title="Permalink to this definition"></a></dt>
-<dd><p>An optimisation pass that identifies the Pauli gadgets corresponding to any non-Clifford rotations and synthesises them pairwise (see Cowtan, Duncan, Dilkes, Simmons, &amp; Sivarajah <a class="reference external" href="https://arxiv.org/abs/1906.01734">https://arxiv.org/abs/1906.01734</a>). Results use tk1, CX gates.</p>
+<dd><p>An optimisation pass that identifies the Pauli gadgets corresponding to any non-Clifford rotations and synthesises them pairwise (see Cowtan, Duncan, Dilkes, Simmons, &amp; Sivarajah <a class="reference external" href="https://arxiv.org/abs/1906.01734">https://arxiv.org/abs/1906.01734</a>). Results use TK1, CX gates.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -293,7 +294,7 @@ PhX(α, β) = PhX(-1/2, β + 1/2) Rz(α) PhX(1/2, β + 1/2)
 <dl class="py method">
 <dt class="sig sig-object py" id="pytket.transform.Transform.RebaseToCliffordSingles">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RebaseToCliffordSingles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pytket.transform.Transform" title="pytket.transform.Transform"><span class="pre">pytket.transform.Transform</span></a></span></span><a class="headerlink" href="#pytket.transform.Transform.RebaseToCliffordSingles" title="Permalink to this definition"></a></dt>
-<dd><p>Identify Clifford-angle rotations (from U1, U2, U3, Rx, Ry, Rz, tk1, PhasedX), replacing them with Z, X, S, V gates. Any non-Clifford rotations will stay as they are.</p>
+<dd><p>Identify Clifford-angle rotations (from U1, U2, U3, Rx, Ry, Rz, TK1, PhasedX), replacing them with Z, X, S, V gates. Any non-Clifford rotations will stay as they are.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -439,14 +440,14 @@ PhX(α, β) = PhX(-1/2, β + 1/2) Rz(α) PhX(1/2, β + 1/2)
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="routing.html" class="btn btn-neutral float-left" title="pytket.routing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tableau.html" class="btn btn-neutral float-left" title="pytket.tableau" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="tailoring.html" class="btn btn-neutral float-right" title="pytket.tailoring" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021, Cambridge Quantum Computing Ltd.</p>
+    <p>&#169; Copyright 2022, Cambridge Quantum Computing Ltd.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

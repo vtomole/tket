@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Changelog &mdash; pytket 0.18.0 documentation</title>
+  <title>Changelog &mdash; pytket 0.19.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -31,7 +31,7 @@
             <a href="index.html" class="icon icon-home"> pytket
           </a>
               <div class="version">
-                0.18
+                0.19
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -45,6 +45,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#february-2022">0.19.0 (February 2022)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#january-2022">0.18.0 (January 2022)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#november-2021">0.17.0 (November 2021)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#october-2021">0.16.0 (October 2021)</a></li>
@@ -103,6 +104,7 @@
 <li class="toctree-l1"><a class="reference internal" href="qasm.html">pytket.qasm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quipper.html">pytket.quipper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="routing.html">pytket.routing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tableau.html">pytket.tableau</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transform.html">pytket.transform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tailoring.html">pytket.tailoring</a></li>
 <li class="toctree-l1"><a class="reference internal" href="zx.html">pytket.zx</a></li>
@@ -137,6 +139,23 @@
              
   <section id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline"></a></h1>
+<section id="february-2022">
+<h2>0.19.0 (February 2022)<a class="headerlink" href="#february-2022" title="Permalink to this headline"></a></h2>
+<p>Major new features:</p>
+<ul class="simple">
+<li><p>New box types for Clifford tableaux.</p></li>
+</ul>
+<p>Minor new features:</p>
+<ul class="simple">
+<li><p>Improve <code class="docutils literal notranslate"><span class="pre">CnX</span></code> gate decomposition for n=5,6,7.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">rebase_pass</span></code> method to <code class="docutils literal notranslate"><span class="pre">Backend</span></code>.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">is_clifford_type</span></code> method to <code class="docutils literal notranslate"><span class="pre">Op</span></code>.</p></li>
+</ul>
+<p>General:</p>
+<ul class="simple">
+<li><p>Python 3.10 support added; 3.7 dropped.</p></li>
+</ul>
+</section>
 <section id="january-2022">
 <h2>0.18.0 (January 2022)<a class="headerlink" href="#january-2022" title="Permalink to this headline"></a></h2>
 <p>Minor new features:</p>
@@ -824,7 +843,7 @@ circumstances.</p></li>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021, Cambridge Quantum Computing Ltd.</p>
+    <p>&#169; Copyright 2022, Cambridge Quantum Computing Ltd.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pytket.circuit.OpType &mdash; pytket 0.18.0 documentation</title>
+  <title>pytket.circuit.OpType &mdash; pytket 0.19.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -31,7 +31,7 @@
             <a href="index.html" class="icon icon-home"> pytket
           </a>
               <div class="version">
-                0.18
+                0.19
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -72,6 +72,7 @@
 <li class="toctree-l1"><a class="reference internal" href="qasm.html">pytket.qasm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quipper.html">pytket.quipper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="routing.html">pytket.routing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tableau.html">pytket.tableau</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transform.html">pytket.transform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tailoring.html">pytket.tailoring</a></li>
 <li class="toctree-l1"><a class="reference internal" href="zx.html">pytket.zx</a></li>
@@ -172,8 +173,8 @@ Therefore, for instance <cite>circuit.add_gate(OpType.Rx, 1, [0])</cite> is equi
 <p>ExpBox : A two-qubit operation corresponding to a unitary matrix defined as the exponential <span class="math notranslate nohighlight">\(e^{itA}\)</span> of an arbitrary 4x4 hermitian matrix <span class="math notranslate nohighlight">\(A\)</span>.</p>
 <p>PauliExpBox : An operation defined as the exponential <span class="math notranslate nohighlight">\(e^{-\frac{i\pi\alpha}{2} P}\)</span> of a tensor <span class="math notranslate nohighlight">\(P\)</span> of Pauli operations.</p>
 <p>QControlBox : An arbitrary n-controlled operation</p>
-<p>Custom : <span class="math notranslate nohighlight">\((\alpha, \beta, \ldots) \mapsto\)</span> A user-defined operation, based on a <a class="reference internal" href="circuit_class.html#pytket.circuit.Circuit" title="pytket.circuit.Circuit"><code class="xref py py-class docutils literal notranslate"><span class="pre">Circuit</span></code></a> <span class="math notranslate nohighlight">\(C\)</span> with parameters <span class="math notranslate nohighlight">\(\alpha, \beta, \ldots\)</span> substituted in place of bound symbolic variables in <span class="math notranslate nohighlight">\(C\)</span>, as defined by the <a class="reference internal" href="circuit.html#pytket.circuit.CustomGateDef" title="pytket.circuit.CustomGateDef"><code class="xref py py-class docutils literal notranslate"><span class="pre">CustomGateDef</span></code></a>.</p>
-<p>ConditionalGate : An operation to be applied conditionally on the value of some classical register</p>
+<p>CustomGate : <span class="math notranslate nohighlight">\((\alpha, \beta, \ldots) \mapsto\)</span> A user-defined operation, based on a <a class="reference internal" href="circuit_class.html#pytket.circuit.Circuit" title="pytket.circuit.Circuit"><code class="xref py py-class docutils literal notranslate"><span class="pre">Circuit</span></code></a> <span class="math notranslate nohighlight">\(C\)</span> with parameters <span class="math notranslate nohighlight">\(\alpha, \beta, \ldots\)</span> substituted in place of bound symbolic variables in <span class="math notranslate nohighlight">\(C\)</span>, as defined by the <a class="reference internal" href="circuit.html#pytket.circuit.CustomGateDef" title="pytket.circuit.CustomGateDef"><code class="xref py py-class docutils literal notranslate"><span class="pre">CustomGateDef</span></code></a>.</p>
+<p>Conditional : An operation to be applied conditionally on the value of some classical register</p>
 <p>ISWAP : <span class="math notranslate nohighlight">\((\alpha) \mapsto e^{\frac14 i \pi\alpha (\mathrm{X} \otimes \mathrm{X} + \mathrm{Y} \otimes \mathrm{Y})} = \left[ \begin{array}{cccc} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; \cos\frac{\pi\alpha}{2} &amp; i\sin\frac{\pi\alpha}{2} &amp; 0 \\ 0 &amp; i\sin\frac{\pi\alpha}{2} &amp; \cos\frac{\pi\alpha}{2} &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{array} \right]\)</span></p>
 <p>PhasedISWAP : <span class="math notranslate nohighlight">\((p, t) \mapsto \left[ \begin{array}{cccc} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; \cos\frac{\pi t}{2} &amp; i\sin\frac{\pi t}{2}e^{2i\pi p} &amp; 0 \\ 0 &amp; i\sin\frac{\pi t}{2}e^{-2i\pi p} &amp; \cos\frac{\pi t}{2} &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{array} \right]\)</span> (equivalent to: Rz(p)[0]; Rz(-p)[1]; ISWAP(t); Rz(-p)[0]; Rz(p)[1])</p>
 <p>XXPhase : <span class="math notranslate nohighlight">\((\alpha) \mapsto e^{-\frac12 i \pi\alpha (\mathrm{X} \otimes \mathrm{X})} = \left[ \begin{array}{cccc} \cos\frac{\pi\alpha}{2} &amp; 0 &amp; 0 &amp; -i\sin\frac{\pi\alpha}{2} \\ 0 &amp; \cos\frac{\pi\alpha}{2} &amp; -i\sin\frac{\pi\alpha}{2} &amp; 0 \\ 0 &amp; -i\sin\frac{\pi\alpha}{2} &amp; \cos\frac{\pi\alpha}{2} &amp; 0 \\ -i\sin\frac{\pi\alpha}{2} &amp; 0 &amp; 0 &amp; \cos\frac{\pi\alpha}{2} \end{array} \right]\)</span></p>
@@ -218,7 +219,7 @@ Therefore, for instance <cite>circuit.add_gate(OpType.Rx, 1, [0])</cite> is equi
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021, Cambridge Quantum Computing Ltd.</p>
+    <p>&#169; Copyright 2022, Cambridge Quantum Computing Ltd.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
